@@ -4,7 +4,7 @@ Generated 2026-07-25 by `make audit`, against [`curation/benchmark.yaml`](../cur
 
 The benchmark is a hand-written list of resources the field treats as standard. It is not a ranking and not exhaustive — it exists so that "did the pipeline find the obvious things?" is a measurement rather than an impression.
 
-**89 of 89 benchmark tools present (100%).** Catalog size: 1741 tools.
+**89 of 89 benchmark tools present (100%).** Catalog size: 1626 tools.
 
 No misses.
 
@@ -112,7 +112,7 @@ No misses.
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
 | GTRD | ✅ | GTRD | bio.tools |
-| ReMap | ✅ | remap | bio.tools |
+| ReMap | ✅ | ReMap | bio.tools |
 | ChIP-Atlas | ✅ | ChIP-Atlas | bio.tools |
 | Cistrome | ✅ | Cistrome | bio.tools |
 | ENCODE | ✅ | ENCODE DCC | bio.tools |

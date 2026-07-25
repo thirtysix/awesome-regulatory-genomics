@@ -20,6 +20,8 @@ from datetime import date
 
 import yaml
 
+from collections import Counter
+
 from jsonio import read_json
 from config import (CATEGORY_KEYS, CURATION, DATA, DB_TOOLTYPES, OP_CATEGORY,
                     RAW, TEXT_CATEGORY, TOPIC_CATEGORY)
@@ -37,7 +39,7 @@ COLUMNS = [
     "id", "name", "description", "categories", "primary_category", "tier",
     "homepage", "repo_url", "repo_stars", "repo_pushed", "repo_archived",
     "repo_language", "repo_license", "tool_type", "topics", "languages",
-    "license", "maturity", "cost", "citations", "year", "publication",
+    "license", "maturity", "cost", "citations", "citation_note", "year", "publication",
     "biotools_id", "biotools_url", "last_update", "source", "tags", "featured",
 ]
 
@@ -107,6 +109,46 @@ def pub_year(tool: dict) -> str:
     return ""
 
 
+def load_citation_counts() -> dict[str, int]:
+    """Per-identifier citation counts from the enrichment cache."""
+    counts: dict[str, int] = {}
+    path = DATA / "cache" / "citation_cache.csv"
+    if path.exists():
+        with path.open() as fh:
+            for row in csv.reader(fh):
+                if len(row) >= 2 and row[0] != "identifier":
+                    try:
+                        counts[row[0]] = int(row[1])
+                    except ValueError:
+                        continue
+    return counts
+
+
+def cache_key(ident: str) -> str:
+    kind, _, value = ident.partition(":")
+    return f"{kind}_{value}".replace("/", "_").replace(":", "_")
+
+
+def primary_identifier(tool: dict) -> str:
+    """The tool's own paper: the one bio.tools marks Primary, else the first.
+
+    Summing every linked publication - what the dissertation's script did - is
+    badly wrong, because bio.tools attaches a suite's paper to each of its
+    member tools. The EMBOSS paper is linked to dozens of EMBOSS commands and
+    the Bioconductor paper to 23 packages here, so summing hands each member
+    the whole suite's citation count and the ranking becomes meaningless.
+    """
+    pubs = tool.get("publication") or []
+    ordered = sorted(pubs, key=lambda p: 0 if "Primary" in (p.get("type") or []) else 1)
+    for pub in ordered:
+        pmid = pub.get("pmid") or (pub.get("metadata") or {}).get("pmid")
+        if pmid and str(pmid).lower() not in ("none", "null", ""):
+            return f"pmid:{pmid}"
+        if pub.get("doi"):
+            return "doi:" + pub["doi"].strip().removeprefix("https://doi.org/")
+    return ""
+
+
 def repo_url(tool: dict) -> str:
     if tool.get("_repo_slug"):
         return f"https://github.com/{tool['_repo_slug']}"
@@ -116,9 +158,18 @@ def repo_url(tool: dict) -> str:
 
 
 # ---------------------------------------------------------------------------
-def from_biotools(tool: dict) -> dict:
+def from_biotools(tool: dict, cites: dict[str, int], shared: dict[str, int]) -> dict:
     gh = tool.get("_github") or {}
     ids = tool.get("_identifiers") or []
+    primary = primary_identifier(tool)
+    n_sharing = shared.get(primary, 0)
+    # A publication linked by several tools is a suite paper, not this tool's
+    # own. We genuinely do not know the member's individual impact, so record
+    # nothing rather than something misleading.
+    if primary and n_sharing >= 3:
+        citations, note = None, f"primary publication shared by {n_sharing} tools"
+    else:
+        citations, note = cites.get(cache_key(primary), 0) if primary else 0, ""
     return {
         "id": tool["biotoolsID"],
         "name": tool["name"],
@@ -138,9 +189,10 @@ def from_biotools(tool: dict) -> dict:
         "license": tool.get("license") or "",
         "maturity": tool.get("maturity") or "",
         "cost": tool.get("cost") or "",
-        "citations": tool.get("_citations", 0),
+        "citations": citations,
+        "citation_note": note,
         "year": pub_year(tool),
-        "publication": ids[0] if ids else "",
+        "publication": primary or (ids[0] if ids else ""),
         "biotools_id": tool["biotoolsID"],
         "biotools_url": f"https://bio.tools/{tool['biotoolsID']}",
         "last_update": (tool.get("lastUpdate") or "")[:10],
@@ -171,7 +223,7 @@ def from_seed(seed: dict) -> dict:
         "repo_language": "", "repo_license": "",
         "tool_type": [], "topics": [], "languages": [],
         "license": "", "maturity": "", "cost": "",
-        "citations": 0, "year": "",
+        "citations": None, "citation_note": "", "year": "",
         "publication": ident,
         "biotools_id": "", "biotools_url": "",
         "last_update": "",
@@ -191,6 +243,9 @@ def main() -> None:
     args = ap.parse_args()
 
     enriched = read_json(ENRICHED)["list"]
+    cites = load_citation_counts()
+    # How many catalog tools claim each publication as their primary one.
+    shared = Counter(p for p in (primary_identifier(t) for t in enriched) if p)
     seeds = yaml.safe_load(SEEDS.read_text()) or {}
     overlay = yaml.safe_load(OVERLAY.read_text()) or {}
 
@@ -207,7 +262,7 @@ def main() -> None:
         bid = tool["biotoolsID"]
         if bid in excluded or bid in alias_targets:
             continue
-        rows.append(from_biotools(tool))
+        rows.append(from_biotools(tool, cites, shared))
         seen_names[tool["name"].lower()] = bid
 
     seeded = 0
@@ -279,7 +334,6 @@ def main() -> None:
     print(f"  featured: {meta['featured']}   with repository: {meta['with_repo']} "
           f"({meta['with_repo']/max(meta['count'],1):.0%})"
           + (f"   llm-assisted: {meta['llm_assisted']}" if meta["llm_assisted"] else ""))
-    from collections import Counter
     cats = Counter(c for r in rows for c in r["categories"])
     for k in CATEGORY_KEYS:
         print(f"    {k:22s} {cats.get(k, 0):4d}")

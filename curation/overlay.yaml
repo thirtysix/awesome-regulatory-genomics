@@ -61,7 +61,19 @@ corrections:
 # exclude - records that pass the automated filter but do not belong.
 # Give a reason; this file is the audit trail for the catalog's boundary.
 # ---------------------------------------------------------------------------
-exclude: {}
+# Each of these carries an in-domain EDAM operation that bio.tools assigned
+# wrongly, and matches no general exclusion pattern. They surfaced at the top of
+# the citation ranking, which is where contamination is most visible and most
+# damaging.
+exclude:
+  geneious: General-purpose sequence analysis suite; tagged "Sequence motif discovery" upstream
+  cuffdiff: Differential transcript expression; tagged "Transcriptional regulatory element prediction" upstream
+  crisprfinder: Detects CRISPR direct repeats, not regulatory elements
+  ferrdb: Curated resource of ferroptosis regulators; a disease gene list, not a regulatory-genomics tool
+  patmatdb: Searches PROTEIN sequences with a motif; not DNA regulatory analysis
+  weblogo_3: Duplicate bio.tools record for WebLogo
+  meme_fimo: Duplicate of the MEME Suite / FIMO entries
+  ROADMAP_epigenomics: Reference data repository rather than a tool; kept out to avoid inflating the ranking
 
 # ---------------------------------------------------------------------------
 # aliases - collapse duplicate bio.tools records for the same tool.

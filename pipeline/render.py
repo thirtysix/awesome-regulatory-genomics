@@ -202,11 +202,21 @@ def render_readme(catalog: dict) -> str:
       "submitter. The sequence-to-function deep-learning literature is badly "
       "under-represented there; those entries come from `curation/seeds.yaml` and are "
       "necessarily incomplete.")
-    A("- Citation counts are OpenAlex `cited_by_count` summed over *all* publications "
-      "linked to a tool, so suites with many papers accumulate more than single-paper "
-      "tools. Treat them as a rough popularity signal, not a quality measure.")
-    A("- Categories are assigned by rule, then corrected by hand where wrong. "
-      "Mis-categorisations are expected; please open an issue.")
+    A("- Citation counts are the OpenAlex `cited_by_count` of a tool's **primary** "
+      "publication only. Summing every linked publication — what the original "
+      "dissertation script did — is badly wrong here: bio.tools attaches a suite's "
+      "paper to each of its members, so the EMBOSS paper is linked to dozens of "
+      "EMBOSS commands and the Bioconductor paper to 23 packages in this sweep, "
+      "handing each member the whole suite's count. Where a primary publication is "
+      "itself shared by three or more tools, no count is shown at all, because the "
+      "member's own impact is genuinely unknown. Treat what remains as a rough "
+      "popularity signal, not a quality measure.")
+    A("- Categories are assigned by rule, then corrected by hand where wrong. The "
+      "rules catch the systematic errors — bio.tools files orthology tools under "
+      "*Phylogenetic footprinting* and mass-spectrometry tools under *Peak "
+      "detection* — but a tail of individual mis-categorisations remains. Please "
+      "open an issue, or see [`docs/llm-stage.md`](docs/llm-stage.md) for the "
+      "optional classifier that targets exactly this tail.")
     A("- A tool being listed is not an endorsement, and the absence of a repository "
       "link often means the tool is web-only, not that it is unmaintained.")
     A("")

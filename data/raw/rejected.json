@@ -1,5 +1,5 @@
 {
- "count": 1742,
+ "count": 1849,
  "list": [
   {
    "biotoolsID": "imimic_iint",
@@ -45,10 +45,43 @@
    ]
   },
   {
+   "biotoolsID": "rnamst",
+   "name": "RNAMST",
+   "reason": "excluded:\\bRNA (tertiary|structural|secon",
+   "description": "Tool for identifying homologs of a pre-defined RNA structural motif among numerous RNA sequences.",
+   "operations": [
+    "RNA secondary structure alignment",
+    "RNA secondary structure analysis",
+    "RNA secondary structure prediction",
+    "RNA structure prediction",
+    "Sequence motif recognition"
+   ]
+  },
+  {
+   "biotoolsID": "fatigoplus",
+   "name": "FatiGOplus",
+   "reason": "excluded:\\bPROSITE\\b|\\bHAMAP\\b|\\bPfam\\b|\\",
+   "description": "Tool for the functional profiling of genome-scale experiments oriented to the interpretation of microarray experiments. As part of the Babelomics suite, the tool finds differential distributions of bi",
+   "operations": [
+    "Differential gene expression analysis",
+    "Gene prediction",
+    "Sequence motif recognition"
+   ]
+  },
+  {
    "biotoolsID": "pstr_finder",
    "name": "pSTR Finder",
    "reason": "weak-operation, no corroboration",
    "description": "Web tool to efficiently analyse multiple genome sequence samples for the presence of STR loci using Tandem Repeats Finder (TRF) and generates identical, polymorphic, and different STR loci for each co",
+   "operations": [
+    "Sequence motif recognition"
+   ]
+  },
+  {
+   "biotoolsID": "wregex",
+   "name": "Wregex",
+   "reason": "excluded:\\bamino acid (motif|pattern)|\\bp",
+   "description": "Software tool for amino acid motif searching using weighted regular expression and regular expressions with a Position-Specific Scoring Matrix",
    "operations": [
     "Sequence motif recognition"
    ]
@@ -65,7 +98,7 @@
   {
    "biotoolsID": "ltr_struc",
    "name": "LTR_STRUC",
-   "reason": "weak-operation, no corroboration",
+   "reason": "excluded:\\bretroposon|\\bretrotransposon|\\",
    "description": "New data-mining program that scans nucleotide sequence files for LTR retrotransposons and analyzes any resulting hits. Input files can be in fasta or NCBI flat file format.",
    "operations": [
     "Sequence motif recognition"
@@ -82,11 +115,30 @@
    ]
   },
   {
+   "biotoolsID": "rnarobo",
+   "name": "RNArobo",
+   "reason": "excluded:\\bRNA (tertiary|structural|secon",
+   "description": "An RNA structural motif search tool. Itcan search sequence databases in FASTA format for a motif defined by a descriptor, which can specify primary and secondary structure constraints.",
+   "operations": [
+    "Sequence motif recognition"
+   ]
+  },
+  {
    "biotoolsID": "gist",
    "name": "GIST",
    "reason": "weak-operation, no corroboration",
    "description": "Pplatform for scientific users to predict GIs (Genomic Islands ). This software package includes five commonly used tools, AlienHunter, IslandPath, Colombo SIGI-HMM, INDeGenIUS and Pai-Ida. It also in",
    "operations": [
+    "Sequence motif recognition"
+   ]
+  },
+  {
+   "biotoolsID": "rnamotifscan",
+   "name": "RNAMotifScan",
+   "reason": "excluded:\\bRNA (tertiary|structural|secon",
+   "description": "A tool for automatic comparing and searching for RNA tertiary motifs using secondary structural alignment. It takes into consideration the isosteric (both canonical and non-canonical) base-pairs and m",
+   "operations": [
+    "Sequence motif comparison",
     "Sequence motif recognition"
    ]
   },
@@ -97,6 +149,18 @@
    "description": "RNA secondary structure analysis often requires searching for potential helices in large sequence data. We present a utility program that efficiently locates potential helical regions under RNA base p",
    "operations": [
     "Sequence database search",
+    "Sequence motif recognition"
+   ]
+  },
+  {
+   "biotoolsID": "subseqer",
+   "name": "SubSeqer",
+   "reason": "excluded:\\blow complexity protein",
+   "description": "Tool to find sequence motifs in low complexity protein sequences. It uses the application of a unique graph based approach.",
+   "operations": [
+    "Protein sequence analysis",
+    "Sequence motif analysis",
+    "Sequence motif comparison",
     "Sequence motif recognition"
    ]
   },
@@ -124,6 +188,29 @@
    ]
   },
   {
+   "biotoolsID": "slimdisc",
+   "name": "SLiMDisc",
+   "reason": "excluded:\\bprotein (sequence )?motif|\\bmo",
+   "description": "Tool for finding shared motifs in proteins with a common attribute such as sub-cellular location or a common interaction partner.",
+   "operations": [
+    "Protein structural motif recognition",
+    "Sequence motif comparison",
+    "Sequence motif discovery",
+    "Sequence motif recognition"
+   ]
+  },
+  {
+   "biotoolsID": "qgrs_mapper",
+   "name": "QGRS Mapper",
+   "reason": "excluded:\\bG-?quadruplex|\\bQGRS\\b",
+   "description": "Quadruplex forming G-Rich Sequences (QGRS) Mapper searches nucleotide sequences for the presence of G-quartet motifs.  QGRS Mapper allows you to view the distribution and composition of QGRS in the co",
+   "operations": [
+    "Quadruplex formation site detection",
+    "Sequence merging",
+    "Sequence motif recognition"
+   ]
+  },
+  {
    "biotoolsID": "imot",
    "name": "iMOT",
    "reason": "weak-operation, no corroboration",
@@ -133,6 +220,19 @@
     "Protein structural motif recognition",
     "Sequence motif recognition",
     "Structural similarity search"
+   ]
+  },
+  {
+   "biotoolsID": "3matrix",
+   "name": "3Matrix",
+   "reason": "excluded:\\bprotein (sequence )?motif|\\bmo",
+   "description": "3Matrix is a tool for visualizing protein sequence motifs and their properties in 3 dimensions. This tool needs to be downloaded and run locally on your own machine.",
+   "operations": [
+    "Protein property calculation",
+    "Sequence motif analysis",
+    "Sequence motif comparison",
+    "Sequence motif discovery",
+    "Sequence motif recognition"
    ]
   },
   {
@@ -168,6 +268,18 @@
    ]
   },
   {
+   "biotoolsID": "scanprosite",
+   "name": "ScanProsite",
+   "reason": "excluded:\\bPROSITE\\b|\\bHAMAP\\b|\\bPfam\\b|\\",
+   "description": "ScanProsite is a tool for detecting PROSITE signature matches in protein sequences. Users can also search protein databases for specific motifs.",
+   "operations": [
+    "Protein feature detection",
+    "Sequence database search",
+    "Sequence feature detection",
+    "Sequence motif recognition"
+   ]
+  },
+  {
    "biotoolsID": "rasmot-3d_pro",
    "name": "RASMOT-3D PRO",
    "reason": "weak-operation, no corroboration",
@@ -178,6 +290,18 @@
     "Protein structure comparison",
     "Residue distance calculation",
     "Sequence motif recognition"
+   ]
+  },
+  {
+   "biotoolsID": "rtanalyzer",
+   "name": "RTAnalyzer",
+   "reason": "excluded:\\bretroposon|\\bretrotransposon|\\",
+   "description": "RTAnalyzer is an application to find new retroposons and detect L1 retroposition signatures.",
+   "operations": [
+    "Database search",
+    "Indel detection",
+    "Sequence motif recognition",
+    "Transposon prediction"
    ]
   },
   {
@@ -203,6 +327,16 @@
     "Protein fragment weight comparison",
     "Sequence motif recognition",
     "Sequence visualisation"
+   ]
+  },
+  {
+   "biotoolsID": "pssmsearch",
+   "name": "PSSMSearch",
+   "reason": "excluded:\\bprotein (sequence )?motif|\\bmo",
+   "description": "Discover novel protein motifs (SLiMs, mORFs, miniMotifs) and PTM sites. Analyses proteomes for regions with significant similarity to a specificity determinant model built from a set of aligned functi",
+   "operations": [
+    "Sequence motif discovery",
+    "Sequence motif recognition"
    ]
   },
   {
@@ -239,7 +373,7 @@
   {
    "biotoolsID": "akid",
    "name": "AKID",
-   "reason": "weak-operation, no corroboration",
+   "reason": "excluded:\\bphosphorylat|\\bkinase substrat",
    "description": "AKID is a Deep Neural Network-based method that identifies kinase-specific phosphorylation events at single-kinase level in any given Eukaryotic proteome without prior functional annotation. It automa",
    "operations": [
     "Post-translation modification site prediction",
@@ -248,9 +382,33 @@
    ]
   },
   {
+   "biotoolsID": "riboswitch_finder",
+   "name": "Riboswitch finder",
+   "reason": "excluded:\\briboswitch|\\bribosome profilin",
+   "description": "RNA motif search program that identifies RNA motifs called riboswitches which are metabolic binding domains in mRNA that regulate gene expression. The program was originally designed around a set of r",
+   "operations": [
+    "Gene expression profiling",
+    "Gene prediction",
+    "Sequence motif recognition",
+    "Transcriptional regulatory element prediction"
+   ]
+  },
+  {
+   "biotoolsID": "scansite",
+   "name": "Scansite",
+   "reason": "excluded:\\bprotein (sequence )?motif|\\bmo",
+   "description": "Searches for motifs within proteins that are likely to be phosphorylated or that bind to common cellular signaling domains.",
+   "operations": [
+    "Protein domain recognition",
+    "Protein fold recognition",
+    "Sequence motif comparison",
+    "Sequence motif recognition"
+   ]
+  },
+  {
    "biotoolsID": "syfpeithi",
    "name": "SYFPEITHI",
-   "reason": "weak-operation, no corroboration",
+   "reason": "excluded:\\bMHC (class )?(I|II)\\b|\\bepitop",
    "description": "Database comprising more than 7000 peptide sequences known to bind class I and class II MHC molecules. The entries are compiled from published reports only. The database can be used to predict the imm",
    "operations": [
     "Peptide database search",
@@ -261,13 +419,56 @@
    ]
   },
   {
+   "biotoolsID": "rnamotifcontrast",
+   "name": "RNAMotifContrast",
+   "reason": "excluded:\\bRNA (tertiary|structural|secon",
+   "description": "RNAMotifContrast is a method to discover and visualize RNA structural motif subfamilies.",
+   "operations": [
+    "Sequence motif recognition",
+    "Structural motif discovery",
+    "Structure visualisation"
+   ]
+  },
+  {
    "biotoolsID": "interproscan_4",
    "name": "InterProScan (EBI)",
-   "reason": "weak-operation, no corroboration",
+   "reason": "excluded:\\bPROSITE\\b|\\bHAMAP\\b|\\bPfam\\b|\\",
    "description": "Scan sequences against the InterPro protein signature databases.",
    "operations": [
     "Protein feature detection",
     "Sequence motif recognition"
+   ]
+  },
+  {
+   "biotoolsID": "prosite_scan_ebi",
+   "name": "PROSITE Scan (EBI)",
+   "reason": "excluded:\\bPROSITE\\b|\\bHAMAP\\b|\\bPfam\\b|\\",
+   "description": "Scan a protein against PROSITE or HAMAP patterns and profiles.",
+   "operations": [
+    "Protein feature detection",
+    "Sequence motif recognition"
+   ]
+  },
+  {
+   "biotoolsID": "hmmscan_ebi",
+   "name": "hmmscan (EBI)",
+   "reason": "excluded:\\bPROSITE\\b|\\bHAMAP\\b|\\bPfam\\b|\\",
+   "description": "Scan a protein sequence against a database of HMM profiles (e.g. TreeFam or Pfam-A).",
+   "operations": [
+    "Protein feature detection",
+    "Sequence motif recognition"
+   ]
+  },
+  {
+   "biotoolsID": "telfinder",
+   "name": "TelFinder",
+   "reason": "excluded:\\bviral taxonom|\\btelomeric moti",
+   "description": "TelFinder: a program for de novo detection of telomeric motif sequences.",
+   "operations": [
+    "Sequence motif comparison",
+    "Sequence motif recognition",
+    "de Novo sequencing",
+    "k-mer counting"
    ]
   },
   {
@@ -284,10 +485,21 @@
   {
    "biotoolsID": "interproscan_ebi",
    "name": "InterProScan (EBI)",
-   "reason": "weak-operation, no corroboration",
+   "reason": "excluded:\\bPROSITE\\b|\\bHAMAP\\b|\\bPfam\\b|\\",
    "description": "Scan sequences against the InterPro protein signature databases.",
    "operations": [
     "Protein feature detection",
+    "Sequence motif recognition"
+   ]
+  },
+  {
+   "biotoolsID": "transcrispr",
+   "name": "transCRISPR",
+   "reason": "excluded:\\bCRISPR (screen|guide|repeat|ar",
+   "description": "TransCRISPR-sgRNA design tool for CRISPR/Cas9 experiments targeting specific sequence motifs.",
+   "operations": [
+    "Database search",
+    "Sequence motif comparison",
     "Sequence motif recognition"
    ]
   },
@@ -322,6 +534,19 @@
     "Fold recognition",
     "Protein hydrophobic moment plotting",
     "Sequence motif recognition"
+   ]
+  },
+  {
+   "biotoolsID": "microsalmon",
+   "name": "MicroSalmon",
+   "reason": "excluded:\\bmiRNA[- ]target|\\bmicroRNA tar",
+   "description": "A Comprehensive, Searchable Resource of Predicted MicroRNA Targets and 3'UTR Cis-Regulatory Elements in the Full-Length Sequenced Atlantic Salmon Transcriptome.",
+   "operations": [
+    "Formatting",
+    "Sequence motif recognition",
+    "Sequence trimming",
+    "cis-regulatory element prediction",
+    "miRNA target prediction"
    ]
   },
   {
@@ -398,6 +623,17 @@
    ]
   },
   {
+   "biotoolsID": "prm",
+   "name": "Prm",
+   "reason": "excluded:\\bamino acid (motif|pattern)|\\bp",
+   "description": "An Algorithm for Protein Motif Discovery.\n\nMotifs are the evolutionarily conserved patterns which are reported to serve the crucial structural and functional role. Identification of motif patterns in ",
+   "operations": [
+    "Sequence motif discovery",
+    "Sequence motif recognition",
+    "Structural motif discovery"
+   ]
+  },
+  {
    "biotoolsID": "designate",
    "name": "DeSignate",
    "reason": "weak-operation, no corroboration",
@@ -429,6 +665,17 @@
     "Fold recognition",
     "Sequence motif recognition",
     "Structural motif discovery"
+   ]
+  },
+  {
+   "biotoolsID": "leitmotif",
+   "name": "Leitmotif",
+   "reason": "excluded:\\bprotein (sequence )?motif|\\bmo",
+   "description": "protein motif scanning 2.0.\n\nrun scan Need to enter motif alignments before running scan.",
+   "operations": [
+    "Protein feature detection",
+    "Sequence motif recognition",
+    "Sequence visualisation"
    ]
   },
   {
@@ -548,6 +795,129 @@
    ]
   },
   {
+   "biotoolsID": "quasimotifinder",
+   "name": "QuasiMotiFinder",
+   "reason": "excluded:\\bPROSITE\\b|\\bHAMAP\\b|\\bPfam\\b|\\",
+   "description": "QuasiMotiFinder uses physicochemical similarity to PROSITE motifs and evolutionary conservation to predict sequence locations with possible function (pseudo-motifs).",
+   "operations": [
+    "Sequence feature detection",
+    "Sequence motif discovery"
+   ]
+  },
+  {
+   "biotoolsID": "3motif",
+   "name": "3Motif",
+   "reason": "excluded:\\bprotein (sequence )?motif|\\bmo",
+   "description": "3Motif is a tool for visualizing protein sequence motifs and their properties in 3 dimensions from PDB structure files.",
+   "operations": [
+    "Protein property calculation",
+    "Protein structural motif recognition",
+    "Sequence motif analysis",
+    "Sequence motif comparison",
+    "Sequence motif discovery"
+   ]
+  },
+  {
+   "biotoolsID": "beam",
+   "name": "BEAM",
+   "reason": "excluded:\\bRNA (secondary |tertiary )?str",
+   "description": "Analyze tens of thousands of RNA molecules and identify RNA secondary structure motifs associated to a measure of their statistical significance.",
+   "operations": [
+    "Sequence motif discovery"
+   ]
+  },
+  {
+   "biotoolsID": "ScanFold",
+   "name": "ScanFold",
+   "reason": "excluded:\\bRNA (secondary |tertiary )?str",
+   "description": "Mapping the RNA structural landscape of viral genomes.\n\nScanFold is an RNA sequence scanning pipeline which attempts to identify potentially functional RNA secondary structures. This is done by first ",
+   "operations": [
+    "RNA secondary structure alignment",
+    "RNA structure prediction",
+    "Sequence motif discovery"
+   ]
+  },
+  {
+   "biotoolsID": "gasv",
+   "name": "GASV",
+   "reason": "excluded:\\bstructural variant|\\bcopy[- ]n",
+   "description": "Software for classification and comparison of structural variants measured via paired-end sequencing and/or array-CGH.",
+   "operations": [
+    "Sequence analysis",
+    "Sequence motif discovery",
+    "Structural variation detection"
+   ]
+  },
+  {
+   "biotoolsID": "pratt",
+   "name": "Pratt (EBI)",
+   "reason": "excluded:\\bunaligned protein sequence",
+   "description": "Discover patterns in unaligned protein sequences.",
+   "operations": [
+    "Sequence motif discovery"
+   ]
+  },
+  {
+   "biotoolsID": "nanodisco",
+   "name": "nanodisco",
+   "reason": "excluded:\\bviral taxonom|\\btelomeric moti",
+   "description": "nanodisco is a toolbox for de novo discovery of all the three types (6mA, 5mC and 4mC) of DNA methylation from individual bacteria and microbiomes using nanopore sequencing. For microbiomes, nanodisco",
+   "operations": [
+    "Methylation analysis",
+    "PTM site prediction",
+    "Sequence assembly",
+    "Sequence motif discovery",
+    "de Novo sequencing"
+   ]
+  },
+  {
+   "biotoolsID": "hh-motif",
+   "name": "HH-MOTiF",
+   "reason": "excluded:\\bamino acid (motif|pattern)|\\bp",
+   "description": "Protein motif discovery method that combines hidden Markov model (HH-) comparisons with a hierarchical representation of identified SLiMs in motif trees.",
+   "operations": [
+    "Ab initio structure prediction",
+    "Sequence motif discovery",
+    "de Novo sequencing"
+   ]
+  },
+  {
+   "biotoolsID": "gravity-v2",
+   "name": "GRAViTy-V2",
+   "reason": "excluded:\\bviral taxonom|\\btelomeric moti",
+   "description": "GRAViTy-V2 is a command-line tool and application for viral taxonomy classification based on genomic sequence analysis. It leverages whole-genome analytical classification to assign viruses to taxonom",
+   "operations": [
+    "Genome assembly",
+    "Sequence motif comparison",
+    "Taxonomic classification"
+   ]
+  },
+  {
+   "biotoolsID": "gpcrdb",
+   "name": "GPCRDB",
+   "reason": "excluded:\\bphylogenetic tree|\\bspecies tr",
+   "description": "GPCRdb contains reference data, interactive visualisation and experiment design tools for G protein-coupled receptors (GPCRs). GPCRdb curates sequence alignments, structures and receptor mutations fro",
+   "operations": [
+    "Alignment",
+    "Classification",
+    "Protein modelling",
+    "Sequence clustering",
+    "Sequence comparison",
+    "Sequence motif comparison",
+    "Sequence similarity search",
+    "Visualisation"
+   ]
+  },
+  {
+   "biotoolsID": "facets",
+   "name": "FACETS",
+   "reason": "excluded:\\ballele[- ]specific copy number",
+   "description": "FACETS is an ASCN tool and open-source software with a broad application to whole genome, whole-exome, as well as targeted panel sequencing platforms.",
+   "operations": [
+    "Sequence motif comparison"
+   ]
+  },
+  {
    "biotoolsID": "gpumotif",
    "name": "GPUmotif",
    "reason": "weak-operation, no corroboration",
@@ -607,6 +977,492 @@
    "description": "Allows the biologist to judge in the first place whether the sequence surrounding the polymorphism is a good match, and in the second place how much information is gained or lost in one allele of the ",
    "operations": [
     "Sequence motif analysis"
+   ]
+  },
+  {
+   "biotoolsID": "medock",
+   "name": "MEDock",
+   "reason": "excluded:\\bdocking\\b|\\bmolecular dynamics",
+   "description": "MEDock (Maximum-Entropy based Docking) web server is aimed at providing an efficient utility for prediction of ligand binding site.",
+   "operations": [
+    "Molecular docking",
+    "Protein binding site prediction",
+    "Protein-ligand docking",
+    "Transcription factor binding site prediction"
+   ]
+  },
+  {
+   "biotoolsID": "planttfdb_2.0",
+   "name": "PlantTFDB 2.0",
+   "reason": "excluded:\\bphylogenetic tree|\\bspecies tr",
+   "description": "The PlantTFDB 2.0 plant transcription factor (TF) database contains detailed annotation including general information, domain feature, gene ontology, expression pattern and ortholog groups, as well as",
+   "operations": [
+    "Multiple sequence alignment",
+    "Phylogenetic tree analysis (gene family prediction)",
+    "Transcription factor binding site prediction",
+    "Tree-based sequence alignment"
+   ]
+  },
+  {
+   "biotoolsID": "propred",
+   "name": "Propred",
+   "reason": "excluded:\\bMHC (class )?(I|II)\\b|\\bepitop",
+   "description": "This server allows users to predict MHC class II binders.",
+   "operations": [
+    "Peak calling",
+    "Peptide immunogenicity prediction",
+    "Protein binding site prediction",
+    "Transcription factor binding site prediction"
+   ]
+  },
+  {
+   "biotoolsID": "starbase",
+   "name": "starBase",
+   "reason": "excluded:\\bmiRNA[- ]target|\\bmicroRNA tar",
+   "description": "Facilitates the comprehensive exploration of miRNA-target interaction maps from CLIP-Seq and Degradome-Seq data. Two web servers are provided to discover novel miRNA target sites from CLIP-Seq and Deg",
+   "operations": [
+    "Gene expression profiling",
+    "Mapping",
+    "Query and retrieval",
+    "Transcriptional regulatory element prediction",
+    "microRNA detection"
+   ]
+  },
+  {
+   "biotoolsID": "qgrs-h_predictor",
+   "name": "QGRS-H Predictor",
+   "reason": "excluded:\\bG-?quadruplex|\\bQGRS\\b",
+   "description": "QGRS-H Predictor is a webserver that maps and analyzes phylogenetically conserved putative Quadruplex forming ??G??-Rich Sequences (QGRS) in the mRNAs, ncRNAs and other nucleotide sequences. QGRS-H Pr",
+   "operations": [
+    "Mapping",
+    "Nucleic acid feature detection",
+    "Quadruplex formation site detection",
+    "Transcriptional regulatory element prediction"
+   ]
+  },
+  {
+   "biotoolsID": "ribex",
+   "name": "RibEx",
+   "reason": "excluded:\\briboswitch|\\bribosome profilin",
+   "description": "Seach sequences for known riboswitches and also for predicted bacterial regulatory elements that are highly conserved.",
+   "operations": [
+    "Regulatory element prediction",
+    "Transcriptional regulatory element prediction"
+   ]
+  },
+  {
+   "biotoolsID": "endoquad",
+   "name": "EndoQuad",
+   "reason": "excluded:\\bG-?quadruplex|\\bQGRS\\b",
+   "description": "Comprehensive genome-wide experimentally validated endogenous G-quadruplex database.",
+   "operations": [
+    "Transcriptional regulatory element prediction",
+    "Validation",
+    "Variant prioritisation"
+   ]
+  },
+  {
+   "biotoolsID": "regrna",
+   "name": "RegRNA",
+   "reason": "excluded:\\briboswitch|\\bribosome profilin",
+   "description": "Regulatory RNA (RegRNA) is a server for identifying regulatory RNA motifs and elements in mRNA sequences including: motifs located in the 5'-UTR and 3'-UTR, motifs involved in mRNA splicing and transc",
+   "operations": [
+    "Splice transcript prediction",
+    "Transcriptional regulatory element prediction"
+   ]
+  },
+  {
+   "biotoolsID": "svmil2",
+   "name": "svMIL2",
+   "reason": "excluded:\\bstructural variant|\\bcopy[- ]n",
+   "description": "svMIL2: predicting the pathogenic effect of somatic non-coding structural variants disrupting the 3D genome through Multiple Instance Learning.",
+   "operations": [
+    "Transcriptional regulatory element prediction",
+    "Variant effect prediction",
+    "Virulence prediction"
+   ]
+  },
+  {
+   "biotoolsID": "iDNA6mA-Rice",
+   "name": "iDNA6mA-Rice",
+   "reason": "excluded:\\bretroposon|\\bretrotransposon|\\",
+   "description": "A Computational Tool for Detecting N6-Methyladenine Sites in Rice | Home About us Web-Server Contact us Download Citation | 6mA is formed by transferring methyl groups to the 6th position of the adeni",
+   "operations": [
+    "Transcriptional regulatory element prediction"
+   ]
+  },
+  {
+   "biotoolsID": "mirlab",
+   "name": "miRLAB",
+   "reason": "excluded:\\bmiRNA[- ]target|\\bmicroRNA tar",
+   "description": "Provide tools exploring miRNA-mRNA relationships, including popular miRNA target prediction methods, ensemble methods that integrate individual methods, functions to get data from online resources, fu",
+   "operations": [
+    "Pathway or network analysis",
+    "Pathway or network prediction",
+    "Statistical modelling",
+    "Transcriptional regulatory element prediction",
+    "miRNA expression analysis"
+   ]
+  },
+  {
+   "biotoolsID": "ortholugedb",
+   "name": "OrtholugeDB",
+   "reason": "excluded:\\bortholog(y|ue|s)? (inference|p",
+   "description": "Ortholuge-based orthology predictions for completely sequenced bacterial and archaeal genomes. Also contains reciprocal best hit-based ortholog predictions, in-paralog predictions (recently duplicated",
+   "operations": [
+    "Phylogenetic footprinting / shadowing",
+    "Phylogenetic tree analysis",
+    "Transcriptional regulatory element prediction"
+   ]
+  },
+  {
+   "biotoolsID": "exocarta",
+   "name": "ExoCarta",
+   "reason": "excluded:\\bexosom",
+   "description": "Manually curated database of exosomal proteins, RNA, and lipids. Catalogs information from both published and unpublished exosomal studies. Currently contains info on 11,261 protein entries, 2375 mRNA",
+   "operations": [
+    "Deposition",
+    "Enrichment analysis",
+    "Gene expression profiling",
+    "Query and retrieval",
+    "Transcriptional regulatory element prediction"
+   ]
+  },
+  {
+   "biotoolsID": "phenosv",
+   "name": "PhenoSV",
+   "reason": "excluded:\\bstructural variant|\\bcopy[- ]n",
+   "description": "PhenoSV is a phenotype-aware structural variants interpretation and prioritization tool.",
+   "operations": [
+    "Formatting",
+    "Variant prioritisation",
+    "cis-regulatory element prediction"
+   ]
+  },
+  {
+   "biotoolsID": "tbdb",
+   "name": "TBDB",
+   "reason": "excluded:\\briboswitch|\\bribosome profilin",
+   "description": "TBDB \u2013 A database of structurally annotated T-box riboswitch:tRNA pairs.\n\nT-box riboswitch annotation database.\n\nThis database contains T-box riboswitch fold prediction, tRNA pairs from host organisms",
+   "operations": [
+    "Ab initio structure prediction",
+    "Database search",
+    "Fold recognition",
+    "cis-regulatory element prediction",
+    "tRNA gene prediction"
+   ]
+  },
+  {
+   "biotoolsID": "presrat",
+   "name": "PresRAT",
+   "reason": "excluded:\\bdocking\\b|\\bmolecular dynamics",
+   "description": "A server for identification of bacterial small-RNA sequences and their targets with probable binding region.\n\nPredicting small RNAs and their Targets.\n\nHere, we present a webserver, PresRAT which aims",
+   "operations": [
+    "Molecular dynamics",
+    "RNA secondary structure analysis",
+    "cis-regulatory element prediction",
+    "trans-regulatory element prediction"
+   ]
+  },
+  {
+   "biotoolsID": "riboflow-switches",
+   "name": "riboflow",
+   "reason": "excluded:\\briboswitch|\\bribosome profilin",
+   "description": "using deep learning to classify riboswitches with ~99% accuracy.\n\nClassifying Putative Riboswitch Sequences.\n\nRIBOFLOW - classifying riboswitches with >99% accuracy.\n\nriboflow is a python package for ",
+   "operations": [
+    "Expression analysis",
+    "Sequence assembly",
+    "cis-regulatory element prediction"
+   ]
+  },
+  {
+   "biotoolsID": "te-tss",
+   "name": "TE-TSS",
+   "reason": "excluded:\\bretroposon|\\bretrotransposon|\\",
+   "description": "Integrated data resource of human and mouse transposable element (TE)-derived transcription start site (TSS).",
+   "operations": [
+    "Promoter prediction",
+    "Query and retrieval",
+    "trans-regulatory element prediction"
+   ]
+  },
+  {
+   "biotoolsID": "seprom",
+   "name": "SEProm",
+   "reason": "excluded:\\bprotein (crystall|folding|stru",
+   "description": "A novel method SEProm for prokaryotic promoter prediction based on DNA structure and energetics.\n\nSupercomputing Facility for Bioinformatics & Computational Biology, IIT Delhi.\n\nWe are the Providers o",
+   "operations": [
+    "DNA structure prediction",
+    "Promoter prediction",
+    "Regression analysis"
+   ]
+  },
+  {
+   "biotoolsID": "ftdmp",
+   "name": "FTDMP",
+   "reason": "excluded:\\bdocking\\b|\\bmolecular dynamics",
+   "description": "FTDMP is a framework for protein-protein, protein-DNA, and protein-RNA docking and scoring. It allows for biomolecular docking, scoring, and ranking of structural models using the VoroIF-jury consensu",
+   "operations": [
+    "DNA binding site prediction",
+    "Protein interaction prediction",
+    "Protein-ligand docking",
+    "Protein-protein docking",
+    "RNA binding site prediction"
+   ]
+  },
+  {
+   "biotoolsID": "mosca",
+   "name": "MOSCA",
+   "reason": "weak-operation, no corroboration",
+   "description": "Meta-Omics Software for Community Analysis",
+   "operations": [
+    "De-novo assembly",
+    "Gene functional annotation",
+    "Genome annotation",
+    "ID mapping",
+    "Metabolic pathway prediction",
+    "Phylogenetic footprinting",
+    "RNA-Seq quantification",
+    "Read pre-processing",
+    "Sequence trimming"
+   ]
+  },
+  {
+   "biotoolsID": "treeasy",
+   "name": "TREEasy",
+   "reason": "excluded:\\bphylogenetic tree|\\bspecies tr",
+   "description": "An automated workflow to infer gene trees, species trees, and phylogenetic networks from multilocus data.\n\nThis python script can be used to infer species trees and phylogenetic networks from sequence",
+   "operations": [
+    "Formatting",
+    "Phylogenetic footprinting",
+    "Phylogenetic reconstruction",
+    "Phylogenetic tree editing",
+    "Species tree construction"
+   ]
+  },
+  {
+   "biotoolsID": "shadowcaster",
+   "name": "ShadowCaster",
+   "reason": "weak-operation, no corroboration",
+   "description": "Compositional Methods under the Shadow of Phylogenetic Models to Detect Horizontal Gene Transfers in Prokaryotes.\nA python implementation of a hybrid approach for the detection of horizontal gene tran",
+   "operations": [
+    "Phylogenetic footprinting",
+    "Phylogenetic reconstruction",
+    "Species tree construction"
+   ]
+  },
+  {
+   "biotoolsID": "pirouette",
+   "name": "pirouette",
+   "reason": "weak-operation, no corroboration",
+   "description": "Pirouette is an R package that assesses the inference error made by Bayesian phylogenetics for a given macroevolutionary diversification model. pirouette makes use of BEAST2, but its philosophy applie",
+   "operations": [
+    "Phylogenetic footprinting",
+    "Phylogenetic tree editing",
+    "Phylogenetic tree reconstruction"
+   ]
+  },
+  {
+   "biotoolsID": "PhySpeTree",
+   "name": "PhySpeTree",
+   "reason": "excluded:\\bphylogenetic tree|\\bspecies tr",
+   "description": "PhySpeTree is an automated pipeline for reconstructing phylogenetic species trees.",
+   "operations": [
+    "Phylogenetic footprinting",
+    "Phylogenetic species tree construction",
+    "Phylogenetic tree comparison",
+    "Phylogenetic tree editing",
+    "Phylogenetic tree reconstruction"
+   ]
+  },
+  {
+   "biotoolsID": "SwiftOrtho",
+   "name": "SwiftOrtho",
+   "reason": "excluded:\\bortholog(y|ue|s)? (inference|p",
+   "description": "A fast, memory-efficient, multiple genome orthology classifier.\n\nA high performance tool to identify orthologs and paralogs across genomes.\n\nSwiftOrtho is orthology analysis tool which identifies orth",
+   "operations": [
+    "Clustering",
+    "Database search",
+    "Phylogenetic footprinting",
+    "Phylogenetic species tree construction"
+   ]
+  },
+  {
+   "biotoolsID": "Domainoid",
+   "name": "Domainoid",
+   "reason": "excluded:\\bortholog(y|ue|s)? (inference|p",
+   "description": "domain-oriented orthology inference.\n\nBACKGROUND:Orthology inference is normally based on full-length protein sequences. However, most proteins contain independently folding and recurring regions, dom",
+   "operations": [
+    "Fold recognition",
+    "Phylogenetic footprinting",
+    "Protein identification",
+    "Standardisation and normalisation"
+   ]
+  },
+  {
+   "biotoolsID": "Broccoli",
+   "name": "Broccoli",
+   "reason": "excluded:\\bortholog(y|ue|s)? (inference|p",
+   "description": "combining phylogenetic and network analyses for orthology assignment.\n\northology assignment using phylogenetic and network analyses.\n\nBroccoli, a user-friendly pipeline designed to infer with high pre",
+   "operations": [
+    "Clustering",
+    "Phylogenetic footprinting"
+   ]
+  },
+  {
+   "biotoolsID": "gsad",
+   "name": "GSAD",
+   "reason": "weak-operation, no corroboration",
+   "description": "Progress in the study of genome size evolution in Asteraceae.\nGenome Size in Asteraceae database.",
+   "operations": [
+    "Phylogenetic footprinting",
+    "Phylogenetic species tree construction",
+    "Phylogenetic tree reconstruction"
+   ]
+  },
+  {
+   "biotoolsID": "phylopars",
+   "name": "PhyloPars",
+   "reason": "weak-operation, no corroboration",
+   "description": "Allows for easy, efficient estimation of metabolic parameters as inferred from observations on species that are phylogenetically related.",
+   "operations": [
+    "Phylogenetic footprinting / shadowing",
+    "Phylogenetic species tree construction",
+    "Relation inference",
+    "Species frequency estimation"
+   ]
+  },
+  {
+   "biotoolsID": "profia",
+   "name": "proFIA",
+   "reason": "excluded:\\bmass spectrometr|\\bLC-MS\\b|\\bM",
+   "description": "Flow Injection Analysis coupled to High-Resolution Mass Spectrometry is a promising approach for high-throughput metabolomics. FIA-HRMS data, however, cannot be pre-processed with current software too",
+   "operations": [
+    "Peak calling"
+   ]
+  },
+  {
+   "biotoolsID": "sv-hotspot",
+   "name": "SV-HotSpot",
+   "reason": "excluded:\\bstructural variant|\\bcopy[- ]n",
+   "description": "detection and visualization of hotspots targeted by structural variants associated with gene expression.\n\nSV-HotSpot: detection of hotspots targeted by recurrent structural variants associated with ge",
+   "operations": [
+    "Aggregation",
+    "Peak calling",
+    "Visualisation"
+   ]
+  },
+  {
+   "biotoolsID": "WiPP",
+   "name": "WiPP",
+   "reason": "excluded:\\bmass spectrometr|\\bLC-MS\\b|\\bM",
+   "description": "Workflow for Improved Peak Picking for Gas Chromatography-Mass Spectrometry (GC-MS) Data | large scale GC-MS data preprocessing workflow | WiPP - A Workflow for improved Peak Picking - Quick Start Gui",
+   "operations": [
+    "Deisotoping",
+    "Peak calling",
+    "Peak detection"
+   ]
+  },
+  {
+   "biotoolsID": "gcalignr",
+   "name": "GCalignR",
+   "reason": "excluded:\\bchromatograph",
+   "description": "Simple peak alignment for gas-chromatography data in R.",
+   "operations": [
+    "Peak calling"
+   ]
+  },
+  {
+   "biotoolsID": "AMDA",
+   "name": "AMDA",
+   "reason": "excluded:\\bviral taxonom|\\btelomeric moti",
+   "description": "Adaptive Multivariate Two-Sample Test With Application to Microbiome Differential Abundance Analysis.",
+   "operations": [
+    "Differential binding analysis",
+    "Differential protein expression analysis"
+   ]
+  },
+  {
+   "biotoolsID": "pqsfinder",
+   "name": "pqsfinder",
+   "reason": "excluded:\\bG-?quadruplex|\\bQGRS\\b",
+   "description": "The main functionality of the this package is to detect DNA sequence patterns that are likely to fold into an intramolecular G-quadruplex (G4). Unlike many other approaches, this package is able to de",
+   "operations": [
+    "Nucleic acid structure prediction",
+    "Nucleosome position prediction",
+    "Quadruplex formation site detection"
+   ]
+  },
+  {
+   "biotoolsID": "kegg",
+   "name": "Kyoto encyclopedia of genes and genomes (KEGG)",
+   "reason": "excluded:\\bpathway (map|enrichment) datab",
+   "description": "Pathway maps, molecular catalogs, genome maps and gene catalogs that capture knowledge about interactions in terms of information pathways. This tool comprises several databases, including BRITE (prot",
+   "operations": [
+    "Gene regulatory network analysis",
+    "Gene to pathway mapping",
+    "Mapping",
+    "Metabolic network modelling",
+    "Pathway or network analysis"
+   ]
+  },
+  {
+   "biotoolsID": "cosmos-omics",
+   "name": "COSMOS",
+   "reason": "excluded:\\bmass spectrometr|\\bLC-MS\\b|\\bM",
+   "description": "COSMOS (Causal Oriented Search of Multi-Omic Space) is a method that integrates phosphoproteomics, transcriptomics, and metabolomics data sets. COSMOS leverages extensive prior knowledge of signaling ",
+   "operations": [
+    "Gene regulatory network analysis",
+    "Quantification",
+    "Text mining"
+   ]
+  },
+  {
+   "biotoolsID": "asdmir",
+   "name": "ASDmiR",
+   "reason": "excluded:\\bmiRNA[- ]target|\\bmicroRNA tar",
+   "description": "ASDmiR is a step-wise method to uncover miRNA regulation related to autism spectrum disorder. MiRNAs (miRNAs) are involved in nervous system developmental, and have potential to cause ASD. However, th",
+   "operations": [
+    "Gene regulatory network analysis",
+    "Gene-set enrichment analysis",
+    "miRNA expression analysis",
+    "miRNA target prediction"
+   ]
+  },
+  {
+   "biotoolsID": "apodhin",
+   "name": "APODHIN",
+   "reason": "excluded:\\bmass spectrometr|\\bLC-MS\\b|\\bM",
+   "description": "Analysis of Pan-Omics Data in Human Interactome Network (APODHIN) is a platform where users can upload and map multiple types of 'omics' data such as genomics, transcriptomics, proteomics, metabolomic",
+   "operations": [
+    "Expression profile pathway mapping",
+    "Gene regulatory network analysis",
+    "Metabolic network modelling",
+    "Network visualisation",
+    "Protein interaction network analysis"
+   ]
+  },
+  {
+   "biotoolsID": "CyTargetLinker",
+   "name": "CyTargetLinker",
+   "reason": "excluded:\\bmiRNA[- ]target|\\bmicroRNA tar",
+   "description": "A flexible solution for network extension in Cytoscape | The CyTargetLinker app extends biological networks with regulatory interactions, for example miRNA-target, TF-target or drug-target interaction",
+   "operations": [
+    "Gene regulatory network analysis",
+    "Pathway or network comparison",
+    "Pathway or network prediction"
+   ]
+  },
+  {
+   "biotoolsID": "BioGRID_Open_Repository_of_CRISPR_Screens_ORCS",
+   "name": "BioGRID Open Repository of CRISPR Screens (ORCS)",
+   "reason": "excluded:\\bCRISPR (screen|guide|repeat|ar",
+   "description": "BioGRID ORCS is an open repository of CRISPR screens compiled through comprehensive curation efforts. Our current index searches more than 49 publications and 58,161 genes to return more than 895 CRIS",
+   "operations": [
+    "Gene regulatory network analysis",
+    "Pathway or network prediction",
+    "Protein function prediction",
+    "Query and retrieval"
    ]
   },
   {
@@ -872,7 +1728,7 @@
   {
    "biotoolsID": "ar-specific_elms",
    "name": "ELM",
-   "reason": "no-match",
+   "reason": "excluded:\\bprotein (sequence )?motif|\\bmo",
    "description": "ELM is a resource that annotates eukaryotic linear motifs in proteins, providing information on their function and evolution. It allows users to search for motifs, view their annotations, and explore ",
    "operations": [
     "Molecular dynamics",
@@ -1254,7 +2110,7 @@
   {
    "biotoolsID": "platinumcrispr",
    "name": "PlatinumCRISPr sgRNA",
-   "reason": "no-match",
+   "reason": "excluded:\\bCRISPR (screen|guide|repeat|ar",
    "description": "PlatinumCRISPr is a web-based tool for structure-optimized sgRNA selection, designed to improve the efficiency of Cas9 genome editing. It evaluates base-pairing and sequence composition parameters for",
    "operations": [
     "PCR primer design",
@@ -1500,7 +2356,7 @@
   {
    "biotoolsID": "icitrus_i-related_genera_icitrus",
    "name": "CPBD: Citrus Pan-genome to Breeding Database",
-   "reason": "no-match",
+   "reason": "excluded:\\bretroposon|\\bretrotransposon|\\",
    "description": "The Citrus Pan-genome to Breeding Database (CPBD) provides a resource for analyzing transposable elements in the genomes of *Citrus* and related genera. It allows users to explore data and contributes",
    "operations": [
     "Database search",
@@ -1603,7 +2459,7 @@
   {
    "biotoolsID": "hite",
    "name": "HiTE",
-   "reason": "no-match",
+   "reason": "excluded:\\bretroposon|\\bretrotransposon|\\",
    "description": "HiTE is a dynamic boundary adjustment approach for fast and accurate full-length transposable element detection and annotation. It outperforms existing tools and has identified novel transposons with ",
    "operations": [
     "Fold recognition",
@@ -1675,7 +2531,7 @@
   {
    "biotoolsID": "fishtedb_20",
    "name": "FishTEDB",
-   "reason": "no-match",
+   "reason": "excluded:\\bretroposon|\\bretrotransposon|\\",
    "description": "FishTEDB is a database providing comprehensive information on transposable elements in fish genomes. Version 2.0 includes 33 new fish species, a genome browser, and estimated TE insertion times.",
    "operations": [
     "Genome visualisation"
@@ -1754,7 +2610,7 @@
   {
    "biotoolsID": "teena",
    "name": "TEENA",
-   "reason": "no-match",
+   "reason": "excluded:\\bretroposon|\\bretrotransposon|\\",
    "description": "TEENA is a web server for transposable element enrichment analysis in various model and non-model organisms. It provides a streamlined pipeline, hosts annotations for nearly one hundred species, and f",
    "operations": [
     "Data retrieval",
@@ -1981,7 +2837,7 @@
   {
    "biotoolsID": "dynavacs",
    "name": "DyNAVacS",
-   "reason": "no-match",
+   "reason": "excluded:\\brestriction enzyme",
    "description": "Tool for designing DNA vaccines that includes steps for chosing a suitable expression vector, ensuring optimal expression by codon optimization, engineering CpG motifs for enhancing immune responses, ",
    "operations": [
     "DNA vaccine design",
@@ -2102,6 +2958,15 @@
    ]
   },
   {
+   "biotoolsID": "abs",
+   "name": "ABS",
+   "reason": "no-match",
+   "description": "Annotated regulatory binding sites from orthologous promoters.",
+   "operations": [
+    "Query and retrieval"
+   ]
+  },
+  {
    "biotoolsID": "ngsmethdb",
    "name": "NGSmethDB",
    "reason": "no-match",
@@ -2127,7 +2992,7 @@
   {
    "biotoolsID": "mirmark",
    "name": "MirMark",
-   "reason": "no-match",
+   "reason": "excluded:\\bmiRNA[- ]target|\\bmicroRNA tar",
    "description": "Site-level and UTR-level classifier for miRNA target prediction.",
    "operations": [
     "Nucleic acid feature detection"
@@ -2179,9 +3044,18 @@
    ]
   },
   {
+   "biotoolsID": "mirmodule",
+   "name": "miRModule",
+   "reason": "excluded:\\bmiRNA[- ]target|\\bmicroRNA tar",
+   "description": "Software tool for systematic discovery of miRNA modules from a set of predefined miRNA target sites. Given a sets of miRNA binding sites, miRModule efficiently identifies groups of miRNAs, whose bindi",
+   "operations": [
+    "Prediction and recognition"
+   ]
+  },
+  {
    "biotoolsID": "ltr_finder",
    "name": "LTR_Finder",
-   "reason": "no-match",
+   "reason": "excluded:\\bretroposon|\\bretrotransposon|\\",
    "description": "LTR_Finder (Long Terminal Repeat Finder) is an efficient program for finding full-length LTR retrotransposons in genome sequences.",
    "operations": [
     "Repeat sequence analysis",
@@ -2352,6 +3226,17 @@
    ]
   },
   {
+   "biotoolsID": "g-language_gae",
+   "name": "G-language GAE",
+   "reason": "no-match",
+   "description": "Compendium of more than 100 programs that focus on bacterial genome analysis. Included are programs for identification of binding sites, analysis of codons and prediction of expression levels, analysi",
+   "operations": [
+    "Codon usage analysis",
+    "Protein binding site prediction",
+    "Service composition"
+   ]
+  },
+  {
    "biotoolsID": "dcode.org",
    "name": "DCODE.ORG",
    "reason": "no-match",
@@ -2469,7 +3354,7 @@
   {
    "biotoolsID": "hhpred",
    "name": "HHpred",
-   "reason": "no-match",
+   "reason": "excluded:\\bPROSITE\\b|\\bHAMAP\\b|\\bPfam\\b|\\",
    "description": "Based on the comparison of profile HMMs, HHpred takes a protein sequence or multiple sequence alignment as input and searches for remote homologues in an assortment of databases such as PDB, SMART and",
    "operations": [
     "Global alignment",
@@ -2480,7 +3365,7 @@
   {
    "biotoolsID": "kinasephos",
    "name": "KinasePhos",
-   "reason": "no-match",
+   "reason": "excluded:\\bphosphorylat|\\bkinase substrat",
    "description": "Identify kinase-specific phosphorylation sites in protein sequences.",
    "operations": [
     "Protein binding site prediction",
@@ -3070,7 +3955,7 @@
   {
    "biotoolsID": "mirnatarbase",
    "name": "miRNATarBase",
-   "reason": "no-match",
+   "reason": "excluded:\\bmiRNA[- ]target|\\bmicroRNA tar",
    "description": "Updates to the experimentally validated microRNA-target interaction database.\n\nthe experimentally validated microRNA-target interactions database.\n\nAs a database, miRTarBase has accumulated more than ",
    "operations": [
     "Validation",
@@ -3152,7 +4037,7 @@
   {
    "biotoolsID": "TargetScanHuman",
    "name": "TargetScanHuman",
-   "reason": "no-match",
+   "reason": "excluded:\\bmiRNA[- ]target|\\bmicroRNA tar",
    "description": "Long noncoding RNA ZFAS1 promotes tumorigenesis and metastasis in nasopharyngeal carcinoma by sponging miR-892b to up-regulate LPAR1 expression.\n\nSearch for predicted microRNA targets in mammals.\n\n1. ",
    "operations": [
     "Differential gene expression analysis",
@@ -3294,7 +4179,7 @@
   {
    "biotoolsID": "dm3loc",
    "name": "DM3Loc",
-   "reason": "no-match",
+   "reason": "excluded:\\bexosom",
    "description": "DM3Loc is a web tool for multi-label mRNA subcellular localization prediction and analysis based on multi-head self-attention mechanism. DM3Loc is a novel Deep-learning framework with multi-head self-",
    "operations": [
     "Nucleic acids-binding site prediction",
@@ -3590,7 +4475,7 @@
   {
    "biotoolsID": "tncentral",
    "name": "TnCentral",
-   "reason": "no-match",
+   "reason": "excluded:\\bretroposon|\\bretrotransposon|\\",
    "description": "TnCentral is a prokaryotic transposable element database and web portal for transposon analysis.",
    "operations": [
     "Data retrieval",
@@ -3806,7 +4691,7 @@
   {
    "biotoolsID": "pmirtarbase",
    "name": "PmiRtarbase",
-   "reason": "no-match",
+   "reason": "excluded:\\bmiRNA[- ]target|\\bmicroRNA tar",
    "description": "A positive miRNA-target regulations database.",
    "operations": [
     "Text mining",
@@ -3817,7 +4702,7 @@
   {
    "biotoolsID": "explorate",
    "name": "ExplorATE",
-   "reason": "no-match",
+   "reason": "excluded:\\bretroposon|\\bretrotransposon|\\",
    "description": "A pipeline to explore active transposable elements from RNA-seq data.",
    "operations": [
     "Quantification",
@@ -3835,6 +4720,17 @@
     "Phasing",
     "Protein disorder prediction",
     "Protein structure prediction"
+   ]
+  },
+  {
+   "biotoolsID": "gass-metal",
+   "name": "GASS-Metal",
+   "reason": "no-match",
+   "description": "Identifying metal-binding sites on protein structures using genetic algorithms.",
+   "operations": [
+    "Active site prediction",
+    "Database search",
+    "Metal-binding site prediction"
    ]
   },
   {
@@ -4336,7 +5232,7 @@
   {
    "biotoolsID": "mhc2affypred",
    "name": "MHC2AffyPred",
-   "reason": "no-match",
+   "reason": "excluded:\\bMHC (class )?(I|II)\\b|\\bepitop",
    "description": "A machine-learning approach to estimate affinity of MHC class II peptides based on structural interaction fingerprints.",
    "operations": [
     "Epitope mapping",
@@ -4568,6 +5464,19 @@
    ]
   },
   {
+   "biotoolsID": "rlbind",
+   "name": "RLBind",
+   "reason": "no-match",
+   "description": "A deep learning method to predict RNA-ligand binding sites.",
+   "operations": [
+    "Binding site prediction",
+    "Fold recognition",
+    "Molecular docking",
+    "RNA structure prediction",
+    "Small molecule design"
+   ]
+  },
+  {
    "biotoolsID": "rg4detector",
    "name": "rG4detector",
    "reason": "no-match",
@@ -4703,7 +5612,7 @@
   {
    "biotoolsID": "asc_g4",
    "name": "ASC-G4",
-   "reason": "no-match",
+   "reason": "excluded:\\bG-?quadruplex|\\bQGRS\\b",
    "description": "A website to calculate advanced structural characteristics of G-quadruplexes.ssr (X3DNA.ORG)",
    "operations": [
     "Phasing",
@@ -5101,7 +6010,7 @@
   {
    "biotoolsID": "roseap",
    "name": "RoseAP",
-   "reason": "no-match",
+   "reason": "excluded:\\bPROSITE\\b|\\bHAMAP\\b|\\bPfam\\b|\\",
    "description": "RoseAP is an analytical platform for gene function of Rosa rugosa . Users can submit locus IDs to quickly search for co-expression networks, expression profile. Additionally, the basic structural and ",
    "operations": [
     "Expression correlation analysis",
@@ -5727,7 +6636,7 @@
   {
    "biotoolsID": "crisprverse",
    "name": "crisprVerse",
-   "reason": "no-match",
+   "reason": "excluded:\\bCRISPR (screen|guide|repeat|ar",
    "description": "A comprehensive Bioconductor ecosystem for the design of CRISPR guide RNAs across nucleases and technologies.",
    "operations": [
     "Editing",
@@ -5948,7 +6857,7 @@
   {
    "biotoolsID": "kanphos",
    "name": "KANPHOS",
-   "reason": "no-match",
+   "reason": "excluded:\\bphosphorylat|\\bkinase substrat",
    "description": "A Database of Kinase-Associated Neural Protein Phosphorylation in the Brain.",
    "operations": [
     "Expression profile pathway mapping",
@@ -6061,7 +6970,7 @@
   {
    "biotoolsID": "darts",
    "name": "DARTS",
-   "reason": "no-match",
+   "reason": "excluded:\\bretroposon|\\bretrotransposon|\\",
    "description": "DARTS, Domain-Associated RetroTransposon Search, is a pipeline developed for searching, mining and annotation of LTR retrotransposons.",
    "operations": [
     "Database search",
@@ -6384,7 +7293,7 @@
   {
    "biotoolsID": "g4ldb",
    "name": "G4LDB",
-   "reason": "no-match",
+   "reason": "excluded:\\bG-?quadruplex|\\bQGRS\\b",
    "description": "A database for discovering and studying G-quadruplex and i-Motif ligands.",
    "operations": [
     "Data retrieval",
@@ -6452,7 +7361,7 @@
   {
    "biotoolsID": "pksps",
    "name": "PKSPS",
-   "reason": "no-match",
+   "reason": "excluded:\\bphosphorylat|\\bkinase substrat",
    "description": "A novel method for predicting kinase of specific phosphorylation sites based on maximum weighted bipartite matching algorithm and phosphorylation sequence enrichment analysis.",
    "operations": [
     "PTM site prediction",
@@ -6588,6 +7497,18 @@
    ]
   },
   {
+   "biotoolsID": "virusmed",
+   "name": "virusMED",
+   "reason": "no-match",
+   "description": "Metal binding sites, antigen epitopes, and drug binding sites are viral protein hotspots that control how viruses interact with their hosts. Like Google maps organizes and annotates points of interest",
+   "operations": [
+    "Epitope mapping",
+    "Peptide immunogenicity prediction",
+    "Side chain modelling",
+    "Virtual screening"
+   ]
+  },
+  {
    "biotoolsID": "fuzzle_2.0",
    "name": "Fuzzle 2.0",
    "reason": "no-match",
@@ -6601,7 +7522,7 @@
   {
    "biotoolsID": "pepsickle",
    "name": "pepsickle",
-   "reason": "no-match",
+   "reason": "excluded:\\bMHC (class )?(I|II)\\b|\\bepitop",
    "description": "pepsickle is an open-source command line tool for proteasomal cleavage prediction. pepsickle is designed with flexibility in mind allows for the use of either direct amino acid sequences or the use of",
    "operations": [
     "Epitope mapping",
@@ -6632,7 +7553,7 @@
   {
    "biotoolsID": "calango",
    "name": "CALANGO",
-   "reason": "no-match",
+   "reason": "excluded:\\bPROSITE\\b|\\bHAMAP\\b|\\bPfam\\b|\\",
    "description": "CALANGO is a first-principles, phylogeny-aware comparative genomics package to search for annotation terms (e.g Pfam IDs, GO terms or superfamilies), formally described in a dictionary-like structure ",
    "operations": [
     "Data retrieval",
@@ -6898,7 +7819,7 @@
   {
    "biotoolsID": "tardb",
    "name": "TarDB",
-   "reason": "no-match",
+   "reason": "excluded:\\bmiRNA[- ]target|\\bmicroRNA tar",
    "description": "TarDB is a database for conserved miRNA targets, degradome supported miRNA targets and miRNA-triggered phasiRNAs in plants. TarDB is a plant miRNA target repository, which is based on cross-species co",
    "operations": [
     "Deposition",
@@ -7146,7 +8067,7 @@
   {
    "biotoolsID": "exopred",
    "name": "ExoPred",
-   "reason": "no-match",
+   "reason": "excluded:\\bexosom",
    "description": "Prediction of unconventional protein secretion by exosomes.",
    "operations": [
     "Protein secondary structure prediction",
@@ -7246,7 +8167,7 @@
   {
    "biotoolsID": "pcip-seq",
    "name": "PCIP-seq",
-   "reason": "no-match",
+   "reason": "excluded:\\bCRISPR (screen|guide|repeat|ar",
    "description": "Pooled CRISPR Inverse PCR sequencing (PCIP-seq) is a method that leverages selective cleavage of circularized DNA fragments carrying proviral DNA with a pool of CRISPR guide RNAs, followed by inverse ",
    "operations": [
     "Base-calling",
@@ -7604,6 +8525,18 @@
     "Clustering",
     "Dimensionality reduction",
     "Imputation"
+   ]
+  },
+  {
+   "biotoolsID": "intermetaldb",
+   "name": "InterMetalDB",
+   "reason": "no-match",
+   "description": "A Database and Browser of Intermolecular Metal Binding Sites in Macromolecules with Structural Information.",
+   "operations": [
+    "Data retrieval",
+    "Database search",
+    "Deposition",
+    "Metal-binding site prediction"
    ]
   },
   {
@@ -8049,7 +8982,7 @@
   {
    "biotoolsID": "opt-sgrna",
    "name": "OPT-sgRNA",
-   "reason": "no-match",
+   "reason": "excluded:\\bCRISPR (screen|guide|repeat|ar",
    "description": "Optimized sgRNA Design by Deep Learning to Balance the Off-Target Effects and On-Target Activity of CRISPR/Cas9.\n\nA user-friendly tool for single-guide RNA (sgRNA) design of CRISPR-Cas system.\n\nThe CR",
    "operations": [
     "Network analysis",
@@ -8179,6 +9112,17 @@
    ]
   },
   {
+   "biotoolsID": "fgviewer",
+   "name": "FGviewer",
+   "reason": "no-match",
+   "description": "FGviewer is an online visualization tool for functional features of human fusion genes. FGviewer is aiming for the effective visualization of the functional features of fusion genes for better priorit",
+   "operations": [
+    "Gene functional annotation",
+    "Visualisation",
+    "miRNA target prediction"
+   ]
+  },
+  {
    "biotoolsID": "fastqins",
    "name": "FASTQINS",
    "reason": "no-match",
@@ -8266,7 +9210,7 @@
   {
    "biotoolsID": "epidope",
    "name": "EpiDope",
-   "reason": "no-match",
+   "reason": "excluded:\\bMHC (class )?(I|II)\\b|\\bepitop",
    "description": "EpiDope is a deep neural network for linear B-cell epitope prediction.",
    "operations": [
     "Epitope mapping",
@@ -8939,7 +9883,7 @@
   {
    "biotoolsID": "malacoda",
    "name": "malacoda",
-   "reason": "no-match",
+   "reason": "excluded:\\bCRISPR (screen|guide|repeat|ar",
    "description": "Bayesian modelling of high-throughput sequencing assays with malacoda.\n\nThe goal of malacoda is to enable Bayesian analysis of high-throughput genomic assays like massively parallel reporter assays (M",
    "operations": [
     "DNA barcoding",
@@ -9187,6 +10131,17 @@
    ]
   },
   {
+   "biotoolsID": "jackie",
+   "name": "JACKIE",
+   "reason": "no-match",
+   "description": "Fast enumeration of single- and multi-copy CRISPR binding sites.\n\nJACKIE pipeline & database \u2013 Albert Cheng Lab.\n\nJACKIE (Jackie and Albert\u2019s CRISPR K-mer Instances Enumerator) scans the genome and en",
+   "operations": [
+    "Editing",
+    "Genome visualisation",
+    "Protein-protein binding site prediction"
+   ]
+  },
+  {
    "biotoolsID": "irna5hmc-ps",
    "name": "iRNA5hmC-PS",
    "reason": "no-match",
@@ -9398,6 +10353,17 @@
    ]
   },
   {
+   "biotoolsID": "relics",
+   "name": "RELICS",
+   "reason": "excluded:\\bCRISPR (screen|guide|repeat|ar",
+   "description": "Discovering functional sequences with RELICS.\n\nRELICS \u2728: Regulatory Element Location Identification in CRISPR screens.\n\nRELICS is an analysis method for discovering functional sequences from tiling CR",
+   "operations": [
+    "Sorting",
+    "Splitting",
+    "Standardisation and normalisation"
+   ]
+  },
+  {
    "biotoolsID": "iot-flock",
    "name": "IoT-Flock",
    "reason": "no-match",
@@ -9415,6 +10381,18 @@
     "Molecular dynamics",
     "Phasing",
     "Protein interaction prediction"
+   ]
+  },
+  {
+   "biotoolsID": "biometall",
+   "name": "BioMetAll",
+   "reason": "no-match",
+   "description": "BioMetAll is a command line application to allow the identification of metal-binding sites in proteins from backbone preorganization.",
+   "operations": [
+    "Backbone modelling",
+    "Ligand-binding site prediction",
+    "Metal-binding site prediction",
+    "Molecular docking"
    ]
   },
   {
@@ -9611,7 +10589,7 @@
   {
    "biotoolsID": "gps_5.0",
    "name": "GPS 5.0",
-   "reason": "no-match",
+   "reason": "excluded:\\bphosphorylat|\\bkinase substrat",
    "description": "An Update on the Prediction of Kinase-specific Phosphorylation Sites in Proteins.\n\nKinase-specific Phosphorylation Site Prediction.\n\nComputational prediction of phosphorylation sites (p-sites) with th",
    "operations": [
     "PTM site prediction",
@@ -9742,7 +10720,7 @@
   {
    "biotoolsID": "alkaligrass",
    "name": "alkaligrass",
-   "reason": "no-match",
+   "reason": "excluded:\\bretroposon|\\bretrotransposon|\\",
    "description": "A high-quality genome sequence of alkaligrass provides insights into halophyte stress tolerance.\nA high-quality chromosome-level genome sequence of alkaligrass assembled from Illumina, PacBio and 10\u00d7 ",
    "operations": [
     "Expression analysis",
@@ -9919,6 +10897,17 @@
    "operations": []
   },
   {
+   "biotoolsID": "UTRome",
+   "name": "UTRome",
+   "reason": "excluded:\\bmiRNA[- ]target|\\bmicroRNA tar",
+   "description": "The C. elegans 3' UTRome v2 resource for studying mRNA cleavage and polyadenylation, 3'-UTR biology, and miRNA targeting.\n\nThe UTRome.org database is intended as a comprehensive resource for 3'UTR bio",
+   "operations": [
+    "PolyA signal detection",
+    "miRNA expression analysis",
+    "miRNA target prediction"
+   ]
+  },
+  {
    "biotoolsID": "TRANSNAP",
    "name": "TRANSNAP",
    "reason": "no-match",
@@ -10064,7 +11053,7 @@
   {
    "biotoolsID": "ltr-finder-p",
    "name": "LTR-FINDER-P",
-   "reason": "no-match",
+   "reason": "excluded:\\bretroposon|\\bretrotransposon|\\",
    "description": "Parallelization of LTR_FINDER enabling rapid identification of long terminal repeat retrotransposons | A parallel wrapper for LTR_FINDER | ~ ~ ~ Run LTR_FINDER in parallel ~ ~ ~ | This is a Perl wrapp",
    "operations": []
   },
@@ -10414,7 +11403,7 @@
   {
    "biotoolsID": "TEsorter",
    "name": "TEsorter",
-   "reason": "no-match",
+   "reason": "excluded:\\bretroposon|\\bretrotransposon|\\",
    "description": "lineage-level classification of transposable elements using conserved protein domains.\n\nNote: do not move or hard link TEsorter.py alone to anywhere else, as it rely on database/ and bin/. You can add",
    "operations": [
     "Phylogenetic tree reconstruction"
@@ -10423,7 +11412,7 @@
   {
    "biotoolsID": "MHCII",
    "name": "MHCII",
-   "reason": "no-match",
+   "reason": "excluded:\\bMHC (class )?(I|II)\\b|\\bepitop",
    "description": "Multi Epitope Vaccine Prediction Against Aichi Virus using Immunoinformatic Approach.\n\nIEDB recommended 2.22 IEDB recommended 2.18 Consensus 2.22 Consensus 2.18 NetMHCIIpan 3.2 NetMHCIIpan 3.1 NN-alig",
    "operations": [
     "Epitope mapping",
@@ -10479,7 +11468,7 @@
   {
    "biotoolsID": "drugZ",
    "name": "drugZ",
-   "reason": "no-match",
+   "reason": "excluded:\\bCRISPR (screen|guide|repeat|ar",
    "description": "Identifying chemogenetic interactions from CRISPR screens with drugZ | DrugZ software from the Hart Lab | Critically, the \"gene\" column must be the first non-index column in the file, and the column h",
    "operations": [
     "Enrichment analysis"
@@ -10520,7 +11509,7 @@
   {
    "biotoolsID": "snp-crispr",
    "name": "SNP-CRISPR",
-   "reason": "no-match",
+   "reason": "excluded:\\bCRISPR (screen|guide|repeat|ar",
    "description": "A Web Tool for SNP-Specific Genome Editing.\n\nSNP-targeted CRISPR design pipeline.\n\nCRISPR/Cas9 target online predictor.\n\nDRSC tool for designing SNP-targetted CRISPR guides.\n\nAre you interested in tar",
    "operations": [
     "Database search",
@@ -11079,7 +12068,7 @@
   {
    "biotoolsID": "SEPPA_3.0-enhanced",
    "name": "SEPPA 3.0-enhanced",
-   "reason": "no-match",
+   "reason": "excluded:\\bMHC (class )?(I|II)\\b|\\bepitop",
    "description": "Spatial epitope prediction for protein antigens, particularly for N-linked glycoproteins.",
    "operations": [
     "DNA vaccine design",
@@ -11561,6 +12550,16 @@
    ]
   },
   {
+   "biotoolsID": "genprobis",
+   "name": "GenProBiS",
+   "reason": "no-match",
+   "description": "Maps sequence variants to protein structures from the Protein Data Bank (PDB), and further to protein\u2013protein, protein\u2013nucleic acid, protein\u2013compound, and protein\u2013metal ion binding sites. Binding site",
+   "operations": [
+    "Post-translation modification site prediction",
+    "Protein binding site prediction"
+   ]
+  },
+  {
    "biotoolsID": "bioconcotk",
    "name": "BiocOncoTK",
    "reason": "no-match",
@@ -11592,7 +12591,7 @@
   {
    "biotoolsID": "gydb",
    "name": "Gypsy Database (GyDB)",
-   "reason": "no-match",
+   "reason": "excluded:\\bretroposon|\\bretrotransposon|\\",
    "description": "Gypsy Database of Mobile Genetic Elements is a database of viruses and transposable elements based on their phylogenetic classification. It includes long terminal repeats retroelements and relatives, ",
    "operations": [
     "Deposition",
@@ -11629,6 +12628,15 @@
    "description": "Path-based approach for identifying pairs of pathways that may crosstalk.",
    "operations": [
     "Pathway or network prediction"
+   ]
+  },
+  {
+   "biotoolsID": "mutlbsgenedb",
+   "name": "mutLBSgeneDB",
+   "reason": "no-match",
+   "description": "Mutated ligand binding site gene DataBase.",
+   "operations": [
+    "Database search"
    ]
   },
   {
@@ -11688,7 +12696,7 @@
   {
    "biotoolsID": "phossnp",
    "name": "PhosSNP",
-   "reason": "no-match",
+   "reason": "excluded:\\bphosphorylat|\\bkinase substrat",
    "description": "A database of phosphorylation-related SNP (phosSNP) which are non-synonymous SNP (nsSNP) that affect the protein phosphorylation status. Using an in-house developed kinase-specific phosphorylation sit",
    "operations": [
     "Genetic variation analysis",
@@ -11828,6 +12836,18 @@
    ]
   },
   {
+   "biotoolsID": "molloc",
+   "name": "MolLoc",
+   "reason": "no-match",
+   "description": "Web server for the structural comparison of molecular surfaces. Users input two structures in PDB format for comparison of binding sites, cavities or other residues.",
+   "operations": [
+    "Molecular surface analysis",
+    "Molecular surface calculation",
+    "Molecular surface comparison",
+    "Structure comparison"
+   ]
+  },
+  {
    "biotoolsID": "naps",
    "name": "NAPS",
    "reason": "no-match",
@@ -11862,6 +12882,24 @@
    ]
   },
   {
+   "biotoolsID": "dbd2bs",
+   "name": "DBD2BS",
+   "reason": "no-match",
+   "description": "Uses the structure of DNA binding domains (DBDs) to predict the corresponding binding sites on DNA. Queries can be specified by a PDB ID or the coordinates of a DNA-binding protein in PDB format.",
+   "operations": [
+    "Nucleic acid feature detection"
+   ]
+  },
+  {
+   "biotoolsID": "mbstar",
+   "name": "MBSTAR",
+   "reason": "no-match",
+   "description": "Web server for accurate prediction of true or functional miRNA binding sites.",
+   "operations": [
+    "Nucleic acid feature detection"
+   ]
+  },
+  {
    "biotoolsID": "metadbsite",
    "name": "metaDBSite",
    "reason": "no-match",
@@ -11869,6 +12907,27 @@
    "operations": [
     "Nucleic acid feature detection",
     "Protein sequence analysis"
+   ]
+  },
+  {
+   "biotoolsID": "pocketome",
+   "name": "Pocketome",
+   "reason": "no-match",
+   "description": "To assist in understanding the flexible protein-ligand interactions, we constructed this tool, an encyclopedia of about one thousand experimentally solved conformational ensembles of druggable binding",
+   "operations": [
+    "Molecular docking",
+    "Protein binding site prediction",
+    "Protein-ligand docking",
+    "Residue distance calculation"
+   ]
+  },
+  {
+   "biotoolsID": "methylviewer",
+   "name": "MethylViewer",
+   "reason": "no-match",
+   "description": "This tool was developed from CpGviewer such that the program can now analyse up to four different methylation sites such as CpG, GpC, CpNpG or any four user defined sites. If a non-native DNA methylas",
+   "operations": [
+    "Methylation analysis"
    ]
   },
   {
@@ -11960,6 +13019,15 @@
     "PCR primer design",
     "Plasmid map drawing",
     "Primer and probe design"
+   ]
+  },
+  {
+   "biotoolsID": "bisa",
+   "name": "BiSA",
+   "reason": "no-match",
+   "description": "Binding sites analyser is a database driven software and stores all of its data in a relational database management system (RDBMS) such as SQL Server in Windows or PostgreSQL on Linux.",
+   "operations": [
+    "Sequence database search"
    ]
   },
   {
@@ -12057,7 +13125,7 @@
   {
    "biotoolsID": "preselector",
    "name": "Preselector",
-   "reason": "no-match",
+   "reason": "excluded:\\brestriction enzyme",
    "description": "Preselector is a tool for optimize your cloning \u2013 a resource for identifying restriction enzymes for preselection reactions.",
    "operations": [
     "Data retrieval",
@@ -12301,6 +13369,16 @@
    ]
   },
   {
+   "biotoolsID": "BGSVM-NUC",
+   "name": "BGSVM-NUC",
+   "reason": "no-match",
+   "description": "Boosting Granular Support Vector Machines for the Accurate Prediction of Protein-Nucleotide Binding Sites | AIM AND OBJECTIVE:The accurate identification of protein-ligand binding sites helps elucidat",
+   "operations": [
+    "Binding site prediction",
+    "Protein-ligand docking"
+   ]
+  },
+  {
    "biotoolsID": "hla_bind",
    "name": "Bimas HLA Peptide Binding Predictions",
    "reason": "no-match",
@@ -12310,6 +13388,18 @@
     "Protein binding site prediction",
     "Protein-nucleic acid binding prediction",
     "siRNA binding specificity prediction"
+   ]
+  },
+  {
+   "biotoolsID": "macpet",
+   "name": "MACPET",
+   "reason": "no-match",
+   "description": "It can be used for binding site analysis for ChIA-PET data. MACPET reads ChIA-PET data in BAM or SAM format and separates the data into Self-ligated, Intra- and Inter-chromosomal PETs. Furthermore, MA",
+   "operations": [
+    "Classification",
+    "Clustering",
+    "DNA structure prediction",
+    "Peak detection"
    ]
   },
   {
@@ -12355,6 +13445,17 @@
    ]
   },
   {
+   "biotoolsID": "pocketzebra",
+   "name": "pocketZebra",
+   "reason": "no-match",
+   "description": "pocketZebra is a web-server for automated selection and classification of subfamily-specific binding sites by bioinformatic analysis of diverse protein families.",
+   "operations": [
+    "Gene-set enrichment analysis",
+    "Protein binding site prediction",
+    "Protein-nucleic acid binding site analysis"
+   ]
+  },
+  {
    "biotoolsID": "paratome",
    "name": "Paratome",
    "reason": "no-match",
@@ -12369,7 +13470,7 @@
   {
    "biotoolsID": "rebase",
    "name": "REBASE",
-   "reason": "no-match",
+   "reason": "excluded:\\brestriction enzyme",
    "description": "Comprehensive database of information about restriction enzymes, DNA methyltransferases and related proteins involved in the biological process of restriction-modification (R-M). It contains fully ref",
    "operations": [
     "Data handling",
@@ -12380,9 +13481,19 @@
    ]
   },
   {
+   "biotoolsID": "remap",
+   "name": "remap",
+   "reason": "excluded:\\brestriction enzyme",
+   "description": "Display restriction enzyme binding sites in a nucleotide sequence.",
+   "operations": [
+    "Restriction map drawing",
+    "Restriction site recognition"
+   ]
+  },
+  {
    "biotoolsID": "rebaseextract",
    "name": "rebaseextract",
-   "reason": "no-match",
+   "reason": "excluded:\\brestriction enzyme",
    "description": "Process the REBASE database for use by restriction enzyme applications.",
    "operations": [
     "Data loading"
@@ -12400,7 +13511,7 @@
   {
    "biotoolsID": "redata",
    "name": "redata",
-   "reason": "no-match",
+   "reason": "excluded:\\brestriction enzyme",
    "description": "Retrieve information from REBASE restriction enzyme database.",
    "operations": [
     "Data retrieval"
@@ -12555,7 +13666,7 @@
   {
    "biotoolsID": "mirtex",
    "name": "miRTex",
-   "reason": "no-match",
+   "reason": "excluded:\\bmiRNA[- ]target|\\bmicroRNA tar",
    "description": "Text-mining system that extracts miRNA-gene regulation relations and miRNA-target relations from literature.",
    "operations": [
     "Text mining"
@@ -12843,7 +13954,7 @@
   {
    "biotoolsID": "bcseq",
    "name": "bcSeq",
-   "reason": "no-match",
+   "reason": "excluded:\\bCRISPR (screen|guide|repeat|ar",
    "description": "Fast sequence mapping in high-throughput shRNA and CRISPR screens.",
    "operations": [
     "Mapping"
@@ -12968,7 +14079,7 @@
   {
    "biotoolsID": "pictar",
    "name": "PicTar",
-   "reason": "no-match",
+   "reason": "excluded:\\bmiRNA[- ]target|\\bmicroRNA tar",
    "description": "PAlgorithm for the identification of microRNA targets.",
    "operations": [
     "Database search"
@@ -13018,6 +14129,24 @@
     "Database search",
     "Natural product identification",
     "Validation"
+   ]
+  },
+  {
+   "biotoolsID": "clnn-loop",
+   "name": "CLNN-loop",
+   "reason": "no-match",
+   "description": "A deep learning model to predict CTCF-mediated chromatin loops in the different cell lines and CTCF-binding sites (CBS) pair types.",
+   "operations": [
+    "Loop modelling"
+   ]
+  },
+  {
+   "biotoolsID": "jlcrb",
+   "name": "JLCRB",
+   "reason": "no-match",
+   "description": "A unified multi-view-based joint representation learning for CircRNA binding sites prediction.",
+   "operations": [
+    "Binding site prediction"
    ]
   },
   {
@@ -13515,7 +14644,7 @@
   {
    "biotoolsID": "diana-lncbase",
    "name": "DIANA-LNCBase",
-   "reason": "no-match",
+   "reason": "excluded:\\bmiRNA[- ]target|\\bmicroRNA tar",
    "description": "Incorporates an extensive collection of miRNA:lncRNA interactions. The database includes more than 70,000 low and high-throughput, (in)direct miRNA:lncRNA experimentally supported interactions, derive",
    "operations": [
     "Annotation"
@@ -14066,6 +15195,15 @@
    ]
   },
   {
+   "biotoolsID": "x2k",
+   "name": "X2K",
+   "reason": "excluded:\\bphosphorylat|\\bkinase substrat",
+   "description": "Method to identify upstream regulators likely responsible for observed patterns in genome-wide gene expression. By integrating ChIP-seq/chip and position-weight-matrices (PWMs) data, protein-protein i",
+   "operations": [
+    "Gene expression analysis"
+   ]
+  },
+  {
    "biotoolsID": "ccip",
    "name": "CCIP",
    "reason": "no-match",
@@ -14123,6 +15261,18 @@
     "DNA-binding protein prediction",
     "Network analysis",
     "Sequence feature detection"
+   ]
+  },
+  {
+   "biotoolsID": "circr",
+   "name": "Circr",
+   "reason": "no-match",
+   "description": "Circr is a computational tool for the prediction of miRNA:circRNA associations. It combines publicly available algorithms for de novo prediction of miRNA binding sites on target sequences with experim",
+   "operations": [
+    "Binding site prediction",
+    "Data retrieval",
+    "Splitting",
+    "miRNA target prediction"
    ]
   },
   {
@@ -14789,7 +15939,7 @@
   {
    "biotoolsID": "AppleMDO",
    "name": "AppleMDO",
-   "reason": "no-match",
+   "reason": "excluded:\\bPROSITE\\b|\\bHAMAP\\b|\\bPfam\\b|\\",
    "description": "A Multi-Dimensional Omics Database for Apple Co-Expression Networks and Chromatin States.\n\nAppleMDO is a multi-dimensional omics database. Users can submit locus IDs to quickly search for co-expressio",
    "operations": [
     "Gene functional annotation",
@@ -15981,7 +17131,7 @@
   {
    "biotoolsID": "miaome",
    "name": "MIAOME",
-   "reason": "no-match",
+   "reason": "excluded:\\bviral taxonom|\\btelomeric moti",
    "description": "Human microbiome affect the host epigenome.",
    "operations": [
     "Database search",
@@ -17609,6 +18759,15 @@
    ]
   },
   {
+   "biotoolsID": "diana-mirgen",
+   "name": "DIANA-miRGen",
+   "reason": "excluded:\\bmiRNA[- ]target|\\bmicroRNA tar",
+   "description": "Provides accurate cell-line-specific miRNA gene transcription start sites, coupled with genome-wide maps of transcription factor binding sites in order to unveil the mechanisms of miRNA transcription ",
+   "operations": [
+    "Annotation"
+   ]
+  },
+  {
    "biotoolsID": "bat",
    "name": "BAT",
    "reason": "text match, no domain topic",
@@ -17650,9 +18809,21 @@
    ]
   },
   {
+   "biotoolsID": "predictprotein",
+   "name": "PredictProtein",
+   "reason": "excluded:\\bPROSITE\\b|\\bHAMAP\\b|\\bPfam\\b|\\",
+   "description": "PredictProtein is a protein sequence analysis and structure prediction tool.  Users provide a protein sequence, and PredictProtein reports similar sequences, PROSITE sequence motifs, and various types",
+   "operations": [
+    "Protein fold recognition",
+    "Protein secondary structure prediction",
+    "Protein secondary structure prediction (helices)",
+    "Protein structure prediction"
+   ]
+  },
+  {
    "biotoolsID": "mhccluster",
    "name": "MHCcluster",
-   "reason": "no-match",
+   "reason": "excluded:\\bMHC (class )?(I|II)\\b|\\bepitop",
    "description": "Functional cluster of MHC class I molecules (MHCI) based on their predicted binding specificity.",
    "operations": [
     "Functional clustering"
@@ -17672,6 +18843,15 @@
    "description": "Splice site prediction.",
    "operations": [
     "Splice site prediction"
+   ]
+  },
+  {
+   "biotoolsID": "blocklogo",
+   "name": "BlockLogo",
+   "reason": "excluded:\\bprotein (sequence )?motif|\\bmo",
+   "description": "Web-server application for the visualization of protein and nucleotide fragments, continuous protein sequence motifs, and discontinuous sequence motifs using calculation of block entropy from multiple",
+   "operations": [
+    "Visualisation"
    ]
   },
   {
@@ -17754,7 +18934,7 @@
   {
    "biotoolsID": "archcandy",
    "name": "ArchCandy",
-   "reason": "text match, no domain topic",
+   "reason": "excluded:\\bprotein (sequence )?motif|\\bmo",
    "description": "Tool able to decode protein sequence motifs that have a potential to form amyloids.",
    "operations": [
     "Protein feature detection",
@@ -17791,7 +18971,7 @@
   {
    "biotoolsID": "phosphoelm",
    "name": "PhosphoELM database",
-   "reason": "no-match",
+   "reason": "excluded:\\bphosphorylat|\\bkinase substrat",
    "description": "Experimentally verified phosphorylation sites in eukaryotic proteins.",
    "operations": [
     "Query and retrieval"
@@ -17836,7 +19016,7 @@
   {
    "biotoolsID": "protein_sequence_motif_extractor",
    "name": "Protein Sequence Motif Extractor",
-   "reason": "text match, no domain topic",
+   "reason": "excluded:\\bprotein (sequence )?motif|\\bmo",
    "description": "The Protein Sequence Motif Extractor reads a fasta file or tab delimited file containing protein sequences, then looks for the specified motif in each protein sequence. Results are stored in a new fil",
    "operations": [
     "Protein sequence analysis"
@@ -17865,7 +19045,7 @@
   {
    "biotoolsID": "prosextract",
    "name": "prosextract",
-   "reason": "no-match",
+   "reason": "excluded:\\bPROSITE\\b|\\bHAMAP\\b|\\bPfam\\b|\\",
    "description": "Process the PROSITE motif database for use by patmatmotifs.",
    "operations": [
     "Data loading"
@@ -18583,6 +19763,19 @@
     "Pathway or network analysis",
     "Pathway or network prediction",
     "Sequence database search"
+   ]
+  },
+  {
+   "biotoolsID": "PlantCircNet",
+   "name": "PlantCircNet",
+   "reason": "excluded:\\bmiRNA[- ]target|\\bmicroRNA tar",
+   "description": "PlantCircNet is a database that provides plant circRNA-miRNA-gene regulatory networks, as well as circRNA information and circRNA expression profiles. It provides convenient search functions for circR",
+   "operations": [
+    "Database search",
+    "Enrichment analysis",
+    "Pathway or network visualisation",
+    "miRNA expression analysis",
+    "miRNA target prediction"
    ]
   },
   {

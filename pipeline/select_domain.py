@@ -57,8 +57,12 @@ def classify(tool: dict) -> tuple[str | None, str]:
     blob = text_blob(tool)
     ops = operations(tool)
 
+    # Hard exclusions win over everything, including a STRONG operation.
+    # bio.tools mis-assigns strong operations too - KEGG carries "Gene
+    # regulatory network analysis", Geneious carries "Sequence motif discovery"
+    # - so trusting the ontology here would readmit whole neighbouring fields.
     for rx in EXCLUDE_RE:
-        if rx.search(blob) and not (ops & STRONG_OPERATIONS):
+        if rx.search(blob):
             return None, f"excluded:{rx.pattern[:32]}"
 
     if ops & STRONG_OPERATIONS:

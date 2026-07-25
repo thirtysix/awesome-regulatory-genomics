@@ -136,8 +136,6 @@ STRONG_OPERATIONS = {
     "Sequence motif discovery",
     "Motif discovery",
     "Sequence motif comparison",
-    "Phylogenetic footprinting",
-    "Phylogenetic footprinting / shadowing",
     "Peak calling",
     "Differential binding analysis",
     "Nucleosome position prediction",
@@ -154,6 +152,11 @@ WEAK_OPERATIONS = {
     "Sequence motif recognition",
     "Sequence motif analysis",
     "Structural motif discovery",
+    # bio.tools attaches these to orthology and phylogenetics tools
+    # (OrtholugeDB, SwiftOrtho, Broccoli, PhyloPars) far more often than to
+    # actual comparative regulatory analysis.
+    "Phylogenetic footprinting",
+    "Phylogenetic footprinting / shadowing",
 }
 
 KEEP_OPERATIONS = STRONG_OPERATIONS | WEAK_OPERATIONS
@@ -197,7 +200,7 @@ KEEP_TEXT_PATTERNS = [
     r"\bgene regulatory network",
     r"\bregulon\b",
     r"\bchromatin accessibilit",
-    r"\bbinding site",
+    r"\b(TF|transcription[- ]factor|DNA|protein-DNA)[- ]binding site",
     r"\bsequence logo",
     r"\bChIP[- ]?(seq|exo|nexus|on-chip)\b",
     r"\b(ChIP )?peak annotat",
@@ -220,6 +223,30 @@ EXCLUDE_TEXT_PATTERNS = [
     r"\bstructural variant|\bcopy[- ]number variant call",
     r"\bphylogenetic tree|\bspecies tree|\bmultiple sequence alignment tool",
     r"\bdocking\b|\bmolecular dynamics",
+    # protein/RNA motif work shares the word "motif" but is a different field
+    r"\bPROSITE\b|\bHAMAP\b|\bPfam\b|\bInterPro\b",
+    r"\bHMM profile|\bprofile HMM|\bhidden Markov model.{0,20}protein",
+    r"\bamino acid (motif|pattern)|\bprotein (motif|pattern|domain) (search|discovery|database)",
+    r"\bunaligned protein sequence",
+    # other vocabulary collisions
+    r"\brestriction enzyme",
+    r"\bretroposon|\bretrotransposon|\btransposable element",
+    r"\bflow injection analysis",
+    r"\bmetabolic pathway (map|database)",
+    r"\bMHC (class )?(I|II)\b|\bepitope\b|\bimmunogenic",
+    r"\bG-?quadruplex|\bQGRS\b",
+    r"\bmiRNA[- ]target|\bmicroRNA target",
+    r"\bexosom",
+    r"\bCRISPR (screen|guide|repeat|array)|\bsgRNA design",
+    r"\ballele[- ]specific copy number|\bASCN\b",
+    r"\bpathway (map|enrichment) database|\bKyoto Encyclopedia",
+    r"\bgeneral[- ]purpose (sequence|genomic) analysis (suite|platform)",
+    r"\bprotein (sequence )?motif|\bmotifs? (with)?in proteins",
+    r"\bphosphorylat|\bkinase substrate",
+    r"\bortholog(y|ue|s)? (inference|prediction|assignment|classifier)|\bortholog(y|ue) predictions",
+    r"\bRNA (tertiary|structural|secondary) motif",
+    r"\bviral taxonom|\btelomeric motif|\bmicrobiome",
+    r"\blow complexity protein",
 ]
 
 # ---------------------------------------------------------------------------
