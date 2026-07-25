@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.DS_Store
+.~lock.*#
+# Bulky per-work OpenAlex responses; the compact citation_cache.csv is tracked.
+data/cache/openalex/

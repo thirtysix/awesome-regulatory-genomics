@@ -1,0 +1,350 @@
+# Tools absent from bio.tools, added by hand.
+#
+# bio.tools does not index a large part of this field - notably the entire
+# sequence-to-function deep-learning generation, most digital-footprinting
+# methods, and several major motif databases. Every entry here was checked
+# against the bio.tools API and confirmed missing (see docs/coverage.md).
+#
+# Schema (name, url and categories are required):
+#   name:        display name
+#   url:         homepage or canonical landing page
+#   repo:        owner/name on GitHub, if any
+#   description: one sentence, no trailing full stop
+#   categories:  keys from CATEGORIES in pipeline/config.py
+#   doi / pmid:  primary publication, for the citation count
+#   tags:        free-form extra facets (deep-learning, single-cell, ...)
+#
+# Contributions welcome - see CONTRIBUTING.md.
+
+tools:
+  # --- sequence-to-function deep learning -----------------------------------
+  - name: DeepBind
+    url: https://tools.genes.toronto.edu/deepbind/
+    repo: jisraeli/DeepBind
+    description: Convolutional model of DNA- and RNA-binding protein sequence specificity; the first deep-learning TF binding predictor
+    categories: [tfbs-prediction]
+    tags: [deep-learning]
+    doi: 10.1038/nbt.3300
+
+  - name: DeepSEA
+    url: http://deepsea.princeton.edu/
+    repo: FunctionLab/selene
+    description: Predicts chromatin effects of noncoding variants directly from sequence at single-nucleotide resolution
+    categories: [tfbs-prediction, regulatory-variants, nucleosome-chromatin]
+    tags: [deep-learning]
+    doi: 10.1038/nmeth.3547
+
+  - name: Basset
+    url: https://github.com/davek44/Basset
+    repo: davek44/Basset
+    description: Convolutional neural network for learning the regulatory code of accessible genomes from DNase-seq
+    categories: [nucleosome-chromatin, tfbs-prediction]
+    tags: [deep-learning]
+    doi: 10.1101/gr.200535.115
+
+  - name: Basenji
+    url: https://github.com/calico/basenji
+    repo: calico/basenji
+    description: Dilated convolutional model predicting cell-type-specific epigenetic and transcriptional profiles from long DNA sequences
+    categories: [regulatory-elements, nucleosome-chromatin]
+    tags: [deep-learning]
+    doi: 10.1101/gr.227819.117
+
+  - name: Enformer
+    url: https://github.com/google-deepmind/deepmind-research/tree/master/enformer
+    repo: google-deepmind/deepmind-research
+    description: Transformer integrating long-range enhancer-promoter interactions to predict gene expression from sequence
+    categories: [regulatory-elements, tfbs-prediction]
+    tags: [deep-learning, transformer]
+    doi: 10.1038/s41592-021-01252-x
+
+  - name: Borzoi
+    url: https://github.com/calico/borzoi
+    repo: calico/borzoi
+    description: Sequence model predicting RNA-seq coverage, capturing transcription, splicing and polyadenylation regulation
+    categories: [regulatory-elements]
+    tags: [deep-learning]
+    doi: 10.1038/s41588-024-02053-6
+
+  - name: DanQ
+    url: https://github.com/uci-cbcl/DanQ
+    repo: uci-cbcl/DanQ
+    description: Hybrid convolutional and recurrent network for predicting the function of noncoding DNA
+    categories: [tfbs-prediction, regulatory-elements]
+    tags: [deep-learning]
+    doi: 10.1093/nar/gkw226
+
+  - name: BPNet
+    url: https://github.com/kundajelab/bpnet
+    repo: kundajelab/bpnet
+    description: Base-resolution model of TF binding profiles from ChIP-nexus that learns interpretable motif syntax
+    categories: [tfbs-prediction, motif-discovery]
+    tags: [deep-learning, base-resolution]
+    doi: 10.1038/s41588-021-00782-6
+
+  - name: ChromBPNet
+    url: https://github.com/kundajelab/chrombpnet
+    repo: kundajelab/chrombpnet
+    description: Base-resolution model of chromatin accessibility that corrects enzyme bias and reveals TF footprints
+    categories: [footprinting, nucleosome-chromatin, tfbs-prediction]
+    tags: [deep-learning, base-resolution]
+    doi: 10.1038/s41588-025-02244-9
+
+  - name: Sei
+    url: https://github.com/FunctionLab/sei-framework
+    repo: FunctionLab/sei-framework
+    description: Framework mapping sequence to a vocabulary of regulatory activities across 21,907 chromatin profiles
+    categories: [regulatory-elements, regulatory-variants]
+    tags: [deep-learning]
+    doi: 10.1038/s41588-022-01102-2
+
+  - name: DeepSTARR
+    url: https://github.com/bernardo-de-almeida/DeepSTARR
+    repo: bernardo-de-almeida/DeepSTARR
+    description: Predicts enhancer activity from sequence, trained on genome-wide STARR-seq
+    categories: [regulatory-elements]
+    tags: [deep-learning, enhancer]
+    doi: 10.1038/s41588-022-01048-5
+
+  - name: scBasset
+    url: https://github.com/calico/scBasset
+    repo: calico/scBasset
+    description: Sequence-based model of single-cell ATAC-seq that denoises accessibility and infers TF activity
+    categories: [single-cell, nucleosome-chromatin]
+    tags: [deep-learning]
+    doi: 10.1038/s41592-022-01562-8
+
+  - name: gReLU
+    url: https://github.com/Genentech/gReLU
+    repo: Genentech/gReLU
+    description: Library for training, interpreting and designing sequence-to-function models of regulatory DNA
+    categories: [regulatory-elements, tfbs-prediction]
+    tags: [deep-learning, framework]
+    doi: 10.1101/2024.09.18.613778
+
+  - name: TF-MoDISco
+    url: https://github.com/kundajelab/tfmodisco
+    repo: kundajelab/tfmodisco
+    description: Extracts consolidated motifs from base-resolution neural-network importance scores
+    categories: [motif-discovery]
+    tags: [deep-learning, interpretability]
+    doi: 10.48550/arXiv.1811.00416
+
+  - name: gkm-SVM / LS-GKM
+    url: https://github.com/Dongwon-Lee/lsgkm
+    repo: Dongwon-Lee/lsgkm
+    description: Gapped k-mer SVM for regulatory sequence classification, scalable to large ChIP-seq and DNase datasets
+    categories: [tfbs-prediction, regulatory-elements]
+    tags: [kernel-methods]
+    doi: 10.1093/bioinformatics/btw142
+
+  # --- digital footprinting --------------------------------------------------
+  - name: HINT-ATAC
+    url: https://reg-gen.readthedocs.io/en/latest/hint/introduction.html
+    repo: CostaLab/reg-gen
+    description: HMM-based footprinting for ATAC-seq that models the protocol's cleavage bias
+    categories: [footprinting]
+    doi: 10.1186/s13059-019-1642-2
+
+  - name: PIQ
+    url: http://piq.csail.mit.edu/
+    description: Protein Interaction Quantitation - genome-wide TF footprint discovery from DNase-seq
+    categories: [footprinting]
+    doi: 10.1038/nbt.2798
+
+  - name: Wellington / pyDNase
+    url: https://pythonhosted.org/pyDNase/
+    repo: jpiper/pyDNase
+    description: Python library for DNase-seq analysis, including the Wellington footprinting algorithm
+    categories: [footprinting]
+    doi: 10.1093/nar/gkt850
+
+  - name: CENTIPEDE
+    url: http://centipede.uchicago.edu/
+    description: Bayesian mixture model inferring TF occupancy from sequence and chromatin accessibility
+    categories: [footprinting, tfbs-prediction]
+    doi: 10.1101/gr.112623.110
+
+  - name: msCentipede
+    url: https://github.com/rajanil/msCentipede
+    repo: rajanil/msCentipede
+    description: Multi-scale extension of CENTIPEDE modelling heterogeneity in DNase cleavage profiles
+    categories: [footprinting, tfbs-prediction]
+    doi: 10.1371/journal.pone.0138030
+
+  - name: TFBSFootprinter
+    url: https://github.com/thirtysix/TFBS_footprinting
+    repo: thirtysix/TFBS_footprinting
+    description: Combines sequence, conservation, CAGE, eQTL, ChIP-seq, ATAC-seq and gene-expression evidence into a single TFBS score
+    categories: [tfbs-prediction, footprinting, comparative]
+    doi: 10.3389/fbinf.2022.910346
+
+  # --- motif and TF databases ------------------------------------------------
+  - name: CIS-BP
+    url: http://cisbp.ccbr.utoronto.ca/
+    description: Catalogue of Inferred Sequence Binding Preferences, inferring motifs across species from DNA-binding domain similarity
+    categories: [motif-databases]
+    doi: 10.1016/j.cell.2014.08.009
+
+  - name: TRRUST
+    url: https://www.grnpedia.org/trrust/
+    description: Manually curated database of human and mouse transcriptional regulatory interactions from literature
+    categories: [motif-databases, grn-inference]
+    doi: 10.1093/nar/gkx1013
+
+  - name: footprintDB
+    url: https://floresta.eead.csic.es/footprintdb/
+    description: Database of transcription factors and their DNA-binding interfaces, supporting motif transfer by protein similarity
+    categories: [motif-databases]
+    doi: 10.1093/bioinformatics/btw401
+
+  - name: CollecTF
+    url: http://www.collectf.org/
+    description: Manually curated database of experimentally validated TF binding sites in bacteria
+    categories: [motif-databases]
+    tags: [prokaryote]
+    doi: 10.1093/nar/gkt1123
+
+  - name: SwissRegulon
+    url: https://swissregulon.unibas.ch/
+    description: Genome-wide annotations of regulatory sites inferred with a Bayesian probabilistic framework
+    categories: [motif-databases, regulatory-elements]
+    doi: 10.1093/nar/gks1233
+
+  # --- motif scanning and enrichment ----------------------------------------
+  - name: FIMO
+    url: https://meme-suite.org/meme/tools/fimo
+    repo: cinquin/MEME
+    description: Find Individual Motif Occurrences - scans sequences for matches to known motifs with p-values
+    categories: [motif-scanning]
+    tags: [meme-suite]
+    doi: 10.1093/bioinformatics/btr064
+
+  - name: CentriMo
+    url: https://meme-suite.org/meme/tools/centrimo
+    description: Local motif enrichment analysis detecting central enrichment of motifs in peak regions
+    categories: [motif-scanning]
+    tags: [meme-suite]
+    doi: 10.1093/nar/gks433
+
+  - name: DREME
+    url: https://meme-suite.org/meme/tools/dreme
+    description: Discriminative motif discovery for short motifs in large ChIP-seq datasets (superseded by STREME)
+    categories: [motif-discovery]
+    tags: [meme-suite, deprecated]
+    doi: 10.1093/bioinformatics/btr261
+
+  - name: AME
+    url: https://meme-suite.org/meme/tools/ame
+    description: Analysis of Motif Enrichment - tests whether known motifs are enriched in a sequence set relative to a control
+    categories: [motif-scanning]
+    tags: [meme-suite]
+    doi: 10.1186/1471-2105-11-165
+
+  - name: Cluster-Buster
+    url: https://github.com/weng-lab/cluster-buster
+    repo: weng-lab/cluster-buster
+    description: Finds clusters of co-occurring motifs, the signature of cis-regulatory modules
+    categories: [motif-scanning, regulatory-elements]
+    doi: 10.1093/nar/gkg540
+
+  - name: motifmatchr
+    url: https://bioconductor.org/packages/motifmatchr/
+    repo: GreenleafLab/motifmatchr
+    description: Fast R wrapper around MOODS for finding motif matches in large sets of genomic ranges
+    categories: [motif-scanning]
+    tags: [r, bioconductor]
+    doi: 10.18129/B9.bioc.motifmatchr
+
+  - name: monaLisa
+    url: https://bioconductor.org/packages/monaLisa/
+    repo: fmicompbio/monaLisa
+    description: Binned and randomised-lasso motif enrichment linking motifs to quantitative changes in signal
+    categories: [motif-scanning]
+    tags: [r, bioconductor]
+    doi: 10.1093/bioinformatics/btac102
+
+  # --- regulatory variants ---------------------------------------------------
+  - name: motifbreakR
+    url: https://bioconductor.org/packages/motifbreakR/
+    repo: Simon-Coetzee/motifBreakR
+    description: Scores how single-nucleotide variants disrupt predicted TF binding sites across many motif databases
+    categories: [regulatory-variants, motif-scanning]
+    tags: [r, bioconductor]
+    doi: 10.1093/bioinformatics/btv470
+
+  - name: RegulomeDB
+    url: https://regulomedb.org/
+    description: Annotates variants with regulatory evidence from ChIP-seq, DNase, eQTL and motif data
+    categories: [regulatory-variants, chip-resources]
+    doi: 10.1101/gr.137323.112
+
+  - name: FunSeq2
+    url: http://funseq2.gersteinlab.org/
+    description: Prioritises noncoding somatic variants using a weighted regulatory network and motif-disruption scores
+    categories: [regulatory-variants]
+    doi: 10.1186/s13059-014-0480-5
+
+  - name: GWAVA
+    url: https://www.sanger.ac.uk/tool/gwava/
+    description: Random-forest prioritisation of noncoding variants from genomic and epigenomic annotations
+    categories: [regulatory-variants]
+    doi: 10.1038/nmeth.2832
+
+  # --- networks and regulons -------------------------------------------------
+  - name: pySCENIC
+    url: https://github.com/aertslab/pySCENIC
+    repo: aertslab/pySCENIC
+    description: Fast Python implementation of SCENIC for single-cell regulatory network inference and regulon scoring
+    categories: [grn-inference, single-cell]
+    tags: [python, single-cell]
+    doi: 10.1038/s41596-020-0336-2
+
+  - name: SCENIC+
+    url: https://github.com/aertslab/scenicplus
+    repo: aertslab/scenicplus
+    description: Joint single-cell multiome enhancer-driven regulon inference linking regions, motifs and target genes
+    categories: [grn-inference, single-cell, regulatory-elements]
+    tags: [multiome]
+    doi: 10.1038/s41592-023-01938-4
+
+  - name: iRegulon
+    url: http://iregulon.aertslab.org/
+    description: Cytoscape plug-in detecting enriched motifs and their upstream regulators in a gene signature
+    categories: [grn-inference, motif-scanning]
+    doi: 10.1371/journal.pcbi.1003731
+
+  - name: i-cisTarget
+    url: https://gbiomed.kuleuven.be/apps/lcb/i-cisTarget/
+    description: Web service for cis-regulatory motif and track enrichment in gene sets and genomic regions
+    categories: [motif-scanning, regulatory-elements]
+    doi: 10.1093/nar/gkv1114
+
+  # --- peaks and chromatin ---------------------------------------------------
+  - name: Genrich
+    url: https://github.com/jsh58/Genrich
+    repo: jsh58/Genrich
+    description: Peak caller for ChIP-seq and ATAC-seq with native replicate handling and an ATAC-seq mode
+    categories: [peak-calling]
+
+  - name: GoPeaks
+    url: https://github.com/maxsonBraunLab/gopeaks
+    repo: maxsonBraunLab/gopeaks
+    description: Peak caller designed for the sparse, high-signal-to-noise data produced by CUT&TAG
+    categories: [peak-calling]
+    doi: 10.1186/s13059-022-02707-w
+
+  - name: TOBIAS
+    url: https://github.com/loosolab/TOBIAS
+    repo: loosolab/TOBIAS
+    description: ATAC-seq footprinting framework correcting Tn5 bias and comparing differential TF activity between conditions
+    categories: [footprinting, peak-annotation]
+    doi: 10.1038/s41467-020-18035-1
+
+  - name: LOLA
+    url: https://bioconductor.org/packages/LOLA/
+    repo: nsheff/LOLA
+    description: Locus Overlap Analysis - tests enrichment of genomic region sets against curated region databases
+    categories: [peak-annotation]
+    tags: [r, bioconductor]
+    doi: 10.1093/bioinformatics/btv612

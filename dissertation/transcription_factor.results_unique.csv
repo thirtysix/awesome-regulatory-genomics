@@ -1,0 +1,149 @@
+Name	Homepage	Description_short	Year	Citations	Identifiers
+MEME Suite	http://meme-suite.org/	Unified portal for discovery and analysis of sequence motifs (e.g. DNA binding sites, protein interaction domains)	1994	18224	pmid:7584402,pmid:7584439,pmid:8877500,pmid:8902357,pmid:9283754,pmid:9366496,pmid:16845028,pmid:19458158
+JASPAR	http://jaspar.genereg.net/	JASPAR is a high-quality, open-access database that provides manually curated, non-redundant transcription factor (TF) binding profiles for six taxonomic groups (fungi, insecta, nematoda, plantae, urochordata, vertebrata)	2022	8544	pmid:34850907,pmid:31701148,pmid:29140473,pmid:29253085,pmid:26531826,pmid:24194598,pmid:19906716,pmid:18006571,pmid:16381983,pmid:14681366
+RcisTarget	http://bioconductor.org/packages/release/bioc/html/RcisTarget.html	It identifies transcription factor binding motifs (TFBS) over-represented on a gene list	2017	4807	pmid:28991892
+hgv_pass	https://github.com/galaxyproject/galaxy/tree/dev/tools	A tool that detects significant transcription factor binding sites from ChIP data.	2011	2009	pmid:20823314,pmid:27137889,doi:10.7490/f1000research.1114334.1
+Propred	http://webs.iiitd.edu.in/raghava/propred/	This server allows users to predict MHC class II binders.	2002	839	pmid:11751237
+Consite	http://consite.genereg.net/	Detect transcription factor binding sites in genomic sequences using phylogenetic footprinting and experimentally-confirmed binding profiles.	2004	730	pmid:15215389,pmid:12760745
+TALE-NT	https://boglab.plp.iastate.edu/	Transcription activator-like (TAL) Effector-Nucleotide Targeter 2.0 (TALE-NT) is a suite of web-based tools that allows for custom design of TAL effector repeat arrays for desired targets and prediction of TAL effector binding sites.	2012	559	pmid:22693217
+SISSRs	http://sissrs.rajajothi.com/	Produce a list of peakmaxima from aligned positions.	2008	536	pmid:18684996
+RBPmap	http://rbpmap.technion.ac.il/	RBPmap is a web server for mapping binding sites of RNA-binding proteins.	2014	515	pmid:24829458
+ProMateus	http://bioportal.weizmann.ac.il/promate/	ProMateus extends ProMate, a protein binding site predictor, and allows the user to suggest new features that might improve the prediction of the binding site locations.	2004	465	pmid:15050833,pmid:17488838
+Pscan	http://www.beaconlab.it/pscan	Software tool that scans a set of sequences (e.g. promoters) from co-regulated or co-expressed genes with motifs describing the binding specificity of known transcription factors and assesses which motifs are significantly over- or under-represented, providing thus hints on which transcription factors could be common regulators of the genes studied, together with the location of their candidate binding sites in the sequences	2009	404	pmid:19487240
+Promoter	http://cbs.dtu.dk/services/Promoter/	Prediction of transcription start sites of vertebrate Pol II promoters in DNA sequences.	1999	368	pmid:10366655
+RNABindR	http://ailab1.ist.psu.edu/RNABindR/	A server for analyzing and predicting RNA binding sites in proteins.	2007	363	pmid:17483510,pmid:16790841
+TFBIND	http://tfbind.hgc.jp/	A software for searching transcription factor binding sites (including TATA boxes, GC boxes, CCAAT boxes, transcription start sites (TSS)).	1999	353	pmid:10487870
+PlantTFDB 2.0	http://planttfdb.cbi.pku.edu.cn	The PlantTFDB 2.0 plant transcription factor (TF) database contains detailed annotation including general information, domain feature, gene ontology, expression pattern and ortholog groups, as well as cross references to various databases and literature citations for these TFs	2011	329	pmid:21097470
+PupasView	http://pupasuite.bioinfo.cipf.es/	Interactive web-based SNP analysis tool that allows for the selection of relevant SNPs within a gene, based on different characteristics of the SNP itself, such as validation status, type, frequency/population data and putative functional properties (pathological SNPs, SNPs disrupting potential transcription factor binding sites, intron/exon boundaries;.).	2005	302	pmid:15980522
+MicroInspector	http://bioinfo.uni-plovdiv.bg/microinspector/	Tool that detects miRNA (microRNA) binding sites in your input sequence by searching against databases of known miRNA binding sites.	2005	265	pmid:15980566
+CiiiDER	http://www.ciiider.org	A tool for predicting and analysing transcription factor binding sites | CIIIDER is a user-friendly tool for predicting and analysing transcription factor binding sites, designed with biologists in mind | Transcription factor binding site prediction and visualisation software	2019	202	pmid:31483836
+YEASTRACT	http://www.yeastract.com	The YEAst Search for Transcriptional Regulators And Consensus Tracking is a curated repository of regulatory associations between transcription factors (TF) and target genes in Saccharomyces cerevisiae	2011	195	pmid:20972212
+SNP2TFBS	https://epd.expasy.org/snp2tfbs/	The resource is based on a new 'in silico' approach for identifying regulatory variants	2017	191	doi:10.1093/nar/gkw1064
+TFBS	http://tfbs.genereg.net/	A set of integrated, object-oriented Perl modules for transcription factor binding site detection and analysis	2002	188	pmid:12176838
+Drosophila DNase I footprint database	http://www.flyreg.org/	Database of transcription factor binding sites created from systematic literature curation and genome annotation of DNase I footprints for Drosophila.	2004	185	pmid:15572468
+TF2Network	http://bioinformatics.psb.ugent.be/webtools/TF2Network/	predicting transcription factor regulators and gene regulatory networks in Arabidopsis using publicly available binding site information	2018	130	pmid:29272447
+ConTra v3	http://bioit2.irc.ugent.be/contra/v3	Visualization and exploration of predicted transcription factor binding sites (TFBSs) in any genomic region surrounding coding or non-coding genes.	2017	124	pmid:28472390
+STarMir	http://sfold.wadsworth.org/starmir.html	STarMir is a web server for prediction of microRNA binding sites.	2014	116	pmid:24803672
+PscanChIP	http://www.beaconlab.it/pscan_chip_dev	Web server that, starting from a collection of genomic regions derived from a ChIP-Seq experiment, scans them using motif descriptors like JASPAR or TRANSFAC position-specific frequency matrices, or descriptors uploaded by users, and it evaluates both motif enrichment and positional bias within the regions according to different measures and criteria.	2013	115	pmid:23748563,pmid:25199791
+refTSS	http://reftss.clst.riken.jp/	Annotated reference dataset for transcriptional start sites (TSS) in human and mouse.	2019	106	pmid:31075273
+SFmap	http://sfmap.technion.ac.il	SFmap is a web server for predicting putative splicing factor (SF) binding sites in genomic data	2010	105	pmid:20501600
+DeepMEL	http://kipoi.org/models/DeepMEL/	DeepMEL is a tool that identifies orthologous enhancers across distantly related species, where sequence alignment fails, and the model highlights specific nucleotide substitutions that underlie enhancer turnover	2020	101	pmid:32732264
+MEDock	https://medock.ee.ncku.edu.tw/	MEDock (Maximum-Entropy based Docking) web server is aimed at providing an efficient utility for prediction of ligand binding site.	2005	92	pmid:15991337
+DBChIP	http://bioconductor.org/packages/release/bioc/html/DBChIP.html	Detects differentially bound sharp binding sites across multiple conditions, with or without matching control samples.	2011	90	pmid:22057161
+TFLink	https://tflink.net/	An integrated gateway to access transcription factor-target gene interactions for multiple species.	2022	80	pmid:36124642
+ZincBind	https://zincbind.bioinf.org.uk/	Database of zinc binding sites.	2019	76	pmid:30722040
+ABS	http://genome.imim.es/datasets/abs2005/	Annotated regulatory binding sites from orthologous promoters.	2005	74	pmid:16381947
+BCRANK	http://bioconductor.org/packages/release/bioc/html/BCRANK.html	Functions and classes for de novo prediction of transcription factor binding consensus by heuristic search.	2009	73	pmid:19451166
+Anchor	https://github.com/GuanLab/Anchor	Package for trans-cell type prediction of transcription factor binding sites.	2019	70	pmid:30567711
+DeepGRN	https://github.com/jianlin-cheng/DeepGRN	DeepGRN is a tool for predicting transcription factor binding site across cell-types using attention-based deep neural networks.	2021	69	pmid:33522898
+PRODORIC	https://www.prodoric.de	The most comprehensive database for gene regulation and gene expression in prokaryotes.	2022	69	pmid:34850133
+ProBiS-ligands	http://probis.cmm.ki.si/ligands	ProBiS is a web server for predicting ligands by similarity in binding sites.	2014	67	pmid:24861616
+MetalDetector	http://metaldetector.dsi.unifi.it/v2.0/	MetalDetector identifies CYS and HIS involved in transition metal protein binding sites beginning with protein sequence alone	2011	66	pmid:21576237
+SDDA	http://www.stats.gla.ac.uk/~mgupta/publications.htm	Program that uses a stochastic dictionary model to search for transcription factor binding sites (motifs) in DNA sequences	2003	64	doi:10.1198/016214503388619094
+ChIP-Array	http://jjwanglab.org/chip-array/	ChIP-Array is a web server that integrates ChIP-seq and microarray gene expression data to discover direct and indirect target genes regulated by a transcription factor of interest.	2011	60	pmid:21586587
+Janggu	https://github.com/BIMSBbioinfo/janggu	Deep learning for genomics using Janggu	2020	58	pmid:32661261
+SEMpl	https://github.com/Boyle-Lab/SEM_CPP	Predicting the effects of SNPs on transcription factor binding affinity | MOTIVATION:GWAS have revealed that 88% of disease associated SNPs reside in noncoding regions	2020	58	pmid:31373606
+HOT	https://github.com/BIMSBbioinfo/HOT-or-not-examining-the-basis-of-high-occupancy-target-regions	Examining the basis of high-occupancy target regions.	2019	57	pmid:31114922
+ChINN	https://github.com/mjflab/chinn	Chromatin Interaction Neural Network (ChINN): a machine learning-based method for predicting chromatin interactions from DNA sequences	2021	46	pmid:34399797
+SEPIRA	http://bioconductor.org/packages/release/bioc/html/SEPIRA.html	Systems EPigenomics Inference of Regulatory Activity is an algorithm that infers sample-specific transcription factor activity from the genome-wide expression or DNA methylation profile of the sample.	2017	45	pmid:29262847
+DDPC	http://www.cbrc.kaust.edu.sa/ddpc/	Dragon Database of Genes Implicated in Prostate Cancer is a knowledgebase of genes experimentally verified to be involved in prostate cancer (PC)	2011	44	pmid:20880996
+ASAP	http://asap.binf.ku.dk/Asap/Home.html	A framework for promoter analysis based on a fast search engine using enhanced suffix arrays	2008	42	pmid:18286180
+BindSpace	https://bitbucket.org/hy395/bindspace	BindSpace decodes transcription factor binding signals by large-scale sequence embedding | The decoding of transcription factor (TF) binding signals in genomic DNA is a fundamental problem	2019	41	pmid:31406384
+msCentipede	https://github.com/rajanil/msCentipede	Algorithm for accurately inferring transcription factor binding sites using chromatin accessibility data.	2015	40	pmid:26406244
+TFBSshape	https://tfbsshape.usc.edu	an expanded motif database for DNA shape features of transcription factor binding sites	2020	38	pmid:31665425
+FABIAN-variant	https://www.genecascade.org/fabian/	FABIAN-variant uses transcription factor flexible models (TFFMs) and position weight matrices (PWMs) to predict the effect of DNA variants on transcription factor binding.	2022	36	pmid:35639768
+TFBScluster	http://hscl.cimr.cam.ac.uk/TFBScluster_genome_portal.html	TFBScluster is a web tool designed to identify clusters of transcription factor binding sites (TFBSs) conserved in mammalian and mouse genomes	2006	36	pmid:16845063,pmid:15855248
+DNAcycP	http://DNAcycP.stats.northwestern.edu	A deep learning tool for DNA cyclizability prediction.	2022	35	pmid:35288750
+QBiC-Pred	http://qbic.genome.duke.edu	Quantitative predictions of transcription factor binding changes due to sequence variants.	2019	33	pmid:31114870
+TFregulomeR	https://github.com/benoukraflab/TFregulomeR	TFregulomeR comprises of a comprehensive compendium of transcription factor binding sites (TFBSs) derived from the MethMotif and GTRD, as well as the ready-to-use functionality in R language facilitating data access, integration and analysis	2020	32	pmid:31754708
+TFPred	http://lin-group.cn/server/TFPred/	Predicting Preference of Transcription Factors for Methylated DNA Using Sequence Information	2020	30	pmid:33294291
+Factorbook	http://www.factorbook.org	An updated catalog of transcription factor motifs and candidate regulatory motif sites.	2022	29	pmid:34755879
+maxATAC	https://github.com/MiraldiLab/maxATAC	Genome-scale transcription-factor binding prediction from ATAC-seq with deep neural networks.	2023	29	pmid:36719906
+Virtual ChIP-seq	https://virchip.hoffmanlab.org	Predicting transcription factor binding by learning from the transcriptome.	2022	28	pmid:35681170
+BPAC	http://bioinfo.wilmer.jhu.edu/BPAC/	Predict of transcription factor binding sites based on chromatin accessibility.	2017	25	pmid:28750606
+DeepD2V	https://github.com/Sparkleiii/DeepD2V	A Novel Deep Learning-Based Framework for Predicting Transcription Factor Binding Sites from Combined DNA Sequence.	2021	25	pmid:34073774
+DNAffinity	https://github.com/Jalbiti/DNAffinity	A machine-learning approach to predict DNA binding affinities of transcription factors	2022	24	pmid:36018808
+ABC	https://github.com/mlupien/ABC/	Computational tool that identifies allele specific binding of transcription factors from aligned ChIP-Seq reads at heterozygous SNVs.	2015	23	pmid:25995231
+GroovDB	https://groov.bio	A database of ligand-inducible transcription factors.	2022	23	pmid:36178800
+LISE	http://lise.ibms.sinica.edu.tw	LISE is a web server for a novel method of predicting small molecule binding sites on proteins.	2013	23	pmid:23609546
+DeepSELEX	http://github.com/OrensteinLab/DeepSELEX/	DeepSELEX is a tool for inferring DNA-binding preferences from HT-SELEX data using multi-class CNNs.	2020	22	pmid:33381817
+RBPCNN	https://home.jbnu.ac.kr/NSCL/RBPCNN.htm	Improved Predicting of The Sequence Specificities of RNA Binding Proteins by Deep Learning.	2020	20	pmid:32191896
+3DTF	http://gene-regulation.com/pub/programs/3dtf/	3D Transcription Factor (3DTF) is a web-server for the analysis of protein-DNA binding sites	2012	19	pmid:22693215
+iEnhancer-DCLA	https://github.com/WamesM/iEnhancer-DCLA	A prediction method based on deep learning is proposed to identify enhancers and enhancer strength, called iEnhancer-DCLA	2022	19	pmid:36376800
+PiDNA	http://dna.bime.ntu.edu.tw/pidna	PiDNA web server predicts the interaction between a protein and a single DNA sequence by applying an atomic level knowledge based scoring function on numerous in silico mutated complex structures.	2013	19	pmid:23703214
+SiTaR	https://sbi.hki-jena.de/sitar/index.php	Novel tool for transcription factor binding site prediction.	2011	19	pmid:21893518
+RLDOCK	https://github.com/Vfold-RNA/RLDOCK	RLDOCK method for predicting RNA-small molecule binding modes	2022	18	pmid:33549725
+TDTHub	http://acrab.cnb.csic.es/TDTHub/	Web server tool for the analysis of transcription factor binding sites in plants.	2022	18	pmid:35713985
+USMPep	https://github.com/nstrodt/USMPep	USMPep: Universal Sequence Models for Major Histocompatibility Complex Binding Afﬁnity Prediction	2020	18	pmid:32615972
+DeepZF	http://github.com/OrensteinLab/DeepZF	DeepZF, a deep-learning-based pipeline for predicting binding ZFs and their DNA-binding preferences given only the amino acid sequence of a C2H2-ZF protein	2022	17	pmid:36124796
+PDA-PreD	https://web.iitm.ac.in/bioinfo2/pdapred/	Predicting the binding affinity of protein-DNA complexes using machine learning techniques and structural features.	2023	17	pmid:36924867
+Skipper	https://github.com/YeoLab/skipper/	Skipper analysis of RNA-protein interactions highlights depletion of genetic variation in translation factor binding sites.	2023	17	pmid:37388912
+TSPTFBS	https://github.com/liulifenyf/TSPTFBS	a docker image for Trans-Species Prediction of Transcription Factor Binding Sites in Plants.	2020	17	pmid:33416862
+PocketAnnotate	http://proline.biochem.iisc.ernet.in/pocketannotate/	PocketAnnotate performs binding site level annotation of query proteins.	2012	16	pmid:22618878
+MEDUSA	http://cbio.mskcc.org/leslielab/software/medusa	Integrative method for learning motif models of transcription factor binding sites by incorporating promoter sequence and gene expression data	2007	15	pmid:17934055
+TFBMiner	https://github.com/UoMMIB/TFBMiner	User-friendly command line tool for the rapid mining of transcription factor-based biosensors.	2023	15	pmid:37053505
+Expresso	http://bioinformatics.cs.vt.edu/expresso/	identify and explore the binding of transcription factors to their target genes in plants using available ChIP-Seq data.	2017	13	doi:10.12688/f1000research.10041.1
+FCNGRU	https://github.com/wangguoguoa/FCNGRU	Locating Transcription Factor Binding Sites by combing Fully Convolutional Neural Network with Gated Recurrent Unit.	2022	13	pmid:34613923
+MAResNet	http://csbio.njust.edu.cn/bioinf/maresnet/	Predicting transcription factor binding sites by combining multi-scale bottom-up and top-down attention and residual network.	2022	13	pmid:34664074
+regCNN	http://cobisHSS0.im.nuk.edu.tw/regCNN/	Identifying Drosophila genome-wide cis-regulatory modules via integrating the local patterns between epigenetic marks and TF binding motifs	2022	13	pmid:35035784
+DSAC	https://github.com/YuBinLab-QUST/DSAC/	Cooperation of local features and global representations by a dual-branch network for transcription factor binding sites prediction.	2023	12	pmid:36748992
+PAnDA (Protein And DNA Associations)	http://s.tartaglialab.com/new_submission/panda	PAnDA is an algorithm for the prediction of direct and indirect TF binding events.	2015	12	pmid:26089389
+proChIPdb	https://prochipdb.org	A PROkaryotic Chromatin ImmunoPrecipitation DataBase	2022	12	pmid:34791440
+ChIPulate	https://github.com/vishakad/chipulate	A Python3 framework to simulate read counts in a ChIP-seq experiment.	2019	10	pmid:30897079
+regSNPs-ASB	https://github.com/SiwenX/RegSNPs-ASB	A Computational Framework for Identifying Allele-Specific Transcription Factor Binding From ATAC-seq Data	2020	10	pmid:32850739
+SBSA	http://innovebioinfo.com/Annotation/SBSA/SBSA.php	An online service for somatic binding sequence annotation.	2022	10	pmid:34606615
+triform	http://bioconductor.org/packages/release/bioc/html/triform.html	IT is an R package to find enriched regions in trancription factor ChIP-seq data	2012	9	pmid:22827163
+isChIP	https://github.com/fnaumenko/isChIP	Novel ChIP-seq simulating program with superior versatility	2021	8	pmid:33320934
+TFSyntax	https://tfsyntax.zhaopage.com	A database of transcription factors binding syntax in mammalian genomes.	2023	8	pmid:36200824
+TOBIAS	https://github.com/loosolab/TOBIAS	ATAC-seq footprinting unravels kinetics of transcription factor binding during zygotic genome activation.	2019	8	doi:10.1101/869560
+Web-MCOT	https://webmcot.sysbio.cytogen.ru/	Web-MCOT Server for Motif Co-Occurrence Search in ChIP-Seq Data.	2022	8	pmid:36012247
+CharID	https://github.com/Yin-Shen/CharID	CharID (Chromatin Accessible Region Interaction Detector), a two-step model that combines neural network and ensemble learning to predict OCR-mediated loops.	2022	7	pmid:35077535
+PROBC	http://www.github.com/seferlab/probc	Joint modeling of epigenome and transcriptome effects in 3D genome.	2022	7	pmid:35397520
+SemanticBI	http://qianglab.scst.suda.edu.cn/semantic/	Quantifying intensities of transcription factor-DNA binding by learning from an ensemble of protein binding microarrays	2021	7	pmid:33571101
+CisCross	https://plamorph.sysbio.ru/ciscross/	CisCross web service that gives more flexibility in the analysis of potential upstream TF regulators for Arabidopsis thaliana gene	2022	6	pmid:36061801
+SeqAcademy	http://www.seqacademy.org/	Jupyter notebook-based educational pipeline for RNA-Seq and epigenomic data analysis	2018	6	doi:10.12688/f1000research.14880.1
+ComBind	https://github.com/AnniAleksandra/ComBind	Modeling binding specificities of transcription factor pairs with random forests.	2022	5	pmid:35659235
+DIpartite	https://github.com/Mohammad-Vahed/DIpartite	A tool for detecting bipartite motifs by considering base interdependencies | A DNA sequence motif finding program | DIpartite is a tool for detecting bipartite motif based on dinucleotide weight matrix | DIpartite predicts transcription factor binding sites (TFBSs) based on PWM or DWM	2019	5	pmid:31469855
+FastSK	https://github.com/QData/FastSK	FastSK is a tool for fast sequence analysis using gapped string kernels.	2020	5	doi:10.1101/2020.04.21.053975,pmid:33381828
+GREAT:SCAN:multipatterns	https://absynth.issb.genopole.fr/Bioinformatics/tools/GREAT/index	This tool performs, in a systematic way, an automated analysis of regular arrangements in organisms having multiple chromosomes, for different transcription factors (or regulators, conditions) at the same time	2016	5	doi:10.1093/nar/gkw384
+LogoMotif	https://logomotif.bioinformatics.nl	A comprehensive database of transcription factor binding site profiles in Actinobacteria.	2024	5	pmid:38580076
+MotifGenie	https://github.com/ceragoguztuzun/MotifGenie	MotifGenie is a Python command line tool for searching transcription factor binding motif sequences in merged ChIP-Seq binding sites	2021	5	pmid:33999190
+RoboCOP	https://github.com/HarteminkLab/RoboCOP	Multivariate state space model that integrates nucleotide sequence and chromatin accessibility data (currently uses only with MNase-seq or ATAC-seq) to compute genome-wide probabilistic occupancy landscape of nucleosomes and transciption factors (collectively known as DNA-binding factors or DBFs).	2021	5	pmid:34255854
+TF-Prioritizer	https://github.com/biomedbigdata/TF-Prioritizer	Java pipeline to prioritize condition-specific transcription factors.	2023	5	pmid:37132521
+activeTF	http://hulab.ucf.edu/software	This tool finds a set of coordinately activated Transcription Factors (TF) from a given gene expression dataset.	2010	4	pmid:20060041
+ANANSE	https://github.com/vanheeringen-lab/ANANSE	ANANSE is a computational approach to infer enhancer-based gene regulatory networks (GRNs) and to use these GRNs to identify the key transcription factors in cell fate determination.	2020	4	doi:10.1101/2020.06.05.135798
+CRUNCH	https://crunch.unibas.ch	A completely automated pipe-line for ChIP-seq data analysis, starting from raw sequencing reads, through quality filtering, read mapping, fragment size estimation, peak calling, peak annotation and comprehensive regulatory motif analysis	2016	4	doi:10.1101/042903
+expansion-network	https://github.com/regulomics/expansion-network	Automated inference of gene regulatory networks using explicit regulatory modules	2020	4	pmid:31790679
+mscDPB	http://121.5.71.120/mscDPB/	mscDPB is a tool that uses Chou's 5-step rule to predict DNA-protein binding with nulti-scale complementary feature.	2021	4	pmid:33522829
+SACSANN	https://github.com/BlanchetteLab/SACSANN	identifying sequence-based determinants of chromosomal compartments	2020	4	doi:10.1101/2020.10.06.328039
+SemanticCS	http://qianglab.scst.suda.edu.cn/semanticCS/	Learning useful representations of DNA sequences from ChIP-seq datasets for exploring transcription factor binding specificities	2020	4	pmid:32976105
+SiPer	https://siper.uni.lu/	A single cell-based computational platform to identify chemical compounds targeting desired sets of transcription factors for cellular conversion	2023	4	pmid:36400030
+NUCOME	http://compbio-zhanglab.org/NUCOME	A comprehensive database of nucleosome organization referenced landscapes in mammalian genomes.	2021	3	pmid:34120586
+CpGmotifs	https://github.com/Greco-Lab/CpGmotifs	CpGmotifs is a tool to discover DNA motifs associated to CpG methylation events.	2021	2	pmid:34039269
+dipwmsearch	https://gite.lirmm.fr/rivals/dipwmsearch/	Python package for searching di-PWM motifs.	2023	2	pmid:37010504
+fcScan	https://bioconductor.org/packages/fcScan	fcScan is a Bioconductor package aiming at clustering genomic features based on a defined window size and combination of sites	2020	2	pmid:32429868
+miRinGO	https://github.com/Fadeel/miRinGO	Prediction of biological processes indirectly targeted by human microRNAs	2020	2	doi:10.1101/2020.07.24.220335
+preciseTAD	https://bioconductor.org/packages/preciseTAD	A machine learning framework for precise 3D domain boundary prediction at base-level resolution	2020	2	doi:10.1101/2020.09.03.282186
+T-Gene	http://meme-suite.org/tools/tgene	Improved target gene prediction	2019	2	doi:10.1101/803221
+9aaTAD	https://www.med.muni.cz/9aaTAD/index.php	A web application for predicting 9aaTAD activation domains in a sequence.	2019	1	doi:10.1101/2019.12.15.876706
+ChIPSummitDB	http://summit.med.unideb.hu/summitdb/	ChIP-seq-based database of human transcription factor binding sites and the topological arrangements of the proteins bound to them.	2019	1	doi:10.1101/652420
+GRAFIMO	https://github.com/pinellolab/GRAFIMO	GRAph-based Finding of Individual Motif Occurrences	2021	1	doi:10.1101/2021.02.04.429752
+PhyloPGM	https://github.com/BlanchetteLab/PhyloPGM	Boosting regulatory function prediction accuracy using evolutionary information.	2022	1	pmid:35758792
+PredicTF	https://github.com/mdsufz/PredicTF	PredicTF is a tool to predict bacterial transcription factors in complex microbial communities	2021	1	doi:10.1101/2021.01.28.428666
+SEMplMe	https://github.com/Boyle-Lab/SEMplMe	A tool for integrating DNA methylation effects in transcription factor binding affinity predictions	2020	1	doi:10.1101/2020.08.13.250118
+TFHAZ	http://bioconductor.org/packages/release/bioc/html/TFHAZ.html	It finds trascription factor (TF) high accumulation DNA zones, i.e., regions along the genome where there is a high presence of different transcription factors	2023	1	pmid:37864168
+AIModules	https://bioinfo-wuerz.de/aimodules/	AIModules enables you to find transcription factor binding sites (TFBSs) and modules on DNA using own matrices or the JASPAR 2022 database.		0	doi:10.21203/RS.3.RS-1284479/V1
+EAT-UpTF	https://github.com/sangreashim/EAT-UpTF	Enrichment Analysis Tool for Upstream Transcription Factor of a gene set (EAT-UpTF) is a tool to conduct enrichment analysis of upstream transcription factor for a gene set of interest.	2020	0	doi:10.1101/2020.03.22.001537
+ezGeno	https://github.com/ailabstw/ezGeno	ezGeno is an open source genomics data analysis package based on deep learning for auto tuning network structure and building models.	2020	0	doi:10.1101/2020.09.30.319996
+GuidingNet	https://github.com/AMSSwanglab/GuidingNet	revealing transcriptional cofactor and predicting binding for DNA methyltransferase by network regularization	2020	0	doi:10.1101/2020.06.02.129445
+jaspscan	http://emboss.open-bio.org/rel/rel6/apps/jaspscan.html	Scan DNA sequences for transcription factors.	2000	0	doi:10.1016/S0168-9525(00)02024-2,doi:10.1017/CBO9781139151399,doi:10.1017/CBO9781139151405
+MAGGIE	https://github.com/zeyang-shen/maggie	Leveraging genetic variation to identify DNA sequence motifs mediating transcription factor binding and function	2020	0	doi:10.1101/2020.01.30.925917
+MotifCatcher	https://www.mathworks.com/matlabcentral/fileexchange/32100-motifcatcher	a MATLAB GUI platform for determination and evaluation of biologically significant motifs		0	
+MutViz 2.0	http://geco.deib.polimi.it/mutviz	Analysis and Visualization of Mutation Enrichments for Selected Genomic Regions and Cancer Types	2021	0	pmid:34316703,doi:10.1109/BIBM47256.2019.8983196
+NetTIME	https://github.com/ryi06/NetTIME	Improving Multitask Transcription Factor Binding Site Prediction with Base-pair Resolution.	2021	0	doi:10.1101/2021.05.29.446316
+peaKO	https://peako.hoffmanlab.org	Motif elucidation in ChIP-seq datasets with a knockout control | PeaKO discovers motifs in ChIP-seq datasets with knockout controls	2019	0	doi:10.1101/721720
+spatzie	https://spatzie.mit.edu	spatzie is an R package for identifying significant transcription factor motif co-enrichment from enhancer-promoter interactions	2021	0	doi:10.1101/2021.05.25.445606
+SPONGE	http://bioconductor.org/packages/release/bioc/html/SPONGE.html	This package provides methods to efficiently detect competitive endogeneous RNA interactions between two genes		0	
+TFAnalysis	https://github.com/SchulzLab/TFAnalysis	Predicting transcription factor binding using ensemble random forest models | processing and analysis of transcription factor binding sites	2019	0	doi:10.12688/F1000RESEARCH.16200.2
+tfscan	http://emboss.open-bio.org/rel/rel6/apps/tfscan.html	Identify transcription factor binding sites in DNA sequences.	2000	0	doi:10.1016/S0168-9525(00)02024-2,doi:10.1017/CBO9781139151399,doi:10.1017/CBO9781139151405
+TFutils	http://bioconductor.org/packages/release/bioc/html/TFutils.html	Package to work with TF data.		0	

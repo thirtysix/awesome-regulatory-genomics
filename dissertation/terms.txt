@@ -1,0 +1,1 @@
+"Sequence motif recognition" "Transcription factor binding site prediction" "Transcriptional regulatory element prediction" "Regulatory element prediction" "Sequence motif discovery" "cis-regulatory element prediction" "Promoter prediction" "Sequence motif discovery"

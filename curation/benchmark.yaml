@@ -1,0 +1,118 @@
+# Recall benchmark: tools this catalog should contain.
+#
+# A hand-written list of resources the field treats as standard. It is not a
+# ranking and not exhaustive - it exists so that "did the pipeline find the
+# obvious things?" is a measurement rather than an impression. `make audit`
+# checks the built catalog against it and writes docs/coverage.md.
+#
+# When the pipeline misses an entry here, fix the *rule* in pipeline/config.py
+# if the tool is in bio.tools, or add it to seeds.yaml if it is not.
+#
+# Each entry may carry `aka` for names the catalog might use instead.
+
+motif discovery:
+  - {name: MEME, aka: [MEME Suite]}
+  - {name: STREME}
+  - {name: DREME}
+  - {name: HOMER, aka: [homer]}
+  - {name: Weeder}
+  - {name: AlignACE}
+  - {name: MDscan}
+  - {name: ChIPMunk}
+  - {name: RSAT, aka: [RSAT suite, peak-motifs]}
+  - {name: BaMMmotif, aka: [BaMM]}
+  - {name: TF-MoDISco}
+  - {name: gkm-SVM, aka: [LS-GKM, "gkm-SVM / LS-GKM"]}
+
+motif scanning and enrichment:
+  - {name: FIMO}
+  - {name: CentriMo}
+  - {name: AME}
+  - {name: MAST}
+  - {name: MOODS}
+  - {name: PWMScan}
+  - {name: Cluster-Buster}
+  - {name: TFBSTools}
+  - {name: motifmatchr}
+  - {name: PWMEnrich}
+  - {name: monaLisa}
+
+motif and TF databases:
+  - {name: JASPAR}
+  - {name: HOCOMOCO}
+  - {name: CIS-BP}
+  - {name: TRANSFAC}
+  - {name: SwissRegulon}
+  - {name: UniPROBE}
+  - {name: Factorbook}
+  - {name: UniBind}
+  - {name: CollecTF}
+  - {name: RegulonDB}
+  - {name: footprintDB}
+  - {name: AnimalTFDB, aka: [Animal Transcription Factor Database]}
+  - {name: hTFtarget}
+  - {name: TRRUST}
+  - {name: TFLink}
+
+sequence-to-function models:
+  - {name: DeepBind}
+  - {name: DeepSEA}
+  - {name: Basset}
+  - {name: Basenji}
+  - {name: Enformer}
+  - {name: Borzoi}
+  - {name: DanQ}
+  - {name: BPNet}
+  - {name: ChromBPNet}
+  - {name: Sei}
+  - {name: DeepSTARR}
+  - {name: scBasset}
+  - {name: gReLU}
+
+footprinting:
+  - {name: TOBIAS}
+  - {name: HINT-ATAC}
+  - {name: PIQ}
+  - {name: Wellington, aka: ["Wellington / pyDNase", pyDNase]}
+  - {name: CENTIPEDE}
+  - {name: msCentipede}
+  - {name: TFBSFootprinter, aka: [TFBSfootprinter]}
+
+peak calling and annotation:
+  - {name: MACS, aka: [MACS2, MACS3, macs_dna]}
+  - {name: SEACR}
+  - {name: Genrich}
+  - {name: GoPeaks}
+  - {name: SICER}
+  - {name: ChIPseeker}
+  - {name: GREAT}
+  - {name: LOLA}
+  - {name: BART}
+
+ChIP and ATAC resources:
+  - {name: GTRD}
+  - {name: ReMap, aka: [inserm-remap]}
+  - {name: ChIP-Atlas}
+  - {name: Cistrome, aka: [CistromeDB]}
+  - {name: ENCODE}
+
+gene regulatory networks:
+  - {name: SCENIC}
+  - {name: pySCENIC}
+  - {name: "SCENIC+", aka: [SCENICplus]}
+  - {name: RcisTarget}
+  - {name: GENIE3}
+  - {name: ARACNe}
+  - {name: chromVAR}
+  - {name: iRegulon}
+  - {name: i-cisTarget}
+
+regulatory variants:
+  - {name: motifbreakR}
+  - {name: SNP2TFBS}
+  - {name: atSNP}
+  - {name: RegulomeDB}
+  - {name: HaploReg}
+  - {name: GWAVA}
+  - {name: FunSeq2}
+  - {name: FABIAN-variant}

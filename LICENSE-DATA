@@ -1,0 +1,21 @@
+The catalog data in this repository (data/catalog.json, data/catalog.tsv,
+docs/catalog.js, curation/*.yaml and the generated README.md) is licensed under
+the Creative Commons Attribution 4.0 International License (CC BY 4.0).
+
+    https://creativecommons.org/licenses/by/4.0/
+
+It incorporates and derives from:
+
+  - bio.tools tool metadata, licensed CC BY 4.0
+    https://bio.tools  -  https://biotools.readthedocs.io
+  - OpenAlex bibliographic data, released under CC0
+    https://openalex.org
+  - GitHub repository metadata retrieved through the GitHub REST API
+
+Attribution for reuse:
+
+    Barker, H. Awesome Regulatory Genomics: a curated catalog of tools for
+    transcription-factor binding, motif and gene-regulatory analysis.
+    https://github.com/thirtysix/awesome-regulatory-genomics
+
+Pipeline source code is licensed separately under the MIT License; see LICENSE.

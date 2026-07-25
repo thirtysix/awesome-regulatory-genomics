@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+title: "Awesome Regulatory Genomics: a curated catalog of tools for transcription-factor binding, motif and gene-regulatory analysis"
+message: "If you use this catalog, please cite it as below."
+type: dataset
+authors:
+  - family-names: Barker
+    given-names: Harlan
+    email: contact@example.org
+repository-code: "https://github.com/thirtysix/awesome-regulatory-genomics"
+url: "https://thirtysix.github.io/awesome-regulatory-genomics/"
+abstract: >-
+  A reproducibly harvested and hand-curated catalog of software tools,
+  databases and methods for transcription-factor binding site prediction,
+  sequence motif discovery and scanning, promoter and enhancer prediction,
+  digital footprinting, ChIP-seq and ATAC-seq peak analysis, chromatin
+  accessibility, regulatory variant interpretation and gene-regulatory network
+  inference. Records are harvested from bio.tools, filtered against a tiered
+  EDAM-operation scheme that accounts for known annotation errors, enriched
+  with source-repository activity and OpenAlex citation counts, and extended by
+  hand with tools bio.tools does not index.
+keywords:
+  - transcription factor
+  - transcription factor binding site
+  - sequence motif
+  - regulatory genomics
+  - cis-regulatory element
+  - ChIP-seq
+  - ATAC-seq
+  - chromatin accessibility
+  - gene regulatory network
+  - bioinformatics software
+license: CC-BY-4.0
+references:
+  - type: database
+    title: "bio.tools"
+    url: "https://bio.tools"
+    notes: "Source of harvested tool metadata (CC BY 4.0)."
+  - type: database
+    title: "OpenAlex"
+    url: "https://openalex.org"
+    notes: "Source of citation counts (CC0)."

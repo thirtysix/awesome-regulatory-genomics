@@ -1,0 +1,70 @@
+# Human judgement layer, applied on top of the harvested catalog.
+#
+# The pipeline decides what is *in scope*. This file decides what is
+# *worth pointing at*, and corrects the automation where it is wrong.
+# Nothing here is generated; edit it by hand and re-run `make build`.
+
+# ---------------------------------------------------------------------------
+# featured - tools promoted to the curated README.
+#
+# Criteria, applied deliberately rather than by citation count alone:
+#   - it is the tool a newcomer to this sub-problem should try first, or
+#   - it is a de-facto standard the literature assumes you know, or
+#   - it is the only maintained option in its niche.
+# Keyed by bio.tools ID, or by the `name:` field for entries from seeds.yaml.
+# ---------------------------------------------------------------------------
+featured:
+  meme: Motif discovery and scanning reference implementation; most downstream tools consume its formats
+  jaspar: The default open motif database; six taxonomic groups, versioned releases
+  hocomoco: Human and mouse motifs derived from uniform ChIP-seq reprocessing
+  homer: Motif discovery plus peak annotation; the pragmatic first stop for ChIP-seq
+  rsat: Long-running suite covering matrix scanning, comparison and enrichment
+  FIMO: Standard scanner for known motifs with calibrated p-values
+  CIS-BP: Motif inference across species by DNA-binding-domain similarity
+  tfbstools: R interface to motif matrices, scanning and JASPAR
+  motifmatchr: Fast motif matching over large genomic range sets
+  chip-atlas: Reprocessed public ChIP-seq, ATAC-seq and Bisulfite-seq across six organisms
+  gtrd: Uniformly reprocessed ChIP-seq with meta-clusters of TF binding sites
+  inserm-remap: Large-scale atlas of regulatory regions from public DNA-binding experiments
+  unibind: TFBS predictions restricted to ChIP-seq-supported, high-confidence sites
+  TOBIAS: Differential ATAC-seq footprinting between conditions
+  ChromBPNet: Base-resolution accessibility model with bias correction and footprint discovery
+  BPNet: Base-resolution TF binding model that recovers motif syntax
+  Enformer: Long-range sequence-to-expression model; a common baseline for regulatory prediction
+  scenic: Single-cell regulatory network inference; regulons rather than raw correlations
+  pySCENIC: Fast implementation of SCENIC
+  motifbreakR: Standard tool for scoring variant disruption of TF motifs
+  macs_dna: The default ChIP-seq and ATAC-seq peak caller
+  Genrich: Peak caller with replicate handling and an ATAC mode
+  TFBSFootprinter: Multi-evidence TFBS scoring combining conservation, CAGE, eQTL and chromatin data
+
+# ---------------------------------------------------------------------------
+# corrections - override harvested fields where bio.tools is wrong or stale.
+# Any catalog column may be set. `categories` replaces the derived list;
+# `add_categories` extends it.
+# ---------------------------------------------------------------------------
+corrections:
+  fimo:
+    note: bio.tools annotates FIMO with "Genotyping"; it is a motif scanner
+    categories: [motif-scanning]
+  hocomoco:
+    note: bio.tools annotates HOCOMOCO with "Data handling"; it is a motif database
+    categories: [motif-databases]
+  macs_dna:
+    add_categories: [peak-calling]
+  chip-atlas:
+    categories: [chip-resources, peak-calling]
+  gtrd:
+    categories: [chip-resources, motif-databases]
+
+# ---------------------------------------------------------------------------
+# exclude - records that pass the automated filter but do not belong.
+# Give a reason; this file is the audit trail for the catalog's boundary.
+# ---------------------------------------------------------------------------
+exclude: {}
+
+# ---------------------------------------------------------------------------
+# aliases - collapse duplicate bio.tools records for the same tool.
+# The key is kept; the listed IDs are dropped and recorded as alternates.
+# ---------------------------------------------------------------------------
+aliases: {}

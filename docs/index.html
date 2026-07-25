@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Awesome Regulatory Genomics — catalog</title>
+<meta name="description" content="Searchable catalog of 1741 tools for transcription-factor binding, sequence motifs, regulatory elements, chromatin and gene-regulatory networks.">
+<style>
+:root{
+  --bg:#ffffff; --fg:#1a1d21; --muted:#5c6570; --line:#e3e6ea; --accent:#1b6ac9;
+  --chip:#f1f4f8; --chip-on:#1b6ac9; --chip-on-fg:#fff; --card:#fff; --warn:#a4551a;
+}
+@media (prefers-color-scheme:dark){
+  :root{ --bg:#14171a; --fg:#e6e9ec; --muted:#98a2ad; --line:#2a2f35; --accent:#6aa9f0;
+         --chip:#21262c; --chip-on:#6aa9f0; --chip-on-fg:#101316; --card:#1a1e22; --warn:#e0a06a; }
+}
+:root[data-theme=light]{ --bg:#fff; --fg:#1a1d21; --muted:#5c6570; --line:#e3e6ea; --accent:#1b6ac9;
+  --chip:#f1f4f8; --chip-on:#1b6ac9; --chip-on-fg:#fff; --card:#fff; --warn:#a4551a; }
+:root[data-theme=dark]{ --bg:#14171a; --fg:#e6e9ec; --muted:#98a2ad; --line:#2a2f35; --accent:#6aa9f0;
+  --chip:#21262c; --chip-on:#6aa9f0; --chip-on-fg:#101316; --card:#1a1e22; --warn:#e0a06a; }
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:15px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;}
+a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+header{border-bottom:1px solid var(--line);padding:18px 20px;position:sticky;top:0;background:var(--bg);z-index:10}
+.wrap{max-width:1180px;margin:0 auto}
+h1{font-size:19px;margin:0 0 3px} h1 a{color:inherit}
+.sub{color:var(--muted);font-size:13px}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;align-items:center}
+input[type=search],select{background:var(--card);color:var(--fg);border:1px solid var(--line);
+  border-radius:7px;padding:8px 11px;font:inherit;font-size:14px}
+input[type=search]{flex:1 1 300px;min-width:200px}
+main{max-width:1180px;margin:0 auto;padding:18px 20px 60px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px}
+.chip{background:var(--chip);border:1px solid var(--line);border-radius:999px;
+  padding:4px 11px;font-size:12.5px;cursor:pointer;user-select:none;white-space:nowrap}
+.chip[aria-pressed=true]{background:var(--chip-on);color:var(--chip-on-fg);border-color:var(--chip-on)}
+.chip .n{opacity:.65;margin-left:5px;font-variant-numeric:tabular-nums}
+.count{color:var(--muted);font-size:13px;margin:0 0 10px}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:820px;font-size:14px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{position:sticky;top:0;background:var(--bg);cursor:pointer;white-space:nowrap;
+   font-weight:600;font-size:12.5px;letter-spacing:.02em;text-transform:uppercase;color:var(--muted)}
+th:hover{color:var(--fg)} th .ar{opacity:.5;font-size:10px}
+tbody tr:hover{background:var(--chip)}
+td.name{font-weight:600;min-width:150px}
+td.desc{color:var(--muted);max-width:520px}
+td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.cat{display:inline-block;background:var(--chip);border:1px solid var(--line);border-radius:5px;
+  padding:1px 6px;font-size:11.5px;margin:1px 3px 1px 0;color:var(--muted);white-space:nowrap}
+.links{white-space:nowrap;font-size:13px}
+.arch{color:var(--warn);font-size:11.5px}
+.seed{border-color:var(--accent);color:var(--accent)}
+footer{color:var(--muted);font-size:12.5px;margin-top:22px;line-height:1.7}
+.theme{background:none;border:1px solid var(--line);border-radius:7px;color:var(--fg);
+  padding:8px 11px;cursor:pointer;font:inherit;font-size:14px}
+@media (max-width:640px){ td.desc{display:none} th.desc{display:none} }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1><a href="https://github.com/thirtysix/awesome-regulatory-genomics">Awesome Regulatory Genomics</a></h1>
+    <div class="sub">1741 tools for transcription-factor binding, motifs, regulatory
+      elements, chromatin and gene-regulatory networks · updated 2026-07-25</div>
+    <div class="controls">
+      <input type="search" id="q" placeholder="Search name, description, category, language…" autocomplete="off">
+      <select id="type"><option value="">Any tool type</option></select>
+      <select id="lang"><option value="">Any language</option></select>
+      <select id="activity">
+        <option value="">Any activity</option>
+        <option value="repo">Has a source repository</option>
+        <option value="active">Repo pushed in last 2 years</option>
+        <option value="stale">Repo idle 5+ years</option>
+        <option value="archived">Archived</option>
+      </select>
+      <button class="theme" id="theme" type="button">◐</button>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="chips" id="cats"></div>
+  <div class="count" id="count"></div>
+  <div class="tablewrap">
+    <table>
+      <thead><tr>
+        <th data-k="name">Tool</th>
+        <th data-k="categories">Categories</th>
+        <th class="desc" data-k="description">Description</th>
+        <th data-k="repo_stars" class="num">Stars</th>
+        <th data-k="citations" class="num">Cites</th>
+        <th data-k="year" class="num">Year</th>
+        <th>Links</th>
+      </tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+  <footer>
+    Data from <a href="https://bio.tools">bio.tools</a> (CC BY 4.0),
+    <a href="https://openalex.org">OpenAlex</a> (CC0) and the GitHub API, plus hand-curated
+    entries. Citation counts sum every publication linked to a tool — a rough popularity
+    signal, not a quality measure. Entries marked <span class="cat seed">curated</span>
+    are absent from bio.tools and were added by hand.
+    <br>Corrections welcome: <a href="https://github.com/thirtysix/awesome-regulatory-genomics/issues">open an issue</a>.
+  </footer>
+</main>
+<script src="catalog.js"></script>
+<script>
+const CATS = [["motif-discovery", "Motif discovery"], ["motif-scanning", "Motif scanning & enrichment"], ["motif-comparison", "Motif comparison & visualisation"], ["motif-databases", "Motif & TF databases"], ["tfbs-prediction", "TFBS prediction"], ["regulatory-elements", "Promoter & enhancer prediction"], ["footprinting", "Footprinting"], ["peak-calling", "Peak calling"], ["peak-annotation", "Peak annotation & differential binding"], ["chip-resources", "ChIP/ATAC data resources"], ["grn-inference", "Gene regulatory networks"], ["regulatory-variants", "Regulatory variant effect"], ["nucleosome-chromatin", "Nucleosome & chromatin state"], ["single-cell", "Single-cell regulatory genomics"], ["comparative", "Comparative & evolutionary"]];
+const root = document.documentElement;
+const themeBtn = document.getElementById('theme');
+themeBtn.onclick = () => {
+  const cur = root.getAttribute('data-theme') ||
+    (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  root.setAttribute('data-theme', cur === 'dark' ? 'light' : 'dark');
+};
+
+const $ = id => document.getElementById(id);
+const state = { q:'', cats:new Set(), type:'', lang:'', activity:'', sort:'citations', dir:-1 };
+
+const params = new URLSearchParams(location.search);
+if (params.get('category')) state.cats.add(params.get('category'));
+
+// facet dropdowns
+const fill = (el, values) => {
+  [...new Set(values)].filter(Boolean).sort().forEach(v => {
+    const o = document.createElement('option'); o.value = o.textContent = v; el.append(o);
+  });
+};
+fill($('type'), TOOLS.flatMap(t => t.tool_type));
+fill($('lang'), TOOLS.flatMap(t => t.languages.concat(t.repo_language ? [t.repo_language] : [])));
+
+// category chips
+const catCounts = {};
+TOOLS.forEach(t => t.categories.forEach(c => catCounts[c] = (catCounts[c]||0)+1));
+const chipBox = $('cats');
+CATS.forEach(([key,label]) => {
+  if (!catCounts[key]) return;
+  const b = document.createElement('button');
+  b.className = 'chip'; b.type = 'button';
+  b.setAttribute('aria-pressed', state.cats.has(key));
+  b.innerHTML = label + '<span class="n">' + catCounts[key] + '</span>';
+  b.onclick = () => {
+    state.cats.has(key) ? state.cats.delete(key) : state.cats.add(key);
+    b.setAttribute('aria-pressed', state.cats.has(key));
+    render();
+  };
+  chipBox.append(b);
+});
+
+const YEAR_MS = 365.25*24*3600*1000;
+const matches = t => {
+  if (state.cats.size && !t.categories.some(c => state.cats.has(c))) return false;
+  if (state.type && !t.tool_type.includes(state.type)) return false;
+  if (state.lang && !t.languages.includes(state.lang) && t.repo_language !== state.lang) return false;
+  if (state.activity) {
+    const age = t.repo_pushed ? (Date.now() - Date.parse(t.repo_pushed)) / YEAR_MS : null;
+    if (state.activity === 'repo' && !t.repo_url) return false;
+    if (state.activity === 'active' && !(age !== null && age <= 2 && !t.repo_archived)) return false;
+    if (state.activity === 'stale' && !(age !== null && age >= 5)) return false;
+    if (state.activity === 'archived' && !t.repo_archived) return false;
+  }
+  if (state.q) {
+    const hay = (t.name + ' ' + t.description + ' ' + t.categories.join(' ') + ' ' +
+      t.languages.join(' ') + ' ' + t.tool_type.join(' ') + ' ' + t.repo_language + ' ' +
+      (t.tags||[]).join(' ')).toLowerCase();
+    if (!state.q.split(/\s+/).every(w => hay.includes(w))) return false;
+  }
+  return true;
+};
+
+const cmp = (a,b) => {
+  const k = state.sort;
+  let x = a[k], y = b[k];
+  if (k === 'categories') { x = x.join(); y = y.join(); }
+  if (x === null || x === undefined || x === '') return 1;
+  if (y === null || y === undefined || y === '') return -1;
+  if (typeof x === 'number' && typeof y === 'number') return (x-y) * state.dir;
+  return String(x).localeCompare(String(y)) * state.dir;
+};
+
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const catLabel = Object.fromEntries(CATS);
+
+function render(){
+  const rows = TOOLS.filter(matches).sort(cmp);
+  $('count').textContent = rows.length + ' of ' + TOOLS.length + ' tools' +
+    (state.cats.size ? ' · ' + [...state.cats].map(c=>catLabel[c]).join(', ') : '');
+  $('rows').innerHTML = rows.map(t => {
+    const href = t.homepage || t.repo_url || t.biotools_url;
+    const links = [];
+    if (t.repo_url) links.push('<a href="'+esc(t.repo_url)+'">code</a>');
+    if (t.biotools_url) links.push('<a href="'+esc(t.biotools_url)+'">bio.tools</a>');
+    if (t.publication) {
+      const p = t.publication;
+      if (p.startsWith('pmid:')) links.push('<a href="https://pubmed.ncbi.nlm.nih.gov/'+esc(p.slice(5))+'/">paper</a>');
+      else if (p.startsWith('doi:')) links.push('<a href="https://doi.org/'+esc(p.slice(4))+'">paper</a>');
+    }
+    const cats = t.categories.map(c=>'<span class="cat">'+esc(catLabel[c]||c)+'</span>').join('') +
+      (t.source === 'curated' ? '<span class="cat seed">curated</span>' : '');
+    return '<tr><td class="name">' + (href ? '<a href="'+esc(href)+'">'+esc(t.name)+'</a>' : esc(t.name)) +
+      (t.repo_archived ? '<br><span class="arch">archived</span>' : '') + '</td>' +
+      '<td>' + cats + '</td>' +
+      '<td class="desc">' + esc(t.description) + '</td>' +
+      '<td class="num">' + (t.repo_stars ?? '') + '</td>' +
+      '<td class="num">' + (t.citations ? t.citations.toLocaleString() : '') + '</td>' +
+      '<td class="num">' + esc(t.year) + '</td>' +
+      '<td class="links">' + links.join(' · ') + '</td></tr>';
+  }).join('');
+}
+
+document.querySelectorAll('th[data-k]').forEach(th => {
+  th.onclick = () => {
+    const k = th.dataset.k;
+    state.dir = state.sort === k ? -state.dir : (['name','description','categories'].includes(k) ? 1 : -1);
+    state.sort = k;
+    document.querySelectorAll('th .ar').forEach(a => a.remove());
+    const ar = document.createElement('span');
+    ar.className = 'ar'; ar.textContent = state.dir > 0 ? ' ▲' : ' ▼';
+    th.append(ar);
+    render();
+  };
+});
+let timer;
+$('q').oninput = e => { clearTimeout(timer); timer = setTimeout(() => { state.q = e.target.value.trim().toLowerCase(); render(); }, 120); };
+['type','lang','activity'].forEach(id => $(id).onchange = e => { state[id] = e.target.value; render(); });
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+name: Refresh catalog
+
+# Re-harvests bio.tools, refreshes repository activity and citation counts, and
+# opens a pull request if anything changed. Runs monthly rather than on every
+# push, since the upstream data moves slowly and the sweep is not free.
+on:
+  schedule:
+    - cron: "0 4 1 * *"     # 04:00 UTC on the 1st of each month
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests pyyaml
+
+      - name: Harvest, enrich and rebuild
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: make refresh
+
+      - name: Sanity-check the catalog
+        run: make check
+
+      - name: Open a pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: catalog-refresh
+          title: "Monthly catalog refresh"
+          commit-message: "data: monthly catalog refresh"
+          body: |
+            Automated refresh of the catalog from bio.tools, the GitHub API and
+            OpenAlex.
+
+            Review the diff in `data/catalog.tsv` before merging — new tools and
+            dropped tools both show up there. If a whole class of tools appeared
+            or vanished, the selection rules in `pipeline/config.py` are the
+            likely cause, not upstream data.
+          delete-branch: true
+
+  pages:
+    needs: refresh
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - id: deploy
+        uses: actions/deploy-pages@v4

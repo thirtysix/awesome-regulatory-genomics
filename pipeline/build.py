@@ -1,0 +1,291 @@
+#!/usr/bin/env python3
+"""Stage 3 - assemble the catalog.
+
+Merges enriched bio.tools records with hand-written seeds, assigns categories,
+applies the curation overlay, and writes the two artefacts everything else is
+generated from:
+
+    data/catalog.json   full records, one object per tool
+    data/catalog.tsv    flat table, one row per tool
+
+    python pipeline/build.py
+"""
+from __future__ import annotations
+
+import argparse
+import csv
+import json
+import re
+from datetime import date
+
+import yaml
+
+from jsonio import read_json
+from config import (CATEGORY_KEYS, CURATION, DATA, DB_TOOLTYPES, OP_CATEGORY,
+                    RAW, TEXT_CATEGORY, TOPIC_CATEGORY)
+
+ENRICHED = RAW / "enriched.json.gz"
+SEEDS = CURATION / "seeds.yaml"
+OVERLAY = CURATION / "overlay.yaml"
+PROPOSALS = CURATION / "llm_proposals.yaml"
+CATALOG_JSON = DATA / "catalog.json"
+CATALOG_TSV = DATA / "catalog.tsv"
+
+TEXT_CATEGORY_RE = {k: [re.compile(p, re.I) for p in v] for k, v in TEXT_CATEGORY.items()}
+
+COLUMNS = [
+    "id", "name", "description", "categories", "primary_category", "tier",
+    "homepage", "repo_url", "repo_stars", "repo_pushed", "repo_archived",
+    "repo_language", "repo_license", "tool_type", "topics", "languages",
+    "license", "maturity", "cost", "citations", "year", "publication",
+    "biotools_id", "biotools_url", "last_update", "source", "tags", "featured",
+]
+
+
+# ---------------------------------------------------------------------------
+def operations(tool: dict) -> set[str]:
+    return {op["term"]
+            for fn in tool.get("function") or []
+            for op in fn.get("operation") or []}
+
+
+def topic_terms(tool: dict) -> list[str]:
+    return [t["term"] for t in tool.get("topic") or []]
+
+
+def assign_categories(tool: dict) -> list[str]:
+    """Derive categories from EDAM operations, topics, tool type and text.
+
+    Multi-label by design: HOMER is motif discovery *and* peak annotation, and
+    forcing a single bucket is what makes most tool tables hard to search.
+    """
+    found: set[str] = set()
+    for op in operations(tool):
+        found.update(OP_CATEGORY.get(op, []))
+    for term in topic_terms(tool):
+        found.update(TOPIC_CATEGORY.get(term, []))
+
+    blob = f"{tool.get('name', '')}. {tool.get('description', '')}"
+    for key, patterns in TEXT_CATEGORY_RE.items():
+        if any(p.search(blob) for p in patterns):
+            found.add(key)
+
+    # A database portal that scored a motif or ChIP category is a *resource*,
+    # not a method - reclassify so users can filter the two apart.
+    tool_types = set(tool.get("toolType") or [])
+    if tool_types & DB_TOOLTYPES:
+        if found & {"motif-scanning", "motif-discovery", "tfbs-prediction"}:
+            found.add("motif-databases")
+        if found & {"peak-calling", "peak-annotation", "nucleosome-chromatin"}:
+            found.add("chip-resources")
+
+    return [k for k in CATEGORY_KEYS if k in found]
+
+
+def first_sentence(text: str) -> str:
+    """First sentence, without splitting on e.g./i.e./etc./vs. abbreviations.
+
+    Same rule as the dissertation's filter_results.001.py, kept so the
+    Description_short column remains comparable.
+    """
+    if not text:
+        return ""
+    parts = re.split(r"(?<!e\.g)(?<!i\.e)(?<!etc)(?<!vs)(?<!cf)\.\s+", text.strip())
+    return re.sub(r"<[^>]+>", "", parts[0]).strip()
+
+
+def pub_year(tool: dict) -> str:
+    meta = tool.get("_pubmeta") or {}
+    if meta.get("year"):
+        return str(meta["year"])
+    for pub in tool.get("publication") or []:
+        md = pub.get("metadata") or {}
+        if md.get("date"):
+            m = re.search(r"\b(19|20)\d{2}\b", str(md["date"]))
+            if m:
+                return m.group()
+    return ""
+
+
+def repo_url(tool: dict) -> str:
+    if tool.get("_repo_slug"):
+        return f"https://github.com/{tool['_repo_slug']}"
+    for u in tool.get("_repo_other") or []:
+        return u
+    return ""
+
+
+# ---------------------------------------------------------------------------
+def from_biotools(tool: dict) -> dict:
+    gh = tool.get("_github") or {}
+    ids = tool.get("_identifiers") or []
+    return {
+        "id": tool["biotoolsID"],
+        "name": tool["name"],
+        "description": first_sentence(tool.get("description") or ""),
+        "categories": assign_categories(tool),
+        "tier": tool.get("_tier", "core"),
+        "homepage": tool.get("homepage") or "",
+        "repo_url": repo_url(tool),
+        "repo_stars": gh.get("stars") if gh.get("status") == "ok" else None,
+        "repo_pushed": gh.get("pushed_at") or "" if gh.get("status") == "ok" else "",
+        "repo_archived": bool(gh.get("archived")) if gh.get("status") == "ok" else None,
+        "repo_language": gh.get("language") or "" if gh.get("status") == "ok" else "",
+        "repo_license": gh.get("license") or "" if gh.get("status") == "ok" else "",
+        "tool_type": tool.get("toolType") or [],
+        "topics": topic_terms(tool),
+        "languages": tool.get("language") or [],
+        "license": tool.get("license") or "",
+        "maturity": tool.get("maturity") or "",
+        "cost": tool.get("cost") or "",
+        "citations": tool.get("_citations", 0),
+        "year": pub_year(tool),
+        "publication": ids[0] if ids else "",
+        "biotools_id": tool["biotoolsID"],
+        "biotools_url": f"https://bio.tools/{tool['biotoolsID']}",
+        "last_update": (tool.get("lastUpdate") or "")[:10],
+        "source": "bio.tools",
+        "tags": [],
+        "_operations": sorted(operations(tool)),
+        "_select_reason": tool.get("_select_reason", ""),
+        "_identifiers": ids,
+        "_registries": tool.get("_registries") or {},
+    }
+
+
+def from_seed(seed: dict) -> dict:
+    ident = ""
+    if seed.get("pmid"):
+        ident = f"pmid:{seed['pmid']}"
+    elif seed.get("doi"):
+        ident = f"doi:{seed['doi']}"
+    return {
+        "id": seed["name"],
+        "name": seed["name"],
+        "description": seed.get("description", ""),
+        "categories": [c for c in CATEGORY_KEYS if c in set(seed.get("categories") or [])],
+        "tier": "seed",
+        "homepage": seed.get("url", ""),
+        "repo_url": f"https://github.com/{seed['repo']}" if seed.get("repo") else "",
+        "repo_stars": None, "repo_pushed": "", "repo_archived": None,
+        "repo_language": "", "repo_license": "",
+        "tool_type": [], "topics": [], "languages": [],
+        "license": "", "maturity": "", "cost": "",
+        "citations": 0, "year": "",
+        "publication": ident,
+        "biotools_id": "", "biotools_url": "",
+        "last_update": "",
+        "source": "curated",
+        "tags": seed.get("tags") or [],
+        "_operations": [], "_select_reason": "curated seed",
+        "_identifiers": [ident] if ident else [],
+        "_registries": {},
+    }
+
+
+# ---------------------------------------------------------------------------
+def main() -> None:
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--no-llm", action="store_true",
+                    help="ignore curation/llm_proposals.yaml (pure deterministic build)")
+    args = ap.parse_args()
+
+    enriched = read_json(ENRICHED)["list"]
+    seeds = yaml.safe_load(SEEDS.read_text()) or {}
+    overlay = yaml.safe_load(OVERLAY.read_text()) or {}
+
+    featured = overlay.get("featured") or {}
+    corrections = overlay.get("corrections") or {}
+    excluded = overlay.get("exclude") or {}
+    aliases = overlay.get("aliases") or {}
+    alias_targets = {bid for ids in aliases.values() for bid in ids}
+
+    rows = []
+    seen_names: dict[str, str] = {}
+
+    for tool in enriched:
+        bid = tool["biotoolsID"]
+        if bid in excluded or bid in alias_targets:
+            continue
+        rows.append(from_biotools(tool))
+        seen_names[tool["name"].lower()] = bid
+
+    seeded = 0
+    for seed in seeds.get("tools") or []:
+        if seed["name"].lower() in seen_names:
+            continue          # bio.tools already has it; the harvested record wins
+        rows.append(from_seed(seed))
+        seeded += 1
+
+    # LLM proposals, applied BELOW the hand-written overlay so a human
+    # correction always wins. Only accepted when the model was confident and
+    # kept the tool in scope; everything else stays visible in the proposals
+    # file for review rather than being silently dropped.
+    proposed = {}
+    if PROPOSALS.exists() and not args.no_llm:
+        blob = yaml.safe_load(PROPOSALS.read_text()) or {}
+        for key, entry in (blob.get("categories") or {}).items():
+            if entry.get("in_scope") and entry.get("confidence") in ("high", "medium"):
+                proposed.setdefault(key, {})["categories"] = entry["categories"]
+        for key, entry in (blob.get("descriptions") or {}).items():
+            proposed.setdefault(key, {})["description"] = entry["description"]
+
+    for row in rows:
+        if row["id"] in proposed:
+            row.update(proposed[row["id"]])
+            row["_llm_applied"] = sorted(proposed[row["id"]])
+
+    # curation overlay
+    for row in rows:
+        key = row["id"]
+        if key in corrections:
+            fix = dict(corrections[key])
+            extra = fix.pop("add_categories", None)
+            if extra:
+                row["categories"] = [c for c in CATEGORY_KEYS
+                                     if c in set(row["categories"]) | set(extra)]
+            row.update(fix)
+        if key in featured:
+            row["featured"] = featured[key]
+        else:
+            row["featured"] = ""
+        row["primary_category"] = row["categories"][0] if row["categories"] else "uncategorised"
+
+    rows.sort(key=lambda r: (-int(r["citations"] or 0), r["name"].lower()))
+
+    meta = {
+        "generated": date.today().isoformat(),
+        "count": len(rows),
+        "from_biotools": len(rows) - seeded,
+        "curated_seeds": seeded,
+        "featured": sum(1 for r in rows if r["featured"]),
+        "with_repo": sum(1 for r in rows if r["repo_url"]),
+        "llm_assisted": sum(1 for r in rows if r.get("_llm_applied")),
+    }
+    CATALOG_JSON.write_text(json.dumps({"meta": meta, "tools": rows}, indent=1))
+
+    with CATALOG_TSV.open("w", newline="") as fh:
+        w = csv.writer(fh, delimiter="\t")
+        w.writerow(COLUMNS)
+        for r in rows:
+            w.writerow([
+                "|".join(r[c]) if isinstance(r[c], list) else
+                ("" if r[c] is None else r[c])
+                for c in COLUMNS
+            ])
+
+    print(f"catalog: {meta['count']} tools "
+          f"({meta['from_biotools']} bio.tools + {meta['curated_seeds']} curated seeds)")
+    print(f"  featured: {meta['featured']}   with repository: {meta['with_repo']} "
+          f"({meta['with_repo']/max(meta['count'],1):.0%})"
+          + (f"   llm-assisted: {meta['llm_assisted']}" if meta["llm_assisted"] else ""))
+    from collections import Counter
+    cats = Counter(c for r in rows for c in r["categories"])
+    for k in CATEGORY_KEYS:
+        print(f"    {k:22s} {cats.get(k, 0):4d}")
+    print(f"    {'(uncategorised)':22s} {sum(1 for r in rows if not r['categories']):4d}")
+    print(f"-> {CATALOG_JSON.name}, {CATALOG_TSV.name}")
+
+
+if __name__ == "__main__":
+    main()
