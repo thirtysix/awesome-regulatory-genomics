@@ -240,6 +240,11 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--no-llm", action="store_true",
                     help="ignore curation/llm_proposals.yaml (pure deterministic build)")
+    ap.add_argument("--apply-scope", action="store_true",
+                    help="also drop records that TWO models independently judged "
+                         "out of scope (curation/llm_proposals.yaml: "
+                         "out_of_scope_confirmed). Off by default - removing a "
+                         "record is destructive, so it stays an explicit choice.")
     args = ap.parse_args()
 
     enriched = read_json(ENRICHED)["list"]
@@ -255,12 +260,36 @@ def main() -> None:
     aliases = overlay.get("aliases") or {}
     alias_targets = {bid for ids in aliases.values() for bid in ids}
 
+    proposed, llm_out_of_scope = {}, {}
+    if PROPOSALS.exists() and not args.no_llm:
+        blob = yaml.safe_load(PROPOSALS.read_text()) or {}
+        if args.apply_scope:
+            llm_out_of_scope = blob.get("out_of_scope_confirmed") or {}
+        for key, entry in (blob.get("categories") or {}).items():
+            if entry.get("in_scope") and entry.get("confidence") in ("high", "medium"):
+                proposed.setdefault(key, {})["categories"] = entry["categories"]
+        for key, entry in (blob.get("descriptions") or {}).items():
+            proposed.setdefault(key, {})["description"] = entry["description"]
+
+
     rows = []
     seen_names: dict[str, str] = {}
+
+    # Hand-vetted records are immune to the automated scope drop. A record that
+    # someone deliberately featured, or added to SEED_BIOTOOLS_IDS because no
+    # query reached it, has already had human judgement applied - and models do
+    # get these wrong. Both judged MAST out of scope on a protein-flavoured
+    # bio.tools description; it is a MEME Suite motif scanner.
+    protected = set(featured) | {
+        t["biotoolsID"] for t in enriched
+        if t.get("_select_reason", "").startswith("curated")
+    }
 
     for tool in enriched:
         bid = tool["biotoolsID"]
         if bid in excluded or bid in alias_targets:
+            continue
+        if bid in llm_out_of_scope and bid not in protected:
             continue
         rows.append(from_biotools(tool, cites, shared))
         seen_names[tool["name"].lower()] = bid
@@ -276,15 +305,6 @@ def main() -> None:
     # correction always wins. Only accepted when the model was confident and
     # kept the tool in scope; everything else stays visible in the proposals
     # file for review rather than being silently dropped.
-    proposed = {}
-    if PROPOSALS.exists() and not args.no_llm:
-        blob = yaml.safe_load(PROPOSALS.read_text()) or {}
-        for key, entry in (blob.get("categories") or {}).items():
-            if entry.get("in_scope") and entry.get("confidence") in ("high", "medium"):
-                proposed.setdefault(key, {})["categories"] = entry["categories"]
-        for key, entry in (blob.get("descriptions") or {}).items():
-            proposed.setdefault(key, {})["description"] = entry["description"]
-
     for row in rows:
         if row["id"] in proposed:
             row.update(proposed[row["id"]])
@@ -316,6 +336,7 @@ def main() -> None:
         "featured": sum(1 for r in rows if r["featured"]),
         "with_repo": sum(1 for r in rows if r["repo_url"]),
         "llm_assisted": sum(1 for r in rows if r.get("_llm_applied")),
+        "llm_scope_dropped": len(llm_out_of_scope),
     }
     CATALOG_JSON.write_text(json.dumps({"meta": meta, "tools": rows}, indent=1))
 

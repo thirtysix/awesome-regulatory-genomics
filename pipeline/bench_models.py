@@ -74,17 +74,23 @@ def build_sample(n: int) -> tuple[list[dict], dict[str, set]]:
             for s in seeds.get("tools") or [] if s.get("categories")}
 
     by_name = {t["name"]: t for t in tools}
-    gold_tools = [by_name[k] for k in gold if k in by_name]
+    # Cap the hand-labelled share. Seeds are the entries whose descriptions and
+    # categories were written by hand, so they are unrepresentatively clean; let
+    # them dominate the sample and the benchmark measures agreement with its own
+    # author on easy records rather than performance on the catalog.
+    gold_quota = max(1, n // 3)
+    gold_tools = [by_name[k] for k in gold if k in by_name][:gold_quota]
 
     biotools = [t for t in tools if t["source"] == "bio.tools"]
     # Spread across the catalog rather than taking the head, which is all
     # highly-cited suites and far easier than the average record.
-    uncategorised = [t for t in biotools if not t["categories"]]
-    step = max(1, len(biotools) // max(n - len(gold_tools) - len(uncategorised[:5]), 1))
+    uncategorised = [t for t in biotools if not t["categories"]][:5]
+    remaining = max(n - len(gold_tools) - len(uncategorised), 1)
+    step = max(1, len(biotools) // remaining)
     spread = biotools[::step]
 
     sample, seen = [], set()
-    for t in gold_tools + uncategorised[:5] + spread:
+    for t in gold_tools + uncategorised + spread:
         if t["id"] not in seen:
             seen.add(t["id"])
             sample.append(t)

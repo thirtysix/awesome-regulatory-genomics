@@ -32,7 +32,9 @@ import hashlib
 import json
 import os
 import sys
+import threading
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import requests
 import yaml
@@ -214,12 +216,14 @@ def tool_prompt(t: dict) -> str:
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--jobs", default="categorise",
-                    help="comma-separated: categorise,describe,adjudicate")
+                    help="comma-separated: categorise,describe,adjudicate,verify-scope")
     ap.add_argument("--model", default=BULK_MODEL)
     ap.add_argument("--escalate-model", default=QUALITY_MODEL,
                     help="retry model for invalid or low-confidence bulk output")
     ap.add_argument("--no-escalate", action="store_true")
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--workers", type=int, default=8,
+                    help="concurrent API calls")
     ap.add_argument("--refresh", action="store_true",
                     help="ignore cached results for the selected jobs")
     args = ap.parse_args()
@@ -230,7 +234,7 @@ def main() -> None:
                  "the pipeline runs without it.")
 
     jobs = {j.strip() for j in args.jobs.split(",") if j.strip()}
-    unknown = jobs - {"categorise", "describe", "adjudicate"}
+    unknown = jobs - {"categorise", "describe", "adjudicate", "verify-scope"}
     if unknown:
         sys.exit(f"unknown job(s): {', '.join(sorted(unknown))}")
 
@@ -239,50 +243,84 @@ def main() -> None:
     proposals = proposals or {}
     catalog = json.loads(CATALOG.read_text())["tools"]
 
-    spend, escalations, invalid = 0.0, 0, 0
+    stats = {"spend": 0.0, "escalations": 0, "invalid": 0, "done": 0}
+    lock = threading.Lock()
     valid_keys = set(CATEGORY_KEYS)
 
     def cached_call(job: str, key_parts: tuple[str, ...], system: str, user: str,
                     validate) -> dict | None:
-        """Call with cache, then escalate to the quality model if the result is unusable.
+        """Call with cache, then escalate to the quality model if unusable.
 
-        The bulk model is documented to blank enum fields on a small fraction of
-        calls; an unvalidated empty enum silently becomes a permanent
-        mis-classification, so an invalid result must escalate rather than be
-        stored.
+        The bulk model is documented to blank enum fields on a fraction of
+        calls. An unvalidated empty enum silently becomes a permanent
+        mis-classification, so an invalid result escalates rather than being
+        stored. Thread-safe: the model is passed explicitly rather than held on
+        shared state, and every counter update takes the lock.
         """
-        nonlocal spend, escalations, invalid
         cache_key = f"{job}:{args.model}:{digest(*key_parts)}"
-        if cache_key in cache and not args.refresh:
-            return cache[cache_key]
+        with lock:
+            if cache_key in cache and not args.refresh:
+                return cache[cache_key]
 
-        text, cost, _ = call(args.model, system, user, api_key)
-        spend += cost
-        result = parse_json(text)
-        if not (result and validate(result)):
-            invalid += 1
+        def attempt(model: str) -> dict | None:
+            text, cost, _ = call(model, system, user, api_key)
+            with lock:
+                stats["spend"] += cost
+            parsed = parse_json(text)
+            return parsed if (parsed and validate(parsed)) else None
+
+        try:
+            result = attempt(args.model)
+        except Exception:                                   # noqa: BLE001
+            result = None
+        if result is None:
+            with lock:
+                stats["invalid"] += 1
             if args.no_escalate:
                 return None
-            escalations += 1
-            saved_model, args.model = args.model, args.escalate_model
+            with lock:
+                stats["escalations"] += 1
             try:
-                text, cost, _ = call(args.model, system, user, api_key)
-                spend += cost
-                result = parse_json(text)
-            finally:
-                args.model = saved_model
-            if not (result and validate(result)):
+                result = attempt(args.escalate_model)
+            except Exception:                               # noqa: BLE001
+                result = None
+            if result is None:
                 return None
-        cache[cache_key] = result
+        with lock:
+            cache[cache_key] = result
         return result
+
+    def run_batch(items, work, label):
+        """Fan out over a thread pool, checkpointing the cache periodically."""
+        out = {}
+        stats["done"] = 0
+        with ThreadPoolExecutor(max_workers=args.workers) as pool:
+            futures = {pool.submit(work, item): item for item in items}
+            for fut in as_completed(futures):
+                try:
+                    got = fut.result()
+                except Exception as exc:                    # noqa: BLE001
+                    print(f"    ! {type(exc).__name__}: {exc}", file=sys.stderr)
+                    got = None
+                if got:
+                    out.update(got)
+                with lock:
+                    stats["done"] += 1
+                    n = stats["done"]
+                    if n % 100 == 0:
+                        print(f"  {label} {n}/{len(items)}  ${stats['spend']:.3f}", flush=True)
+                        CACHE.parent.mkdir(parents=True, exist_ok=True)
+                        CACHE.write_text(json.dumps(cache))
+        return out
 
     # --- categorise ---------------------------------------------------------
     if "categorise" in jobs:
         tools = [t for t in catalog if t["source"] == "bio.tools"]
         tools = tools[: args.limit] if args.limit else tools
-        out = {}
-        print(f"categorise: {len(tools)} tools via {args.model}")
-        for i, t in enumerate(tools, 1):
+        print(f"categorise: {len(tools)} tools via {args.model} "
+              f"({args.workers} workers)")
+
+        def do_categorise(t):
             res = cached_call(
                 "categorise", (t["name"], t.get("description") or "",
                                ",".join(t.get("_operations") or [])),
@@ -291,17 +329,15 @@ def main() -> None:
                 and all(c in valid_keys for c in r["categories"])
                 and isinstance(r.get("in_scope"), bool))
             if not res:
-                continue
-            derived = set(t["categories"])
+                return None
             proposed = [c for c in CATEGORY_KEYS if c in set(res["categories"])]
-            if set(proposed) != derived or not res["in_scope"]:
-                out[t["id"]] = {"categories": proposed,
-                                "was": t["categories"],
-                                "in_scope": res["in_scope"],
-                                "confidence": res.get("confidence", "medium")}
-            if i % 50 == 0:
-                print(f"  {i}/{len(tools)}  ${spend:.3f}", flush=True)
-                CACHE.write_text(json.dumps(cache))
+            if set(proposed) == set(t["categories"]) and res["in_scope"]:
+                return None
+            return {t["id"]: {"categories": proposed, "was": t["categories"],
+                              "in_scope": res["in_scope"],
+                              "confidence": res.get("confidence", "medium")}}
+
+        out = run_batch(tools, do_categorise, "categorise")
         proposals["categories"] = out
         print(f"  {len(out)} differ from the rule-derived categories")
 
@@ -309,20 +345,21 @@ def main() -> None:
     if "describe" in jobs:
         tools = [t for t in catalog if t["source"] == "bio.tools" and t.get("description")]
         tools = tools[: args.limit] if args.limit else tools
-        out = {}
-        print(f"describe: {len(tools)} tools via {args.model}")
-        for i, t in enumerate(tools, 1):
+        print(f"describe: {len(tools)} tools via {args.model} "
+              f"({args.workers} workers)")
+
+        def do_describe(t):
             res = cached_call(
                 "describe", (t["name"], t["description"]),
                 DESCRIBE_SYSTEM, tool_prompt(t),
                 lambda r: isinstance(r.get("description"), str)
                 and 4 <= len(r["description"].split()) <= 40)
-            if res:
-                out[t["id"]] = {"description": res["description"].rstrip("."),
-                                "was": t["description"]}
-            if i % 50 == 0:
-                print(f"  {i}/{len(tools)}  ${spend:.3f}", flush=True)
-                CACHE.write_text(json.dumps(cache))
+            if not res:
+                return None
+            return {t["id"]: {"description": res["description"].rstrip("."),
+                              "was": t["description"]}}
+
+        out = run_batch(tools, do_describe, "describe")
         proposals["descriptions"] = out
         print(f"  {len(out)} rewritten")
 
@@ -330,9 +367,10 @@ def main() -> None:
     if "adjudicate" in jobs:
         rejects = json.loads(REJECTED.read_text())["list"]
         rejects = rejects[: args.limit] if args.limit else rejects
-        out = {}
-        print(f"adjudicate: {len(rejects)} rejected records via {args.model}")
-        for i, t in enumerate(rejects, 1):
+        print(f"adjudicate: {len(rejects)} rejected records via {args.model} "
+              f"({args.workers} workers)")
+
+        def do_adjudicate(t):
             user = (f"Name: {t['name']}\nDescription: {t.get('description') or '(none)'}\n"
                     f"EDAM operations: {', '.join(t.get('operations') or []) or 'none'}\n"
                     f"Filter's reason for exclusion: {t.get('reason', '')}")
@@ -340,15 +378,56 @@ def main() -> None:
                 "adjudicate", (t["name"], t.get("description") or ""),
                 ADJUDICATE_SYSTEM, user,
                 lambda r: isinstance(r.get("should_include"), bool))
-            if res and res["should_include"]:
-                out[t["biotoolsID"]] = {"name": t["name"],
-                                        "reason": res.get("reason", ""),
-                                        "filter_said": t.get("reason", "")}
-            if i % 50 == 0:
-                print(f"  {i}/{len(rejects)}  ${spend:.3f}", flush=True)
-                CACHE.write_text(json.dumps(cache))
+            if not (res and res["should_include"]):
+                return None
+            return {t["biotoolsID"]: {"name": t["name"],
+                                      "reason": res.get("reason", ""),
+                                      "filter_said": t.get("reason", "")}}
+
+        out = run_batch(rejects, do_adjudicate, "adjudicate")
         proposals["false_negatives"] = out
         print(f"  {len(out)} flagged as wrongly excluded")
+
+    # --- verify-scope -------------------------------------------------------
+    # Dropping a record from the catalog is destructive, so one model's opinion
+    # is not enough. Re-ask a DIFFERENT model about everything the first flagged
+    # out of scope, and confirm only where the two agree. Disagreements stay in
+    # the catalog - the conservative direction.
+    if "verify-scope" in jobs:
+        flagged = [k for k, v in (proposals.get("categories") or {}).items()
+                   if not v.get("in_scope")]
+        by_id = {t["id"]: t for t in catalog}
+        items = [by_id[k] for k in flagged if k in by_id]
+        second = args.escalate_model
+        print(f"verify-scope: re-checking {len(items)} out-of-scope flags "
+              f"with {second} ({args.workers} workers)")
+
+        def do_verify(t):
+            cache_key = f"verify-scope:{second}:{digest(t['name'], t.get('description') or '')}"
+            with lock:
+                if cache_key in cache and not args.refresh:
+                    res = cache[cache_key]
+                    return {t["id"]: res} if res.get("in_scope") is False else None
+            try:
+                text, cost, _ = call(second, CATEGORISE_SYSTEM, tool_prompt(t), api_key)
+            except Exception:                               # noqa: BLE001
+                return None
+            with lock:
+                stats["spend"] += cost
+            res = parse_json(text)
+            if not (res and isinstance(res.get("in_scope"), bool)):
+                return None
+            with lock:
+                cache[cache_key] = res
+            if res["in_scope"]:
+                return None
+            return {t["id"]: {"name": t["name"], "description": t.get("description", ""),
+                              "agreed_by": [args.model, second]}}
+
+        confirmed = run_batch(items, do_verify, "verify-scope")
+        proposals["out_of_scope_confirmed"] = confirmed
+        print(f"  {len(confirmed)}/{len(items)} confirmed out of scope by both models "
+              f"({len(items) - len(confirmed)} disagreements kept in the catalog)")
 
     CACHE.parent.mkdir(parents=True, exist_ok=True)
     CACHE.write_text(json.dumps(cache))
@@ -360,7 +439,8 @@ def main() -> None:
         f"# model: {args.model}  jobs: {','.join(sorted(jobs))}\n\n"
         + yaml.safe_dump(proposals, sort_keys=True, width=100, allow_unicode=True))
 
-    print(f"\nspend ${spend:.3f} | escalations {escalations} | unusable after retry {invalid - escalations}")
+    print(f"\nspend ${stats['spend']:.3f} | escalations {stats['escalations']} "
+          f"| unusable after retry {stats['invalid'] - stats['escalations']}")
     print(f"-> {PROPOSALS}")
 
 

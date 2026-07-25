@@ -156,13 +156,17 @@ def render_readme(catalog: dict) -> str:
     A("audit_coverage.py measure recall against a hand-written benchmark")
     A("```")
     A("")
-    A("**No step calls an LLM.** Selection, categorisation and enrichment are set "
-      "membership on EDAM terms, compiled regex and API lookups, so `make refresh` "
-      "is reproducible, runs in CI without any API key, and every rule is readable "
-      "in [`pipeline/config.py`](pipeline/config.py). An *optional* stage "
-      "([`docs/llm-stage.md`](docs/llm-stage.md)) can propose better categories and "
-      "descriptions, but it writes to a review file that is merged below the "
-      "hand-written overlay — it never decides anything on its own.")
+    A("**Harvesting and selection never call an LLM.** They are set membership on "
+      "EDAM terms, compiled regex and API lookups, so the scope of the catalog is "
+      "reproducible and every rule is readable in "
+      "[`pipeline/config.py`](pipeline/config.py). Categories and descriptions are "
+      "then refined by an *optional* model pass "
+      "([`docs/llm-stage.md`](docs/llm-stage.md)) that writes to a review file "
+      "merged below the hand-written overlay; `make build-strict` ignores it "
+      "entirely and rebuilds on rules alone. Removing a record needs two different "
+      "models to agree independently, and never overrides a hand-vetted entry — a "
+      "guard added after both models judged MAST out of scope on its "
+      "protein-flavoured bio.tools description.")
     A("")
     A("Two design decisions are worth stating, because they are where most tool "
       "tables go wrong:")

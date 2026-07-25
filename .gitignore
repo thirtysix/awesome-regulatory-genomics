@@ -4,3 +4,8 @@ __pycache__/
 .~lock.*#
 # Bulky per-work OpenAlex responses; the compact citation_cache.csv is tracked.
 data/cache/openalex/
+
+# Never commit credentials; the LLM stage reads DEEPINFRA_API_KEY from the env.
+.env
+*.key
+secrets.*

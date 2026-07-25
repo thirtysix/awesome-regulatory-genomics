@@ -20,7 +20,7 @@ enrich:
 
 ## rebuild the catalog and outputs from cached enrichment (fast, offline)
 build:
-	$(PIPELINE)/build.py
+	$(PIPELINE)/build.py --apply-scope
 
 render:
 	$(PIPELINE)/render.py
@@ -34,7 +34,7 @@ audit:
 ## `make build` merges it BELOW the hand-written overlay. Cached by content
 ## hash, so re-runs are free and CI never needs a key.
 llm:
-	$(PIPELINE)/llm_assist.py --jobs categorise,describe,adjudicate
+	$(PIPELINE)/llm_assist.py --jobs categorise,describe,adjudicate,verify-scope
 
 ## OPTIONAL: benchmark candidate models on this task before choosing one
 bench:
