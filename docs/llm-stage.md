@@ -1,14 +1,21 @@
 # The optional LLM stage
 
-The pipeline's default path contains **no LLM calls at all**. Harvesting,
-selection, enrichment, categorisation, rendering and the coverage audit are
-deterministic: HTTP queries, set membership on EDAM terms, compiled regex, and
-YAML merges. `make refresh` produces the same catalog from the same inputs, runs
-in CI without an API key, and every rule is readable in
-[`pipeline/config.py`](../pipeline/config.py).
+**What a tool is, and whether it is in scope, is decided without an LLM.**
+Harvesting, selection, enrichment, rendering and the coverage audit are
+deterministic: HTTP queries, set membership on EDAM terms, compiled regex and
+YAML merges. Every rule is readable in
+[`pipeline/config.py`](../pipeline/config.py), and `make build-strict` rebuilds
+the whole catalog on those rules alone, with no key and no network.
 
-That is worth keeping. But rules are weakest exactly where judgement is needed,
-so there is an optional stage that adds it without giving up reproducibility.
+Categories and descriptions are then **refined** by the optional stage described
+here, whose output is cached and committed — so a normal `make build` is still
+reproducible and still needs no API key. Only re-running `make llm` does.
+
+The split is deliberate. Rules are auditable but weakest exactly where judgement
+is needed; the measurements below show them losing badly on categorisation.
+Keeping scope deterministic and refinement optional means a contributor can
+always reproduce and argue with the boundary, while the labels get the benefit
+of something that reads the sentence.
 
 ## What it does
 
