@@ -109,15 +109,15 @@ def main() -> None:
                     probe = probe_biotools(session, entry["name"])
                     time.sleep(0.12)
                     if not probe:
-                        reason = "absent from bio.tools — add to `seeds.yaml`"
+                        reason = "absent from bio.tools; add to `seeds.yaml`"
                     elif probe in rejected:
                         reason = (f"harvested as `{probe}`, then rejected "
-                                  f"({rejected[probe]}) — selection rule too strict")
+                                  f"({rejected[probe]}); selection rule too strict")
                     elif probe in swept:
-                        reason = f"harvested as `{probe}` but not selected — check `select_domain.py`"
+                        reason = f"harvested as `{probe}` but not selected; check `select_domain.py`"
                     else:
-                        reason = (f"in bio.tools as `{probe}` but never harvested — "
-                                  "no query reaches it; widen `QUERY_TOPICS`/`QUERY_FREETEXT` "
+                        reason = (f"in bio.tools as `{probe}` but never harvested. "
+                                  "No query reaches it; widen `QUERY_TOPICS`/`QUERY_FREETEXT` "
                                   "or add to `seeds.yaml`")
                 rows.append((entry["name"], "no", "", reason))
                 misses.append((group, entry["name"], reason))
@@ -132,7 +132,7 @@ def main() -> None:
       f"[`curation/benchmark.yaml`](../curation/benchmark.yaml).")
     A("")
     A("The benchmark is a hand-written list of resources the field treats as "
-      "standard. It is not a ranking and not exhaustive — it exists so that "
+      "standard. It is not a ranking and not exhaustive. It exists so that "
       "\"did the pipeline find the obvious things?\" is a measurement rather "
       "than an impression.")
     A("")
@@ -143,7 +143,7 @@ def main() -> None:
         A("## Misses")
         A("")
         A("Each of these is a bug, and the diagnosis says which kind. "
-          "*Never harvested* means no query reaches the record — widen "
+          "*Never harvested* means no query reaches the record, so widen "
           "`QUERY_TOPICS` or `QUERY_FREETEXT`. *Rejected* means the selection "
           "rules in `pipeline/config.py` are too strict. *Absent from "
           "bio.tools* means it belongs in `curation/seeds.yaml`.")
@@ -161,7 +161,7 @@ def main() -> None:
     A("")
     for group, rows in sections:
         got = sum(1 for r in rows if r[1] == "yes")
-        A(f"### {group} — {got}/{len(rows)}")
+        A(f"### {group}: {got}/{len(rows)}")
         A("")
         A("| Benchmark tool | Present | Catalog entry | Source / diagnosis |")
         A("| --- | :---: | --- | --- |")

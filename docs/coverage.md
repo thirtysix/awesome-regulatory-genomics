@@ -1,16 +1,16 @@
 # Coverage audit
 
-Generated 2026-07-25 by `make audit`, against [`curation/benchmark.yaml`](../curation/benchmark.yaml).
+Generated 2026-07-26 by `make audit`, against [`curation/benchmark.yaml`](../curation/benchmark.yaml).
 
-The benchmark is a hand-written list of resources the field treats as standard. It is not a ranking and not exhaustive — it exists so that "did the pipeline find the obvious things?" is a measurement rather than an impression.
+The benchmark is a hand-written list of resources the field treats as standard. It is not a ranking and not exhaustive. It exists so that "did the pipeline find the obvious things?" is a measurement rather than an impression.
 
-**89 of 89 benchmark tools present (100%).** Catalog size: 1385 tools.
+**89 of 89 benchmark tools present (100%).** Catalog size: 1869 tools.
 
 No misses.
 
 ## Full results
 
-### motif discovery — 12/12
+### motif discovery: 12/12
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
@@ -27,7 +27,7 @@ No misses.
 | TF-MoDISco | ✅ | TF-MoDISco | curated seed |
 | gkm-SVM | ✅ | gkm-SVM / LS-GKM | curated seed |
 
-### motif scanning and enrichment — 11/11
+### motif scanning and enrichment: 11/11
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
@@ -37,13 +37,13 @@ No misses.
 | MAST | ✅ | MAST | bio.tools |
 | MOODS | ✅ | MOODS | bio.tools |
 | PWMScan | ✅ | PWMScan | bio.tools |
-| Cluster-Buster | ✅ | Cluster-Buster | curated seed |
+| Cluster-Buster | ✅ | Cluster Buster | bio.tools |
 | TFBSTools | ✅ | TFBSTools | bio.tools |
 | motifmatchr | ✅ | motifmatchr | curated seed |
 | PWMEnrich | ✅ | PWMEnrich | bio.tools |
 | monaLisa | ✅ | monaLisa | curated seed |
 
-### motif and TF databases — 15/15
+### motif and TF databases: 15/15
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
@@ -51,7 +51,7 @@ No misses.
 | HOCOMOCO | ✅ | HOCOMOCO | bio.tools |
 | CIS-BP | ✅ | CIS-BP | curated seed |
 | TRANSFAC | ✅ | TRANSFAC | bio.tools |
-| SwissRegulon | ✅ | SwissRegulon | curated seed |
+| SwissRegulon | ✅ | SwissRegulon | bio.tools |
 | UniPROBE | ✅ | UniPROBE | bio.tools |
 | Factorbook | ✅ | Factorbook | bio.tools |
 | UniBind | ✅ | UniBind | bio.tools |
@@ -63,7 +63,7 @@ No misses.
 | TRRUST | ✅ | TRRUST | curated seed |
 | TFLink | ✅ | TFLink | bio.tools |
 
-### sequence-to-function models — 13/13
+### sequence-to-function models: 13/13
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
@@ -78,10 +78,10 @@ No misses.
 | ChromBPNet | ✅ | ChromBPNet | bio.tools |
 | Sei | ✅ | Sei | curated seed |
 | DeepSTARR | ✅ | DeepSTARR | curated seed |
-| scBasset | ✅ | scBasset | curated seed |
+| scBasset | ✅ | scBasset | bio.tools |
 | gReLU | ✅ | gReLU | bio.tools |
 
-### footprinting — 7/7
+### footprinting: 7/7
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
@@ -93,7 +93,7 @@ No misses.
 | msCentipede | ✅ | msCentipede | bio.tools |
 | TFBSFootprinter | ✅ | TFBSFootprinter | curated seed |
 
-### peak calling and annotation — 9/9
+### peak calling and annotation: 9/9
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
@@ -107,7 +107,7 @@ No misses.
 | LOLA | ✅ | LOLA | curated seed |
 | BART | ✅ | BART | bio.tools |
 
-### ChIP and ATAC resources — 5/5
+### ChIP and ATAC resources: 5/5
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
@@ -117,7 +117,7 @@ No misses.
 | Cistrome | ✅ | Cistrome | bio.tools |
 | ENCODE | ✅ | ENCODE DCC | bio.tools |
 
-### gene regulatory networks — 9/9
+### gene regulatory networks: 9/9
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
@@ -131,7 +131,7 @@ No misses.
 | iRegulon | ✅ | iRegulon | curated seed |
 | i-cisTarget | ✅ | i-cisTarget | curated seed |
 
-### regulatory variants — 8/8
+### regulatory variants: 8/8
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |

@@ -93,6 +93,74 @@ SEED_BIOTOOLS_IDS = [
     "atsnp",          # variant effect on TF binding
     "HaploReg",       # regulatory annotation of variants
     "uniprobe",       # PBM-derived DNA-binding specificities
+
+    # Reviewed individually after the adjudication pass over the reject pile.
+    # Each is in scope but phrased so idiosyncratically that no pattern reaches
+    # it without dragging in a neighbouring field ("Genomic loci annotation and
+    # enrichment tool", "Quantitative analysis of the genomic overlaps",
+    # "A tool for exploring patterns in ChIP profiling data"). Listing them by
+    # ID is honest about that: a human decided, and the metadata still comes
+    # from upstream and stays fresh.
+    "4d-nucleome-data-portal",
+    "ChiCMaxima",
+    "GLANET",
+    "RSAT_-_Retrieve_Sequence",
+    "abs",
+    "bisa",
+    "catch",
+    "chrogps",
+    "chrokit",
+    "chromegcn",
+    "citrus",
+    "cobind",
+    "conquer",
+    "couger",
+    "decorate",
+    "deepfun",
+    "deeptools",
+    "driverpower",
+    "echolocator",
+    "enhort",
+    "episegmix",
+    "ermer",
+    "es-arcnn",
+    "evoaug_tf",
+    "filer",
+    "filtercontrol",
+    "funcisnp",
+    "funsip",
+    "genomesidekick",
+    "greap",
+    "grenits",
+    "infima",
+    "ipro-gan",
+    "jaspar2018",
+    "lolaweb",
+    "lpnet",
+    "makestatschipseq",
+    "meme",
+    "mira_single-cell",
+    "motifbreakr",
+    "niacs",
+    "ntw",
+    "owas",
+    "p53mutagene",
+    "racipe",
+    "readout",
+    "remm",
+    "remus-disease",
+    "rispice",
+    "rsat-retrieve-ensembl-seq",
+    "simsearch",
+    "snapshot",
+    "sparkinferno",
+    "suldex",
+    "swissregulon",
+    "tadeus2",
+    "targetgene",
+    "varadb",
+    "w-chipeaks",
+    "svmil2",
 ]
 
 # Free-text queries, for tools whose EDAM annotation is wrong or absent.
@@ -178,6 +246,37 @@ DOMAIN_TOPICS = {
     "ChIP-on-chip",
 }
 
+# STRONG text patterns: phrases so specific to this field that a match settles
+# the question on its own. These admit a record with no topic corroboration,
+# and they also OVERRIDE the hard exclusions below - a transcription-factor
+# database that happens to mention phylogenetic trees, or a multi-omics
+# regulatory resource that mentions proteomics, is still in scope.
+# Ordering matters: exclusions still beat a STRONG EDAM *operation* (bio.tools
+# assigns those wrongly), but they lose to a STRONG text match (which describes
+# what the tool actually does).
+STRONG_TEXT_PATTERNS = [
+    r"\btranscription[- ]factor",
+    r"\bTFBS\b|\bTF binding\b",
+    r"\bcis-regulatory|\bregulatory element|\bcis-element",
+    r"\bgene regulatory network|\bregulatory network|\bregulon\b",
+    r"\bpromoter\b|\benhancer\b|\bsuper-?enhancer",
+    r"\bposition (weight|frequency|specific scoring) matri|\bPWM\b|\bPFM\b|\bPSSM\b",
+    r"\bsequence logo|\bsequence motifs?\b|\bmotifs? in DNA|\bDNA (sequence )?motif",
+    r"\bmotif (discovery|enrichment|scan|search|find|analysis)|\bdiscriminative .{0,12}motif",
+    r"\bChIP[- ]?(seq|chip|exo|nexus)\b|\bCUT&(RUN|Tag)\b",
+    r"\bpeak[- ]call(er|ing)?\b|\bcalls? peaks\b",
+    r"\bfootprint",
+    r"\bchromatin (accessibilit|state|loop|interaction|organi[sz]ation)|\bopen[- ]chromatin",
+    r"\bsc(ATAC|-ATAC)|\bsingle[- ](cell|nucleus) ATAC|\bsingle[- ]cell (epigenom|regulom)",
+    r"\bmassively parallel reporter|\bMPRA\b|\bSTARR-?seq",
+    r"\btranscription start site|\bCAGE\b",
+    r"\bHiChIP\b|\bChIA-?PET\b|\bCapture-?C\b|\btopologically associat|\bCTCF\b",
+    r"\b(non-?coding|regulatory) (variant|mutation|SNP)",
+    r"\bDNA[- ]binding (site|preference|specificit|profile|domain)",
+    r"\bnucleosome",
+    r"\bepigenom(e|ic)s?\b",
+]
+
 # Records that fail the operation filter are still kept if their name or
 # description matches one of these AND they carry a domain topic. This is the
 # escape hatch for bio.tools' annotation gaps, and it is what recovers tools
@@ -209,17 +308,81 @@ KEEP_TEXT_PATTERNS = [
     r"\bhistone modification",
     r"\benriched (domain|region)s?\b",
     r"\bDNA[- ]binding (preference|specificit|profile)",
+
+    # --- gaps found by the adjudication pass over the reject pile -----------
+    # Each of these classes was systematically missed: the tools are squarely
+    # in scope but were phrased in vocabulary no earlier pattern covered.
+
+    # chromatin state, segmentation and epigenome annotation (ChromHMM, STAN,
+    # Segtools, EpiSegMix, ChAsE)
+    r"\bchromatin state|\bgenome segmentation|\bgenomic segmentation",
+    r"\bepigenom(e|ic)s?\b",
+    r"\bheterochromatin|\bnucleosome (position|stability)",
+
+    # single-cell regulatory genomics (SCALE, SnapATAC, epiScanpy, APEC, MIRA)
+    r"\bsc(ATAC|-ATAC)|\bsingle[- ](cell|nucleus) ATAC",
+    r"\bsingle[- ]cell (epigenom|regulom|open[- ]chromatin|chromatin)",
+    r"\bopen[- ]chromatin",
+
+    # reporter assays (MPRA, STARR-seq)
+    r"\bmassively parallel reporter|\bMPRA\b|\bSTARR-?seq",
+
+    # transcription start sites (TSRexploreR, TSSr, EPD, TE-TSS)
+    r"\btranscription start site|\bTSS\b|\bCAGE\b",
+
+    # transcription factors as objects of study, not only their binding sites
+    # (TFcheckpoint, TF-Marker, PlantTFDB, CoryneRegNet, ChEA3)
+    r"\btranscription[- ]factor|\btranscription factors\b",
+    r"\btranscriptional regulat|\bco-?factors? .{0,20}(bound|binding|genomic)",
+
+    # promoters and enhancers named plainly
+    r"\bpromoter\b|\benhancer\b|\bsuper-?enhancer|\bcis-element",
+
+    # regulatory variant interpretation (TURF, TVAR, ReMM, VannoPortal)
+    r"\b(non-?coding|regulatory) (variant|mutation|SNP|element)",
+    r"\bvariant (annotation|prioriti[sz]ation).{0,30}(regulat|epigenom|chromatin)",
+    r"\ballele-?specific binding",
+
+    # 3D genome, where the interaction IS the regulatory link (HiChIP, Capture-C,
+    # promoter-distal loops, CTCF loops, TADs)
+    r"\bchromatin (loop|interaction|organi[sz]ation|contact)",
+    r"\bHi-?C\b|\bChIA-?PET\b|\bHiChIP\b|\bCapture-?C\b",
+    r"\btopologically associat|\bTADs?\b|\bCTCF\b",
+    r"\benhancer[- ](promoter|target|gene) (interaction|link)",
+
+    # peak calling phrased without the word "peak call"
+    r"\bpeak[- ]call(er|ing)?\b|\benriched (genomic )?regions?\b",
 ]
 
-# Hard exclusions applied after every other rule. These catch neighbouring
-# fields that share vocabulary ("motif", "peak", "binding") but are not
-# regulatory genomics.
-EXCLUDE_TEXT_PATTERNS = [
-    r"\bmass spectrometr|\bLC-MS\b|\bMS/MS\b|\bmetabolomic|\bglycomic|\bproteomic workflow",
-    r"\bchromatograph",
-    r"\bprotein (crystall|folding|structure prediction)",
-    r"\bRNA (secondary |tertiary )?structure",
+# HARD exclusions: the phrase names another field's core object, so it wins even
+# against a STRONG text match. "protein sequence motifs" contains "sequence
+# motifs" and would otherwise admit protein-motif viewers like 3Matrix.
+HARD_EXCLUDE_PATTERNS = [
+    r"\bprotein (sequence )?motif|\bmotifs? (with)?in proteins|\bstructural motif",
+    r"\bRNA (tertiary|structural|secondary) motif",
+    r"\bmass spectrometr|\bLC-MS\b|\bMS/MS\b|\bmetabolomic|\bglycomic",
+    r"\bchromatograph|\bflow injection analysis",
+    r"\brestriction enzyme",
     r"\briboswitch|\bribosome profiling",
+    r"\bPROSITE\b|\bHAMAP\b|\bPfam\b|\bInterPro\b",
+    r"\bphosphorylat|\bkinase substrate",
+    r"\bprotein (crystall|folding|structure prediction)",
+    r"\bdocking\b|\bmolecular dynamics",
+    r"\bMHC (class )?(I|II)\b|\bepitope\b",
+    r"\bG-?quadruplex|\bQGRS\b",
+    r"\bexosom|\bmicrobiome",
+    r"\bretroposon|\bretrotransposon",
+    r"\bviral taxonom",
+    r"\bortholog(y|ue|s)? (inference|prediction|assignment|classifier)",
+]
+
+# SOFT exclusions: the phrase merely suggests another field and can legitimately
+# co-occur with in-scope work, so a STRONG text match overrides it. A
+# transcription-factor database is not disqualified by mentioning a
+# phylogenetic tree, nor a regulatory multi-omics resource by listing
+# proteomics among its data types.
+EXCLUDE_TEXT_PATTERNS = [
+    r"\bRNA (secondary |tertiary )?structure",
     r"\bstructural variant|\bcopy[- ]number variant call",
     r"\bphylogenetic tree|\bspecies tree|\bmultiple sequence alignment tool",
     r"\bdocking\b|\bmolecular dynamics",

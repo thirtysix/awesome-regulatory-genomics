@@ -10,7 +10,7 @@ Corrections and additions are welcome. Two rules keep this maintainable:
 ## Adding a tool
 
 First check whether it is already in [bio.tools](https://bio.tools). If it is
-and it is missing here, the selection filter is at fault — please open an issue
+and it is missing here, the selection filter is at fault. Please open an issue
 with the bio.tools ID so the rule can be fixed rather than the symptom patched.
 
 If it is genuinely absent from bio.tools, add it to
@@ -27,7 +27,7 @@ If it is genuinely absent from bio.tools, add it to
 ```
 
 Valid `categories` keys are listed in `CATEGORIES` in
-[`pipeline/config.py`](pipeline/config.py). A tool can hold several — most do.
+[`pipeline/config.py`](pipeline/config.py). A tool can hold several, and most do.
 
 Adding it to bio.tools as well is more valuable than adding it here, since
 every downstream consumer of that registry benefits.
@@ -54,7 +54,7 @@ deliberately not "well cited":
 - it is a de-facto standard the literature assumes you know, **or**
 - it is the only maintained option in its niche.
 
-The value is the one-line description shown in the README — write it as a
+The value is the one-line description shown in the README. Write it as a
 reason, not a restatement of the name.
 
 ## Removing something out of scope
@@ -91,4 +91,4 @@ databases serving those.
 
 Out of scope: general sequence alignment and assembly, RNA structure, protein
 structure and docking, mass spectrometry, and generic differential-expression
-tooling — even when they share vocabulary like "motif" or "peak".
+tooling, even when they share vocabulary like "motif" or "peak".

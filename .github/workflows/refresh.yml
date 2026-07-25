@@ -43,7 +43,7 @@ jobs:
             Automated refresh of the catalog from bio.tools, the GitHub API and
             OpenAlex.
 
-            Review the diff in `data/catalog.tsv` before merging — new tools and
+            Review the diff in `data/catalog.tsv` before merging: new tools and
             dropped tools both show up there. If a whole class of tools appeared
             or vanished, the selection rules in `pipeline/config.py` are the
             likely cause, not upstream data.

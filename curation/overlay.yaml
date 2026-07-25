@@ -79,4 +79,9 @@ exclude:
 # aliases - collapse duplicate bio.tools records for the same tool.
 # The key is kept; the listed IDs are dropped and recorded as alternates.
 # ---------------------------------------------------------------------------
-aliases: {}
+aliases:
+  meme_suite: [meme]                 # "MEME" and "MEME Suite" are one tool
+  imotifbreakr: [motifbreakr]        # two records for the Bioconductor package
+  remm_score: [remm]
+  washu_epigenome_browser: [epigenome]
+  jaspar: [jaspar2018]               # versioned data package, not a separate tool

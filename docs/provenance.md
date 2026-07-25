@@ -8,8 +8,8 @@ verified, and what this catalog does differently.
 
 ## The original table
 
-`dissertation/transcription_factor.results_unique.csv` — 148 tools, six columns
-(`Name`, `Homepage`, `Description_short`, `Year`, `Citations`, `Identifiers`),
+`dissertation/transcription_factor.results_unique.csv` holds 148 tools in six
+columns (`Name`, `Homepage`, `Description_short`, `Year`, `Citations`, `Identifiers`),
 tab-separated despite the `.csv` extension, sorted by citation count descending.
 
 It was produced by this chain:
@@ -67,13 +67,13 @@ had three recall problems, each measured before the pipeline was redesigned.
 
 **1. Planned queries that were never run.** `terms.txt` lists eight EDAM terms;
 three result sets exist and only one reached the table. `"Sequence motif
-discovery"` is listed twice and was never queried — it alone would have found
+discovery"` is listed twice and was never queried; it alone would have found
 HOMER, Weeder and ChIPMunk. A fourth result set of 241 motif tools was computed
 and discarded; 208 of them appear nowhere in the final table.
 
 **2. EDAM annotations in bio.tools are unreliable.** Of 85 canonical tools in
 this field checked against the live API, 58 were missed by the original queries
-— and 26 of those are *in* bio.tools, filed under operations no sensible query
+and 26 of those are *in* bio.tools, filed under operations no sensible query
 would target:
 
 | Tool | bio.tools operation |
@@ -100,7 +100,7 @@ several major motif databases (CIS-BP, TRRUST, footprintDB).
 - **Tier the operations.** Specific terms admit a record on their own; ambiguous
   ones (`Sequence motif recognition`, which bio.tools also applies to protein and
   RNA motifs) need a corroborating topic or text signal. Four terms are queried
-  but never used to admit anything — `Peak detection` in particular is used
+  but never used to admit anything. `Peak detection` in particular is used
   almost exclusively by mass-spectrometry tools.
 - **Keep a text escape hatch.** Matching name and description against domain
   patterns, gated on a plausible EDAM topic, recovers in-domain tools with no

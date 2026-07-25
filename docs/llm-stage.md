@@ -8,7 +8,7 @@ YAML merges. Every rule is readable in
 the whole catalog on those rules alone, with no key and no network.
 
 Categories and descriptions are then **refined** by the optional stage described
-here, whose output is cached and committed — so a normal `make build` is still
+here, whose output is cached and committed, so a normal `make build` is still
 reproducible and still needs no API key. Only re-running `make llm` does.
 
 The split is deliberate. Rules are auditable but weakest exactly where judgement
@@ -21,7 +21,7 @@ of something that reads the sentence.
 
 | Job | Why rules struggle |
 | --- | --- |
-| `categorise` | Categories come from EDAM lookups plus ~50 regex patterns. That handles the clear cases and degrades at the margins — a record described as "an integrated platform for ChIP-Seq data interpretation" gets whatever pattern happens to fire, and some land uncategorised. |
+| `categorise` | Categories come from EDAM lookups plus ~50 regex patterns. That handles the clear cases and degrades at the margins: a record described as "an integrated platform for ChIP-Seq data interpretation" gets whatever pattern happens to fire, and some land uncategorised. |
 | `describe` | bio.tools descriptions are wildly inconsistent: some are one clean sentence, many open with "XYZ is a tool that…", some run to a paragraph with embedded citations. `first_sentence()` is a blunt instrument. |
 | `adjudicate` | Around 1,700 records are rejected as out of scope. The boundary has been spot-checked, not read. This re-reads every rejection and flags likely false negatives. |
 
@@ -31,7 +31,7 @@ of something that reads the sentence.
 `build.py` merges it *below* `curation/overlay.yaml`, so any hand-written
 correction always wins. A human promotes changes in a reviewable diff; nothing
 is silently applied. Only high- and medium-confidence, in-scope proposals are
-merged at all — the rest stay in the file for inspection.
+merged at all; the rest stay in the file for inspection.
 
 **Cached by content hash.** The cache key is a hash of the exact text sent
 (name, description, EDAM operations). Re-runs cost nothing and return identical
@@ -59,10 +59,10 @@ Do not pick from a leaderboard. Two facts make measurement necessary:
 So `pipeline/bench_models.py` measures, on a stratified sample from the built
 catalog:
 
-- `json_ok` — fraction of calls returning parseable JSON
-- `enum_ok` — fraction returning *only* valid taxonomy keys (the failure mode above)
-- `agreement` — Jaccard overlap with the rule-derived categories; a sanity signal, not ground truth, since beating the rules is the point
-- `gold_F1` — F1 against hand-labelled tools (the curated seeds, whose categories were written by hand). **This is the number that matters.**
+- `json_ok`: fraction of calls returning parseable JSON
+- `enum_ok`: fraction returning *only* valid taxonomy keys (the failure mode above)
+- `agreement`: Jaccard overlap with the rule-derived categories; a sanity signal, not ground truth, since beating the rules is the point
+- `gold_F1`: F1 against hand-labelled tools (the curated seeds, whose categories were written by hand). **This is the number that matters.**
 - cost and median latency, extrapolated per 100 tools
 
 ```bash
@@ -78,7 +78,7 @@ make bench          # writes docs/model-benchmark.md
 | `DeepSeek-V3.1-Terminus` | 100% | 99% | 0.54 | 0.82 | $0.010 | 1.0s |
 | `GLM-5` | 100% | 100% | 0.53 | 0.85 | $0.015 | 1.4s |
 
-All three are tied on quality, within noise on 25 gold items — the registry's
+All three are tied on quality, within noise on 25 gold items, echoing the registry's
 "a general index does not predict a narrow task" lesson holding again. So the
 choice is made on cost: **V4-Flash for bulk**, four times cheaper than the next
 option, with Terminus retained for escalation and second opinions. The
@@ -87,7 +87,7 @@ a guard rather than an assumption.
 
 The `agreement` column is the interesting one. Against hand labels the models
 score 0.83; against the regex rules they agree only ~0.53. Since both are
-scoring the same records, that gap says the **rules** are the weaker party — and
+scoring the same records, that gap says the **rules** are the weaker party, and
 the full run bore that out: `tfbs-prediction` fell from 750 tools to 295
 (the patterns were firing on any passing mention of TF binding) while
 `peak-annotation` rose from 23 to 111.
@@ -108,7 +108,7 @@ zero escalations and zero unusable responses:
 
 Dropping a record is destructive, so one model's opinion is not enough. The
 `verify-scope` job re-asks a **different** model about everything the first
-flagged as out of scope and confirms only where the two agree independently —
+flagged as out of scope and confirms only where the two agree independently:
 242 of 349 here, with the 107 disagreements kept in the catalog. Even then
 `build.py` requires the explicit `--apply-scope` flag, and hand-vetted records
 (anything `featured`, or listed in `SEED_BIOTOOLS_IDS`) are never dropped.
@@ -139,7 +139,7 @@ everything, with a stronger one re-reading only the tail. Defaults are
 per-model call settings (temperature, `top_p`, and critically whether to send
 `enable_thinking:false`) are read from the shared registry when it is installed.
 Getting that per-model setting wrong is the single most common cause of
-"the model returned empty" — forced-thinking models break when told not to
+"the model returned empty": forced-thinking models break when told not to
 think, and thinking models leak non-JSON when allowed to.
 
 ## Cost

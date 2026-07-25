@@ -165,13 +165,13 @@ def main() -> None:
            f"{len(sample)} sampled tools ({len(gold)} hand-labelled).", "",
            "A general intelligence ranking does not predict performance on a narrow "
            "structured-classification task, so the model is chosen by measurement. "
-           "`agreement` is Jaccard overlap with the rule-derived categories — a sanity "
+           "`agreement` is Jaccard overlap with the rule-derived categories: a sanity "
            "signal, not ground truth, since beating the rules is the point. `gold_F1` "
            "is scored against hand-labelled tools and is the number that matters.", "",
            "| Model | JSON ok | Enum ok | Agreement | Gold F1 | $/100 tools | Median latency |",
            "| --- | ---: | ---: | ---: | ---: | ---: | ---: |"]
     for model, r in results.items():
-        f1 = f"{r['gold_f1']:.2f}" if r["gold_f1"] is not None else "—"
+        f1 = f"{r['gold_f1']:.2f}" if r["gold_f1"] is not None else "n/a"
         out.append(f"| `{model}` | {r['json_ok']:.0%} | {r['enum_ok']:.0%} | "
                    f"{r['agreement']:.2f} | {f1} | ${r['cost_per_100']:.3f} | "
                    f"{r['median_latency']:.1f}s |")
@@ -179,7 +179,7 @@ def main() -> None:
                 "so multiply the per-100 cost by roughly 17 for a full pass.", ""]
     for model, r in results.items():
         if r["failures"]:
-            out += [f"### Failures — `{model}` ({r['n_failures']})", ""]
+            out += [f"### Failures in `{model}` ({r['n_failures']})", ""]
             out += [f"- {f}" for f in r["failures"]]
             out.append("")
 

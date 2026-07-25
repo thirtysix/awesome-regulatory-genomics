@@ -27,14 +27,17 @@ import re
 from collections import Counter
 
 from jsonio import read_json, write_json
-from config import (DOMAIN_TOPICS, EXCLUDE_TEXT_PATTERNS, KEEP_TEXT_PATTERNS,
-                    RAW, STRONG_OPERATIONS, WEAK_OPERATIONS)
+from config import (DOMAIN_TOPICS, EXCLUDE_TEXT_PATTERNS, HARD_EXCLUDE_PATTERNS,
+                    KEEP_TEXT_PATTERNS, RAW, STRONG_OPERATIONS,
+                    STRONG_TEXT_PATTERNS, WEAK_OPERATIONS)
 
 SWEEP = RAW / "biotools_sweep.json.gz"
 SELECTED = RAW / "selected.json.gz"
 REJECTED = RAW / "rejected.json"
 
 KEEP_RE = [re.compile(p, re.I) for p in KEEP_TEXT_PATTERNS]
+STRONG_RE = [re.compile(p, re.I) for p in STRONG_TEXT_PATTERNS]
+HARD_RE = [re.compile(p, re.I) for p in HARD_EXCLUDE_PATTERNS]
 EXCLUDE_RE = [re.compile(p, re.I) for p in EXCLUDE_TEXT_PATTERNS]
 
 
@@ -57,10 +60,23 @@ def classify(tool: dict) -> tuple[str | None, str]:
     blob = text_blob(tool)
     ops = operations(tool)
 
-    # Hard exclusions win over everything, including a STRONG operation.
-    # bio.tools mis-assigns strong operations too - KEGG carries "Gene
-    # regulatory network analysis", Geneious carries "Sequence motif discovery"
-    # - so trusting the ontology here would readmit whole neighbouring fields.
+    # A hard exclusion names another field's core object and beats everything.
+    for rx in HARD_RE:
+        if rx.search(blob):
+            return None, f"hard-excluded:{rx.pattern[:30]}"
+
+    # An unambiguous domain phrase settles it, and beats the soft exclusions: those
+    # name neighbouring FIELDS, and a record that plainly says what it does in
+    # this field is not made out of scope by mentioning a phylogenetic tree or
+    # a proteomics dataset alongside.
+    for rx in STRONG_RE:
+        if rx.search(blob):
+            return "core", f"text:{rx.pattern[:36]}"
+
+    # Otherwise hard exclusions win over everything, including a STRONG
+    # operation. bio.tools mis-assigns those too - KEGG carries "Gene
+    # regulatory network analysis", Geneious "Sequence motif discovery" - so
+    # trusting the ontology here readmits whole neighbouring fields.
     for rx in EXCLUDE_RE:
         if rx.search(blob):
             return None, f"excluded:{rx.pattern[:32]}"

@@ -41,8 +41,15 @@ def plural(n: int, word: str) -> str:
     return f"{n} {word}" if n == 1 else f"{n} {word}s"
 
 
-def tool_line(t: dict) -> str:
-    """One README bullet: name, links, one-line description, signals."""
+def tool_line(t: dict) -> list[str]:
+    """One README entry, as two lines.
+
+    GitHub renders a README in a fixed-width column that a repository cannot
+    widen, so the layout has to earn its space rather than ask for more.
+    Putting the links on their own indented line keeps the description on a
+    single unbroken line at typical widths, and gives the eye a predictable
+    place to find "code / bio.tools / paper" for every entry.
+    """
     label = t["name"]
     href = t["homepage"] or t["repo_url"] or t["biotools_url"]
     head = f"**[{label}]({href})**" if href else f"**{label}**"
@@ -61,20 +68,20 @@ def tool_line(t: dict) -> str:
 
     signals = []
     if t.get("repo_stars"):
-        signals.append(f"★{fmt_int(t['repo_stars'])}")
+        signals.append(f"{fmt_int(t['repo_stars'])} stars")
     if t.get("citations"):
         signals.append(f"{fmt_int(t['citations'])} cites")
     if t.get("repo_archived"):
         signals.append("archived")
 
-    desc = t.get("featured") or t.get("description") or ""
-    desc = desc.rstrip(".")
-    tail = ""
-    if links:
-        tail += " — " + " · ".join(links)
+    desc = (t.get("featured") or t.get("description") or "").rstrip(".")
+    rows = [f"- {head}: {desc}"]
+    meta = " · ".join(links)
     if signals:
-        tail += f" `{' | '.join(signals)}`"
-    return f"- {head} — {desc}{tail}"
+        meta += (" · " if meta else "") + f"`{' | '.join(signals)}`"
+    if meta:
+        rows.append(f"  <sub>{meta}</sub>")
+    return rows
 
 
 def render_readme(catalog: dict) -> str:
@@ -103,14 +110,14 @@ def render_readme(catalog: dict) -> str:
     A("A catalog of tools, databases and methods for **transcription-factor binding, "
       "sequence motifs, regulatory elements, chromatin and gene-regulatory networks**.")
     A("")
-    A(f"**[Browse and search all {total} tools →]({SITE})** — filter by category, "
+    A(f"**[Browse and search all {total} tools →]({SITE})**. Filter by category, "
       "tool type, language, licence, activity and citations.")
     A("")
     A("This list is *generated and then curated*. A reproducible pipeline harvests "
       "[bio.tools](https://bio.tools), resolves source repositories, and pulls citation "
       "counts and repository activity; a hand-written overlay adds tools bio.tools does "
       "not index and promotes the entries below. Everything is rebuildable with "
-      "`make all` — see [How this list is built](#how-this-list-is-built).")
+      "`make all`; see [How this list is built](#how-this-list-is-built).")
     A("")
 
     A("## Contents")
@@ -118,7 +125,7 @@ def render_readme(catalog: dict) -> str:
     for key, label, _ in CATEGORIES:
         n = len(by_cat[key])
         if n:
-            A(f"- [{label}](#{slug(label)}) — {plural(n, 'tool')}")
+            A(f"- [{label}](#{slug(label)}), {plural(n, 'tool')}")
     A("- [How this list is built](#how-this-list-is-built)")
     A("- [Coverage and known gaps](#coverage-and-known-gaps)")
     A("- [Contributing](#contributing)")
@@ -136,7 +143,7 @@ def render_readme(catalog: dict) -> str:
         A("")
         if picks:
             for t in picks:
-                A(tool_line(t))
+                out.extend(tool_line(t))
             A("")
         rest = len(entries) - len(picks)
         if rest > 0:
@@ -164,15 +171,15 @@ def render_readme(catalog: dict) -> str:
       "([`docs/llm-stage.md`](docs/llm-stage.md)) that writes to a review file "
       "merged below the hand-written overlay; `make build-strict` ignores it "
       "entirely and rebuilds on rules alone. Removing a record needs two different "
-      "models to agree independently, and never overrides a hand-vetted entry — a "
-      "guard added after both models judged MAST out of scope on its "
-      "protein-flavoured bio.tools description.")
+      "models to agree independently, and never overrides a hand-vetted entry. "
+      "That last guard was added after both models judged MAST out of scope on "
+      "its protein-flavoured bio.tools description.")
     A("")
     A("Two design decisions are worth stating, because they are where most tool "
       "tables go wrong:")
     A("")
     A("**Recall and precision are separated.** bio.tools' `operation=` parameter is a "
-      "fuzzy text match, not an ontology lookup — an unquoted query for `cis-regulatory` "
+      "fuzzy text match, not an ontology lookup. An unquoted query for `cis-regulatory` "
       "returns 3,000 records matching \"cis\" *or* \"regulatory\". So the sweep is "
       "deliberately over-broad and precision is restored afterwards by filtering on the "
       "annotations a record actually carries.")
@@ -180,7 +187,7 @@ def render_readme(catalog: dict) -> str:
     A("**EDAM annotations are not trusted on their own.** They are frequently wrong: "
       "FIMO is filed under *Genotyping*, HOCOMOCO under *Data handling*, MACS under "
       "*Modelling and simulation*, and the operation *Peak detection* is used almost "
-      "exclusively by mass-spectrometry tools. Operations are therefore tiered — "
+      "exclusively by mass-spectrometry tools. Operations are therefore tiered: "
       "specific terms admit a record on their own, ambiguous ones need a corroborating "
       "topic or text signal, and four terms are queried but never used to admit anything. "
       "A text-match escape hatch recovers in-domain tools with no usable annotation at "
@@ -207,8 +214,8 @@ def render_readme(catalog: dict) -> str:
       "under-represented there; those entries come from `curation/seeds.yaml` and are "
       "necessarily incomplete.")
     A("- Citation counts are the OpenAlex `cited_by_count` of a tool's **primary** "
-      "publication only. Summing every linked publication — what the original "
-      "dissertation script did — is badly wrong here: bio.tools attaches a suite's "
+      "publication only. Summing every linked publication, which is what the "
+      "original dissertation script did, is badly wrong here: bio.tools attaches a suite's "
       "paper to each of its members, so the EMBOSS paper is linked to dozens of "
       "EMBOSS commands and the Bioconductor paper to 23 packages in this sweep, "
       "handing each member the whole suite's count. Where a primary publication is "
@@ -216,9 +223,9 @@ def render_readme(catalog: dict) -> str:
       "member's own impact is genuinely unknown. Treat what remains as a rough "
       "popularity signal, not a quality measure.")
     A("- Categories are assigned by rule, then corrected by hand where wrong. The "
-      "rules catch the systematic errors — bio.tools files orthology tools under "
+      "rules catch the systematic errors (bio.tools files orthology tools under "
       "*Phylogenetic footprinting* and mass-spectrometry tools under *Peak "
-      "detection* — but a tail of individual mis-categorisations remains. Please "
+      "detection*), but a tail of individual mis-categorisations remains. Please "
       "open an issue, or see [`docs/llm-stage.md`](docs/llm-stage.md) for the "
       "optional classifier that targets exactly this tail.")
     A("- A tool being listed is not an endorsement, and the absence of a repository "
@@ -231,7 +238,7 @@ def render_readme(catalog: dict) -> str:
 
     A("## Contributing")
     A("")
-    A("Additions, corrections and re-categorisations are welcome — see "
+    A("Additions, corrections and re-categorisations are welcome; see "
       "[CONTRIBUTING.md](CONTRIBUTING.md). Edit "
       "[`curation/seeds.yaml`](curation/seeds.yaml) or "
       "[`curation/overlay.yaml`](curation/overlay.yaml); never edit `README.md` or "
@@ -260,7 +267,7 @@ HTML = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Awesome Regulatory Genomics — catalog</title>
+<title>Awesome Regulatory Genomics: catalog</title>
 <meta name="description" content="Searchable catalog of __COUNT__ tools for transcription-factor binding, sequence motifs, regulatory elements, chromatin and gene-regulatory networks.">
 <style>
 :root{
@@ -356,8 +363,10 @@ footer{color:var(--muted);font-size:12.5px;margin-top:22px;line-height:1.7}
   <footer>
     Data from <a href="https://bio.tools">bio.tools</a> (CC BY 4.0),
     <a href="https://openalex.org">OpenAlex</a> (CC0) and the GitHub API, plus hand-curated
-    entries. Citation counts sum every publication linked to a tool — a rough popularity
-    signal, not a quality measure. Entries marked <span class="cat seed">curated</span>
+    entries. Citation counts come from each tool's primary publication only: a rough
+    popularity signal, not a quality measure. Where that publication is shared by three
+    or more tools it is a suite paper, and no count is shown.
+    Entries marked <span class="cat seed">curated</span>
     are absent from bio.tools and were added by hand.
     <br>Corrections welcome: <a href="https://github.com/__REPO__/issues">open an issue</a>.
   </footer>

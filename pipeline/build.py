@@ -149,6 +149,16 @@ def primary_identifier(tool: dict) -> str:
     return ""
 
 
+def norm_name(name: str) -> str:
+    """Loose name key, so a seed does not duplicate a bio.tools record.
+
+    bio.tools spells the same tool several ways - "Cluster Buster" vs
+    "Cluster-Buster", "SCENIC+" vs "scenicplus" - and an exact lowercase match
+    lets both into the catalog.
+    """
+    return re.sub(r"[^a-z0-9]", "", name.lower())
+
+
 def repo_url(tool: dict) -> str:
     if tool.get("_repo_slug"):
         return f"https://github.com/{tool['_repo_slug']}"
@@ -292,11 +302,11 @@ def main() -> None:
         if bid in llm_out_of_scope and bid not in protected:
             continue
         rows.append(from_biotools(tool, cites, shared))
-        seen_names[tool["name"].lower()] = bid
+        seen_names[norm_name(tool["name"])] = bid
 
     seeded = 0
     for seed in seeds.get("tools") or []:
-        if seed["name"].lower() in seen_names:
+        if norm_name(seed["name"]) in seen_names:
             continue          # bio.tools already has it; the harvested record wins
         rows.append(from_seed(seed))
         seeded += 1
