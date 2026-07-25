@@ -13998,5 +13998,19 @@
   "pushed_at": "2025-03-19",
   "topics": [],
   "description": null
+ },
+ "Prayforhanluo/HiCHap_master": {
+  "status": "ok",
+  "slug": "Prayforhanluo/HiCHap_master",
+  "stars": 17,
+  "forks": 3,
+  "open_issues": 1,
+  "archived": false,
+  "language": "Python",
+  "license": "GPL-3.0",
+  "created_at": "2019-03-13",
+  "pushed_at": "2021-12-09",
+  "topics": [],
+  "description": "An integrated package to process diploid Hi-C data"
  }
 }

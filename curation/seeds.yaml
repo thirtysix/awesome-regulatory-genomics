@@ -220,6 +220,13 @@ tools:
     tags: [meme-suite]
     doi: 10.1093/bioinformatics/btr064
 
+  - name: MAST
+    url: https://meme-suite.org/meme/tools/mast
+    description: Motif Alignment and Search Tool; ranks sequences by matches to a group of known motifs
+    categories: [motif-scanning]
+    tags: [meme-suite]
+    doi: 10.1093/bioinformatics/14.1.48
+
   - name: CentriMo
     url: https://meme-suite.org/meme/tools/centrimo
     description: Local motif enrichment analysis detecting central enrichment of motifs in peak regions

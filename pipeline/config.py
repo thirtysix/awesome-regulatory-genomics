@@ -88,7 +88,6 @@ QUERY_TOPICS = [
 # Prefer this over duplicating a tool in seeds.yaml: the metadata, publication
 # and citation count still come from upstream and stay fresh.
 SEED_BIOTOOLS_IDS = [
-    "mast",           # MEME Suite motif scanner
     "aracne",         # network inference
     "atsnp",          # variant effect on TF binding
     "HaploReg",       # regulatory annotation of variants
@@ -161,6 +160,13 @@ SEED_BIOTOOLS_IDS = [
     "varadb",
     "w-chipeaks",
     "svmil2",
+
+    # Dual-purpose or boilerplate-burdened records confirmed by a second
+    # adjudication pass against the tightened rules.
+    "x2k",            # upstream TF networks from ChIP-seq + PWMs; also does
+                      # kinase enrichment, which the hard exclusions catch.
+                      # Its sibling record x2k_web is admitted on text, so
+                      # excluding this one made the catalog self-inconsistent.
 ]
 
 # Free-text queries, for tools whose EDAM annotation is wrong or absent.

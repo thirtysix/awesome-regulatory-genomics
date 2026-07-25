@@ -172,8 +172,10 @@ def render_readme(catalog: dict) -> str:
       "merged below the hand-written overlay; `make build-strict` ignores it "
       "entirely and rebuilds on rules alone. Removing a record needs two different "
       "models to agree independently, and never overrides a hand-vetted entry. "
-      "That last guard was added after both models judged MAST out of scope on "
-      "its protein-flavoured bio.tools description.")
+      "Additions get the mirror check from a third model "
+      "([`docs/addition-review.md`](docs/addition-review.md)), which is how a "
+      "name collision between the MEME Suite's MAST and the unrelated "
+      "single-cell package of the same name was caught.")
     A("")
     A("Two design decisions are worth stating, because they are where most tool "
       "tables go wrong:")

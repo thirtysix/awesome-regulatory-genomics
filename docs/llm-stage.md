@@ -113,11 +113,25 @@ flagged as out of scope and confirms only where the two agree independently:
 `build.py` requires the explicit `--apply-scope` flag, and hand-vetted records
 (anything `featured`, or listed in `SEED_BIOTOOLS_IDS`) are never dropped.
 
-That last guard was not hypothetical. Both models judged **MAST** out of scope
-on its protein-flavoured bio.tools description; it is a MEME Suite motif
-scanner, and the coverage audit caught the regression as an 88/89. Two agreeing
-models are better evidence than one, but they are still not authoritative over
-a human decision.
+The guard is worth having, but the case that originally motivated it turned out
+to be an error of mine, and the correction is instructive.
+
+Both models judged **MAST** out of scope. I overrode them, believing bio.tools'
+`mast` record was the MEME Suite motif scanner and that its description was
+merely misleading. It is not: `mast` is the Bioconductor single-cell
+differential-expression package (Finak et al. 2015). The models were right, the
+override was wrong, and because the coverage benchmark matched on the bare name
+it happily counted the wrong tool as a pass. The MEME Suite MAST is genuinely
+absent from bio.tools and now comes from `seeds.yaml`, with the benchmark entry
+annotated so the collision cannot recur silently.
+
+Two lessons, neither the one originally recorded here. Protecting hand-vetted
+records from automated removal is still right, because a curator can know things
+a description does not say. But protection is only as good as the curation, and
+a name collision between two well-known tools is exactly the kind of thing a
+human skims past. That is what
+[`pipeline/verify_additions.py`](../pipeline/verify_additions.py) exists to
+catch, and it is what caught this.
 
 ## The cascade
 

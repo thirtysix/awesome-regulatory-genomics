@@ -274,7 +274,10 @@ def main() -> None:
     if PROPOSALS.exists() and not args.no_llm:
         blob = yaml.safe_load(PROPOSALS.read_text()) or {}
         if args.apply_scope:
-            llm_out_of_scope = blob.get("out_of_scope_confirmed") or {}
+            # Two independent out-of-scope votes, from whichever pass produced
+            # them. Both sources require agreement between different models.
+            llm_out_of_scope = dict(blob.get("out_of_scope_confirmed") or {})
+            llm_out_of_scope.update(blob.get("majority_out_of_scope") or {})
         for key, entry in (blob.get("categories") or {}).items():
             if entry.get("in_scope") and entry.get("confidence") in ("high", "medium"):
                 proposed.setdefault(key, {})["categories"] = entry["categories"]

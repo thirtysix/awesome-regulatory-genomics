@@ -28,7 +28,11 @@ motif scanning and enrichment:
   - {name: FIMO}
   - {name: CentriMo}
   - {name: AME}
-  - {name: MAST}
+  # bio.tools' `mast` record is the Bioconductor single-cell DE package,
+  # not this one. The MEME Suite MAST is absent from bio.tools and comes
+  # from seeds.yaml; matching on the bare name silently passed on the
+  # wrong tool before.
+  - {name: MAST, aka: [MEME MAST]}
   - {name: MOODS}
   - {name: PWMScan}
   - {name: Cluster-Buster}

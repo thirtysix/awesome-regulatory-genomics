@@ -1,13 +1,13 @@
 {
  "meta": {
   "generated": "2026-07-26",
-  "count": 1869,
-  "from_biotools": 1834,
-  "curated_seeds": 35,
+  "count": 1817,
+  "from_biotools": 1781,
+  "curated_seeds": 36,
   "featured": 19,
-  "with_repo": 921,
-  "llm_assisted": 1595,
-  "llm_scope_dropped": 96
+  "with_repo": 906,
+  "llm_assisted": 1583,
+  "llm_scope_dropped": 154
  },
  "tools": [
   {
@@ -1873,11 +1873,11 @@
    ],
    "tier": "core",
    "homepage": "http://bioconductor.org/packages/release/bioc/html/annotatr.html",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
+   "repo_url": "https://github.com/rcavalcante/annotatr",
+   "repo_stars": 27,
+   "repo_pushed": "2025-10-14",
+   "repo_archived": false,
+   "repo_language": "R",
    "repo_license": "",
    "tool_type": [
     "Command-line tool",
@@ -3359,56 +3359,6 @@
    ],
    "featured": "",
    "primary_category": "tfbs-prediction"
-  },
-  {
-   "id": "exomepeak",
-   "name": "exomePeak",
-   "description": "The package is developed for the analysis of affinity-based epitranscriptome shortgun sequencing data from MeRIP-seq (maA-seq)",
-   "categories": [
-    "peak-calling"
-   ],
-   "tier": "core",
-   "homepage": "http://bioconductor.org/packages/release/bioc/html/exomePeak.html",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Command-line tool",
-    "Library"
-   ],
-   "topics": [
-    "Exome sequencing"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "GPL-2.0",
-   "maturity": "",
-   "cost": "",
-   "citations": 390,
-   "citation_note": "",
-   "year": "2014",
-   "publication": "pmid:24979058",
-   "biotools_id": "exomepeak",
-   "biotools_url": "https://bio.tools/exomepeak",
-   "last_update": "2019-01-10",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Peak calling"
-   ],
-   "_select_reason": "text:\\bepigenom(e|ic)s?\\b",
-   "_identifiers": [
-    "pmid:24979058"
-   ],
-   "_registries": {
-    "bioconductor": "http://bioconductor.org/packages/release/bioc/html/exomePeak.html"
-   },
-   "featured": "",
-   "primary_category": "peak-calling"
   },
   {
    "id": "plantpan",
@@ -5796,55 +5746,6 @@
    "_registries": {},
    "featured": "",
    "primary_category": "tfbs-prediction"
-  },
-  {
-   "id": "fingerprintscan",
-   "name": "FingerPRINTScan (EBI)",
-   "description": "Scan a protein sequence against PRINTS to identify the closest matching PRINTS sequence motifs/fingerprints.",
-   "categories": [
-    "motif-scanning"
-   ],
-   "tier": "core",
-   "homepage": "http://www.ebi.ac.uk/Tools/pfa/fingerprintscan/",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Web application",
-    "Web service"
-   ],
-   "topics": [
-    "Gene and protein families",
-    "Sequence sites, features and motifs"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "Legacy",
-   "cost": "",
-   "citations": 225,
-   "citation_note": "",
-   "year": "2000",
-   "publication": "pmid:10592232",
-   "biotools_id": "fingerprintscan",
-   "biotools_url": "https://bio.tools/fingerprintscan",
-   "last_update": "2024-11-24",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Protein feature detection",
-    "Sequence motif recognition"
-   ],
-   "_select_reason": "text:\\bsequence logo|\\bsequence motifs?\\b",
-   "_identifiers": [
-    "pmid:10592232",
-    "pmid:35412617"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "motif-scanning"
   },
   {
    "id": "flyfactorsurvey",
@@ -9566,59 +9467,6 @@
    "primary_category": "motif-comparison"
   },
   {
-   "id": "moonlightr",
-   "name": "MoonlightR",
-   "description": "The understanding of cancer mechanism requires the identification of genes playing a role in the development of the pathology and the characterization of their role",
-   "categories": [
-    "grn-inference"
-   ],
-   "tier": "core",
-   "homepage": "http://bioconductor.org/packages/release/bioc/html/MoonlightR.html",
-   "repo_url": "https://github.com/torongs82/Moonlight",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Command-line tool",
-    "Library"
-   ],
-   "topics": [
-    "Oncology",
-    "Gene expression",
-    "Gene regulation"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "GPL-3.0",
-   "maturity": "",
-   "cost": "",
-   "citations": 138,
-   "citation_note": "",
-   "year": "2017",
-   "publication": "pmid:28456671",
-   "biotools_id": "moonlightr",
-   "biotools_url": "https://bio.tools/moonlightr",
-   "last_update": "2019-01-15",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Gene expression analysis",
-    "Gene-set enrichment analysis"
-   ],
-   "_select_reason": "text:\\bgene regulatory network|\\bregulato",
-   "_identifiers": [
-    "pmid:28456671"
-   ],
-   "_registries": {
-    "bioconductor": "http://bioconductor.org/packages/release/bioc/html/MoonlightR.html"
-   },
-   "featured": "",
-   "primary_category": "grn-inference"
-  },
-  {
    "id": "promh",
    "name": "PromH",
    "description": "Predicts TSS, TATA boxes, and TFBS in promoter regions using orthologous sequence pairs",
@@ -11575,11 +11423,11 @@
    ],
    "tier": "core",
    "homepage": "https://bioconductor.org/packages/release/bioc/html/MPRAnalyze.html",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
+   "repo_url": "https://github.com/YosefLab/MPRAnalyze",
+   "repo_stars": 13,
+   "repo_pushed": "2020-11-12",
+   "repo_archived": false,
+   "repo_language": "R",
    "repo_license": "",
    "tool_type": [
     "Command-line tool"
@@ -12451,51 +12299,6 @@
    "primary_category": "grn-inference"
   },
   {
-   "id": "pombase_motif_search",
-   "name": "PomBase Motif search",
-   "description": "Search PomBase protein set for a given motif.",
-   "categories": [
-    "motif-scanning"
-   ],
-   "tier": "core",
-   "homepage": "https://www.pombase.org/motif_search",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Web application"
-   ],
-   "topics": [
-    "Sequence sites, features and motifs"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 106,
-   "citation_note": "",
-   "year": "2015",
-   "publication": "pmid:25361970",
-   "biotools_id": "pombase_motif_search",
-   "biotools_url": "https://bio.tools/pombase_motif_search",
-   "last_update": "2024-11-24",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Sequence motif recognition"
-   ],
-   "_select_reason": "text:\\bmotif (discovery|enrichment|scan|s",
-   "_identifiers": [
-    "pmid:25361970"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "motif-scanning"
-  },
-  {
    "id": "refTSS",
    "name": "refTSS",
    "description": "Provides annotated reference data of transcriptional start sites for human and mouse",
@@ -12717,59 +12520,6 @@
    ],
    "featured": "",
    "primary_category": "tfbs-prediction"
-  },
-  {
-   "id": "oRNAment",
-   "name": "oRNAment",
-   "description": "A database of putative RNA binding protein target sites in the transcriptomes of model species",
-   "categories": [
-    "motif-scanning",
-    "motif-databases"
-   ],
-   "tier": "core",
-   "homepage": "http://rnabiology.ircm.qc.ca/oRNAment/",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Database portal"
-   ],
-   "topics": [
-    "Gene transcripts",
-    "Transcriptomics",
-    "Functional, regulatory and non-coding RNA",
-    "Protein interactions",
-    "Endocrinology and metabolism"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 104,
-   "citation_note": "",
-   "year": "2020",
-   "publication": "pmid:31724725",
-   "biotools_id": "oRNAment",
-   "biotools_url": "https://bio.tools/oRNAment",
-   "last_update": "2021-01-04",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Filtering",
-    "In vitro selection",
-    "RNA binding site prediction",
-    "Sequence motif recognition"
-   ],
-   "_select_reason": "text:\\bmotif (discovery|enrichment|scan|s",
-   "_identifiers": [
-    "pmid:31724725"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "motif-scanning"
   },
   {
    "id": "conreal",
@@ -13319,56 +13069,6 @@
    "_llm_applied": [
     "description"
    ],
-   "featured": "",
-   "primary_category": "peak-calling"
-  },
-  {
-   "id": "qdrip",
-   "name": "qDRIP",
-   "description": "a method to quantitatively assess RNA-DNA hybrid formation genome-wide",
-   "categories": [
-    "peak-calling",
-    "peak-annotation"
-   ],
-   "tier": "core",
-   "homepage": "https://github.com/cimprichlab/crossley_et_al_2019",
-   "repo_url": "https://github.com/cimprichlab/crossley_et_al_2019",
-   "repo_stars": 0,
-   "repo_pushed": "2019-11-01",
-   "repo_archived": false,
-   "repo_language": "Jupyter Notebook",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [
-    "RNA",
-    "Gene expression",
-    "DNA",
-    "Physiology",
-    "ChIP-seq"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 99,
-   "citation_note": "",
-   "year": "2020",
-   "publication": "pmid:32544226",
-   "biotools_id": "qdrip",
-   "biotools_url": "https://bio.tools/qdrip",
-   "last_update": "2021-03-19",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Peak calling",
-    "Quantification",
-    "Standardisation and normalisation"
-   ],
-   "_select_reason": "text:\\bpeak[- ]call(er|ing)?\\b|\\bcalls? p",
-   "_identifiers": [
-    "pmid:32544226"
-   ],
-   "_registries": {},
    "featured": "",
    "primary_category": "peak-calling"
   },
@@ -14600,62 +14300,6 @@
    ],
    "featured": "",
    "primary_category": "tfbs-prediction"
-  },
-  {
-   "id": "escdb",
-   "name": "ESCDb",
-   "description": "Aggregates human and mouse embryonic stem cell datasets for expression and protein analysis",
-   "categories": [
-    "motif-databases",
-    "tfbs-prediction"
-   ],
-   "tier": "core",
-   "homepage": "http://biit.cs.ut.ee/escd",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Database portal"
-   ],
-   "topics": [
-    "Regenerative medicine",
-    "Cell biology",
-    "Transcription factors and regulatory sites",
-    "Immunoprecipitation experiment"
-   ],
-   "languages": [],
-   "license": "Freeware",
-   "maturity": "",
-   "cost": "Free of charge",
-   "citations": 89,
-   "citation_note": "",
-   "year": "2010",
-   "publication": "pmid:20505756",
-   "biotools_id": "escdb",
-   "biotools_url": "https://bio.tools/escdb",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Aggregation",
-    "Database search",
-    "Gene expression clustering",
-    "Gene expression profiling",
-    "Protein function analysis"
-   ],
-   "_select_reason": "text:\\btranscription[- ]factor",
-   "_identifiers": [
-    "pmid:20505756"
-   ],
-   "_registries": {},
-   "_llm_applied": [
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "motif-databases"
   },
   {
    "id": "ocean-c",
@@ -16217,57 +15861,6 @@
    "_registries": {},
    "featured": "",
    "primary_category": "regulatory-elements"
-  },
-  {
-   "id": "slimfinder",
-   "name": "SLiMFinder",
-   "description": "De novo motif discovery tool for short linear motifs (SLiMs)",
-   "categories": [
-    "motif-discovery"
-   ],
-   "tier": "core",
-   "homepage": "http://www.slimsuite.unsw.edu.au/servers/slimfinder.php",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Web application"
-   ],
-   "topics": [
-    "Sequence analysis",
-    "Sequence sites, features and motifs",
-    "Sequencing",
-    "Protein sites, features and motifs",
-    "Protein structural motifs and surfaces"
-   ],
-   "languages": [],
-   "license": "Unlicense",
-   "maturity": "Emerging",
-   "cost": "Free of charge",
-   "citations": 76,
-   "citation_note": "",
-   "year": "2010",
-   "publication": "pmid:20497999",
-   "biotools_id": "slimfinder",
-   "biotools_url": "https://bio.tools/slimfinder",
-   "last_update": "2024-11-24",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Ab initio structure prediction",
-    "Sequence motif discovery",
-    "de Novo sequencing"
-   ],
-   "_select_reason": "text:\\bmotif (discovery|enrichment|scan|s",
-   "_identifiers": [
-    "pmid:20497999"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "motif-discovery"
   },
   {
    "id": "webmotifs",
@@ -17998,55 +17591,6 @@
    "primary_category": "motif-databases"
   },
   {
-   "id": "Fertility-GRU",
-   "name": "Fertility-GRU",
-   "description": "Identifying Fertility-Related Proteins by Incorporating Deep-Gated Recurrent Units and Original Position-Specific Scoring Matrix Profiles | Identifying fertility-related proteins by incorporating GRU and PSSM profiles",
-   "categories": [
-    "tfbs-prediction"
-   ],
-   "tier": "core",
-   "homepage": "https://github.com/khanhlee/fertility-gru",
-   "repo_url": "https://github.com/khanhlee/fertility-gru",
-   "repo_stars": 1,
-   "repo_pushed": "2020-02-12",
-   "repo_archived": false,
-   "repo_language": "Python",
-   "repo_license": "",
-   "tool_type": [
-    "Command-line tool"
-   ],
-   "topics": [
-    "Machine learning",
-    "Proteomics",
-    "Transcription factors and regulatory sites"
-   ],
-   "languages": [
-    "Python"
-   ],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 67,
-   "citation_note": "",
-   "year": "2019",
-   "publication": "pmid:31362508",
-   "biotools_id": "Fertility-GRU",
-   "biotools_url": "https://bio.tools/Fertility-GRU",
-   "last_update": "2020-12-28",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "iTRAQ"
-   ],
-   "_select_reason": "text:\\bposition (weight|frequency|specifi",
-   "_identifiers": [
-    "pmid:31362508"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "tfbs-prediction"
-  },
-  {
    "id": "probis-ligands",
    "name": "ProBiS-ligands",
    "description": "ProBiS is a web server for predicting ligands by similarity in binding sites.",
@@ -18651,55 +18195,6 @@
    "primary_category": "motif-databases"
   },
   {
-   "id": "rnamotifscanx",
-   "name": "RNAMotifScanX",
-   "description": "RNAMotifScanX is a motif search tool based on a base-interaction graph alignment algorithm.",
-   "categories": [
-    "motif-scanning"
-   ],
-   "tier": "core",
-   "homepage": "http://genome.ucf.edu/RNAMotifScanX/",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Command-line tool"
-   ],
-   "topics": [
-    "RNA",
-    "Nucleic acid sites, features and motifs",
-    "Nucleic acid structure analysis"
-   ],
-   "languages": [
-    "C++"
-   ],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 62,
-   "citation_note": "",
-   "year": "",
-   "publication": "pmid:25595715",
-   "biotools_id": "rnamotifscanx",
-   "biotools_url": "https://bio.tools/rnamotifscanx",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Sequence motif recognition"
-   ],
-   "_select_reason": "text:\\bmotif (discovery|enrichment|scan|s",
-   "_identifiers": [
-    "pmid:25595715"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "motif-scanning"
-  },
-  {
    "id": "diana-mirgen",
    "name": "DIANA-miRGen",
    "description": "Provides cell-line-specific miRNA transcription start sites and transcription factor binding maps to study miRNA regulation",
@@ -19074,58 +18569,6 @@
    "primary_category": "peak-calling"
   },
   {
-   "id": "vgo",
-   "name": "VGO",
-   "description": "Viral Genome Organizer is a genome browser that can be used to display information about a genome, its genes, ORFs and start/stop codons",
-   "categories": [
-    "motif-scanning"
-   ],
-   "tier": "core",
-   "homepage": "http://athena.bioc.uvic.ca/virology-ca-tools/vgo/",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Desktop application"
-   ],
-   "topics": [
-    "Sequence analysis",
-    "DNA"
-   ],
-   "languages": [
-    "JavaScript",
-    "Java"
-   ],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 60,
-   "citation_note": "",
-   "year": "2005",
-   "publication": "pmid:15608205",
-   "biotools_id": "vgo",
-   "biotools_url": "https://bio.tools/vgo",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Database search",
-    "Genome visualisation",
-    "Sequence motif recognition"
-   ],
-   "_select_reason": "text:\\bmotif (discovery|enrichment|scan|s",
-   "_identifiers": [
-    "pmid:15608205",
-    "doi:10.1016/S0168-1702(00)00210-0"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "motif-scanning"
-  },
-  {
    "id": "gps",
    "name": "GPS",
    "description": "Detects peaks in ChIP-seq data with high spatial resolution",
@@ -19288,66 +18731,6 @@
    "_registries": {},
    "featured": "",
    "primary_category": "regulatory-elements"
-  },
-  {
-   "id": "hlungdb",
-   "name": "HLungDB",
-   "description": "Integrates lung cancer-related genes, proteins, miRNAs and clinical information",
-   "categories": [
-    "motif-databases",
-    "tfbs-prediction",
-    "chip-resources",
-    "grn-inference",
-    "nucleosome-chromatin"
-   ],
-   "tier": "core",
-   "homepage": "http://www.megabionet.org/bio/hlung/",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Database portal"
-   ],
-   "topics": [
-    "Functional, regulatory and non-coding RNA",
-    "Epigenetics",
-    "Transcription factors and regulatory sites",
-    "Oncology",
-    "Gene expression"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 58,
-   "citation_note": "",
-   "year": "",
-   "publication": "pmid:19900972",
-   "biotools_id": "hlungdb",
-   "biotools_url": "https://bio.tools/hlungdb",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Gene expression profiling",
-    "Gene regulatory network analysis",
-    "Over-representation analysis",
-    "Pathway or network prediction",
-    "Text mining"
-   ],
-   "_select_reason": "text:\\btranscription[- ]factor",
-   "_identifiers": [
-    "pmid:19900972"
-   ],
-   "_registries": {},
-   "_llm_applied": [
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "motif-databases"
   },
   {
    "id": "janggu",
@@ -20432,61 +19815,6 @@
    "primary_category": "tfbs-prediction"
   },
   {
-   "id": "iProDNA-CapsNet",
-   "name": "iProDNA-CapsNet",
-   "description": "Identifies protein-DNA binding residues using capsule neural networks",
-   "categories": [
-    "tfbs-prediction",
-    "peak-calling"
-   ],
-   "tier": "core",
-   "homepage": "https://github.com/ngphubinh/iProDNA-CapsNet",
-   "repo_url": "https://github.com/ngphubinh/iProDNA-CapsNet",
-   "repo_stars": 0,
-   "repo_pushed": "2019-08-24",
-   "repo_archived": false,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Command-line tool"
-   ],
-   "topics": [
-    "Protein interactions",
-    "Machine learning",
-    "ChIP-seq",
-    "Transcription factors and regulatory sites",
-    "Statistics and probability"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 55,
-   "citation_note": "",
-   "year": "2019",
-   "publication": "pmid:31881828",
-   "biotools_id": "iProDNA-CapsNet",
-   "biotools_url": "https://bio.tools/iProDNA-CapsNet",
-   "last_update": "2020-12-14",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "DNA-binding protein prediction",
-    "Protein feature detection",
-    "Side chain modelling"
-   ],
-   "_select_reason": "text:\\bposition (weight|frequency|specifi",
-   "_identifiers": [
-    "pmid:31881828"
-   ],
-   "_registries": {},
-   "_llm_applied": [
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "tfbs-prediction"
-  },
-  {
    "id": "key_pathway_miner",
    "name": "Key Pathway Miner",
    "description": "Extracts maximal connected sub-networks containing differentially expressed genes",
@@ -20929,64 +20257,6 @@
    ],
    "featured": "",
    "primary_category": "peak-calling"
-  },
-  {
-   "id": "protedna",
-   "name": "ProteDNA",
-   "description": "Identifies sequence-specific binding residues in transcription factor protein-DNA interactions",
-   "categories": [
-    "tfbs-prediction",
-    "regulatory-elements",
-    "peak-calling"
-   ],
-   "tier": "core",
-   "homepage": "http://serv.csbb.ntu.edu.tw/ProteDNA/index.php",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Web application"
-   ],
-   "topics": [
-    "Protein interactions",
-    "Transcription factors and regulatory sites",
-    "Gene expression",
-    "Molecular interactions, pathways and networks",
-    "Protein folding, stability and design"
-   ],
-   "languages": [],
-   "license": "Unlicense",
-   "maturity": "Mature",
-   "cost": "Free of charge",
-   "citations": 54,
-   "citation_note": "",
-   "year": "2009",
-   "publication": "pmid:19483101",
-   "biotools_id": "protedna",
-   "biotools_url": "https://bio.tools/protedna",
-   "last_update": "2024-11-24",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Peak calling",
-    "Residue interaction calculation",
-    "Residue interaction prediction",
-    "Transcription factor binding site prediction",
-    "Transcriptional regulatory element prediction"
-   ],
-   "_select_reason": "text:\\btranscription[- ]factor",
-   "_identifiers": [
-    "pmid:19483101"
-   ],
-   "_registries": {},
-   "_llm_applied": [
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "tfbs-prediction"
   },
   {
    "id": "sitecon",
@@ -22157,63 +21427,6 @@
    ],
    "featured": "",
    "primary_category": "motif-discovery"
-  },
-  {
-   "id": "noisyr",
-   "name": "noisyR",
-   "description": "Quantifies and removes technical noise from high-throughput sequencing data",
-   "categories": [
-    "grn-inference"
-   ],
-   "tier": "core",
-   "homepage": "https://CRAN.R-project.org/package=noisyr",
-   "repo_url": "https://github.com/Core-Bioinformatics/noisyR",
-   "repo_stars": 10,
-   "repo_pushed": "2021-10-01",
-   "repo_archived": false,
-   "repo_language": "R",
-   "repo_license": "",
-   "tool_type": [
-    "Library"
-   ],
-   "topics": [
-    "Gene expression",
-    "Functional, regulatory and non-coding RNA",
-    "Gene transcripts",
-    "RNA-Seq",
-    "Molecular interactions, pathways and networks"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "GPL-2.0",
-   "maturity": "",
-   "cost": "Free of charge",
-   "citations": 50,
-   "citation_note": "",
-   "year": "2021",
-   "publication": "pmid:34076236",
-   "biotools_id": "noisyr",
-   "biotools_url": "https://bio.tools/noisyr",
-   "last_update": "2021-10-30",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Essential dynamics",
-    "Gene expression profiling",
-    "Gene regulatory network prediction",
-    "Imputation",
-    "Quantification"
-   ],
-   "_select_reason": "operation:Gene regulatory network prediction",
-   "_identifiers": [
-    "pmid:34076236"
-   ],
-   "_registries": {
-    "cran": "https://CRAN.R-project.org/package=noisyr"
-   },
-   "featured": "",
-   "primary_category": "grn-inference"
   },
   {
    "id": "possum-cis",
@@ -23549,62 +22762,6 @@
    "primary_category": "motif-discovery"
   },
   {
-   "id": "acep",
-   "name": "ACEP",
-   "description": "ACEP is a deep learning model for high-throughput antibacterial peptide recognition",
-   "categories": [
-    "motif-discovery",
-    "motif-scanning"
-   ],
-   "tier": "core",
-   "homepage": "https://github.com/Fuhaoyi/ACEP",
-   "repo_url": "https://github.com/Fuhaoyi/ACEP",
-   "repo_stars": 8,
-   "repo_pushed": "2020-08-31",
-   "repo_archived": false,
-   "repo_language": "Python",
-   "repo_license": "",
-   "tool_type": [
-    "Script"
-   ],
-   "topics": [
-    "Small molecules",
-    "Sequence sites, features and motifs",
-    "Structure prediction",
-    "Machine learning",
-    "Allergy, clinical immunology and immunotherapeutics"
-   ],
-   "languages": [
-    "Python"
-   ],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 45,
-   "citation_note": "",
-   "year": "2020",
-   "publication": "pmid:32859150",
-   "biotools_id": "acep",
-   "biotools_url": "https://bio.tools/acep",
-   "last_update": "2021-01-19",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Antimicrobial resistance prediction",
-    "Fold recognition",
-    "Protein secondary structure prediction",
-    "Sequence motif recognition",
-    "Visualisation"
-   ],
-   "_select_reason": "text:\\bposition (weight|frequency|specifi",
-   "_identifiers": [
-    "pmid:32859150"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "motif-discovery"
-  },
-  {
    "id": "CFEA",
    "name": "Cell-Free Epigenome Atlas (CFEA)",
    "description": "Search and download cell-free epigenome data for human diseases",
@@ -24868,57 +24025,6 @@
    "primary_category": "tfbs-prediction"
   },
   {
-   "id": "fire-pro",
-   "name": "FIRE-pro",
-   "description": "Motif discovery and characterization program for proteins based on mutual information",
-   "categories": [
-    "motif-discovery",
-    "tfbs-prediction"
-   ],
-   "tier": "core",
-   "homepage": "https://tavazoielab.c2b2.columbia.edu/FIRE-pro/",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Command-line tool"
-   ],
-   "topics": [
-    "Proteins",
-    "Protein expression",
-    "Transcription factors and regulatory sites"
-   ],
-   "languages": [
-    "Perl"
-   ],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 42,
-   "citation_note": "",
-   "year": "",
-   "publication": "pmid:21206902",
-   "biotools_id": "fire-pro",
-   "biotools_url": "https://bio.tools/fire-pro",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Protein sequence analysis",
-    "Sequence motif discovery"
-   ],
-   "_select_reason": "text:\\bmotif (discovery|enrichment|scan|s",
-   "_identifiers": [
-    "pmid:21206902"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "motif-discovery"
-  },
-  {
    "id": "hera",
    "name": "HeRA",
    "description": "Explore an atlas of enhancer RNAs across human tissues",
@@ -25571,60 +24677,6 @@
    "primary_category": "grn-inference"
   },
   {
-   "id": "bsdb",
-   "name": "BSDB",
-   "description": "Provides information about mechanostability of proteins",
-   "categories": [
-    "peak-calling",
-    "chip-resources"
-   ],
-   "tier": "core",
-   "homepage": "http://www.ifpan.edu.pl/BSDB/",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Database portal"
-   ],
-   "topics": [
-    "Proteins",
-    "Molecular dynamics",
-    "Protein folds and structural domains",
-    "Protein structural motifs and surfaces",
-    "Structure prediction"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 40,
-   "citation_note": "",
-   "year": "",
-   "publication": "pmid:20929872",
-   "biotools_id": "bsdb",
-   "biotools_url": "https://bio.tools/bsdb",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Modelling and simulation",
-    "Molecular docking",
-    "Molecular dynamics",
-    "Peak calling",
-    "Protein modelling"
-   ],
-   "_select_reason": "operation:Peak calling",
-   "_identifiers": [
-    "pmid:20929872"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "peak-calling"
-  },
-  {
    "id": "defcom",
    "name": "DeFCoM",
    "description": "Detects footprints containing motifs using SVM-based supervised learning",
@@ -25677,58 +24729,6 @@
    ],
    "featured": "",
    "primary_category": "motif-discovery"
-  },
-  {
-   "id": "effectR",
-   "name": "effectR",
-   "description": "R package to predict candidate RxLR and CRN effectors in oomycetes using motif searches.",
-   "categories": [
-    "motif-scanning"
-   ],
-   "tier": "core",
-   "homepage": "https://cran.r-project.org/package=effectR",
-   "repo_url": "https://github.com/grunwaldlab/effectR",
-   "repo_stars": 11,
-   "repo_pushed": "2023-08-31",
-   "repo_archived": false,
-   "repo_language": "R",
-   "repo_license": "",
-   "tool_type": [
-    "Library"
-   ],
-   "topics": [
-    "Sequence sites, features and motifs",
-    "Plant biology"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "GPL-3.0",
-   "maturity": "Mature",
-   "cost": "Free of charge",
-   "citations": 40,
-   "citation_note": "",
-   "year": "2019",
-   "publication": "pmid:30951442",
-   "biotools_id": "effectR",
-   "biotools_url": "https://bio.tools/effectR",
-   "last_update": "2020-06-16",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Protein feature detection",
-    "Read binning",
-    "Sequence motif recognition"
-   ],
-   "_select_reason": "text:\\bmotif (discovery|enrichment|scan|s",
-   "_identifiers": [
-    "pmid:30951442"
-   ],
-   "_registries": {
-    "cran": "https://cran.r-project.org/package=effectR"
-   },
-   "featured": "",
-   "primary_category": "motif-scanning"
   },
   {
    "id": "mscentipede",
@@ -26587,57 +25587,6 @@
    ],
    "featured": "",
    "primary_category": "motif-discovery"
-  },
-  {
-   "id": "ngphubinh",
-   "name": "ngphubinh",
-   "description": "Classification of adaptor proteins using recurrent neural networks and PSSM profiles",
-   "categories": [
-    "tfbs-prediction"
-   ],
-   "tier": "core",
-   "homepage": "https://github.com/ngphubinh/adaptors",
-   "repo_url": "https://github.com/ngphubinh/adaptors",
-   "repo_stars": 6,
-   "repo_pushed": "2019-08-08",
-   "repo_archived": false,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Command-line tool"
-   ],
-   "topics": [
-    "Machine learning",
-    "Transcription factors and regulatory sites",
-    "Membrane and lipoproteins",
-    "Structure prediction"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 38,
-   "citation_note": "",
-   "year": "2019",
-   "publication": "pmid:31874633",
-   "biotools_id": "ngphubinh",
-   "biotools_url": "https://bio.tools/ngphubinh",
-   "last_update": "2021-01-04",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Fold recognition",
-    "Pathway or network prediction",
-    "Post-translation modification site prediction",
-    "Protein function prediction"
-   ],
-   "_select_reason": "text:\\bposition (weight|frequency|specifi",
-   "_identifiers": [
-    "pmid:31874633"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "tfbs-prediction"
   },
   {
    "id": "plantdeepsea",
@@ -28919,61 +27868,6 @@
    "primary_category": "tfbs-prediction"
   },
   {
-   "id": "nbia",
-   "name": "NBIA",
-   "description": "A network-based integrative analysis framework",
-   "categories": [
-    "grn-inference"
-   ],
-   "tier": "core",
-   "homepage": "http://bioconductor.org/packages/release/bioc/html/BLMA.html",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Library"
-   ],
-   "topics": [
-    "Molecular interactions, pathways and networks",
-    "Microarray experiment",
-    "Gene expression",
-    "RNA-Seq",
-    "Biomarkers"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 34,
-   "citation_note": "",
-   "year": "2020",
-   "publication": "pmid:32144346",
-   "biotools_id": "nbia",
-   "biotools_url": "https://bio.tools/nbia",
-   "last_update": "2021-03-08",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Gene-set enrichment analysis",
-    "Pathway analysis",
-    "Statistical calculation"
-   ],
-   "_select_reason": "text:\\bgene regulatory network|\\bregulato",
-   "_identifiers": [
-    "pmid:32144346"
-   ],
-   "_registries": {
-    "bioconductor": "http://bioconductor.org/packages/release/bioc/html/BLMA.html"
-   },
-   "featured": "",
-   "primary_category": "grn-inference"
-  },
-  {
    "id": "repitools",
    "name": "Repitools",
    "description": "Analyse enrichment-based epigenomic data for differential methylation and regulatory elements",
@@ -29195,53 +28089,6 @@
    ],
    "featured": "",
    "primary_category": "motif-discovery"
-  },
-  {
-   "id": "alphabet",
-   "name": "Alphabet",
-   "description": "Alphabet takes a database of aligned protein sequences in BLOCKS+ format and examines the alignments column-wise looking for groups of amino acids that co-occur in columns more frequently than expected based on overall amino acid composition",
-   "categories": [],
-   "tier": "core",
-   "homepage": "http://motif.stanford.edu/distributions/alphabet/index.html",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Command-line tool"
-   ],
-   "topics": [
-    "Sequences",
-    "Amino acids",
-    "Sequence sites, features and motifs"
-   ],
-   "languages": [
-    "C"
-   ],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 33,
-   "citation_note": "",
-   "year": "1996",
-   "publication": "pmid:8877523",
-   "biotools_id": "alphabet",
-   "biotools_url": "https://bio.tools/alphabet",
-   "last_update": "2018-12-11",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Protein sequence analysis"
-   ],
-   "_select_reason": "text:\\bsequence logo|\\bsequence motifs?\\b",
-   "_identifiers": [
-    "pmid:8877523"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "uncategorised"
   },
   {
    "id": "cabean",
@@ -29737,59 +28584,6 @@
    ],
    "featured": "",
    "primary_category": "grn-inference"
-  },
-  {
-   "id": "mqtl.nmr",
-   "name": "mQTL.NMR",
-   "description": "Provides a complete mQTL analysis pipeline for 1H NMR data",
-   "categories": [
-    "peak-calling"
-   ],
-   "tier": "core",
-   "homepage": "http://bioconductor.org/packages/release/bioc/html/mQTL.NMR.html",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Command-line tool",
-    "Library"
-   ],
-   "topics": [
-    "NMR",
-    "Human biology"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "Artistic-2.0",
-   "maturity": "",
-   "cost": "",
-   "citations": 32,
-   "citation_note": "",
-   "year": "",
-   "publication": "pmid:25803548",
-   "biotools_id": "mqtl.nmr",
-   "biotools_url": "https://bio.tools/mqtl.nmr",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Peak calling",
-    "Read binning",
-    "Standardisation and normalisation"
-   ],
-   "_select_reason": "operation:Peak calling",
-   "_identifiers": [
-    "pmid:25803548"
-   ],
-   "_registries": {
-    "bioconductor": "http://bioconductor.org/packages/release/bioc/html/mQTL.NMR.html"
-   },
-   "featured": "",
-   "primary_category": "peak-calling"
   },
   {
    "id": "physbinder",
@@ -32269,59 +31063,6 @@
    "primary_category": "motif-discovery"
   },
   {
-   "id": "phyto-lrr",
-   "name": "Phyto-LRR",
-   "description": "Identification and characterization of the LRR repeats in plant LRR-RLKs",
-   "categories": [
-    "motif-scanning"
-   ],
-   "tier": "core",
-   "homepage": "https://phytolrr.com/findlrr",
-   "repo_url": "https://github.com/phytolrr/predict-phytolrr",
-   "repo_stars": 3,
-   "repo_pushed": "2021-01-31",
-   "repo_archived": false,
-   "repo_language": "HTML",
-   "repo_license": "GPL-3.0",
-   "tool_type": [
-    "Web application"
-   ],
-   "topics": [
-    "Plant biology",
-    "Sequence sites, features and motifs",
-    "Phylogenetics",
-    "Biological databases",
-    "Small molecules"
-   ],
-   "languages": [
-    "Python"
-   ],
-   "license": "GPL-3.0",
-   "maturity": "",
-   "cost": "",
-   "citations": 27,
-   "citation_note": "",
-   "year": "2021",
-   "publication": "pmid:33509084",
-   "biotools_id": "phyto-lrr",
-   "biotools_url": "https://bio.tools/phyto-lrr",
-   "last_update": "2021-03-28",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Phylogenetic analysis",
-    "Protein feature detection",
-    "Sequence motif recognition"
-   ],
-   "_select_reason": "text:\\bposition (weight|frequency|specifi",
-   "_identifiers": [
-    "pmid:33509084"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "motif-scanning"
-  },
-  {
    "id": "seql-nrps",
    "name": "SEQL-NRPS",
    "description": "This toll predicts the substrate of non-ribosomal peptide synthetases A-domains using Sequence Learner (SEQL), a discriminative classification method for sequences.",
@@ -32580,63 +31321,6 @@
    ],
    "featured": "",
    "primary_category": "tfbs-prediction"
-  },
-  {
-   "id": "mirvestigator",
-   "name": "miRvestigator",
-   "description": "Identifies miRNAs mediating co-regulation of gene expression patterns in transcriptome profiling data via a web interface",
-   "categories": [
-    "motif-discovery",
-    "motif-scanning"
-   ],
-   "tier": "core",
-   "homepage": "http://mirvestigator.systemsbiology.net",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Web application"
-   ],
-   "topics": [
-    "Functional, regulatory and non-coding RNA",
-    "Sequence sites, features and motifs",
-    "Gene expression",
-    "Gene regulation",
-    "Transcriptomics"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 26,
-   "citation_note": "",
-   "year": "",
-   "publication": "pmid:21602264",
-   "biotools_id": "mirvestigator",
-   "biotools_url": "https://bio.tools/mirvestigator",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Gene expression analysis",
-    "Gene expression correlation",
-    "Gene expression profiling",
-    "Sequence motif discovery",
-    "Sequence motif recognition"
-   ],
-   "_select_reason": "text:\\bsequence logo|\\bsequence motifs?\\b",
-   "_identifiers": [
-    "pmid:21602264"
-   ],
-   "_registries": {},
-   "_llm_applied": [
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "motif-discovery"
   },
   {
    "id": "motifdetector",
@@ -34490,11 +33174,11 @@
    ],
    "tier": "core",
    "homepage": "https://bioconductor.org/packages/release/bioc/html/BindingSiteFinder.html",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
+   "repo_url": "https://github.com/ZarnackGroup/BindingSiteFinder",
+   "repo_stars": 6,
+   "repo_pushed": "2025-03-19",
+   "repo_archived": false,
+   "repo_language": "R",
    "repo_license": "",
    "tool_type": [],
    "topics": [
@@ -34929,62 +33613,6 @@
    "_llm_applied": [
     "description"
    ],
-   "featured": "",
-   "primary_category": "grn-inference"
-  },
-  {
-   "id": "cernaseek",
-   "name": "CeRNASeek",
-   "description": "CeRNASeek is an R package for identification and analysis of ceRNA regulation",
-   "categories": [
-    "grn-inference"
-   ],
-   "tier": "core",
-   "homepage": "https://CRAN.R-project.org/package=CeRNASeek",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Library"
-   ],
-   "topics": [
-    "Functional, regulatory and non-coding RNA",
-    "Gene regulation",
-    "Pathology",
-    "Physiology",
-    "Oncology"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "GPL-3.0",
-   "maturity": "",
-   "cost": "",
-   "citations": 22,
-   "citation_note": "",
-   "year": "2021",
-   "publication": "pmid:32363380",
-   "biotools_id": "cernaseek",
-   "biotools_url": "https://bio.tools/cernaseek",
-   "last_update": "2021-02-10",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Gene regulatory network analysis",
-    "Gene regulatory network prediction",
-    "miRNA expression analysis",
-    "miRNA target prediction"
-   ],
-   "_select_reason": "text:\\bgene regulatory network|\\bregulato",
-   "_identifiers": [
-    "pmid:32363380"
-   ],
-   "_registries": {
-    "cran": "https://CRAN.R-project.org/package=CeRNASeek"
-   },
    "featured": "",
    "primary_category": "grn-inference"
   },
@@ -35557,6 +34185,56 @@
    ],
    "featured": "",
    "primary_category": "regulatory-elements"
+  },
+  {
+   "id": "seprom",
+   "name": "SEProm",
+   "description": "A novel method SEProm for prokaryotic promoter prediction based on DNA structure and energetics",
+   "categories": [
+    "tfbs-prediction",
+    "regulatory-elements"
+   ],
+   "tier": "core",
+   "homepage": "http://www.scfbio-iitd.res.in/software/SEProm_Data_TSS.jsp",
+   "repo_url": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [
+    "Transcription factors and regulatory sites",
+    "Drug discovery",
+    "Structure prediction",
+    "Model organisms",
+    "Protein interactions"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 22,
+   "citation_note": "",
+   "year": "2020",
+   "publication": "pmid:31909789",
+   "biotools_id": "seprom",
+   "biotools_url": "https://bio.tools/seprom",
+   "last_update": "2021-02-16",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "DNA structure prediction",
+    "Promoter prediction",
+    "Regression analysis"
+   ],
+   "_select_reason": "text:\\bpromoter\\b|\\benhancer\\b|\\bsuper-?e",
+   "_identifiers": [
+    "pmid:31909789"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "aster",
@@ -37102,56 +35780,6 @@
    "primary_category": "tfbs-prediction"
   },
   {
-   "id": "aptcompare",
-   "name": "AptCompare",
-   "description": "A method for optimized de novo motif discovery of RNA aptamers via HTS-SELEX.",
-   "categories": [
-    "motif-discovery"
-   ],
-   "tier": "core",
-   "homepage": "https://bitbucket.org/shiehk/aptcompare",
-   "repo_url": "https://bitbucket.org/shiehk/aptcompare",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Desktop application"
-   ],
-   "topics": [
-    "Sequence sites, features and motifs",
-    "Evolutionary biology",
-    "RNA"
-   ],
-   "languages": [
-    "Python"
-   ],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 19,
-   "citation_note": "",
-   "year": "2020",
-   "publication": "pmid:31999328",
-   "biotools_id": "aptcompare",
-   "biotools_url": "https://bio.tools/aptcompare",
-   "last_update": "2024-11-24",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "RNA secondary structure prediction",
-    "Sequence motif discovery"
-   ],
-   "_select_reason": "text:\\bmotif (discovery|enrichment|scan|s",
-   "_identifiers": [
-    "pmid:31999328"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "motif-discovery"
-  },
-  {
    "id": "bayespeak",
    "name": "BayesPeak",
    "description": "Calls peaks in ChIP-seq data using the BayesPeak algorithm",
@@ -37316,60 +35944,6 @@
    ],
    "featured": "",
    "primary_category": "grn-inference"
-  },
-  {
-   "id": "cnvxplorer",
-   "name": "CNVxplorer",
-   "description": "CNVxplorer is a web server suited for the functional assessment of CNVs in a clinical diagnostic setting",
-   "categories": [
-    "regulatory-elements",
-    "nucleosome-chromatin"
-   ],
-   "tier": "core",
-   "homepage": "http://cnvxplorer.com",
-   "repo_url": "https://github.com/RausellLab/cnvxplorer",
-   "repo_stars": 14,
-   "repo_pushed": "2022-06-10",
-   "repo_archived": false,
-   "repo_language": "R",
-   "repo_license": "GPL-3.0",
-   "tool_type": [
-    "Web application"
-   ],
-   "topics": [
-    "Epigenomics",
-    "Gene expression",
-    "Rare diseases",
-    "Molecular interactions, pathways and networks",
-    "Workflows"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "GPL-3.0",
-   "maturity": "",
-   "cost": "",
-   "citations": 19,
-   "citation_note": "",
-   "year": "2021",
-   "publication": "pmid:34019647",
-   "biotools_id": "cnvxplorer",
-   "biotools_url": "https://bio.tools/cnvxplorer",
-   "last_update": "2024-11-24",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Gene-set enrichment analysis",
-    "Named-entity and concept recognition",
-    "Query and retrieval"
-   ],
-   "_select_reason": "text:\\btranscription[- ]factor",
-   "_identifiers": [
-    "pmid:34019647"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "regulatory-elements"
   },
   {
    "id": "Cropper",
@@ -38623,104 +37197,6 @@
    "_registries": {},
    "featured": "",
    "primary_category": "regulatory-elements"
-  },
-  {
-   "id": "protomata",
-   "name": "Protomata",
-   "description": "Motif search and discovery in protein sequences.",
-   "categories": [
-    "motif-discovery",
-    "motif-scanning"
-   ],
-   "tier": "core",
-   "homepage": "http://tools.genouest.org/tools/protomata/",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Command-line tool",
-    "Web application"
-   ],
-   "topics": [
-    "Sequence analysis"
-   ],
-   "languages": [],
-   "license": "CECILL-2.0",
-   "maturity": "Mature",
-   "cost": "Free of charge",
-   "citations": 18,
-   "citation_note": "",
-   "year": "2005",
-   "publication": "doi:10.1007/11564096_50",
-   "biotools_id": "protomata",
-   "biotools_url": "https://bio.tools/protomata",
-   "last_update": "2018-12-10",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Sequence motif discovery",
-    "Sequence motif recognition"
-   ],
-   "_select_reason": "text:\\bmotif (discovery|enrichment|scan|s",
-   "_identifiers": [
-    "doi:10.1007/11564096_50"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "motif-discovery"
-  },
-  {
-   "id": "PsyMuKB",
-   "name": "PsyMuKB",
-   "description": "An Integrative De Novo Variant Knowledge Base for Developmental Disorders",
-   "categories": [
-    "tfbs-prediction",
-    "regulatory-elements",
-    "single-cell"
-   ],
-   "tier": "core",
-   "homepage": "http://psymukb.net",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [
-    "RNA splicing",
-    "Genetic variation",
-    "Protein interactions",
-    "Protein expression",
-    "Transcription factors and regulatory sites"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 18,
-   "citation_note": "",
-   "year": "2019",
-   "publication": "pmid:31809863",
-   "biotools_id": "PsyMuKB",
-   "biotools_url": "https://bio.tools/PsyMuKB",
-   "last_update": "2024-11-24",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Variant calling",
-    "Visualisation"
-   ],
-   "_select_reason": "text:\\bcis-regulatory|\\bregulatory elemen",
-   "_identifiers": [
-    "pmid:31809863"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "tfbs-prediction"
   },
   {
    "id": "RAEdb",
@@ -43464,51 +41940,6 @@
    "primary_category": "regulatory-elements"
   },
   {
-   "id": "rbscore",
-   "name": "RBscore",
-   "description": "RNA binding score is a web server to predict RNA/DNA binding sites on proteins.",
-   "categories": [],
-   "tier": "core",
-   "homepage": "http://ahsoka.u-strasbg.fr/rbscore/",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Web application"
-   ],
-   "topics": [
-    "DNA binding sites",
-    "Protein binding sites",
-    "Protein properties"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 14,
-   "citation_note": "",
-   "year": "",
-   "publication": "pmid:27084939",
-   "biotools_id": "rbscore",
-   "biotools_url": "https://bio.tools/rbscore",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Prediction and recognition"
-   ],
-   "_select_reason": "text:\\bDNA[- ]binding (site|preference|sp",
-   "_identifiers": [
-    "pmid:27084939"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "uncategorised"
-  },
-  {
    "id": "seesawpred",
    "name": "SeesawPred",
    "description": "Predicts cell-fate determinants in cell differentiation using transcriptomic data",
@@ -46149,54 +44580,6 @@
    "primary_category": "motif-discovery"
   },
   {
-   "id": "smartiv",
-   "name": "SMARTIV",
-   "description": "Discovering and visualizing combined RNA sequence and structure motifs from high-throughput RNA-binding data, generated from in-vivo experiments",
-   "categories": [
-    "motif-discovery"
-   ],
-   "tier": "core",
-   "homepage": "http://choosealicense.com",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Web application"
-   ],
-   "topics": [
-    "Structure analysis",
-    "RNA"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 12,
-   "citation_note": "",
-   "year": "2018",
-   "publication": "pmid:29800452",
-   "biotools_id": "smartiv",
-   "biotools_url": "https://bio.tools/smartiv",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Enrichment analysis",
-    "RNA secondary structure prediction",
-    "Sequence motif discovery"
-   ],
-   "_select_reason": "text:\\bposition (weight|frequency|specifi",
-   "_identifiers": [
-    "pmid:29800452"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "motif-discovery"
-  },
-  {
    "id": "tivan-indel",
    "name": "TIVAN-indel",
    "description": "Annotates and predicts noncoding regulatory small insertions and deletions from genomic data",
@@ -47061,57 +45444,6 @@
    "_registries": {},
    "featured": "",
    "primary_category": "motif-scanning"
-  },
-  {
-   "id": "motif3d",
-   "name": "Motif3D",
-   "description": "Protein structure viewer for visualizing sequence motifs contained in the PRINTS database on 3D structures.",
-   "categories": [],
-   "tier": "core",
-   "homepage": "http://umber.sbs.man.ac.uk/dbbrowser/motif3d/motif3d.html",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Web application"
-   ],
-   "topics": [
-    "Protein structural motifs and surfaces",
-    "Proteins",
-    "Protein structure analysis",
-    "Structure analysis",
-    "Sequence sites, features and motifs"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 11,
-   "citation_note": "",
-   "year": "",
-   "publication": "pmid:12824320",
-   "biotools_id": "motif3d",
-   "biotools_url": "https://bio.tools/motif3d",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Protein model validation",
-    "Protein structural motif recognition",
-    "Protein structure analysis",
-    "Protein structure assignment",
-    "Protein structure prediction"
-   ],
-   "_select_reason": "text:\\bsequence logo|\\bsequence motifs?\\b",
-   "_identifiers": [
-    "pmid:12824320"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "uncategorised"
   },
   {
    "id": "nopeak",
@@ -48722,63 +47054,6 @@
    "primary_category": "motif-databases"
   },
   {
-   "id": "ppi-miner",
-   "name": "PPI-Miner",
-   "description": "A Structure and Sequence Motif Co-Driven Protein-Protein Interaction Mining and Modeling Computational Method.",
-   "categories": [
-    "motif-scanning"
-   ],
-   "tier": "core",
-   "homepage": "https://bailab.siais.shanghaitech.edu.cn/services/ppi-miner",
-   "repo_url": "https://github.com/Wang-Lin-boop/PPI-Miner",
-   "repo_stars": 21,
-   "repo_pushed": "2025-02-11",
-   "repo_archived": false,
-   "repo_language": "Shell",
-   "repo_license": "GPL-2.0",
-   "tool_type": [
-    "Web application",
-    "Command-line tool"
-   ],
-   "topics": [
-    "Protein interactions",
-    "Immunoproteins and antigens",
-    "Sequence sites, features and motifs",
-    "Protein structural motifs and surfaces",
-    "Proteomics"
-   ],
-   "languages": [
-    "Shell",
-    "Julia"
-   ],
-   "license": "GPL-2.0",
-   "maturity": "",
-   "cost": "Free of charge",
-   "citations": 10,
-   "citation_note": "",
-   "year": "2022",
-   "publication": "pmid:36448715",
-   "biotools_id": "ppi-miner",
-   "biotools_url": "https://bio.tools/ppi-miner",
-   "last_update": "2024-11-24",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Backbone modelling",
-    "Database search",
-    "Protein interaction prediction",
-    "Scaffolding",
-    "Sequence motif recognition"
-   ],
-   "_select_reason": "text:\\bsequence logo|\\bsequence motifs?\\b",
-   "_identifiers": [
-    "pmid:36448715"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "motif-scanning"
-  },
-  {
    "id": "PRAS",
    "name": "PRAS",
    "description": "> HOMEPAGE BROKEN! | Predicting functional targets of RNA binding proteins based on CLIP-seq peaks | RNA-protein interaction plays important roles in post-transcriptional regulation",
@@ -49709,60 +47984,6 @@
    ],
    "featured": "",
    "primary_category": "grn-inference"
-  },
-  {
-   "id": "e1ds",
-   "name": "E1DS",
-   "description": "E1DS is a web server for enzyme catalytic site prediction",
-   "categories": [
-    "motif-discovery",
-    "motif-scanning"
-   ],
-   "tier": "core",
-   "homepage": "http://e1ds.csbb.ntu.edu.tw/",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Web application"
-   ],
-   "topics": [
-    "Enzymes",
-    "Sequence sites, features and motifs",
-    "Protein binding sites",
-    "Sequence analysis",
-    "Protein sites, features and motifs"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 9,
-   "citation_note": "",
-   "year": "",
-   "publication": "pmid:18524800",
-   "biotools_id": "e1ds",
-   "biotools_url": "https://bio.tools/e1ds",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Protein binding site prediction",
-    "Protein feature detection",
-    "Sequence alignment analysis (conservation)",
-    "Sequence motif discovery",
-    "Sequence motif recognition"
-   ],
-   "_select_reason": "text:\\bsequence logo|\\bsequence motifs?\\b",
-   "_identifiers": [
-    "pmid:18524800"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "motif-discovery"
   },
   {
    "id": "epixplorer",
@@ -52717,52 +50938,6 @@
    "primary_category": "motif-scanning"
   },
   {
-   "id": "VirtualCytometry",
-   "name": "VirtualCytometry",
-   "description": "> HOMEPAGE MISSING! | a webserver for evaluating immune cell differentiation using single-cell RNA sequencing data | MOTIVATION:The immune system has diverse types of cells that are differentiated or activated via various signaling pathways and transcriptional regulation upon challenging conditions",
-   "categories": [
-    "tfbs-prediction",
-    "single-cell"
-   ],
-   "tier": "core",
-   "homepage": "https://www.grnpedia.org/cytometry/",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [
-    "Molecular interactions, pathways and networks",
-    "Transcription factors and regulatory sites",
-    "Cell biology"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 8,
-   "citation_note": "",
-   "year": "2020",
-   "publication": "pmid:31373613",
-   "biotools_id": "VirtualCytometry",
-   "biotools_url": "https://bio.tools/VirtualCytometry",
-   "last_update": "2024-11-24",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Expression analysis"
-   ],
-   "_select_reason": "text:\\btranscription[- ]factor",
-   "_identifiers": [
-    "pmid:31373613"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "tfbs-prediction"
-  },
-  {
    "id": "web-mcot",
    "name": "Web-MCOT",
    "description": "Searches for motif co-occurrence in ChIP-seq data via a web server",
@@ -53945,11 +52120,11 @@
    ],
    "tier": "core",
    "homepage": "https://bioconductor.org/packages/release/bioc/html/motifbreakR.html",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
+   "repo_url": "https://github.com/Simon-Coetzee/motifbreakR",
+   "repo_stars": 35,
+   "repo_pushed": "2026-05-20",
+   "repo_archived": false,
+   "repo_language": "R",
    "repo_license": "",
    "tool_type": [],
    "topics": [
@@ -56288,60 +54463,6 @@
    "primary_category": "motif-discovery"
   },
   {
-   "id": "metaboverse",
-   "name": "Metaboverse",
-   "description": "Automated exploration and contextualization of metabolic data",
-   "categories": [
-    "grn-inference"
-   ],
-   "tier": "core",
-   "homepage": "https://github.com/Metaboverse/",
-   "repo_url": "https://github.com/Metaboverse/metaboverse",
-   "repo_stars": 42,
-   "repo_pushed": "2025-03-24",
-   "repo_archived": false,
-   "repo_language": "JavaScript",
-   "repo_license": "MIT",
-   "tool_type": [
-    "Command-line tool",
-    "Desktop application"
-   ],
-   "topics": [
-    "Endocrinology and metabolism",
-    "Molecular interactions, pathways and networks",
-    "Proteomics",
-    "Metabolomics",
-    "Small molecules"
-   ],
-   "languages": [
-    "JavaScript"
-   ],
-   "license": "GPL-3.0",
-   "maturity": "",
-   "cost": "",
-   "citations": 6,
-   "citation_note": "",
-   "year": "",
-   "publication": "doi:10.1101/2020.06.25.171850",
-   "biotools_id": "metaboverse",
-   "biotools_url": "https://bio.tools/metaboverse",
-   "last_update": "2021-02-22",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Gene regulatory network analysis",
-    "Metabolic network modelling",
-    "Network visualisation"
-   ],
-   "_select_reason": "operation:Gene regulatory network analysis",
-   "_identifiers": [
-    "doi:10.1101/2020.06.25.171850"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "grn-inference"
-  },
-  {
    "id": "methodical",
    "name": "methodical",
    "description": "Identifies genomic regions where DNA methylation correlates with transcription to reveal regulatory sites",
@@ -57731,55 +55852,6 @@
    "primary_category": "regulatory-elements"
   },
   {
-   "id": "cell2location",
-   "name": "Cell2location",
-   "description": "Cell2location is a software tool for spatial transcriptomics deconvolution, enabling the inference of cell type abundances within spatial data",
-   "categories": [
-    "nucleosome-chromatin"
-   ],
-   "tier": "core",
-   "homepage": "https://cell2location.readthedocs.io/en/latest/notebooks/cell2location_tutorial.html",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [
-    "Chromosome conformation capture",
-    "Transcriptomics",
-    "Multiomics",
-    "Epigenomics",
-    "RNA-Seq"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 5,
-   "citation_note": "",
-   "year": "",
-   "publication": "pmid:40662813",
-   "biotools_id": "cell2location",
-   "biotools_url": "https://bio.tools/cell2location",
-   "last_update": "2026-02-22",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Aggregation",
-    "Deisotoping",
-    "Essential dynamics"
-   ],
-   "_select_reason": "text:\\bchromatin (accessibilit|state|loop",
-   "_identifiers": [
-    "pmid:40662813"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "nucleosome-chromatin"
-  },
-  {
    "id": "cemig",
    "name": "CEMIG",
    "description": "Predicts cis-regulatory motifs from ATAC-seq data using a de Bruijn graph",
@@ -57945,57 +56017,6 @@
    ],
    "featured": "",
    "primary_category": "regulatory-elements"
-  },
-  {
-   "id": "chip-seq-analysis",
-   "name": "ChIP-Seq",
-   "description": "Estimates population size for quality control of ChIP-Seq datasets",
-   "categories": [
-    "tfbs-prediction",
-    "peak-calling"
-   ],
-   "tier": "core",
-   "homepage": "https://ict.biouml.org/bioumlweb/chipseq_analysis.html",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [
-    "ChIP-seq",
-    "Transcription factors and regulatory sites",
-    "Protein interactions"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 5,
-   "citation_note": "",
-   "year": "2019",
-   "publication": "pmid:31465497",
-   "biotools_id": "chip-seq-analysis",
-   "biotools_url": "https://bio.tools/chip-seq-analysis",
-   "last_update": "2020-12-11",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Protein-nucleic acid interaction analysis",
-    "Standardisation and normalisation",
-    "Validation"
-   ],
-   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
-   "_identifiers": [
-    "pmid:31465497"
-   ],
-   "_registries": {},
-   "_llm_applied": [
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "tfbs-prediction"
   },
   {
    "id": "combind",
@@ -62672,60 +60693,6 @@
    "primary_category": "peak-calling"
   },
   {
-   "id": "bsdd",
-   "name": "BSDD",
-   "description": "BSDD (Biomolecules Segment Display Device) searches for and displays user defined sequence motifs in known protein structures",
-   "categories": [
-    "motif-scanning",
-    "motif-comparison"
-   ],
-   "tier": "core",
-   "homepage": "http://iris.physics.iisc.ernet.in/bsdd/",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Web application"
-   ],
-   "topics": [
-    "Protein structural motifs and surfaces",
-    "Sequence sites, features and motifs",
-    "Proteins",
-    "Structure prediction",
-    "Protein structure analysis"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 3,
-   "citation_note": "",
-   "year": "",
-   "publication": "pmid:15215468",
-   "biotools_id": "bsdd",
-   "biotools_url": "https://bio.tools/bsdd",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Protein structural motif recognition",
-    "Protein structure comparison",
-    "Sequence motif analysis",
-    "Sequence motif comparison",
-    "Sequence motif recognition"
-   ],
-   "_select_reason": "text:\\bsequence logo|\\bsequence motifs?\\b",
-   "_identifiers": [
-    "pmid:15215468"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "motif-scanning"
-  },
-  {
    "id": "cainet",
    "name": "CaiNet",
    "description": "Stochastically simulates gene regulatory networks for modelling and pathway analysis",
@@ -64070,60 +62037,6 @@
    "primary_category": "motif-databases"
   },
   {
-   "id": "numbat-multiome",
-   "name": "Numbat-multiome",
-   "description": "Infers copy number variations from single-cell RNA and chromatin accessibility data",
-   "categories": [
-    "nucleosome-chromatin",
-    "single-cell"
-   ],
-   "tier": "core",
-   "homepage": "https://kharchenkolab.github.io/numbat/articles/numbat-multiome.html",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [
-    "Multiomics",
-    "Epigenomics",
-    "Copy number variation",
-    "ATAC-seq",
-    "Mapping"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 3,
-   "citation_note": "",
-   "year": "",
-   "publication": "pmid:41104806",
-   "biotools_id": "numbat-multiome",
-   "biotools_url": "https://bio.tools/numbat-multiome",
-   "last_update": "2026-02-22",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Aggregation",
-    "Copy number variation detection",
-    "Genotyping",
-    "Haplotype mapping"
-   ],
-   "_select_reason": "text:\\bchromatin (accessibilit|state|loop",
-   "_identifiers": [
-    "pmid:41104806"
-   ],
-   "_registries": {},
-   "_llm_applied": [
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "nucleosome-chromatin"
-  },
-  {
    "id": "pallas",
    "name": "PALLAS",
    "description": "Infer gene regulatory networks from time series data using penalized maximum likelihood and particle swarms",
@@ -64505,61 +62418,6 @@
    ],
    "featured": "",
    "primary_category": "motif-scanning"
-  },
-  {
-   "id": "seemotif",
-   "name": "seeMotif",
-   "description": "Allows users to interactively visualize sequence motifs on protein structures from Protein Data Bank (PDB).",
-   "categories": [
-    "motif-discovery",
-    "motif-scanning",
-    "motif-comparison"
-   ],
-   "tier": "core",
-   "homepage": "http://seemotif.csie.ntu.edu.tw",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Web application"
-   ],
-   "topics": [
-    "Sequence sites, features and motifs",
-    "Protein structural motifs and surfaces",
-    "Proteins",
-    "Gene and protein families",
-    "Protein structure analysis"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 3,
-   "citation_note": "",
-   "year": "",
-   "publication": "pmid:19477961",
-   "biotools_id": "seemotif",
-   "biotools_url": "https://bio.tools/seemotif",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Protein structural motif recognition",
-    "Sequence motif analysis",
-    "Sequence motif comparison",
-    "Sequence motif discovery",
-    "Sequence motif recognition"
-   ],
-   "_select_reason": "text:\\bsequence logo|\\bsequence motifs?\\b",
-   "_identifiers": [
-    "pmid:19477961"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "motif-discovery"
   },
   {
    "id": "segcond",
@@ -67275,61 +65133,6 @@
    "primary_category": "tfbs-prediction"
   },
   {
-   "id": "miringo",
-   "name": "miRinGO",
-   "description": "Prediction of biological processes indirectly targeted by human microRNAs",
-   "categories": [
-    "tfbs-prediction"
-   ],
-   "tier": "core",
-   "homepage": "https://github.com/Fadeel/miRinGO",
-   "repo_url": "https://github.com/Fadeel/miRinGO",
-   "repo_stars": 2,
-   "repo_pushed": "2023-01-07",
-   "repo_archived": false,
-   "repo_language": "R",
-   "repo_license": "MIT",
-   "tool_type": [
-    "Library",
-    "Desktop application"
-   ],
-   "topics": [
-    "Functional, regulatory and non-coding RNA",
-    "Gene expression",
-    "Ontology and terminology",
-    "Gene transcripts",
-    "RNA-Seq"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "MIT",
-   "maturity": "",
-   "cost": "",
-   "citations": 2,
-   "citation_note": "",
-   "year": "",
-   "publication": "doi:10.1101/2020.07.24.220335",
-   "biotools_id": "miringo",
-   "biotools_url": "https://bio.tools/miringo",
-   "last_update": "2021-02-24",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Enrichment analysis",
-    "Transcription factor binding site prediction",
-    "miRNA expression analysis",
-    "miRNA target prediction"
-   ],
-   "_select_reason": "text:\\btranscription[- ]factor",
-   "_identifiers": [
-    "doi:10.1101/2020.07.24.220335"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "tfbs-prediction"
-  },
-  {
    "id": "motifsim",
    "name": "MOTIFSIM",
    "description": "Detects similarity in single or multiple DNA motif datasets",
@@ -70003,12 +67806,12 @@
    ],
    "tier": "extended",
    "homepage": "https://bioconductor.org/packages/devel/bioc/html/G4SNVHunter.html",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
+   "repo_url": "https://github.com/rongxinzh/G4SNVHunter",
+   "repo_stars": 0,
+   "repo_pushed": "2025-05-28",
+   "repo_archived": false,
+   "repo_language": "R",
+   "repo_license": "MIT",
    "tool_type": [],
    "topics": [
     "Nucleic acid structure analysis",
@@ -70846,11 +68649,11 @@
    ],
    "tier": "core",
    "homepage": "https://bioconductor.org/packages/release/bioc/html/Moonlight2R.html",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
+   "repo_url": "https://github.com/ELELAB/Moonlight2R",
+   "repo_stars": 5,
+   "repo_pushed": "2026-07-10",
+   "repo_archived": false,
+   "repo_language": "R",
    "repo_license": "",
    "tool_type": [],
    "topics": [
@@ -71353,56 +69156,6 @@
    "primary_category": "motif-discovery"
   },
   {
-   "id": "PeSA",
-   "name": "PeSA",
-   "description": "The Software Tool for Peptide Specificity Analysis (PeSA) is an open-source software designed as a tool to use in the analysis of peptide arrays, permutation arrays and OPALs",
-   "categories": [
-    "motif-discovery",
-    "nucleosome-chromatin"
-   ],
-   "tier": "core",
-   "homepage": "http://www.github.com/EmineTopcu/PeSA",
-   "repo_url": "https://github.com/EmineTopcu/PeSA",
-   "repo_stars": 0,
-   "repo_pushed": "2024-11-27",
-   "repo_archived": false,
-   "repo_language": "C#",
-   "repo_license": "GPL-3.0",
-   "tool_type": [],
-   "topics": [
-    "Small molecules",
-    "Epigenetics",
-    "Proteomics"
-   ],
-   "languages": [
-    "C#"
-   ],
-   "license": "GPL-3.0",
-   "maturity": "",
-   "cost": "",
-   "citations": 1,
-   "citation_note": "",
-   "year": "",
-   "publication": "doi:10.1101/760140",
-   "biotools_id": "PeSA",
-   "biotools_url": "https://bio.tools/PeSA",
-   "last_update": "2021-01-09",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Peptide identification",
-    "Quantification",
-    "Sequence motif discovery"
-   ],
-   "_select_reason": "text:\\bposition (weight|frequency|specifi",
-   "_identifiers": [
-    "doi:10.1101/760140"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "motif-discovery"
-  },
-  {
    "id": "phylopgm",
    "name": "PhyloPGM",
    "description": "Predicts regulatory functions by boosting accuracy with evolutionary information",
@@ -71632,17 +69385,14 @@
    "primary_category": "tfbs-prediction"
   },
   {
-   "id": "qbed",
-   "name": "qBED",
-   "description": "a novel genome browser visualization for point processes",
+   "id": "presrat",
+   "name": "PresRAT",
+   "description": "A server for identification of bacterial small-RNA sequences and their targets with probable binding region",
    "categories": [
-    "tfbs-prediction",
-    "peak-calling",
-    "nucleosome-chromatin",
-    "single-cell"
+    "regulatory-elements"
    ],
    "tier": "core",
-   "homepage": "http://epigenomegateway.wustl.edu/browser",
+   "homepage": "http://www.hpppi.iicb.res.in/presrat",
    "repo_url": "",
    "repo_stars": null,
    "repo_pushed": "",
@@ -71651,11 +69401,11 @@
    "repo_license": "",
    "tool_type": [],
    "topics": [
-    "Epigenomics",
-    "Mobile genetic elements",
-    "Transcription factors and regulatory sites",
-    "GWAS study",
-    "ChIP-seq"
+    "Gene transcripts",
+    "RNA-Seq",
+    "Gene expression",
+    "Functional, regulatory and non-coding RNA",
+    "DNA binding sites"
    ],
    "languages": [],
    "license": "",
@@ -71664,24 +69414,25 @@
    "citations": 1,
    "citation_note": "",
    "year": "",
-   "publication": "doi:10.1101/2020.04.27.060061",
-   "biotools_id": "qbed",
-   "biotools_url": "https://bio.tools/qbed",
-   "last_update": "2021-01-31",
+   "publication": "doi:10.1101/2020.04.03.024935",
+   "biotools_id": "presrat",
+   "biotools_url": "https://bio.tools/presrat",
+   "last_update": "2021-01-27",
    "source": "bio.tools",
    "tags": [],
    "_operations": [
-    "Genome visualisation",
-    "Standardisation and normalisation",
-    "Variant calling"
+    "Molecular dynamics",
+    "RNA secondary structure analysis",
+    "cis-regulatory element prediction",
+    "trans-regulatory element prediction"
    ],
-   "_select_reason": "text:\\btranscription[- ]factor",
+   "_select_reason": "text:\\bcis-regulatory|\\bregulatory elemen",
    "_identifiers": [
-    "doi:10.1101/2020.04.27.060061"
+    "doi:10.1101/2020.04.03.024935"
    ],
    "_registries": {},
    "featured": "",
-   "primary_category": "tfbs-prediction"
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "qpromoters",
@@ -71894,59 +69645,6 @@
    "_registries": {},
    "featured": "",
    "primary_category": "grn-inference"
-  },
-  {
-   "id": "REPIC",
-   "name": "REPIC",
-   "description": "Explores N6-methyladenosine methylome data for genome visualisation, peak calling, and query retrieval",
-   "categories": [
-    "peak-calling",
-    "nucleosome-chromatin"
-   ],
-   "tier": "core",
-   "homepage": "https://repicmod.uchicago.edu/repic/",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [
-    "Sequencing",
-    "Epigenetics",
-    "Transcriptomics",
-    "Workflows",
-    "Gene transcripts"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 1,
-   "citation_note": "",
-   "year": "",
-   "publication": "doi:10.1101/2019.12.11.873299",
-   "biotools_id": "REPIC",
-   "biotools_url": "https://bio.tools/REPIC",
-   "last_update": "2021-01-15",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Genome visualisation",
-    "Peak calling",
-    "Query and retrieval"
-   ],
-   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
-   "_identifiers": [
-    "doi:10.1101/2019.12.11.873299"
-   ],
-   "_registries": {},
-   "_llm_applied": [
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "peak-calling"
   },
   {
    "id": "rlbase",
@@ -72400,56 +70098,6 @@
    ],
    "featured": "",
    "primary_category": "tfbs-prediction"
-  },
-  {
-   "id": "slimscape",
-   "name": "SLiMScape 3",
-   "description": "Perform short linear motif analyses of protein interaction networks by integrating motif discovery and search tools in a network visualization environment",
-   "categories": [
-    "motif-discovery"
-   ],
-   "tier": "core",
-   "homepage": "http://apps.cytoscape.org/apps/slimscape",
-   "repo_url": "https://github.com/slimsuite/SLiMScape",
-   "repo_stars": 1,
-   "repo_pushed": "2015-11-26",
-   "repo_archived": false,
-   "repo_language": "Java",
-   "repo_license": "GPL-3.0",
-   "tool_type": [
-    "Plug-in"
-   ],
-   "topics": [
-    "Protein interactions",
-    "Protein targeting and localisation"
-   ],
-   "languages": [
-    "Java"
-   ],
-   "license": "GPL-3.0",
-   "maturity": "",
-   "cost": "",
-   "citations": 1,
-   "citation_note": "",
-   "year": "2015",
-   "publication": "pmid:26674271",
-   "biotools_id": "slimscape",
-   "biotools_url": "https://bio.tools/slimscape",
-   "last_update": "2019-02-16",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Pathway or network visualisation",
-    "Protein interaction prediction",
-    "Sequence motif discovery"
-   ],
-   "_select_reason": "text:\\bmotif (discovery|enrichment|scan|s",
-   "_identifiers": [
-    "pmid:26674271"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "motif-discovery"
   },
   {
    "id": "spacelog",
@@ -73803,6 +71451,56 @@
    ],
    "featured": "",
    "primary_category": "motif-databases"
+  },
+  {
+   "id": "AppleMDO",
+   "name": "AppleMDO",
+   "description": "A Multi-Dimensional Omics Database for Apple Co-Expression Networks and Chromatin States",
+   "categories": [
+    "peak-calling",
+    "nucleosome-chromatin"
+   ],
+   "tier": "core",
+   "homepage": "http://bioinformatics.cau.edu.cn/AppleMDO/",
+   "repo_url": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [
+    "Epigenomics",
+    "ChIP-seq",
+    "RNA-Seq",
+    "Gene expression",
+    "Molecular interactions, pathways and networks"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 0,
+   "citation_note": "",
+   "year": "2019",
+   "publication": "pmid:31695717",
+   "biotools_id": "AppleMDO",
+   "biotools_url": "https://bio.tools/AppleMDO",
+   "last_update": "2020-12-09",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Gene functional annotation",
+    "Gene-set enrichment analysis",
+    "Pathway or network prediction"
+   ],
+   "_select_reason": "text:\\bmotif (discovery|enrichment|scan|s",
+   "_identifiers": [
+    "pmid:31695717"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "peak-calling"
   },
   {
    "id": "apples",
@@ -75329,51 +73027,6 @@
    ],
    "featured": "",
    "primary_category": "regulatory-elements"
-  },
-  {
-   "id": "bwtool",
-   "name": "bwtool 1.0 gamma",
-   "description": "Command-line utility for bigWig files",
-   "categories": [
-    "peak-calling"
-   ],
-   "tier": "core",
-   "homepage": "https://github.com/CRG-Barcelona/bwtool/wiki",
-   "repo_url": "https://github.com/CRG-Barcelona/bwtool",
-   "repo_stars": 118,
-   "repo_pushed": "2018-05-23",
-   "repo_archived": false,
-   "repo_language": "C",
-   "repo_license": "NOASSERTION",
-   "tool_type": [
-    "Command-line tool"
-   ],
-   "topics": [
-    "ChIP-seq",
-    "Sequencing",
-    "Nucleic acid sites, features and motifs"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 0,
-   "citation_note": "",
-   "year": "",
-   "publication": "",
-   "biotools_id": "bwtool",
-   "biotools_url": "https://bio.tools/bwtool",
-   "last_update": "2018-12-10",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Formatting"
-   ],
-   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
-   "_identifiers": [],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "peak-calling"
   },
   {
    "id": "camregbase",
@@ -78934,64 +76587,6 @@
    "primary_category": "motif-discovery"
   },
   {
-   "id": "coverageview",
-   "name": "CoverageView",
-   "description": "Visualise genome coverage profiles from read mapping data",
-   "categories": [
-    "peak-calling",
-    "nucleosome-chromatin"
-   ],
-   "tier": "core",
-   "homepage": "http://bioconductor.org/packages/release/bioc/html/CoverageView.html",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Command-line tool",
-    "Library"
-   ],
-   "topics": [
-    "ChIP-seq",
-    "Data visualisation",
-    "Nucleic acid sites, features and motifs",
-    "Epigenetics"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "Artistic-2.0",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "primary publication shared by 24 tools",
-   "year": "",
-   "publication": "pmid:25633503",
-   "biotools_id": "coverageview",
-   "biotools_url": "https://bio.tools/coverageview",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Read mapping",
-    "Sequence visualisation"
-   ],
-   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
-   "_identifiers": [
-    "pmid:25633503"
-   ],
-   "_registries": {
-    "bioconductor": "http://bioconductor.org/packages/release/bioc/html/CoverageView.html"
-   },
-   "_llm_applied": [
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "peak-calling"
-  },
-  {
    "id": "cpg_transformer",
    "name": "CpG Transformer",
    "description": "Imputes single-cell methylomes using a transformer model on CpG data",
@@ -81577,60 +79172,6 @@
    "primary_category": "grn-inference"
   },
   {
-   "id": "edger",
-   "name": "edgeR",
-   "description": "Differential expression analysis of RNA-seq expression profiles with biological replication",
-   "categories": [
-    "peak-calling"
-   ],
-   "tier": "core",
-   "homepage": "http://bioconductor.org/packages/release/bioc/html/edgeR.html",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Command-line tool",
-    "Library"
-   ],
-   "topics": [
-    "Genetics",
-    "RNA-Seq",
-    "ChIP-seq"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "GPL-2.0",
-   "maturity": "",
-   "cost": "",
-   "citations": 0,
-   "citation_note": "",
-   "year": "2012",
-   "publication": "pmid:22287627",
-   "biotools_id": "edger",
-   "biotools_url": "https://bio.tools/edger",
-   "last_update": "2022-06-21",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Differential gene expression analysis"
-   ],
-   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
-   "_identifiers": [
-    "pmid:22287627",
-    "pmid:19910308",
-    "pmid:27508061"
-   ],
-   "_registries": {
-    "bioconductor": "http://bioconductor.org/packages/release/bioc/html/edgeR.html"
-   },
-   "featured": "",
-   "primary_category": "peak-calling"
-  },
-  {
    "id": "ehecregnet",
    "name": "EhecRegNet",
    "description": "Database and analysis platform for pathogenic E, enabling pathway or network analysis and sequence database search",
@@ -83042,12 +80583,12 @@
    ],
    "tier": "core",
    "homepage": "https://www.bioconductor.org/packages/release/bioc/html/esATAC.html",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
+   "repo_url": "https://github.com/wzthu/esATAC",
+   "repo_stars": 23,
+   "repo_pushed": "2022-08-08",
+   "repo_archived": false,
+   "repo_language": "R",
+   "repo_license": "GPL-3.0",
    "tool_type": [
     "Library"
    ],
@@ -83194,57 +80735,6 @@
    ],
    "featured": "",
    "primary_category": "tfbs-prediction"
-  },
-  {
-   "id": "express",
-   "name": "eXpress",
-   "description": "Streaming tool for quantifying the abundances of a set of target sequences from sampled subsequences",
-   "categories": [
-    "peak-calling"
-   ],
-   "tier": "core",
-   "homepage": "https://pachterlab.github.io/eXpress/index.html",
-   "repo_url": "https://github.com/adarob/eXpress-d",
-   "repo_stars": 13,
-   "repo_pushed": "2016-01-13",
-   "repo_archived": false,
-   "repo_language": "Scala",
-   "repo_license": "Apache-2.0",
-   "tool_type": [
-    "Command-line tool"
-   ],
-   "topics": [
-    "Gene expression",
-    "Metagenomics",
-    "RNA-Seq",
-    "ChIP-seq"
-   ],
-   "languages": [
-    "C++"
-   ],
-   "license": "Apache-2.0",
-   "maturity": "Mature",
-   "cost": "Free of charge",
-   "citations": 0,
-   "citation_note": "",
-   "year": "2011",
-   "publication": "pmid:21410973",
-   "biotools_id": "express",
-   "biotools_url": "https://bio.tools/express",
-   "last_update": "2024-11-24",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Imputation"
-   ],
-   "_select_reason": "text:\\btranscription[- ]factor",
-   "_identifiers": [
-    "pmid:21410973",
-    "doi:10.7490/f1000research.1114334.1"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "peak-calling"
   },
   {
    "id": "extractcentralregions",
@@ -87103,58 +84593,6 @@
    "primary_category": "motif-scanning"
   },
   {
-   "id": "impulsede2",
-   "name": "ImpulseDE2",
-   "description": "It is a differential expression algorithm for longitudinal count data sets which arise in sequencing experiments such as RNA-seq, ChIP-seq, ATAC-seq and DNaseI-seq",
-   "categories": [
-    "peak-calling"
-   ],
-   "tier": "core",
-   "homepage": "http://bioconductor.org/packages/release/bioc/html/ImpulseDE2.html",
-   "repo_url": "https://git.bioconductor.org/packages/ImpulseDE2",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Library"
-   ],
-   "topics": [
-    "Cell biology",
-    "Gene expression",
-    "Sequencing",
-    "Statistics and probability",
-    "ChIP-seq",
-    "RNA-seq"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "Artistic-2.0",
-   "maturity": "",
-   "cost": "",
-   "citations": 0,
-   "citation_note": "",
-   "year": "",
-   "publication": "",
-   "biotools_id": "impulsede2",
-   "biotools_url": "https://bio.tools/impulsede2",
-   "last_update": "2018-12-10",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Differential gene expression analysis"
-   ],
-   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
-   "_identifiers": [],
-   "_registries": {
-    "bioconductor": "http://bioconductor.org/packages/release/bioc/html/ImpulseDE2.html"
-   },
-   "featured": "",
-   "primary_category": "peak-calling"
-  },
-  {
    "id": "infima",
    "name": "INFIMA",
    "description": "Leverages multi-omics model organism data to identify effector genes of human GWAS variants",
@@ -87368,61 +84806,6 @@
    ],
    "featured": "",
    "primary_category": "nucleosome-chromatin"
-  },
-  {
-   "id": "ioda",
-   "name": "iODA",
-   "description": "Integrates heterogeneous multi-omics data to analyse cancer pathway consistency",
-   "categories": [
-    "peak-calling"
-   ],
-   "tier": "core",
-   "homepage": "http://www.sysbio.org.cn/iODA",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Desktop application",
-    "Command-line tool"
-   ],
-   "topics": [
-    "ChIP-seq",
-    "Molecular interactions, pathways and networks",
-    "Functional, regulatory and non-coding RNA",
-    "Gene transcripts",
-    "RNA-Seq"
-   ],
-   "languages": [],
-   "license": "GPL-3.0",
-   "maturity": "",
-   "cost": "",
-   "citations": 0,
-   "citation_note": "",
-   "year": "2020",
-   "publication": "pmid:33096244",
-   "biotools_id": "ioda",
-   "biotools_url": "https://bio.tools/ioda",
-   "last_update": "2021-02-05",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Pathway analysis",
-    "Protein-nucleic acid interaction analysis",
-    "miRNA expression analysis"
-   ],
-   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
-   "_identifiers": [
-    "pmid:33096244"
-   ],
-   "_registries": {},
-   "_llm_applied": [
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "peak-calling"
   },
   {
    "id": "ipro-gan",
@@ -88637,115 +86020,45 @@
    "primary_category": "tfbs-prediction"
   },
   {
-   "id": "maracas",
-   "name": "MARACAS",
-   "description": "Performs functional enrichment analysis for microalgae RNA-seq and ChIP-seq data",
-   "categories": [
-    "peak-calling"
-   ],
-   "tier": "core",
-   "homepage": "https://github.com/fran-romero-campero/MARACAS",
-   "repo_url": "https://github.com/fran-romero-campero/MARACAS",
-   "repo_stars": 0,
-   "repo_pushed": "2023-07-09",
-   "repo_archived": false,
-   "repo_language": "Scheme",
-   "repo_license": "GPL-3.0",
-   "tool_type": [
-    "Command-line tool"
-   ],
-   "topics": [
-    "ChIP-seq",
-    "RNA-Seq",
-    "Gene expression",
-    "Agricultural science",
-    "Gene transcripts"
-   ],
-   "languages": [
-    "Scheme"
-   ],
-   "license": "GPL-3.0",
-   "maturity": "",
-   "cost": "Free of charge",
-   "citations": 0,
-   "citation_note": "",
-   "year": "2022",
-   "publication": "pmid:35361110",
-   "biotools_id": "maracas",
-   "biotools_url": "https://bio.tools/maracas",
-   "last_update": "2022-07-26",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Deposition",
-    "Differential gene expression profiling",
-    "Gene-set enrichment analysis",
-    "RNA-Seq analysis",
-    "RNA-Seq quantification"
-   ],
-   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
-   "_identifiers": [
-    "pmid:35361110"
-   ],
-   "_registries": {},
-   "_llm_applied": [
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "peak-calling"
-  },
-  {
-   "id": "mast",
+   "id": "MAST",
    "name": "MAST",
-   "description": "Handles zero-inflated single cell assay data using statistical methods and models",
+   "description": "Motif Alignment and Search Tool; ranks sequences by matches to a group of known motifs",
    "categories": [
-    "single-cell"
+    "motif-scanning"
    ],
-   "tier": "core",
-   "homepage": "http://bioconductor.org/packages/release/bioc/html/MAST.html",
-   "repo_url": "https://github.com/RGLab/MAST",
-   "repo_stars": 265,
-   "repo_pushed": "2025-10-17",
-   "repo_archived": false,
-   "repo_language": "R",
+   "tier": "seed",
+   "homepage": "https://meme-suite.org/meme/tools/mast",
+   "repo_url": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
    "repo_license": "",
-   "tool_type": [
-    "Command-line tool",
-    "Library"
-   ],
-   "topics": [
-    "Transcriptomics"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "GPL-2.0",
+   "tool_type": [],
+   "topics": [],
+   "languages": [],
+   "license": "",
    "maturity": "",
    "cost": "",
-   "citations": 0,
+   "citations": null,
    "citation_note": "",
    "year": "",
-   "publication": "pmid:26653891",
-   "biotools_id": "mast",
-   "biotools_url": "https://bio.tools/mast",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Sequence analysis"
+   "publication": "doi:10.1093/bioinformatics/14.1.48",
+   "biotools_id": "",
+   "biotools_url": "",
+   "last_update": "",
+   "source": "curated",
+   "tags": [
+    "meme-suite"
    ],
-   "_select_reason": "curated: fetched by ID",
+   "_operations": [],
+   "_select_reason": "curated seed",
    "_identifiers": [
-    "pmid:26653891"
+    "doi:10.1093/bioinformatics/14.1.48"
    ],
-   "_registries": {
-    "bioconductor": "http://bioconductor.org/packages/release/bioc/html/MAST.html"
-   },
-   "_llm_applied": [
-    "description"
-   ],
+   "_registries": {},
    "featured": "",
-   "primary_category": "single-cell"
+   "primary_category": "motif-scanning"
   },
   {
    "id": "matcha",
@@ -92067,7 +89380,7 @@
    ],
    "tier": "core",
    "homepage": "http://bioconductor.org/packages/release/bioc/html/NuPoP.html",
-   "repo_url": "",
+   "repo_url": "https://github.com/jiping/NuPoP_doc.",
    "repo_stars": null,
    "repo_pushed": "",
    "repo_archived": null,
@@ -96312,56 +93625,6 @@
    "primary_category": "single-cell"
   },
   {
-   "id": "samscope",
-   "name": "Samscope",
-   "description": "Lightweight SAM/BAM file viewer that makes visually exploring NGS data intuitively",
-   "categories": [
-    "peak-calling"
-   ],
-   "tier": "core",
-   "homepage": "http://samscope.dna.bio.keio.ac.jp/",
-   "repo_url": "https://sourceforge.net/projects/samscope/wiki/",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Desktop application"
-   ],
-   "topics": [
-    "ChIP-seq",
-    "RNA-Seq",
-    "Genomics"
-   ],
-   "languages": [
-    "C++"
-   ],
-   "license": "AGPL-3.0",
-   "maturity": "Mature",
-   "cost": "",
-   "citations": 0,
-   "citation_note": "",
-   "year": "",
-   "publication": "pmid:22419785",
-   "biotools_id": "samscope",
-   "biotools_url": "https://bio.tools/samscope",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Read mapping",
-    "Visualisation"
-   ],
-   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
-   "_identifiers": [
-    "pmid:22419785"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "peak-calling"
-  },
-  {
    "id": "SCALE",
    "name": "SCALE",
    "description": "Extracts latent features from single-cell ATAC-seq data for clustering, imputation, and normalisation",
@@ -96414,57 +93677,6 @@
    ],
    "featured": "",
    "primary_category": "single-cell"
-  },
-  {
-   "id": "Scan",
-   "name": "Scan",
-   "description": "Scanning sample-specific miRNA regulation from bulk and single-cell RNA-sequencing data",
-   "categories": [
-    "grn-inference",
-    "single-cell"
-   ],
-   "tier": "core",
-   "homepage": "https://github.com/zhangjunpeng411/Scan",
-   "repo_url": "https://github.com/zhangjunpeng411/Scan",
-   "repo_stars": 7,
-   "repo_pushed": "2024-10-05",
-   "repo_archived": false,
-   "repo_language": "HTML",
-   "repo_license": "AGPL-3.0",
-   "tool_type": [
-    "Script"
-   ],
-   "topics": [
-    "Bioinformatics",
-    "Gene regulation",
-    "Molecular interactions, pathways and networks",
-    "Transcriptomics"
-   ],
-   "languages": [
-    "R",
-    "MATLAB"
-   ],
-   "license": "AGPL-3.0",
-   "maturity": "",
-   "cost": "",
-   "citations": 0,
-   "citation_note": "",
-   "year": "",
-   "publication": "",
-   "biotools_id": "Scan",
-   "biotools_url": "https://bio.tools/Scan",
-   "last_update": "2023-11-17",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Gene regulatory network prediction",
-    "miRNA expression analysis"
-   ],
-   "_select_reason": "operation:Gene regulatory network prediction",
-   "_identifiers": [],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "grn-inference"
   },
   {
    "id": "scan-atac",
@@ -100521,11 +97733,11 @@
    ],
    "tier": "core",
    "homepage": "http://bioconductor.org/packages/release/bioc/html/TFEA.ChIP.html",
-   "repo_url": "https://git.bioconductor.org/packages/TFEA.ChIP",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
+   "repo_url": "https://github.com/yberda/TFEA.ChIP",
+   "repo_stars": 0,
+   "repo_pushed": "2026-06-22",
+   "repo_archived": false,
+   "repo_language": "R",
    "repo_license": "",
    "tool_type": [
     "Library"
@@ -101045,6 +98257,55 @@
    "primary_category": "motif-discovery"
   },
   {
+   "id": "TMB",
+   "name": "TMB",
+   "description": "> LOW CONFIDENCE! | > CORRECT NAME OF TOOL COULD ALSO BE 'iBIOMES', 'Lite', 'iBIOMES Lite', 'nucleosome' | TMB Library of Nucleosome Simulations | Nucleosomes are the fundamental building blocks of chromatin, the biomaterial that houses the genome in all higher organisms",
+   "categories": [
+    "nucleosome-chromatin"
+   ],
+   "tier": "core",
+   "homepage": "http://dna.engr.latech.edu/~tmbshare/",
+   "repo_url": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [
+    "DNA packaging",
+    "Biomaterials",
+    "DNA binding sites"
+   ],
+   "languages": [
+    "C"
+   ],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 0,
+   "citation_note": "",
+   "year": "2019",
+   "publication": "pmid:31490686",
+   "biotools_id": "TMB",
+   "biotools_url": "https://bio.tools/TMB",
+   "last_update": "2020-12-28",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Molecular docking",
+    "Molecular dynamics",
+    "Simulation analysis"
+   ],
+   "_select_reason": "text:\\bnucleosome",
+   "_identifiers": [
+    "pmid:31490686"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "nucleosome-chromatin"
+  },
+  {
    "id": "to_ast",
    "name": "TOAST",
    "description": "Identifies topologically associated domains using graph auto-encoders and clustering on ChIP-seq data",
@@ -101145,63 +98406,6 @@
    ],
    "featured": "",
    "primary_category": "motif-databases"
-  },
-  {
-   "id": "transcriptr",
-   "name": "transcriptR",
-   "description": "An R package for identifying and quantifying de novo continuous regions of transcription across the genome",
-   "categories": [
-    "peak-calling",
-    "nucleosome-chromatin"
-   ],
-   "tier": "core",
-   "homepage": "http://bioconductor.org/packages/release/bioc/html/transcriptR.html",
-   "repo_url": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Command-line tool",
-    "Library"
-   ],
-   "topics": [
-    "Data mining",
-    "Transcriptomics",
-    "Gene transcripts",
-    "RNA-Seq",
-    "ChIP-seq"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "GPL-3.0",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "primary publication shared by 24 tools",
-   "year": "",
-   "publication": "pmid:25633503",
-   "biotools_id": "transcriptr",
-   "biotools_url": "https://bio.tools/transcriptr",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "De-novo assembly",
-    "RNA-Seq analysis",
-    "Transcriptome assembly"
-   ],
-   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
-   "_identifiers": [
-    "pmid:25633503"
-   ],
-   "_registries": {
-    "bioconductor": "http://bioconductor.org/packages/release/bioc/html/transcriptR.html"
-   },
-   "featured": "",
-   "primary_category": "peak-calling"
   },
   {
    "id": "transview",
@@ -102542,6 +99746,59 @@
    "_llm_applied": [
     "description"
    ],
+   "featured": "",
+   "primary_category": "peak-calling"
+  },
+  {
+   "id": "x2k",
+   "name": "X2K",
+   "description": "Method to identify upstream regulators likely responsible for observed patterns in genome-wide gene expression",
+   "categories": [
+    "peak-calling"
+   ],
+   "tier": "core",
+   "homepage": "http://www.maayanlab.net/X2K",
+   "repo_url": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Desktop application"
+   ],
+   "topics": [
+    "Proteins",
+    "ChIP-seq",
+    "Gene expression",
+    "Systems biology",
+    "Gene transcripts",
+    "Protein interactions",
+    "Transcriptomics"
+   ],
+   "languages": [
+    "Java"
+   ],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 0,
+   "citation_note": "",
+   "year": "2012",
+   "publication": "pmid:22080467",
+   "biotools_id": "x2k",
+   "biotools_url": "https://bio.tools/x2k",
+   "last_update": "2024-11-24",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Gene expression analysis"
+   ],
+   "_select_reason": "curated: fetched by ID",
+   "_identifiers": [
+    "pmid:22080467"
+   ],
+   "_registries": {},
    "featured": "",
    "primary_category": "peak-calling"
   },

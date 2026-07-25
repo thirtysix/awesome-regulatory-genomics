@@ -4,7 +4,7 @@ Generated 2026-07-26 by `make audit`, against [`curation/benchmark.yaml`](../cur
 
 The benchmark is a hand-written list of resources the field treats as standard. It is not a ranking and not exhaustive. It exists so that "did the pipeline find the obvious things?" is a measurement rather than an impression.
 
-**89 of 89 benchmark tools present (100%).** Catalog size: 1869 tools.
+**89 of 89 benchmark tools present (100%).** Catalog size: 1817 tools.
 
 No misses.
 
@@ -34,7 +34,7 @@ No misses.
 | FIMO | ✅ | FIMO | curated seed |
 | CentriMo | ✅ | CentriMo | curated seed |
 | AME | ✅ | AME | curated seed |
-| MAST | ✅ | MAST | bio.tools |
+| MAST | ✅ | MAST | curated seed |
 | MOODS | ✅ | MOODS | bio.tools |
 | PWMScan | ✅ | PWMScan | bio.tools |
 | Cluster-Buster | ✅ | Cluster Buster | bio.tools |

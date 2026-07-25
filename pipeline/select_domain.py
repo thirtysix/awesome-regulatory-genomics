@@ -28,8 +28,8 @@ from collections import Counter
 
 from jsonio import read_json, write_json
 from config import (DOMAIN_TOPICS, EXCLUDE_TEXT_PATTERNS, HARD_EXCLUDE_PATTERNS,
-                    KEEP_TEXT_PATTERNS, RAW, STRONG_OPERATIONS,
-                    STRONG_TEXT_PATTERNS, WEAK_OPERATIONS)
+                    KEEP_TEXT_PATTERNS, RAW, SEED_BIOTOOLS_IDS,
+                    STRONG_OPERATIONS, STRONG_TEXT_PATTERNS, WEAK_OPERATIONS)
 
 SWEEP = RAW / "biotools_sweep.json.gz"
 SELECTED = RAW / "selected.json.gz"
@@ -55,14 +55,33 @@ def text_blob(tool: dict) -> str:
     return f"{tool.get('name', '')}. {tool.get('description', '')}"
 
 
+def lead_blob(tool: dict, sentences: int = 2) -> str:
+    """Name plus the opening sentences: what the tool actually is.
+
+    bio.tools descriptions often concatenate the tool's own summary with a lab
+    or portal blurb ("We are the Providers of ... Drug design software"), or
+    with a second record joined by " | ". Hard exclusions are matched against
+    this leading portion so a footer cannot disqualify the tool.
+    """
+    desc = (tool.get("description") or "").split(" | ")[0]
+    parts = re.split(r"(?<!e\.g)(?<!i\.e)(?<!etc)(?<!vs)\.\s+", desc.strip())
+    return f"{tool.get('name', '')}. " + ". ".join(parts[:sentences])
+
+
 def classify(tool: dict) -> tuple[str | None, str]:
     """Return (tier, reason). tier is None when the record is rejected."""
     blob = text_blob(tool)
     ops = operations(tool)
 
-    # A hard exclusion names another field's core object and beats everything.
+    # A hard exclusion names another field's core object and beats everything,
+    # but it is tested only against the LEADING description, not the whole
+    # record. bio.tools entries frequently append institutional boilerplate:
+    # SEProm, a prokaryotic promoter predictor, carries "We are the Providers
+    # of ... Protein structure prediction tool ... Drug design software" from
+    # its host lab, and matching that would exclude the tool on the strength of
+    # its web page footer.
     for rx in HARD_RE:
-        if rx.search(blob):
+        if rx.search(lead_blob(tool)):
             return None, f"hard-excluded:{rx.pattern[:30]}"
 
     # An unambiguous domain phrase settles it, and beats the soft exclusions: those
@@ -105,8 +124,13 @@ def classify(tool: dict) -> tuple[str | None, str]:
 def main() -> None:
     sweep = read_json(SWEEP)
     provenance = sweep.get("provenance", {})
-    # Hand-vetted records fetched by ID skip the filter by construction.
-    forced = set(sweep.get("forced") or [])
+    # Hand-vetted records skip the filter by construction. config is the single
+    # source of truth, NOT the sweep's stored copy: unioning the two made
+    # additions work but silently ignored removals, so a record deleted from
+    # SEED_BIOTOOLS_IDS stayed curated until the next re-harvest. That is how
+    # bio.tools' `mast` (the single-cell package, not the MEME Suite scanner)
+    # survived being taken off the list.
+    forced = set(SEED_BIOTOOLS_IDS)
 
     kept, dropped, why = [], [], Counter()
     for tool in sweep["list"]:

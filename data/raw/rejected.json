@@ -1,5 +1,5 @@
 {
- "count": 1501,
+ "count": 1497,
  "list": [
   {
    "biotoolsID": "imimic_iint",
@@ -1082,18 +1082,6 @@
    ]
   },
   {
-   "biotoolsID": "presrat",
-   "name": "PresRAT",
-   "reason": "hard-excluded:\\bdocking\\b|\\bmolecular dynami",
-   "description": "A server for identification of bacterial small-RNA sequences and their targets with probable binding region.\n\nPredicting small RNAs and their Targets.\n\nHere, we present a webserver, PresRAT which aims",
-   "operations": [
-    "Molecular dynamics",
-    "RNA secondary structure analysis",
-    "cis-regulatory element prediction",
-    "trans-regulatory element prediction"
-   ]
-  },
-  {
    "biotoolsID": "riboflow-switches",
    "name": "riboflow",
    "reason": "hard-excluded:\\briboswitch|\\bribosome profil",
@@ -1102,17 +1090,6 @@
     "Expression analysis",
     "Sequence assembly",
     "cis-regulatory element prediction"
-   ]
-  },
-  {
-   "biotoolsID": "seprom",
-   "name": "SEProm",
-   "reason": "hard-excluded:\\bprotein (crystall|folding|st",
-   "description": "A novel method SEProm for prokaryotic promoter prediction based on DNA structure and energetics.\n\nSupercomputing Facility for Bioinformatics & Computational Biology, IIT Delhi.\n\nWe are the Providers o",
-   "operations": [
-    "DNA structure prediction",
-    "Promoter prediction",
-    "Regression analysis"
    ]
   },
   {
@@ -3091,7 +3068,7 @@
   {
    "biotoolsID": "coach-d",
    "name": "COACH-D",
-   "reason": "hard-excluded:\\bdocking\\b|\\bmolecular dynami",
+   "reason": "excluded:\\bdocking\\b|\\bmolecular dynamics",
    "description": "Protein-ligand binding site prediction. First, five individual methods are used to predict the ligand-binding pockets and residues. Then the ligands (from the templates or the user) are the docked int",
    "operations": [
     "Nucleic acid feature detection",
@@ -5348,7 +5325,7 @@
   {
    "biotoolsID": "roseap",
    "name": "RoseAP",
-   "reason": "hard-excluded:\\bPROSITE\\b|\\bHAMAP\\b|\\bPfam\\b",
+   "reason": "excluded:\\bPROSITE\\b|\\bHAMAP\\b|\\bPfam\\b|\\",
    "description": "RoseAP is an analytical platform for gene function of Rosa rugosa . Users can submit locus IDs to quickly search for co-expression networks, expression profile. Additionally, the basic structural and ",
    "operations": [
     "Expression correlation analysis",
@@ -6701,7 +6678,7 @@
   {
    "biotoolsID": "pepsickle",
    "name": "pepsickle",
-   "reason": "hard-excluded:\\bMHC (class )?(I|II)\\b|\\bepit",
+   "reason": "excluded:\\bMHC (class )?(I|II)\\b|\\bepitop",
    "description": "pepsickle is an open-source command line tool for proteasomal cleavage prediction. pepsickle is designed with flexibility in mind allows for the use of either direct amino acid sequences or the use of",
    "operations": [
     "Epitope mapping",
@@ -10655,7 +10632,7 @@
   {
    "biotoolsID": "PLUMED_nest",
    "name": "PLUMED",
-   "reason": "hard-excluded:\\bdocking\\b|\\bmolecular dynami",
+   "reason": "excluded:\\bdocking\\b|\\bmolecular dynamics",
    "description": "Promoting transparency and reproducibility in enhanced molecular simulations | The public repository of the PLUMED consortium | PLUMED-NEST is the public repository of the PLUMED consortium. It provid",
    "operations": [
     "Molecular dynamics",
@@ -11829,17 +11806,6 @@
     "Genome assembly",
     "Read mapping",
     "Scaffolding"
-   ]
-  },
-  {
-   "biotoolsID": "TMB",
-   "name": "TMB",
-   "reason": "hard-excluded:\\bdocking\\b|\\bmolecular dynami",
-   "description": "> LOW CONFIDENCE! | > CORRECT NAME OF TOOL COULD ALSO BE 'iBIOMES', 'Lite', 'iBIOMES Lite', 'nucleosome' | TMB Library of Nucleosome Simulations | Nucleosomes are the fundamental building blocks of ch",
-   "operations": [
-    "Molecular docking",
-    "Molecular dynamics",
-    "Simulation analysis"
    ]
   },
   {
@@ -13245,15 +13211,6 @@
    ]
   },
   {
-   "biotoolsID": "x2k",
-   "name": "X2K",
-   "reason": "hard-excluded:\\bphosphorylat|\\bkinase substr",
-   "description": "Method to identify upstream regulators likely responsible for observed patterns in genome-wide gene expression. By integrating ChIP-seq/chip and position-weight-matrices (PWMs) data, protein-protein i",
-   "operations": [
-    "Gene expression analysis"
-   ]
-  },
-  {
    "biotoolsID": "waveqtl",
    "name": "WaveQTL",
    "reason": "no-match",
@@ -13679,17 +13636,6 @@
     "Sequence assembly validation",
     "Sequencing quality control",
     "Splitting"
-   ]
-  },
-  {
-   "biotoolsID": "AppleMDO",
-   "name": "AppleMDO",
-   "reason": "hard-excluded:\\bPROSITE\\b|\\bHAMAP\\b|\\bPfam\\b",
-   "description": "A Multi-Dimensional Omics Database for Apple Co-Expression Networks and Chromatin States.\n\nAppleMDO is a multi-dimensional omics database. Users can submit locus IDs to quickly search for co-expressio",
-   "operations": [
-    "Gene functional annotation",
-    "Gene-set enrichment analysis",
-    "Pathway or network prediction"
    ]
   },
   {
@@ -14808,7 +14754,7 @@
   {
    "biotoolsID": "x-omics_action_demonstrator_multi-omics_analysis_workflow",
    "name": "X-omics ACTION demonstrator multi-omics analysis workflow",
-   "reason": "hard-excluded:\\bmass spectrometr|\\bLC-MS\\b|\\",
+   "reason": "no-match",
    "description": "This multi-omics data analysis workflow was developed as part of a case study investigating shared patterns between multi-omics data and childhood externalizing behaviour. The modular Nextflow workflo",
    "operations": []
   },
@@ -16246,6 +16192,15 @@
    "operations": [
     "Exonic splicing enhancer prediction",
     "Variant classification"
+   ]
+  },
+  {
+   "biotoolsID": "mast",
+   "name": "MAST",
+   "reason": "no-match",
+   "description": "Methods and models for handling zero-inflated single cell assay data.",
+   "operations": [
+    "Sequence analysis"
    ]
   }
  ]
