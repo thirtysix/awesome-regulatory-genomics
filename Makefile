@@ -1,7 +1,8 @@
 PY ?= python3
+PORT ?= 8000        # override if 8000 is taken: make serve PORT=8420
 PIPELINE := $(PY) pipeline
 
-.PHONY: all harvest select enrich links build render audit curate refresh clean check serve llm bench
+.PHONY: all harvest select enrich links build render audit curate refresh clean check serve llm bench verify-additions
 
 ## build everything from the existing sweep (no network beyond enrichment)
 all: select enrich links build render audit
@@ -40,6 +41,10 @@ audit:
 llm:
 	$(PIPELINE)/llm_assist.py --jobs categorise,describe,adjudicate,verify-scope
 
+## OPTIONAL: third-model check on records added by hand or by a text rule
+verify-additions:
+	$(PIPELINE)/verify_additions.py
+
 ## OPTIONAL: benchmark candidate models on this task before choosing one
 bench:
 	$(PIPELINE)/bench_models.py --n 40
@@ -51,9 +56,9 @@ build-strict:
 ## regenerate README + site only, after editing curation/*.yaml
 curate: build render
 
-## serve the site locally
+## serve the site locally (make serve PORT=8420 if 8000 is in use)
 serve:
-	$(PY) -m http.server 8000 --directory docs
+	$(PY) -m http.server $(PORT) --directory docs
 
 check:
 	$(PY) -c "import json,sys; c=json.load(open('data/catalog.json')); \

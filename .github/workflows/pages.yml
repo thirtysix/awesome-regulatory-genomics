@@ -1,0 +1,40 @@
+name: Deploy site
+
+# Publishes docs/ to GitHub Pages whenever the built site changes on main,
+# which in practice means when a catalog-refresh PR is merged.
+#
+# Kept separate from refresh.yml on purpose: that workflow opens a pull request
+# instead of committing, so a deploy chained to it would publish the docs as
+# they were BEFORE the refresh.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deploy finish rather than cancelling it mid-publish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - id: deploy
+        uses: actions/deploy-pages@v4

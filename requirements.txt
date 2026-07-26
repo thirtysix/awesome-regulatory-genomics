@@ -1,0 +1,5 @@
+# Runtime dependencies for the pipeline. Python 3.12+.
+#   requests  - all HTTP (bio.tools, GitHub, OpenAlex, Crossref, DeepInfra)
+#   PyYAML    - the curation files and the proposals/overlay merge
+requests>=2.31
+PyYAML>=6.0

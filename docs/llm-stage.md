@@ -47,7 +47,7 @@ Do not pick from a leaderboard. Two facts make measurement necessary:
 
 1. A general intelligence index does not predict performance on a narrow
    structured-classification task. The
-   [`deepinfra-models`](file:///home/harl/.claude/skills/deepinfra-models) registry
+   `deepinfra-models` skill registry
    records a case where the two highest-ranked open models agreed with a
    mid-ranked one 96–98% of the time on a narrow triage task, surfaced nothing
    it missed, and cost 2–3× more.

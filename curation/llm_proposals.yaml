@@ -12289,147 +12289,112 @@ majority_out_of_scope:
     description: Identifying Fertility-Related Proteins by Incorporating Deep-Gated Recurrent Units and
       Original Position-Specific Scoring Matrix Profiles | Identifying fertilit
     name: Fertility-GRU
-  PeSA:
+  Meffil:
     against:
     - bulk
     - third
-    description: The Software Tool for Peptide Specificity Analysis (PeSA) is an open-source software
-      designed as a tool to use in the analysis of peptide arrays, permutation ar
-    name: PeSA
-  PsyMuKB:
-    against:
-    - bulk
-    - third
-    description: An Integrative De Novo Variant Knowledge Base for Developmental Disorders
-    name: PsyMuKB
-  REPIC:
-    against:
-    - bulk
-    - third
-    description: Explores N6-methyladenosine methylome data for genome visualisation, peak calling, and
-      query retrieval
-    name: REPIC
+    description: 'algorithms for analyzing DNA methylation data generated using Infinium HumanMethylation450
+      or MethylationEPIC BeadChips
+
+      Epigenome-Wide Association Studies (EWAS'
+    name: Meffil
   Scan:
     against:
     - bulk
     - second
     description: Scanning sample-specific miRNA regulation from bulk and single-cell RNA-sequencing data
     name: Scan
-  VirtualCytometry:
+  StanEx1:
     against:
     - bulk
     - third
-    description: '> HOMEPAGE MISSING! | a webserver for evaluating immune cell differentiation using single-cell
-      RNA sequencing data | MOTIVATION:The immune system has diverse ty'
-    name: VirtualCytometry
-  acep:
+    description: Interscholastic Network To Generate LexA Enhancer Trap Lines in Drosophila.
+    name: StanEx1
+  aging-atlas:
     against:
     - bulk
     - third
-    description: ACEP is a deep learning model for high-throughput antibacterial peptide recognition
-    name: ACEP
-  alphabet:
-    against:
-    - bulk
-    - third
-    description: Alphabet takes a database of aligned protein sequences in BLOCKS+ format and examines
-      the alignments column-wise looking for groups of amino acids that co-occur
-    name: Alphabet
+    description: Aging Atlas is a curated biomedical database comprising a range of aging-related multi-omics
+      datasets (i.e. transcriptomics, single-cell transcriptomics, epigen
+    name: Aging Atlas
   aptcompare:
     against:
     - bulk
     - third
     description: A method for optimized de novo motif discovery of RNA aptamers via HTS-SELEX.
     name: AptCompare
-  bsdb:
-    against:
-    - bulk
-    - second
-    description: Provides information about mechanostability of proteins
-    name: BSDB
-  bsdd:
+  atlasxploretm:
     against:
     - bulk
     - third
-    description: BSDD (Biomolecules Segment Display Device) searches for and displays user defined sequence
-      motifs in known protein structures
-    name: BSDD
-  bwtool:
+    description: Web platform for visualizing and sharing spatial epigenome data.
+    name: AtlasXploreTM
+  bacon:
     against:
     - bulk
     - third
-    description: Command-line utility for bigWig files
-    name: bwtool 1.0 gamma
-  cell2location:
+    description: This tool can be used to remove inflation and bias often observed in epigenome- and transcriptome-wide
+      association studies by constructing an empirical null dis
+    name: bacon
+  cdna-detector:
     against:
     - bulk
     - third
-    description: Cell2location is a software tool for spatial transcriptomics deconvolution, enabling
-      the inference of cell type abundances within spatial data
-    name: Cell2location
-  cernaseek:
+    description: cDNA-detector is a Python tool for detecting and removing contaminating cDNA from vectors
+      and other sources in DNA-Seq data (ATAC-Seq, ChIP-Seq, WES, etc).
+    name: cDNA-detector
+  chipwig:
     against:
     - bulk
     - third
-    description: CeRNASeek is an R package for identification and analysis of ceRNA regulation
-    name: CeRNASeek
-  chip-seq-analysis:
+    description: Random access-enabling lossless and lossy compression method for ChIP-seq data.
+    name: ChIPWig
+  d-mirt:
     against:
     - bulk
     - third
-    description: Estimates population size for quality control of ChIP-Seq datasets
-    name: ChIP-Seq
-  cnvxplorer:
+    description: D-miRT is a two-stream convolutional neural network for microRNA transcription start
+      site feature integration and identification.
+    name: D-miRT
+  discovery_environment:
     against:
     - bulk
     - third
-    description: CNVxplorer is a web server suited for the functional assessment of CNVs in a clinical
-      diagnostic setting
-    name: CNVxplorer
-  coverageview:
+    description: Numerous methods for expression and promoter analysis.
+    name: Discovery Environment
+  driverpower:
     against:
     - bulk
     - third
-    description: Visualise genome coverage profiles from read mapping data
-    name: CoverageView
-  e1ds:
-    against:
-    - bulk
-    - third
-    description: E1DS is a web server for enzyme catalytic site prediction
-    name: E1DS
-  edger:
-    against:
-    - bulk
-    - third
-    description: Differential expression analysis of RNA-seq expression profiles with biological replication
-    name: edgeR
+    description: DriverPower is a tool used to discover potential coding and non-coding cancer driver
+      elements from tumour whole-genome or whole-exome somatic mutations.
+    name: DriverPower
   effectR:
     against:
     - bulk
     - third
     description: R package to predict candidate RxLR and CRN effectors in oomycetes using motif searches.
     name: effectR
-  escdb:
+  epivisr:
     against:
     - bulk
     - third
-    description: Aggregates human and mouse embryonic stem cell datasets for expression and protein analysis
-    name: ESCDb
-  exomepeak:
+    description: A Tool for Exploratory Data Analysis and Visualisation within Epigenome Wide Methylation
+      Analyses (EWAS).
+    name: EpiVisR
+  erma:
     against:
     - bulk
     - third
-    description: The package is developed for the analysis of affinity-based epitranscriptome shortgun
-      sequencing data from MeRIP-seq (maA-seq)
-    name: exomePeak
-  express:
+    description: Software and data to support epigenomic road map adventures.
+    name: erma
+  ewas_open_platform:
     against:
     - bulk
     - third
-    description: Streaming tool for quantifying the abundances of a set of target sequences from sampled
-      subsequences
-    name: eXpress
+    description: EWAS Open Platform is a comprehensive analysis suite that integrates EWAS Atlas, EWAS
+      Data Hub and EWAS Toolkit for epigenome-wide association studies.
+    name: EWAS
   fingerprintscan:
     against:
     - bulk
@@ -12443,69 +12408,65 @@ majority_out_of_scope:
     - third
     description: Motif discovery and characterization program for proteins based on mutual information
     name: FIRE-pro
-  hlungdb:
+  gdcrnatools:
     against:
     - bulk
     - third
-    description: Integrates lung cancer-related genes, proteins, miRNAs and clinical information
-    name: HLungDB
-  iProDNA-CapsNet:
+    description: Easy-to-use package for downloading, organizing, and integrative analyzing RNA expression
+      data in GDC with an emphasis on deciphering the lncRNA-mRNA related ce
+    name: GDCRNATools
+  genecodis:
     against:
     - bulk
     - third
-    description: Identifies protein-DNA binding residues using capsule neural networks
-    name: iProDNA-CapsNet
-  impulsede2:
+    description: GeneCodis is a web-based tool for the ontological analysis of lists of genes, proteins,
+      and regulatory elements like miRNAs, transcription factors, and CpGs.
+    name: GeneCodis
+  giloop:
     against:
     - bulk
     - third
-    description: It is a differential expression algorithm for longitudinal count data sets which arise
-      in sequencing experiments such as RNA-seq, ChIP-seq, ATAC-seq and DNaseI-
-    name: ImpulseDE2
-  ioda:
+    description: GILoop is a deep learning model for detecting CTCF-mediated loops on Hi-C contact maps.
+    name: GILoop
+  hi-c_aggregate:
     against:
     - bulk
     - third
-    description: Integrates heterogeneous multi-omics data to analyse cancer pathway consistency
-    name: iODA
+    description: A global high-density chromatin interaction network reveals functional long-range and
+      trans-chromosomal relationships.
+    name: Hi-C Aggregate
+  iepicas-dl:
+    against:
+    - bulk
+    - third
+    description: Predicting sgRNA activity for CRISPR-mediated epigenome editing by deep learning.
+    name: iEpiCas-DL
+  igliosub:
+    against:
+    - bulk
+    - third
+    description: An integrative transcriptomic and epigenomic classifier for glioblastoma molecular subtypes.
+    name: iGlioSub
+  introme:
+    against:
+    - bulk
+    - third
+    description: Introme accurately predicts the impact of coding and noncoding variants on gene splicing,
+      with clinical applications.
+    name: Introme
   maracas:
     against:
     - bulk
     - third
-    description: Performs functional enrichment analysis for microalgae RNA-seq and ChIP-seq data
+    description: ALGAEFUN with MARACAS, microALGAE FUNctional enrichment tool for MicroAlgae RnA-seq and
+      Chip-seq AnalysiS.
     name: MARACAS
-  mast:
-    against:
-    - second
-    - third
-    description: Handles zero-inflated single cell assay data using statistical methods and models
-    name: MAST
-  metaboverse:
-    against:
-    - bulk
-    - second
-    description: Automated exploration and contextualization of metabolic data
-    name: Metaboverse
-  miringo:
+  mea:
     against:
     - bulk
     - third
-    description: Prediction of biological processes indirectly targeted by human microRNAs
-    name: miRinGO
-  mirvestigator:
-    against:
-    - bulk
-    - third
-    description: Identifies miRNAs mediating co-regulation of gene expression patterns in transcriptome
-      profiling data via a web interface
-    name: miRvestigator
-  moonlightr:
-    against:
-    - bulk
-    - third
-    description: 'The understanding of cancer mechanism requires the identification of genes playing a
-      role in the development of the pathology and the characterization of their '
-    name: MoonlightR
+    description: A Methylomic and Epigenomic Allele-specific analysis pipeline
+    name: MEA
   motif3d:
     against:
     - bulk
@@ -12513,49 +12474,34 @@ majority_out_of_scope:
     description: Protein structure viewer for visualizing sequence motifs contained in the PRINTS database
       on 3D structures.
     name: Motif3D
-  mqtl.nmr:
-    against:
-    - bulk
-    - second
-    description: Provides a complete mQTL analysis pipeline for 1H NMR data
-    name: mQTL.NMR
-  nbia:
-    against:
-    - bulk
-    - third
-    description: A network-based integrative analysis framework
-    name: NBIA
-  ngphubinh:
-    against:
-    - bulk
-    - third
-    description: Classification of adaptor proteins using recurrent neural networks and PSSM profiles
-    name: ngphubinh
-  noisyr:
-    against:
-    - bulk
-    - second
-    description: Quantifies and removes technical noise from high-throughput sequencing data
-    name: noisyR
   numbat-multiome:
     against:
     - bulk
     - third
-    description: Infers copy number variations from single-cell RNA and chromatin accessibility data
+    description: Numbat-multiome is a tool for inferring copy number variations from single-cell RNA and
+      chromatin accessibility data, combining scRNA-seq and scATAC-seq dataset
     name: Numbat-multiome
-  oRNAment:
+  pareidolia:
     against:
     - bulk
     - third
-    description: A database of putative RNA binding protein target sites in the transcriptomes of model
-      species
-    name: oRNAment
-  phyto-lrr:
+    description: Detection of intensity changes in Hi-C patterns (chromatin loops, domain borders, ...)
+      two groups of samples.
+    name: pareidolia
+  pash:
     against:
     - bulk
     - third
-    description: Identification and characterization of the LRR repeats in plant LRR-RLKs
-    name: Phyto-LRR
+    description: Pash 3.0 performs sequence comparison and read mapping and can be employed as a module
+      within diverse configurable analysis pipelines, including ChIP-seq and me
+    name: PASH
+  pipipes:
+    against:
+    - bulk
+    - third
+    description: Coordinated set of pipelines to analyze piRNA (PIWI-interacting RNAs) and transposon-derived
+      RNAs from a variety of high-throughput sequencing libraries, includ
+    name: piPipes
   pombase_motif_search:
     against:
     - bulk
@@ -12569,48 +12515,31 @@ majority_out_of_scope:
     description: A Structure and Sequence Motif Co-Driven Protein-Protein Interaction Mining and Modeling
       Computational Method.
     name: PPI-Miner
-  protedna:
-    against:
-    - bulk
-    - third
-    description: Identifies sequence-specific binding residues in transcription factor protein-DNA interactions
-    name: ProteDNA
   protomata:
     against:
     - bulk
     - third
     description: Motif search and discovery in protein sequences.
     name: Protomata
-  qbed:
-    against:
-    - bulk
-    - third
-    description: a novel genome browser visualization for point processes
-    name: qBED
-  qdrip:
-    against:
-    - bulk
-    - third
-    description: a method to quantitatively assess RNA-DNA hybrid formation genome-wide
-    name: qDRIP
   rbscore:
     against:
     - bulk
     - third
     description: RNA binding score is a web server to predict RNA/DNA binding sites on proteins.
     name: RBscore
+  renco:
+    against:
+    - bulk
+    - third
+    description: A C++ based software for automatic generation of ordinary differential equations for
+      gene and protein expression dynamics in artificial regulatory networks.
+    name: RENCO
   rnamotifscanx:
     against:
     - bulk
     - third
     description: RNAMotifScanX is a motif search tool based on a base-interaction graph alignment algorithm.
     name: RNAMotifScanX
-  samscope:
-    against:
-    - bulk
-    - third
-    description: Lightweight SAM/BAM file viewer that makes visually exploring NGS data intuitively
-    name: Samscope
   seemotif:
     against:
     - bulk
@@ -12618,40 +12547,47 @@ majority_out_of_scope:
     description: Allows users to interactively visualize sequence motifs on protein structures from Protein
       Data Bank (PDB).
     name: seeMotif
-  slimfinder:
+  sigprofilertopography:
     against:
     - bulk
     - third
-    description: De novo motif discovery tool for short linear motifs (SLiMs)
-    name: SLiMFinder
-  slimscape:
+    description: SigProfilerTopography is a Python package that allows evaluating the effect of chromatin
+      organization and other genomic features on mutational signatures in can
+    name: SigProfilerTopography
+  snapfish:
     against:
     - bulk
     - third
-    description: Perform short linear motif analyses of protein interaction networks by integrating motif
-      discovery and search tools in a network visualization environment
-    name: SLiMScape 3
-  smartiv:
+    description: Computational pipeline to identify chromatin loops from multiplexed DNA FISH data.
+    name: SnapFISH
+  tcbf:
     against:
     - bulk
     - third
-    description: Discovering and visualizing combined RNA sequence and structure motifs from high-throughput
-      RNA-binding data, generated from in-vivo experiments
-    name: SMARTIV
-  transcriptr:
+    description: A novel user-friendly tool for pan-3 d genome analysis of topologically associating domain
+      in eukaryotic organisms.
+    name: Tcbf
+  transcrispr:
     against:
     - bulk
     - third
-    description: An R package for identifying and quantifying de novo continuous regions of transcription
-      across the genome
-    name: transcriptR
-  vgo:
+    description: TransCRISPR-sgRNA design tool for CRISPR/Cas9 experiments targeting specific sequence
+      motifs.
+    name: transCRISPR
+  trdistiller:
     against:
     - bulk
     - third
-    description: Viral Genome Organizer is a genome browser that can be used to display information about
-      a genome, its genes, ORFs and start/stop codons
-    name: VGO
+    description: A rapid filter that is based on the comparison of composition and order of short strings
+      in the adjacent sequence motifs.
+    name: TRDistiller
+  wregex:
+    against:
+    - bulk
+    - third
+    description: Software tool for amino acid motif searching using weighted regular expression and regular
+      expressions with a Position-Specific Scoring Matrix
+    name: Wregex
 out_of_scope_confirmed:
   3DGV:
     agreed_by:

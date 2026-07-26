@@ -1,8 +1,12 @@
 name: Refresh catalog
 
 # Re-harvests bio.tools, refreshes repository activity and citation counts, and
-# opens a pull request if anything changed. Runs monthly rather than on every
-# push, since the upstream data moves slowly and the sweep is not free.
+# opens a pull request if anything changed. Monthly rather than on every push:
+# the upstream data moves slowly and a full sweep takes over an hour.
+#
+# This job deliberately does NOT deploy the site. It opens a PR rather than
+# committing to main, so anything chained to it would publish the pre-refresh
+# docs. Deployment lives in pages.yml and triggers when the PR is merged.
 on:
   schedule:
     - cron: "0 4 1 * *"     # 04:00 UTC on the 1st of each month
@@ -15,6 +19,8 @@ permissions:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    timeout-minutes: 240      # enrichment alone runs ~40 min against live APIs
+
     steps:
       - uses: actions/checkout@v4
 
@@ -27,6 +33,8 @@ jobs:
 
       - name: Harvest, enrich and rebuild
         env:
+          # Raises the GitHub API limit from 60 to 5,000 requests/hour, which
+          # the repository-metadata step needs.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: make refresh
 
@@ -47,23 +55,7 @@ jobs:
             dropped tools both show up there. If a whole class of tools appeared
             or vanished, the selection rules in `pipeline/config.py` are the
             likely cause, not upstream data.
-          delete-branch: true
 
-  pages:
-    needs: refresh
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs
-      - id: deploy
-        uses: actions/deploy-pages@v4
+            `docs/coverage.md` is regenerated too. If benchmark recall dropped,
+            treat that as a blocker rather than noise.
+          delete-branch: true

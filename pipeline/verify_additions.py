@@ -29,10 +29,12 @@ from datetime import date
 
 import yaml
 
-from config import CURATION, DATA, DOCS, SEED_BIOTOOLS_IDS
+from config import CURATION, DATA, DOCS, RAW, SEED_BIOTOOLS_IDS
+from jsonio import read_json
 from llm_assist import CATEGORISE_SYSTEM, call, digest, parse_json, tool_prompt
+from mdutil import cell
 
-CATALOG = DATA / "catalog.json"
+ENRICHED = RAW / "enriched.json.gz"
 CACHE = DATA / "cache" / "llm.json"
 REPORT = DOCS / "addition-review.md"
 PROPOSALS = CURATION / "llm_proposals.yaml"
@@ -52,7 +54,24 @@ def main() -> None:
     if not api_key:
         sys.exit("DEEPINFRA_API_KEY is not set.")
 
-    tools = json.loads(CATALOG.read_text())["tools"]
+    # Read the SELECTED records, not the built catalog. build.py drops what this
+    # stage votes out, so voting on its output oscillates: with the records
+    # dropped there is nothing left to vote against, the next build restores
+    # them, the next run votes them out again, and the catalog flips by ~57
+    # tools on every cycle. Judging the pre-drop set makes the verdict a
+    # function of the data rather than of the previous run.
+    tools = [{"id": t["biotoolsID"],
+              "name": t["name"],
+              "description": t.get("description") or "",
+              "_select_reason": t.get("_select_reason", ""),
+              "_operations": sorted({op["term"]
+                                     for fn in t.get("function") or []
+                                     for op in fn.get("operation") or []}),
+              "topics": [x["term"] for x in t.get("topic") or []],
+              "tool_type": t.get("toolType") or [],
+              "biotools_url": f"https://bio.tools/{t['biotoolsID']}",
+              "homepage": t.get("homepage") or ""}
+             for t in read_json(ENRICHED)["list"]]
     curated = set(SEED_BIOTOOLS_IDS)
     # Records admitted by hand, or by a text rule rather than an ontology term.
     # Those admitted by a STRONG EDAM operation are left alone: they were not
@@ -151,9 +170,9 @@ def main() -> None:
         out += ["| Tool | Admitted because | Model's objection |", "| --- | --- | --- |"]
         for t, res in disputed:
             why = "hand-listed by ID" if t["id"] in curated else t.get("_select_reason", "")[:44]
-            out.append(f"| [{t['name']}]({t['biotools_url'] or t['homepage']}) | {why} | "
-                       f"confidence {res.get('confidence', '?')}, "
-                       f"categories {res.get('categories') or 'none'} |")
+            out.append(f"| [{cell(t['name'])}]({t['biotools_url'] or t['homepage']}) "
+                       f"| {cell(why, 46)} | confidence {cell(res.get('confidence', '?'))}, "
+                       f"categories {cell(', '.join(res.get('categories') or []) or 'none')} |")
         out.append("")
 
     DOCS.mkdir(parents=True, exist_ok=True)

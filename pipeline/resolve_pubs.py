@@ -30,6 +30,7 @@ import requests
 
 from config import CACHE, CURATION, DOCS, RAW
 from jsonio import read_json
+from mdutil import cell
 
 ENRICHED = RAW / "enriched.json.gz"
 PUBMAP = CACHE / "publication_map.json"
@@ -233,13 +234,13 @@ def main() -> None:
                 "404s is worse than no link.", "",
                 "| DOI | HTTP |", "| --- | --- |"]
         for d, e in sorted(broken.items()):
-            out.append(f"| `{d}` | {e.get('http', '?')} |")
+            out.append(f"| `{cell(d)}` | {cell(e.get('http', '?'))} |")
         out.append("")
     if upgraded:
         out += ["## Upgraded to the published version", "", "| Preprint | Published |",
                 "| --- | --- |"]
         for d, pub in sorted(upgraded.items()):
-            out.append(f"| `{d}` | [`{pub}`](https://doi.org/{pub}) |")
+            out.append(f"| `{cell(d)}` | [`{cell(pub)}`](https://doi.org/{pub}) |")
         out.append("")
 
     if not args.skip_curated_check:
@@ -254,7 +255,7 @@ def main() -> None:
                 f"{len(flagged)} of the hand-written identifiers want a look.", "",
                 "| Tool | Identifier | Flag | Title |", "| --- | --- | --- | --- |"]
         for name, val, why, title in flagged:
-            out.append(f"| {name} | `{val}` | {why} | {title} |")
+            out.append(f"| {cell(name)} | `{cell(val)}` | {cell(why)} | {cell(title, 90)} |")
         out.append("")
         print(f"hand-written publications flagged for review: {len(flagged)}")
 

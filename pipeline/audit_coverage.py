@@ -23,6 +23,7 @@ import yaml
 
 from jsonio import read_json
 from config import BIOTOOLS_API, CURATION, DATA, DOCS, RAW
+from mdutil import cell
 
 CATALOG = DATA / "catalog.json"
 BENCHMARK = CURATION / "benchmark.yaml"
@@ -151,7 +152,7 @@ def main() -> None:
         A("| Group | Tool | Diagnosis |")
         A("| --- | --- | --- |")
         for group, name, reason in misses:
-            A(f"| {group} | {name} | {reason} |")
+            A(f"| {cell(group)} | {cell(name)} | {cell(reason)} |")
         A("")
     else:
         A("No misses.")
@@ -167,7 +168,7 @@ def main() -> None:
         A("| --- | :---: | --- | --- |")
         for name, present, entry, note in rows:
             mark = "✅" if present == "yes" else "❌"
-            A(f"| {name} | {mark} | {entry} | {note} |")
+            A(f"| {cell(name)} | {mark} | {cell(entry)} | {cell(note)} |")
         A("")
 
     DOCS.mkdir(parents=True, exist_ok=True)

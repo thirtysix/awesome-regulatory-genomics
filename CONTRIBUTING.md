@@ -68,13 +68,24 @@ long exclusion list.
 ## Running the pipeline
 
 ```bash
-pip install requests pyyaml
+pip install -r requirements.txt      # requests, PyYAML; Python 3.12+
 
-make curate     # rebuild from cached data after editing curation/*.yaml
-make all        # re-select, re-enrich, rebuild  (needs network)
-make refresh    # also re-sweep bio.tools        (~10 min)
-make serve      # preview the site at localhost:8000
-make check      # sanity-check the built catalog
+make curate           # rebuild from cached data after editing curation/*.yaml
+make build-strict     # rebuild on rules alone, ignoring the LLM proposals
+make all              # re-select, enrich, resolve links, rebuild  (needs network)
+make refresh          # also re-sweep bio.tools  (over an hour end to end)
+make links            # resolve preprint DOIs and check every publication link
+make audit            # measure recall against curation/benchmark.yaml
+make serve            # preview at localhost:8000 (make serve PORT=8420 if taken)
+make check            # sanity-check the built catalog
+```
+
+Optional stages needing `DEEPINFRA_API_KEY` (see [docs/llm-stage.md](docs/llm-stage.md)):
+
+```bash
+make llm               # category, description and scope proposals
+make verify-additions  # third-model check on hand-added records
+make bench             # compare candidate models on this task
 ```
 
 Enrichment uses the GitHub API. It works unauthenticated at 60 requests/hour,
