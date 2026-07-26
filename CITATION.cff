@@ -5,7 +5,6 @@ type: dataset
 authors:
   - family-names: Barker
     given-names: Harlan
-    email: contact@example.org
 repository-code: "https://github.com/thirtysix/awesome-regulatory-genomics"
 url: "https://thirtysix.github.io/awesome-regulatory-genomics/"
 abstract: >-

@@ -102,8 +102,7 @@ def render_readme(catalog: dict) -> str:
 
     A("# Awesome Regulatory Genomics")
     A("")
-    A("[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) "
-      f"[![Tools](https://img.shields.io/badge/tools-{total}-blue)]({SITE}) "
+    A(f"[![Tools](https://img.shields.io/badge/tools-{total}-blue)]({SITE}) "
       "[![License: CC BY 4.0](https://img.shields.io/badge/data-CC--BY--4.0-lightgrey)](LICENSE-DATA) "
       f"[![Updated](https://img.shields.io/badge/updated-"
       f"{meta['generated'].replace('-', '--')}-brightgreen)](#)")
@@ -153,6 +152,27 @@ def render_readme(catalog: dict) -> str:
               if picks else f"<sub>[{rest} tools in this category →]({SITE}?category={key})</sub>")
             A("")
 
+    A("## Running the pipeline")
+    A("")
+    A("```bash")
+    A("pip install -r requirements.txt")
+    A("cp .env.example .env        # optional; see below")
+    A("make curate                 # rebuild README and site from committed data")
+    A("make all                    # re-select, enrich, resolve links, rebuild")
+    A("make serve PORT=8000        # preview the site locally")
+    A("```")
+    A("")
+    A("`.env` holds two optional settings, both blank by default:")
+    A("")
+    A("- `CONTACT_EMAIL` identifies the client to the OpenAlex and Crossref "
+      "*polite pools*, which give faster and more reliable service to callers "
+      "that say who they are. Leave it unset and the pipeline omits the "
+      "parameter rather than sending a placeholder, since a fake address there "
+      "is worse than none.")
+    A("- `DEEPINFRA_API_KEY` is needed only by the optional model stages "
+      "(`make llm`, `make bench`, `make verify-additions`). Their results are "
+      "cached and committed, so a normal build never asks for it.")
+    A("")
     A("## How this list is built")
     A("")
     A("```")

@@ -3,6 +3,7 @@
 Everything that defines *what the catalog is* lives here, so the scope of the
 resource can be audited and changed in one place.
 """
+import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -15,6 +16,49 @@ DOCS = ROOT / "docs"
 BIOTOOLS_API = "https://bio.tools/api/tool/"
 OPENALEX_API = "https://api.openalex.org/works"
 GITHUB_API = "https://api.github.com"
+
+# ---------------------------------------------------------------------------
+# Contact address for the API "polite pools"
+# ---------------------------------------------------------------------------
+# OpenAlex and Crossref give faster, more reliable service to clients that
+# identify themselves, and ask for a contact address to do it. It is not a
+# credential, but it is a personal detail, so it is configured rather than
+# hard-coded: set CONTACT_EMAIL in the environment or in a local .env file.
+#
+# Unset is fine. Every caller omits the mailto parameter entirely rather than
+# sending a placeholder, since a fake address in the polite pool is worse than
+# no address at all.
+
+
+def _load_dotenv() -> None:
+    """Read a local .env if present. Deliberately no python-dotenv dependency."""
+    path = ROOT / ".env"
+    if not path.exists():
+        return
+    for line in path.read_text().splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, value = line.partition("=")
+        os.environ.setdefault(key.strip(), value.strip().strip("'\""))
+
+
+_load_dotenv()
+CONTACT_EMAIL = os.environ.get("CONTACT_EMAIL", "").strip()
+
+
+def user_agent(tool: str = "awesome-regulatory-genomics/1.0") -> str:
+    """User-Agent string, with a contact address only if one is configured."""
+    base = f"{tool} (+https://github.com/thirtysix/awesome-regulatory-genomics"
+    return f"{base}; mailto:{CONTACT_EMAIL})" if CONTACT_EMAIL else f"{base})"
+
+
+def polite_params(params: dict | None = None) -> dict:
+    """Add OpenAlex/Crossref `mailto` when configured, and nothing when not."""
+    out = dict(params or {})
+    if CONTACT_EMAIL:
+        out["mailto"] = CONTACT_EMAIL
+    return out
 
 # ---------------------------------------------------------------------------
 # Harvest vocabulary

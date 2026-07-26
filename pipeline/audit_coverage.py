@@ -22,7 +22,7 @@ import requests
 import yaml
 
 from jsonio import read_json
-from config import BIOTOOLS_API, CURATION, DATA, DOCS, RAW
+from config import BIOTOOLS_API, CURATION, DATA, DOCS, RAW, user_agent
 from mdutil import cell
 
 CATALOG = DATA / "catalog.json"
@@ -92,7 +92,7 @@ def main() -> None:
 
     session = requests.Session()
     session.headers.update({"Accept": "application/json",
-                            "User-Agent": "awesome-regulatory-genomics/1.0"})
+                            "User-Agent": user_agent()})
 
     sections, hits, total, misses = [], 0, 0, []
     for group, entries in benchmark.items():

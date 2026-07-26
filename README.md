@@ -1,6 +1,6 @@
 # Awesome Regulatory Genomics
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Tools](https://img.shields.io/badge/tools-1841-blue)](https://thirtysix.github.io/awesome-regulatory-genomics/) [![License: CC BY 4.0](https://img.shields.io/badge/data-CC--BY--4.0-lightgrey)](LICENSE-DATA) [![Updated](https://img.shields.io/badge/updated-2026--07--26-brightgreen)](#)
+[![Tools](https://img.shields.io/badge/tools-1841-blue)](https://thirtysix.github.io/awesome-regulatory-genomics/) [![License: CC BY 4.0](https://img.shields.io/badge/data-CC--BY--4.0-lightgrey)](LICENSE-DATA) [![Updated](https://img.shields.io/badge/updated-2026--07--26-brightgreen)](#)
 
 A catalog of tools, databases and methods for **transcription-factor binding, sequence motifs, regulatory elements, chromatin and gene-regulatory networks**.
 
@@ -225,6 +225,21 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
   <sub>[code](https://github.com/thirtysix/TFBS_footprinting3) · [paper](https://pubmed.ncbi.nlm.nih.gov/40646689/)</sub>
 
 <sub>[+ 32 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=comparative)</sub>
+
+## Running the pipeline
+
+```bash
+pip install -r requirements.txt
+cp .env.example .env        # optional; see below
+make curate                 # rebuild README and site from committed data
+make all                    # re-select, enrich, resolve links, rebuild
+make serve PORT=8000        # preview the site locally
+```
+
+`.env` holds two optional settings, both blank by default:
+
+- `CONTACT_EMAIL` identifies the client to the OpenAlex and Crossref *polite pools*, which give faster and more reliable service to callers that say who they are. Leave it unset and the pipeline omits the parameter rather than sending a placeholder, since a fake address there is worse than none.
+- `DEEPINFRA_API_KEY` is needed only by the optional model stages (`make llm`, `make bench`, `make verify-additions`). Their results are cached and committed, so a normal build never asks for it.
 
 ## How this list is built
 

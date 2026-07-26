@@ -39,7 +39,7 @@ from datetime import date
 
 import requests
 
-from config import CACHE, DOCS, RAW
+from config import CACHE, DOCS, RAW, user_agent
 from jsonio import read_json
 from mdutil import cell
 
@@ -258,7 +258,7 @@ def main() -> None:
             if bid in found:
                 return None
         http = requests.Session()
-        http.headers.update({"User-Agent": "awesome-regulatory-genomics/1.0"})
+        http.headers.update({"User-Agent": user_agent()})
         name = tool["name"]
         # Try several spellings: bio.tools display names carry spaces, hyphens
         # and capitalisation that package registries do not.

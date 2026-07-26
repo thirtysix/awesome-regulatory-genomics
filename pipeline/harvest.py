@@ -18,7 +18,7 @@ import time
 import requests
 
 from jsonio import write_json
-from config import (BIOTOOLS_API, QUERY_FREETEXT, QUERY_OPERATIONS,
+from config import (BIOTOOLS_API, user_agent, QUERY_FREETEXT, QUERY_OPERATIONS,
                     QUERY_TOPICS, RAW, SEED_BIOTOOLS_IDS)
 
 SWEEP = RAW / "biotools_sweep.json.gz"
@@ -28,7 +28,7 @@ def make_session() -> requests.Session:
     s = requests.Session()
     s.headers.update({
         "Accept": "application/json",
-        "User-Agent": "awesome-regulatory-genomics/1.0 (+https://github.com/thirtysix)",
+        "User-Agent": user_agent(),
     })
     return s
 

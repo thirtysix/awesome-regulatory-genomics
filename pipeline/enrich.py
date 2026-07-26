@@ -26,7 +26,8 @@ from urllib.parse import urlparse
 import requests
 
 from jsonio import read_json, write_json
-from config import CACHE, CODE_HOSTS, GITHUB_API, OPENALEX_API, RAW, REGISTRY_HOSTS
+from config import (CACHE, CODE_HOSTS, GITHUB_API, OPENALEX_API, RAW,
+                    REGISTRY_HOSTS, polite_params, user_agent)
 
 SELECTED = RAW / "selected.json.gz"
 ENRICHED = RAW / "enriched.json.gz"
@@ -238,8 +239,7 @@ def openalex_lookup(session: requests.Session, ident: str, cache: dict[str, int]
         return cache[key], {}
     filt = f"ids.pmid:{value}" if kind == "pmid" else f"doi:{value}"
     try:
-        r = session.get(OPENALEX_API, params={"filter": filt,
-                                              "mailto": "contact@example.org"}, timeout=30)
+        r = session.get(OPENALEX_API, params=polite_params({"filter": filt}), timeout=30)
         results = r.json().get("results") or [] if r.status_code == 200 else []
     except (requests.RequestException, ValueError):
         results = []
@@ -265,12 +265,11 @@ def main() -> None:
     print(f"Enriching {len(tools)} records")
 
     http = requests.Session()
-    http.headers.update({"User-Agent": "awesome-regulatory-genomics/1.0",
-                         "Accept": "application/json"})
+    http.headers.update({"User-Agent": user_agent(), "Accept": "application/json"})
 
     gh = requests.Session()
     gh.headers.update({"Accept": "application/vnd.github+json",
-                       "User-Agent": "awesome-regulatory-genomics/1.0"})
+                       "User-Agent": user_agent()})
     token = None if args.no_github else github_token()
     if token:
         gh.headers["Authorization"] = f"Bearer {token}"

@@ -28,7 +28,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import requests
 
-from config import CACHE, CURATION, DOCS, RAW
+from config import CACHE, CURATION, DOCS, RAW, user_agent
 from jsonio import read_json
 from mdutil import cell
 
@@ -43,9 +43,7 @@ PREPRINT_PREFIXES = ("10.1101/", "10.21203/", "10.31234/", "10.20944/", "10.4855
 def session() -> requests.Session:
     s = requests.Session()
     # Crossref's polite pool: identify yourself and you get better service.
-    s.headers.update({"User-Agent": "awesome-regulatory-genomics/1.0 "
-                                    "(+https://github.com/thirtysix/awesome-regulatory-genomics; "
-                                    "mailto:contact@example.org)"})
+    s.headers.update({"User-Agent": user_agent()})
     return s
 
 
