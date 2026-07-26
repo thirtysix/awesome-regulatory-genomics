@@ -64,7 +64,8 @@ def tool_line(t: dict) -> list[str]:
         if ident.startswith("pmid:"):
             links.append(f"[paper](https://pubmed.ncbi.nlm.nih.gov/{ident[5:]}/)")
         elif ident.startswith("doi:"):
-            links.append(f"[paper](https://doi.org/{ident[4:]})")
+            label = "preprint" if t.get("publication_is_preprint") else "paper"
+            links.append(f"[{label}](https://doi.org/{ident[4:]})")
 
     signals = []
     if t.get("repo_stars"):
@@ -367,7 +368,10 @@ footer{color:var(--muted);font-size:12.5px;margin-top:22px;line-height:1.7}
     <a href="https://openalex.org">OpenAlex</a> (CC0) and the GitHub API, plus hand-curated
     entries. Citation counts come from each tool's primary publication only: a rough
     popularity signal, not a quality measure. Where that publication is shared by three
-    or more tools it is a suite paper, and no count is shown.
+    or more tools it is a suite paper, and no count is shown. Links marked
+    <b>preprint</b> are the version bio.tools records and no published equivalent was
+    found; see <a href="https://github.com/__REPO__/blob/main/docs/link-check.md">the
+    link check</a>.
     Entries marked <span class="cat seed">curated</span>
     are absent from bio.tools and were added by hand.
     <br>Corrections welcome: <a href="https://github.com/__REPO__/issues">open an issue</a>.
@@ -463,7 +467,7 @@ function render(){
     if (t.publication) {
       const p = t.publication;
       if (p.startsWith('pmid:')) links.push('<a href="https://pubmed.ncbi.nlm.nih.gov/'+esc(p.slice(5))+'/">paper</a>');
-      else if (p.startsWith('doi:')) links.push('<a href="https://doi.org/'+esc(p.slice(4))+'">paper</a>');
+      else if (p.startsWith('doi:')) links.push('<a href="https://doi.org/'+esc(p.slice(4))+'">'+(t.preprint?'preprint':'paper')+'</a>');
     }
     const cats = t.categories.map(c=>'<span class="cat">'+esc(catLabel[c]||c)+'</span>').join('') +
       (t.source === 'curated' ? '<span class="cat seed">curated</span>' : '');
@@ -509,6 +513,7 @@ def render_site(catalog: dict) -> None:
         "repo_archived": t["repo_archived"], "repo_language": t["repo_language"],
         "tool_type": t["tool_type"], "languages": t["languages"],
         "citations": t["citations"], "year": t["year"], "publication": t["publication"],
+        "preprint": bool(t.get("publication_is_preprint")),
         "source": t["source"], "tags": t["tags"],
     } for t in tools]
 

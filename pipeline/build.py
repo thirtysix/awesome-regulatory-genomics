@@ -40,6 +40,7 @@ COLUMNS = [
     "homepage", "repo_url", "repo_stars", "repo_pushed", "repo_archived",
     "repo_language", "repo_license", "tool_type", "topics", "languages",
     "license", "maturity", "cost", "citations", "citation_note", "year", "publication",
+    "publication_is_preprint",
     "biotools_id", "biotools_url", "last_update", "source", "tags", "featured",
 ]
 
@@ -233,6 +234,7 @@ def from_biotools(tool: dict, cites: dict[str, int], shared: dict[str, int],
         "citation_note": note,
         "year": pub_year(tool),
         "publication": primary or (ids[0] if ids else ""),
+        "publication_is_preprint": (primary or "").removeprefix("doi:").startswith(PREPRINT_PREFIXES),
         "biotools_id": tool["biotoolsID"],
         "biotools_url": f"https://bio.tools/{tool['biotoolsID']}",
         "last_update": (tool.get("lastUpdate") or "")[:10],
@@ -265,6 +267,7 @@ def from_seed(seed: dict) -> dict:
         "license": "", "maturity": "", "cost": "",
         "citations": None, "citation_note": "", "year": "",
         "publication": ident,
+        "publication_is_preprint": ident.removeprefix("doi:").startswith(PREPRINT_PREFIXES),
         "biotools_id": "", "biotools_url": "",
         "last_update": "",
         "source": "curated",
@@ -367,6 +370,8 @@ def main() -> None:
             row.update(fix)
         if key in pub_overrides:
             row["publication"] = pub_overrides[key]
+            row["publication_is_preprint"] = (
+                pub_overrides[key].removeprefix("doi:").startswith(PREPRINT_PREFIXES))
         if key in featured:
             row["featured"] = featured[key]
         else:

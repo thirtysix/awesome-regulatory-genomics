@@ -101,7 +101,10 @@ footer{color:var(--muted);font-size:12.5px;margin-top:22px;line-height:1.7}
     <a href="https://openalex.org">OpenAlex</a> (CC0) and the GitHub API, plus hand-curated
     entries. Citation counts come from each tool's primary publication only: a rough
     popularity signal, not a quality measure. Where that publication is shared by three
-    or more tools it is a suite paper, and no count is shown.
+    or more tools it is a suite paper, and no count is shown. Links marked
+    <b>preprint</b> are the version bio.tools records and no published equivalent was
+    found; see <a href="https://github.com/thirtysix/awesome-regulatory-genomics/blob/main/docs/link-check.md">the
+    link check</a>.
     Entries marked <span class="cat seed">curated</span>
     are absent from bio.tools and were added by hand.
     <br>Corrections welcome: <a href="https://github.com/thirtysix/awesome-regulatory-genomics/issues">open an issue</a>.
@@ -197,7 +200,7 @@ function render(){
     if (t.publication) {
       const p = t.publication;
       if (p.startsWith('pmid:')) links.push('<a href="https://pubmed.ncbi.nlm.nih.gov/'+esc(p.slice(5))+'/">paper</a>');
-      else if (p.startsWith('doi:')) links.push('<a href="https://doi.org/'+esc(p.slice(4))+'">paper</a>');
+      else if (p.startsWith('doi:')) links.push('<a href="https://doi.org/'+esc(p.slice(4))+'">'+(t.preprint?'preprint':'paper')+'</a>');
     }
     const cats = t.categories.map(c=>'<span class="cat">'+esc(catLabel[c]||c)+'</span>').join('') +
       (t.source === 'curated' ? '<span class="cat seed">curated</span>' : '');
