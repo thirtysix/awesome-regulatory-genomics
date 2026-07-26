@@ -130,6 +130,22 @@ def cache_key(ident: str) -> str:
     return f"{kind}_{value}".replace("/", "_").replace(":", "_")
 
 
+def load_repo_map() -> dict[str, str]:
+    """bio.tools ID -> repository slug, from pipeline/resolve_repos.py.
+
+    Only entries that passed validation are applied; the rest stay in
+    docs/repo-review.md for a human to judge.
+    """
+    path = DATA / "cache" / "repo_map.json"
+    if not path.exists():
+        return {}
+    try:
+        blob = json.loads(path.read_text())
+    except ValueError:
+        return {}
+    return {k: v["slug"] for k, v in blob.items() if v.get("accepted")}
+
+
 def load_publication_map() -> dict[str, str]:
     """preprint DOI -> published DOI, from pipeline/resolve_pubs.py."""
     path = DATA / "cache" / "publication_map.json"
@@ -189,9 +205,12 @@ def norm_name(name: str) -> str:
     return re.sub(r"[^a-z0-9]", "", name.lower())
 
 
-def repo_url(tool: dict) -> str:
+def repo_url(tool: dict, repomap: dict[str, str] | None = None) -> str:
     if tool.get("_repo_slug"):
         return f"https://github.com/{tool['_repo_slug']}"
+    resolved = (repomap or {}).get(tool.get("biotoolsID", ""))
+    if resolved:
+        return f"https://github.com/{resolved}"
     for u in tool.get("_repo_other") or []:
         return u
     return ""
@@ -199,7 +218,7 @@ def repo_url(tool: dict) -> str:
 
 # ---------------------------------------------------------------------------
 def from_biotools(tool: dict, cites: dict[str, int], shared: dict[str, int],
-                  pubmap: dict[str, str]) -> dict:
+                  pubmap: dict[str, str], repomap: dict[str, str]) -> dict:
     gh = tool.get("_github") or {}
     ids = tool.get("_identifiers") or []
     primary = primary_identifier(tool, pubmap)
@@ -218,7 +237,7 @@ def from_biotools(tool: dict, cites: dict[str, int], shared: dict[str, int],
         "categories": assign_categories(tool),
         "tier": tool.get("_tier", "core"),
         "homepage": tool.get("homepage") or "",
-        "repo_url": repo_url(tool),
+        "repo_url": repo_url(tool, repomap),
         "repo_stars": gh.get("stars") if gh.get("status") == "ok" else None,
         "repo_pushed": gh.get("pushed_at") or "" if gh.get("status") == "ok" else "",
         "repo_archived": bool(gh.get("archived")) if gh.get("status") == "ok" else None,
@@ -293,6 +312,7 @@ def main() -> None:
     enriched = read_json(ENRICHED)["list"]
     cites = load_citation_counts()
     pubmap = load_publication_map()
+    repomap = load_repo_map()
     # How many catalog tools claim each publication as their primary one.
     shared = Counter(p for p in (primary_identifier(t, pubmap) for t in enriched) if p)
     seeds = yaml.safe_load(SEEDS.read_text()) or {}
@@ -339,7 +359,7 @@ def main() -> None:
             continue
         if bid in llm_out_of_scope and bid not in protected:
             continue
-        rows.append(from_biotools(tool, cites, shared, pubmap))
+        rows.append(from_biotools(tool, cites, shared, pubmap, repomap))
         seen_names[norm_name(tool["name"])] = bid
 
     seeded = 0
@@ -387,6 +407,7 @@ def main() -> None:
         "curated_seeds": seeded,
         "featured": sum(1 for r in rows if r["featured"]),
         "with_repo": sum(1 for r in rows if r["repo_url"]),
+        "repo_recovered": sum(1 for r in rows if r["repo_url"] and r["id"] in repomap),
         "llm_assisted": sum(1 for r in rows if r.get("_llm_applied")),
         "llm_scope_dropped": len(llm_out_of_scope),
     }

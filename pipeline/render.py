@@ -159,6 +159,8 @@ def render_readme(catalog: dict) -> str:
     A("harvest.py        wide sweep of bio.tools (EDAM operation + free-text queries)")
     A("select_domain.py  tiered precision filter -> what is in scope")
     A("enrich.py         resolve source repos, GitHub activity, OpenAlex citations")
+    A("resolve_repos.py  find repos bio.tools omits (bioconda/PyPI/homepage), validated")
+    A("resolve_pubs.py   upgrade preprint links to the published version, check DOIs")
     A("build.py          merge with curated seeds, assign categories, apply overlay")
     A("render.py         write README.md and the searchable site")
     A("audit_coverage.py measure recall against a hand-written benchmark")
@@ -205,8 +207,13 @@ def render_readme(catalog: dict) -> str:
     A(f"- **{total} tools**: {meta['from_biotools']} harvested from bio.tools, "
       f"{meta['curated_seeds']} added by hand because bio.tools does not index them.")
     A(f"- **{with_repo} ({with_repo/max(total,1):.0%}) have a resolvable source repository.** "
-      "bio.tools rarely records one directly, so repository URLs are also recovered "
-      "through Bioconductor, CRAN and PyPI metadata.")
+      "bio.tools rarely records one directly, so repositories are also recovered "
+      "from Bioconductor, CRAN and PyPI metadata, from bioconda recipes and from "
+      "links on the tool's own homepage. Every candidate is validated against the "
+      "tool's description before it is used: matching on name alone resolves MEME "
+      "to a meme generator and MEDUSA to a genome scaffolder that merely shares "
+      "the name. Near-misses are listed in "
+      "[`docs/repo-review.md`](docs/repo-review.md) rather than applied.")
     A(f"- **{featured_n} tools are featured** in the curated sections above; the rest are "
       f"in the [full catalog]({SITE}).")
     A("")

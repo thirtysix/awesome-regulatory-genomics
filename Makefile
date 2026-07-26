@@ -2,10 +2,10 @@ PY ?= python3
 PORT ?= 8000        # override if 8000 is taken: make serve PORT=8420
 PIPELINE := $(PY) pipeline
 
-.PHONY: all harvest select enrich links build render audit curate refresh clean check serve llm bench verify-additions
+.PHONY: all harvest select enrich links build render audit curate refresh clean check serve llm bench verify-additions repos
 
 ## build everything from the existing sweep (no network beyond enrichment)
-all: select enrich links build render audit
+all: select enrich repos links build render audit
 
 ## full refresh, including a new bio.tools sweep (~10 min)
 refresh: harvest all
@@ -25,6 +25,10 @@ build:
 
 render:
 	$(PIPELINE)/render.py
+
+## find source repositories bio.tools does not record (validated)
+repos:
+	$(PIPELINE)/resolve_repos.py
 
 ## resolve preprint links to the published version and check every DOI
 links:
