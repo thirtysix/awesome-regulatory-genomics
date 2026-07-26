@@ -88,7 +88,7 @@ tools:
     description: Base-resolution model of chromatin accessibility that corrects enzyme bias and reveals TF footprints
     categories: [footprinting, nucleosome-chromatin, tfbs-prediction]
     tags: [deep-learning, base-resolution]
-    doi: 10.1038/s41588-025-02244-9
+    doi: 10.1101/2024.12.25.630221   # preprint; no journal version verified
 
   - name: Sei
     url: https://github.com/FunctionLab/sei-framework
@@ -173,11 +173,11 @@ tools:
     doi: 10.1371/journal.pone.0138030
 
   - name: TFBSFootprinter
-    url: https://github.com/thirtysix/TFBS_footprinting
-    repo: thirtysix/TFBS_footprinting
+    url: https://github.com/thirtysix/TFBS_footprinting3
+    repo: thirtysix/TFBS_footprinting3
     description: Combines sequence, conservation, CAGE, eQTL, ChIP-seq, ATAC-seq and gene-expression evidence into a single TFBS score
     categories: [tfbs-prediction, footprinting, comparative]
-    doi: 10.3389/fbinf.2022.910346
+    pmid: 40646689       # Transcription 16(2-3):204-223, doi 10.1080/21541264.2025.2521764
 
   # --- motif and TF databases ------------------------------------------------
   - name: CIS-BP
@@ -196,7 +196,7 @@ tools:
     url: https://floresta.eead.csic.es/footprintdb/
     description: Database of transcription factors and their DNA-binding interfaces, supporting motif transfer by protein similarity
     categories: [motif-databases]
-    doi: 10.1093/bioinformatics/btw401
+    doi: 10.1093/bioinformatics/btt663   # verified: footprintDB, Bioinformatics 2013
 
   - name: CollecTF
     url: http://www.collectf.org/
@@ -209,7 +209,7 @@ tools:
     url: https://swissregulon.unibas.ch/
     description: Genome-wide annotations of regulatory sites inferred with a Bayesian probabilistic framework
     categories: [motif-databases, regulatory-elements]
-    doi: 10.1093/nar/gks1233
+    doi: 10.1093/nar/gks1145   # verified: SwissRegulon, NAR 2012
 
   # --- motif scanning and enrichment ----------------------------------------
   - name: FIMO
@@ -325,7 +325,7 @@ tools:
     url: https://gbiomed.kuleuven.be/apps/lcb/i-cisTarget/
     description: Web service for cis-regulatory motif and track enrichment in gene sets and genomic regions
     categories: [motif-scanning, regulatory-elements]
-    doi: 10.1093/nar/gkv1114
+    doi: 10.1093/nar/gks543   # verified: i-cisTarget, NAR 2012
 
   # --- peaks and chromatin ---------------------------------------------------
   - name: Genrich

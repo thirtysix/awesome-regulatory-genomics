@@ -1,10 +1,10 @@
 PY ?= python3
 PIPELINE := $(PY) pipeline
 
-.PHONY: all harvest select enrich build render audit curate refresh clean check serve llm bench
+.PHONY: all harvest select enrich links build render audit curate refresh clean check serve llm bench
 
 ## build everything from the existing sweep (no network beyond enrichment)
-all: select enrich build render audit
+all: select enrich links build render audit
 
 ## full refresh, including a new bio.tools sweep (~10 min)
 refresh: harvest all
@@ -24,6 +24,10 @@ build:
 
 render:
 	$(PIPELINE)/render.py
+
+## resolve preprint links to the published version and check every DOI
+links:
+	$(PIPELINE)/resolve_pubs.py
 
 ## measure recall against curation/benchmark.yaml
 audit:

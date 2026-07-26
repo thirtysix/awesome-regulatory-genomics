@@ -1,0 +1,1896 @@
+{
+ "10.1101/027227": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Genomic variant calling: Flexible tools and a diagnostic data set",
+  "type": "posted-content"
+ },
+ "10.1101/038612": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "chromstaR: Tracking combinatorial chromatin state dynamics in space and time",
+  "type": "posted-content"
+ },
+ "10.1101/042903": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Crunch: Integrated processing and modeling of ChIP-seq data in terms of regulatory motifs",
+  "type": "posted-content"
+ },
+ "10.1101/065565": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "RSAT matrix-clustering: dynamic exploration and redundancy reduction of transcription factor binding motif collections",
+  "type": "posted-content"
+ },
+ "10.1101/074443": {
+  "journal": "",
+  "published_doi": "10.1038/nature24267",
+  "state": "ok",
+  "title": "The impact of rare variation on gene expression across tissues",
+  "type": "posted-content"
+ },
+ "10.1101/082263": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "normR: Regime enrichment calling for ChIP-seq data",
+  "type": "posted-content"
+ },
+ "10.1101/082347": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Optimized functional annotation of ChIP-seq data",
+  "type": "posted-content"
+ },
+ "10.1101/196394": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Linear models enable powerful differential activity analysis in massively parallel reporter assays",
+  "type": "posted-content"
+ },
+ "10.1101/2019.12.11.873299": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "REPIC: A database for exploring\n                  <i>N</i>\n                  <sup>6</sup>\n                  -methyladeno",
+  "type": "posted-content"
+ },
+ "10.1101/2019.12.15.876706": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "The 9aaTAD activation domains in the four Yamanaka Oct4, Sox2, Myc, and Klf4 transcription factors essential during the ",
+  "type": "posted-content"
+ },
+ "10.1101/2019.12.17.878454": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "EPIGENE: genome wide transcription unit annotation using a multivariate probabilistic model of histone modifications",
+  "type": "posted-content"
+ },
+ "10.1101/2019.12.22.882084": {
+  "journal": "",
+  "published_doi": "10.1186/s13059-020-02041-z",
+  "state": "ok",
+  "title": "Chromosome-level quality scaffolding of brown algal genomes using InstaGRAAL, a proximity ligation-based scaffolder",
+  "type": "posted-content"
+ },
+ "10.1101/2020.01.07.896894": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "MAnorm2 for quantitatively comparing groups of ChIP-seq samples",
+  "type": "posted-content"
+ },
+ "10.1101/2020.01.07.897579": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "SparkINFERNO: A scalable high-throughput pipeline for inferring molecular mechanisms of non-coding genetic variants",
+  "type": "posted-content"
+ },
+ "10.1101/2020.01.08.899633": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "MSIsensor-pro: fast, accurate and matched-normal-sample-free detection of microsatellite instability",
+  "type": "posted-content"
+ },
+ "10.1101/2020.01.21.913418": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "PathExt: a general framework for path-based mining of omics-integrated biological networks",
+  "type": "posted-content"
+ },
+ "10.1101/2020.01.30.925917": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "MAGGIE: leveraging genetic variation to identify DNA sequence motifs mediating transcription factor binding and function",
+  "type": "posted-content"
+ },
+ "10.1101/2020.01.31.927996": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "A Self-Attention Model for Inferring Cooperativity between Regulatory Features",
+  "type": "posted-content"
+ },
+ "10.1101/2020.02.01.929851": {
+  "journal": "",
+  "published_doi": "10.1080/15476286.2020.1740470",
+  "state": "ok",
+  "title": "rG4-seeker enables high-confidence identification of novel and non-canonical rG4 motifs from rG4-seq experiments",
+  "type": "posted-content"
+ },
+ "10.1101/2020.02.10.942623": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "<i>corto</i>\n                  : a lightweight R package for Gene Network Inference and Master Regulator Analysis",
+  "type": "posted-content"
+ },
+ "10.1101/2020.02.12.931469": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "scTenifoldNet: a machine learning workflow for constructing and comparing transcriptome-wide gene regulatory networks fr",
+  "type": "posted-content"
+ },
+ "10.1101/2020.02.17.952838": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "BARTweb: a web server for transcription factor association analysis",
+  "type": "posted-content"
+ },
+ "10.1101/2020.02.24.963579": {
+  "journal": "",
+  "published_doi": "10.1186/s13059-020-02167-0",
+  "state": "ok",
+  "title": "Mustache: Multi-scale Detection of Chromatin Loops from Hi-C and Micro-C Maps using Scale-Space Representation",
+  "type": "posted-content"
+ },
+ "10.1101/2020.03.02.972471": {
+  "journal": "",
+  "published_doi": "10.21105/joss.02161",
+  "state": "ok",
+  "title": "graphsim: An R package for simulating gene expression data from graph structures of biological pathways",
+  "type": "posted-content"
+ },
+ "10.1101/2020.03.02.973743": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Varmole: A biologically drop-connect deep neural network model for prioritizing disease risk variants and genes",
+  "type": "posted-content"
+ },
+ "10.1101/2020.03.05.978718": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "ProminTools: Shedding light on proteins of unknown function in biomineralization with user friendly tools illustrated us",
+  "type": "posted-content"
+ },
+ "10.1101/2020.03.08.981910": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Computer vision for pattern detection in chromosome contact maps",
+  "type": "posted-content"
+ },
+ "10.1101/2020.03.11.986794": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "LSTrAP-Cloud: A User-friendly Cloud Computing Pipeline to Infer Co-functional and Regulatory Networks",
+  "type": "posted-content"
+ },
+ "10.1101/2020.03.12.989228": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "HisTrader: A Tool to Identify Nucleosome Free Regions from ChIP-Seq of Histone Post-Translational Modifications",
+  "type": "posted-content"
+ },
+ "10.1101/2020.03.22.001537": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "EAT-UpTF: Enrichment Analysis Tool for Upstream Transcription Fctors of a gene group",
+  "type": "posted-content"
+ },
+ "10.1101/2020.03.30.015784": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "CeTF: an R package to Coexpression for Transcription Factors using Regulatory Impact Factors (RIF) and Partial Correlati",
+  "type": "posted-content"
+ },
+ "10.1101/2020.03.30.016287": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "AutoRELACS: Automated Generation And Analysis Of Ultra-parallel ChIP-seq",
+  "type": "posted-content"
+ },
+ "10.1101/2020.04.03.023002": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "A single-cell gene regulatory network inference method for identifying complex regulatory dynamics across cell phenotype",
+  "type": "posted-content"
+ },
+ "10.1101/2020.04.03.024935": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "PresRAT: A server for identification of bacterial small-RNA sequences and their targets with probable binding region",
+  "type": "posted-content"
+ },
+ "10.1101/2020.04.11.037168": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "GeneDMRs: an R package for Gene-based Differentially Methylated Regions analysis",
+  "type": "posted-content"
+ },
+ "10.1101/2020.04.12.038158": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Modern Hopfield Networks and Attention for Immune Repertoire Classification",
+  "type": "posted-content"
+ },
+ "10.1101/2020.04.21.053975": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "FastSK: Fast Sequence Analysis with Gapped String Kernels",
+  "type": "posted-content"
+ },
+ "10.1101/2020.04.23.056226": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "MaxHiC: robust estimation of chromatin interaction frequency in Hi-C and capture Hi-C experiments",
+  "type": "posted-content"
+ },
+ "10.1101/2020.04.23.058149": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "GRNUlar: Gene Regulatory Network reconstruction using Unrolled algorithm from Single Cell RNA-Sequencing data",
+  "type": "posted-content"
+ },
+ "10.1101/2020.04.23.058719": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "<i>DriverGroup</i>\n                  : A novel method for identifying driver gene groups",
+  "type": "posted-content"
+ },
+ "10.1101/2020.04.23.058727": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "<i>pDriver</i>\n                  : A novel method for unravelling personalised coding and miRNA cancer drivers",
+  "type": "posted-content"
+ },
+ "10.1101/2020.04.27.060061": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "The qBED track: a novel genome browser visualization for point processes",
+  "type": "posted-content"
+ },
+ "10.1101/2020.04.28.066498": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "ArchR: An integrative and scalable software package for single-cell chromatin accessibility analysis",
+  "type": "posted-content"
+ },
+ "10.1101/2020.04.29.068551": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Programmatic access to bacterial regulatory networks with\n                  <i>regutools</i>",
+  "type": "posted-content"
+ },
+ "10.1101/2020.04.29.069047": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "CNCDatabase: a database of non-coding cancer drivers",
+  "type": "posted-content"
+ },
+ "10.1101/2020.05.04.069914": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Rapid T cell receptor interaction grouping with ting",
+  "type": "posted-content"
+ },
+ "10.1101/2020.05.04.077420": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Abasy Atlas v2.2: The most comprehensive and up-to-date inventory of meta-curated, historical, bacterial regulatory netw",
+  "type": "posted-content"
+ },
+ "10.1101/2020.05.13.093674": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "PALLAS: Penalized mAximum LikeLihood and pArticle Swarms for Inference of Gene Regulatory Networks from Time Series Data",
+  "type": "posted-content"
+ },
+ "10.1101/2020.05.13.093765": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "DCI: Learning Causal Differences between Gene Regulatory Networks",
+  "type": "posted-content"
+ },
+ "10.1101/2020.05.16.097865": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Human.miRFFL.DB-A curated resource for human miRNA coregulatory networks and associated regulatory-circuits",
+  "type": "posted-content"
+ },
+ "10.1101/2020.05.16.099325": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "CATA: a comprehensive chromatin accessibility database for cancer",
+  "type": "posted-content"
+ },
+ "10.1101/2020.05.29.122200": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Switching On Static Gene Regulatory Networks to Compute Cellular Decisions",
+  "type": "posted-content"
+ },
+ "10.1101/2020.05.29.124149": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "NIMBus: a Negative Binomial Regression based Integrative Method for Mutation Burden Analysis",
+  "type": "posted-content"
+ },
+ "10.1101/2020.06.02.129445": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "GuidingNet: revealing transcriptional cofactor and predicting binding for DNA methyltransferase by network regularizatio",
+  "type": "posted-content"
+ },
+ "10.1101/2020.06.02.130468": {
+  "journal": "",
+  "published_doi": "10.1371/journal.pcbi.1008909",
+  "state": "ok",
+  "title": "Identification of long regulatory elements in the genome of\n                  <i>Plasmodium falciparum</i>\n             ",
+  "type": "posted-content"
+ },
+ "10.1101/2020.06.05.135798": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "ANANSE: An enhancer network-based computational approach for predicting key transcription factors in cell fate determina",
+  "type": "posted-content"
+ },
+ "10.1101/2020.06.13.150201": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Deep multitask learning of gene risk for comorbid neurodevelopmental disorders",
+  "type": "posted-content"
+ },
+ "10.1101/2020.06.15.149559": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "NECo: A node embedding algorithm for multiplex heterogeneous networks",
+  "type": "posted-content"
+ },
+ "10.1101/2020.06.15.151837": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Multi Locus View : An Extensible Web Based Tool for the Analysis of Genomic Data",
+  "type": "posted-content"
+ },
+ "10.1101/2020.06.18.160408": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Crinet: A computational tool to infer genome-wide competing endogenous RNA (ceRNA) interactions",
+  "type": "posted-content"
+ },
+ "10.1101/2020.06.25.171850": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Network-aware reaction pattern recognition reveals regulatory signatures of mitochondrial dysfunction",
+  "type": "posted-content"
+ },
+ "10.1101/2020.07.01.181776": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Network-based protein-protein interaction prediction method maps perturbations of cancer interactome",
+  "type": "posted-content"
+ },
+ "10.1101/2020.07.07.191627": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "ConnecTF: A platform to build gene networks by integrating transcription factor-target gene interactions",
+  "type": "posted-content"
+ },
+ "10.1101/2020.07.08.193904": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "TranSynergy: Mechanism-Driven Interpretable Deep Neural Network for the Synergistic Prediction and Pathway Deconvolution",
+  "type": "posted-content"
+ },
+ "10.1101/2020.07.09.195289": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "COCOA: Coordinate covariation analysis of epigenetic heterogeneity",
+  "type": "posted-content"
+ },
+ "10.1101/2020.07.20.211391": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "BDdb: a comprehensive platform for exploration and utilization of birth defect multi-omics data",
+  "type": "posted-content"
+ },
+ "10.1101/2020.07.22.215699": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "DeepG4 : A deep learning approach to predict active G-quadruplexes from DNA",
+  "type": "posted-content"
+ },
+ "10.1101/2020.07.24.220335": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "miRinGO: Prediction of biological processes indirectly targeted by human microRNAs",
+  "type": "posted-content"
+ },
+ "10.1101/2020.08.03.232959": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Automated generation of context-specific Gene Regulatory Networks with a weighted approach in D. melanogaster",
+  "type": "posted-content"
+ },
+ "10.1101/2020.08.04.228536": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "SubFeat: Feature Subspacing Ensemble Classifier for Function Prediction of DNA, RNA and Protein Sequences",
+  "type": "posted-content"
+ },
+ "10.1101/2020.08.13.250118": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "SEMplMe: A tool for integrating DNA methylation effects in transcription factor binding affinity predictions",
+  "type": "posted-content"
+ },
+ "10.1101/2020.08.14.251488": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "simATAC: a single-cell ATAC-seq simulation framework",
+  "type": "posted-content"
+ },
+ "10.1101/2020.08.19.258095": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "BART3D: Inferring transcriptional regulators associated with differential chromatin interactions from Hi-C data",
+  "type": "posted-content"
+ },
+ "10.1101/2020.08.21.261024": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "MotiMul: A significant discriminative sequence motif discovery algorithm with multiple testing correction",
+  "type": "posted-content"
+ },
+ "10.1101/2020.08.29.273698": {
+  "journal": "",
+  "published_doi": "10.1093/gpbjnl/qzae028",
+  "state": "ok",
+  "title": "DiffGR: Detecting Differentially Interacting Genomic Regions from Hi-C Contact Maps",
+  "type": "posted-content"
+ },
+ "10.1101/2020.08.29.273722": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "ASHIC: Hierarchical Bayesian modeling of diploid chromatin contacts and structures",
+  "type": "posted-content"
+ },
+ "10.1101/2020.09.03.282186": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "preciseTAD: A transfer learning framework for 3D domain boundary prediction at base-pair resolution",
+  "type": "posted-content"
+ },
+ "10.1101/2020.09.08.281220": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "LongGeneDB: a data hub for long genes",
+  "type": "posted-content"
+ },
+ "10.1101/2020.09.08.287920": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "S3V2-IDEAS: a package for normalizing, denoising and integrating epigenomic datasets across different cell types",
+  "type": "posted-content"
+ },
+ "10.1101/2020.09.14.296418": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "TIMEOR: a web-based tool to uncover temporal regulatory mechanisms from multi-omics data",
+  "type": "posted-content"
+ },
+ "10.1101/2020.09.17.301960": {
+  "journal": "",
+  "published_doi": "10.1093/nar/gkac130",
+  "state": "ok",
+  "title": "GREEN-DB: A framework for the annotation and prioritization of non-coding regulatory variants from whole-genome sequenci",
+  "type": "posted-content"
+ },
+ "10.1101/2020.09.19.304956": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "scLink: Inferring Sparse Gene Co-expression Networks from Single-cell Expression Data",
+  "type": "posted-content"
+ },
+ "10.1101/2020.09.20.20198226": {
+  "journal": "",
+  "published_doi": "10.1080/01621459.2021.1914634",
+  "state": "ok",
+  "title": "Large-Scale Hypothesis Testing for Causal Mediation Effects with Applications in Genome-wide Epigenetic Studies",
+  "type": "posted-content"
+ },
+ "10.1101/2020.09.27.315382": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Inductive Inference of Gene Regulatory Network Using Supervised and Semi-supervised Graph Neural Networks",
+  "type": "posted-content"
+ },
+ "10.1101/2020.09.28.315986": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "A Multistaged Hyperparallel Optimization of the Fuzzy-Logic Mechanistic Model of Molecular Regulation",
+  "type": "posted-content"
+ },
+ "10.1101/2020.09.30.319996": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "ezGeno: An Automatic Model Selection Package for Genomic Data Analysis",
+  "type": "posted-content"
+ },
+ "10.1101/2020.10.06.328039": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "SACSANN: identifying sequence-based determinants of chromosomal compartments",
+  "type": "posted-content"
+ },
+ "10.1101/2020.10.06.328856": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "CardioPy: An open-source heart rate variability toolkit for single-lead EKG",
+  "type": "posted-content"
+ },
+ "10.1101/2020.10.21.347054": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "PEPATAC: An optimized pipeline for ATAC-seq data analysis with serial alignments",
+  "type": "posted-content"
+ },
+ "10.1101/2020.10.22.351478": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "ATAC-seq with unique molecular identifiers improves quantification and footprinting",
+  "type": "posted-content"
+ },
+ "10.1101/2020.10.26.349076": {
+  "journal": "",
+  "published_doi": "10.1186/s12859-022-04864-y",
+  "state": "ok",
+  "title": "DAGBagM: Learning directed acyclic graphs of mixed variables with an application to identify prognostic protein biomarke",
+  "type": "posted-content"
+ },
+ "10.1101/2020.10.27.358218": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "CharPlant: A\n                  <i>De Novo</i>\n                  Open Chromatin Region (OCR) Prediction Tool for Plant Ge",
+  "type": "posted-content"
+ },
+ "10.1101/2020.11.06.367409": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "CoBRA: Containerized Bioinformatics workflow for Reproducible ChIP/ATAC-seq Analysis - from differential peak calling to",
+  "type": "posted-content"
+ },
+ "10.1101/2020.11.09.373613": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Multimodal single-cell chromatin analysis with Signac",
+  "type": "posted-content"
+ },
+ "10.1101/2020.11.10.375717": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "accuEnhancer: Accurate enhancer prediction by integration of multiple cell type data with deep learning",
+  "type": "posted-content"
+ },
+ "10.1101/2020.11.13.382465": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "methylscaper: an R/Shiny app for joint visualization of DNA methylation and nucleosome occupancy in single-molecule and ",
+  "type": "posted-content"
+ },
+ "10.1101/2020.11.16.369330": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "SBGN Bricks Ontology as a tool to describe recurring concepts in molecular networks",
+  "type": "posted-content"
+ },
+ "10.1101/2020.11.16.384479": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Venice: A New Algorithm for Finding Marker Genes in Single-Cell Transcriptomic Data",
+  "type": "posted-content"
+ },
+ "10.1101/2020.11.17.384578": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "UniBind: maps of high-confidence direct TF-DNA interactions across nine species",
+  "type": "posted-content"
+ },
+ "10.1101/2020.11.19.390773": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Clipper: p-value-free FDR control on high-throughput data from two conditions",
+  "type": "posted-content"
+ },
+ "10.1101/2020.11.23.394296": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "find-tfbs: a tool to identify functional non-coding variants associated with complex human traits using open chromatin m",
+  "type": "posted-content"
+ },
+ "10.1101/2020.12.11.422014": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Unbiased integration of single cell multi-omics data",
+  "type": "posted-content"
+ },
+ "10.1101/2020.12.17.423327": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "BART Cancer: a web resource for transcriptional regulators in cancer genomes",
+  "type": "posted-content"
+ },
+ "10.1101/2020.12.18.423482": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "PySCNet: A tool for reconstructing and analyzing gene regulatory network from single-cell RNA-Seq data",
+  "type": "posted-content"
+ },
+ "10.1101/2020.12.30.424887": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "scMomentum: Inference of Cell-Type-Specific Regulatory Networks and Energy Landscapes",
+  "type": "posted-content"
+ },
+ "10.1101/2021.01.07.425782": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "dynUGENE: an R package for uncertainty-aware gene regulatory network inference, simulation, and visualization",
+  "type": "posted-content"
+ },
+ "10.1101/2021.01.18.427134": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Predicting genotype-specific gene regulatory networks",
+  "type": "posted-content"
+ },
+ "10.1101/2021.01.22.427620": {
+  "journal": "",
+  "published_doi": "10.1093/nargab/lqab040",
+  "state": "ok",
+  "title": "Hi-C Analyses with GENOVA: a case study with cohesin variants",
+  "type": "posted-content"
+ },
+ "10.1101/2021.01.22.427681": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "FILER: large-scale, harmonized FunctIonaL gEnomics Repository",
+  "type": "posted-content"
+ },
+ "10.1101/2021.01.25.428108": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "LanceOtron: a deep learning peak caller for ATAC-seq, ChIP-seq, and DNase-seq",
+  "type": "posted-content"
+ },
+ "10.1101/2021.01.27.428477": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "DECODE: A\n                  <i>De</i>\n                  ep-learning Framework for\n                  <i>Co</i>\n          ",
+  "type": "posted-content"
+ },
+ "10.1101/2021.01.28.428613": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "AnnoMiner: a new web-tool to integrate epigenetics, transcription factor occupancy and transcriptomics data to predict t",
+  "type": "posted-content"
+ },
+ "10.1101/2021.01.28.428666": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "PredicTF: a tool to predict bacterial transcription factors in complex microbial communities",
+  "type": "posted-content"
+ },
+ "10.1101/2021.01.28.428689": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "SAILER: Scalable and Accurate Invariant Representation Learning for Single-Cell ATAC-Seq Processing and Integration",
+  "type": "posted-content"
+ },
+ "10.1101/2021.01.30.428941": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Thermodynamic modeling reveals widespread multivalent binding by RNA-binding proteins",
+  "type": "posted-content"
+ },
+ "10.1101/2021.02.02.429064": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Predicting Epigenomic Functions of Genetic Variants in the Context of Neurodevelopment via Deep Transfer Learning",
+  "type": "posted-content"
+ },
+ "10.1101/2021.02.02.429342": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "ChIPflow: from raw data to epigenomic dynamics",
+  "type": "posted-content"
+ },
+ "10.1101/2021.02.04.429752": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "GRAFIMO: variant and haplotype aware motif scanning on pangenome graphs",
+  "type": "posted-content"
+ },
+ "10.1101/2021.02.17.431338": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "RaptGen: A variational autoencoder with profile hidden Markov model for generative aptamer discovery",
+  "type": "posted-content"
+ },
+ "10.1101/2021.02.18.431696": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "MethReg: estimating the regulatory potential of DNA methylation in gene transcription",
+  "type": "posted-content"
+ },
+ "10.1101/2021.02.19.431974": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Gene prioritization based on random walks with restarts and absorbing states, to define gene sets regulating drug pharma",
+  "type": "posted-content"
+ },
+ "10.1101/2021.02.22.432257": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "DeepMotifSyn: a deep learning approach to synthesize heterodimeric DNA motifs",
+  "type": "posted-content"
+ },
+ "10.1101/2021.02.23.432593": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "CellWalkR: An R Package for integrating single-cell and bulk data to resolve regulatory elements",
+  "type": "posted-content"
+ },
+ "10.1101/2021.03.01.433444": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Deciphering enhancer sequence using thermodynamics-based models and convolutional neural networks",
+  "type": "posted-content"
+ },
+ "10.1101/2021.03.09.434619": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Prioritization of regulatory variants with tissue-specific function in the non-coding regions of human genome",
+  "type": "posted-content"
+ },
+ "10.1101/2021.03.22.436484": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "scTenifoldKnk: an efficient virtual knockout tool for gene function predictions via single-cell gene regulatory network ",
+  "type": "posted-content"
+ },
+ "10.1101/2021.04.01.438059": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "KBoost: a new method to infer gene regulatory networks from gene expression data",
+  "type": "posted-content"
+ },
+ "10.1101/2021.04.03.438329": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Cobolt: Joint analysis of multimodal single-cell sequencing data",
+  "type": "posted-content"
+ },
+ "10.1101/2021.04.10.439287": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "BioNERO: an all-in-one R/Bioconductor package for comprehensive and easy biological network reconstruction",
+  "type": "posted-content"
+ },
+ "10.1101/2021.04.15.439923": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "CoolBox: A flexible toolkit for visual analysis of genomics data",
+  "type": "posted-content"
+ },
+ "10.1101/2021.04.15.439962": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "GeneCodis 4: Expanding the modular enrichment analysis to regulatory elements",
+  "type": "posted-content"
+ },
+ "10.1101/2021.04.17.440295": {
+  "journal": "",
+  "published_doi": "10.1016/j.gpb.2021.08.011",
+  "state": "ok",
+  "title": "RegVar: Tissue-specific Prioritization of Noncoding Regulatory Variants",
+  "type": "posted-content"
+ },
+ "10.1101/2021.04.18.440382": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "ChIP-AP \u2013 An Integrated ChIP-Seq Analysis Pipeline",
+  "type": "posted-content"
+ },
+ "10.1101/2021.04.23.441089": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Memes: an R interface to the MEME Suite",
+  "type": "posted-content"
+ },
+ "10.1101/2021.04.27.441621": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "QPromoters: Sequence based prediction of promoter strength in\n                  <i>Saccharomyces cerevisiae</i>",
+  "type": "posted-content"
+ },
+ "10.1101/2021.04.27.441657": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Vivarium: an Interface and Engine for Integrative Multiscale Modeling in Computational Biology",
+  "type": "posted-content"
+ },
+ "10.1101/2021.04.27.441658": {
+  "journal": "",
+  "published_doi": "10.1093/bioadv/vbae007",
+  "state": "ok",
+  "title": "DeepRegFinder: Deep Learning-Based Regulatory Elements Finder",
+  "type": "posted-content"
+ },
+ "10.1101/2021.04.28.441830": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "AGENT: the Arabidopsis Gene Regulatory Network Tool for Exploring and Analyzing GRNs",
+  "type": "posted-content"
+ },
+ "10.1101/2021.05.03.442347": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Classification of non-coding variants with high pathogenic impact",
+  "type": "posted-content"
+ },
+ "10.1101/2021.05.06.442969": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "iCodon: ideal codon design for customized gene expression",
+  "type": "posted-content"
+ },
+ "10.1101/2021.05.06.443021": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Reconstruction of dynamic regulatory networks reveals signaling-induced topology changes associated with germ layer spec",
+  "type": "posted-content"
+ },
+ "10.1101/2021.05.14.444093": {
+  "journal": "",
+  "published_doi": "10.1109/TCBB.2022.3142019",
+  "state": "ok",
+  "title": "SENIES: DNA Shape Enhanced Two-layer Deep Learning Predictor for the Identification of Enhancers and Their Strength",
+  "type": "posted-content"
+ },
+ "10.1101/2021.05.25.445606": {
+  "journal": "",
+  "published_doi": "10.1093/nar/gkac036",
+  "state": "ok",
+  "title": "spatzie: An R package for identifying significant transcription factor motif co-enrichment from enhancer-promoter intera",
+  "type": "posted-content"
+ },
+ "10.1101/2021.05.28.446236": {
+  "journal": "",
+  "published_doi": "10.1093/bib/bbab536",
+  "state": "ok",
+  "title": "BML: a versatile web server for bipartite motif discovery",
+  "type": "posted-content"
+ },
+ "10.1101/2021.05.29.446316": {
+  "journal": "",
+  "published_doi": "10.1093/bioinformatics/btac569",
+  "state": "ok",
+  "title": "NetTIME: a Multitask and Base-pair Resolution Framework for Improved Transcription Factor Binding Site Prediction",
+  "type": "posted-content"
+ },
+ "10.1101/2021.06.07.447370": {
+  "journal": "",
+  "published_doi": "10.1016/j.isci.2021.103381",
+  "state": "ok",
+  "title": "RBPSpot: Learning on Appropriate Contextual Information for RBP Binding Sites Discovery",
+  "type": "posted-content"
+ },
+ "10.1101/2021.06.08.447547": {
+  "journal": "",
+  "published_doi": "10.1093/bioinformatics/btab746",
+  "state": "ok",
+  "title": "CpG Transformer for imputation of single-cell methylomes",
+  "type": "posted-content"
+ },
+ "10.1101/2021.06.18.448997": {
+  "journal": "",
+  "published_doi": "10.1093/nar/gkab778",
+  "state": "ok",
+  "title": "GRAND: A database of gene regulatory network models across human conditions",
+  "type": "posted-content"
+ },
+ "10.1101/2021.06.21.449316": {
+  "journal": "",
+  "published_doi": "10.1093/bioinformatics/btab680",
+  "state": "ok",
+  "title": "ShinyArchR.UiO: User-friendly, integrative and open-source tool for visualisation of single-cell ATAC-seq data using Arc",
+  "type": "posted-content"
+ },
+ "10.1101/2021.06.28.450135": {
+  "journal": "",
+  "published_doi": "10.1093/bioinformatics/btab745",
+  "state": "ok",
+  "title": "DeepMP: a deep learning tool to detect DNA base modifications on Nanopore sequencing data",
+  "type": "posted-content"
+ },
+ "10.1101/2021.06.29.450448": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Sigma70Pred: A highly accurate method for predicting sigma70 promoter in prokaryotic genome",
+  "type": "posted-content"
+ },
+ "10.1101/2021.07.08.451697": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "scSGL: Signed Graph Learning for Single-Cell Gene Regulatory Network Inference",
+  "type": "posted-content"
+ },
+ "10.1101/2021.07.13.452214": {
+  "journal": "",
+  "published_doi": "10.1093/nargab/lqac002",
+  "state": "ok",
+  "title": "gpuZoo: Cost-effective estimation of gene regulatory networks using the Graphics Processing Unit",
+  "type": "posted-content"
+ },
+ "10.1101/2021.07.15.452422": {
+  "journal": "",
+  "published_doi": "10.1186/s13059-021-02450-8",
+  "state": "ok",
+  "title": "INFIMA leverages multi-omics model organism data to identify effector genes of human GWAS variants",
+  "type": "posted-content"
+ },
+ "10.1101/2021.07.26.453821": {
+  "journal": "",
+  "published_doi": "10.1186/s13059-022-02671-5",
+  "state": "ok",
+  "title": "PEGR: a flexible management platform for reproducible epigenomic and genomic research",
+  "type": "posted-content"
+ },
+ "10.1101/2021.08.02.454721": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "<i>Regulus</i>\n                  infers signed regulatory networks in few samples from regions and genes activities",
+  "type": "posted-content"
+ },
+ "10.1101/2021.08.11.455962": {
+  "journal": "",
+  "published_doi": "10.1186/s12859-021-04529-2",
+  "state": "ok",
+  "title": "cDNA-detector: Detection and removal of cDNA contamination in DNA sequencing libraries",
+  "type": "posted-content"
+ },
+ "10.1101/2021.08.12.456038": {
+  "journal": "",
+  "published_doi": "10.1093/bib/bbab591",
+  "state": "ok",
+  "title": "MetaLogo: a heterogeneity-aware sequence logo generator and aligner",
+  "type": "posted-content"
+ },
+ "10.1101/2021.08.19.456732": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "epiRomics: a multi-omics R package to identify and visualize enhancers",
+  "type": "posted-content"
+ },
+ "10.1101/2021.09.02.458722": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "XSTREME: Comprehensive motif analysis of biological sequence datasets",
+  "type": "posted-content"
+ },
+ "10.1101/2021.09.14.460134": {
+  "journal": "",
+  "published_doi": "10.1016/j.cels.2023.11.006",
+  "state": "ok",
+  "title": "Deep learning and CRISPR-Cas13d ortholog discovery for optimized RNA targeting",
+  "type": "posted-content"
+ },
+ "10.1101/2021.10.14.464435": {
+  "journal": "",
+  "published_doi": "10.1038/s41467-022-29697-4",
+  "state": "ok",
+  "title": "The 4D Nucleome Data Portal: a resource for searching and visualizing curated nucleomics data",
+  "type": "posted-content"
+ },
+ "10.1101/2021.11.01.466854": {
+  "journal": "",
+  "published_doi": "10.1093/nar/gkac732",
+  "state": "ok",
+  "title": "Exploration and analysis of R-loop mapping data with\n                  <i>RLBase</i>",
+  "type": "posted-content"
+ },
+ "10.1101/2021.11.22.469628": {
+  "journal": "",
+  "published_doi": "10.1016/j.isci.2022.105359",
+  "state": "ok",
+  "title": "IReNA: integrated regulatory network analysis of single-cell transcriptomes and chromatin accessibility profiles",
+  "type": "posted-content"
+ },
+ "10.1101/2022.01.23.474238": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "FMSClusterFinder: A new tool for detection and identification of clusters of sequential motifs with varying characterist",
+  "type": "posted-content"
+ },
+ "10.1101/2022.03.14.484240": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "The Regulatory Mendelian Mutation score for GRCh38",
+  "type": "posted-content"
+ },
+ "10.1101/2022.06.09.495093": {
+  "journal": "",
+  "published_doi": "10.1093/bioinformatics/btac808",
+  "state": "ok",
+  "title": "YaHS: yet another Hi-C scaffolding tool",
+  "type": "posted-content"
+ },
+ "10.1101/2023.06.07.543805": {
+  "journal": "",
+  "published_doi": "10.1109/TCBB.2023.3285395",
+  "state": "ok",
+  "title": "TMELand: An end-to-end pipeline for quantification and visualization of Waddington\u2019s epigenetic landscape based on gene ",
+  "type": "posted-content"
+ },
+ "10.1101/2024.01.15.575795": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "MCLand: A Python program for drawing emerging shapes of Waddington\u2019s epigenetic landscape by Monte Carlo simulations",
+  "type": "posted-content"
+ },
+ "10.1101/2024.02.11.579821": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "HiCrayon reveals distinct layers of multi-state 3D chromatin organization",
+  "type": "posted-content"
+ },
+ "10.1101/2024.02.27.582237": {
+  "journal": "",
+  "published_doi": "10.1093/bioadv/vbae084",
+  "state": "ok",
+  "title": "racoon_clip \u2013 a complete pipeline for single-nucleotide analyses of iCLIP and eCLIP data",
+  "type": "posted-content"
+ },
+ "10.1101/2024.03.14.584946": {
+  "journal": "",
+  "published_doi": "10.1371/journal.pcbi.1012999",
+  "state": "ok",
+  "title": "Revealing cancer driver genes through integrative transcriptomic and epigenomic analyses with Moonlight",
+  "type": "posted-content"
+ },
+ "10.1101/2024.03.28.587275": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "<i>PREDICT:</i>\n                  Advancing Accurate Gene Expression Prediction and Motif Identification in Plant Stress",
+  "type": "posted-content"
+ },
+ "10.1101/2024.04.15.24305828": {
+  "journal": "",
+  "published_doi": "10.1093/bib/bbae323",
+  "state": "ok",
+  "title": "CWAS-Plus: Estimating category-wide association of rare noncoding variation from whole-genome sequencing data with cell-",
+  "type": "posted-content"
+ },
+ "10.1101/2024.05.03.592314": {
+  "journal": "",
+  "published_doi": "10.1016/j.csbj.2024.08.007",
+  "state": "ok",
+  "title": "LBFextract: unveiling transcription factor dynamics from liquid biopsy data",
+  "type": "posted-content"
+ },
+ "10.1101/2024.07.27.605424": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "User-friendly exploration of epigenomic data in single cells using sincei",
+  "type": "posted-content"
+ },
+ "10.1101/2024.08.02.606323": {
+  "journal": "",
+  "published_doi": "10.1038/s41467-025-61579-3",
+  "state": "ok",
+  "title": "Highly adaptable deep-learning platform for automated detection and analysis of vesicle exocytosis",
+  "type": "posted-content"
+ },
+ "10.1101/2024.08.25.609585": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "pyVIPER: A fast and scalable Python package for rank-based enrichment analysis of single-cell RNASeq data",
+  "type": "posted-content"
+ },
+ "10.1101/2024.12.25.630221": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "ChromBPNet: bias factorized, base-resolution deep learning models of chromatin accessibility reveal cis-regulatory seque",
+  "type": "posted-content"
+ },
+ "10.1101/2025.01.29.635492": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Decoding bacterial methylomes in four public health-relevant microbial species: Nanopore sequencing enables reproducible",
+  "type": "posted-content"
+ },
+ "10.1101/2025.03.31.645756": {
+  "journal": "",
+  "published_doi": "10.1093/bioadv/vbag023",
+  "state": "ok",
+  "title": "MotifPeeker: Benchmarking epigenomic profiling methods using motifs",
+  "type": "posted-content"
+ },
+ "10.1101/2025.05.30.657075": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "An atlas of TF driven gene programs across human cells",
+  "type": "posted-content"
+ },
+ "10.1101/2025.08.27.672570": {
+  "journal": "",
+  "published_doi": "10.1038/s41540-026-00684-5",
+  "state": "ok",
+  "title": "Context-Aware Synthetic Promoter Design Using Neural Networks Enables Rewiring of Eukaryotic Transcriptional Networks",
+  "type": "posted-content"
+ },
+ "10.1101/2025.09.05.674505": {
+  "journal": "",
+  "published_doi": "10.1093/nar/gkaf1216",
+  "state": "ok",
+  "title": "Human-scATAC-Corpus: a comprehensive database of scATAC-seq data",
+  "type": "posted-content"
+ },
+ "10.1101/2025.09.23.678054": {
+  "journal": "",
+  "published_doi": "10.1093/bioinformatics/btag092",
+  "state": "ok",
+  "title": "CIRCE: a scalable Python package to predict cis-regulatory DNA interactions from single-cell chromatin accessibility dat",
+  "type": "posted-content"
+ },
+ "10.1101/2025.09.25.678548": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Uniform processing and analysis of IGVF massively parallel reporter assay data with MPRAsnakeflow",
+  "type": "posted-content"
+ },
+ "10.1101/2025.11.18.689002": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "CroCoNet: a novel framework for cross-species network analysis reveals POU5F1 (OCT4) rewiring",
+  "type": "posted-content"
+ },
+ "10.1101/2025.11.21.689793": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "A gene expression atlas of a juvenile nervous system",
+  "type": "posted-content"
+ },
+ "10.1101/257584": {
+  "journal": "",
+  "published_doi": "10.1186/s12864-019-6088-0",
+  "state": "ok",
+  "title": "Computational Chromosome Conformation Capture by Correlation of ChIP-seq at CTCF motifs",
+  "type": "posted-content"
+ },
+ "10.1101/272559": {
+  "journal": "",
+  "published_doi": "10.1093/biostatistics/kxy084",
+  "state": "ok",
+  "title": "MACPET: Model-based Analysis for ChIA-PET",
+  "type": "posted-content"
+ },
+ "10.1101/303651": {
+  "journal": "",
+  "published_doi": "10.1093/bioinformatics/btz573",
+  "state": "ok",
+  "title": "TFEA.ChIP: A tool kit for transcription factor binding site enrichment analysis capitalizing on ChIP-seq datasets",
+  "type": "posted-content"
+ },
+ "10.1101/310623": {
+  "journal": "",
+  "published_doi": "10.1186/s12859-019-3029-5",
+  "state": "ok",
+  "title": "CAGEfightR: Cap Analysis of Gene Expression (CAGE) in R/Bioconductor",
+  "type": "posted-content"
+ },
+ "10.1101/602474": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "MuGVRE. A virtual research environment for 3D/4D genomics",
+  "type": "posted-content"
+ },
+ "10.1101/623090": {
+  "journal": "",
+  "published_doi": "10.1016/j.csbj.2019.09.009",
+  "state": "ok",
+  "title": "RSAT Var-tools: an accessible and flexible framework to predict the impact of regulatory variants on transcription facto",
+  "type": "posted-content"
+ },
+ "10.1101/624486": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "A flexible simulation toolkit for designing and evaluating ChIP-sequencing experiments",
+  "type": "posted-content"
+ },
+ "10.1101/627257": {
+  "journal": "",
+  "published_doi": "10.3390/genes10070554",
+  "state": "ok",
+  "title": "Chromatin interaction analysis with updated ChIA-PET Tool (V3)",
+  "type": "posted-content"
+ },
+ "10.1101/628347": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "A single cell brain atlas in human Alzheimer\u2019s disease",
+  "type": "posted-content"
+ },
+ "10.1101/646331": {
+  "journal": "",
+  "published_doi": "10.1186/s13059-020-02034-y",
+  "state": "ok",
+  "title": "APEC: an accesson-based method for single-cell chromatin accessibility analysis",
+  "type": "posted-content"
+ },
+ "10.1101/648097": {
+  "journal": "",
+  "published_doi": "10.1038/s41467-021-25131-3",
+  "state": "ok",
+  "title": "EpiScanpy: integrated single-cell epigenomic analysis",
+  "type": "posted-content"
+ },
+ "10.1101/651596": {
+  "journal": "",
+  "published_doi": "10.1093/bioinformatics/btz950",
+  "state": "ok",
+  "title": "LiPLike: Towards gene regulatory network predictions of high-certainty",
+  "type": "posted-content"
+ },
+ "10.1101/652420": {
+  "journal": "",
+  "published_doi": "10.1093/database/baz141",
+  "state": "ok",
+  "title": "ChIPSummitDB: A ChIP-seq-based database of human transcription factor binding sites and the topological arrangements of ",
+  "type": "posted-content"
+ },
+ "10.1101/721720": {
+  "journal": "",
+  "published_doi": "10.1093/bioadv/vbad031",
+  "state": "ok",
+  "title": "Motif elucidation in ChIP-seq datasets with a knockout control",
+  "type": "posted-content"
+ },
+ "10.1101/730358": {
+  "journal": "",
+  "published_doi": "10.1002/iub.2195",
+  "state": "ok",
+  "title": "Systematic integration of GATA transcription factors and epigenomes via IDEAS paints the regulatory landscape of mouse h",
+  "type": "posted-content"
+ },
+ "10.1101/733592": {
+  "journal": "",
+  "published_doi": "10.1038/s41589-020-0593-y",
+  "state": "ok",
+  "title": "A quantitative method for proteome reallocation using minimal regulatory interventions",
+  "type": "posted-content"
+ },
+ "10.1101/733683": {
+  "journal": "",
+  "published_doi": "10.1186/s13104-020-05371-0",
+  "state": "ok",
+  "title": "FINET: Fast Inferring NETwork",
+  "type": "posted-content"
+ },
+ "10.1101/735514": {
+  "journal": "",
+  "published_doi": "10.1038/s41598-020-70941-y",
+  "state": "ok",
+  "title": "Perturbation-based gene regulatory network inference to unravel oncogenic mechanisms",
+  "type": "posted-content"
+ },
+ "10.1101/740944": {
+  "journal": "",
+  "published_doi": "10.1038/s41525-020-0133-4",
+  "state": "ok",
+  "title": "MutSpot: detection of non-coding mutation hotspots in cancer genomes",
+  "type": "posted-content"
+ },
+ "10.1101/755249": {
+  "journal": "",
+  "published_doi": "10.1109/TCBB.2019.2946826",
+  "state": "ok",
+  "title": "Rapid Reconstruction of Time-varying Gene Regulatory Networks with Limited Main Memory",
+  "type": "posted-content"
+ },
+ "10.1101/757062": {
+  "journal": "",
+  "published_doi": "10.1093/nar/gkaa530",
+  "state": "ok",
+  "title": "DeepCLIP: Predicting the effect of mutations on protein-RNA binding with Deep Learning",
+  "type": "posted-content"
+ },
+ "10.1101/760140": {
+  "journal": "",
+  "published_doi": "10.1016/j.compbiolchem.2019.107145",
+  "state": "ok",
+  "title": "PeSA: A Software Tool for Peptide Specificity Analysis",
+  "type": "posted-content"
+ },
+ "10.1101/764332": {
+  "journal": "",
+  "published_doi": "10.3390/genes11030289",
+  "state": "ok",
+  "title": "DLO Hi-C Tool for Digestion-Ligation-Only Hi-C Chromosome Conformation Capture Data Analysis",
+  "type": "posted-content"
+ },
+ "10.1101/779587": {
+  "journal": "",
+  "published_doi": "10.1093/bioinformatics/btaa011",
+  "state": "ok",
+  "title": "Defining data-driven primary transcript annotations with\n                  <i>primaryTranscriptAnnotation</i>\n          ",
+  "type": "posted-content"
+ },
+ "10.1101/781427": {
+  "journal": "",
+  "published_doi": "10.1371/journal.pcbi.1007436",
+  "state": "ok",
+  "title": "EAGLE: an algorithm that utilizes a small number of genomic features to predict tissue/cell type-specific enhancer-gene ",
+  "type": "posted-content"
+ },
+ "10.1101/788968": {
+  "journal": "",
+  "published_doi": "10.1186/s12859-021-04046-2",
+  "state": "ok",
+  "title": "DeltaNeTS+: Elucidating the mechanism of drugs and diseases using gene expression and transcriptional regulatory network",
+  "type": "posted-content"
+ },
+ "10.1101/798710": {
+  "journal": "",
+  "published_doi": "10.1186/s12859-020-03832-8",
+  "state": "ok",
+  "title": "Identification and Utilization of Copy Number Information for Correcting Hi-C Contact Map of Cancer Cell Line",
+  "type": "posted-content"
+ },
+ "10.1101/799114": {
+  "journal": "",
+  "published_doi": "10.1093/gigascience/giab045",
+  "state": "ok",
+  "title": "StoatyDive: Evaluation and Classification of Peak Profiles for Sequencing Data",
+  "type": "posted-content"
+ },
+ "10.1101/803221": {
+  "journal": "",
+  "published_doi": "10.1093/bioinformatics/btaa227",
+  "state": "ok",
+  "title": "T-Gene: Improved target gene prediction",
+  "type": "posted-content"
+ },
+ "10.1101/804625": {
+  "journal": "",
+  "published_doi": "10.1186/s12859-020-03621-3",
+  "state": "ok",
+  "title": "Enhancer prediction in the human genome by probabilistic modelling of the chromatin feature patterns",
+  "type": "posted-content"
+ },
+ "10.1101/807263": {
+  "journal": "",
+  "published_doi": "10.1099/mgen.0.000524",
+  "state": "ok",
+  "title": "The BSGatlas: An enhanced annotation of genes and transcripts for the\n                  <i>Bacillus subtilis</i>\n       ",
+  "type": "posted-content"
+ },
+ "10.1101/818385": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "CCSeq: Clusters of Colocalized Sequences",
+  "type": "posted-content"
+ },
+ "10.1101/819409": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Computational Assessment of the Regulation-Modulating Potential for Noncoding Variants",
+  "type": "posted-content"
+ },
+ "10.1101/824326": {
+  "journal": "",
+  "published_doi": "10.1186/s13059-020-02008-0",
+  "state": "ok",
+  "title": "scATAC-pro: a comprehensive workbench for single-cell chromatin accessibility sequencing data",
+  "type": "posted-content"
+ },
+ "10.1101/829481": {
+  "journal": "",
+  "published_doi": "10.1038/s41467-021-21765-5",
+  "state": "ok",
+  "title": "AtacWorks: A deep convolutional neural network toolkit for epigenomics",
+  "type": "posted-content"
+ },
+ "10.1101/840959": {
+  "journal": "",
+  "published_doi": "10.1186/s12859-021-03987-y",
+  "state": "ok",
+  "title": "ComHub: Community predictions of hubs in gene regulatory networks",
+  "type": "posted-content"
+ },
+ "10.1101/843656": {
+  "journal": "",
+  "published_doi": "10.1016/j.gpb.2019.09.006",
+  "state": "ok",
+  "title": "hTFtarget: a comprehensive database for regulations of human transcription factors and their targets",
+  "type": "posted-content"
+ },
+ "10.1101/852269": {
+  "journal": "",
+  "published_doi": "10.3389/fpls.2020.00289",
+  "state": "ok",
+  "title": "Management, Analyses, and Distribution of the MaizeCODE Data on the Cloud",
+  "type": "posted-content"
+ },
+ "10.1101/855379": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "3DGV: Immersive Exploration of 3D Genome Structures using Virtual Reality",
+  "type": "posted-content"
+ },
+ "10.1101/864124": {
+  "journal": "",
+  "published_doi": "10.1111/biom.13477",
+  "state": "ok",
+  "title": "Efficient Detection and Classification of Epigenomic Changes Under Multiple Conditions",
+  "type": "posted-content"
+ },
+ "10.1101/867309": {
+  "journal": "",
+  "published_doi": "10.1186/s13059-020-02071-7",
+  "state": "ok",
+  "title": "Sierra: discovery of differential transcript usage from polyA-captured single-cell RNA-seq data",
+  "type": "posted-content"
+ },
+ "10.1101/869560": {
+  "journal": "",
+  "published_doi": "10.1038/s41467-020-18035-1",
+  "state": "ok",
+  "title": "Beyond accessibility: ATAC-seq footprinting unravels kinetics of transcription factor binding during zygotic genome acti",
+  "type": "posted-content"
+ },
+ "10.1101/GR.192294.115": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Structured nucleosome fingerprints enable high-resolution mapping of chromatin architecture within regulatory regions",
+  "type": "journal-article"
+ },
+ "10.1101/GR.247049.118": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Replication timing networks reveal a link between transcription regulatory circuits and replication timing control",
+  "type": "journal-article"
+ },
+ "10.1101/GR.248658.119": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Identifying clusters of <i>cis</i>-regulatory elements underpinning TAD structures and lineage-specific regulatory netwo",
+  "type": "journal-article"
+ },
+ "10.1101/GR.249789.119": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Genome-wide analysis of polymerase III\u2013transcribed <i>Alu</i> elements suggests cell-type\u2013specific enhancer function",
+  "type": "journal-article"
+ },
+ "10.1101/GR.253492.119": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Identification and dynamic quantification of regulatory elements using total RNA",
+  "type": "journal-article"
+ },
+ "10.1101/GR.257832.119": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Analysis of Hi-C data using SIP effectively identifies loops in organisms from <i>C. elegans</i> to mammals",
+  "type": "journal-article"
+ },
+ "10.1101/GR.260844.120": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Cross-species analysis of enhancer logic using deep learning",
+  "type": "journal-article"
+ },
+ "10.1101/GR.260877.120": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "MEDEA: analysis of transcription factor binding motifs in accessible chromatin",
+  "type": "journal-article"
+ },
+ "10.1101/GR.275784.121": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Comprehensive determination of transcription start sites derived from all RNA polymerases using ReCappable-seq",
+  "type": "journal-article"
+ },
+ "10.1101/gr.10.4.577": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "PipMaker\u2014A Web Server for Aligning Two Genomic DNA Sequences",
+  "type": "journal-article"
+ },
+ "10.1101/gr.1327604": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Eukaryotic Regulatory Element Conservation Analysis and Identification Using Comparative Genomics",
+  "type": "journal-article"
+ },
+ "10.1101/gr.136184.111": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "ChIP-seq guidelines and practices of the ENCODE and modENCODE consortia",
+  "type": "journal-article"
+ },
+ "10.1101/gr.139881.112": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "<i>P</i>-value-based regulatory motif discovery using positional weight matrices",
+  "type": "journal-article"
+ },
+ "10.1101/gr.1642804": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "CONREAL: Conserved Regulatory Elements Anchored Alignment Algorithm for Identification of Transcription Factor Binding S",
+  "type": "journal-article"
+ },
+ "10.1101/gr.169508.113": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "ISMARA: automated modeling of genomic signals as a democracy of regulatory motifs",
+  "type": "journal-article"
+ },
+ "10.1101/gr.185272.114": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "The pluripotent regulatory circuitry connecting promoters to their long-range interacting elements",
+  "type": "journal-article"
+ },
+ "10.1101/gr.189894.115": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Saturation analysis of ChIP-seq data for reproducible identification of binding peaks",
+  "type": "journal-article"
+ },
+ "10.1101/gr.201574.115": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Modeling <i>cis</i>-regulation with a compendium of genome-wide histone H3K27ac profiles",
+  "type": "journal-article"
+ },
+ "10.1101/gr.216102": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Computational Detection and Location of Transcription Start Sites in Mammalian Genomic DNA",
+  "type": "journal-article"
+ },
+ "10.1101/gr.220673.117": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Accounting for GC-content bias reduces systematic errors and batch effects in ChIP-seq data",
+  "type": "journal-article"
+ },
+ "10.1101/gr.237156.118": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Anchor: trans-cell type prediction of transcription factor binding sites",
+  "type": "journal-article"
+ },
+ "10.1101/gr.255002": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Detection and Visualization of Compositionally Similar <i>cis</i>-Regulatory Element Clusters in Orthologous and Coordin",
+  "type": "journal-article"
+ },
+ "10.1101/gr.2589004": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Decoding Human Regulatory Circuits",
+  "type": "journal-article"
+ },
+ "10.1101/gr.266171.120": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Modeling transcriptional regulation of model species with deep learning",
+  "type": "journal-article"
+ },
+ "10.1101/gr.275870.121": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Chromatin interaction\u2013aware gene regulatory modeling with graph attention networks",
+  "type": "journal-article"
+ },
+ "10.1101/gr.277015.122": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Matching queried single-cell open-chromatin profiles to large pools of single-cell transcriptomes and epigenomes for ref",
+  "type": "journal-article"
+ },
+ "10.1101/gr.4303406": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "A systematic model to predict transcriptional regulatory mechanisms based on overrepresentation of transcription factor ",
+  "type": "journal-article"
+ },
+ "10.1101/gr.849004": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "WebLogo: A Sequence Logo Generator: Figure 1",
+  "type": "journal-article"
+ },
+ "10.1101/gr.9.10.960": {
+  "journal": "Genome Research",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Generation and Analysis of 25 Mb of Genomic DNA from the Pufferfish <i>Fugu rubripes</i> by Sequence Scanning",
+  "type": "journal-article"
+ },
+ "10.20944/PREPRINTS201910.0146.V1": {
+  "journal": "",
+  "published_doi": "10.3390/ijms21113828",
+  "state": "ok",
+  "title": "CSI NGS Portal: An Online Platform for Automated NGS Data Analysis and Sharing",
+  "type": "posted-content"
+ },
+ "10.20944/PREPRINTS202005.0227.V1": {
+  "journal": "",
+  "published_doi": "10.3390/genes11060634",
+  "state": "ok",
+  "title": "metaRE R Package for Meta-analysis of Transcriptome Data to Identify the Cis-regulatory Code behind the Transcriptional ",
+  "type": "posted-content"
+ },
+ "10.20944/PREPRINTS202011.0199.V1": {
+  "journal": "",
+  "published_doi": "10.3390/sym13020295",
+  "state": "ok",
+  "title": "GENAVOS: A New Tool for Modelling and Analyzing Cancer Gene Regulatory Networks Using Delayed Nonlinear Variable Order F",
+  "type": "posted-content"
+ },
+ "10.21203/RS.2.20856/V2": {
+  "journal": "",
+  "published_doi": "10.1186/s13072-020-00343-x",
+  "state": "ok",
+  "title": "BAMscale: quantification of next-generation sequencing peaks and generation of scaled coverage tracks",
+  "type": "posted-content"
+ },
+ "10.21203/RS.2.21700/V1": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "An Order Independent Algorithm for Inferring Gene Regulatory Network Using Quantile Value for Conditional Independent Te",
+  "type": "posted-content"
+ },
+ "10.21203/RS.3.RS-126986/V1": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Unbiased integration of single cell multi-omics data",
+  "type": "posted-content"
+ },
+ "10.21203/RS.3.RS-1284479/V1": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "Promoter Motif And Conserved Module Analysis In DNA And RNA Using Almodules",
+  "type": "posted-content"
+ },
+ "10.21203/RS.3.RS-133258/V1": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "TimeNexus: A Novel Cytoscape App to Analyze Time-Series Data Using Temporal MultiLayer Networks (tMLNs)",
+  "type": "posted-content"
+ },
+ "10.21203/RS.3.RS-39526/V3": {
+  "journal": "",
+  "published_doi": "10.1186/s12859-020-03828-4",
+  "state": "ok",
+  "title": "m5CPred-SVM:\u00a0 A Novel Method for Predicting m5C Sites of RNA",
+  "type": "posted-content"
+ },
+ "10.21203/RS.3.RS-640669/V1": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "DeeReCT-TSS: A novel meta-learning-based method annotates TSS in multiple cell types based on DNA sequences and RNA-seq ",
+  "type": "posted-content"
+ },
+ "10.21203/RS.3.RS-646006/V1": {
+  "journal": "",
+  "published_doi": null,
+  "state": "ok",
+  "title": "An Integrated CUT&amp;amp;RUN Quality Control Workflow for Histone Modifications and Transcription Factors",
+  "type": "posted-content"
+ },
+ "10.48550/arXiv.2107.13247": {
+  "http": 404,
+  "state": "broken"
+ }
+}

@@ -129,7 +129,22 @@ def cache_key(ident: str) -> str:
     return f"{kind}_{value}".replace("/", "_").replace(":", "_")
 
 
-def primary_identifier(tool: dict) -> str:
+def load_publication_map() -> dict[str, str]:
+    """preprint DOI -> published DOI, from pipeline/resolve_pubs.py."""
+    path = DATA / "cache" / "publication_map.json"
+    if not path.exists():
+        return {}
+    try:
+        blob = json.loads(path.read_text())
+    except ValueError:
+        return {}
+    return {d: e["published_doi"] for d, e in blob.items() if e.get("published_doi")}
+
+
+PREPRINT_PREFIXES = ("10.1101/", "10.21203/", "10.31234/", "10.20944/")
+
+
+def primary_identifier(tool: dict, pubmap: dict[str, str] | None = None) -> str:
     """The tool's own paper: the one bio.tools marks Primary, else the first.
 
     Summing every linked publication - what the dissertation's script did - is
@@ -138,15 +153,29 @@ def primary_identifier(tool: dict) -> str:
     the Bioconductor paper to 23 packages here, so summing hands each member
     the whole suite's citation count and the ranking becomes meaningless.
     """
+    pubmap = pubmap or {}
     pubs = tool.get("publication") or []
     ordered = sorted(pubs, key=lambda p: 0 if "Primary" in (p.get("type") or []) else 1)
+
+    candidates = []
     for pub in ordered:
         pmid = pub.get("pmid") or (pub.get("metadata") or {}).get("pmid")
         if pmid and str(pmid).lower() not in ("none", "null", ""):
-            return f"pmid:{pmid}"
-        if pub.get("doi"):
-            return "doi:" + pub["doi"].strip().removeprefix("https://doi.org/")
-    return ""
+            candidates.append(f"pmid:{pmid}")
+            continue
+        doi = (pub.get("doi") or "").strip().removeprefix("https://doi.org/")
+        if doi:
+            # Prefer the peer-reviewed version where Crossref records one.
+            candidates.append("doi:" + pubmap.get(doi, doi))
+
+    # A PubMed-indexed or journal DOI beats a preprint, even if bio.tools lists
+    # the preprint first: TOBIAS's record carries only the bioRxiv DOI, and
+    # linking a reader to a 2019 preprint when the Nature Communications paper
+    # exists is a worse citation, not just an older one.
+    for ident in candidates:
+        if not ident.removeprefix("doi:").startswith(PREPRINT_PREFIXES):
+            return ident
+    return candidates[0] if candidates else ""
 
 
 def norm_name(name: str) -> str:
@@ -168,10 +197,11 @@ def repo_url(tool: dict) -> str:
 
 
 # ---------------------------------------------------------------------------
-def from_biotools(tool: dict, cites: dict[str, int], shared: dict[str, int]) -> dict:
+def from_biotools(tool: dict, cites: dict[str, int], shared: dict[str, int],
+                  pubmap: dict[str, str]) -> dict:
     gh = tool.get("_github") or {}
     ids = tool.get("_identifiers") or []
-    primary = primary_identifier(tool)
+    primary = primary_identifier(tool, pubmap)
     n_sharing = shared.get(primary, 0)
     # A publication linked by several tools is a suite paper, not this tool's
     # own. We genuinely do not know the member's individual impact, so record
@@ -259,8 +289,9 @@ def main() -> None:
 
     enriched = read_json(ENRICHED)["list"]
     cites = load_citation_counts()
+    pubmap = load_publication_map()
     # How many catalog tools claim each publication as their primary one.
-    shared = Counter(p for p in (primary_identifier(t) for t in enriched) if p)
+    shared = Counter(p for p in (primary_identifier(t, pubmap) for t in enriched) if p)
     seeds = yaml.safe_load(SEEDS.read_text()) or {}
     overlay = yaml.safe_load(OVERLAY.read_text()) or {}
 
@@ -268,6 +299,7 @@ def main() -> None:
     corrections = overlay.get("corrections") or {}
     excluded = overlay.get("exclude") or {}
     aliases = overlay.get("aliases") or {}
+    pub_overrides = overlay.get("publications") or {}
     alias_targets = {bid for ids in aliases.values() for bid in ids}
 
     proposed, llm_out_of_scope = {}, {}
@@ -304,7 +336,7 @@ def main() -> None:
             continue
         if bid in llm_out_of_scope and bid not in protected:
             continue
-        rows.append(from_biotools(tool, cites, shared))
+        rows.append(from_biotools(tool, cites, shared, pubmap))
         seen_names[norm_name(tool["name"])] = bid
 
     seeded = 0
@@ -333,6 +365,8 @@ def main() -> None:
                 row["categories"] = [c for c in CATEGORY_KEYS
                                      if c in set(row["categories"]) | set(extra)]
             row.update(fix)
+        if key in pub_overrides:
+            row["publication"] = pub_overrides[key]
         if key in featured:
             row["featured"] = featured[key]
         else:

@@ -103,8 +103,6 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
   <sub>[bio.tools](https://bio.tools/rsat) · [paper](https://pubmed.ncbi.nlm.nih.gov/10641039/) · `184 cites`</sub>
 - **[ReMap](https://remap.univ-amu.fr/)**: Large-scale atlas of regulatory regions from public DNA-binding experiments
   <sub>[bio.tools](https://bio.tools/inserm-remap) · [paper](https://pubmed.ncbi.nlm.nih.gov/25477382/) · `138 cites`</sub>
-- **[TOBIAS](https://github.com/loosolab/TOBIAS)**: Differential ATAC-seq footprinting between conditions
-  <sub>[code](https://github.com/loosolab/TOBIAS) · [bio.tools](https://bio.tools/TOBIAS) · [paper](https://doi.org/10.1101/869560) · `251 stars | 8 cites`</sub>
 - **[UniBind](https://unibind.uio.no/)**: TFBS predictions restricted to ChIP-seq-supported, high-confidence sites
   <sub>[code](https://bitbucket.org/CBGR/unibind_enrichment/) · [bio.tools](https://bio.tools/unibind) · [paper](https://doi.org/10.1101/2020.11.17.384578) · `7 cites`</sub>
 - **[BPNet](https://github.com/kundajelab/bpnet)**: Base-resolution TF binding model that recovers motif syntax
@@ -113,8 +111,10 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
   <sub>[code](https://github.com/google-deepmind/deepmind-research) · [paper](https://doi.org/10.1038/s41592-021-01252-x)</sub>
 - **[SCENIC](http://scenic.aertslab.org)**: Single-cell regulatory network inference; regulons rather than raw correlations
   <sub>[code](https://github.com/aertslab/SCENIC) · [bio.tools](https://bio.tools/scenic) · [paper](https://pubmed.ncbi.nlm.nih.gov/28991892/) · `491 stars`</sub>
-- **[TFBSFootprinter](https://github.com/thirtysix/TFBS_footprinting)**: Multi-evidence TFBS scoring combining conservation, CAGE, eQTL and chromatin data
-  <sub>[code](https://github.com/thirtysix/TFBS_footprinting) · [paper](https://doi.org/10.3389/fbinf.2022.910346)</sub>
+- **[TFBSFootprinter](https://github.com/thirtysix/TFBS_footprinting3)**: Multi-evidence TFBS scoring combining conservation, CAGE, eQTL and chromatin data
+  <sub>[code](https://github.com/thirtysix/TFBS_footprinting3) · [paper](https://pubmed.ncbi.nlm.nih.gov/40646689/)</sub>
+- **[TOBIAS](https://github.com/loosolab/TOBIAS)**: Differential ATAC-seq footprinting between conditions
+  <sub>[code](https://github.com/loosolab/TOBIAS) · [bio.tools](https://bio.tools/TOBIAS) · [paper](https://doi.org/10.1038/s41467-020-18035-1) · `251 stars`</sub>
 
 <sub>[+ 599 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=tfbs-prediction)</sub>
 
@@ -139,10 +139,10 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 
 - **[RSAT suite](http://rsat.eu)**: Long-running suite covering matrix scanning, comparison and enrichment
   <sub>[bio.tools](https://bio.tools/rsat) · [paper](https://pubmed.ncbi.nlm.nih.gov/10641039/) · `184 cites`</sub>
+- **[TFBSFootprinter](https://github.com/thirtysix/TFBS_footprinting3)**: Multi-evidence TFBS scoring combining conservation, CAGE, eQTL and chromatin data
+  <sub>[code](https://github.com/thirtysix/TFBS_footprinting3) · [paper](https://pubmed.ncbi.nlm.nih.gov/40646689/)</sub>
 - **[TOBIAS](https://github.com/loosolab/TOBIAS)**: Differential ATAC-seq footprinting between conditions
-  <sub>[code](https://github.com/loosolab/TOBIAS) · [bio.tools](https://bio.tools/TOBIAS) · [paper](https://doi.org/10.1101/869560) · `251 stars | 8 cites`</sub>
-- **[TFBSFootprinter](https://github.com/thirtysix/TFBS_footprinting)**: Multi-evidence TFBS scoring combining conservation, CAGE, eQTL and chromatin data
-  <sub>[code](https://github.com/thirtysix/TFBS_footprinting) · [paper](https://doi.org/10.3389/fbinf.2022.910346)</sub>
+  <sub>[code](https://github.com/loosolab/TOBIAS) · [bio.tools](https://bio.tools/TOBIAS) · [paper](https://doi.org/10.1038/s41467-020-18035-1) · `251 stars`</sub>
 
 <sub>[+ 32 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=footprinting)</sub>
 
@@ -152,12 +152,12 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 
 - **[ReMap](https://remap.univ-amu.fr/)**: Large-scale atlas of regulatory regions from public DNA-binding experiments
   <sub>[bio.tools](https://bio.tools/inserm-remap) · [paper](https://pubmed.ncbi.nlm.nih.gov/25477382/) · `138 cites`</sub>
-- **[TOBIAS](https://github.com/loosolab/TOBIAS)**: Differential ATAC-seq footprinting between conditions
-  <sub>[code](https://github.com/loosolab/TOBIAS) · [bio.tools](https://bio.tools/TOBIAS) · [paper](https://doi.org/10.1101/869560) · `251 stars | 8 cites`</sub>
 - **[ChIP-Atlas](https://chip-atlas.org)**: Reprocessed public ChIP-seq, ATAC-seq and Bisulfite-seq across six organisms
   <sub>[code](https://github.com/inutano/chip-atlas) · [bio.tools](https://bio.tools/chip-atlas) · [paper](https://pubmed.ncbi.nlm.nih.gov/35325188/) · `84 stars`</sub>
 - **[Genrich](https://github.com/jsh58/Genrich)**: Peak caller with replicate handling and an ATAC mode
   <sub>[code](https://github.com/jsh58/Genrich)</sub>
+- **[TOBIAS](https://github.com/loosolab/TOBIAS)**: Differential ATAC-seq footprinting between conditions
+  <sub>[code](https://github.com/loosolab/TOBIAS) · [bio.tools](https://bio.tools/TOBIAS) · [paper](https://doi.org/10.1038/s41467-020-18035-1) · `251 stars`</sub>
 
 <sub>[+ 495 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=peak-calling)</sub>
 
@@ -221,8 +221,8 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 
 *Cross-species conservation and evolution of regulatory sequence.*
 
-- **[TFBSFootprinter](https://github.com/thirtysix/TFBS_footprinting)**: Multi-evidence TFBS scoring combining conservation, CAGE, eQTL and chromatin data
-  <sub>[code](https://github.com/thirtysix/TFBS_footprinting) · [paper](https://doi.org/10.3389/fbinf.2022.910346)</sub>
+- **[TFBSFootprinter](https://github.com/thirtysix/TFBS_footprinting3)**: Multi-evidence TFBS scoring combining conservation, CAGE, eQTL and chromatin data
+  <sub>[code](https://github.com/thirtysix/TFBS_footprinting3) · [paper](https://pubmed.ncbi.nlm.nih.gov/40646689/)</sub>
 
 <sub>[+ 32 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=comparative)</sub>
 

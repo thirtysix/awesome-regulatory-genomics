@@ -79,6 +79,15 @@ exclude:
 # aliases - collapse duplicate bio.tools records for the same tool.
 # The key is kept; the listed IDs are dropped and recorded as alternates.
 # ---------------------------------------------------------------------------
+# publications - override the publication link on a bio.tools record.
+# Used where bio.tools carries a preprint and Crossref records no
+# `is-preprint-of` relation, so pipeline/resolve_pubs.py cannot upgrade it
+# automatically. Every entry here was looked up and the title checked against
+# the tool; do not add one from memory.
+publications:
+  signac: pmid:34725479          # Nature Methods 2021, 10.1038/s41592-021-01282-5
+  archr: doi:10.1038/s41588-021-00790-6    # Nature Genetics 2021
+
 aliases:
   meme_suite: [meme]                 # "MEME" and "MEME Suite" are one tool
   imotifbreakr: [motifbreakr]        # two records for the Bioconductor package
