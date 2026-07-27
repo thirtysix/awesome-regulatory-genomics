@@ -409,6 +409,25 @@ KEEP_TEXT_PATTERNS = [
 # motifs" and would otherwise admit protein-motif viewers like 3Matrix.
 HARD_EXCLUDE_PATTERNS = [
     r"\bprotein (sequence )?motif|\bmotifs? (with)?in proteins|\bstructural motif",
+    # Protein and peptide work uses the same vocabulary as DNA motif analysis:
+    # "position weight matrix", "sequence logo" and "motif discovery" are as
+    # common in one as the other. Without these, the strong-text tier admits
+    # SLiMFinder, PeSA, GibbsCluster, pftools and the antimicrobial-peptide
+    # classifiers, all of which a scope reviewer flagged.
+    r"\bshort linear motif|\bSLiMs?\b",
+    r"\bpeptides?\b",
+    r"\bcatalytic site|\bactive site\b",
+    r"\bamino[- ]acid (motif|pattern|sequence|composition)",
+    r"\bprotein (profile|family|residue|disorder)s?\b",
+    r"\bleucine[- ]rich repeat|\bLRR\b",
+    r"\bantibacterial|\bantimicrobial|\bantifungal",
+    r"\bRNA[- ]binding protein|\bRBPs?\b",
+    r"\bcircular RNA|\bcircRNA",
+    r"\bRNA (sequence and structure|structure|secondary structure) motif",
+    r"\bRNA[- ]binding data",
+    # Protein-side residue prediction: DNA tools speak of binding *sites*,
+    # protein-structure tools of binding *residues*.
+    r"\bbinding residues?\b",
     r"\bRNA (tertiary|structural|secondary) motif",
     r"\bmass spectrometr|\bLC-MS\b|\bMS/MS\b|\bmetabolomic|\bglycomic",
     r"\bchromatograph|\bflow injection analysis",

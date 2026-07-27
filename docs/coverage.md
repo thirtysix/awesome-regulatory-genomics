@@ -1,10 +1,10 @@
 # Coverage audit
 
-Generated 2026-07-26 by `make audit`, against [`curation/benchmark.yaml`](../curation/benchmark.yaml).
+Generated 2026-07-27 by `make audit`, against [`curation/benchmark.yaml`](../curation/benchmark.yaml).
 
 The benchmark is a hand-written list of resources the field treats as standard. It is not a ranking and not exhaustive. It exists so that "did the pipeline find the obvious things?" is a measurement rather than an impression.
 
-**89 of 89 benchmark tools present (100%).** Catalog size: 1841 tools.
+**89 of 89 benchmark tools present (100%).** Catalog size: 1800 tools.
 
 No misses.
 

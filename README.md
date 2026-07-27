@@ -1,30 +1,30 @@
 # Awesome Regulatory Genomics
 
-[![Tools](https://img.shields.io/badge/tools-1841-blue)](https://thirtysix.github.io/awesome-regulatory-genomics/) [![License: CC BY 4.0](https://img.shields.io/badge/data-CC--BY--4.0-lightgrey)](LICENSE-DATA) [![Updated](https://img.shields.io/badge/updated-2026--07--26-brightgreen)](#)
+[![Tools](https://img.shields.io/badge/tools-1800-blue)](https://thirtysix.github.io/awesome-regulatory-genomics/) [![License: CC BY 4.0](https://img.shields.io/badge/data-CC--BY--4.0-lightgrey)](LICENSE-DATA) [![Updated](https://img.shields.io/badge/updated-2026--07--27-brightgreen)](#)
 
 A catalog of tools, databases and methods for **transcription-factor binding, sequence motifs, regulatory elements, chromatin and gene-regulatory networks**.
 
-**[Browse and search all 1841 tools →](https://thirtysix.github.io/awesome-regulatory-genomics/)**. Filter by category, tool type, language, licence, activity and citations.
+**[Browse and search all 1800 tools →](https://thirtysix.github.io/awesome-regulatory-genomics/)**. Filter by category, tool type, language, licence, activity and citations.
 
 This list is *generated and then curated*. A reproducible pipeline harvests [bio.tools](https://bio.tools), resolves source repositories, and pulls citation counts and repository activity; a hand-written overlay adds tools bio.tools does not index and promotes the entries below. Everything is rebuildable with `make all`; see [How this list is built](#how-this-list-is-built).
 
 ## Contents
 
-- [Motif discovery](#motif-discovery), 197 tools
-- [Motif scanning & enrichment](#motif-scanning--enrichment), 214 tools
-- [Motif comparison & visualisation](#motif-comparison--visualisation), 33 tools
-- [Motif & TF databases](#motif--tf-databases), 108 tools
-- [TFBS prediction](#tfbs-prediction), 616 tools
-- [Promoter & enhancer prediction](#promoter--enhancer-prediction), 483 tools
-- [Footprinting](#footprinting), 35 tools
-- [Peak calling](#peak-calling), 512 tools
-- [Peak annotation & differential binding](#peak-annotation--differential-binding), 83 tools
-- [ChIP/ATAC data resources](#chipatac-data-resources), 104 tools
-- [Gene regulatory networks](#gene-regulatory-networks), 439 tools
+- [Motif discovery](#motif-discovery), 180 tools
+- [Motif scanning & enrichment](#motif-scanning--enrichment), 200 tools
+- [Motif comparison & visualisation](#motif-comparison--visualisation), 30 tools
+- [Motif & TF databases](#motif--tf-databases), 105 tools
+- [TFBS prediction](#tfbs-prediction), 604 tools
+- [Promoter & enhancer prediction](#promoter--enhancer-prediction), 476 tools
+- [Footprinting](#footprinting), 34 tools
+- [Peak calling](#peak-calling), 504 tools
+- [Peak annotation & differential binding](#peak-annotation--differential-binding), 82 tools
+- [ChIP/ATAC data resources](#chipatac-data-resources), 102 tools
+- [Gene regulatory networks](#gene-regulatory-networks), 437 tools
 - [Regulatory variant effect](#regulatory-variant-effect), 102 tools
-- [Nucleosome & chromatin state](#nucleosome--chromatin-state), 290 tools
+- [Nucleosome & chromatin state](#nucleosome--chromatin-state), 289 tools
 - [Single-cell regulatory genomics](#single-cell-regulatory-genomics), 124 tools
-- [Comparative & evolutionary](#comparative--evolutionary), 33 tools
+- [Comparative & evolutionary](#comparative--evolutionary), 32 tools
 - [How this list is built](#how-this-list-is-built)
 - [Coverage and known gaps](#coverage-and-known-gaps)
 - [Contributing](#contributing)
@@ -44,7 +44,7 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[homer](http://homer.ucsd.edu/homer/motif/)**: Motif discovery plus peak annotation; the pragmatic first stop for ChIP-seq
   <sub>[code](https://github.com/npdeloss/mepp) · [bio.tools](https://bio.tools/homer)</sub>
 
-<sub>[+ 192 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=motif-discovery)</sub>
+<sub>[+ 175 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=motif-discovery)</sub>
 
 ## Motif scanning & enrichment
 
@@ -61,7 +61,7 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[motifmatchr](https://bioconductor.org/packages/motifmatchr/)**: Fast motif matching over large genomic range sets
   <sub>[code](https://github.com/GreenleafLab/motifmatchr) · [paper](https://doi.org/10.18129/B9.bioc.motifmatchr)</sub>
 
-<sub>[+ 209 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=motif-scanning)</sub>
+<sub>[+ 195 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=motif-scanning)</sub>
 
 ## Motif comparison & visualisation
 
@@ -70,7 +70,7 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[RSAT suite](http://rsat.eu)**: Long-running suite covering matrix scanning, comparison and enrichment
   <sub>[bio.tools](https://bio.tools/rsat) · [paper](https://pubmed.ncbi.nlm.nih.gov/10641039/) · `184 cites`</sub>
 
-<sub>[+ 32 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=motif-comparison)</sub>
+<sub>[+ 29 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=motif-comparison)</sub>
 
 ## Motif & TF databases
 
@@ -89,7 +89,7 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[HOCOMOCO](https://hocomoco.autosome.org)**: Human and mouse motifs derived from uniform ChIP-seq reprocessing
   <sub>[bio.tools](https://bio.tools/hocomoco) · [paper](https://pubmed.ncbi.nlm.nih.gov/29140464/)</sub>
 
-<sub>[+ 102 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=motif-databases)</sub>
+<sub>[+ 99 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=motif-databases)</sub>
 
 ## TFBS prediction
 
@@ -116,7 +116,7 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[TOBIAS](https://github.com/loosolab/TOBIAS)**: Differential ATAC-seq footprinting between conditions
   <sub>[code](https://github.com/loosolab/TOBIAS) · [bio.tools](https://bio.tools/TOBIAS) · [paper](https://doi.org/10.1038/s41467-020-18035-1) · `251 stars`</sub>
 
-<sub>[+ 606 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=tfbs-prediction)</sub>
+<sub>[+ 594 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=tfbs-prediction)</sub>
 
 ## Promoter & enhancer prediction
 
@@ -131,7 +131,7 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[homer](http://homer.ucsd.edu/homer/motif/)**: Motif discovery plus peak annotation; the pragmatic first stop for ChIP-seq
   <sub>[code](https://github.com/npdeloss/mepp) · [bio.tools](https://bio.tools/homer)</sub>
 
-<sub>[+ 479 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=regulatory-elements)</sub>
+<sub>[+ 472 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=regulatory-elements)</sub>
 
 ## Footprinting
 
@@ -144,7 +144,7 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[TOBIAS](https://github.com/loosolab/TOBIAS)**: Differential ATAC-seq footprinting between conditions
   <sub>[code](https://github.com/loosolab/TOBIAS) · [bio.tools](https://bio.tools/TOBIAS) · [paper](https://doi.org/10.1038/s41467-020-18035-1) · `251 stars`</sub>
 
-<sub>[+ 32 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=footprinting)</sub>
+<sub>[+ 31 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=footprinting)</sub>
 
 ## Peak calling
 
@@ -159,13 +159,13 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[TOBIAS](https://github.com/loosolab/TOBIAS)**: Differential ATAC-seq footprinting between conditions
   <sub>[code](https://github.com/loosolab/TOBIAS) · [bio.tools](https://bio.tools/TOBIAS) · [paper](https://doi.org/10.1038/s41467-020-18035-1) · `251 stars`</sub>
 
-<sub>[+ 508 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=peak-calling)</sub>
+<sub>[+ 500 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=peak-calling)</sub>
 
 ## Peak annotation & differential binding
 
 *Annotating peaks to genes/features and testing differential occupancy.*
 
-<sub>[83 tools in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=peak-annotation)</sub>
+<sub>[82 tools in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=peak-annotation)</sub>
 
 ## ChIP/ATAC data resources
 
@@ -178,7 +178,7 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[ChIP-Atlas](https://chip-atlas.org)**: Reprocessed public ChIP-seq, ATAC-seq and Bisulfite-seq across six organisms
   <sub>[code](https://github.com/inutano/chip-atlas) · [bio.tools](https://bio.tools/chip-atlas) · [paper](https://pubmed.ncbi.nlm.nih.gov/35325188/) · `84 stars`</sub>
 
-<sub>[+ 101 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=chip-resources)</sub>
+<sub>[+ 99 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=chip-resources)</sub>
 
 ## Gene regulatory networks
 
@@ -189,7 +189,7 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[SCENIC](http://scenic.aertslab.org)**: Single-cell regulatory network inference; regulons rather than raw correlations
   <sub>[code](https://github.com/aertslab/SCENIC) · [bio.tools](https://bio.tools/scenic) · [paper](https://pubmed.ncbi.nlm.nih.gov/28991892/) · `491 stars`</sub>
 
-<sub>[+ 437 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=grn-inference)</sub>
+<sub>[+ 435 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=grn-inference)</sub>
 
 ## Regulatory variant effect
 
@@ -204,7 +204,7 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[ReMap](https://remap.univ-amu.fr/)**: Large-scale atlas of regulatory regions from public DNA-binding experiments
   <sub>[bio.tools](https://bio.tools/inserm-remap) · [paper](https://pubmed.ncbi.nlm.nih.gov/25477382/) · `138 cites`</sub>
 
-<sub>[+ 289 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=nucleosome-chromatin)</sub>
+<sub>[+ 288 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=nucleosome-chromatin)</sub>
 
 ## Single-cell regulatory genomics
 
@@ -224,7 +224,7 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[TFBSFootprinter](https://github.com/thirtysix/TFBS_footprinting3)**: Multi-evidence TFBS scoring combining conservation, CAGE, eQTL and chromatin data
   <sub>[code](https://github.com/thirtysix/TFBS_footprinting3) · [paper](https://pubmed.ncbi.nlm.nih.gov/40646689/)</sub>
 
-<sub>[+ 32 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=comparative)</sub>
+<sub>[+ 31 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=comparative)</sub>
 
 ## Running the pipeline
 
@@ -264,8 +264,8 @@ Two design decisions are worth stating, because they are where most tool tables 
 
 ## Coverage and known gaps
 
-- **1841 tools**: 1805 harvested from bio.tools, 36 added by hand because bio.tools does not index them.
-- **965 (52%) have a resolvable source repository.** bio.tools rarely records one directly, so repositories are also recovered from Bioconductor, CRAN and PyPI metadata, from bioconda recipes and from links on the tool's own homepage. Every candidate is validated against the tool's description before it is used: matching on name alone resolves MEME to a meme generator and MEDUSA to a genome scaffolder that merely shares the name. Near-misses are listed in [`docs/repo-review.md`](docs/repo-review.md) rather than applied.
+- **1800 tools**: 1764 harvested from bio.tools, 36 added by hand because bio.tools does not index them.
+- **952 (53%) have a resolvable source repository.** bio.tools rarely records one directly, so repositories are also recovered from Bioconductor, CRAN and PyPI metadata, from bioconda recipes and from links on the tool's own homepage. Every candidate is validated against the tool's description before it is used: matching on name alone resolves MEME to a meme generator and MEDUSA to a genome scaffolder that merely shares the name. Near-misses are listed in [`docs/repo-review.md`](docs/repo-review.md) rather than applied.
 - **19 tools are featured** in the curated sections above; the rest are in the [full catalog](https://thirtysix.github.io/awesome-regulatory-genomics/).
 
 Honest limitations:

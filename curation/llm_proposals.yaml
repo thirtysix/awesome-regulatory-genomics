@@ -12581,13 +12581,6 @@ majority_out_of_scope:
     description: A rapid filter that is based on the comparison of composition and order of short strings
       in the adjacent sequence motifs.
     name: TRDistiller
-  wregex:
-    against:
-    - bulk
-    - third
-    description: Software tool for amino acid motif searching using weighted regular expression and regular
-      expressions with a Position-Specific Scoring Matrix
-    name: Wregex
 out_of_scope_confirmed:
   3DGV:
     agreed_by:

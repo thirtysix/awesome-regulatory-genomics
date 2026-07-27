@@ -1,10 +1,10 @@
 {
- "count": 1497,
+ "count": 1545,
  "list": [
   {
    "biotoolsID": "imimic_iint",
    "name": "mimicINT",
-   "reason": "weak-operation, no corroboration",
+   "reason": "hard-excluded:\\bshort linear motif|\\bSLiMs?\\",
    "description": "mimicINT is an open-source computational workflow for large-scale protein-protein interaction inference between microbes and human hosts. It leverages molecular mimicry elements, such as short linear ",
    "operations": [
     "Protein identification",
@@ -73,6 +73,27 @@
    "name": "pSTR Finder",
    "reason": "weak-operation, no corroboration",
    "description": "Web tool to efficiently analyse multiple genome sequence samples for the presence of STR loci using Tandem Repeats Finder (TRF) and generates identical, polymorphic, and different STR loci for each co",
+   "operations": [
+    "Sequence motif recognition"
+   ]
+  },
+  {
+   "biotoolsID": "dilimot",
+   "name": "DILIMOT",
+   "reason": "hard-excluded:\\bpeptides?\\b",
+   "description": "Discovery of Linear Motifs (DILIMOT) is a server for finding short (3-8 amino acids) over-represented peptide patterns in a set of proteins.",
+   "operations": [
+    "Pathway or network prediction",
+    "Sequence motif analysis",
+    "Sequence motif discovery",
+    "Sequence motif recognition"
+   ]
+  },
+  {
+   "biotoolsID": "wregex",
+   "name": "Wregex",
+   "reason": "hard-excluded:\\bamino[- ]acid (motif|pattern",
+   "description": "Software tool for amino acid motif searching using weighted regular expression and regular expressions with a Position-Specific Scoring Matrix",
    "operations": [
     "Sequence motif recognition"
    ]
@@ -179,6 +200,31 @@
    ]
   },
   {
+   "biotoolsID": "rbpmotif",
+   "name": "RBPmotif",
+   "reason": "hard-excluded:\\bRNA[- ]binding protein|\\bRBP",
+   "description": "Web server for the discovery of sequence and structure preferences of RNA-binding proteins. Input is set of sequences known to be bound and unbound by the RNA-binding protein of interest.",
+   "operations": [
+    "Ab initio structure prediction",
+    "Sequence motif comparison",
+    "Sequence motif discovery",
+    "Sequence motif recognition"
+   ]
+  },
+  {
+   "biotoolsID": "rbpdb",
+   "name": "RBPDB",
+   "reason": "hard-excluded:\\bRNA[- ]binding protein|\\bRBP",
+   "description": "The RNA-Binding Protein DataBase (RBPDB) is a collection of experimental observations of RNA-binding sites, both in vitro and in vivo, manually curated from primary literature. The database is accessi",
+   "operations": [
+    "Peak calling",
+    "Protein binding site prediction",
+    "Protein feature detection",
+    "Protein fold recognition",
+    "Sequence motif recognition"
+   ]
+  },
+  {
    "biotoolsID": "qgrs_mapper",
    "name": "QGRS Mapper",
    "reason": "hard-excluded:\\bG-?quadruplex|\\bQGRS\\b",
@@ -236,6 +282,19 @@
    ]
   },
   {
+   "biotoolsID": "e1ds",
+   "name": "E1DS",
+   "reason": "hard-excluded:\\bcatalytic site|\\bactive site",
+   "description": "E1DS is a web server for enzyme catalytic site prediction. Annotation of enzymes is made using a novel pattern mining algorithm that discovers long sequence motifs.",
+   "operations": [
+    "Protein binding site prediction",
+    "Protein feature detection",
+    "Sequence alignment analysis (conservation)",
+    "Sequence motif discovery",
+    "Sequence motif recognition"
+   ]
+  },
+  {
    "biotoolsID": "erpin",
    "name": "Erpin",
    "reason": "weak-operation, no corroboration",
@@ -254,6 +313,19 @@
    "operations": [
     "Protein feature detection",
     "Sequence database search",
+    "Sequence feature detection",
+    "Sequence motif recognition"
+   ]
+  },
+  {
+   "biotoolsID": "bagel",
+   "name": "BAGEL",
+   "reason": "hard-excluded:\\bpeptides?\\b",
+   "description": "BActeriocin GEnome mining tooL (BAGEL) identifies putative bacteriocin ORFs (antimicrobial peptides)  based on a database containing information about known bacteriocins and adjacent genes involved in",
+   "operations": [
+    "Coding region prediction",
+    "Gene functional annotation",
+    "Gene prediction",
     "Sequence feature detection",
     "Sequence motif recognition"
    ]
@@ -286,7 +358,7 @@
   {
    "biotoolsID": "compomics-sigpep",
    "name": "Compomics-sigpep",
-   "reason": "weak-operation, no corroboration",
+   "reason": "hard-excluded:\\bpeptides?\\b",
    "description": "Predicting peptide signatures for targeted proteomics.",
    "operations": [
     "Sequence motif recognition"
@@ -295,7 +367,7 @@
   {
    "biotoolsID": "massxpert",
    "name": "massXpert",
-   "reason": "weak-operation, no corroboration",
+   "reason": "hard-excluded:\\bpeptides?\\b",
    "description": "Tool for analysis of polymer and peptide/protein mass spectra.",
    "operations": [
     "Modelling and simulation",
@@ -314,6 +386,17 @@
    "reason": "hard-excluded:\\bprotein (sequence )?motif|\\b",
    "description": "Discover novel protein motifs (SLiMs, mORFs, miniMotifs) and PTM sites. Analyses proteomes for regions with significant similarity to a specificity determinant model built from a set of aligned functi",
    "operations": [
+    "Sequence motif discovery",
+    "Sequence motif recognition"
+   ]
+  },
+  {
+   "biotoolsID": "slimsearch",
+   "name": "SLiMSearch 4",
+   "reason": "hard-excluded:\\bshort linear motif|\\bSLiMs?\\",
+   "description": "Short Linear Motifs Search. Proteome-wide discovery and annotation of functional modules in intrinsically disordered regions. Scans a motif consensus, representing the specificity determinants of a mo",
+   "operations": [
+    "Enrichment analysis",
     "Sequence motif discovery",
     "Sequence motif recognition"
    ]
@@ -342,7 +425,7 @@
   {
    "biotoolsID": "akid",
    "name": "AKID",
-   "reason": "hard-excluded:\\bphosphorylat|\\bkinase substr",
+   "reason": "hard-excluded:\\bpeptides?\\b",
    "description": "AKID is a Deep Neural Network-based method that identifies kinase-specific phosphorylation events at single-kinase level in any given Eukaryotic proteome without prior functional annotation. It automa",
    "operations": [
     "Post-translation modification site prediction",
@@ -377,7 +460,7 @@
   {
    "biotoolsID": "syfpeithi",
    "name": "SYFPEITHI",
-   "reason": "excluded:\\bMHC (class )?(I|II)\\b|\\bepitop",
+   "reason": "hard-excluded:\\bpeptides?\\b",
    "description": "Database comprising more than 7000 peptide sequences known to bind class I and class II MHC molecules. The entries are compiled from published reports only. The database can be used to predict the imm",
    "operations": [
     "Peptide database search",
@@ -399,6 +482,19 @@
    ]
   },
   {
+   "biotoolsID": "priesstess",
+   "name": "PRIESSTESS",
+   "reason": "hard-excluded:\\bRNA[- ]binding protein|\\bRBP",
+   "description": "Interpretable, high-performing models of the sequence and structure preferences of RNA-binding proteins.",
+   "operations": [
+    "Protein secondary structure comparison",
+    "RNA secondary structure alignment",
+    "RNA-binding protein prediction",
+    "Sequence motif recognition",
+    "Structure visualisation"
+   ]
+  },
+  {
    "biotoolsID": "interproscan_4",
    "name": "InterProScan (EBI)",
    "reason": "hard-excluded:\\bPROSITE\\b|\\bHAMAP\\b|\\bPfam\\b",
@@ -406,6 +502,19 @@
    "operations": [
     "Protein feature detection",
     "Sequence motif recognition"
+   ]
+  },
+  {
+   "biotoolsID": "dmfpred",
+   "name": "DMFpred",
+   "reason": "hard-excluded:\\bprotein (profile|family|resi",
+   "description": "Predicting protein disorder molecular functions based on protein cubic language model.",
+   "operations": [
+    "Protein disorder prediction",
+    "Protein function prediction",
+    "Protein structure validation",
+    "Sequence motif recognition",
+    "Small molecule design"
    ]
   },
   {
@@ -486,6 +595,18 @@
    ]
   },
   {
+   "biotoolsID": "cdpred",
+   "name": "CDpred",
+   "reason": "hard-excluded:\\bpeptides?\\b",
+   "description": "CDpred is a web based approach used to predict the celiac disease associated peptides and motifs.",
+   "operations": [
+    "Epitope mapping",
+    "Peptide immunogenicity prediction",
+    "Protein identification",
+    "Sequence motif recognition"
+   ]
+  },
+  {
    "biotoolsID": "enfusion",
    "name": "EnFusion",
    "reason": "weak-operation, no corroboration",
@@ -498,7 +619,7 @@
   {
    "biotoolsID": "deep-afppred",
    "name": "Deep-AFPpred",
-   "reason": "weak-operation, no corroboration",
+   "reason": "hard-excluded:\\bpeptides?\\b",
    "description": "Identifying novel antifungal peptides using pretrained embeddings from seq2vec with 1DCNN-BiLSTM",
    "operations": [
     "Fold recognition",
@@ -565,6 +686,17 @@
    ]
   },
   {
+   "biotoolsID": "rbpspot",
+   "name": "RBPSpot",
+   "reason": "hard-excluded:\\bRNA[- ]binding protein|\\bRBP",
+   "description": "Learning on Appropriate Contextual Information for RBP Binding Sites Discovery.",
+   "operations": [
+    "RNA secondary structure prediction",
+    "Sequence motif discovery",
+    "Sequence motif recognition"
+   ]
+  },
+  {
    "biotoolsID": "biapss",
    "name": "BIAPSS",
    "reason": "weak-operation, no corroboration",
@@ -576,6 +708,17 @@
     "Residue contact prediction",
     "Sequence alignment",
     "Sequence composition calculation",
+    "Sequence motif recognition"
+   ]
+  },
+  {
+   "biotoolsID": "phyto-lrr",
+   "name": "Phyto-LRR",
+   "reason": "hard-excluded:\\bleucine[- ]rich repeat|\\bLRR",
+   "description": "Identification and characterization of the LRR repeats in plant LRR-RLKs.\n\nThe predict-phytolrr program could identify LRRs effectively, especially for LRR motifs in plant LRR-RLKs.\n\nThe program is ba",
+   "operations": [
+    "Phylogenetic analysis",
+    "Protein feature detection",
     "Sequence motif recognition"
    ]
   },
@@ -647,6 +790,19 @@
    ]
   },
   {
+   "biotoolsID": "acep",
+   "name": "ACEP",
+   "reason": "hard-excluded:\\bpeptides?\\b",
+   "description": "ACEP is a deep learning model for high-throughput antibacterial peptide recognition. By loading a pre-trained model, the software can be deployed on a common computer to perform antimicrobial peptide ",
+   "operations": [
+    "Antimicrobial resistance prediction",
+    "Fold recognition",
+    "Protein secondary structure prediction",
+    "Sequence motif recognition",
+    "Visualisation"
+   ]
+  },
+  {
    "biotoolsID": "BioNet-Mining",
    "name": "BioNet-Mining",
    "reason": "weak-operation, no corroboration",
@@ -654,6 +810,18 @@
    "operations": [
     "Data retrieval",
     "Metabolic network modelling",
+    "Sequence motif recognition"
+   ]
+  },
+  {
+   "biotoolsID": "oRNAment",
+   "name": "oRNAment",
+   "reason": "hard-excluded:\\bRNA[- ]binding protein|\\bRBP",
+   "description": "A database of putative RNA binding protein target sites in the transcriptomes of model species.\n\nDashboard - Overview of the database.\n\nWelcome to oRNAment - o RNA motifs enrichment in complete transc",
+   "operations": [
+    "Filtering",
+    "In vitro selection",
+    "RNA binding site prediction",
     "Sequence motif recognition"
    ]
   },
@@ -702,7 +870,7 @@
   {
    "biotoolsID": "lrrsearch",
    "name": "LRRsearch",
-   "reason": "weak-operation, no corroboration",
+   "reason": "hard-excluded:\\bleucine[- ]rich repeat|\\bLRR",
    "description": "An asynchronous server-based application for the prediction of leucine-rich repeat motifs and an integrative database of NOD-like receptors.",
    "operations": [
     "Database search",
@@ -752,6 +920,17 @@
    ]
   },
   {
+   "biotoolsID": "comparipssm",
+   "name": "CompariPSSM",
+   "reason": "hard-excluded:\\bpeptides?\\b",
+   "description": "CompariPSSM is a tool that quantifies the similarity between motif-binding determinants using sliding window PSSM-PSSM comparison and a probabilistic framework. It can be used for peptide classificati",
+   "operations": [
+    "Clustering",
+    "Quantification",
+    "Sequence motif discovery"
+   ]
+  },
+  {
    "biotoolsID": "quasimotifinder",
    "name": "QuasiMotiFinder",
    "reason": "hard-excluded:\\bPROSITE\\b|\\bHAMAP\\b|\\bPfam\\b",
@@ -775,9 +954,20 @@
    ]
   },
   {
+   "biotoolsID": "smartiv",
+   "name": "SMARTIV",
+   "reason": "hard-excluded:\\bRNA (sequence and structure|",
+   "description": "Discovering and visualizing combined RNA sequence and structure motifs from high-throughput RNA-binding data, generated from in-vivo experiments. Predicts motifs from enriched k-mers that combine info",
+   "operations": [
+    "Enrichment analysis",
+    "RNA secondary structure prediction",
+    "Sequence motif discovery"
+   ]
+  },
+  {
    "biotoolsID": "beam",
    "name": "BEAM",
-   "reason": "excluded:\\bRNA (secondary |tertiary )?str",
+   "reason": "hard-excluded:\\bRNA (sequence and structure|",
    "description": "Analyze tens of thousands of RNA molecules and identify RNA secondary structure motifs associated to a measure of their statistical significance.",
    "operations": [
     "Sequence motif discovery"
@@ -794,6 +984,17 @@
     "Protein modelling (loops)",
     "Protein structural motif recognition",
     "Sequence motif discovery"
+   ]
+  },
+  {
+   "biotoolsID": "slimfinder",
+   "name": "SLiMFinder",
+   "reason": "hard-excluded:\\bshort linear motif|\\bSLiMs?\\",
+   "description": "De novo motif discovery tool for short linear motifs (SLiMs). Statistically over represented motifs within a set of protein sequences are identified and scored. Users have numerous masking options to ",
+   "operations": [
+    "Ab initio structure prediction",
+    "Sequence motif discovery",
+    "de Novo sequencing"
    ]
   },
   {
@@ -819,12 +1020,34 @@
    ]
   },
   {
+   "biotoolsID": "deepcip",
+   "name": "DeepCIP",
+   "reason": "hard-excluded:\\bcircular RNA|\\bcircRNA",
+   "description": "A multimodal deep learning method for the prediction of internal ribosome entry sites of circRNAs.",
+   "operations": [
+    "RNA secondary structure prediction",
+    "RNA structure prediction",
+    "Sequence motif discovery"
+   ]
+  },
+  {
    "biotoolsID": "pratt",
    "name": "Pratt (EBI)",
    "reason": "excluded:\\bunaligned protein sequence",
    "description": "Discover patterns in unaligned protein sequences.",
    "operations": [
     "Sequence motif discovery"
+   ]
+  },
+  {
+   "biotoolsID": "polarprotpred",
+   "name": "PolarProtPred",
+   "reason": "hard-excluded:\\bshort linear motif|\\bSLiMs?\\",
+   "description": "Predicting apical and basolateral localization of transmembrane proteins using putative short linear motifs and deep learning.",
+   "operations": [
+    "Sequence motif discovery",
+    "Sorting",
+    "Transmembrane protein prediction"
    ]
   },
   {
@@ -841,6 +1064,40 @@
    ]
   },
   {
+   "biotoolsID": "circrb",
+   "name": "circRB",
+   "reason": "hard-excluded:\\bcircular RNA|\\bcircRNA",
+   "description": "circRB is a tool for identifying the sequence specificities of circRNA-binding proteins based on a capsule network architecture.",
+   "operations": [
+    "Nucleic acid feature detection",
+    "RNA binding site prediction",
+    "RNA-binding protein prediction",
+    "Sequence motif discovery"
+   ]
+  },
+  {
+   "biotoolsID": "PeSA",
+   "name": "PeSA",
+   "reason": "hard-excluded:\\bpeptides?\\b",
+   "description": "The Software Tool for Peptide Specificity Analysis (PeSA) is an open-source software designed as a tool to use in the analysis of peptide arrays, permutation arrays and OPALs. The analysis can be used",
+   "operations": [
+    "Peptide identification",
+    "Quantification",
+    "Sequence motif discovery"
+   ]
+  },
+  {
+   "biotoolsID": "slimscape",
+   "name": "SLiMScape 3",
+   "reason": "hard-excluded:\\bshort linear motif|\\bSLiMs?\\",
+   "description": "Perform short linear motif analyses of protein interaction networks by integrating motif discovery and search tools in a network visualization environment. This aims to aid in the discovery of novel s",
+   "operations": [
+    "Pathway or network visualisation",
+    "Protein interaction prediction",
+    "Sequence motif discovery"
+   ]
+  },
+  {
    "biotoolsID": "hh-motif",
    "name": "HH-MOTiF",
    "reason": "hard-excluded:\\bprotein (sequence )?motif|\\b",
@@ -852,6 +1109,26 @@
    ]
   },
   {
+   "biotoolsID": "gibbscluster",
+   "name": "GibbsCluster",
+   "reason": "hard-excluded:\\bpeptides?\\b",
+   "description": "Simultaneous alignment and clustering of peptide data. It takes as input a set of peptide sequences and clusters them into meaningful groups. It returns the optimal number of clusters it identified, t",
+   "operations": [
+    "Clustering",
+    "Deisotoping",
+    "Sequence motif discovery"
+   ]
+  },
+  {
+   "biotoolsID": "seql-nrps",
+   "name": "SEQL-NRPS",
+   "reason": "hard-excluded:\\bpeptides?\\b",
+   "description": "This toll predicts the substrate of non-ribosomal peptide synthetases A-domains using Sequence Learner (SEQL), a discriminative classification method for sequences.",
+   "operations": [
+    "Sequence motif discovery"
+   ]
+  },
+  {
    "biotoolsID": "gravity-v2",
    "name": "GRAViTy-V2",
    "reason": "hard-excluded:\\bviral taxonom",
@@ -860,6 +1137,15 @@
     "Genome assembly",
     "Sequence motif comparison",
     "Taxonomic classification"
+   ]
+  },
+  {
+   "biotoolsID": "motifstack",
+   "name": "motifStack",
+   "reason": "hard-excluded:\\bamino[- ]acid (motif|pattern",
+   "description": "This package is designed for graphic representation of multiple motifs with different similarity scores. It works with both DNA/RNA sequence motif and amino acid sequence motif. In addition, it provid",
+   "operations": [
+    "Sequence motif comparison"
    ]
   },
   {
@@ -885,6 +1171,16 @@
    "description": "FACETS is an ASCN tool and open-source software with a broad application to whole genome, whole-exome, as well as targeted panel sequencing platforms.",
    "operations": [
     "Sequence motif comparison"
+   ]
+  },
+  {
+   "biotoolsID": "rmaps",
+   "name": "rMAPS",
+   "reason": "hard-excluded:\\bRNA[- ]binding protein|\\bRBP",
+   "description": "A web server that systematically generates RNA-maps for the analysis of RNA-binding proteins (RBPs) binding sites which have position-dependent functions.",
+   "operations": [
+    "Differential binding analysis",
+    "Sequence motif analysis"
    ]
   },
   {
@@ -932,6 +1228,31 @@
    ]
   },
   {
+   "biotoolsID": "clipz",
+   "name": "CLIPZ",
+   "reason": "hard-excluded:\\bRNA[- ]binding protein|\\bRBP",
+   "description": "Automatic functional annotation of short reads resulting primarily from crosslinking and immunoprecipitation experiments (CLIP) performed with RNA-binding proteins to identify the binding sites of the",
+   "operations": [
+    "Peak calling",
+    "Protein binding site prediction",
+    "Transcription factor binding site prediction",
+    "Transcriptional regulatory element prediction"
+   ]
+  },
+  {
+   "biotoolsID": "protedna",
+   "name": "ProteDNA",
+   "reason": "hard-excluded:\\bbinding residues?\\b",
+   "description": "Identifies the sequence-specific binding residues in a transcription factor, protein-DNA interaction.",
+   "operations": [
+    "Peak calling",
+    "Residue interaction calculation",
+    "Residue interaction prediction",
+    "Transcription factor binding site prediction",
+    "Transcriptional regulatory element prediction"
+   ]
+  },
+  {
    "biotoolsID": "medock",
    "name": "MEDock",
    "reason": "hard-excluded:\\bdocking\\b|\\bmolecular dynami",
@@ -952,6 +1273,42 @@
     "Peak calling",
     "Peptide immunogenicity prediction",
     "Protein binding site prediction",
+    "Transcription factor binding site prediction"
+   ]
+  },
+  {
+   "biotoolsID": "deepzf",
+   "name": "DeepZF",
+   "reason": "hard-excluded:\\bamino[- ]acid (motif|pattern",
+   "description": "DeepZF, a deep-learning-based pipeline for predicting binding ZFs and their DNA-binding preferences given only the amino acid sequence of a C2H2-ZF protein",
+   "operations": [
+    "DNA-binding protein prediction",
+    "Nucleic acids-binding site prediction",
+    "Transcription factor binding site prediction"
+   ]
+  },
+  {
+   "biotoolsID": "rbpcnn",
+   "name": "RBPCNN",
+   "reason": "hard-excluded:\\bRNA[- ]binding protein|\\bRBP",
+   "description": "Improved Predicting of The Sequence Specificities of RNA Binding Proteins by Deep Learning.",
+   "operations": [
+    "Phylogenetic footprinting",
+    "RNA binding site prediction",
+    "RNA-binding protein prediction",
+    "Transcription factor binding site prediction"
+   ]
+  },
+  {
+   "biotoolsID": "rbpmap",
+   "name": "RBPmap",
+   "reason": "hard-excluded:\\bRNA[- ]binding protein|\\bRBP",
+   "description": "RBPmap is a web server for mapping binding sites of RNA-binding proteins.",
+   "operations": [
+    "Mapping",
+    "Peak calling",
+    "Protein binding site prediction",
+    "Protein feature detection",
     "Transcription factor binding site prediction"
    ]
   },
@@ -987,6 +1344,28 @@
    "description": "Seach sequences for known riboswitches and also for predicted bacterial regulatory elements that are highly conserved.",
    "operations": [
     "Regulatory element prediction",
+    "Transcriptional regulatory element prediction"
+   ]
+  },
+  {
+   "biotoolsID": "dSreg",
+   "name": "dSreg",
+   "reason": "hard-excluded:\\bRNA[- ]binding protein|\\bRBP",
+   "description": "A Bayesian model to integrate changes in splicing and RNA binding protein activity.\n\nMOTIVATION:Alternative splicing (AS) is an important mechanism in the generation of transcript diversity across mam",
+   "operations": [
+    "Gene-set enrichment analysis",
+    "Regression analysis",
+    "Transcriptional regulatory element prediction"
+   ]
+  },
+  {
+   "biotoolsID": "gatecda",
+   "name": "GATECDA",
+   "reason": "hard-excluded:\\bcircular RNA|\\bcircRNA",
+   "description": "A computational framework (GATECDA) based on graph attention auto-encoder to predict circRNA-drug sensitivity associations.",
+   "operations": [
+    "Gene expression profiling",
+    "Gene regulatory network prediction",
     "Transcriptional regulatory element prediction"
    ]
   },
@@ -1058,6 +1437,17 @@
    ]
   },
   {
+   "biotoolsID": "circMeta",
+   "name": "circMeta",
+   "reason": "hard-excluded:\\bcircular RNA|\\bcircRNA",
+   "description": "A unified computational framework for genomic feature annotation and differential expression analysis of circular RNAs | circMeta is a unified computational framework for circRNA analyses. circMeta ma",
+   "operations": [
+    "Enrichment analysis",
+    "Expression analysis",
+    "cis-regulatory element prediction"
+   ]
+  },
+  {
    "biotoolsID": "phenosv",
    "name": "PhenoSV",
    "reason": "excluded:\\bstructural variant|\\bcopy[- ]n",
@@ -1093,6 +1483,40 @@
    ]
   },
   {
+   "biotoolsID": "CircRiC",
+   "name": "CircRiC",
+   "reason": "hard-excluded:\\bcircular RNA|\\bcircRNA",
+   "description": "Comprehensive characterization of circular RNAs in ~ 1000 human cancer cell lines | The CircRic refers to \u201ccircular RNA in cancers\u201d. Circular RNAs (circRNAs) is class of non-coding RNA generated in a ",
+   "operations": [
+    "Expression analysis",
+    "cis-regulatory element prediction",
+    "trans-regulatory element prediction"
+   ]
+  },
+  {
+   "biotoolsID": "CIRI-full",
+   "name": "CIRI",
+   "reason": "hard-excluded:\\bcircular RNA|\\bcircRNA",
+   "description": "CircRNA Identifier. A de novo circular RNA identification tool.",
+   "operations": [
+    "Quantification",
+    "de Novo sequencing",
+    "trans-regulatory element prediction"
+   ]
+  },
+  {
+   "biotoolsID": "subfeat",
+   "name": "SubFeat",
+   "reason": "hard-excluded:\\bpeptides?\\b",
+   "description": "SubFeat: Feature Subspacing Ensemble Classifier for Function Prediction of DNA, RNA and Protein/Peptide Sequences.\n\nThe SubFeat is an extensive Python-based tool for generating various numerical featu",
+   "operations": [
+    "Editing",
+    "Promoter prediction",
+    "Protein feature detection",
+    "Protein function prediction"
+   ]
+  },
+  {
    "biotoolsID": "ftdmp",
    "name": "FTDMP",
    "reason": "hard-excluded:\\bdocking\\b|\\bmolecular dynami",
@@ -1103,6 +1527,32 @@
     "Protein-ligand docking",
     "Protein-protein docking",
     "RNA binding site prediction"
+   ]
+  },
+  {
+   "biotoolsID": "dnagenie",
+   "name": "DNAgenie",
+   "reason": "hard-excluded:\\bbinding residues?\\b",
+   "description": "DNAgenie (DNA-type specific predictor of DNA-binding residues in protein sequences).",
+   "operations": [
+    "DNA binding site prediction",
+    "DNA-binding protein prediction",
+    "Protein secondary structure prediction",
+    "RNA-binding protein prediction",
+    "Residue contact prediction"
+   ]
+  },
+  {
+   "biotoolsID": "deeprke",
+   "name": "DeepRKE",
+   "reason": "hard-excluded:\\bRNA[- ]binding protein|\\bRBP",
+   "description": "DeepRKE is a deep neural network model, which combines primary RNA sequence and secondary structure information to effectively predict RNA binding protein binding sites.",
+   "operations": [
+    "DNA binding site prediction",
+    "Protein secondary structure comparison",
+    "Protein secondary structure prediction",
+    "RNA binding site prediction",
+    "RNA secondary structure prediction"
    ]
   },
   {
@@ -1228,6 +1678,19 @@
    ]
   },
   {
+   "biotoolsID": "bindcompare",
+   "name": "BindCompare",
+   "reason": "hard-excluded:\\bRNA[- ]binding protein|\\bRBP",
+   "description": "BindCompare is a user-friendly tool designed to analyze protein-nucleic acid binding datasets and identify combinatorial associations between transcription factors and RNA binding proteins. It is avai",
+   "operations": [
+    "Gene regulatory network analysis",
+    "Nucleic acid folding analysis",
+    "Nucleic acids-binding site prediction",
+    "Peak calling",
+    "RNA-binding protein prediction"
+   ]
+  },
+  {
    "biotoolsID": "profia",
    "name": "proFIA",
    "reason": "hard-excluded:\\bmass spectrometr|\\bLC-MS\\b|\\",
@@ -1245,6 +1708,18 @@
     "Aggregation",
     "Peak calling",
     "Visualisation"
+   ]
+  },
+  {
+   "biotoolsID": "radar-cancer",
+   "name": "RADAR",
+   "reason": "hard-excluded:\\bRNA[- ]binding protein|\\bRBP",
+   "description": "annotation and prioritization of variants in the post-transcriptional regulome of RNA-binding proteins.\n\nRADAR can be run on the command line by following the instructions on the Docs page or through ",
+   "operations": [
+    "Peak calling",
+    "RNA binding site prediction",
+    "Variant calling",
+    "Variant prioritisation"
    ]
   },
   {
@@ -1393,7 +1868,7 @@
   {
    "biotoolsID": "starpepweb",
    "name": "StarPepWeb",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bpeptides?\\b",
    "description": "StarPepWeb is a graph-based resource providing access to StarPepDB, a curated database of over 45,000 antimicrobial peptides. It integrates data from multiple public databases, offering features such ",
    "operations": [
     "Data retrieval",
@@ -1461,7 +1936,7 @@
   {
    "biotoolsID": "circpedia_v3",
    "name": "CIRCpedia v3",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bcircular RNA|\\bcircRNA",
    "description": "CIRCpedia v3 is an interactive database for characterizing and exploring circular RNAs. It integrates NGS and TGS datasets, offers functional modules, and enables dynamic data analysis for circular RN",
    "operations": [
     "Gene expression profiling",
@@ -1917,7 +2392,7 @@
   {
    "biotoolsID": "benchamrking",
    "name": "BenchAMRking",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bantibacterial|\\bantimicrobia",
    "description": "BenchAMRking is a Galaxy-based platform designed to illustrate the discrepancies encountered when predicting antimicrobial resistance genes from microbial whole genome sequencing data. The platform fa",
    "operations": [
     "Antimicrobial resistance prediction",
@@ -2529,7 +3004,7 @@
   {
    "biotoolsID": "peppre",
    "name": "PepPre",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bpeptides?\\b",
    "description": "PepPre is a tool that detects peptide precursor ions using linear programming methods, leading to improved peptide and protein identification. It is open-source and available online.",
    "operations": [
     "Deisotoping",
@@ -2552,7 +3027,7 @@
   {
    "biotoolsID": "ACPred",
    "name": "ACPred",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bpeptides?\\b",
    "description": "Computational Tool for the Prediction and Analysis of Anticancer Peptides.",
    "operations": [
     "Peptide immunogenicity prediction"
@@ -3107,7 +3582,7 @@
   {
    "biotoolsID": "sailfish-cir",
    "name": "Sailfish-cir",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bcircular RNA|\\bcircRNA",
    "description": "Pipeline for quantification of circular RNA.",
    "operations": [
     "RNA structure prediction",
@@ -3192,7 +3667,7 @@
   {
    "biotoolsID": "ielm",
    "name": "iELM",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bshort linear motif|\\bSLiMs?\\",
    "description": "iELM webserver predicts the function and positional interface for short linear motifs important in protein-protein interactions.",
    "operations": [
     "Pathway or network prediction",
@@ -3297,7 +3772,7 @@
   {
    "biotoolsID": "GCPred",
    "name": "GCPred",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bamino[- ]acid (motif|pattern",
    "description": "Web tool for guanylyl cyclase functional centre prediction from amino acid sequence.",
    "operations": [
     "Molecular docking",
@@ -3537,7 +4012,7 @@
   {
    "biotoolsID": "Ularcirc",
    "name": "Ularcirc",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bcircular RNA|\\bcircRNA",
    "description": "visualization and enhanced analysis of circular RNAs via back and canonical forward splicing | An R-shiny app that provides backsplice and canonical splicing analysis for both circRNA and parental tra",
    "operations": [
     "Visualisation"
@@ -3959,7 +4434,7 @@
   {
    "biotoolsID": "tisigner",
    "name": "TIsigner",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bpeptides?\\b",
    "description": "TIsigner is web services for improving recombinant protein production, which includes TIsigner, SoDoPE and Razor, the protein expression optimisation, solubility optimisation and signal peptides predi",
    "operations": [
     "Backbone modelling",
@@ -4105,7 +4580,7 @@
   {
    "biotoolsID": "hordb",
    "name": "HORDB",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bpeptides?\\b",
    "description": "HORDB a comprehensive database of peptide hormones.",
    "operations": [
     "Peptide database search",
@@ -4257,7 +4732,7 @@
   {
    "biotoolsID": "periscope-opt",
    "name": "PERISCOPE-Opt",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bpeptides?\\b",
    "description": "PERISCOPE-Opt predicts the optimal fermentation conditions and expression yields of recombinant protein in the periplasm of Escherichia coli (E. coli) based on the user-specified amino acid sequence o",
    "operations": [
     "Protein signal peptide detection",
@@ -4277,7 +4752,7 @@
   {
    "biotoolsID": "circrip",
    "name": "circRIP",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bRNA[- ]binding protein|\\bRBP",
    "description": "circRIP: An accurate tool for identifying circRNA-RBP interaction.",
    "operations": [
     "Format detection",
@@ -4324,7 +4799,7 @@
   {
    "biotoolsID": "idrna-itf",
    "name": "iDRNA-ITF",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bbinding residues?\\b",
    "description": "Identifying DNA- and RNA-binding residues in proteins based on induction and transfer framework.",
    "operations": [
     "Protein structure validation",
@@ -4395,7 +4870,7 @@
   {
    "biotoolsID": "nrpred",
    "name": "NRpred",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bamino[- ]acid (motif|pattern",
    "description": "SVM based tool for the classification of nuclear receptors on the basis of amino acid composition or dipeptide composition. The overall prediction accuracy of amino acid composition and dipeptide comp",
    "operations": [
     "Sequence classification"
@@ -4587,7 +5062,7 @@
   {
    "biotoolsID": "circgpa",
    "name": "circGPA",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bcircular RNA|\\bcircRNA",
    "description": "An annotation algorithm circGPA that identifies prospective links between circRNAs and annotation terms. The algorithm is deterministic and based on generating polynomials.",
    "operations": [
     "Gene-set enrichment analysis",
@@ -4631,7 +5106,7 @@
   {
    "biotoolsID": "mhc2affypred",
    "name": "MHC2AffyPred",
-   "reason": "hard-excluded:\\bMHC (class )?(I|II)\\b|\\bepit",
+   "reason": "hard-excluded:\\bpeptides?\\b",
    "description": "A machine-learning approach to estimate affinity of MHC class II peptides based on structural interaction fingerprints.",
    "operations": [
     "Epitope mapping",
@@ -5829,7 +6304,7 @@
   {
    "biotoolsID": "pub2tools2023__dravp",
    "name": "DRAVP",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bpeptides?\\b",
    "description": "Comprehensive database of antiviral peptides and proteins.",
    "operations": [
     "Data retrieval",
@@ -5965,7 +6440,7 @@
   {
    "biotoolsID": "pat_database",
    "name": "PAT",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bantibacterial|\\bantimicrobia",
    "description": "A comprehensive database of prokaryotic antimicrobial toxins.",
    "operations": [
     "Antimicrobial resistance prediction",
@@ -6025,7 +6500,7 @@
   {
    "biotoolsID": "cars-db",
    "name": "CARs-DB",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bpeptides?\\b",
    "description": "A database of polar amylodogenic peptides from disordered proteins.",
    "operations": [
     "Aggregation",
@@ -6225,7 +6700,7 @@
   {
    "biotoolsID": "crbpdl",
    "name": "CRBPDL",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bRNA[- ]binding protein|\\bRBP",
    "description": "Identification of circRNA-RBP interaction sites using an ensemble neural network approach.",
    "operations": [
     "Protein secondary structure prediction",
@@ -6259,7 +6734,7 @@
   {
    "biotoolsID": "circnet",
    "name": "CircNet",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bcircular RNA|\\bcircRNA",
    "description": "CircNet 2.0 provides a practical and user-friendly platform on which researchers can explore novel cancer biomarkers and circRNAs related to the pathogenesis, diagnosis, and therapy of malignant and o",
    "operations": [
     "Gene expression profiling",
@@ -6574,7 +7049,7 @@
   {
    "biotoolsID": "camap",
    "name": "CAMAP",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bpeptides?\\b",
    "description": "Codon Arrangement MAP Predictor, predicting MHC-I Associated Peptides presentation form mRNA",
    "operations": [
     "Codon usage bias calculation",
@@ -6678,7 +7153,7 @@
   {
    "biotoolsID": "pepsickle",
    "name": "pepsickle",
-   "reason": "excluded:\\bMHC (class )?(I|II)\\b|\\bepitop",
+   "reason": "hard-excluded:\\bamino[- ]acid (motif|pattern",
    "description": "pepsickle is an open-source command line tool for proteasomal cleavage prediction. pepsickle is designed with flexibility in mind allows for the use of either direct amino acid sequences or the use of",
    "operations": [
     "Epitope mapping",
@@ -6743,7 +7218,7 @@
   {
    "biotoolsID": "hemonet",
    "name": "HemoNet",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bpeptides?\\b",
    "description": "Predicting Hemolytic Activity with Integrated Feature Learning A neural network that perdict hemolytic activity classification of a peptide sequence along with inforamtion of N/C terminal modification",
    "operations": [
     "Network analysis"
@@ -8053,7 +8528,7 @@
   {
    "biotoolsID": "funcpep",
    "name": "FuncPEP",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bpeptides?\\b",
    "description": "FuncPEP is a database of functional peptides encoded by non-coding RNAs.",
    "operations": [
     "Coding region prediction",
@@ -8937,6 +9412,17 @@
    ]
   },
   {
+   "biotoolsID": "circatlas",
+   "name": "circAtlas",
+   "reason": "hard-excluded:\\bcircular RNA|\\bcircRNA",
+   "description": "circAtlas is an integrated resource of one million highly accurate circular RNAs from 1070 vertebrate transcriptomes. Existing circular RNA (circRNA) databases have become essential for transcriptomic",
+   "operations": [
+    "Expression analysis",
+    "Query and retrieval",
+    "Sequence assembly"
+   ]
+  },
+  {
    "biotoolsID": "scanner",
    "name": "SCANNER",
    "reason": "no-match",
@@ -9215,7 +9701,7 @@
   {
    "biotoolsID": "icircrbp-dhn",
    "name": "iCircRBP-DHN",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bRNA[- ]binding protein|\\bRBP",
    "description": "Identification of circRNA-RBP interaction sites using deep hierarchical network.\n\nThe tool is developed for circRNA-RBP interaction sites identification using deep hierarchical network.\n\nThe 37 traini",
    "operations": [
     "Standardisation and normalisation"
@@ -10382,6 +10868,17 @@
    ]
   },
   {
+   "biotoolsID": "iProDNA-CapsNet",
+   "name": "iProDNA-CapsNet",
+   "reason": "hard-excluded:\\bbinding residues?\\b",
+   "description": "Identifying protein-DNA binding residues using capsule neural networks.\n\nSince protein-DNA interactions are highly essential to diverse biological events, accurately positioning the location of the DN",
+   "operations": [
+    "DNA-binding protein prediction",
+    "Protein feature detection",
+    "Side chain modelling"
+   ]
+  },
+  {
    "biotoolsID": "RocaSec",
    "name": "RocaSec",
    "reason": "no-match",
@@ -10470,7 +10967,7 @@
   {
    "biotoolsID": "circRNA",
    "name": "circRNA",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bcircular RNA|\\bcircRNA",
    "description": "Biogenesis mechanisms of circular RNA can be categorized through feature extraction of a machine learning model | Contextual_Regression_for_CircRNA | Contextual Regression for CircRNA",
    "operations": [
     "CpG island and isochore detection",
@@ -10481,7 +10978,7 @@
   {
    "biotoolsID": "CircCode",
    "name": "CircCode",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bcircular RNA|\\bcircRNA",
    "description": "A Powerful Tool for Identifying circRNA Coding Ability.\n\nA Python3-base pipeline for translated circular RNA(circRNA) identification.\n\nCircCode is a Python3-base pipeline for translated circular RNA i",
    "operations": [
     "Coding region prediction",
@@ -11065,7 +11562,7 @@
   {
    "biotoolsID": "miarma-seq",
    "name": "miARma-Seq",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bcircular RNA|\\bcircRNA",
    "description": "miARma-Seq is a suite that offers the identification of miRNA, mRNA and circRNAs that can be applied to any sequenced organism.",
    "operations": [
     "Nucleic acid sequence analysis"
@@ -11415,7 +11912,7 @@
   {
    "biotoolsID": "metadbsite",
    "name": "metaDBSite",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bbinding residues?\\b",
    "description": "Meta web server to predict DNA-binding residues for DNA-binding proteins. It integrates the prediction results from six available online web servers: DISIS, DNABindR, BindN, BindN-rf, DP-Bind and DBS-",
    "operations": [
     "Nucleic acid feature detection",
@@ -11455,7 +11952,7 @@
   {
    "biotoolsID": "musi-bind",
    "name": "MUSI",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bpeptides?\\b",
    "description": "Tool for uncovering multiple peptides and nucleic acids binding specificities from sequence data. MUSI provides a simple interface for processing short peptides or nucleic acid sequence data. Starting",
    "operations": [
     "Prediction and recognition"
@@ -11507,7 +12004,7 @@
   {
    "biotoolsID": "dnabindprot",
    "name": "DNABindProt",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bbinding residues?\\b",
    "description": "Designed to predict DNA-binding residues, based on the fluctuations of residues in high-frequency modes by the Gaussian network model.",
    "operations": [
     "Protein sequence analysis"
@@ -11672,7 +12169,7 @@
   {
    "biotoolsID": "idrpro-sc",
    "name": "iDRPro-SC",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bRNA[- ]binding protein|\\bRBP",
    "description": "Identifying DNA-binding proteins and RNA-binding proteins based on subfunction classifiers.",
    "operations": [
     "DNA-binding protein prediction",
@@ -11683,7 +12180,7 @@
   {
    "biotoolsID": "code",
    "name": "CoDe",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bamino[- ]acid (motif|pattern",
    "description": "Tool to deoptimize the RNA or DNA sequences based on codon usage. Codon-pair deoptimization involves increasing the frequency of underrepresented codon pairs without changing codon usage or amino acid",
    "operations": [
     "Codon usage bias calculation",
@@ -11821,7 +12318,7 @@
   {
    "biotoolsID": "hla_bind",
    "name": "Bimas HLA Peptide Binding Predictions",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bpeptides?\\b",
    "description": "Function: Rank potential 8-mer, 9-mer, or 10-mer peptides based on a predicted half-time of dissociation to HLA class I molecules. The analysis is based on coefficient tables deduced from the publishe",
    "operations": [
     "Peptide immunogenicity prediction",
@@ -12471,7 +12968,7 @@
   {
    "biotoolsID": "jlcrb",
    "name": "JLCRB",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bcircular RNA|\\bcircRNA",
    "description": "A unified multi-view-based joint representation learning for CircRNA binding sites prediction.",
    "operations": [
     "Binding site prediction"
@@ -12502,7 +12999,7 @@
   {
    "biotoolsID": "frnc",
    "name": "fRNC",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bRNA[- ]binding protein|\\bRBP",
    "description": "Systems biology tool to uncover the dynamic spectrum of RBP-ncRNA circuits (RNC) by integrating transcriptomics, interactomics and proteomics data.",
    "operations": [
     "Differential gene expression profiling",
@@ -13255,7 +13752,7 @@
   {
    "biotoolsID": "circr",
    "name": "Circr",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bcircular RNA|\\bcircRNA",
    "description": "Circr is a computational tool for the prediction of miRNA:circRNA associations. It combines publicly available algorithms for de novo prediction of miRNA binding sites on target sequences with experim",
    "operations": [
     "Binding site prediction",
@@ -15590,6 +16087,15 @@
    ]
   },
   {
+   "biotoolsID": "hammock",
+   "name": "Hammock",
+   "reason": "hard-excluded:\\bpeptides?\\b",
+   "description": "Tool for peptide sequence clustering. It is able to cluster extremely large amounts of short peptide sequences into groups sharing sequence motifs.",
+   "operations": [
+    "Sequence clustering"
+   ]
+  },
+  {
    "biotoolsID": "archcandy",
    "name": "ArchCandy",
    "reason": "hard-excluded:\\bprotein (sequence )?motif|\\b",
@@ -15626,6 +16132,24 @@
    "description": "A modest Feature Finder to extract features in MS1 Data.",
    "operations": [
     "Protein feature detection"
+   ]
+  },
+  {
+   "biotoolsID": "alphabet",
+   "name": "Alphabet",
+   "reason": "hard-excluded:\\bamino[- ]acid (motif|pattern",
+   "description": "Alphabet takes a database of aligned protein sequences in BLOCKS+ format and examines the alignments column-wise looking for groups of amino acids that co-occur in columns more frequently than expecte",
+   "operations": [
+    "Protein sequence analysis"
+   ]
+  },
+  {
+   "biotoolsID": "nnalign",
+   "name": "NNAlign",
+   "reason": "hard-excluded:\\bpeptides?\\b",
+   "description": "Discovering sequence motifs in quantitative peptide data. It allows generating artificial neural network models of receptor-ligand interactions. It takes as input a set of ligand sequences with target",
+   "operations": [
+    "Protein structural motif recognition"
    ]
   },
   {
@@ -15706,9 +16230,16 @@
    ]
   },
   {
+   "biotoolsID": "rbpbench",
+   "name": "RBPBench",
+   "reason": "hard-excluded:\\bRNA[- ]binding protein|\\bRBP",
+   "description": "RBPBench is a multi-function tool to evaluate CLIP-seq and other related genomic region data using a comprehensive collection of known RNA-binding protein (RBP) binding motifs. RBPBench can be used fo",
+   "operations": []
+  },
+  {
    "biotoolsID": "detector",
    "name": "DeTECTOR",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bpeptides?\\b",
    "description": "Diagnostic tool which return the propensity of a given mRNA to be translated into peptide.",
    "operations": [
     "Classification"
@@ -16165,7 +16696,7 @@
   {
    "biotoolsID": "SpliceV",
    "name": "SpliceV",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bcircular RNA|\\bcircRNA",
    "description": "Analysis and publication quality printing of linear and circular RNA splicing, expression and regulation.",
    "operations": [
     "Exonic splicing enhancer prediction",
@@ -16192,6 +16723,19 @@
    "operations": [
     "Exonic splicing enhancer prediction",
     "Variant classification"
+   ]
+  },
+  {
+   "biotoolsID": "PlantCircNet",
+   "name": "PlantCircNet",
+   "reason": "hard-excluded:\\bcircular RNA|\\bcircRNA",
+   "description": "PlantCircNet is a database that provides plant circRNA-miRNA-gene regulatory networks, as well as circRNA information and circRNA expression profiles. It provides convenient search functions for circR",
+   "operations": [
+    "Database search",
+    "Enrichment analysis",
+    "Pathway or network visualisation",
+    "miRNA expression analysis",
+    "miRNA target prediction"
    ]
   },
   {

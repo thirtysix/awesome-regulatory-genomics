@@ -57,6 +57,29 @@ corrections:
   gtrd:
     categories: [chip-resources, motif-databases]
 
+  # Repositories that resolve_repos.py found but held for review, confirmed by
+  # reading each repository against the tool. All seven failed automatic
+  # validation for the same reason: the GitHub description is blank or terse,
+  # so there was nothing for the vocabulary check to agree with. ChromHMM's
+  # repository has no description at all.
+  chromhmm:
+    repo_url: https://github.com/jernst98/ChromHMM
+  cobind:
+    repo_url: https://github.com/liguowang/cobind
+  # Verified, but GeneCodis is currently dropped by the majority scope rule
+  # (two models judged an ontological-enrichment tool out of scope). Kept so the
+  # link is not lost if that judgement is revisited.
+  genecodis:
+    repo_url: https://github.com/GENyO-BioInformatics/GeneCodis
+  marge:
+    repo_url: https://github.com/suwangbio/MARGE_py3
+  mpralib:
+    repo_url: https://github.com/kircherlab/MPRAlib
+  uropa:
+    repo_url: https://github.com/loosolab/UROPA
+  flexflux:
+    repo_url: https://github.com/lmarmiesse/FlexFlux
+
 # ---------------------------------------------------------------------------
 # exclude - records that pass the automated filter but do not belong.
 # Give a reason; this file is the audit trail for the catalog's boundary.

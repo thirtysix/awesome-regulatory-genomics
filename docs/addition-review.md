@@ -1,19 +1,17 @@
 # Addition review
 
-Generated 2026-07-26 by `pipeline/verify_additions.py` using `zai-org/GLM-5`, a model used for neither the adjudication nor its escalation.
+Generated 2026-07-27 by `pipeline/verify_additions.py` using `zai-org/GLM-5`, a model used for neither the adjudication nor its escalation.
 
 Removing a record needs two models to agree. Adding one had no equivalent check, so this asks an independent third model about every record admitted by hand or by a text rule rather than an ontology term.
 
-**1229 records checked, 167 disputed (14%).**
+**1206 records checked, 147 disputed (12%).**
 
 Nothing here is applied. A dispute is a prompt to re-read the entry, not a verdict: the model sees only the bio.tools name and description, which is exactly the text that was misleading in the first place. It has been right and wrong here: it correctly caught that bio.tools' `mast` is the single-cell package rather than the MEME Suite scanner, and it wrongly objects to plainly in-scope entries whose descriptions are terse.
 
 | Tool | Admitted because | Model's objection |
 | --- | --- | --- |
-| [ACEP](https://bio.tools/acep) | text:\bposition (weight\|frequency\|specifi | confidence high, categories none |
 | [Aging Atlas](https://bio.tools/aging-atlas) | text:\bepigenom(e\|ic)s?\b | confidence high, categories none |
 | [AllEnricher](https://bio.tools/allenricher) | text:\bepigenom(e\|ic)s?\b | confidence high, categories none |
-| [Alphabet](https://bio.tools/alphabet) | text:\bsequence logo\|\bsequence motifs?\b | confidence high, categories none |
 | [AptCompare](https://bio.tools/aptcompare) | text:\bmotif (discovery\|enrichment\|scan\|s | confidence high, categories none |
 | [AtlasXploreTM](https://bio.tools/atlasxploretm) | text:\bepigenom(e\|ic)s?\b | confidence medium, categories none |
 | [bacon](https://bio.tools/bacon) | text:\bepigenom(e\|ic)s?\b | confidence high, categories none |
@@ -35,11 +33,8 @@ Nothing here is applied. A dispute is a prompt to re-read the entry, not a verdi
 | [ChIPexoQual](https://bio.tools/chipexoqual) | text:\bChIP[- ]?(seq\|chip\|exo\|nexus)\b\|\b | confidence high, categories none |
 | [ChIPsim](https://bio.tools/chipsim) | text:\bChIP[- ]?(seq\|chip\|exo\|nexus)\b\|\b | confidence high, categories none |
 | [ChIPWig](https://bio.tools/chipwig) | text:\bChIP[- ]?(seq\|chip\|exo\|nexus)\b\|\b | confidence high, categories none |
-| [circAtlas](https://bio.tools/circatlas) | text:\bgene regulatory network\|\bregulato | confidence high, categories none |
-| [CircRiC](https://bio.tools/CircRiC) | text:\bcis-regulatory\|\bregulatory elemen | confidence high, categories none |
 | [cLoops](https://bio.tools/cLoops) | text:\bcis-regulatory\|\bregulatory elemen | confidence high, categories none |
 | [cobind](https://bio.tools/cobind) | hand-listed by ID | confidence low, categories none |
-| [CompariPSSM](https://bio.tools/comparipssm) | text:\bposition (weight\|frequency\|specifi | confidence high, categories none |
 | [CplexA](https://bio.tools/cplexa) | text:\btranscription[- ]factor | confidence medium, categories none |
 | [CREPE](https://bio.tools/crepe) | text:\btranscription[- ]factor | confidence low, categories none |
 | [D-miRT](https://bio.tools/d-mirt) | text:\btranscription start site\|\bCAGE\b | confidence high, categories none |
@@ -52,7 +47,6 @@ Nothing here is applied. A dispute is a prompt to re-read the entry, not a verdi
 | [DLO Hi-C](https://bio.tools/DLO_Hi-C) | text:\bcis-regulatory\|\bregulatory elemen | confidence high, categories none |
 | [DNA Rchitect](https://bio.tools/DNA_Rchitect) | text:\bchromatin (accessibilit\|state\|loop | confidence high, categories none |
 | [DriverPower](https://bio.tools/driverpower) | hand-listed by ID | confidence high, categories none |
-| [E1DS](https://bio.tools/e1ds) | text:\bsequence logo\|\bsequence motifs?\b | confidence high, categories none |
 | [edgeR](https://bio.tools/edger) | text:\bChIP[- ]?(seq\|chip\|exo\|nexus)\b\|\b | confidence high, categories none |
 | [effectR](https://bio.tools/effectR) | text:\bmotif (discovery\|enrichment\|scan\|s | confidence high, categories none |
 | [Enhort](https://bio.tools/enhort) | hand-listed by ID | confidence medium, categories none |
@@ -72,12 +66,10 @@ Nothing here is applied. A dispute is a prompt to re-read the entry, not a verdi
 | [GDCRNATools](https://bio.tools/gdcrnatools) | text:\bgene regulatory network\|\bregulato | confidence high, categories none |
 | [GeneCodis](https://bio.tools/genecodis) | text:\btranscription[- ]factor | confidence high, categories none |
 | [GenePalette](https://bio.tools/genepalette) | text:\btranscription[- ]factor | confidence high, categories none |
-| [GibbsCluster](https://bio.tools/gibbscluster) | text:\bsequence logo\|\bsequence motifs?\b | confidence high, categories none |
 | [GILoop](https://bio.tools/giloop) | text:\bHiChIP\b\|\bChIA-?PET\b\|\bCapture-? | confidence high, categories none |
 | [GPCR-SAS](https://bio.tools/gpcr-sas) | text:\bsequence logo\|\bsequence motifs?\b | confidence high, categories none |
 | [GROK](https://bio.tools/grok) | text:\bChIP[- ]?(seq\|chip\|exo\|nexus)\b\|\b | confidence high, categories none |
 | [HaForest](https://bio.tools/haforest) | text:\bepigenom(e\|ic)s?\b | confidence high, categories none |
-| [Hammock](https://bio.tools/hammock) | text:\bsequence logo\|\bsequence motifs?\b | confidence high, categories none |
 | [Hi-C Aggregate](https://bio.tools/hi-c_aggregate) | text:\bchromatin (accessibilit\|state\|loop | confidence medium, categories none |
 | [HiCNAtra](https://bio.tools/HiCNAtra) | text:\bchromatin (accessibilit\|state\|loop | confidence high, categories none |
 | [HiSIF](https://bio.tools/hisif) | text:\bpromoter\b\|\benhancer\b\|\bsuper-?e | confidence high, categories none |
@@ -89,7 +81,6 @@ Nothing here is applied. A dispute is a prompt to re-read the entry, not a verdi
 | [ImpulseDE2](https://bio.tools/impulsede2) | text:\bChIP[- ]?(seq\|chip\|exo\|nexus)\b\|\b | confidence high, categories none |
 | [Introme](https://bio.tools/introme) | text:\b(non-?coding\|regulatory) (variant\| | confidence high, categories none |
 | [iODA](https://bio.tools/ioda) | text:\bChIP[- ]?(seq\|chip\|exo\|nexus)\b\|\b | confidence high, categories none |
-| [iProDNA-CapsNet](https://bio.tools/iProDNA-CapsNet) | text:\bposition (weight\|frequency\|specifi | confidence high, categories none |
 | [LongGeneDB](https://bio.tools/longgenedb) | text:\bepigenom(e\|ic)s?\b | confidence high, categories none |
 | [MARACAS](https://bio.tools/maracas) | text:\bChIP[- ]?(seq\|chip\|exo\|nexus)\b\|\b | confidence medium, categories none |
 | [MATCHA](https://bio.tools/matcha) | text:\bchromatin (accessibilit\|state\|loop | confidence medium, categories none |
@@ -106,22 +97,17 @@ Nothing here is applied. A dispute is a prompt to re-read the entry, not a verdi
 | [Mustache](https://bio.tools/mustache) | text:\bchromatin (accessibilit\|state\|loop | confidence high, categories none |
 | [ngphubinh](https://bio.tools/ngphubinh) | text:\bposition (weight\|frequency\|specifi | confidence high, categories none |
 | [NGS-QC Generator](https://bio.tools/ngs-qc_generator) | text:\bChIP[- ]?(seq\|chip\|exo\|nexus)\b\|\b | confidence high, categories none |
-| [NNAlign](https://bio.tools/nnalign) | text:\bsequence logo\|\bsequence motifs?\b | confidence high, categories none |
 | [nucleoSim](https://bio.tools/nucleosim) | text:\bnucleosome | confidence high, categories none |
 | [Numbat-multiome](https://bio.tools/numbat-multiome) | text:\bchromatin (accessibilit\|state\|loop | confidence high, categories none |
 | [Onto-Tools](https://bio.tools/onto-tools) | text:\bpromoter\b\|\benhancer\b\|\bsuper-?e | confidence high, categories none |
-| [oRNAment](https://bio.tools/oRNAment) | text:\bmotif (discovery\|enrichment\|scan\|s | confidence high, categories none |
 | [p53MutaGene](https://bio.tools/p53mutagene) | hand-listed by ID | confidence high, categories none |
 | [pareidolia](https://bio.tools/pareidolia) | text:\bchromatin (accessibilit\|state\|loop | confidence high, categories none |
 | [PASH](https://bio.tools/pash) | text:\bChIP[- ]?(seq\|chip\|exo\|nexus)\b\|\b | confidence high, categories none |
 | [PathwayCommons SPARQL endpoint](https://bio.tools/PathwayCommons_SPARQL_endpoint) | text:\bgene regulatory network\|\bregulato | confidence high, categories none |
 | [patmatdb](https://bio.tools/patmatdb) | text:\bsequence logo\|\bsequence motifs?\b | confidence high, categories none |
 | [PEGR](https://bio.tools/pegr) | text:\bepigenom(e\|ic)s?\b | confidence medium, categories none |
-| [PeSA](https://bio.tools/PeSA) | text:\bposition (weight\|frequency\|specifi | confidence high, categories none |
 | [pftools](https://bio.tools/pftools) | text:\bposition (weight\|frequency\|specifi | confidence high, categories none |
-| [Phyto-LRR](https://bio.tools/phyto-lrr) | text:\bposition (weight\|frequency\|specifi | confidence high, categories none |
 | [piPipes](https://bio.tools/pipipes) | text:\btranscription start site\|\bCAGE\b | confidence high, categories none |
-| [PlantCircNet](https://bio.tools/PlantCircNet) | text:\bgene regulatory network\|\bregulato | confidence high, categories none |
 | [PlantTFcat](https://bio.tools/planttfcat) | text:\btranscription[- ]factor | confidence medium, categories none |
 | [Pluto Bio](https://bio.tools/pluto_bio) | text:\bChIP[- ]?(seq\|chip\|exo\|nexus)\b\|\b | confidence high, categories none |
 | [PomBase Motif search](https://bio.tools/pombase_motif_search) | text:\bmotif (discovery\|enrichment\|scan\|s | confidence high, categories none |
@@ -129,11 +115,9 @@ Nothing here is applied. A dispute is a prompt to re-read the entry, not a verdi
 | [PredicTF](https://bio.tools/predictf) | text:\btranscription[- ]factor | confidence high, categories none |
 | [PresRAT](https://bio.tools/presrat) | text:\bcis-regulatory\|\bregulatory elemen | confidence high, categories none |
 | [progeny](https://bio.tools/progeny) | text:\bfootprint | confidence high, categories none |
-| [ProteDNA](https://bio.tools/protedna) | text:\btranscription[- ]factor | confidence high, categories none |
 | [Protomata](https://bio.tools/protomata) | text:\bmotif (discovery\|enrichment\|scan\|s | confidence high, categories none |
 | [PsyMuKB](https://bio.tools/PsyMuKB) | text:\bcis-regulatory\|\bregulatory elemen | confidence high, categories none |
 | [qBED](https://bio.tools/qbed) | text:\btranscription[- ]factor | confidence medium, categories none |
-| [RBPBench](https://bio.tools/rbpbench) | text:\bmotif (discovery\|enrichment\|scan\|s | confidence high, categories none |
 | [RBscore](https://bio.tools/rbscore) | text:\bDNA[- ]binding (site\|preference\|sp | confidence high, categories none |
 | [ReadOut](https://bio.tools/readout) | hand-listed by ID | confidence high, categories none |
 | [RENCO](https://bio.tools/renco) | text:\bgene regulatory network\|\bregulato | confidence high, categories none |
@@ -150,9 +134,6 @@ Nothing here is applied. A dispute is a prompt to re-read the entry, not a verdi
 | [SHARK.capture](https://bio.tools/shark.capture) | text:\bsequence logo\|\bsequence motifs?\b | confidence high, categories none |
 | [SigProfilerTopography](https://bio.tools/sigprofilertopography) | text:\bchromatin (accessibilit\|state\|loop | confidence medium, categories none |
 | [SIRW](https://bio.tools/sirw) | text:\bsequence logo\|\bsequence motifs?\b | confidence high, categories none |
-| [SLiMFinder](https://bio.tools/slimfinder) | text:\bmotif (discovery\|enrichment\|scan\|s | confidence high, categories none |
-| [SLiMScape 3](https://bio.tools/slimscape) | text:\bmotif (discovery\|enrichment\|scan\|s | confidence high, categories none |
-| [SMARTIV](https://bio.tools/smartiv) | text:\bposition (weight\|frequency\|specifi | confidence high, categories none |
 | [SnapFISH](https://bio.tools/snapfish) | text:\bchromatin (accessibilit\|state\|loop | confidence high, categories none |
 | [SnapHiC](https://bio.tools/snaphic) | text:\bchromatin (accessibilit\|state\|loop | confidence high, categories none |
 | [Snapshot](https://bio.tools/snapshot) | hand-listed by ID | confidence medium, categories none |
@@ -176,4 +157,3 @@ Nothing here is applied. A dispute is a prompt to re-read the entry, not a verdi
 | [ViennNGS](https://bio.tools/viennngs) | text:\bsequence logo\|\bsequence motifs?\b | confidence high, categories none |
 | [VirtualCytometry](https://bio.tools/VirtualCytometry) | text:\btranscription[- ]factor | confidence high, categories none |
 | [WashU Epigenome Browser](https://bio.tools/washu_epigenome_browser) | text:\bepigenom(e\|ic)s?\b | confidence high, categories none |
-| [Wregex](https://bio.tools/wregex) | text:\bmotif (discovery\|enrichment\|scan\|s | confidence high, categories none |
