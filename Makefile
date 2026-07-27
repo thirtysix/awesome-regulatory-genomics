@@ -2,7 +2,7 @@ PY ?= python3
 PORT ?= 8000        # override if 8000 is taken: make serve PORT=8420
 PIPELINE := $(PY) pipeline
 
-.PHONY: all harvest select enrich links build render audit curate refresh clean check serve llm bench verify-additions repos
+.PHONY: all harvest select enrich links build render audit curate refresh clean check serve llm bench verify-additions repos repos-revalidate
 
 ## build everything from the existing sweep (no network beyond enrichment)
 all: select enrich repos links build render audit
@@ -26,9 +26,15 @@ build:
 render:
 	$(PIPELINE)/render.py
 
-## find source repositories bio.tools does not record (validated)
+## find source repositories bio.tools does not record (validated).
+## GitHub search is throttled to ~17 req/min against a 30/min ceiling and
+## capped per run; raise the budget across several runs rather than in one.
 repos:
-	$(PIPELINE)/resolve_repos.py
+	$(PIPELINE)/resolve_repos.py --search-budget 80
+
+## re-apply the current validation rules to cached candidates (core API only)
+repos-revalidate:
+	$(PIPELINE)/resolve_repos.py --revalidate
 
 ## resolve preprint links to the published version and check every DOI
 links:

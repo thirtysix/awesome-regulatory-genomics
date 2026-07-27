@@ -42,7 +42,7 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[BPNet](https://github.com/kundajelab/bpnet)**: Base-resolution TF binding model that recovers motif syntax
   <sub>[code](https://github.com/kundajelab/bpnet) · [paper](https://doi.org/10.1038/s41588-021-00782-6)</sub>
 - **[homer](http://homer.ucsd.edu/homer/motif/)**: Motif discovery plus peak annotation; the pragmatic first stop for ChIP-seq
-  <sub>[code](https://github.com/npdeloss/mepp) · [bio.tools](https://bio.tools/homer)</sub>
+  <sub>[bio.tools](https://bio.tools/homer)</sub>
 
 <sub>[+ 175 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=motif-discovery)</sub>
 
@@ -57,7 +57,7 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[FIMO](https://meme-suite.org/meme/tools/fimo)**: Standard scanner for known motifs with calibrated p-values
   <sub>[code](https://github.com/cinquin/MEME) · [paper](https://doi.org/10.1093/bioinformatics/btr064)</sub>
 - **[homer](http://homer.ucsd.edu/homer/motif/)**: Motif discovery plus peak annotation; the pragmatic first stop for ChIP-seq
-  <sub>[code](https://github.com/npdeloss/mepp) · [bio.tools](https://bio.tools/homer)</sub>
+  <sub>[bio.tools](https://bio.tools/homer)</sub>
 - **[motifmatchr](https://bioconductor.org/packages/motifmatchr/)**: Fast motif matching over large genomic range sets
   <sub>[code](https://github.com/GreenleafLab/motifmatchr) · [paper](https://doi.org/10.18129/B9.bioc.motifmatchr)</sub>
 
@@ -129,7 +129,7 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[Enformer](https://github.com/google-deepmind/deepmind-research/tree/master/enformer)**: Long-range sequence-to-expression model; a common baseline for regulatory prediction
   <sub>[code](https://github.com/google-deepmind/deepmind-research) · [paper](https://doi.org/10.1038/s41592-021-01252-x)</sub>
 - **[homer](http://homer.ucsd.edu/homer/motif/)**: Motif discovery plus peak annotation; the pragmatic first stop for ChIP-seq
-  <sub>[code](https://github.com/npdeloss/mepp) · [bio.tools](https://bio.tools/homer)</sub>
+  <sub>[bio.tools](https://bio.tools/homer)</sub>
 
 <sub>[+ 472 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=regulatory-elements)</sub>
 
@@ -265,7 +265,7 @@ Two design decisions are worth stating, because they are where most tool tables 
 ## Coverage and known gaps
 
 - **1800 tools**: 1764 harvested from bio.tools, 36 added by hand because bio.tools does not index them.
-- **952 (53%) have a resolvable source repository.** bio.tools rarely records one directly, so repositories are also recovered from Bioconductor, CRAN and PyPI metadata, from bioconda recipes and from links on the tool's own homepage. Every candidate is validated against the tool's description before it is used: matching on name alone resolves MEME to a meme generator and MEDUSA to a genome scaffolder that merely shares the name. Near-misses are listed in [`docs/repo-review.md`](docs/repo-review.md) rather than applied.
+- **950 (53%) have a resolvable source repository.** bio.tools rarely records one directly, so repositories are also recovered from Bioconductor, CRAN and PyPI metadata, from bioconda recipes and from links on the tool's own homepage. Every candidate is validated against the tool's description before it is used: matching on name alone resolves MEME to a meme generator and MEDUSA to a genome scaffolder that merely shares the name. Near-misses are listed in [`docs/repo-review.md`](docs/repo-review.md) rather than applied.
 - **19 tools are featured** in the curated sections above; the rest are in the [full catalog](https://thirtysix.github.io/awesome-regulatory-genomics/).
 
 Honest limitations:

@@ -1,8 +1,18 @@
 {
+ "BindSpace": {
+  "accepted": false,
+  "name": "BindSpace",
+  "reason": "name matches but only 1 shared terms (embedding)",
+  "repo_desc": "TFBS models trained with HT-SELEX data using StarSpace embedding method",
+  "slug": "hy395/BindSpace",
+  "source": "github-search",
+  "stars": 2,
+  "tool_desc": "BindSpace decodes transcription factor binding signals by large-scale sequence embedding | The decoding of transcription factor (TF) binding"
+ },
  "BioSwitch": {
   "accepted": false,
   "name": "BioSwitch",
-  "reason": "no name match and only 3 shared terms (com, google, https)",
+  "reason": "no name match and only 2 shared terms (google, https)",
   "repo_desc": "",
   "slug": "google/safevalues",
   "source": "homepage",
@@ -22,7 +32,7 @@
  "ComHub": {
   "accepted": false,
   "name": "ComHub",
-  "reason": "no name match and only 1 shared terms (standard)",
+  "reason": "no name match and only 0 shared terms ()",
   "repo_desc": "Fetch Standard",
   "slug": "whatwg/fetch",
   "source": "homepage",
@@ -59,6 +69,16 @@
   "stars": 2245,
   "tool_desc": "Towards gene regulatory network predictions of high-certainty | Abstract Motivation Reverse engineering of gene regulatory networks has for "
  },
+ "MCOT": {
+  "accepted": false,
+  "name": "MCOT",
+  "reason": "no name match and only 1 shared terms (comprehensive)",
+  "repo_desc": "Multimodal Chain-of-Thought Reasoning: A Comprehensive Survey",
+  "slug": "yaotingwangofficial/Awesome-MCoT",
+  "source": "github-search",
+  "stars": 1017,
+  "tool_desc": "A single ChIP-seq dataset is sufficient for comprehensive analysis of motifs co-occurrence with MCOT package.\n\nadded a link to the publicati"
+ },
  "Manhattan_Harvester": {
   "accepted": false,
   "name": "Manhattan Harvester",
@@ -72,7 +92,7 @@
  "MotifAnalyzer-PDZ": {
   "accepted": true,
   "name": "MotifAnalyzer-PDZ",
-  "reason": "name match + 8 shared terms (acids, amino, binding, domains)",
+  "reason": "name match + 3 shared terms (binding, domains, pdz)",
   "repo_desc": "",
   "slug": "jagodzf/motifAnalyzerPDZ",
   "source": "homepage",
@@ -80,9 +100,9 @@
   "tool_desc": "A computational program to investigate the evolution of PDZ-binding target specificity.\n\nPDZ domains bind the extreme C-terminus of target p"
  },
  "PRP": {
-  "accepted": true,
+  "accepted": false,
   "name": "PRP",
-  "reason": "name match + 2 shared terms (like, prp)",
+  "reason": "name matches but only 1 shared terms (prp)",
   "repo_desc": "",
   "slug": "brettatoms/prp",
   "source": "pypi",
@@ -99,6 +119,36 @@
   "stars": 7,
   "tool_desc": "A database for exploring N6-methyladenosine methylome.\n\nREPIC (RNA Epitranscriptome Collection) is a database dedicated to provide a new res"
  },
+ "ReMap2020": {
+  "accepted": false,
+  "name": "ReMap",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "R package for creating separate regional spatial models with continuous borders.",
+  "slug": "jadonwagstaff/remap",
+  "source": "cran",
+  "stars": 1,
+  "tool_desc": "THIS PAGE IS DEPRECATED, GO TO : https://bio.tools/inserm-remap"
+ },
+ "RsHSF": {
+  "accepted": false,
+  "name": "RsHSF",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "",
+  "slug": "americancrypto177-debug/rshsf",
+  "source": "github-search",
+  "stars": 0,
+  "tool_desc": "Genome-wide characterization and evolutionary analysis of heat shock transcription factors (HSFs) to reveal their potential role under abiot"
+ },
+ "T-Gene": {
+  "accepted": false,
+  "name": "T-Gene",
+  "reason": "no name match and only 0 shared terms ()",
+  "repo_desc": "Large Language Model Text Generation Inference",
+  "slug": "huggingface/text-generation-inference",
+  "source": "github-search",
+  "stars": 10881,
+  "tool_desc": "Improved target gene prediction.\n\nAbstract Motivation Identifying the genes regulated by a given transcription factor (its \u201ctarget genes\u201d) i"
+ },
  "TMB": {
   "accepted": false,
   "name": "TMB",
@@ -109,10 +159,30 @@
   "stars": 65,
   "tool_desc": "> LOW CONFIDENCE! | > CORRECT NAME OF TOOL COULD ALSO BE 'iBIOMES', 'Lite', 'iBIOMES Lite', 'nucleosome' | TMB Library of Nucleosome Simulat"
  },
+ "VDJdb": {
+  "accepted": true,
+  "name": "VDJdb",
+  "reason": "name match + 3 shared terms (cell, database, receptor)",
+  "repo_desc": "Git-based antigen specificity database storage & management.",
+  "slug": "antigenomics/vdjdb-db",
+  "source": "github-search",
+  "stars": 155,
+  "tool_desc": "VDJdb is a database extension, new analysis infrastructure and a T-cell receptor motif compendium."
+ },
+ "VISDB": {
+  "accepted": false,
+  "name": "VISDB",
+  "reason": "name matches but only 2 shared terms (human, visdb)",
+  "repo_desc": "",
+  "slug": "chhankyao/visdb",
+  "source": "github-search",
+  "stars": 38,
+  "tool_desc": "a manually curated database of viral integration sites in the human genome.\n\nVISDB, visdb, virus integration site, viral integration, DNA vi"
+ },
  "VISION": {
   "accepted": false,
   "name": "VISION",
-  "reason": "no name match and only 1 shared terms (data)",
+  "reason": "no name match and only 0 shared terms ()",
   "repo_desc": "Jointly characterizing epigenetic dynamics across multiple cell types",
   "slug": "guanjue/IDEAS_2018",
   "source": "homepage",
@@ -179,15 +249,45 @@
   "stars": 28,
   "tool_desc": "Set of tools to analyse promoter sequences on a genome-wide scale."
  },
+ "aptcompare": {
+  "accepted": false,
+  "name": "AptCompare",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "\uc544\ud30c\ud2b8 \uc2e4\uac70\ub798 \uc2dc\uc138 \ube44\uad50 \uc6f9\ud398\uc774\uc9c0 ",
+  "slug": "dudtls22/aptCompare",
+  "source": "github-search",
+  "stars": 0,
+  "tool_desc": "A method for optimized de novo motif discovery of RNA aptamers via HTS-SELEX."
+ },
  "argo": {
   "accepted": false,
   "name": "ARGO",
-  "reason": "name matches but only 1 shared terms (genes)",
+  "reason": "name matches but only 0 shared terms ()",
   "repo_desc": "Argo: species-resolved profiling of antibiotic resistance genes in complex metagenomes through long-read overlapping",
   "slug": "xinehc/argo",
   "source": "bioconda",
   "stars": 15,
   "tool_desc": "Tool for the detection and visualization of sets of region-specific degenerate oligonucleotide motifs in the regulatory regions of eukaryoti"
+ },
+ "asap": {
+  "accepted": false,
+  "name": "ASAP",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "[RSS 2025] \"ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills\"",
+  "slug": "LeCAR-Lab/ASAP",
+  "source": "github-search",
+  "stars": 2077,
+  "tool_desc": "A framework for promoter analysis based on a fast search engine using enhanced suffix arrays. The framework includes several statistics for "
+ },
+ "aurea": {
+  "accepted": false,
+  "name": "AUREA",
+  "reason": "no name match and only 0 shared terms ()",
+  "repo_desc": "VerbaAurea\uff1a \u4e00\u4e2a\u6587\u6863\u9884\u5904\u7406\u5de5\u5177\uff0c\u4e13\u6ce8\u4e8e\u4e3a\u77e5\u8bc6\u5e93\u6784\u5efa\u63d0\u4f9b\u9ad8\u8d28\u91cf\u7684\u6587\u672c\u6570\u636e\u3002",
+  "slug": "AEPAX/VerbaAurea",
+  "source": "github-search",
+  "stars": 136,
+  "tool_desc": "Open-source software system for accurate and user-friendly identification of relative expression molecular signatures."
  },
  "bagel": {
   "accepted": true,
@@ -229,15 +329,45 @@
   "stars": 456,
   "tool_desc": "Bisulfite Analysis Toolkit. It facilitates the analysis of bisulfite sequencing data. It covers the essential analysis steps of read alignme"
  },
+ "bayesmd": {
+  "accepted": false,
+  "name": "BayesMD",
+  "reason": "name matches but only 1 shared terms (bayesian)",
+  "repo_desc": "A Bayesian Multiple Changepoint Detection Approach Using Minimum Description Lengths (MDL)",
+  "slug": "yingboli/BayesMDL",
+  "source": "github-search",
+  "stars": 6,
+  "tool_desc": "Flexible, fully Bayesian model for motif discovery consisting of motif, background and alignment modules. It can be customized to different "
+ },
+ "bcrank": {
+  "accepted": false,
+  "name": "BCRANK",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "",
+  "slug": "bioconductor-source/BCRANK",
+  "source": "github-search",
+  "stars": 0,
+  "tool_desc": "Functions and classes for de novo prediction of transcription factor binding consensus by heuristic search."
+ },
  "beaconlab_pscan": {
   "accepted": true,
   "name": "Pscan",
-  "reason": "name match + 3 shared terms (scans, set, which)",
+  "reason": "name match + 2 shared terms (scans, set)",
   "repo_desc": "",
   "slug": "brunobeltran/pscan",
   "source": "pypi",
   "stars": 1,
   "tool_desc": "Software tool that scans a set of sequences (e.g. promoters) from co-regulated or co-expressed genes with motifs describing the binding spec"
+ },
+ "biasaway": {
+  "accepted": true,
+  "name": "BiasAway",
+  "reason": "name match + 5 shared terms (background, biasaway, composition, generate)",
+  "repo_desc": "BiasAway: a tool to generate composition-matched background sequence sets",
+  "slug": "asntech/biasaway",
+  "source": "github-search",
+  "stars": 1,
+  "tool_desc": "BiasAway is a command-line and web server to generate nucleotide composition-matched DNA background sequences. The BiasAway tool provides us"
  },
  "biotranslator": {
   "accepted": true,
@@ -332,7 +462,7 @@
  "carmen-variant": {
   "accepted": false,
   "name": "CARMEN",
-  "reason": "name matches but only 0 shared terms ()",
+  "reason": "no name match and only 0 shared terms ()",
   "repo_desc": "Geolocation for Twitter.",
   "slug": "mdredze/carmen-python",
   "source": "pypi",
@@ -369,6 +499,16 @@
   "stars": 100,
   "tool_desc": "A tool for exploring patterns in ChIP profiling data."
  },
+ "ceas": {
+  "accepted": false,
+  "name": "CEAS",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "Cellular Energetics Analysis Software",
+  "slug": "jamespeapen/ceas",
+  "source": "cran",
+  "stars": 2,
+  "tool_desc": "Cis-regulatory Element Annotation System (CEAS) is a resource for ChIP-chip analyses that retrieves repeat-masked genomic sequences, calcula"
+ },
  "cell2location": {
   "accepted": true,
   "name": "Cell2location",
@@ -389,10 +529,20 @@
   "stars": 3,
   "tool_desc": "CellRegulonDB is an atlas of transcription factor-driven gene programs across human cells, based on single-cell data from the Human Cell Atl"
  },
+ "cermit": {
+  "accepted": false,
+  "name": "cERMIT",
+  "reason": "no name match and only 0 shared terms ()",
+  "repo_desc": "application to show calendar events on N9/N950 eventscreen",
+  "slug": "Cermit/DateEvent",
+  "source": "github-search",
+  "stars": 3,
+  "tool_desc": "Fast sequence motif identification algorithm that utilizes suffix arrays to efficiently find optimal motifs in large sequence sets (such as "
+ },
  "champ": {
   "accepted": false,
   "name": "ChAMP",
-  "reason": "name matches but only 1 shared terms (selection)",
+  "reason": "name matches but only 0 shared terms ()",
   "repo_desc": "",
   "slug": "wweir827/champ",
   "source": "pypi",
@@ -419,6 +569,16 @@
   "stars": 1932,
   "tool_desc": "Inferring active transcription factor modules to predict functional regulatory elements."
  },
+ "chipcomp": {
+  "accepted": false,
+  "name": "ChIPComp",
+  "reason": "no name match and only 0 shared terms ()",
+  "repo_desc": "This is an AI agent to compare the baselines of different type of AI chips. It simplifies the work of AI product managers. ",
+  "slug": "EinerderIdioten/ChipCompAgent",
+  "source": "github-search",
+  "stars": 51,
+  "tool_desc": "Detects differentially bound sharp binding sites across multiple conditions considering matching control."
+ },
  "chipmunk": {
   "accepted": false,
   "name": "ChIPMunk",
@@ -428,6 +588,26 @@
   "source": "pypi",
   "stars": 1,
   "tool_desc": "ChIPMunk is a fast heuristic DNA motif digger based a on greedy approach accompanied by bootstrapping. ChIPMunk identifies the strong motif "
+ },
+ "chipseeker_R": {
+  "accepted": true,
+  "name": "ChIPseeker",
+  "reason": "name match + 5 shared terms (annotation, chip, comparison, peak)",
+  "repo_desc": ":dart: ChIP peak Annotation, Comparison and Visualization",
+  "slug": "YuLab-SMU/ChIPseeker",
+  "source": "bioconductor",
+  "stars": 256,
+  "tool_desc": "R package for ChIP peak Annotation, Comparison, and Visualization."
+ },
+ "chromasig": {
+  "accepted": false,
+  "name": "ChromaSig",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "A STM32 based project that assists individuals who struggle to accomplish day-to-day tasks due to color-related vision issues.",
+  "slug": "Dilsan15/ChromaSight",
+  "source": "github-search",
+  "stars": 1,
+  "tool_desc": "An unsupervised learning method, which finds, in an unbiased fashion, commonly occurring chromatin signatures in both tiling microarray and "
  },
  "chromhmm": {
   "accepted": false,
@@ -442,7 +622,7 @@
  "circe": {
   "accepted": true,
   "name": "CIRCE",
-  "reason": "name match + 11 shared terms (accessibility, atac, cell, cicero)",
+  "reason": "name match + 8 shared terms (accessibility, atac, cell, cis)",
   "repo_desc": "Co-accessibility network from single-cell ATAC-seq data. Python code with AnnData, based on Cicero algorithm.",
   "slug": "cantinilab/circe",
   "source": "homepage",
@@ -469,6 +649,16 @@
   "stars": 4,
   "tool_desc": "Quantitative analysis of the genomic overlaps."
  },
+ "cobindr": {
+  "accepted": false,
+  "name": "cobindR",
+  "reason": "no name match and only 0 shared terms ()",
+  "repo_desc": "source code repository of cobindR tool",
+  "slug": "cobindr/source",
+  "source": "github-search",
+  "stars": 3,
+  "tool_desc": "Finding and analysing co-occuring motifs of transcription factor binding sites in groups of genes."
+ },
  "cobra": {
   "accepted": false,
   "name": "CoBRA",
@@ -482,7 +672,7 @@
  "cogito": {
   "accepted": false,
   "name": "Cogito",
-  "reason": "name matches but only 1 shared terms (cogito)",
+  "reason": "no name match and only 1 shared terms (cogito)",
   "repo_desc": "",
   "slug": "freepik-company/fc-py-cogito",
   "source": "pypi",
@@ -492,7 +682,7 @@
  "comeback": {
   "accepted": false,
   "name": "CoMeBack",
-  "reason": "name matches but only 1 shared terms (comeback)",
+  "reason": "name matches but only 0 shared terms ()",
   "repo_desc": "Project restoration in one command, auto open everything!",
   "slug": "agamm/comeback",
   "source": "pypi",
@@ -502,7 +692,7 @@
  "createcontrolsubset": {
   "accepted": false,
   "name": "createcontrolsubset",
-  "reason": "no name match and only 2 shared terms (bam, sam)",
+  "reason": "no name match and only 0 shared terms ()",
   "repo_desc": "C library for high-throughput sequencing data formats",
   "slug": "samtools/htslib",
   "source": "homepage",
@@ -542,7 +732,7 @@
  "croconet": {
   "accepted": true,
   "name": "CroCoNet",
-  "reason": "name match + 14 shared terms (across, conserved, croconet, diverged)",
+  "reason": "name match + 10 shared terms (across, conserved, croconet, diverged)",
   "repo_desc": "",
   "slug": "Hellmann-Lab/CroCoNet",
   "source": "homepage",
@@ -558,6 +748,26 @@
   "source": "pypi",
   "stars": 1,
   "tool_desc": "A completely automated pipe-line for ChIP-seq data analysis, starting from raw sequencing reads, through quality filtering, read mapping, fr"
+ },
+ "csRNA-seq": {
+  "accepted": false,
+  "name": "csRNA-seq",
+  "reason": "no name match and only 0 shared terms ()",
+  "repo_desc": "",
+  "slug": "annamcd511/csRNA-seq_WalkThru",
+  "source": "github-search",
+  "stars": 0,
+  "tool_desc": "Identification and dynamic quantification of regulatory elements using total RNA.\nSoftware for motif discovery and next-gen sequencing analy"
+ },
+ "csa-chip": {
+  "accepted": false,
+  "name": "CSA",
+  "reason": "repo has no description; cannot verify beyond the name",
+  "repo_desc": "",
+  "slug": "imarkonis/csa",
+  "source": "cran",
+  "stars": 2,
+  "tool_desc": "a web service for the complete process of ChIP-Seq analysis.\n\nBACKGROUND:Chromatin immunoprecipitation sequencing (ChIP-seq) is a technology"
  },
  "csar": {
   "accepted": false,
@@ -599,6 +809,16 @@
   "stars": 2,
   "tool_desc": "ChIP-seq signal quantifier pipeline."
  },
+ "cuda-meme": {
+  "accepted": false,
+  "name": "CUDA-MEME",
+  "reason": "no name match and only 2 shared terms (algorithm, cuda)",
+  "repo_desc": "CUDA code for DE+PSO for Gene Regulatory Network inference",
+  "slug": "angelfloreso/CUDA-Memetic-Algorithm",
+  "source": "github-search",
+  "stars": 0,
+  "tool_desc": "Motif discovery software based on MEME algorithm for a single GPU device using CUDA programming model. At present, it only supports the OOPS"
+ },
  "cuffdiff": {
   "accepted": false,
   "name": "cuffdiff",
@@ -610,9 +830,9 @@
   "tool_desc": "Find significant changes in transcript expression, splicing, and promoter use."
  },
  "cwas-plus": {
-  "accepted": true,
+  "accepted": false,
   "name": "CWAS-Plus",
-  "reason": "5 shared terms (category, functional, genomic, large)",
+  "reason": "no name match and only 1 shared terms (category)",
   "repo_desc": "",
   "slug": "sanderslab/cwas",
   "source": "homepage",
@@ -628,6 +848,16 @@
   "source": "homepage",
   "stars": 5076,
   "tool_desc": "DamMapper is a Snakemake workflow for analyzing DamID-seq data. It provides a comprehensive pipeline for processing multiple biological repl"
+ },
+ "dbchip": {
+  "accepted": false,
+  "name": "DBChIP",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "",
+  "slug": "bioconductor-source/DBChIP",
+  "source": "github-search",
+  "stars": 0,
+  "tool_desc": "Detects differentially bound sharp binding sites across multiple conditions, with or without matching control samples."
  },
  "dbgap": {
   "accepted": false,
@@ -669,6 +899,16 @@
   "stars": 762,
   "tool_desc": "User-friendly tools for the normalization and visualization of deep-sequencing data."
  },
+ "defcom": {
+  "accepted": false,
+  "name": "DeFCoM",
+  "reason": "no name match and only 0 shared terms ()",
+  "repo_desc": "",
+  "slug": "MarisaKirisame/DefComBlog",
+  "source": "github-search",
+  "stars": 12,
+  "tool_desc": "SVM-based supervised learning foot-printer for the detection of footprints containing motifs."
+ },
  "defuse": {
   "accepted": false,
   "name": "DeFuse",
@@ -688,6 +928,16 @@
   "source": "pypi",
   "stars": 9,
   "tool_desc": "DExTER is a tool dedicated to the identification of LREs and apply it to the analysis of the genomes of different eukaryotes including P. fa"
+ },
+ "dipwmsearch": {
+  "accepted": false,
+  "name": "dipwmsearch",
+  "reason": "no name match and only 0 shared terms ()",
+  "repo_desc": "Fetch Standard",
+  "slug": "whatwg/fetch",
+  "source": "homepage",
+  "stars": 2245,
+  "tool_desc": "Python package for searching di-PWM motifs."
  },
  "dire": {
   "accepted": false,
@@ -750,9 +1000,9 @@
   "tool_desc": "epiGenomic Efficient Correlator (epiGeEC) tool to enable genome-wide comparisons of very large numbers of public epigenomic datasets."
  },
  "epigenome": {
-  "accepted": true,
+  "accepted": false,
   "name": "WashU Epigenome Browser",
-  "reason": "4 shared terms (browser, data, epigenome, washu)",
+  "reason": "no name match and only 3 shared terms (browser, epigenome, washu)",
   "repo_desc": "WashU Epigenome Browser (3rd generation, since 2025)",
   "slug": "twlab/eg3",
   "source": "homepage",
@@ -780,9 +1030,9 @@
   "tool_desc": "A web server for prediction, analysis and visualization of enhancer-promoter interactions."
  },
  "figeno": {
-  "accepted": true,
+  "accepted": false,
   "name": "figeno",
-  "reason": "name match + 4 shared terms (data, figures, generating, genomics)",
+  "reason": "name matches but only 1 shared terms (data)",
   "repo_desc": "Tool for plotting sequencing data along genomic coordinates.",
   "slug": "CompEpigen/figeno",
   "source": "pypi",
@@ -792,17 +1042,27 @@
  "fire": {
   "accepted": false,
   "name": "FIRE",
-  "reason": "name matches but only 0 shared terms ()",
+  "reason": "no name match and only 0 shared terms ()",
   "repo_desc": "Python Fire is a library for automatically generating command line interfaces (CLIs) from absolutely any Python object.",
   "slug": "google/python-fire",
   "source": "pypi",
   "stars": 28214,
   "tool_desc": "A motif discovery and characterization program based on mutual information"
  },
+ "fire-pro": {
+  "accepted": false,
+  "name": "FIRE-pro",
+  "reason": "no name match and only 0 shared terms ()",
+  "repo_desc": "A proxy software to help circumventing the Great Firewall.",
+  "slug": "yinghuocho/firefly-proxy",
+  "source": "github-search",
+  "stars": 4811,
+  "tool_desc": "Motif discovery and characterization program for proteins based on mutual information"
+ },
  "firecaller": {
   "accepted": true,
   "name": "FIREcaller",
-  "reason": "name match + 8 shared terms (data, detecting, firecaller, fires)",
+  "reason": "6 shared terms (data, detecting, firecaller, frequently)",
   "repo_desc": "FIREcaller: Python library for detecting Frequently Interacting REgions (FIREs) from Hi-C data",
   "slug": "cellular-genomics/python-FIREcaller",
   "source": "pypi",
@@ -849,6 +1109,16 @@
   "stars": 4,
   "tool_desc": "Meta-analysis and Consolidation of Farnesoid X Receptor Chromatin Immunoprecipitation Sequencing Data Across Different Species and Condition"
  },
+ "gadem": {
+  "accepted": false,
+  "name": "GADEM",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "\u7ecf\u5178\u9057\u4f20\u7b97\u6cd5\u7684Java\u5b9e\u73b0\u4ee5\u53ca\u9057\u4f20\u7b97\u6cd5\u5b9e\u73b0\u81ea\u52a8\u7ec4\u5377",
+  "slug": "jslixiaolin/GADemo",
+  "source": "github-search",
+  "stars": 75,
+  "tool_desc": "Unbiased de novo motif discovery tool implementing an expectation-maximization (EM) algorithm."
+ },
  "genecodis": {
   "accepted": false,
   "name": "GeneCodis",
@@ -858,6 +1128,16 @@
   "source": "homepage",
   "stars": 0,
   "tool_desc": "GeneCodis is a web-based tool for the ontological analysis of lists of genes, proteins, and regulatory elements like miRNAs, transcription f"
+ },
+ "geneious": {
+  "accepted": false,
+  "name": "Geneious",
+  "reason": "no name match and only 0 shared terms ()",
+  "repo_desc": "Materials for a series on how to use Geneious and its LIMS plugin to document the full Sanger sequencing pipeline.",
+  "slug": "SmithsonianWorkshops/GeneiousLIMS",
+  "source": "github-search",
+  "stars": 6,
+  "tool_desc": "Search, organize and analyze genomic and protein information of any size via desktop program that provides publication ready images to enhan"
  },
  "getintrons": {
   "accepted": false,
@@ -872,17 +1152,27 @@
  "ggea": {
   "accepted": false,
   "name": "GGEA",
-  "reason": "no name match and only 1 shared terms (networks)",
+  "reason": "no name match and only 0 shared terms ()",
   "repo_desc": "Interactive Jupyter notebook for an accessible and reproducible computational analyses for biological networks (inspired by https://github.c",
   "slug": "clement-alexandre/TotemBionet",
   "source": "pypi",
   "stars": 0,
   "tool_desc": "Intuitive method to detect consistently and coherently enriched gene sets, based on prior knowledge derived from directed gene regulatory ne"
  },
+ "gibbs-motif-sampler": {
+  "accepted": false,
+  "name": "Gibbs Motif Sampler",
+  "reason": "no name match and only 1 shared terms (gibbs)",
+  "repo_desc": "Gibbs sampler for finding motif in DNA sequence",
+  "slug": "mitbal/gibbs-sampler-motif-finding",
+  "source": "github-search",
+  "stars": 2,
+  "tool_desc": "Finds motifs and the optimum width via Gibbs sampling."
+ },
  "ginsim": {
   "accepted": false,
   "name": "GINsim",
-  "reason": "name matches but only 0 shared terms ()",
+  "reason": "no name match and only 0 shared terms ()",
   "repo_desc": "Python bindings for GINsim and bioLQM",
   "slug": "GINsim/GINsim-python",
   "source": "pypi",
@@ -892,12 +1182,32 @@
  "gpminer": {
   "accepted": false,
   "name": "GPMiner",
-  "reason": "name matches but only 0 shared terms ()",
+  "reason": "repo has no description; cannot verify beyond the name",
   "repo_desc": "",
   "slug": "LHanLi/GPminer",
   "source": "pypi",
   "stars": 13,
   "tool_desc": "Integrated system for identifying promoter regions and annotating regulatory features in user-input sequences."
+ },
+ "gps": {
+  "accepted": false,
+  "name": "GPS",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "General P-Splines",
+  "slug": "ZheyuanLi/gps",
+  "source": "cran",
+  "stars": 2,
+  "tool_desc": "High spatial resolution peak detection algorithm for ChIP-seq data."
+ },
+ "gpumotif": {
+  "accepted": true,
+  "name": "GPUmotif",
+  "reason": "name match + 5 shared terms (analysis, efficient, energy, motif)",
+  "repo_desc": "GPUmotif: An Ultra-Fast and Energy-Efficient Motif Analysis Program Using Graphics Processing Units",
+  "slug": "emorybiostat/GPUmotif",
+  "source": "github-search",
+  "stars": 0,
+  "tool_desc": "GPU-accelerated ultra-fast and energy-efficient motif analysis program."
  },
  "granie": {
   "accepted": false,
@@ -942,7 +1252,7 @@
  "grelu": {
   "accepted": true,
   "name": "gReLU",
-  "reason": "name match + 4 shared terms (deep, dna, grelu, learning)",
+  "reason": "name match + 2 shared terms (dna, grelu)",
   "repo_desc": "gReLU is a python library to train, interpret, and apply deep learning models to DNA sequences.",
   "slug": "Genentech/gReLU",
   "source": "pypi",
@@ -952,7 +1262,7 @@
  "grema": {
   "accepted": true,
   "name": "GREMA",
-  "reason": "name match + 16 shared terms (algorithm, confidence, cope, emulated)",
+  "reason": "name match + 11 shared terms (confidence, cope, emulated, evolutionary)",
   "repo_desc": "GREMA: Modelling of emulated gene regulatory networks with confidence levels based on evolutionary intelligence to cope with the underdeterm",
   "slug": "NctuICLab/GREMA",
   "source": "homepage",
@@ -972,7 +1282,7 @@
  "grins": {
   "accepted": true,
   "name": "GRiNS",
-  "reason": "name match + 9 shared terms (agnostic, dynamics, gene, grins)",
+  "reason": "name match + 8 shared terms (agnostic, dynamics, gene, grins)",
   "repo_desc": "Gene Regulatory Interaction Network Simulator - GRiNS",
   "slug": "MoltenEcdysone09/GRiNS",
   "source": "pypi",
@@ -982,7 +1292,7 @@
  "grok": {
   "accepted": false,
   "name": "GROK",
-  "reason": "name matches but only 1 shared terms (grok)",
+  "reason": "name matches but only 0 shared terms ()",
   "repo_desc": "Grok: Now even cavemen can use Zope 3!",
   "slug": "zopefoundation/grok",
   "source": "pypi",
@@ -1012,12 +1322,22 @@
  "hera": {
   "accepted": true,
   "name": "HeRA",
-  "reason": "name match + 3 shared terms (data, hera, rna)",
+  "reason": "name match + 2 shared terms (hera, rna)",
   "repo_desc": "",
   "slug": "bioturing/hera",
   "source": "bioconda",
   "stars": 71,
   "tool_desc": "an atlas of enhancer RNAs across human tissues.\n\nThe H uman e nhancer R NA A tlas (HeRA) provides the expression Landscape of enhancer RNA ("
+ },
+ "hfaim": {
+  "accepted": false,
+  "name": "hfAIM",
+  "reason": "repo has no description; cannot verify beyond the name",
+  "repo_desc": "",
+  "slug": "HHenok23/hfaimages",
+  "source": "github-search",
+  "stars": 0,
+  "tool_desc": "A reliable bioinformatics approach for in silico genome-wide identification of autophagy-associated atg8-interacting motifs in various organ"
  },
  "hicexplorer": {
   "accepted": true,
@@ -1060,9 +1380,9 @@
   "tool_desc": "HOmo sapiens transcription factor COmprehensive MOdel COllection contains transcription factor (TF) binding models (motifs) as position weig"
  },
  "homer": {
-  "accepted": true,
+  "accepted": false,
   "name": "homer",
-  "reason": "4 shared terms (dna, enrichment, motif, sequences)",
+  "reason": "no name match and only 2 shared terms (dna, motif)",
   "repo_desc": "Motif Enrichment Positional Profiling (MEPP) quantifies a positional profile of motif enrichment along the length of DNA sequences centered ",
   "slug": "npdeloss/mepp",
   "source": "homepage",
@@ -1082,12 +1402,22 @@
  "iceberg": {
   "accepted": false,
   "name": "ICEberg",
-  "reason": "name matches but only 0 shared terms ()",
+  "reason": "no name match and only 0 shared terms ()",
   "repo_desc": "This repo contains the ICEBERG middleware as it is agreed by the members of the ICEBERG project.",
   "slug": "iceberg-project/iceberg-middleware",
   "source": "pypi",
   "stars": 2,
   "tool_desc": "Web-based resource for integrative and conjugative elements (ICEs) found in bacteria."
+ },
+ "icr": {
+  "accepted": false,
+  "name": "iCR",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "Compute Krippendorff\u2018s intercoder reliability coefficient Alpha in R",
+  "slug": "staudtlex/icr",
+  "source": "cran",
+  "stars": 6,
+  "tool_desc": "Predict regulatory binding sites based on conservation across multiple species. The user provides an ungapped multiple sequence alignment re"
  },
  "iddn": {
   "accepted": true,
@@ -1119,6 +1449,16 @@
   "stars": 4,
   "tool_desc": "Easy-to-use and powerful web server for biologists analysing genomic sequence data for in silico cis-regulatory modules prediction and analy"
  },
+ "inserm-remap": {
+  "accepted": false,
+  "name": "ReMap",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "R package for creating separate regional spatial models with continuous borders.",
+  "slug": "jadonwagstaff/remap",
+  "source": "cran",
+  "stars": 1,
+  "tool_desc": "ReMap is a large scale integrative analysis of DNA-binding experiments for Homo sapiens, Mus musculus, Drosophila melanogaster and Arabidops"
+ },
  "intomics_framework": {
   "accepted": false,
   "name": "IntOMICS",
@@ -1132,7 +1472,7 @@
  "ipredict": {
   "accepted": false,
   "name": "PREDICT",
-  "reason": "name matches but only 1 shared terms (predict)",
+  "reason": "no name match and only 1 shared terms (predict)",
   "repo_desc": "",
   "slug": "Svdvoort/PREDICTFastr",
   "source": "pypi",
@@ -1148,6 +1488,16 @@
   "source": "bioconda",
   "stars": 252,
   "tool_desc": "This package uses Bayesian hidden Ising models to identify IP-enriched genomic regions from ChIP-seq data. It can be used to analyze ChIP-se"
+ },
+ "isma": {
+  "accepted": false,
+  "name": "ISMA",
+  "reason": "no name match and only 0 shared terms ()",
+  "repo_desc": "\u2728\u5168\u65b0\u601d\u8def\u2728 | iSmart \u5237\u8bfe\u5de5\u5177\uff0c\u81ea\u52a8\u5b8c\u6210\u4efb\u52a1\uff0c\u4e00\u5206\u949f\u4e00\u95e8\u8bfe",
+  "slug": "Mufanc/iSmartAuto",
+  "source": "github-search",
+  "stars": 138,
+  "tool_desc": "Index-based Subgraph Matching Algorithm. Fast subgraph enumeration in large networks using optimized search trees."
  },
  "lap": {
   "accepted": false,
@@ -1189,6 +1539,16 @@
   "stars": 139,
   "tool_desc": "A Supervised Method to Detect Motifs From Annotated Groups in Alignments.\n\nMotifs from Annotated Groups in Alignments.\n\nMAGA is a new simple"
  },
+ "magma_motif": {
+  "accepted": false,
+  "name": "Magma",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "[CVPR 2025] Magma: A Foundation Model for Multimodal AI Agents",
+  "slug": "microsoft/Magma",
+  "source": "github-search",
+  "stars": 1936,
+  "tool_desc": "Fast, sensitive tool for whole regulome motif-finding in eukaryotic genomes"
+ },
  "manorm": {
   "accepted": true,
   "name": "MAnorm",
@@ -1202,7 +1562,7 @@
  "marge": {
   "accepted": false,
   "name": "MARGE",
-  "reason": "name matches but only 1 shared terms (marge)",
+  "reason": "name matches but only 0 shared terms ()",
   "repo_desc": "MARGE:Model-based Analysis of Regulation of Gene Expression (for python3)",
   "slug": "suwangbio/MARGE_py3",
   "source": "bioconda",
@@ -1219,10 +1579,20 @@
   "stars": 19,
   "tool_desc": "Weight matrix-based tool which searches for putative transcription factor binding sites (TFBS) in DNA sequences. Registration at the site is"
  },
+ "matrix-clustering": {
+  "accepted": false,
+  "name": "matrix-clustering",
+  "reason": "no name match and only 0 shared terms ()",
+  "repo_desc": "An example on how Correlation Matrix can be displayed and clustered",
+  "slug": "TheLoneNut/CorrelationMatrixClustering",
+  "source": "github-search",
+  "stars": 54,
+  "tool_desc": "Taking as input one or several sets of position-specific scoring matrices, this program applies hierarchical clustering to identify clusters"
+ },
  "mcland": {
   "accepted": true,
   "name": "MCLand",
-  "reason": "name match + 9 shared terms (carlo, epigenetic, gene, landscape)",
+  "reason": "name match + 5 shared terms (epigenetic, landscape, mcland, user)",
   "repo_desc": "MCLand is a Python software tool for constructing gene regulatory network model, plotting and visualising Waddington\u2019s epigenetic landscape.",
   "slug": "MCLand-NTU/MCLand",
   "source": "homepage",
@@ -1242,7 +1612,7 @@
  "medusa_motif": {
   "accepted": false,
   "name": "MEDUSA",
-  "reason": "name matches but only 1 shared terms (approach)",
+  "reason": "name matches but only 0 shared terms ()",
   "repo_desc": "A draft genome scaffolder that uses multiple reference genomes in a graph-based approach.",
   "slug": "combogenomics/medusa",
   "source": "bioconda",
@@ -1259,6 +1629,16 @@
   "stars": 29,
   "tool_desc": "Tool for discovering motifs in a group of related DNA or protein sequences. A motif is a sequence pattern that occurs repeatedly in a group "
  },
+ "meme_suite": {
+  "accepted": false,
+  "name": "MEME Suite",
+  "reason": "no name match and only 1 shared terms (discovery)",
+  "repo_desc": ":whale: :computer: Docker recipe for meme-suite",
+  "slug": "icaoberg/docker-meme-suite",
+  "source": "github-search",
+  "stars": 5,
+  "tool_desc": "Unified portal for discovery and analysis of sequence motifs (e.g. DNA binding sites, protein interaction domains). Motifs with/without gaps"
+ },
  "methodical": {
   "accepted": false,
   "name": "methodical",
@@ -1269,10 +1649,30 @@
   "stars": 0,
   "tool_desc": "methodical is a Bioconductor package that identifies genomic regions where DNA methylation is correlated with transcription, revealing trans"
  },
- "mirvestigator": {
+ "methreg": {
   "accepted": true,
+  "name": "MethReg",
+  "reason": "name match + 7 shared terms (dna, gene, methylation, potential)",
+  "repo_desc": "An R package to assess the regulatory potential of DNA methylation regions or sites on gene transcription",
+  "slug": "TransBioInfoLab/MethReg",
+  "source": "bioconductor",
+  "stars": 5,
+  "tool_desc": "Estimating the regulatory potential of DNA methylation in gene transcription.\n\nAssessing the regulatory potential of DNA methylation regions"
+ },
+ "micsa": {
+  "accepted": false,
+  "name": "MICSA",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "MISIM: A Neural Code Semantics Similarity System Using the Context-Aware Semantics Structure",
+  "slug": "nirhasabnis/MICSAS",
+  "source": "github-search",
+  "stars": 2,
+  "tool_desc": "Combines positional information with information on motif occurrences to better predict binding sites of transcription factors (TFs)"
+ },
+ "mirvestigator": {
+  "accepted": false,
   "name": "miRvestigator",
-  "reason": "name match + 3 shared terms (identify, mirna, motif)",
+  "reason": "name matches but only 1 shared terms (identify)",
   "repo_desc": "Identify miRNA that binds to a PSSM motif from 3' UTR.",
   "slug": "cplaisier/miRvestigator",
   "source": "homepage",
@@ -1280,9 +1680,9 @@
   "tool_desc": "miRvestigator is a web based tool to identify miRNAs mediating co-regulation of gene expression patterns observed in transcriptome profilng "
  },
  "mixchip": {
-  "accepted": true,
+  "accepted": false,
   "name": "MixChIP",
-  "reason": "4 shared terms (data, probabilistic, seq, sequencing)",
+  "reason": "no name match and only 2 shared terms (probabilistic, sequencing)",
   "repo_desc": "",
   "slug": "malonzm1/LuxHMM",
   "source": "homepage",
@@ -1299,6 +1699,26 @@
   "stars": 3,
   "tool_desc": "Standard and Generalized McDonald-Kreitman Test (MKT) is a web tool for the molecular level detection of signatures of natural selection."
  },
+ "moan": {
+  "accepted": false,
+  "name": "MoAn",
+  "reason": "no name match and only 0 shared terms ()",
+  "repo_desc": "X\u5b89\u871c\u7f50\u7528\u7684\u4e00\u4e9b\u5b58\u5728JSonp\u52ab\u6301\u7684API",
+  "slug": "NS-Sp4ce/MoAn_Honey_Pot_Urls",
+  "source": "github-search",
+  "stars": 92,
+  "tool_desc": "Discriminative pattern finder capable of using a very large negative set to greatly improve its predictive power. It is capable of handling "
+ },
+ "mochiview": {
+  "accepted": false,
+  "name": "MochiView",
+  "reason": "no name match and only 0 shared terms ()",
+  "repo_desc": "Python script to convert MochiView annotation file to GFF3 format",
+  "slug": "tdseher/mochiview2gff",
+  "source": "github-search",
+  "stars": 0,
+  "tool_desc": "Hybrid genome browser and motif visualization/analysis/management desktop software."
+ },
  "modalyser": {
   "accepted": false,
   "name": "MODalyseR",
@@ -1308,6 +1728,46 @@
   "source": "homepage",
   "stars": 45557,
   "tool_desc": "MODalyseR is a software for identifying disease module regulators and reducing modules to the most disease associated genes."
+ },
+ "mosdi": {
+  "accepted": false,
+  "name": "MoSDi",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "Config files for my GitHub profile.",
+  "slug": "MOSDIN1/MOSDIN1",
+  "source": "github-search",
+  "stars": 0,
+  "tool_desc": "Contains a lot of sequence analysis algorithms, including methods for motif statistics, exact motif discovery, analysis of pattern matching "
+ },
+ "motifcatcher": {
+  "accepted": false,
+  "name": "MotifCatcher",
+  "reason": "name matches but only 1 shared terms (matlab)",
+  "repo_desc": "Java update of old MATLAB package for motif finding in ChIP-seq datasets",
+  "slug": "cacampbell/motifcatcher",
+  "source": "github-search",
+  "stars": 0,
+  "tool_desc": "a MATLAB GUI platform for determination and evaluation of biologically significant motifs"
+ },
+ "motifrg": {
+  "accepted": false,
+  "name": "motifRG",
+  "reason": "name matches but only 1 shared terms (motif)",
+  "repo_desc": "Motif-aware Riemannian Graph Neural Network with Generative-Contrastive Learning",
+  "slug": "RiemannGraph/MotifRGC",
+  "source": "github-search",
+  "stars": 19,
+  "tool_desc": "Tools for discriminative motif discovery using regression methods."
+ },
+ "motiv": {
+  "accepted": false,
+  "name": "MotIV",
+  "reason": "no name match and only 0 shared terms ()",
+  "repo_desc": "An API Gateway written in Go",
+  "slug": "motiv-labs/janus",
+  "source": "github-search",
+  "stars": 2841,
+  "tool_desc": "This package makes use of STAMP for comparing a set of motifs to a given database (e.g. JASPAR). It can also be used to visualize motifs, mo"
  },
  "mpralib": {
   "accepted": false,
@@ -1349,6 +1809,16 @@
   "stars": 4,
   "tool_desc": "Multi-branch Convolutional Neural Network for Identification of Small Non-coding RNA genomic loci.\n\nMuStARD - autoMated SmAll Rna Detection."
  },
+ "nebula": {
+  "accepted": false,
+  "name": "Nebula",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "",
+  "slug": "lhe17/nebula",
+  "source": "cran",
+  "stars": 61,
+  "tool_desc": "Web service powered by Galaxy which allows users (Bioinformaticians as far as Biologists) to analyze their ChIP-seq data."
+ },
  "netview": {
   "accepted": false,
   "name": "Netview",
@@ -1358,6 +1828,16 @@
   "source": "pypi",
   "stars": 1,
   "tool_desc": "Free web tool that allow end users to explore the human and mouse gene regulatory networks. Users can query the system by providing a gene i"
+ },
+ "netzoor": {
+  "accepted": true,
+  "name": "netZooR",
+  "reason": "name match + 5 shared terms (biology, gene, network, netzoor)",
+  "repo_desc": "netZooR is a network biology package implemented in R.",
+  "slug": "netZoo/netZooR",
+  "source": "bioconductor",
+  "stars": 120,
+  "tool_desc": "Predicting genotype-specific gene regulatory networks.\n\nnetZooR netZooPy netZooM netZooC.\n\nnetZoo{R,Py,M,C} is a network biology package for"
  },
  "niacs": {
   "accepted": false,
@@ -1372,7 +1852,7 @@
  "nimbus": {
   "accepted": true,
   "name": "NIMBus",
-  "reason": "name match + 6 shared terms (analysis, mutation, negative, regions)",
+  "reason": "name match + 5 shared terms (analysis, mutation, negative, regions)",
   "repo_desc": "",
   "slug": "gersteinlab/nimbus",
   "source": "homepage",
@@ -1460,9 +1940,9 @@
   "tool_desc": "Software of Peak quantification using Statistical Comparative ANalysis."
  },
  "panda": {
-  "accepted": true,
+  "accepted": false,
   "name": "PANDA",
-  "reason": "name match + 3 shared terms (data, networks, passing)",
+  "reason": "name matches but only 1 shared terms (passing)",
   "repo_desc": "Python implementation of PANDA (Passing Attributes between Networks for Data Assimilation)",
   "slug": "davidvi/pypanda",
   "source": "homepage",
@@ -1552,7 +2032,7 @@
  "phantompeakqualtools": {
   "accepted": true,
   "name": "phantompeakqualtools",
-  "reason": "name match + 24 shared terms (also, assays, characteristic, chip)",
+  "reason": "name match + 11 shared terms (chip, computes, data, dnase)",
   "repo_desc": "This package computes informative enrichment and quality measures for ChIP-seq/DNase-seq/FAIRE-seq/MNase-seq data. It can also be used to ob",
   "slug": "kundajelab/phantompeakqualtools",
   "source": "bioconda",
@@ -1599,6 +2079,16 @@
   "stars": 5,
   "tool_desc": "POBO is a tool to summarize, verify and screen predetermined cis-element motifs from a set of sequences. POBO reports the results in as unde"
  },
+ "polygraph": {
+  "accepted": true,
+  "name": "Polygraph",
+  "reason": "name match + 3 shared terms (elements, polygraph, regulatory)",
+  "repo_desc": "Polygraph evaluates and compares groups of nucleic acid sequences based on their sequence and functional content for effective design of reg",
+  "slug": "Genentech/polygraph",
+  "source": "github-search",
+  "stars": 40,
+  "tool_desc": "Polygraph is a Python framework for systematically assessing synthetic regulatory DNA elements, based on features like diversity, motif comp"
+ },
  "pombase_motif_search": {
   "accepted": false,
   "name": "PomBase Motif search",
@@ -1642,7 +2132,7 @@
  "poxo": {
   "accepted": false,
   "name": "POXO",
-  "reason": "no name match and only 1 shared terms (poxo)",
+  "reason": "no name match and only 0 shared terms ()",
   "repo_desc": "Small and lazy panda",
   "slug": "sashakile/poco",
   "source": "pypi",
@@ -1679,6 +2169,56 @@
   "stars": 333,
   "tool_desc": "Predict regulatory cis-acting elements through DNA sequences. This tool aimed at advanced mining of specific biological data: sequence data "
  },
+ "primirtss": {
+  "accepted": true,
+  "name": "primirTSS",
+  "reason": "name match + 9 shared terms (cell, identifying, mirna, pri)",
+  "repo_desc": "",
+  "slug": "ipumin/primirTSS",
+  "source": "bioconductor",
+  "stars": 0,
+  "tool_desc": "an R package for identifying cell-specific microRNA transcription start sites.\n\nPrediction of pri-miRNA Transcription Start Site.\n\nA fast, c"
+ },
+ "profilescoredist": {
+  "accepted": false,
+  "name": "profileScoreDist",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "This is a read-only mirror of the git repos at https://bioconductor.org",
+  "slug": "bioc/profileScoreDist",
+  "source": "github-search",
+  "stars": 0,
+  "tool_desc": "Regularization and score distributions for position count matrices."
+ },
+ "protomata": {
+  "accepted": false,
+  "name": "Protomata",
+  "reason": "name matches but only 1 shared terms (protein)",
+  "repo_desc": "experiments towards self-organizing differentiable system for protein folding and simulations",
+  "slug": "Klahadore/protomata",
+  "source": "github-search",
+  "stars": 0,
+  "tool_desc": "Motif search and discovery in protein sequences."
+ },
+ "pscanchip": {
+  "accepted": true,
+  "name": "PscanChIP",
+  "reason": "13 shared terms (chip, collection, derived, descriptors)",
+  "repo_desc": "",
+  "slug": "martinaalvera/pscanchipRepo",
+  "source": "github-search",
+  "stars": 0,
+  "tool_desc": "Web server that, starting from a collection of genomic regions derived from a ChIP-Seq experiment, scans them using motif descriptors like J"
+ },
+ "pwmenrich": {
+  "accepted": false,
+  "name": "PWMEnrich",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "",
+  "slug": "bioconductor-source/PWMEnrich",
+  "source": "github-search",
+  "stars": 0,
+  "tool_desc": "A toolkit of high-level functions for DNA motif scanning and enrichment analysis built upon Biostrings. The main functionality is PWM enrich"
+ },
  "pwmscan": {
   "accepted": false,
   "name": "PWMScan",
@@ -1692,7 +2232,7 @@
  "pyprobound": {
   "accepted": true,
   "name": "PyProBound",
-  "reason": "name match + 4 shared terms (affinity, binding, data, pyprobound)",
+  "reason": "name match + 3 shared terms (affinity, binding, pyprobound)",
   "repo_desc": "",
   "slug": "BussemakerLab/PyProBound",
   "source": "homepage",
@@ -1740,9 +2280,9 @@
   "tool_desc": "racoon_clip is a pipeline for analyzing iCLIP and eCLIP data to extract RNA binding signal at single-nucleotide resolution. It is a command-"
  },
  "reactr": {
-  "accepted": true,
+  "accepted": false,
   "name": "REACTR",
-  "reason": "name match + 2 shared terms (analysis, lab)",
+  "reason": "name matches but only 0 shared terms ()",
   "repo_desc": "reactrv1.0 is a modular bioinformatics pipeline that automates exploration and analysis of genes, in addition to integrating wet-lab applica",
   "slug": "natlee-the-anteel/reactrv1.0",
   "source": "homepage",
@@ -1762,7 +2302,7 @@
  "readretro_web": {
   "accepted": true,
   "name": "READRetro",
-  "reason": "name match + 5 shared terms (biosynthesis, natural, product, readretro)",
+  "reason": "name match + 4 shared terms (biosynthesis, natural, product, readretro)",
   "repo_desc": "Official code repository for the paper READRetro: Natural Product Biosynthesis Planning with Retrieval-Augmented Dual-View Retrosynthesis",
   "slug": "SeulLee05/READRetro",
   "source": "pypi",
@@ -1789,6 +2329,16 @@
   "stars": 183,
   "tool_desc": "Uses a motif-based regression method for the identification of TFBS (transcription factor binding sites) from microarray data in yeast, worm"
  },
+ "regcnn": {
+  "accepted": false,
+  "name": "regCNN",
+  "reason": "no name match and only 0 shared terms ()",
+  "repo_desc": "Modify the ReGCNN from the original authors of Drivernet, to predict pressure distribution and encode/embed geometry for downstream tasks.  ",
+  "slug": "shinjan025/Pressure_predictor_ReGCNN_Drivernet",
+  "source": "github-search",
+  "stars": 0,
+  "tool_desc": "Identifying Drosophila genome-wide cis-regulatory modules via integrating the local patterns between epigenetic marks and TF binding motifs"
+ },
  "regulus": {
   "accepted": false,
   "name": "Regulus",
@@ -1799,15 +2349,45 @@
   "stars": 2245,
   "tool_desc": "Transcriptional regulatory networks inference tool based on Semantic Web technologies."
  },
+ "renco": {
+  "accepted": false,
+  "name": "RENCO",
+  "reason": "no name match and only 0 shared terms ()",
+  "repo_desc": "A Python platform for Structural Bioinformatics ",
+  "slug": "graik/biskit",
+  "source": "homepage",
+  "stars": 58,
+  "tool_desc": "A C++ based software for automatic generation of ordinary differential equations for gene and protein expression dynamics in artificial regu"
+ },
+ "rgadem": {
+  "accepted": false,
+  "name": "rGADEM",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "A sample project for RobotGaiaAnt",
+  "slug": "kyoji2/RGADemo",
+  "source": "github-search",
+  "stars": 2,
+  "tool_desc": "Efficient de novo motif discovery tool for large-scale genomic sequence data. It is an open-source R package, which is based on the GADEM so"
+ },
  "rna-targeting": {
-  "accepted": true,
+  "accepted": false,
   "name": "RNA-targeting",
-  "reason": "name match + 3 shared terms (custom, design, guide)",
+  "reason": "no name match and only 2 shared terms (custom, guide)",
   "repo_desc": "source code of the custom page for the RNA targeting website - Cas13d guide design",
   "slug": "ArcInstitute/RNAtargeting_web_custom",
   "source": "homepage",
   "stars": 4,
   "tool_desc": "Here, we have predicted CasRx guide efficiency for all human and mouse RefSeq genes.\nWe have also enabled custom sequence input for CasRx gu"
+ },
+ "rpmcmc": {
+  "accepted": false,
+  "name": "RPMCMC",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "",
+  "slug": "jbriddy/rpmcmc",
+  "source": "github-search",
+  "stars": 0,
+  "tool_desc": "A parallel MCMC algorithm for discovering diverse motifs from large sequence sets."
  },
  "rseg_chipseq": {
   "accepted": true,
@@ -1850,19 +2430,29 @@
   "tool_desc": "An online service for somatic binding sequence annotation."
  },
  "scATAC-seq": {
-  "accepted": true,
+  "accepted": false,
   "name": "scATAC-seq",
-  "reason": "4 shared terms (atac, encode, pipeline, seq)",
+  "reason": "no name match and only 2 shared terms (atac, seq)",
   "repo_desc": "ENCODE ATAC-seq pipeline",
   "slug": "ENCODE-DCC/atac-seq-pipeline",
   "source": "homepage",
   "stars": 456,
   "tool_desc": "Assessment of computational methods for the analysis of single-cell ATAC-seq data.\n\nATAC-seq Data Standards and Prototype Processing Pipelin"
  },
+ "scan_db": {
+  "accepted": true,
+  "name": "SCAN",
+  "reason": "name match + 3 shared terms (data, scan, single)",
+  "repo_desc": "Development version of scan: Single-Case Data Analyses for Single and Multiple Baseline Designs",
+  "slug": "jazznbass/scan",
+  "source": "cran",
+  "stars": 6,
+  "tool_desc": "SCAN is a neural database that combines single cell transcriptome and spatial transcriptome data."
+ },
  "scatanno": {
   "accepted": true,
   "name": "scATAnno",
-  "reason": "name match + 9 shared terms (annotation, atac, automatically, cell)",
+  "reason": "8 shared terms (atac, automatically, cell, data)",
   "repo_desc": "",
   "slug": "aj088/scATAnno-main",
   "source": "pypi",
@@ -1882,7 +2472,7 @@
  "scorpion": {
   "accepted": true,
   "name": "SCORPION",
-  "reason": "name match + 6 shared terms (cell, gene, networks, population)",
+  "reason": "name match + 5 shared terms (cell, gene, networks, regulatory)",
   "repo_desc": "Single Cell Oriented Reconstruction of PANDA-based Individually Optimized Networks",
   "slug": "kuijjerlab/SCORPION",
   "source": "homepage",
@@ -1912,7 +2502,7 @@
  "segtools": {
   "accepted": true,
   "name": "Segtools",
-  "reason": "name match + 4 shared terms (analysis, exploratory, genomic, segmentations)",
+  "reason": "name match + 3 shared terms (analysis, genomic, segmentations)",
   "repo_desc": "Package for analysis of genomic segmentations.",
   "slug": "hoffmangroup/segtools",
   "source": "pypi",
@@ -1922,12 +2512,42 @@
  "segway": {
   "accepted": true,
   "name": "Segway",
-  "reason": "name match + 3 shared terms (data, genomic, genomics)",
+  "reason": "name match + 2 shared terms (data, genomics)",
   "repo_desc": "Application for semi-automated genomic annotation.",
   "slug": "hoffmangroup/segway",
   "source": "bioconda",
   "stars": 19,
   "tool_desc": "Novel method for analyzing multiple tracks of functional genomics data which uses a dynamic Bayesian network (DBN) model, which enables it t"
+ },
+ "selex": {
+  "accepted": false,
+  "name": "SELEX",
+  "reason": "name matches but only 2 shared terms (data, selex)",
+  "repo_desc": "",
+  "slug": "ren-lab/snp-selex",
+  "source": "github-search",
+  "stars": 16,
+  "tool_desc": "Tools for quantifying DNA binding specificities based on SELEX-seq data."
+ },
+ "semanticcs": {
+  "accepted": false,
+  "name": "SemanticCS",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "",
+  "slug": "feature-flow-io/semanticcss",
+  "source": "github-search",
+  "stars": 0,
+  "tool_desc": "Learning useful representations of DNA sequences from ChIP-seq datasets for exploring transcription factor binding specificities.\n\nSemanticC"
+ },
+ "seme": {
+  "accepted": false,
+  "name": "SEME",
+  "reason": "no name match and only 0 shared terms ()",
+  "repo_desc": "the CS missing semester Chinese version",
+  "slug": "missing-semester-cn/missing-semester-cn.github.io",
+  "source": "github-search",
+  "stars": 7354,
+  "tool_desc": "A de novo motif discovery algorithm \u00a0which uses pure probabilistic mixture model to model the motif\u2019s binding features and uses expectation "
  },
  "seqbox": {
   "accepted": false,
@@ -1938,6 +2558,16 @@
   "source": "pypi",
   "stars": 0,
   "tool_desc": "Cheap, efficient and reproducible RNAseq/ChIPseq hardware/software solution based on NUC6I7KYK mini-PC (an Intel consumer game computer with"
+ },
+ "seqminer": {
+  "accepted": false,
+  "name": "seqMINER",
+  "reason": "name matches but only 1 shared terms (data)",
+  "repo_desc": "Query sequence data (VCF/BCF1/BCF2, Tabix, BGEN, PLINK) in R",
+  "slug": "zhanxw/seqminer",
+  "source": "cran",
+  "stars": 33,
+  "tool_desc": "An integrated platform for ChIP-Seq data interpretation. SeqMINER allows comparison and integration of multiple ChIP-seq datasets and extrac"
  },
  "seqsim": {
   "accepted": false,
@@ -1969,6 +2599,16 @@
   "stars": 8,
   "tool_desc": "sincei is a command-line toolkit for exploring single-cell epigenomic data directly from aligned reads. It provides a user-friendly interfac"
  },
+ "sitar": {
+  "accepted": false,
+  "name": "SiTaR",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "Growth curve analysis",
+  "slug": "statist7/sitar",
+  "source": "cran",
+  "stars": 14,
+  "tool_desc": "Novel tool for transcription factor binding site prediction."
+ },
  "slncky": {
   "accepted": true,
   "name": "slncky",
@@ -1992,12 +2632,22 @@
  "snapper": {
   "accepted": false,
   "name": "Snapper",
-  "reason": "name matches but only 0 shared terms ()",
+  "reason": "no name match and only 0 shared terms ()",
   "repo_desc": "Readthedocs manual for Snapper",
   "slug": "DNKonanov/snapper-man-test",
   "source": "homepage",
   "stars": 1,
   "tool_desc": "High-sensitive algorithm to detect methylation motifs based on Oxford Nanopore reads."
+ },
+ "snowprint": {
+  "accepted": false,
+  "name": "Snowprint-UI",
+  "reason": "name matches but only 1 shared terms (snowprint)",
+  "repo_desc": "",
+  "slug": "simonsnitz/snowprint-ui",
+  "source": "github-search",
+  "stars": 1,
+  "tool_desc": "Snowprint-UI is a bioinformatics tool for predicting DNA-binding sequences of transcription factors, enabling the discovery of ligand-induci"
  },
  "spagtl": {
   "accepted": true,
@@ -2042,7 +2692,7 @@
  "ssblazer": {
   "accepted": true,
   "name": "SSBlazer",
-  "reason": "name match + 12 shared terms (break, data, deep, genome)",
+  "reason": "name match + 10 shared terms (break, deep, genome, learning)",
   "repo_desc": "SSBlazer is the first attempt to exploit the deep learning technique for SSB site prediction based on genome-wide single-strand break sequen",
   "slug": "sxu99/ssblazer",
   "source": "homepage",
@@ -2068,6 +2718,26 @@
   "source": "bioconda",
   "stars": 184,
   "tool_desc": "Bioinformatics application for researchers, who want to model the transcriptional regulation of a specific gene and predict its transcriptio"
+ },
+ "streme": {
+  "accepted": false,
+  "name": "STREME",
+  "reason": "no name match and only 1 shared terms (streme)",
+  "repo_desc": "",
+  "slug": "streme-fun/streme-frontend",
+  "source": "github-search",
+  "stars": 2,
+  "tool_desc": "STREME is accurate and versatile sequence motif discovery tool. The MEME Suite allows you to discover novel motifs in collections of unalign"
+ },
+ "swan": {
+  "accepted": false,
+  "name": "Swan",
+  "reason": "name matches but only 1 shared terms (model)",
+  "repo_desc": "\u26a1\ufe0fSwanLab - an open-source, modern-design AI training tracking and visualization tool. Supports Cloud / Self-hosted use. Integrated with PyT",
+  "slug": "SwanHubX/SwanLab",
+  "source": "github-search",
+  "stars": 4090,
+  "tool_desc": "Software to meant for genome-wide prediction of regulatory targets of a motif using a Hidden Markov Model. It differs from Stubb in that ins"
  },
  "swissregulon": {
   "accepted": false,
@@ -2109,6 +2779,16 @@
   "stars": 1,
   "tool_desc": "A software for searching transcription factor binding sites (including TATA boxes, GC boxes, CCAAT boxes, transcription start sites (TSS))."
  },
+ "tfhaz": {
+  "accepted": true,
+  "name": "TFHAZ",
+  "reason": "name match + 5 shared terms (accumulation, dna, factor, high)",
+  "repo_desc": "R package to identify Transcription Factor High Accumulation DNA Zones ",
+  "slug": "DEIB-GECO/TFHAZ",
+  "source": "github-search",
+  "stars": 0,
+  "tool_desc": "It finds trascription factor (TF) high accumulation DNA zones, i.e., regions along the genome where there is a high presence of different tr"
+ },
  "tfmotifview": {
   "accepted": false,
   "name": "TFmotifView",
@@ -2122,7 +2802,7 @@
  "tfpred": {
   "accepted": false,
   "name": "TFPred",
-  "reason": "name matches but only 1 shared terms (model)",
+  "reason": "name matches but only 0 shared terms ()",
   "repo_desc": "Use tensorflow model to run predictions with resource constraints",
   "slug": "vivekka93/tfpred",
   "source": "pypi",
@@ -2139,6 +2819,16 @@
   "stars": 721,
   "tool_desc": "A Novel Cytoscape App to Analyze Time-Series Data Using Temporal MultiLayer Networks (tMLNs).\n\nBuild, manage and visualize temporal multilay"
  },
+ "tipr": {
+  "accepted": false,
+  "name": "TIPR",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "An R package for conducting sensitivity analyses for unmeasured confounders",
+  "slug": "r-causal/tipr",
+  "source": "cran",
+  "stars": 42,
+  "tool_desc": "A sequence-based machine learning model that identifies TSSs with high accuracy and resolution for multiple spatial distribution patterns al"
+ },
  "triplexicon": {
   "accepted": false,
   "name": "TripLexicon",
@@ -2152,7 +2842,7 @@
  "tritan": {
   "accepted": true,
   "name": "TriTan",
-  "reason": "name match + 11 shared terms (analysis, cell, data, efficient)",
+  "reason": "name match + 7 shared terms (analysis, cell, data, efficient)",
   "repo_desc": "TriTan: An efficient triple non-negative matrix factorisation method for integrative analysis of single cell multi-omics data",
   "slug": "maxxxxxxxin/TriTan",
   "source": "pypi",
@@ -2160,9 +2850,9 @@
   "tool_desc": "TriTan is a tool for integrative analysis of single-cell multiomics data, implementing a highly efficient factorization algorithm to cluster"
  },
  "tssfinder": {
-  "accepted": true,
+  "accepted": false,
   "name": "TSSFinder",
-  "reason": "name match + 10 shared terms (accuracy, applications, faster, higher)",
+  "reason": "no name match and only 2 shared terms (prediction, tssfinder)",
   "repo_desc": "",
   "slug": "tssfinder/tssfinder.github.io",
   "source": "homepage",
@@ -2178,6 +2868,16 @@
   "source": "bioconda",
   "stars": 16,
   "tool_desc": "Intended for universal genomic range (e.g. peaks) annotation. Based on a configuration file, different target features can be prioritized wi"
+ },
+ "varianttools": {
+  "accepted": false,
+  "name": "VariantTools",
+  "reason": "name matches but only 1 shared terms (variants)",
+  "repo_desc": "software tool for the manipulation, annotation, selection, and analysis of variants in the context of next-gen sequencing analysis",
+  "slug": "vatlab/varianttools",
+  "source": "github-search",
+  "stars": 31,
+  "tool_desc": "Tools for detecting, filtering, calling, comparing and plotting variants."
  },
  "velorama": {
   "accepted": true,
@@ -2242,7 +2942,7 @@
  "xxmotif": {
   "accepted": true,
   "name": "XXmotif",
-  "reason": "name match + 3 shared terms (nucleotide, sequences, xxmotif)",
+  "reason": "name match + 2 shared terms (nucleotide, sequences)",
   "repo_desc": "XXmotif: eXhaustive, weight matriX-based motif discovery in nucleotide sequences",
   "slug": "soedinglab/xxmotif",
   "source": "bioconda",
