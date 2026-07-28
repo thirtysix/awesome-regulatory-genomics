@@ -275,6 +275,38 @@ what the rules admitted: 168 to 221 entries, recall 82% to **153/221 (69%)**.
       repository is `rsat-code` and its conda package is `rsat-core`, one letter
       apart and genuinely different words, so the guard correctly refuses it.
 
+## Full-bleed layout and a statistics panel, 2026-07-28
+
+- [x] The content column was capped at 1180px while the table needs ~1240px, so
+      eleven columns always scrolled sideways. The page is now full bleed and the
+      table fits unaided from about 1180px up; below that its wrapper still
+      scrolls, and the page itself never does. Prose in the footer keeps a
+      110ch measure, because full bleed is right for a table and wrong for text.
+
+- [x] A statistics panel above the table: four stat tiles (tools shown, source
+      repository, installable, dead links) and four column charts (publication
+      year, repository last updated, citations, stars). Collapsible, and it
+      **reflects the current filter**, which is the point: clicking *Peak
+      calling* and reading the year chart answers "when was this subfield
+      written, and is it still maintained".
+
+      Built to the data-viz method rather than to taste. Every chart is one
+      series, so bar length carries the magnitude and colour carries nothing;
+      shading bars darker-where-bigger would encode the same fact twice. The
+      hue is the validated series-1 blue, checked with the palette validator
+      against this site's actual surfaces (`#ffffff` and `#14171a`) in both
+      modes rather than eyeballed. Marks follow the spec: 24px cap, 4px rounded
+      data-end square at the baseline, a 2px surface gap between neighbours,
+      hairline solid gridlines at zero and the top of the scale only, one direct
+      label on the tallest column and never a number on every bar, axis text in
+      the muted ink token rather than the series colour, and a hover tooltip
+      whose hit target is the whole band rather than the mark.
+
+      No dependency and no build step, in keeping with the rest of the site: the
+      SVG is generated in the page. Charts are drawn at a measured pixel width
+      instead of being scaled by a viewBox, so a resize redraws them rather than
+      stretching the type.
+
 ## Deferred: curation depth
 
 Queued behind the block above, by decision rather than by oversight.

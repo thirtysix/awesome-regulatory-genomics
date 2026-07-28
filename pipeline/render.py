@@ -149,7 +149,11 @@ def render_readme(catalog: dict) -> str:
     A("")
     A(f"**[Browse and search all {total} tools →]({SITE})**. Filter by category, "
       "tool type, language, repository activity, and per column by name, "
-      "description, links, package availability, stars, citations and year.")
+      "description, links, package availability, stars, citations and year. "
+      "The panel above the table charts publication year, repository activity, "
+      "citations and stars **for whatever is currently filtered**, so \"when "
+      "were the peak callers written, and are they still maintained\" is one "
+      "click rather than a download.")
     A("")
     A("This list is *generated and then curated*. A reproducible pipeline harvests "
       "[bio.tools](https://bio.tools), resolves source repositories, and pulls citation "
@@ -399,28 +403,35 @@ HTML = """<!doctype html>
 :root{
   --bg:#ffffff; --fg:#1a1d21; --muted:#5c6570; --line:#e3e6ea; --accent:#1b6ac9;
   --chip:#f1f4f8; --chip-on:#1b6ac9; --chip-on-fg:#fff; --card:#fff; --warn:#a4551a;
+  /* Data marks. One hue: bar length carries magnitude, so colour is not a
+     second encoding of the same thing. Validated against this surface. */
+  --series-1:#2a78d6; --grid:#e8ebee;
 }
 @media (prefers-color-scheme:dark){
   :root{ --bg:#14171a; --fg:#e6e9ec; --muted:#98a2ad; --line:#2a2f35; --accent:#6aa9f0;
-         --chip:#21262c; --chip-on:#6aa9f0; --chip-on-fg:#101316; --card:#1a1e22; --warn:#e0a06a; }
+         --chip:#21262c; --chip-on:#6aa9f0; --chip-on-fg:#101316; --card:#1a1e22; --warn:#e0a06a;
+         --series-1:#3987e5; --grid:#262b31; }
 }
 :root[data-theme=light]{ --bg:#fff; --fg:#1a1d21; --muted:#5c6570; --line:#e3e6ea; --accent:#1b6ac9;
-  --chip:#f1f4f8; --chip-on:#1b6ac9; --chip-on-fg:#fff; --card:#fff; --warn:#a4551a; }
+  --chip:#f1f4f8; --chip-on:#1b6ac9; --chip-on-fg:#fff; --card:#fff; --warn:#a4551a;
+  --series-1:#2a78d6; --grid:#e8ebee; }
 :root[data-theme=dark]{ --bg:#14171a; --fg:#e6e9ec; --muted:#98a2ad; --line:#2a2f35; --accent:#6aa9f0;
-  --chip:#21262c; --chip-on:#6aa9f0; --chip-on-fg:#101316; --card:#1a1e22; --warn:#e0a06a; }
+  --chip:#21262c; --chip-on:#6aa9f0; --chip-on-fg:#101316; --card:#1a1e22; --warn:#e0a06a;
+  --series-1:#3987e5; --grid:#262b31; }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);
   font:15px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;}
 a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
 header{border-bottom:1px solid var(--line);padding:18px 20px;position:sticky;top:0;background:var(--bg);z-index:10}
-.wrap{max-width:1180px;margin:0 auto}
+.wrap{max-width:none;margin:0}
 h1{font-size:19px;margin:0 0 3px} h1 a{color:inherit}
 .sub{color:var(--muted);font-size:13px}
 .controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;align-items:center}
 input[type=search],select{background:var(--card);color:var(--fg);border:1px solid var(--line);
   border-radius:7px;padding:8px 11px;font:inherit;font-size:14px}
 input[type=search]{flex:1 1 300px;min-width:200px}
-main{max-width:1180px;margin:0 auto;padding:18px 20px 60px}
+main{max-width:none;margin:0;padding:18px 24px 60px}
+footer{max-width:110ch}   /* prose stays readable even when the table does not */
 .chips{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px}
 .chip{background:var(--chip);border:1px solid var(--line);border-radius:999px;
   padding:4px 11px;font-size:12.5px;cursor:pointer;user-select:none;white-space:nowrap}
@@ -428,7 +439,7 @@ main{max-width:1180px;margin:0 auto;padding:18px 20px 60px}
 .chip .n{opacity:.65;margin-left:5px;font-variant-numeric:tabular-nums}
 .count{color:var(--muted);font-size:13px;margin:0 0 10px}
 .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
-table{border-collapse:collapse;width:100%;min-width:1240px;font-size:14px}
+table{border-collapse:collapse;width:100%;min-width:1120px;font-size:14px}
 th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
 th{position:sticky;top:0;background:var(--bg);cursor:pointer;white-space:nowrap;
    font-weight:600;font-size:12.5px;letter-spacing:.02em;text-transform:uppercase;color:var(--muted)}
@@ -458,6 +469,21 @@ a.rep:hover{color:var(--accent);text-decoration:none}
 footer{color:var(--muted);font-size:12.5px;margin-top:22px;line-height:1.7}
 .theme{background:none;border:1px solid var(--line);border-radius:7px;color:var(--fg);
   padding:8px 11px;cursor:pointer;font:inherit;font-size:14px}
+.stats{margin:0 0 16px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:12px}
+.kpi{border:1px solid var(--line);border-radius:10px;padding:10px 13px;background:var(--card)}
+.kpi .k{font-size:12px;color:var(--muted)}
+.kpi .v{font-size:25px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.25}
+.kpi .s{font-size:11.5px;color:var(--muted)}
+.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}
+.chart{border:1px solid var(--line);border-radius:10px;padding:10px 12px 6px;background:var(--card)}
+.chart h3{margin:0;font-size:12.5px;font-weight:600}
+.chart p{margin:1px 0 4px;font-size:11.5px;color:var(--muted)}
+.chart svg{display:block;width:100%;height:auto}
+.chart .band:hover{fill:var(--fg);fill-opacity:.05}
+#tip{position:fixed;pointer-events:none;background:var(--card);color:var(--fg);border:1px solid var(--line);
+  border-radius:7px;padding:5px 9px;font-size:12px;box-shadow:0 2px 10px rgba(0,0,0,.16);opacity:0;
+  transition:opacity .1s;z-index:50;white-space:nowrap}
 @media (max-width:640px){ td.desc{display:none} th.desc{display:none} }
 </style>
 </head>
@@ -478,12 +504,17 @@ footer{color:var(--muted);font-size:12.5px;margin-top:22px;line-height:1.7}
         <option value="stale">Repo idle 5+ years</option>
         <option value="archived">Archived</option>
       </select>
+      <button class="theme" id="stats-toggle" type="button" aria-expanded="true">Hide stats</button>
       <button class="theme" id="theme" type="button">◐</button>
     </div>
   </div>
 </header>
 <main>
   <div class="chips" id="cats"></div>
+  <section class="stats" id="stats">
+    <div class="kpis" id="kpis"></div>
+    <div class="charts" id="charts"></div>
+  </section>
   <div class="count" id="count"></div>
   <div class="tablewrap">
     <table>
@@ -543,6 +574,7 @@ footer{color:var(--muted);font-size:12.5px;margin-top:22px;line-height:1.7}
     everywhere else that registry is used.
   </footer>
 </main>
+<div id="tip" role="status"></div>
 <script src="catalog.js"></script>
 <script>
 const CATS = __CATS__;
@@ -655,8 +687,170 @@ const reportUrl = t => REPORT + '?template=wrong-repository.yml&title='
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const catLabel = Object.fromEntries(CATS);
 
+// ---------------------------------------------------------------------------
+// Statistics panel.
+//
+// Every chart here is ONE series, so bar length carries the magnitude and the
+// colour carries nothing: shading each bar darker-where-bigger would encode the
+// same fact twice and burn the only free channel. The hue is the validated
+// series-1 blue for the surface it sits on, read from CSS so the theme toggle
+// moves it.
+//
+// The panel reflects the CURRENT FILTER, not the whole catalog, which is what
+// makes it worth having: "when were the peak callers published" is a question
+// you answer by clicking the category chip and reading the year chart.
+// ---------------------------------------------------------------------------
+let statsOpen = true;
+const tip = document.getElementById('tip');
+const showTip = (evt, html) => {
+  tip.innerHTML = html;
+  tip.style.opacity = '1';
+  const pad = 14, w = tip.offsetWidth, h = tip.offsetHeight;
+  let x = evt.clientX + pad, y = evt.clientY + pad;
+  if (x + w > innerWidth - 8) x = evt.clientX - w - pad;
+  if (y + h > innerHeight - 8) y = evt.clientY - h - pad;
+  tip.style.left = x + 'px'; tip.style.top = y + 'px';
+};
+const hideTip = () => { tip.style.opacity = '0'; };
+
+const compact = n => n >= 1000 ? (n / 1000).toFixed(n >= 10000 ? 0 : 1) + 'k'
+                               : String(n);
+
+// A column chart. bins: [{label, value, tip}]
+function columns(bins, width, height) {
+  const padL = 30, padR = 6, padT = 12, padB = 17;
+  const plotW = Math.max(40, width - padL - padR), plotH = height - padT - padB;
+  const max = Math.max(1, ...bins.map(b => b.value));
+  const band = plotW / bins.length;
+  // Cap the mark and leave the band's remainder as air; 2px of that is the
+  // surface gap that separates neighbours without drawing a stroke.
+  const barW = Math.max(2, Math.min(24, band - 2));
+  const y = v => padT + plotH - (v / max) * plotH;
+  const parts = [];
+
+  // Recessive hairline grid: only zero and the top of the scale.
+  for (const v of [0, max]) {
+    parts.push('<line x1="' + padL + '" x2="' + (padL + plotW) + '" y1="' + y(v) +
+               '" y2="' + y(v) + '" stroke="var(--grid)" stroke-width="1"/>');
+    parts.push('<text x="' + (padL - 5) + '" y="' + (y(v) + 3.5) +
+               '" text-anchor="end" font-size="9.5" fill="var(--muted)">' +
+               compact(v) + '</text>');
+  }
+
+  const peak = bins.reduce((a, b) => b.value > a.value ? b : a, bins[0]);
+  bins.forEach((b, i) => {
+    const x = padL + i * band + (band - barW) / 2;
+    const top = y(b.value), h = padT + plotH - top;
+    if (h > 0) {
+      // 4px rounded data-end, square at the baseline.
+      const r = Math.min(4, barW / 2, h);
+      parts.push('<path d="M' + x + ',' + (padT + plotH) +
+                 ' L' + x + ',' + (top + r) +
+                 ' Q' + x + ',' + top + ' ' + (x + r) + ',' + top +
+                 ' L' + (x + barW - r) + ',' + top +
+                 ' Q' + (x + barW) + ',' + top + ' ' + (x + barW) + ',' + (top + r) +
+                 ' L' + (x + barW) + ',' + (padT + plotH) + ' Z" fill="var(--series-1)"/>');
+    }
+    // One direct label, on the tallest cap only. A number on every column is
+    // noise; the axis and the tooltip carry the rest.
+    if (b === peak && b.value > 0 && barW >= 14) {
+      parts.push('<text x="' + (x + barW / 2) + '" y="' + (top - 3) +
+                 '" text-anchor="middle" font-size="9.5" font-weight="600"' +
+                 ' fill="var(--fg)">' + compact(b.value) + '</text>');
+    }
+    if (b.tick) {
+      parts.push('<text x="' + (x + barW / 2) + '" y="' + (height - 4) +
+                 '" text-anchor="middle" font-size="9.5" fill="var(--muted)">' +
+                 b.tick + '</text>');
+    }
+    // Hit target spans the whole band, not just the mark.
+    parts.push('<rect class="band" x="' + (padL + i * band) + '" y="' + padT +
+               '" width="' + band + '" height="' + plotH + '" fill="transparent"' +
+               ' data-tip="' + esc(b.tip) + '"/>');
+  });
+  return '<svg viewBox="0 0 ' + width + ' ' + height + '" width="' + width +
+         '" height="' + height + '" role="img">' + parts.join('') + '</svg>';
+}
+
+function card(title, sub, bins, width) {
+  return '<div class="chart"><h3>' + esc(title) + '</h3><p>' + esc(sub) + '</p>' +
+         columns(bins, width, 132) + '</div>';
+}
+
+const yearBins = (rows, key) => {
+  const years = rows.map(t => parseInt(t[key], 10)).filter(y => y >= 1990 && y <= 2100);
+  if (!years.length) return null;
+  const lo = Math.max(1993, Math.min(...years)), hi = Math.max(...years);
+  const counts = new Map();
+  years.forEach(y => { const c = Math.max(y, lo); counts.set(c, (counts.get(c) || 0) + 1); });
+  const bins = [];
+  for (let y = lo; y <= hi; y++) {
+    const n = counts.get(y) || 0;
+    bins.push({ value: n, tick: (y % 5 === 0) ? String(y) : '',
+                tip: '<b>' + y + '</b> ' + n.toLocaleString() + ' tools' });
+  }
+  return { bins, n: years.length };
+};
+
+const LOG_BUCKETS = [[0, 0, 'none'], [1, 9, '1-9'], [10, 99, '10-99'],
+                     [100, 999, '100-999'], [1000, 9999, '1k-10k'],
+                     [10000, Infinity, '10k+']];
+const logBins = (rows, key, noun) => {
+  const vals = rows.map(t => t[key]).filter(v => v !== null && v !== undefined && v !== '');
+  if (!vals.length) return null;
+  const bins = LOG_BUCKETS.map(([lo, hi, tick]) => {
+    const n = vals.filter(v => v >= lo && v <= hi).length;
+    const range = hi === Infinity ? lo.toLocaleString() + '+'
+                : lo === hi ? String(lo) : lo.toLocaleString() + ' to ' + hi.toLocaleString();
+    return { value: n, tick,
+             tip: '<b>' + range + ' ' + noun + '</b> ' + n.toLocaleString() + ' tools' };
+  });
+  return { bins, n: vals.length };
+};
+
+function renderStats(rows) {
+  const total = rows.length;
+  const pct = n => total ? Math.round(100 * n / total) + '%' : '0%';
+  const withRepo = rows.filter(t => t.repo_url).length;
+  const install = rows.filter(t => t.n_registries).length;
+  const dead = rows.filter(t => t.homepage_status === 'dead' || t.repo_status === 'dead').length;
+  document.getElementById('kpis').innerHTML = [
+    ['Tools shown', total.toLocaleString(),
+     total === TOOLS.length ? 'the whole catalog' : 'of ' + TOOLS.length.toLocaleString() + ' total'],
+    ['Source repository', withRepo.toLocaleString(), pct(withRepo) + ' of these'],
+    ['Installable package', install.toLocaleString(), pct(install) + ' of these'],
+    ['Links known dead', dead.toLocaleString(), dead ? 'struck through below' : 'none in this view'],
+  ].map(([k, v, sfx]) => '<div class="kpi"><div class="k">' + k + '</div><div class="v">' +
+      v + '</div><div class="s">' + sfx + '</div></div>').join('');
+
+  const box = document.getElementById('charts');
+  // Measure, then draw at that size, so the text is never scaled by a viewBox.
+  const cols = Math.max(1, Math.floor((box.clientWidth + 10) / 290));
+  const w = Math.max(240, Math.floor((box.clientWidth - 10 * (cols - 1)) / cols) - 26);
+
+  const pub = yearBins(rows, 'year');
+  const push = yearBins(rows.map(t => ({ y: (t.repo_pushed || '').slice(0, 4) })), 'y');
+  const cites = logBins(rows, 'citations', 'citations');
+  const stars = logBins(rows, 'repo_stars', 'stars');
+  const out = [];
+  if (pub) out.push(card('Tools by publication year',
+      pub.n.toLocaleString() + ' with a known year', pub.bins, w));
+  if (push) out.push(card('Repository last updated',
+      push.n.toLocaleString() + ' with a live repository', push.bins, w));
+  if (cites) out.push(card('Citations of the primary paper',
+      cites.n.toLocaleString() + ' with a count', cites.bins, w));
+  if (stars) out.push(card('GitHub stars',
+      stars.n.toLocaleString() + ' with a repository', stars.bins, w));
+  box.innerHTML = out.join('');
+  box.querySelectorAll('[data-tip]').forEach(el => {
+    el.addEventListener('mousemove', e => showTip(e, el.dataset.tip));
+    el.addEventListener('mouseleave', hideTip);
+  });
+}
+
 function render(){
   const rows = TOOLS.filter(matches).sort(cmp);
+  if (statsOpen) renderStats(rows);
   $('count').textContent = rows.length + ' of ' + TOOLS.length + ' tools' +
     (state.cats.size ? ' · ' + [...state.cats].map(c=>catLabel[c]).join(', ') : '');
   $('rows').innerHTML = rows.map(t => {
@@ -750,6 +944,23 @@ document.querySelectorAll('th[data-k]').forEach(th => {
 });
 let timer;
 $('q').oninput = e => { clearTimeout(timer); timer = setTimeout(() => { state.q = e.target.value.trim().toLowerCase(); render(); }, 120); };
+
+// The panel is useful but the table is the point, so it can be folded away.
+const statsBtn = $('stats-toggle');
+statsBtn.onclick = () => {
+  statsOpen = !statsOpen;
+  $('stats').style.display = statsOpen ? '' : 'none';
+  statsBtn.textContent = statsOpen ? 'Hide stats' : 'Show stats';
+  statsBtn.setAttribute('aria-expanded', String(statsOpen));
+  if (statsOpen) render();
+};
+// Charts are drawn at a measured pixel width rather than scaled by a viewBox,
+// so a resize has to redraw them or the text ends up the wrong size.
+let rzTimer;
+addEventListener('resize', () => {
+  clearTimeout(rzTimer);
+  rzTimer = setTimeout(() => { if (statsOpen) renderStats(TOOLS.filter(matches)); }, 150);
+});
 ['type','lang','activity'].forEach(id => $(id).onchange = e => { state[id] = e.target.value; render(); });
 render();
 </script>

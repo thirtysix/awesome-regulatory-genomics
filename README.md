@@ -4,7 +4,7 @@
 
 A catalog of tools, databases and methods for **transcription-factor binding, sequence motifs, regulatory elements, chromatin and gene-regulatory networks**.
 
-**[Browse and search all 1951 tools →](https://thirtysix.github.io/awesome-regulatory-genomics/)**. Filter by category, tool type, language, repository activity, and per column by name, description, links, package availability, stars, citations and year.
+**[Browse and search all 1951 tools →](https://thirtysix.github.io/awesome-regulatory-genomics/)**. Filter by category, tool type, language, repository activity, and per column by name, description, links, package availability, stars, citations and year. The panel above the table charts publication year, repository activity, citations and stars **for whatever is currently filtered**, so "when were the peak callers written, and are they still maintained" is one click rather than a download.
 
 This list is *generated and then curated*. A reproducible pipeline harvests [bio.tools](https://bio.tools), resolves source repositories, and pulls citation counts and repository activity; a hand-written overlay adds tools bio.tools does not index and promotes the entries below. Everything is rebuildable with `make all`; see [How this list is built](#how-this-list-is-built).
 
