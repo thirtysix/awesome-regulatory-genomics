@@ -218,6 +218,25 @@ def canon_link(url: str) -> str:
     return re.sub(r"^https?://(www\.)?", "", (url or "").strip().lower()).rstrip("/")
 
 
+def load_install_map() -> dict[str, dict[str, str]]:
+    """Tool id -> {registry: url}, from pipeline/resolve_installs.py.
+
+    Stronger evidence than the registry sweep: these come from a badge or an
+    install command on the tool's OWN repository page, which is the project
+    stating where it ships rather than us finding a package of the same name.
+    Only routes whose package name matches the tool or its repository are
+    written; the rest stay in docs/install-review.md.
+    """
+    path = DATA / "cache" / "install_map.json"
+    if not path.exists():
+        return {}
+    try:
+        blob = json.loads(path.read_text())
+    except ValueError:
+        return {}
+    return {k: v["accepted"] for k, v in blob.items() if v.get("accepted")}
+
+
 def load_publication_map() -> dict[str, str]:
     """preprint DOI -> published DOI, from pipeline/resolve_pubs.py."""
     path = DATA / "cache" / "publication_map.json"
@@ -414,6 +433,7 @@ def main() -> None:
     pubmap = load_publication_map()
     repomap = load_repo_map()
     regmap = load_registry_map()
+    installmap = load_install_map()
     yearmap = load_year_map()
     deadpages = load_homepage_status()
     # How many catalog tools claim each publication as their primary one.
@@ -529,6 +549,9 @@ def main() -> None:
     for r in rows:
         merged = dict(r.get("_registries") or {})
         merged.update(regmap.get(r["id"], {}))
+        # Applied last, so a route the project advertises itself wins over one
+        # inferred from a name match.
+        merged.update(installmap.get(r["id"], {}))
         r["_registries"] = merged
         r["registries"] = "|".join(sorted(merged))
 

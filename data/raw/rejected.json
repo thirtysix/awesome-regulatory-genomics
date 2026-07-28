@@ -1,5 +1,5 @@
 {
- "count": 1545,
+ "count": 1487,
  "list": [
   {
    "biotoolsID": "imimic_iint",
@@ -552,7 +552,7 @@
   {
    "biotoolsID": "profeatmap",
    "name": "ProFeatMap",
-   "reason": "weak-operation, no corroboration",
+   "reason": "hard-excluded:\\bmethylated lysine|\\blysine (",
    "description": "Python based program creating highly customizable 2D maps showing elements of interests (domains, repeats, PTM sites,...) called feature as defined in Uniprot.",
    "operations": [
     "Feature extraction",
@@ -823,6 +823,17 @@
     "In vitro selection",
     "RNA binding site prediction",
     "Sequence motif recognition"
+   ]
+  },
+  {
+   "biotoolsID": "MINES",
+   "name": "MINES",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
+   "description": "Direct RNA sequencing enables m6A detection in endogenous transcript isoforms at base-specific resolution.\n\n(m)6A (I)dentification Using (N)anopor(E) (S)equencing.\n\nTombo(v1.4) Commands Prior to MINES",
+   "operations": [
+    "Post-translation modification site prediction",
+    "Sequence motif recognition",
+    "de Novo sequencing"
    ]
   },
   {
@@ -1494,6 +1505,49 @@
    ]
   },
   {
+   "biotoolsID": "porpoise",
+   "name": "Porpoise",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
+   "description": "An approach for accurate prediction of RNA pseudouridine sites.",
+   "operations": [
+    "Feature selection",
+    "trans-regulatory element prediction"
+   ]
+  },
+  {
+   "biotoolsID": "pol3base",
+   "name": "Pol3Base",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
+   "description": "A resource for decoding the interactome, expression, evolution, epitranscriptome and disease variations of Pol III-transcribed ncRNAs.",
+   "operations": [
+    "Gene expression profiling",
+    "RNA-binding protein prediction",
+    "trans-regulatory element prediction"
+   ]
+  },
+  {
+   "biotoolsID": "m5cpred-svm",
+   "name": "m5CPred-SVM",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
+   "description": "A novel method for predicting m5C sites of RNA.\n\nm5CPred-SVM: A webserver for predicting m5C sites of RNA based on SVM.\n\nA webserver for m5C Sites Identification of RNA. m5CPred-SVM was developed by u",
+   "operations": [
+    "PTM site prediction",
+    "Splice site prediction",
+    "trans-regulatory element prediction"
+   ]
+  },
+  {
+   "biotoolsID": "rnawre",
+   "name": "RNAWRE",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
+   "description": "a resource of writers, readers and erasers of RNA modifications.\n\nRNA modifications are involved in various kinds of cellular biological processes. Accumulated evidences have demonstrated that the fun",
+   "operations": [
+    "Database search",
+    "Deposition",
+    "trans-regulatory element prediction"
+   ]
+  },
+  {
    "biotoolsID": "CIRI-full",
    "name": "CIRI",
    "reason": "hard-excluded:\\bcircular RNA|\\bcircRNA",
@@ -1700,6 +1754,62 @@
    ]
   },
   {
+   "biotoolsID": "tress",
+   "name": "TRESS",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
+   "description": "TRESS is a tool for detecting m6A methylation regions from Methylated RNA Immunoprecipitation Sequencing.",
+   "operations": [
+    "Gene expression profiling",
+    "Methylation calling",
+    "Peak calling"
+   ]
+  },
+  {
+   "biotoolsID": "m6_aexpress-reader",
+   "name": "m6 Aexpress-Reader",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
+   "description": "Prediction of m6A regulated expression genes by integrating m6A sites and reader binding information in specific- context",
+   "operations": [
+    "Binding site prediction",
+    "Expression analysis",
+    "Peak calling"
+   ]
+  },
+  {
+   "biotoolsID": "m6a-atlas",
+   "name": "m6A-Atlas v2.0",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
+   "description": "Updated resources for unraveling the N6-methyladenosine (m6A) epitranscriptome among multiple species.\n\nN6-methyladenosine (m6A) is the most abundant internal chemical modification on mRNAs and lncRNA",
+   "operations": [
+    "Peak calling",
+    "Quantification",
+    "Query and retrieval",
+    "Visualisation"
+   ]
+  },
+  {
+   "biotoolsID": "m6a-express",
+   "name": "m6A-express",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
+   "description": "Uncovering complex and condition-specific m6A regulation of gene expression.",
+   "operations": [
+    "Differential gene expression profiling",
+    "PTM site prediction",
+    "Peak calling"
+   ]
+  },
+  {
+   "biotoolsID": "moaims",
+   "name": "MoAIMS",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
+   "description": "Efficient software for detection of enriched regions of MeRIP-Seq.\n\nMethylated RNA immunoprecipitation sequencing (MeRIP-Seq) is a popular sequencing method for studying RNA modifications and, in part",
+   "operations": [
+    "Enrichment analysis",
+    "Expression analysis",
+    "Peak calling"
+   ]
+  },
+  {
    "biotoolsID": "sv-hotspot",
    "name": "SV-HotSpot",
    "reason": "excluded:\\bstructural variant|\\bcopy[- ]n",
@@ -1731,6 +1841,16 @@
     "Deisotoping",
     "Peak calling",
     "Peak detection"
+   ]
+  },
+  {
+   "biotoolsID": "HLMethy",
+   "name": "HLMethy",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
+   "description": "A machine learning-based model to identify the hidden labels of m6A candidates.\n\nHLMethy: Machine learning-based model to identify the hidden labels of candidate m6A modifications",
+   "operations": [
+    "Peak calling",
+    "Standardisation and normalisation"
    ]
   },
   {
@@ -1836,15 +1956,14 @@
    ]
   },
   {
-   "biotoolsID": "nallo",
-   "name": "nallo",
-   "reason": "no-match",
-   "description": "Nallo is a bioinformatics analysis pipeline for long-reads from both PacBio and (targeted) ONT-data, focused on rare-disease. The pipeline detects a wide range of genetic variants, performs genome ass",
+   "biotoolsID": "m6areg",
+   "name": "M6AREG",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
+   "description": "A database for m6A-centered regulation of disease development and drug response.",
    "operations": [
-    "Genome assembly",
-    "Variant calling",
-    "Variant effect prediction",
-    "Variant prioritisation"
+    "Database search",
+    "Gene regulatory network prediction",
+    "Small molecule design"
    ]
   },
   {
@@ -1954,17 +2073,6 @@
     "Gene functional annotation",
     "SNP annotation",
     "Visualisation"
-   ]
-  },
-  {
-   "biotoolsID": "pathwayvote",
-   "name": "PathwayVote",
-   "reason": "no-match",
-   "description": "PathwayVote is an R package for robust pathway enrichment analysis of DNA methylation data. It utilizes a voting-based framework that integrates CpG-gene regulatory information and addresses probe bia",
-   "operations": [
-    "Aggregation",
-    "Enrichment analysis",
-    "Gene methylation analysis"
    ]
   },
   {
@@ -2097,18 +2205,6 @@
    ]
   },
   {
-   "biotoolsID": "aryana-bs",
-   "name": "ARYANA-BS",
-   "reason": "no-match",
-   "description": "ARYANA-BS is a software tool for context-aware alignment of bisulfite sequencing reads. It improves alignment accuracy by integrating DNA methylation patterns and genomic context, outperforming existi",
-   "operations": [
-    "Bisulfite mapping",
-    "Genome indexing",
-    "Local alignment",
-    "Read mapping"
-   ]
-  },
-  {
    "biotoolsID": "excludonfinder",
    "name": "ExcludonFinder",
    "reason": "no-match",
@@ -2213,7 +2309,7 @@
   {
    "biotoolsID": "msup6_supa_msup5_supc_modifications",
    "name": "SUPPA",
-   "reason": "no-match",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
    "description": "SUPPA is a tool for analyzing m5C and m6A modifications in RNA sequencing data, particularly for characterizing post-transcriptional modifications in response to Campylobacter jejuni inoculation in ch",
    "operations": [
     "Alternative splicing prediction",
@@ -2508,18 +2604,6 @@
    ]
   },
   {
-   "biotoolsID": "dmrichr",
-   "name": "DMRichR",
-   "reason": "no-match",
-   "description": "DMRichR is an R package designed for analyzing differentially methylated regions (DMRs) in epigenetic research, particularly useful for non-model organisms. It leverages existing algorithms (dmrseq, b",
-   "operations": [
-    "DMR identification",
-    "Ecological modelling",
-    "Essential dynamics",
-    "Methylation calling"
-   ]
-  },
-  {
    "biotoolsID": "ribo-seq",
    "name": "RiboSeq.Org",
    "reason": "hard-excluded:\\briboswitch|\\bribosome profil",
@@ -2680,18 +2764,6 @@
     "Expression analysis",
     "Image analysis",
     "Standardisation and normalisation"
-   ]
-  },
-  {
-   "biotoolsID": "cmirc_update_2024",
-   "name": "cmirC",
-   "reason": "no-match",
-   "description": "cmirC is a database and analysis tool providing insights into clustered miRNAs and their relationship with copy number variations and DNA methylation in cancer. It allows users to explore miRNA expres",
-   "operations": [
-    "Clustering",
-    "Genome visualisation",
-    "miRNA expression analysis",
-    "miRNA target prediction"
    ]
   },
   {
@@ -3151,17 +3223,6 @@
    ]
   },
   {
-   "biotoolsID": "ngsmethdb",
-   "name": "NGSmethDB",
-   "reason": "no-match",
-   "description": "Database that contains methylation data derived from next-generation sequencing (NGS). Two cytosine methylation contexts (CpG and CAG/CTG) are considered. Through a browser interface, the user can sea",
-   "operations": [
-    "CpG island and isochore detection",
-    "Data retrieval",
-    "Methylation analysis"
-   ]
-  },
-  {
    "biotoolsID": "webgester_db",
    "name": "WebGeSTer DB",
    "reason": "no-match",
@@ -3347,18 +3408,6 @@
    ]
   },
   {
-   "biotoolsID": "genezilla",
-   "name": "GeneZilla",
-   "reason": "no-match",
-   "description": "Highly reconfigurable gene finder written in C++. Graph-theoretic representations of the high scoring open reading frames are provided, allowing for exploration of sub-optimal gene models. It utilizes",
-   "operations": [
-    "CpG island and isochore detection",
-    "Differential gene expression analysis",
-    "Gene prediction",
-    "Genetic variation analysis"
-   ]
-  },
-  {
    "biotoolsID": "g-language_gae",
    "name": "G-language GAE",
    "reason": "no-match",
@@ -3385,15 +3434,6 @@
    "description": "A spatial stochastic simulator for chemical reaction networks. This tool is a computer program for cell-scale biochemical simulations.",
    "operations": [
     "Modelling and simulation"
-   ]
-  },
-  {
-   "biotoolsID": "aksmooth",
-   "name": "AKSmooth",
-   "reason": "no-match",
-   "description": "Statistical method that can accurately and efficiently reconstruct the single CpG methylation estimate across the entire methylome using low-coverage bisulfite sequencing (Bi-Seq) data.",
-   "operations": [
-    "CpG island and isochore detection"
    ]
   },
   {
@@ -3518,16 +3558,6 @@
     "Gene expression correlation analysis",
     "Gene expression profile clustering",
     "Gene expression profiling"
-   ]
-  },
-  {
-   "biotoolsID": "pincage",
-   "name": "PINCAGE",
-   "reason": "no-match",
-   "description": "Method that uses probabilistic integration of cancer genomics data for combined evaluation of RNA-seq gene expression and 450K array DNA methylation measurements of promoters as well as gene bodies.",
-   "operations": [
-    "Prediction and recognition",
-    "RNA-Seq analysis"
    ]
   },
   {
@@ -3741,16 +3771,6 @@
    ]
   },
   {
-   "biotoolsID": "EpiMethEx",
-   "name": "EpiMethEx",
-   "reason": "no-match",
-   "description": "R package for large-scale integrated analysis in methylation hotspots linked to genetic regulation.",
-   "operations": [
-    "Gene methylation analysis",
-    "Whole genome methylation analysis"
-   ]
-  },
-  {
    "biotoolsID": "iRNAD",
    "name": "iRNAD",
    "reason": "no-match",
@@ -3798,27 +3818,6 @@
    ]
   },
   {
-   "biotoolsID": "RRBSsim",
-   "name": "RRBSsim",
-   "reason": "no-match",
-   "description": "Reduced representation bisulfite sequencing simulator for next-generation sequencing.",
-   "operations": [
-    "Bisulfite mapping",
-    "CpG island and isochore detection",
-    "Whole genome methylation analysis"
-   ]
-  },
-  {
-   "biotoolsID": "pwrEWAS",
-   "name": "pwrEWAS",
-   "reason": "no-match",
-   "description": "Computationally efficient tool to estimate power in EWAS as a function of sample and effect size for two-group comparisons of DNAm.",
-   "operations": [
-    "CpG island and isochore detection",
-    "Methylation analysis"
-   ]
-  },
-  {
    "biotoolsID": "mist",
    "name": "MiST",
    "reason": "no-match",
@@ -3848,17 +3847,6 @@
    "operations": [
     "Essential dynamics",
     "Splitting"
-   ]
-  },
-  {
-   "biotoolsID": "MethylCal",
-   "name": "MethylCal",
-   "reason": "no-match",
-   "description": "Bayesian calibration of methylation levels | This package allows the calibration of methylation levels using MethylCal, a Bayesian calibration tool based on INLA (Rue et al., 2009). The package permit",
-   "operations": [
-    "Gene methylation analysis",
-    "Post-translation modification site prediction",
-    "Whole genome methylation analysis"
    ]
   },
   {
@@ -4093,7 +4081,7 @@
   {
    "biotoolsID": "rmdisease",
    "name": "RMDisease",
-   "reason": "no-match",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
    "description": "a database of genetic variants that affect RNA modifications, with implications for epitranscriptome pathogenesis.\n\nRMDisease a database of genetic variants that affect RNA modifications, with implica",
    "operations": [
     "PTM site prediction",
@@ -4258,18 +4246,6 @@
    ]
   },
   {
-   "biotoolsID": "quma",
-   "name": "QUMA",
-   "reason": "no-match",
-   "description": "Quantification tool for Methylation Analysis (QUMA) is a web-based bisulfite sequencing analysis tool for CpG methylation analysis. Following user input of PCR target genomic sequence and raw bisulfit",
-   "operations": [
-    "Bisulfite mapping",
-    "Gene methylation analysis",
-    "Methylation analysis",
-    "Sequence alignment analysis"
-   ]
-  },
-  {
    "biotoolsID": "rescue-ese",
    "name": "Rescue-ESE",
    "reason": "no-match",
@@ -4296,17 +4272,6 @@
     "PTM site prediction",
     "Protein sequence cleavage",
     "Spectrum calculation"
-   ]
-  },
-  {
-   "biotoolsID": "cfdnapipe",
-   "name": "cfDNApipe",
-   "reason": "no-match",
-   "description": "cfDNApipe(cell free DNA Pipeline) is an integrated pipeline for analyzing cell-free DNA WGBS/WGS data. It contains many cfDNA quality control and statistical algorithms. It is a comprehensive quality ",
-   "operations": [
-    "Copy number variation detection",
-    "Deisotoping",
-    "Sequencing quality control"
    ]
   },
   {
@@ -4357,34 +4322,12 @@
   {
    "biotoolsID": "m6add",
    "name": "M6ADD",
-   "reason": "no-match",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
    "description": "m6ADD is a database containing manually collected experimentally confirmed m6A (N6-methyladenosine)-disease data and data obtained from high-throughput disease m6A modification profiles, aimed at expl",
    "operations": [
     "Differential gene expression profiling",
     "Gene-set enrichment analysis",
     "Query and retrieval"
-   ]
-  },
-  {
-   "biotoolsID": "dsbs",
-   "name": "DSBS",
-   "reason": "no-match",
-   "description": "A new approach to decode DNA methylome and genomic variants simultaneously from double strand bisulfite sequencing.\n\nDSBS analyzer is a pipeline to analyzing Double Strand Bisulfite Sequencing data, w",
-   "operations": [
-    "Bisulfite mapping",
-    "Methylation calling",
-    "Reverse complement"
-   ]
-  },
-  {
-   "biotoolsID": "methyl-eqtl",
-   "name": "methyl-eQTL",
-   "reason": "no-match",
-   "description": "Methylation-eQTL analysis in cancer research",
-   "operations": [
-    "Expression correlation analysis",
-    "Gene methylation analysis",
-    "Regression analysis"
    ]
   },
   {
@@ -4758,18 +4701,6 @@
     "Format detection",
     "RNA-binding protein prediction",
     "Read mapping"
-   ]
-  },
-  {
-   "biotoolsID": "meconcord",
-   "name": "MeConcord",
-   "reason": "no-match",
-   "description": "A new metric to quantitatively characterize DNA methylation heterogeneity across reads and CpG sites.",
-   "operations": [
-    "Bisulfite mapping",
-    "Deisotoping",
-    "Gene methylation analysis",
-    "Quantification"
    ]
   },
   {
@@ -5262,7 +5193,7 @@
   {
    "biotoolsID": "tmodbase",
    "name": "tModBase",
-   "reason": "no-match",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
    "description": "Deciphering the landscape of tRNA modifications and their dynamic changes from epitranscriptome data.",
    "operations": [
     "Differential gene expression profiling",
@@ -5380,17 +5311,6 @@
    ]
   },
   {
-   "biotoolsID": "canmethdb",
-   "name": "CanMethdb",
-   "reason": "no-match",
-   "description": "A database for genome-wide DNA methylation annotation in cancers.",
-   "operations": [
-    "Gene expression profiling",
-    "Gene methylation analysis",
-    "Methylation calling"
-   ]
-  },
-  {
    "biotoolsID": "praline_database",
    "name": "PRALINE",
    "reason": "no-match",
@@ -5477,7 +5397,7 @@
   {
    "biotoolsID": "pseu-st",
    "name": "PseU-ST",
-   "reason": "no-match",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
    "description": "A new stacked ensemble-learning method for identifying RNA pseudouridine sites.",
    "operations": [
     "Feature extraction",
@@ -5677,7 +5597,7 @@
   {
    "biotoolsID": "cucume",
    "name": "Cucume",
-   "reason": "no-match",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
    "description": "RNA methylation database integrating systemic mRNAs signals, GWAS and QTL genetic regulation and epigenetics in different tissues of Cucurbitaceae.",
    "operations": [
     "Database search",
@@ -7720,7 +7640,7 @@
   {
    "biotoolsID": "penguin",
    "name": "Penguin",
-   "reason": "no-match",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
    "description": "Penguin is a tool for predicting pseudouridine sites in direct RNA nanopore sequencing data. The penguin tool needs as input a fast5 path and if you don't provide a sam file you have to provide a refe",
    "operations": [
     "Base-calling",
@@ -9039,19 +8959,6 @@
    ]
   },
   {
-   "biotoolsID": "methhaplo",
-   "name": "MethHaplo",
-   "reason": "no-match",
-   "description": "Combining allele-specific DNA methylation and SNPs for haplotype region identification.\n\nDNA methylation is an important epigenetic modification that plays a critical role in most eukaryotic organisms",
-   "operations": [
-    "Bisulfite mapping",
-    "Gene methylation analysis",
-    "Genotyping",
-    "Haplotype mapping",
-    "Scaffolding"
-   ]
-  },
-  {
    "biotoolsID": "meteolakes",
    "name": "Meteolakes",
    "reason": "no-match",
@@ -9063,7 +8970,7 @@
   {
    "biotoolsID": "metatx",
    "name": "MetaTX",
-   "reason": "no-match",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
    "description": "Deciphering the distribution of mRNA-related features in the presence of isoform ambiguity, with applications in epitranscriptome analysis.\n\nThe MetaTX is aimed for plotting the transcriptomic distrib",
    "operations": [
     "Essential dynamics",
@@ -9351,18 +9258,6 @@
     "Expression profile clustering",
     "Imputation",
     "RNA-Seq quantification"
-   ]
-  },
-  {
-   "biotoolsID": "cloudasm",
-   "name": "CloudASM",
-   "reason": "no-match",
-   "description": "an ultra-efficient cloud-based pipeline for mapping allele-specific DNA methylation.\n\nLast updated: July 31, 2020. Please check our preprint on biorxiv and our published paper on Bioinformatics.\n\nMed ",
-   "operations": [
-    "Genotyping",
-    "Methylation calling",
-    "Sequence trimming",
-    "Variant calling"
    ]
   },
   {
@@ -9979,7 +9874,7 @@
   {
    "biotoolsID": "alkaligrass",
    "name": "alkaligrass",
-   "reason": "excluded:\\bretroposon|\\bretrotransposon|\\",
+   "reason": "hard-excluded:\\bhigh[- ]quality .{0,25}genom",
    "description": "A high-quality genome sequence of alkaligrass provides insights into halophyte stress tolerance.\nA high-quality chromosome-level genome sequence of alkaligrass assembled from Illumina, PacBio and 10\u00d7 ",
    "operations": [
     "Expression analysis",
@@ -10246,17 +10141,6 @@
     "Differential gene expression analysis",
     "Pathway or network analysis",
     "Quantification"
-   ]
-  },
-  {
-   "biotoolsID": "DAMEfinder",
-   "name": "DAMEfinder",
-   "reason": "no-match",
-   "description": "DAMEfinder (Differential Allele-specific MEthylation finder) is an R-package that detects allele-specific methylation (ASM) in a cohort of samples, and detects regions of differential ASM within group",
-   "operations": [
-    "Bisulfite mapping",
-    "Gene methylation analysis",
-    "Genotyping"
    ]
   },
   {
@@ -11364,17 +11248,6 @@
    ]
   },
   {
-   "biotoolsID": "IWEPoissonPaper",
-   "name": "IWEPoissonPaper",
-   "reason": "no-match",
-   "description": "Modeling methylation dynamics with simultaneous changes in CpG islands.",
-   "operations": [
-    "Bisulfite mapping",
-    "CpG island and isochore detection",
-    "Post-translation modification site prediction"
-   ]
-  },
-  {
    "biotoolsID": "Meta-4mCpred",
    "name": "Meta-4mCpred",
    "reason": "no-match",
@@ -11551,15 +11424,6 @@
    ]
   },
   {
-   "biotoolsID": "drimseq",
-   "name": "DRIMSeq",
-   "reason": "no-match",
-   "description": "The package provides two frameworks. One for the differential splicing analysis between different conditions and one for the sQTL analysis. Both are based on modeling the counts of genomic features (i",
-   "operations": [
-    "Gene expression QTL analysis"
-   ]
-  },
-  {
    "biotoolsID": "miarma-seq",
    "name": "miARma-Seq",
    "reason": "hard-excluded:\\bcircular RNA|\\bcircRNA",
@@ -11576,24 +11440,6 @@
    "operations": [
     "Metabolic network modelling",
     "Query and retrieval"
-   ]
-  },
-  {
-   "biotoolsID": "methylpipe",
-   "name": "methylPipe",
-   "reason": "no-match",
-   "description": "Memory efficient analysis of base resolution DNA methylation data in both the CpG and non-CpG sequence context. Integration of DNA methylation data derived from any methodology providing base- or low-",
-   "operations": [
-    "Methylation analysis"
-   ]
-  },
-  {
-   "biotoolsID": "methylseekr",
-   "name": "MethylSeekR",
-   "reason": "no-match",
-   "description": "This is a package for the discovery of regulatory regions from Bis-seq data.",
-   "operations": [
-    "Bisulfite mapping"
    ]
   },
   {
@@ -11624,15 +11470,6 @@
    "description": "Provide a central interface to various tools for genome-scale analysis of cancer studies.",
    "operations": [
     "Genetic variation analysis"
-   ]
-  },
-  {
-   "biotoolsID": "dmchmm",
-   "name": "DMCHMM",
-   "reason": "no-match",
-   "description": "It is a novel profiling tool for identifying differentially methylated CpG sites using Hidden Markov Model in bisulfite sequencing data.",
-   "operations": [
-    "Methylation analysis"
    ]
   },
   {
@@ -11929,15 +11766,6 @@
     "Protein binding site prediction",
     "Protein-ligand docking",
     "Residue distance calculation"
-   ]
-  },
-  {
-   "biotoolsID": "methylviewer",
-   "name": "MethylViewer",
-   "reason": "no-match",
-   "description": "This tool was developed from CpGviewer such that the program can now analyse up to four different methylation sites such as CpG, GpC, CpNpG or any four user defined sites. If a non-native DNA methylas",
-   "operations": [
-    "Methylation analysis"
    ]
   },
   {
@@ -12285,7 +12113,7 @@
   {
    "biotoolsID": "psi-mouse",
    "name": "PSI-MOUSE",
-   "reason": "no-match",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
    "description": "Predicting Mouse Pseudouridine Sites From Sequence and Genome-Derived Features.\n\nPseudouridine (\u03a8) is the first discovered and the most abundant RNA modification that has been widely study in the past",
    "operations": [
     "PTM site prediction",
@@ -12455,19 +12283,6 @@
    ]
   },
   {
-   "biotoolsID": "bta7",
-   "name": "Cattle QTLdb",
-   "reason": "no-match",
-   "description": "The Cattle Quantitative Trait Locus (QTL) Database (Cattle QTLdb) curates cattle QTL and association data from published literature to facilitate gene discovery related to important cattle production ",
-   "operations": [
-    "Gene-set enrichment analysis",
-    "Genetic mapping",
-    "Genotyping",
-    "Imputation",
-    "Quantification"
-   ]
-  },
-  {
    "biotoolsID": "mixalime",
    "name": "MixALime",
    "reason": "no-match",
@@ -12629,15 +12444,6 @@
    ]
   },
   {
-   "biotoolsID": "mbamethyl",
-   "name": "MBAmethyl",
-   "reason": "no-match",
-   "description": "This package provides a function for reconstructing DNA methylation values from raw measurements. It iteratively implements the group fused lars to smooth related-by-location methylation values and th",
-   "operations": [
-    "Methylation analysis"
-   ]
-  },
-  {
    "biotoolsID": "macorrplot",
    "name": "maCorrPlot",
    "reason": "no-match",
@@ -12795,7 +12601,7 @@
   {
    "biotoolsID": "methk",
    "name": "MethK",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bmethylated lysine|\\blysine (",
    "description": "Web server for identifying methylated lysines on histones and non-histone proteins.",
    "operations": [
     "Protein post-translation modification site prediction"
@@ -13241,17 +13047,6 @@
     "Enrichment analysis",
     "Expression analysis",
     "Incident curve plotting"
-   ]
-  },
-  {
-   "biotoolsID": "eqtlmapt",
-   "name": "eQTLMAPT",
-   "reason": "no-match",
-   "description": "eQTLMAPT is a fast and accurate eQTL mediation analysis with efficient permutation testing approaches. eQTLMAPT implements fast and accurate eQTL mediation analysis with efficient permutation procedur",
-   "operations": [
-    "Essential dynamics",
-    "Gene expression QTL analysis",
-    "Genotyping"
    ]
   },
   {
@@ -13762,44 +13557,12 @@
    ]
   },
   {
-   "biotoolsID": "idna-abf",
-   "name": "iDNA-ABF",
-   "reason": "no-match",
-   "description": "Multi-scale deep biological language learning model for the interpretable prediction of DNA methylations.",
-   "operations": [
-    "Dimensionality reduction",
-    "PTM site prediction",
-    "Whole genome methylation analysis"
-   ]
-  },
-  {
-   "biotoolsID": "3dpolys-le",
-   "name": "3DPolyS-LE",
-   "reason": "no-match",
-   "description": "An accessible simulation framework to model the interplay between chromatin and loop extrusion.",
-   "operations": [
-    "Loop modelling"
-   ]
-  },
-  {
    "biotoolsID": "geneticsmakie.jl",
    "name": "GeneticsMakie.jl",
    "reason": "no-match",
    "description": "A versatile and scalable toolkit for visualizing locus-level genetic and genomic data.",
    "operations": [
     "Genome annotation",
-    "Visualisation"
-   ]
-  },
-  {
-   "biotoolsID": "modle",
-   "name": "MoDLE",
-   "reason": "no-match",
-   "description": "MoDLE is a computational tool for fast, stochastic modeling of molecular contacts from DNA loop extrusion capable of simulating realistic contact patterns genome wide in a few minutes.",
-   "operations": [
-    "Aggregation",
-    "Loop modelling",
-    "Molecular dynamics",
     "Visualisation"
    ]
   },
@@ -14102,16 +13865,6 @@
    ]
   },
   {
-   "biotoolsID": "nf-core-methylseq",
-   "name": "nf-core-methylseq",
-   "reason": "no-match",
-   "description": "nf-core/methylseq is a bioinformatics analysis pipeline used for Methylation (Bisulfite) sequencing data. It pre-processes raw data from FastQ inputs, aligns the reads and performs extensive quality-c",
-   "operations": [
-    "Bisulfite mapping",
-    "Methylation calling"
-   ]
-  },
-  {
    "biotoolsID": "Vargas",
    "name": "Vargas",
    "reason": "no-match",
@@ -14330,15 +14083,6 @@
    ]
   },
   {
-   "biotoolsID": "ramen",
-   "name": "RAMEN",
-   "reason": "no-match",
-   "description": "Regional Association of Methylome variability with the Exposome and geNome (RAMEN) is an R package whose goal is to identify genome-wide Variable Methylated Loci (VML) from microarray DNA methylation ",
-   "operations": [
-    "Regression analysis"
-   ]
-  },
-  {
    "biotoolsID": "sc-framework",
    "name": "SC-Framework",
    "reason": "no-match",
@@ -14449,19 +14193,6 @@
    ]
   },
   {
-   "biotoolsID": "scimet-cap",
-   "name": "sciMET-cap",
-   "reason": "no-match",
-   "description": "sciMET-cap is a software resource enabling high-throughput single-cell methylation analysis with a reduced sequencing burden by leveraging target enrichment. It enables cell type assignment and genome",
-   "operations": [
-    "Bisulfite mapping",
-    "DMR identification",
-    "Gene methylation analysis",
-    "Genotyping",
-    "Methylation calling"
-   ]
-  },
-  {
    "biotoolsID": "panpipes",
    "name": "Panpipes",
    "reason": "no-match",
@@ -14542,7 +14273,7 @@
   {
    "biotoolsID": "epidecoder",
    "name": "epidecodeR",
-   "reason": "no-match",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
    "description": "epidecodeR is an R package designed to analyze the impact of epigenetic and epitranscriptomic modifications on gene dysregulation. It integrates various modification data types and dysregulated gene l",
    "operations": [
     "Quantification",
@@ -14570,44 +14301,12 @@
    ]
   },
   {
-   "biotoolsID": "methylomedb",
-   "name": "MethylomeDB",
-   "reason": "no-match",
-   "description": "Database of DNA methylation profiles of human and mouse brains.",
-   "operations": [
-    "Gene methylation analysis",
-    "Methylation analysis",
-    "PCR primer design"
-   ]
-  },
-  {
    "biotoolsID": "mexpress",
    "name": "MEXPRESS",
    "reason": "no-match",
    "description": "TCGA data mining tool.",
    "operations": [
     "Database search"
-   ]
-  },
-  {
-   "biotoolsID": "bismark",
-   "name": "Bismark",
-   "reason": "no-match",
-   "description": "Bismark is a tool to map bisulfite treated sequencing reads and perform methylation calling in a quick and easy-to-use fashion.",
-   "operations": [
-    "Bisulfite mapping",
-    "Methylation analysis",
-    "Read mapping"
-   ]
-  },
-  {
-   "biotoolsID": "methylcoder",
-   "name": "MethylCoder",
-   "reason": "no-match",
-   "description": "Pipeline for fast, simple processing of BiSulfite-treated reads into methylation data. Includes scripts for analysis and visualization. In addition to a binary output, the direct output of methylcoder",
-   "operations": [
-    "Bisulfite mapping",
-    "Read mapping"
    ]
   },
   {
@@ -14632,34 +14331,6 @@
    ]
   },
   {
-   "biotoolsID": "brat",
-   "name": "BRAT",
-   "reason": "no-match",
-   "description": "accurate and efficient tool for mapping short reads obtained from the Illumina Genome Analyzer following sodium bisulfite conversion.  Both single and paired ends are supported.",
-   "operations": [
-    "Bisulfite mapping",
-    "Mapping"
-   ]
-  },
-  {
-   "biotoolsID": "kismeth",
-   "name": "Kismeth",
-   "reason": "no-match",
-   "description": "Web-based tool for bisulfite sequencing analysis",
-   "operations": [
-    "Bisulfite mapping"
-   ]
-  },
-  {
-   "biotoolsID": "malax",
-   "name": "MALAX",
-   "reason": "no-match",
-   "description": "Association testing of bisulfite sequencing methylation data via a Laplace approximation.",
-   "operations": [
-    "Methylation analysis"
-   ]
-  },
-  {
    "biotoolsID": "sinchet",
    "name": "SinCHet",
    "reason": "no-match",
@@ -14678,43 +14349,12 @@
    ]
   },
   {
-   "biotoolsID": "rnbeads",
-   "name": "RnBeads",
-   "reason": "no-match",
-   "description": "An R package for comprehensive analysis of DNA methylation data obtained with any experimental protocol that provides single-CpG resolution.",
-   "operations": [
-    "Heat map generation",
-    "Methylation analysis"
-   ]
-  },
-  {
-   "biotoolsID": "biq_analyzer",
-   "name": "BiQ Analyzer",
-   "reason": "no-match",
-   "description": "BiQ Analyzer is a software tool for visualization and quality control of DNA methylation data from bisulfite sequencing.",
-   "operations": [
-    "Bisulfite mapping",
-    "Data handling",
-    "Methylation analysis",
-    "Sequence visualisation"
-   ]
-  },
-  {
    "biotoolsID": "bed_bayesian",
    "name": "Bayesian Epiallele Detection (BED)",
    "reason": "no-match",
    "description": "Detection and comparison of epialleles within multiple tumour regions enables phylogenetic analyses, identification of differentially expressed epialleles, and provides a measure of epigenetic heterog",
    "operations": [
     "Phylogenetic tree analysis"
-   ]
-  },
-  {
-   "biotoolsID": "methmarker",
-   "name": "MethMarker",
-   "reason": "no-match",
-   "description": "Design of DNA methylation assays for COBRA, bisulfite SNuPE, bisulfite pyrosequencing, MethyLight and MSP. It also implements a systematic workflow for design, optimization and (computational) validat",
-   "operations": [
-    "Methylation analysis"
    ]
   },
   {
@@ -14739,16 +14379,6 @@
    ]
   },
   {
-   "biotoolsID": "MethBase",
-   "name": "MethBase",
-   "reason": "no-match",
-   "description": "A reference methylome database for different organisms that is created from public BS-seq datasets.",
-   "operations": [
-    "Methylation analysis",
-    "Sequence visualisation"
-   ]
-  },
-  {
    "biotoolsID": "clustermq",
    "name": "clustermq",
    "reason": "no-match",
@@ -14767,19 +14397,6 @@
    ]
   },
   {
-   "biotoolsID": "QTLbase",
-   "name": "QTLbase",
-   "reason": "no-match",
-   "description": "an integrative resource for quantitative trait loci across multiple human molecular phenotypes.\n\nQTLbase curates and compiles genome-wide QTL summary statistics for many human molecular traits across ",
-   "operations": [
-    "Data retrieval",
-    "Gene expression QTL analysis",
-    "Genetic mapping",
-    "Quantification",
-    "Visualisation"
-   ]
-  },
-  {
    "biotoolsID": "prodigy-cancer",
    "name": "Prodigy",
    "reason": "no-match",
@@ -14788,19 +14405,6 @@
     "Aggregation",
     "Pathway or network comparison",
     "Pathway or network prediction"
-   ]
-  },
-  {
-   "biotoolsID": "atmad",
-   "name": "AtMAD",
-   "reason": "no-match",
-   "description": "a public repository for large-scale measurements of genome, transcriptome, methylome, pathway and phenotype associations in Arabidopsis, designed for facilitating identification of eQTL, emQTL, pathwa",
-   "operations": [
-    "Gene expression QTL analysis",
-    "Gene methylation analysis",
-    "Genotyping",
-    "Linkage disequilibrium calculation",
-    "Quantification"
    ]
   },
   {
@@ -14847,34 +14451,12 @@
    ]
   },
   {
-   "biotoolsID": "bs_seeker",
-   "name": "BS Seeker",
-   "reason": "no-match",
-   "description": "Mapping tool for bisulfite treated reads.",
-   "operations": [
-    "Bisulfite mapping"
-   ]
-  },
-  {
    "biotoolsID": "long-read-tools",
    "name": "long-read-tools",
    "reason": "no-match",
    "description": "Long-read-tools is an interactive database of software tools for the analysis of long read sequencing data.",
    "operations": [
     "Operation"
-   ]
-  },
-  {
-   "biotoolsID": "scpower",
-   "name": "scPower",
-   "reason": "no-match",
-   "description": "scPower is a R package for design and power analysis of cell type specific interindividual DE and eQTL studies using single cell RNA-seq. It enables the user to calculate the power for a given experim",
-   "operations": [
-    "Gene expression QTL analysis",
-    "Gene expression profiling",
-    "Genotyping",
-    "Imputation",
-    "RNA-Seq quantification"
    ]
   },
   {
@@ -14886,19 +14468,6 @@
     "Genome assembly",
     "Genotyping",
     "Phasing"
-   ]
-  },
-  {
-   "biotoolsID": "scmethbank",
-   "name": "scMethBank",
-   "reason": "no-match",
-   "description": "A database of single-cell methylation maps for human and mouse.",
-   "operations": [
-    "Bisulfite mapping",
-    "Database search",
-    "Gene methylation analysis",
-    "Methylation calling",
-    "Visualisation"
    ]
   },
   {
@@ -15007,17 +14576,6 @@
     "Genetic variation analysis",
     "Quantification",
     "Validation"
-   ]
-  },
-  {
-   "biotoolsID": "dmrscaler",
-   "name": "DMRscaler",
-   "reason": "no-match",
-   "description": "A scale-aware method to identify regions of differential DNA methylation spanning basepair to multi-megabase features.",
-   "operations": [
-    "DMR identification",
-    "Gene methylation analysis",
-    "Visualisation"
    ]
   },
   {
@@ -15227,17 +14785,6 @@
    ]
   },
   {
-   "biotoolsID": "DriverDBv3",
-   "name": "DriverDBv4",
-   "reason": "no-match",
-   "description": "DriverDBv4 is a cancer omics database which incorporates somatic mutation, RNA expression, miRNA expression, methylation, copy number variation and clinical data in addition to annotation bases.",
-   "operations": [
-    "Expression analysis",
-    "Gene methylation analysis",
-    "Visualisation"
-   ]
-  },
-  {
    "biotoolsID": "motrpac",
    "name": "MoTrPAC",
    "reason": "no-match",
@@ -15247,13 +14794,6 @@
     "Data retrieval",
     "Physical mapping"
    ]
-  },
-  {
-   "biotoolsID": "x-omics_action_demonstrator_multi-omics_analysis_workflow",
-   "name": "X-omics ACTION demonstrator multi-omics analysis workflow",
-   "reason": "no-match",
-   "description": "This multi-omics data analysis workflow was developed as part of a case study investigating shared patterns between multi-omics data and childhood externalizing behaviour. The modular Nextflow workflo",
-   "operations": []
   },
   {
    "biotoolsID": "sctensor",
@@ -15316,20 +14856,9 @@
    ]
   },
   {
-   "biotoolsID": "mcsea",
-   "name": "mCSEA",
-   "reason": "no-match",
-   "description": "Identification of diferentially methylated regions (DMRs) in predefined regions (promoters, CpG islands...) from the human genome using Illumina's 450K or EPIC microarray data. Provides methods to ran",
-   "operations": [
-    "Comparison",
-    "Differentially-methylated region identification",
-    "Genome annotation"
-   ]
-  },
-  {
    "biotoolsID": "deepkme",
    "name": "DeepKme",
-   "reason": "no-match",
+   "reason": "hard-excluded:\\bmethylated lysine|\\blysine (",
    "description": "DeepKme is the predictor for lysine methylation sites in human proteome.",
    "operations": [
     "PCR primer design",
@@ -15441,39 +14970,6 @@
    ]
   },
   {
-   "biotoolsID": "comethyl",
-   "name": "Comethyl",
-   "reason": "no-match",
-   "description": "A network-based methylome approach to investigate the multivariate nature of health and disease.",
-   "operations": [
-    "Enrichment analysis",
-    "Weighted correlation network analysis"
-   ]
-  },
-  {
-   "biotoolsID": "eqtlsingle",
-   "name": "eQTLsingle",
-   "reason": "no-match",
-   "description": "eQTLsingle is an R package for discovering eQTLs only with single cell RNA-seq (scRNA-seq) data, without genomic data.\n\nDiscovering single-cell eQTLs from scRNA-seq data only.",
-   "operations": [
-    "Gene expression profiling",
-    "Genotyping",
-    "Quantification",
-    "Variant calling"
-   ]
-  },
-  {
-   "biotoolsID": "biovlab-cancer-pharmacogenomics",
-   "name": "BioVLAB-Cancer-Pharmacogenomics",
-   "reason": "no-match",
-   "description": "A system to analyze multi-omics cancer tissue intratumor heterogeneity and connect to cancer cell lines on user's Amazon cloud computing environment.",
-   "operations": [
-    "Gene expression profiling",
-    "Methylation analysis",
-    "Service discovery"
-   ]
-  },
-  {
    "biotoolsID": "deepdrk",
    "name": "DeepDRK",
    "reason": "no-match",
@@ -15507,16 +15003,6 @@
    ]
   },
   {
-   "biotoolsID": "methyldackel",
-   "name": "MethylDackel",
-   "reason": "no-match",
-   "description": "A (mostly) universal methylation extractor for BS-seq experiments.",
-   "operations": [
-    "Methylation calling",
-    "Sequence alignment conversion"
-   ]
-  },
-  {
    "biotoolsID": "integrated_collection_stem_cell_bank",
    "name": "Integrated Collection Stem Cell Bank",
    "reason": "no-match",
@@ -15529,32 +15015,12 @@
    ]
   },
   {
-   "biotoolsID": "betavaeimputation",
-   "name": "betaVAEImputation",
-   "reason": "no-match",
-   "description": "A deep learning framework based on the variational autoencoder (VAE) to impute missing values in transcriptome and methylome data analysis.",
-   "operations": [
-    "Imputation"
-   ]
-  },
-  {
    "biotoolsID": "spatialexperiment",
    "name": "SpatialExperiment",
    "reason": "no-match",
    "description": "infrastructure for spatially resolved transcriptomics data in R using Bioconductor.\n\nS4 Class for Spatial Experiments handling.\n\nDefines S4 classes for storing data for spatial experiments. Main examp",
    "operations": [
     "Data retrieval",
-    "Visualisation"
-   ]
-  },
-  {
-   "biotoolsID": "fivex",
-   "name": "FIVEx",
-   "reason": "no-match",
-   "description": "An interactive multi-tissue eQTL browser.\n\nFIVEx: Functional Interpretation and Visualization of Expression.",
-   "operations": [
-    "Gene expression QTL analysis",
-    "Genotyping",
     "Visualisation"
    ]
   },
@@ -15570,19 +15036,6 @@
    ]
   },
   {
-   "biotoolsID": "episcore",
-   "name": "EPISCORE",
-   "reason": "no-match",
-   "description": "EPISCORE is a R pacakge for cell type deconvolution of bulk tissue DNA methylomes from single-cell RNA-Seq data. It is a computational algorithm that performs virtual microdissection of bulk tissue DN",
-   "operations": [
-    "Deisotoping",
-    "Essential dynamics",
-    "Expression analysis",
-    "RNA-Seq quantification",
-    "Validation"
-   ]
-  },
-  {
    "biotoolsID": "myoexplorer",
    "name": "MyoExplorer",
    "reason": "no-match",
@@ -15591,30 +15044,6 @@
     "Differential gene expression analysis",
     "Expression analysis",
     "Genotyping"
-   ]
-  },
-  {
-   "biotoolsID": "epimolas",
-   "name": "EpiMOLAS",
-   "reason": "no-match",
-   "description": "EpiMOLAS (Epi-genoMics OnLine Analysis System) is an intuitive web-based framework for genome-wide DNA methylation analysis.",
-   "operations": [
-    "Data retrieval",
-    "Gene-set enrichment analysis",
-    "Methylation analysis"
-   ]
-  },
-  {
-   "biotoolsID": "tejaas",
-   "name": "Tejaas",
-   "reason": "no-match",
-   "description": "Reverse regression increases power for detecting trans-eQTLs.\n\nTejaas is a command line tool to find trans-eQTLs from eQTL data. It is released under the GNU General Public License version 3.\n\nTejaas ",
-   "operations": [
-    "Aggregation",
-    "Expression correlation analysis",
-    "Genotyping",
-    "Regression analysis",
-    "Sequence trimming"
    ]
   },
   {
@@ -15648,19 +15077,6 @@
     "Essential dynamics",
     "Sequence trimming",
     "Validation"
-   ]
-  },
-  {
-   "biotoolsID": "methget",
-   "name": "MethGET",
-   "reason": "no-match",
-   "description": "Beb-based bioinformatics software for correlating genome-wide DNA methylation and gene expression.\n\nA web-based bioinformatics software for correlating DNA methylation and gene expression. The web use",
-   "operations": [
-    "Bisulfite mapping",
-    "Differential gene expression analysis",
-    "Expression correlation analysis",
-    "Gene methylation analysis",
-    "Methylation calling"
    ]
   },
   {
@@ -15765,17 +15181,6 @@
    ]
   },
   {
-   "biotoolsID": "primo-multiomics",
-   "name": "Primo",
-   "reason": "no-match",
-   "description": "integration of multiple GWAS and omics QTL summary statistics for elucidation of molecular mechanisms of trait-associated SNPs and detection of pleiotropy in complex traits.\n\nPrimo: Package in R for I",
-   "operations": [
-    "Collapsing methods",
-    "Gene expression QTL analysis",
-    "SNP detection"
-   ]
-  },
-  {
    "biotoolsID": "epico-data-analysis-portal",
    "name": "epico-data-analysis-portal",
    "reason": "no-match",
@@ -15852,17 +15257,6 @@
    "operations": [
     "Pathway or network comparison",
     "Pathway or network prediction"
-   ]
-  },
-  {
-   "biotoolsID": "MCSeEd",
-   "name": "MCSeEd",
-   "reason": "no-match",
-   "description": "A reference-free, whole genome profiling system to address cytosine/adenine methylation changes.\n\nMethods for investigating DNA methylation nowadays either require a reference genome and high coverage",
-   "operations": [
-    "Genotyping",
-    "Methylation analysis",
-    "PCR primer design"
    ]
   },
   {
@@ -15945,17 +15339,6 @@
    ]
   },
   {
-   "biotoolsID": "EPIC-TABSAT",
-   "name": "EPIC-TABSAT",
-   "reason": "no-match",
-   "description": "Analysis tool for targeted bisulfite sequencing experiments and array-based methylation studies.",
-   "operations": [
-    "Bisulfite mapping",
-    "Gene methylation analysis",
-    "Whole genome methylation analysis"
-   ]
-  },
-  {
    "biotoolsID": "DecontaMiner",
    "name": "DecontaMiner",
    "reason": "no-match",
@@ -15985,15 +15368,6 @@
    "operations": [
     "Read mapping",
     "Sequence annotation"
-   ]
-  },
-  {
-   "biotoolsID": "TDimpute",
-   "name": "TDimpute",
-   "reason": "no-match",
-   "description": "TDimpute is a novel transfer learning-based neural network to impute missing gene expression data from DNA methylation data. In the tool, the pan-cancer dataset from TCGA was utilized for training a g",
-   "operations": [
-    "Imputation"
    ]
   },
   {

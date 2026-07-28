@@ -230,3 +230,74 @@ harder ChIP and ATAC resources:
   - {name: ChIPBase}
   - {name: CistromeMap}
   - {name: hmChIP}
+
+# ---------------------------------------------------------------------------
+# Third tier, added 2026-07-28 with the scope widening to DNA methylation,
+# 3D genome, histone marks, reporter assays and molecular QTL.
+#
+# Written BEFORE looking at what the widened rules admitted, so it measures the
+# new scope rather than describing it.
+# ---------------------------------------------------------------------------
+
+DNA methylation:
+  - {name: Bismark}
+  - {name: methylKit}
+  - {name: DSS}
+  - {name: BS-Seeker2, aka: [BSseeker2, "BS-Seeker"]}
+  - {name: MOABS}
+  - {name: metilene}
+  - {name: DMRcate}
+  - {name: minfi}
+  - {name: ChAMP}
+  - {name: MethylDackel}
+  - {name: RnBeads}
+  - {name: SeSAMe, aka: [sesame]}
+  - {name: MethylSeekR}
+  - {name: methylpy}
+
+3D genome and chromatin interactions:
+  - {name: Juicer, aka: [Juicebox, juicer_tools]}
+  - {name: HiC-Pro, aka: [HiCPro]}
+  - {name: cooler}
+  - {name: cooltools}
+  - {name: FAN-C, aka: [FANC]}
+  - {name: HiCExplorer, aka: [suite_hicexplorer]}
+  - {name: TADbit}
+  - {name: HiCCUPS}
+  - {name: Arrowhead}
+  - {name: mustache}
+  - {name: Peakachu}
+  - {name: FitHiC, aka: [FitHiC2]}
+  - {name: HiCRep}
+  - {name: CHESS}
+  - {name: coolpup.py, aka: [coolpuppy]}
+  - {name: MoDLE}
+
+histone modifications:
+  - {name: ChromHMM}
+  - {name: Segway}
+  - {name: ROSE, aka: [rose2]}
+  - {name: dbSUPER}
+  - {name: SEdb}
+  - {name: epilogos}
+  - {name: chromswitch}
+  - {name: EpiCSeq}
+
+reporter assays:
+  - {name: MPRAnalyze}
+  - {name: mpralm}
+  - {name: MPRAflow}
+  - {name: starrpeaker}
+  - {name: CRADLE}
+  - {name: BasicStarrSeq}
+
+molecular QTL:
+  - {name: Matrix eQTL, aka: [MatrixEQTL, "Matrix-eQTL"]}
+  - {name: FastQTL}
+  - {name: QTLtools}
+  - {name: tensorQTL}
+  - {name: RASQUAL}
+  - {name: mashr}
+  - {name: coloc}
+  - {name: SuSiE, aka: [susieR]}
+  - {name: QTLbase}

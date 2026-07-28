@@ -211,6 +211,70 @@ paths) is deliberately deferred until after it.
       a PR rather than committing. Review the `data/catalog.tsv` diff; treat a
       drop in `docs/coverage.md` recall as a blocker rather than noise.
 
+## Scope widening, 2026-07-28
+
+Batch 1 plus the QTL half of batch 2, chosen from a sizing pass over the reject
+pile and the unpromoted discovery candidates. **1,893 to 1,951 tools**, and five
+new categories.
+
+- [x] **DNA methylation** (96 tools). A genuine widening: 54 records were being
+      rejected as `no-match`, since nothing admitted them.
+- [x] **3D genome & chromatin interactions** (72). Mostly a *category* for tools
+      already present. Nothing was being rejected.
+- [x] **Histone modifications** (33) and **Reporter assays** (4). Both were
+      already in scope; they only lacked anywhere to go.
+- [x] **Molecular QTL** (19). A widening; 8 records were rejected as `no-match`.
+
+The benchmark gained a third tier for the new areas, written before looking at
+what the rules admitted: 168 to 221 entries, recall 82% to **153/221 (69%)**.
+
+**Three vocabulary traps, all found by checking what the first run admitted:**
+
+  `Hi-C` is a technology used by two fields. In the strong tier it admitted
+  "A high-quality genome sequence of alkaligrass", a genome-announcement paper
+  that used Hi-C to scaffold. It now needs a corroborating domain topic, and
+  genome-announcement papers are hard-excluded outright.
+
+  `Loop modelling`, `Gene expression QTL analysis` and `Bisulfite mapping` look
+  like decisive EDAM operations and are not. bio.tools attaches them to RNA
+  secondary structure (CRISPRtracrRNA), protein conformation (Rascore),
+  expression atlases (ZFIN, Mouse Atlas) and general commercial suites (CLC,
+  Genedata). Topic corroboration was not enough either, because the domain
+  topics are applied liberally. They admit nothing; the text patterns reach
+  every genuine case.
+
+  `methylation` spans DNA, RNA and protein. Only DNA-specific wording admits.
+  A side effect: 12 RNA-modification tools (m6A, m5C, pseudouridine) that had
+  been in the catalog left with this pass, which is a precision gain.
+
+- [ ] **Follow-up: 68 benchmark misses**, concentrated in the new areas. Juicer,
+      cooler, HiC-Pro, MPRAnalyze, coloc and SuSiE are absent from bio.tools and
+      belong in `seeds.yaml`. That is curation work.
+
+## Install routes from repository READMEs, 2026-07-28
+
+- [x] `pipeline/resolve_installs.py` (`make installs`) reads PyPI, conda, CRAN,
+      Bioconductor and Docker routes off each tool's own repository README.
+      **Install coverage 278 to 413 tools.** A badge on a project's own
+      repository is the project stating where it ships, which is far better
+      evidence than the name match `discover_registries.py` uses.
+
+      Guarded, because a README also advertises everybody else's packages:
+      a route is accepted only when the package name matches the tool or its
+      repository. 134 tools found package names that did not match and are
+      listed in `docs/install-review.md`. Galaxy repositories are the
+      systematic case, since every one says `pip install planemo`.
+
+      Parsing traps worth keeping: `pip install -r requirements.txt` names a
+      file, `pip install --editable .` and `-v` put flags in the capture group,
+      `mamba install --yes -c conda-forge -c bioconda x` needs the flag
+      consumer to refuse flag-shaped arguments, and a `ghcr.io/...` image is
+      not on Docker Hub, so formatting one as such fabricates a 404.
+
+- [ ] **Follow-up: the 134 held routes.** RSAT is the interesting one: its
+      repository is `rsat-code` and its conda package is `rsat-core`, one letter
+      apart and genuinely different words, so the guard correctly refuses it.
+
 ## Deferred: curation depth
 
 Queued behind the block above, by decision rather than by oversight.

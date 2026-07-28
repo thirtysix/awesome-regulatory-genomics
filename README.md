@@ -1,29 +1,34 @@
 # Awesome Regulatory Genomics
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Tools](https://img.shields.io/badge/tools-1893-blue)](https://thirtysix.github.io/awesome-regulatory-genomics/) [![License: CC BY 4.0](https://img.shields.io/badge/data-CC--BY--4.0-lightgrey)](LICENSE-DATA) [![Updated](https://img.shields.io/badge/updated-2026--07--28-brightgreen)](#)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Tools](https://img.shields.io/badge/tools-1951-blue)](https://thirtysix.github.io/awesome-regulatory-genomics/) [![License: CC BY 4.0](https://img.shields.io/badge/data-CC--BY--4.0-lightgrey)](LICENSE-DATA) [![Updated](https://img.shields.io/badge/updated-2026--07--28-brightgreen)](#)
 
 A catalog of tools, databases and methods for **transcription-factor binding, sequence motifs, regulatory elements, chromatin and gene-regulatory networks**.
 
-**[Browse and search all 1893 tools →](https://thirtysix.github.io/awesome-regulatory-genomics/)**. Filter by category, tool type, language, repository activity, and per column by name, description, links, package availability, stars, citations and year.
+**[Browse and search all 1951 tools →](https://thirtysix.github.io/awesome-regulatory-genomics/)**. Filter by category, tool type, language, repository activity, and per column by name, description, links, package availability, stars, citations and year.
 
 This list is *generated and then curated*. A reproducible pipeline harvests [bio.tools](https://bio.tools), resolves source repositories, and pulls citation counts and repository activity; a hand-written overlay adds tools bio.tools does not index and promotes the entries below. Everything is rebuildable with `make all`; see [How this list is built](#how-this-list-is-built).
 
 ## Contents
 
 - [Motif discovery](#motif-discovery), 186 tools
-- [Motif scanning & enrichment](#motif-scanning--enrichment), 206 tools
+- [Motif scanning & enrichment](#motif-scanning--enrichment), 205 tools
 - [Motif comparison & visualisation](#motif-comparison--visualisation), 30 tools
-- [Motif & TF databases](#motif--tf-databases), 114 tools
-- [TFBS prediction](#tfbs-prediction), 614 tools
-- [Promoter & enhancer prediction](#promoter--enhancer-prediction), 490 tools
+- [Motif & TF databases](#motif--tf-databases), 116 tools
+- [TFBS prediction](#tfbs-prediction), 641 tools
+- [Promoter & enhancer prediction](#promoter--enhancer-prediction), 486 tools
+- [Reporter assays](#reporter-assays), 4 tools
 - [Footprinting](#footprinting), 40 tools
-- [Peak calling](#peak-calling), 519 tools
+- [Peak calling](#peak-calling), 518 tools
 - [Peak annotation & differential binding](#peak-annotation--differential-binding), 87 tools
-- [ChIP/ATAC data resources](#chipatac-data-resources), 106 tools
-- [Gene regulatory networks](#gene-regulatory-networks), 453 tools
+- [ChIP/ATAC data resources](#chipatac-data-resources), 113 tools
+- [Gene regulatory networks](#gene-regulatory-networks), 452 tools
 - [Regulatory variant effect](#regulatory-variant-effect), 108 tools
-- [Nucleosome & chromatin state](#nucleosome--chromatin-state), 295 tools
-- [Single-cell regulatory genomics](#single-cell-regulatory-genomics), 132 tools
+- [Molecular QTL](#molecular-qtl), 19 tools
+- [Nucleosome & chromatin state](#nucleosome--chromatin-state), 348 tools
+- [Histone modifications](#histone-modifications), 33 tools
+- [3D genome & chromatin interactions](#3d-genome--chromatin-interactions), 71 tools
+- [DNA methylation](#dna-methylation), 96 tools
+- [Single-cell regulatory genomics](#single-cell-regulatory-genomics), 137 tools
 - [Comparative & evolutionary](#comparative--evolutionary), 35 tools
 - [How this list is built](#how-this-list-is-built)
 - [Coverage and known gaps](#coverage-and-known-gaps)
@@ -61,7 +66,7 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[motifmatchr](https://bioconductor.org/packages/motifmatchr/)**: Fast motif matching over large genomic range sets
   <sub>[code](https://github.com/GreenleafLab/motifmatchr) · [paper](https://doi.org/10.18129/B9.bioc.motifmatchr)</sub>
 
-<sub>[+ 201 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=motif-scanning)</sub>
+<sub>[+ 200 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=motif-scanning)</sub>
 
 ## Motif comparison & visualisation
 
@@ -89,7 +94,7 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[HOCOMOCO](https://hocomoco.autosome.org)**: Human and mouse motifs derived from uniform ChIP-seq reprocessing
   <sub>[bio.tools](https://bio.tools/hocomoco) · [paper](https://pubmed.ncbi.nlm.nih.gov/29140464/)</sub>
 
-<sub>[+ 108 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=motif-databases)</sub>
+<sub>[+ 110 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=motif-databases)</sub>
 
 ## TFBS prediction
 
@@ -116,7 +121,7 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[TOBIAS](https://github.com/loosolab/TOBIAS)**: Differential ATAC-seq footprinting between conditions
   <sub>[code](https://github.com/loosolab/TOBIAS) · [bio.tools](https://bio.tools/TOBIAS) · [paper](https://doi.org/10.1038/s41467-020-18035-1) · `251 stars`</sub>
 
-<sub>[+ 604 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=tfbs-prediction)</sub>
+<sub>[+ 631 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=tfbs-prediction)</sub>
 
 ## Promoter & enhancer prediction
 
@@ -131,7 +136,13 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[homer](http://homer.ucsd.edu/homer/motif/)**: Motif discovery plus peak annotation; the pragmatic first stop for ChIP-seq
   <sub>[bio.tools](https://bio.tools/homer)</sub>
 
-<sub>[+ 486 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=regulatory-elements)</sub>
+<sub>[+ 482 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=regulatory-elements)</sub>
+
+## Reporter assays
+
+*MPRA, STARR-seq and other massively parallel tests of regulatory activity.*
+
+<sub>[4 tools in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=reporter-assays)</sub>
 
 ## Footprinting
 
@@ -159,7 +170,7 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[TOBIAS](https://github.com/loosolab/TOBIAS)**: Differential ATAC-seq footprinting between conditions
   <sub>[code](https://github.com/loosolab/TOBIAS) · [bio.tools](https://bio.tools/TOBIAS) · [paper](https://doi.org/10.1038/s41467-020-18035-1) · `251 stars`</sub>
 
-<sub>[+ 515 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=peak-calling)</sub>
+<sub>[+ 514 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=peak-calling)</sub>
 
 ## Peak annotation & differential binding
 
@@ -178,7 +189,7 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[ChIP-Atlas](https://chip-atlas.org)**: Reprocessed public ChIP-seq, ATAC-seq and Bisulfite-seq across six organisms
   <sub>[code](https://github.com/inutano/chip-atlas) · [bio.tools](https://bio.tools/chip-atlas) · [paper](https://pubmed.ncbi.nlm.nih.gov/35325188/) · `84 stars`</sub>
 
-<sub>[+ 103 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=chip-resources)</sub>
+<sub>[+ 110 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=chip-resources)</sub>
 
 ## Gene regulatory networks
 
@@ -189,13 +200,19 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[SCENIC](http://scenic.aertslab.org)**: Single-cell regulatory network inference; regulons rather than raw correlations
   <sub>[code](https://github.com/aertslab/SCENIC) · [bio.tools](https://bio.tools/scenic) · [paper](https://pubmed.ncbi.nlm.nih.gov/28991892/) · `491 stars`</sub>
 
-<sub>[+ 451 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=grn-inference)</sub>
+<sub>[+ 450 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=grn-inference)</sub>
 
 ## Regulatory variant effect
 
 *Assessing the impact of sequence variants on binding and regulatory activity.*
 
 <sub>[108 tools in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=regulatory-variants)</sub>
+
+## Molecular QTL
+
+*eQTL, caQTL and related mapping of variants to regulatory phenotypes.*
+
+<sub>[19 tools in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=molecular-qtl)</sub>
 
 ## Nucleosome & chromatin state
 
@@ -204,7 +221,25 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[ReMap](https://remap.univ-amu.fr/)**: Large-scale atlas of regulatory regions from public DNA-binding experiments
   <sub>[bio.tools](https://bio.tools/inserm-remap) · [paper](https://pubmed.ncbi.nlm.nih.gov/25477382/) · `138 cites`</sub>
 
-<sub>[+ 294 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=nucleosome-chromatin)</sub>
+<sub>[+ 347 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=nucleosome-chromatin)</sub>
+
+## Histone modifications
+
+*Histone marks, super-enhancers and chromatin-state segmentation from histone data.*
+
+<sub>[33 tools in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=histone-marks)</sub>
+
+## 3D genome & chromatin interactions
+
+*Hi-C, HiChIP and ChIA-PET; loops, TADs, compartments and enhancer-promoter contacts.*
+
+<sub>[71 tools in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=chromatin-3d)</sub>
+
+## DNA methylation
+
+*Methylation calling, differential methylation and methylome resources.*
+
+<sub>[96 tools in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=dna-methylation)</sub>
 
 ## Single-cell regulatory genomics
 
@@ -215,7 +250,7 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[SCENIC](http://scenic.aertslab.org)**: Single-cell regulatory network inference; regulons rather than raw correlations
   <sub>[code](https://github.com/aertslab/SCENIC) · [bio.tools](https://bio.tools/scenic) · [paper](https://pubmed.ncbi.nlm.nih.gov/28991892/) · `491 stars`</sub>
 
-<sub>[+ 130 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=single-cell)</sub>
+<sub>[+ 135 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=single-cell)</sub>
 
 ## Comparative & evolutionary
 
@@ -269,14 +304,14 @@ Two design decisions are worth stating, because they are where most tool tables 
 
 ## Coverage and known gaps
 
-- **1893 tools**: 1764 harvested from bio.tools, 129 added by hand because bio.tools does not index them.
-- **954 (50%) have a resolvable source repository.** bio.tools rarely records one directly, so repositories are also recovered from Bioconductor, CRAN and PyPI metadata, from bioconda recipes and from links on the tool's own homepage. Every candidate is validated against the tool's description before it is used: matching on name alone resolves MEME to a meme generator and MEDUSA to a genome scaffolder that merely shares the name. Near-misses are listed in [`docs/repo-review.md`](docs/repo-review.md) rather than applied. Publication links get the same treatment in [`docs/link-check.md`](docs/link-check.md), which records every preprint upgraded to its published version and every DOI that does not resolve.
+- **1951 tools**: 1822 harvested from bio.tools, 129 added by hand because bio.tools does not index them.
+- **990 (51%) have a resolvable source repository.** bio.tools rarely records one directly, so repositories are also recovered from Bioconductor, CRAN and PyPI metadata, from bioconda recipes and from links on the tool's own homepage. Every candidate is validated against the tool's description before it is used: matching on name alone resolves MEME to a meme generator and MEDUSA to a genome scaffolder that merely shares the name. Near-misses are listed in [`docs/repo-review.md`](docs/repo-review.md) rather than applied. Publication links get the same treatment in [`docs/link-check.md`](docs/link-check.md), which records every preprint upgraded to its published version and every DOI that does not resolve.
 
-**If you maintain a tool listed here and its link is wrong, please say so.** Of the 954 links shown, 873 are recorded upstream, 31 are hand-verified and 50 are *inferred* from a homepage or a GitHub search. Inferred links are marked with a dotted underline on the [catalog site](https://thirtysix.github.io/awesome-regulatory-genomics/) and carry a one-click report button; there are [issue templates](.github/ISSUE_TEMPLATE) for a wrong repository and for a wrong category, description or scope decision. Correcting the entry at [bio.tools](https://bio.tools) instead fixes it here on the next refresh, and for every other consumer of that registry.
-- **1235 (65%) have a website of their own**, meaning a project page, web server or database front end that is not just their source repository. The rest live on a code host alone. The catalog site shows this as a sortable *Site* column, so "web-only resource" and "code, no documentation site" are both answerable questions.
-- **278 can be installed from a package registry** (Bioconductor, CRAN, PyPI, conda or Docker), shown as a sortable *Install* column. "Can I install this today?" is a more useful maintenance signal than a star count, and it is not a question bio.tools answers. A package is only linked when its description agrees with the tool's, never on a matching name: bioconda's `medusa` is a genome scaffolder, and this catalog's MEDUSA is a motif model.
-- **131 links are known to be dead** and are struck through on the catalog site rather than quietly left to disappoint. Every homepage is checked (`make check-links`), which matters because nearly half this catalog has no repository, only a homepage, and academic URLs rot. Only a 404 or 410 counts: a timeout is as often a slow institutional host as a departed one, and 429 means the server is up and busy. The full grading is in [`docs/homepage-check.md`](docs/homepage-check.md).
-- **1800 have a publication year**, recovered from OpenAlex where the registry did not record one.
+**If you maintain a tool listed here and its link is wrong, please say so.** Of the 990 links shown, 909 are recorded upstream, 31 are hand-verified and 50 are *inferred* from a homepage or a GitHub search. Inferred links are marked with a dotted underline on the [catalog site](https://thirtysix.github.io/awesome-regulatory-genomics/) and carry a one-click report button; there are [issue templates](.github/ISSUE_TEMPLATE) for a wrong repository and for a wrong category, description or scope decision. Correcting the entry at [bio.tools](https://bio.tools) instead fixes it here on the next refresh, and for every other consumer of that registry.
+- **1269 (65%) have a website of their own**, meaning a project page, web server or database front end that is not just their source repository. The rest live on a code host alone. The catalog site shows this as a sortable *Site* column, so "web-only resource" and "code, no documentation site" are both answerable questions.
+- **413 can be installed from a package registry** (Bioconductor, CRAN, PyPI, conda or Docker), shown as a sortable *Install* column. "Can I install this today?" is a more useful maintenance signal than a star count, and it is not a question bio.tools answers. A package is only linked when its description agrees with the tool's, never on a matching name: bioconda's `medusa` is a genome scaffolder, and this catalog's MEDUSA is a motif model.
+- **130 links are known to be dead** and are struck through on the catalog site rather than quietly left to disappoint. Every homepage is checked (`make check-links`), which matters because nearly half this catalog has no repository, only a homepage, and academic URLs rot. Only a 404 or 410 counts: a timeout is as often a slow institutional host as a departed one, and 429 means the server is up and busy. The full grading is in [`docs/homepage-check.md`](docs/homepage-check.md).
+- **1828 have a publication year**, recovered from OpenAlex where the registry did not record one.
 - **19 tools are featured** in the curated sections above; the rest are in the [full catalog](https://thirtysix.github.io/awesome-regulatory-genomics/).
 
 Honest limitations:

@@ -10,20 +10,25 @@ Memory notes: `[[awesome-regulatory-genomics]]`, `[[biotools-edam-annotations-un
 - **Public** at https://github.com/thirtysix/awesome-regulatory-genomics
 - **Site live** at https://thirtysix.github.io/awesome-regulatory-genomics/
 - Local path: `~/Dropbox/manuscripts/0.datasets_visualizations/002.AI_projects/awesome-regulatory-genomics`
-- **Nothing from the 2026-07-28 session is committed yet.** Working tree has
-  ~21 modified and ~10 new files. Review before pushing.
+- Commit `d9a5a8c` is pushed (tests, discovery, install column, liveness).
+  **The scope widening and the README install-route work after it are NOT
+  committed.**
 - Credentials: none in the repo. `DEEPINFRA_API_KEY` and `CONTACT_EMAIL` are
   optional, documented in `.env.example`, and `.env` is gitignored
 
 ## Headline results
 
-**1,893 tools** (1,764 from bio.tools, 129 curated seeds), up from 1,800.
-Benchmark recall **137/168 (82%)** against a deliberately harder benchmark;
-the old 89-entry one scored 100% and had stopped measuring.
+**1,951 tools**, up from 1,800 at the start of the session.
+Benchmark recall **153/221 (69%)** against a benchmark grown from 89 to 221
+entries; the original scored 100% and had stopped measuring.
 
-Per-record coverage: 950 with a repository, 1,235 with a site of their own,
-1,311 with citations, 1,800 with a year (95%), 857 with a licence, 278 with a
-package install route, 131 links known dead and struck through.
+**20 categories**, up from 15: DNA methylation (96), 3D genome (72), histone
+modifications (33), molecular QTL (19) and reporter assays (4) were added on
+2026-07-28.
+
+Per-record coverage: 990 with a repository, 1,269 with a site of their own,
+1,800+ with a year, 413 with a package install route, 130 links known dead and
+struck through.
 
 ## What changed this session
 

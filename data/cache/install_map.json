@@ -1,0 +1,7833 @@
+{
+ "3d-spagnn-e": {
+  "accepted": {},
+  "held": {},
+  "name": "3D-spaGNN-E",
+  "readme": true,
+  "slug": "coskunlab/3D-spaGNN-E"
+ },
+ "APEC": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/APEC/"
+  },
+  "held": {
+   "conda": [
+    "bioconductor-monocle"
+   ]
+  },
+  "name": "APEC",
+  "readme": true,
+  "slug": "QuKunLab/APEC"
+ },
+ "AR-Pred": {
+  "accepted": {},
+  "held": {},
+  "name": "AR-Pred",
+  "readme": true,
+  "slug": "sambitmishra0628/AR-PRED_source"
+ },
+ "AlphaGenome": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/AlphaGenome/"
+  },
+  "held": {},
+  "name": "AlphaGenome",
+  "readme": true,
+  "slug": "google-deepmind/alphagenome"
+ },
+ "Anchor_TFBS_prediction": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "ucsc-bigwigtobedgraph"
+   ],
+   "pypi": [
+    "opencv-python"
+   ]
+  },
+  "name": "Anchor",
+  "readme": true,
+  "slug": "GuanLab/Anchor"
+ },
+ "AtacWorks": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/atacworks/"
+  },
+  "held": {
+   "docker": [
+    "gpuci/clara-genomics-base"
+   ]
+  },
+  "name": "AtacWorks",
+  "readme": true,
+  "slug": "clara-genomics/AtacWorks"
+ },
+ "BINDER": {
+  "accepted": {},
+  "held": {},
+  "name": "BINDER",
+  "readme": true,
+  "slug": "ptrcksn/BINDER"
+ },
+ "BPNet": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/bpnet/"
+  },
+  "held": {
+   "conda": [
+    "bamtools",
+    "samtools"
+   ],
+   "docker": [
+    "vivekramalingam/tf-atlas"
+   ]
+  },
+  "name": "BPNet",
+  "readme": true,
+  "slug": "kundajelab/bpnet"
+ },
+ "Basenji": {
+  "accepted": {},
+  "held": {},
+  "name": "Basenji",
+  "readme": true,
+  "slug": "calico/basenji"
+ },
+ "Basset": {
+  "accepted": {
+   "docker": "https://hub.docker.com/r/lzamparo/basset"
+  },
+  "held": {},
+  "name": "Basset",
+  "readme": true,
+  "slug": "davek44/Basset"
+ },
+ "Borzoi": {
+  "accepted": {},
+  "held": {},
+  "name": "Borzoi",
+  "readme": true,
+  "slug": "calico/borzoi"
+ },
+ "C3D": {
+  "accepted": {},
+  "held": {},
+  "name": "C3D",
+  "readme": true,
+  "slug": "LupienLab/C3D"
+ },
+ "CARNIVAL": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/CARNIVAL/"
+  },
+  "held": {
+   "cran": [
+    "lpSolve"
+   ]
+  },
+  "name": "CARNIVAL",
+  "readme": true,
+  "slug": "saezlab/CARNIVAL"
+ },
+ "CHiCP": {
+  "accepted": {},
+  "held": {},
+  "name": "CHiCP",
+  "readme": true,
+  "slug": "D-I-L/django-chicp"
+ },
+ "CIE": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "org.Hs.eg.db"
+   ]
+  },
+  "name": "Causal Inference Enrichment (CIE)",
+  "readme": true,
+  "slug": "umbibio/CIE-R-Package"
+ },
+ "COAC": {
+  "accepted": {},
+  "held": {},
+  "name": "COAC",
+  "readme": true,
+  "slug": "ChengF-Lab/COAC"
+ },
+ "CREAM": {
+  "accepted": {
+   "cran": "https://cran.r-project.org/package=CREAM"
+  },
+  "held": {},
+  "name": "CREAM",
+  "readme": true,
+  "slug": "bhklab/CREAM"
+ },
+ "CRUP": {
+  "accepted": {},
+  "held": {},
+  "name": "CRUP",
+  "readme": true,
+  "slug": "VerenaHeinrich/CRUP"
+ },
+ "ChAsE_Chromatin_Analysis_and_Exploration": {
+  "accepted": {},
+  "held": {},
+  "name": "ChAsE",
+  "readme": true,
+  "slug": "hyounesy/ChAsE"
+ },
+ "ChEA3": {
+  "accepted": {},
+  "held": {},
+  "name": "ChEA3",
+  "readme": true,
+  "slug": "maayanlab/chea3web"
+ },
+ "ChIA-PET": {
+  "accepted": {},
+  "held": {
+   "cran": [
+    "grid",
+    "xtable",
+    "RCircos"
+   ]
+  },
+  "name": "ChIA-PET",
+  "readme": true,
+  "slug": "GuoliangLi-HZAU/ChIA-PET_Tool_V3"
+ },
+ "ChIPdig": {
+  "accepted": {},
+  "held": {
+   "cran": [
+    "shiny",
+    "shinyFiles",
+    "ggplot2"
+   ]
+  },
+  "name": "ChIPdig",
+  "readme": true,
+  "slug": "rmesse/ChIPdig"
+ },
+ "ChIPseqSpikeInFree": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "Rsamtools",
+    "GenomicRanges",
+    "GenomicAlignments"
+   ]
+  },
+  "name": "ChIPseqSpikeInFree",
+  "readme": true,
+  "slug": "stjude/ChIPseqSpikeInFree"
+ },
+ "ChIPulate": {
+  "accepted": {},
+  "held": {},
+  "name": "ChIPulate",
+  "readme": true,
+  "slug": "vishakad/chipulate"
+ },
+ "ChiCMaxima": {
+  "accepted": {},
+  "held": {},
+  "name": "ChiCMaxima",
+  "readme": true,
+  "slug": "yousra291987/ChiCMaxima"
+ },
+ "ChromDragoNN": {
+  "accepted": {},
+  "held": {},
+  "name": "ChromDragoNN",
+  "readme": true,
+  "slug": "kundajelab/ChromDragoNN"
+ },
+ "Chromap": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/chromap"
+  },
+  "held": {},
+  "name": "Chromap",
+  "readme": true,
+  "slug": "haowenz/chromap"
+ },
+ "ClinTAD": {
+  "accepted": {},
+  "held": {},
+  "name": "ClinTAD",
+  "readme": true,
+  "slug": "JacobSpectorMD/ClinTAD"
+ },
+ "CyGenexpi": {
+  "accepted": {},
+  "held": {},
+  "name": "CyGenexpi",
+  "readme": true,
+  "slug": "cas-bioinf/genexpi"
+ },
+ "D3GRN": {
+  "accepted": {},
+  "held": {},
+  "name": "D3GRN",
+  "readme": true,
+  "slug": "chenxofhit/D3GRN"
+ },
+ "DAMEfinder": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/DAMEfinder/"
+  },
+  "held": {},
+  "name": "DAMEfinder",
+  "readme": true,
+  "slug": "markrobinsonuzh/DAMEfinder"
+ },
+ "DAStk_-_Differential_ATAC-seq_toolkit": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/DAStk/"
+  },
+  "held": {
+   "conda": [
+    "ucsc-fetchchromsizes"
+   ]
+  },
+  "name": "DAStk - Differential ATAC-seq toolkit",
+  "readme": true,
+  "slug": "Dowell-Lab/DAStk"
+ },
+ "DEEPSEN": {
+  "accepted": {},
+  "held": {},
+  "name": "DEEPSEN",
+  "readme": true,
+  "slug": "1991Troy/DEEPSEN"
+ },
+ "DESSO": {
+  "accepted": {},
+  "held": {},
+  "name": "Deep Sequence and Shape Motif (DESSO)",
+  "readme": true,
+  "slug": "OSU-BMBL/DESSO"
+ },
+ "DIpartite": {
+  "accepted": {},
+  "held": {},
+  "name": "DIpartite",
+  "readme": true,
+  "slug": "Mohammad-Vahed/DIpartite"
+ },
+ "DNA_Rchitect": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "Sushi.html",
+    "BioNet.html"
+   ],
+   "cran": [
+    "shiny",
+    "jsonlite",
+    "DT"
+   ]
+  },
+  "name": "DNA Rchitect",
+  "readme": true,
+  "slug": "alosdiallo/DNA_Rchitect"
+ },
+ "DROPA": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "upsetplot"
+   ]
+  },
+  "name": "DROPA",
+  "readme": true,
+  "slug": "marcrusso/DROPA"
+ },
+ "DanQ": {
+  "accepted": {},
+  "held": {},
+  "name": "DanQ",
+  "readme": true,
+  "slug": "uci-cbcl/DanQ"
+ },
+ "DeepBind": {
+  "accepted": {},
+  "held": {},
+  "name": "DeepBind",
+  "readme": true,
+  "slug": "jisraeli/DeepBind"
+ },
+ "DeepCLIP": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "https",
+    "mkl-service",
+    "biopython"
+   ]
+  },
+  "name": "DeepCLIP",
+  "readme": true,
+  "slug": "deepclip/deepclip"
+ },
+ "DeepSEA": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/selene-sdk",
+   "pypi": "https://pypi.org/project/selene-sdk/"
+  },
+  "held": {},
+  "name": "DeepSEA",
+  "readme": true,
+  "slug": "FunctionLab/selene"
+ },
+ "DeepSTARR": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "deeplift"
+   ]
+  },
+  "name": "DeepSTARR",
+  "readme": true,
+  "slug": "bernardo-de-almeida/DeepSTARR"
+ },
+ "DeltaNeTS": {
+  "accepted": {},
+  "held": {},
+  "name": "DeltaNeTS+",
+  "readme": true,
+  "slug": "cabsel/deltanetsplus"
+ },
+ "Dr.seq2": {
+  "accepted": {},
+  "held": {},
+  "name": "Dr.seq2",
+  "readme": true,
+  "slug": "ChengchenZhao/DrSeq2"
+ },
+ "EPEE": {
+  "accepted": {},
+  "held": {},
+  "name": "EPEE",
+  "readme": true,
+  "slug": "Cobanoglu-Lab/EPEE"
+ },
+ "EPIGENE": {
+  "accepted": {},
+  "held": {},
+  "name": "EPIGENE",
+  "readme": true,
+  "slug": "imbbLab/EPIGENE"
+ },
+ "EPIVAN": {
+  "accepted": {},
+  "held": {},
+  "name": "EPIVAN",
+  "readme": true,
+  "slug": "hzy95/EPIVAN"
+ },
+ "Enformer": {
+  "accepted": {},
+  "held": {},
+  "name": "Enformer",
+  "readme": true,
+  "slug": "google-deepmind/deepmind-research"
+ },
+ "EpiAlign": {
+  "accepted": {},
+  "held": {},
+  "name": "EpiAlign",
+  "readme": true,
+  "slug": "zzz3639/EpiAlign"
+ },
+ "EpiAlignment": {
+  "accepted": {},
+  "held": {},
+  "name": "EpiAlignment",
+  "readme": true,
+  "slug": "Zhong-Lab-UCSD/EpiAlignment_WebApp"
+ },
+ "EpiCompare": {
+  "accepted": {},
+  "held": {},
+  "name": "EpiCompare",
+  "readme": true,
+  "slug": "hcharles14/EpiCompare"
+ },
+ "EpiMethEx": {
+  "accepted": {},
+  "held": {},
+  "name": "EpiMethEx",
+  "readme": true,
+  "slug": "giupardeb/EpiMethEx"
+ },
+ "EpiMethylTag": {
+  "accepted": {},
+  "held": {},
+  "name": "EpiMethylTag",
+  "readme": true,
+  "slug": "skoklab/EpiMethylTag"
+ },
+ "EpiSAFARI": {
+  "accepted": {},
+  "held": {},
+  "name": "EpiSAFARI",
+  "readme": true,
+  "slug": "harmancilab/EpiSAFARI"
+ },
+ "Epigenomics_Workflow_on_Galaxy_and_Jupyter": {
+  "accepted": {},
+  "held": {
+   "docker": [
+    "mpaya/epigenomics_galaxy",
+    "mpaya/epigenomics_jupyter"
+   ]
+  },
+  "name": "Epigenomics Workflow on Galaxy and Jupyter",
+  "readme": true,
+  "slug": "wilkinsonlab/epigenomics_pipeline"
+ },
+ "FIMO": {
+  "accepted": {},
+  "held": {},
+  "name": "FIMO",
+  "readme": true,
+  "slug": "cinquin/MEME"
+ },
+ "FINET": {
+  "accepted": {},
+  "held": {},
+  "name": "FINET",
+  "readme": true,
+  "slug": "anyouwang/finet"
+ },
+ "GLANET": {
+  "accepted": {},
+  "held": {},
+  "name": "GLANET",
+  "readme": true,
+  "slug": "burcakotlu/GLANET"
+ },
+ "GOPHER": {
+  "accepted": {},
+  "held": {},
+  "name": "GOPHER",
+  "readme": true,
+  "slug": "TheJacksonLaboratory/Gopher"
+ },
+ "GRAM": {
+  "accepted": {},
+  "held": {},
+  "name": "GRAM",
+  "readme": true,
+  "slug": "gersteinlab/GRAM"
+ },
+ "GeneWalk": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/genewalk",
+   "pypi": "https://pypi.org/project/genewalk.svg/"
+  },
+  "held": {},
+  "name": "GeneWalk",
+  "readme": true,
+  "slug": "churchmanlab/genewalk"
+ },
+ "Genrich": {
+  "accepted": {},
+  "held": {},
+  "name": "Genrich",
+  "readme": true,
+  "slug": "jsh58/Genrich"
+ },
+ "GkmExplain": {
+  "accepted": {},
+  "held": {},
+  "name": "GkmExplain",
+  "readme": true,
+  "slug": "kundajelab/gkmexplain"
+ },
+ "Graph_Peak_Caller": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/graph_peak_caller/"
+  },
+  "held": {},
+  "name": "Graph Peak Caller",
+  "readme": true,
+  "slug": "uio-bmi/graph_peak_caller"
+ },
+ "GripDL": {
+  "accepted": {},
+  "held": {},
+  "name": "GripDL",
+  "readme": true,
+  "slug": "2010511951/GripDL"
+ },
+ "HINT-ATAC": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "RGT",
+    "rgt"
+   ]
+  },
+  "name": "HINT-ATAC",
+  "readme": true,
+  "slug": "CostaLab/reg-gen"
+ },
+ "HOT": {
+  "accepted": {},
+  "held": {},
+  "name": "HOT",
+  "readme": true,
+  "slug": "BIMSBbioinfo/HOT-or-not-examining-the-basis-of-high-occupancy-target-regions"
+ },
+ "IWEPoissonPaper": {
+  "accepted": {},
+  "held": {},
+  "name": "IWEPoissonPaper",
+  "readme": true,
+  "slug": "statgenlmu/IWEPoissonPaper"
+ },
+ "ImmuneRegulation": {
+  "accepted": {},
+  "held": {},
+  "name": "ImmuneRegulation",
+  "readme": false,
+  "slug": "gumuslab-mssm/immuneRegulation"
+ },
+ "LDmotif": {
+  "accepted": {},
+  "held": {},
+  "name": "LDmotif",
+  "readme": true,
+  "slug": "tanviralambd/LD"
+ },
+ "LOLA": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/LOLA/"
+  },
+  "held": {},
+  "name": "LOLA",
+  "readme": true,
+  "slug": "nsheff/LOLA"
+ },
+ "LSTrAP-Lite": {
+  "accepted": {},
+  "held": {},
+  "name": "LSTrAP-Lite",
+  "readme": true,
+  "slug": "mutwil/LSTrAP-Lite"
+ },
+ "LTMG": {
+  "accepted": {},
+  "held": {},
+  "name": "LTMG",
+  "readme": true,
+  "slug": "zy26/LTMGSCA"
+ },
+ "LuxR": {
+  "accepted": {},
+  "held": {},
+  "name": "LuxR",
+  "readme": true,
+  "slug": "Juliacvk/LuxR_H-NS"
+ },
+ "MAPS": {
+  "accepted": {},
+  "held": {},
+  "name": "MAPS",
+  "readme": true,
+  "slug": "ijuric/MAPS"
+ },
+ "MASSIF": {
+  "accepted": {},
+  "held": {},
+  "name": "MASSIF",
+  "readme": true,
+  "slug": "SchulzLab/MASSIF"
+ },
+ "MPRAnalyze": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/MPRAnalyze/"
+  },
+  "held": {},
+  "name": "MPRAnalyze",
+  "readme": true,
+  "slug": "YosefLab/MPRAnalyze"
+ },
+ "MPRAnator": {
+  "accepted": {},
+  "held": {},
+  "name": "MPRAnator",
+  "readme": true,
+  "slug": "hemberg-lab/MPRAnator"
+ },
+ "MariaOsmala": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "Rsamtools.html",
+    "GenomeInfoDb.html",
+    "release"
+   ],
+   "cran": [
+    "optparse",
+    "doParallel",
+    "gdata"
+   ]
+  },
+  "name": "MariaOsmala",
+  "readme": true,
+  "slug": "MariaOsmala/preprint"
+ },
+ "MaveDB": {
+  "accepted": {},
+  "held": {},
+  "name": "MaveDB",
+  "readme": true,
+  "slug": "VariantEffect/MaveReferences"
+ },
+ "MethylCal": {
+  "accepted": {},
+  "held": {
+   "cran": [
+    "lattice",
+    "latticeExtra"
+   ]
+  },
+  "name": "MethylCal",
+  "readme": true,
+  "slug": "lb664/MethylCal"
+ },
+ "ModEx": {
+  "accepted": {},
+  "held": {},
+  "name": "ModEx",
+  "readme": true,
+  "slug": "samanfrm/modex"
+ },
+ "MotifAnalyzer-PDZ": {
+  "accepted": {},
+  "held": {},
+  "name": "MotifAnalyzer-PDZ",
+  "readme": true,
+  "slug": "jagodzf/motifAnalyzerPDZ"
+ },
+ "MtBNN": {
+  "accepted": {},
+  "held": {},
+  "name": "MtBNN",
+  "readme": true,
+  "slug": "Zoesgithub/MtBNN"
+ },
+ "MutSpot": {
+  "accepted": {},
+  "held": {},
+  "name": "MutSpot",
+  "readme": true,
+  "slug": "skandlab/MutSpot"
+ },
+ "NRL": {
+  "accepted": {},
+  "held": {
+   "cran": [
+    "shiny",
+    "zoo",
+    "plyr"
+   ]
+  },
+  "name": "NRL",
+  "readme": true,
+  "slug": "chrisclarkson/NRLcalc"
+ },
+ "NeSSie": {
+  "accepted": {},
+  "held": {},
+  "name": "NeSSie",
+  "readme": true,
+  "slug": "B3rse/nessie"
+ },
+ "Nucleosome_Dynamics": {
+  "accepted": {},
+  "held": {},
+  "name": "Nucleosome Dynamics",
+  "readme": true,
+  "slug": "nucleosome-dynamics/nucleosome_dynamics"
+ },
+ "OnTAD": {
+  "accepted": {
+   "docker": "https://hub.docker.com/r/anlin00007/ontad"
+  },
+  "held": {},
+  "name": "OnTAD",
+  "readme": true,
+  "slug": "anlin00007/OnTAD"
+ },
+ "PCHi-C": {
+  "accepted": {},
+  "held": {},
+  "name": "PCHi-C",
+  "readme": true,
+  "slug": "IMCS-Bioinformatics/PCHiCNetworkExplorer"
+ },
+ "PIRCh-seq": {
+  "accepted": {},
+  "held": {},
+  "name": "PIRCh-seq",
+  "readme": true,
+  "slug": "QuKunLab/PIRCh"
+ },
+ "PRAS": {
+  "accepted": {},
+  "held": {},
+  "name": "PRAS",
+  "readme": true,
+  "slug": "ouyang-lab/PRAS"
+ },
+ "PanoromiX": {
+  "accepted": {},
+  "held": {},
+  "name": "PanoromiX",
+  "readme": true,
+  "slug": "panoromix/PanoromiX"
+ },
+ "ProSampler": {
+  "accepted": {},
+  "held": {},
+  "name": "ProSampler",
+  "readme": true,
+  "slug": "zhengchangsulab/prosampler"
+ },
+ "PyFeat": {
+  "accepted": {},
+  "held": {},
+  "name": "PyFeat",
+  "readme": true,
+  "slug": "mrzResearchArena/PyFeat"
+ },
+ "QBiC-Pred": {
+  "accepted": {},
+  "held": {},
+  "name": "QBiC-Pred",
+  "readme": true,
+  "slug": "vincentiusmartin/QBiC-Pred"
+ },
+ "RAMPAGE": {
+  "accepted": {},
+  "held": {},
+  "name": "RAMPAGE",
+  "readme": true,
+  "slug": "kepbod/rampage_alu"
+ },
+ "RNATracker": {
+  "accepted": {},
+  "held": {},
+  "name": "RNATracker",
+  "readme": true,
+  "slug": "HarveyYan/RNATracker"
+ },
+ "RRBSsim": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "pyfasta"
+   ]
+  },
+  "name": "RRBSsim",
+  "readme": true,
+  "slug": "xwBio/RRBSsim"
+ },
+ "RSAT-position-analysis": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "rsat-core"
+   ],
+   "docker": [
+    "biocontainers/rsat"
+   ]
+  },
+  "name": "RSAT position-analysis",
+  "readme": true,
+  "slug": "rsa-tools/rsat-code"
+ },
+ "RSAT_dyad-analysis": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "rsat-core"
+   ],
+   "docker": [
+    "biocontainers/rsat"
+   ]
+  },
+  "name": "RSAT dyad-analysis",
+  "readme": true,
+  "slug": "rsa-tools/rsat-code"
+ },
+ "RT_networks": {
+  "accepted": {},
+  "held": {},
+  "name": "RT networks",
+  "readme": true,
+  "slug": "sebkim/RTNet"
+ },
+ "ReProMin": {
+  "accepted": {},
+  "held": {},
+  "name": "ReProMin",
+  "readme": true,
+  "slug": "utrillalab/repromin"
+ },
+ "SCALE": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/scale/"
+  },
+  "held": {},
+  "name": "SCALE",
+  "readme": true,
+  "slug": "jsxlei/SCALE"
+ },
+ "SEACR": {
+  "accepted": {},
+  "held": {},
+  "name": "SEACR",
+  "readme": true,
+  "slug": "FredHutch/SEACR"
+ },
+ "SEMpl": {
+  "accepted": {},
+  "held": {},
+  "name": "SEMpl",
+  "readme": true,
+  "slug": "Boyle-Lab/SEM_CPP"
+ },
+ "SNPnotes": {
+  "accepted": {},
+  "held": {},
+  "name": "SNPnotes",
+  "readme": true,
+  "slug": "shraddhapai/SNPNotes"
+ },
+ "Sei": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "docopt"
+   ]
+  },
+  "name": "Sei",
+  "readme": true,
+  "slug": "FunctionLab/sei-framework"
+ },
+ "Sierra": {
+  "accepted": {},
+  "held": {},
+  "name": "Sierra",
+  "readme": true,
+  "slug": "VCCRI/Sierra"
+ },
+ "StoatyDive": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/stoatydive"
+  },
+  "held": {},
+  "name": "StoatyDive",
+  "readme": true,
+  "slug": "BackofenLab/StoatyDive"
+ },
+ "TAD-Lactuca": {
+  "accepted": {},
+  "held": {},
+  "name": "TAD-Lactuca",
+  "readme": true,
+  "slug": "LoopGan/TAD-Lactuca"
+ },
+ "TDimpute": {
+  "accepted": {},
+  "held": {},
+  "name": "TDimpute",
+  "readme": true,
+  "slug": "sysu-yanglab/TDimpute"
+ },
+ "TF-MoDISco": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/modisco/"
+  },
+  "held": {},
+  "name": "TF-MoDISco",
+  "readme": true,
+  "slug": "kundajelab/tfmodisco"
+ },
+ "TFBSFootprinter": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/tfbs-footprinting3",
+   "docker": "https://hub.docker.com/r/thirtysix/tfbs_footprinting",
+   "pypi": "https://pypi.org/project/TFBS-footprinting3/"
+  },
+  "held": {},
+  "name": "TFBSFootprinter",
+  "readme": true,
+  "slug": "thirtysix/TFBS_footprinting3"
+ },
+ "TFregulomeR": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "GenomicRanges.html",
+    "rGREAT.html",
+    "release"
+   ],
+   "cran": [
+    "jsonlite",
+    "RSQLite",
+    "ggplot2"
+   ]
+  },
+  "name": "TFregulomeR",
+  "readme": true,
+  "slug": "benoukraflab/TFregulomeR"
+ },
+ "TGS-Lite": {
+  "accepted": {},
+  "held": {
+   "cran": [
+    "packrat"
+   ]
+  },
+  "name": "TGS-Lite",
+  "readme": true,
+  "slug": "sap01/TGS-Lite-supplem"
+ },
+ "TOBIAS": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/tobias",
+   "pypi": "https://pypi.org/project/tobias/"
+  },
+  "held": {},
+  "name": "TOBIAS",
+  "readme": true,
+  "slug": "loosolab/TOBIAS"
+ },
+ "TransPrise": {
+  "accepted": {},
+  "held": {},
+  "name": "TransPrise",
+  "readme": true,
+  "slug": "StepanAbstro/TransPrise"
+ },
+ "Tulip": {
+  "accepted": {},
+  "held": {},
+  "name": "Tulip",
+  "readme": true,
+  "slug": "gymreklab/Tulip"
+ },
+ "VDJdb": {
+  "accepted": {
+   "docker": "https://hub.docker.com/r/mikessh/vdjdb"
+  },
+  "held": {},
+  "name": "VDJdb",
+  "readme": true,
+  "slug": "antigenomics/vdjdb-db"
+ },
+ "Wellington / pyDNase": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/pyDNase/"
+  },
+  "held": {},
+  "name": "Wellington / pyDNase",
+  "readme": true,
+  "slug": "jpiper/pyDNase"
+ },
+ "Zerone": {
+  "accepted": {
+   "docker": "https://hub.docker.com/r/nanakiksc/zerone"
+  },
+  "held": {},
+  "name": "Zerone",
+  "readme": true,
+  "slug": "nanakiksc/zerone"
+ },
+ "ZincBind": {
+  "accepted": {},
+  "held": {},
+  "name": "ZincBind",
+  "readme": true,
+  "slug": "samirelanduk/ZincBindDB"
+ },
+ "abc": {
+  "accepted": {},
+  "held": {},
+  "name": "ABC",
+  "readme": true,
+  "slug": "mlupien/ABC"
+ },
+ "abc4pwm": {
+  "accepted": {},
+  "held": {},
+  "name": "abc4pwm",
+  "readme": true,
+  "slug": "abc4pwm/abc4pwm"
+ },
+ "accuenhancer": {
+  "accepted": {},
+  "held": {},
+  "name": "accuEnhancer",
+  "readme": true,
+  "slug": "callsobing/accuEnhancer"
+ },
+ "adaliftover": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "rtracklayer",
+    "GenomicRanges",
+    "BSgenome.Mmusculus.UCSC.mm10"
+   ],
+   "cran": [
+    "data.table",
+    "Matrix",
+    "PRROC"
+   ]
+  },
+  "name": "AdaLiftOver",
+  "readme": true,
+  "slug": "keleslab/AdaLiftOver"
+ },
+ "aiap": {
+  "accepted": {},
+  "held": {},
+  "name": "AIAP",
+  "readme": true,
+  "slug": "Zhang-lab/ATAC-seq_QC_analysis"
+ },
+ "aimodules": {
+  "accepted": {},
+  "held": {},
+  "name": "AIModules",
+  "readme": true,
+  "slug": "muharrem-aydinli/AIModules"
+ },
+ "aiscea": {
+  "accepted": {},
+  "held": {},
+  "name": "AIscEA",
+  "readme": true,
+  "slug": "elhaam/AIscEA"
+ },
+ "aksmooth": {
+  "accepted": {},
+  "held": {},
+  "name": "AKSmooth",
+  "readme": true,
+  "slug": "Junfang/AKSmooth"
+ },
+ "ananse": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/ananse"
+  },
+  "held": {},
+  "name": "ANANSE",
+  "readme": true,
+  "slug": "vanheeringen-lab/ANANSE"
+ },
+ "annotatr": {
+  "accepted": {},
+  "held": {},
+  "name": "annotatr",
+  "readme": true,
+  "slug": "rcavalcante/annotatr"
+ },
+ "aqua-hichip": {
+  "accepted": {},
+  "held": {},
+  "name": "AQuA-HiChIP",
+  "readme": true,
+  "slug": "GryderArt/AQuA-HiChIP"
+ },
+ "arboreto": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/arboreto",
+   "pypi": "https://pypi.org/project/arboreto/"
+  },
+  "held": {},
+  "name": "Arboreto",
+  "readme": true,
+  "slug": "aertslab/arboreto"
+ },
+ "archr": {
+  "accepted": {
+   "docker": "https://hub.docker.com/r/greenleaflab/archr"
+  },
+  "held": {
+   "cran": [
+    "renv"
+   ]
+  },
+  "name": "ArchR",
+  "readme": true,
+  "slug": "GreenleafLab/ArchR"
+ },
+ "arem": {
+  "accepted": {},
+  "held": {},
+  "name": "AREM",
+  "readme": true,
+  "slug": "jakebiesinger/AREM"
+ },
+ "aryana-bs": {
+  "accepted": {},
+  "held": {},
+  "name": "ARYANA-BS",
+  "readme": true,
+  "slug": "hnikaein/aryana"
+ },
+ "asap-sml": {
+  "accepted": {},
+  "held": {},
+  "name": "ASAP-SML",
+  "readme": true,
+  "slug": "HassounLab/ASAP-SML"
+ },
+ "ashic": {
+  "accepted": {},
+  "held": {},
+  "name": "ASHIC",
+  "readme": true,
+  "slug": "wmalab/ASHIC"
+ },
+ "aster": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/epiaster/"
+  },
+  "held": {},
+  "name": "ASTER",
+  "readme": true,
+  "slug": "biox-nku/aster"
+ },
+ "asymmetron": {
+  "accepted": {},
+  "held": {},
+  "name": "Asymmetron",
+  "readme": true,
+  "slug": "Ahituv-lab/Asymmetron"
+ },
+ "atac-seq": {
+  "accepted": {},
+  "held": {},
+  "name": "Cloud ATAC",
+  "readme": true,
+  "slug": "NIGMS/ATAC-Seq-and-Single-Cell-ATAC-Seq-Analysis"
+ },
+ "atacgraph": {
+  "accepted": {},
+  "held": {
+   "docker": [
+    "lsbnb/galaxy_atacgraph"
+   ]
+  },
+  "name": "ATACgraph",
+  "readme": true,
+  "slug": "RitataLU/ATACgraph"
+ },
+ "ataqv": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "MACS2"
+   ]
+  },
+  "name": "ataqv",
+  "readme": true,
+  "slug": "ParkerLab/ataqv"
+ },
+ "atlas-modeling": {
+  "accepted": {},
+  "held": {
+   "docker": [
+    "networkbiolab/pleiades"
+   ],
+   "pypi": [
+    "pleiades"
+   ]
+  },
+  "name": "Atlas",
+  "readme": true,
+  "slug": "networkbiolab/atlas"
+ },
+ "atsnp": {
+  "accepted": {},
+  "held": {},
+  "name": "atSNP",
+  "readme": true,
+  "slug": "chandlerzuo/atsnp"
+ },
+ "attune": {
+  "accepted": {},
+  "held": {},
+  "name": "Attune",
+  "readme": true,
+  "slug": "melobio/Attune"
+ },
+ "augusta": {
+  "accepted": {},
+  "held": {},
+  "name": "Augusta",
+  "readme": true,
+  "slug": "WanluLiuLab/CRISPRTE"
+ },
+ "auto-drrafter": {
+  "accepted": {},
+  "held": {},
+  "name": "auto-DRRAFTER",
+  "readme": true,
+  "slug": "auto-DRRAFTER/springer-chapter"
+ },
+ "autophagynet": {
+  "accepted": {},
+  "held": {},
+  "name": "AutophagyNet",
+  "readme": true,
+  "slug": "korcsmarosgroup/AutophagyNetDB"
+ },
+ "autorelacs": {
+  "accepted": {},
+  "held": {},
+  "name": "AutoRELACS",
+  "readme": true,
+  "slug": "FrancescoFerrari88/AutoRELACS"
+ },
+ "bamm": {
+  "accepted": {},
+  "held": {},
+  "name": "BaMM",
+  "readme": true,
+  "slug": "soedinglab/BaMM_webserver"
+ },
+ "bamscale": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/bamscale"
+  },
+  "held": {},
+  "name": "BAMscale",
+  "readme": true,
+  "slug": "ncbi/BAMscale"
+ },
+ "bardic": {
+  "accepted": {},
+  "held": {},
+  "name": "BaRDIC",
+  "readme": true,
+  "slug": "dmitrymyl/BaRDIC"
+ },
+ "bart3d": {
+  "accepted": {},
+  "held": {},
+  "name": "BART3D",
+  "readme": true,
+  "slug": "zanglab/bart3d"
+ },
+ "bdetools": {
+  "accepted": {},
+  "held": {},
+  "name": "BDEtools",
+  "readme": true,
+  "slug": "oeakman/BDEtools"
+ },
+ "beaconlab_pscan": {
+  "accepted": {},
+  "held": {},
+  "name": "Pscan",
+  "readme": true,
+  "slug": "brunobeltran/pscan"
+ },
+ "bedtoolsr": {
+  "accepted": {},
+  "held": {
+   "cran": [
+    "testthat"
+   ]
+  },
+  "name": "bedtoolsr",
+  "readme": true,
+  "slug": "PhanstielLab/bedtoolsr"
+ },
+ "bert-promoter": {
+  "accepted": {},
+  "held": {},
+  "name": "BERT-Promoter",
+  "readme": true,
+  "slug": "khanhlee/bert-promoter"
+ },
+ "betavaeimputation": {
+  "accepted": {},
+  "held": {},
+  "name": "betaVAEImputation",
+  "readme": true,
+  "slug": "gevaertlab/BetaVAEImputation"
+ },
+ "biasaway": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/biasaway",
+   "pypi": "https://pypi.org/project/biasaway/"
+  },
+  "held": {},
+  "name": "BiasAway",
+  "readme": true,
+  "slug": "asntech/biasaway"
+ },
+ "bimm_sc": {
+  "accepted": {},
+  "held": {},
+  "name": "BIMM",
+  "readme": true,
+  "slug": "chenm19/BIMM"
+ },
+ "bindingsitefinder": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "BindingSiteFinder.html",
+    "devel"
+   ]
+  },
+  "name": "BindingSiteFinder",
+  "readme": true,
+  "slug": "ZarnackGroup/BindingSiteFinder"
+ },
+ "bindsc": {
+  "accepted": {},
+  "held": {},
+  "name": "bindSC",
+  "readme": true,
+  "slug": "KChen-lab/bindSC"
+ },
+ "binquasi": {
+  "accepted": {},
+  "held": {},
+  "name": "BinQuasi",
+  "readme": true,
+  "slug": "emilygoren/BinQuasi"
+ },
+ "biolqm": {
+  "accepted": {},
+  "held": {},
+  "name": "BioLQM",
+  "readme": true,
+  "slug": "colomoto/bioLQM"
+ },
+ "bionero": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/BioNERO/"
+  },
+  "held": {},
+  "name": "BioNERO",
+  "readme": true,
+  "slug": "almeidasilvaf/BioNERO"
+ },
+ "bioswitch-grn": {
+  "accepted": {},
+  "held": {},
+  "name": "BioSWITCH",
+  "readme": false,
+  "slug": "CBigOxf/BioSWITCH"
+ },
+ "biotip": {
+  "accepted": {
+   "cran": "https://cran.r-project.org/package=BioTIP"
+  },
+  "held": {
+   "bioconductor": [
+    "release"
+   ]
+  },
+  "name": "BioTIP",
+  "readme": true,
+  "slug": "xyang2uchicago/BioTIP"
+ },
+ "biotranslator": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/biotranslator/"
+  },
+  "held": {},
+  "name": "BioTranslator",
+  "readme": true,
+  "slug": "ywzhao2002/biotranslator"
+ },
+ "biovnn": {
+  "accepted": {},
+  "held": {},
+  "name": "BioVNN",
+  "readme": true,
+  "slug": "LichtargeLab/BioVNN"
+ },
+ "bismark": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/bismark"
+  },
+  "held": {},
+  "name": "Bismark",
+  "readme": true,
+  "slug": "FelixKrueger/Bismark"
+ },
+ "bit": {
+  "accepted": {},
+  "held": {},
+  "name": "BIT",
+  "readme": true,
+  "slug": "ZeyuL01/BIT"
+ },
+ "blamm": {
+  "accepted": {},
+  "held": {},
+  "name": "BLAMM",
+  "readme": true,
+  "slug": "biointec/blamm"
+ },
+ "bmf": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "https"
+   ]
+  },
+  "name": "Bipartite Motif Finder",
+  "readme": true,
+  "slug": "soedinglab/bipartite_motif_finder"
+ },
+ "bml": {
+  "accepted": {},
+  "held": {},
+  "name": "BML",
+  "readme": false,
+  "slug": "Mohammad-Vahed/BML"
+ },
+ "bom": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "BSgenome.Mmusculus.UCSC.mm10"
+   ]
+  },
+  "name": "Bag-of-Motifs (BOM)",
+  "readme": true,
+  "slug": "ewonglab/BOM_package"
+ },
+ "boostdiff": {
+  "accepted": {},
+  "held": {},
+  "name": "BoostDiff",
+  "readme": true,
+  "slug": "scibiome/boostdiff_inference"
+ },
+ "bphunter": {
+  "accepted": {},
+  "held": {},
+  "name": "BPHunter",
+  "readme": true,
+  "slug": "casanova-lab/BPHunter"
+ },
+ "branenet": {
+  "accepted": {},
+  "held": {},
+  "name": "BRANENET",
+  "readme": true,
+  "slug": "Surabhivj/BRANEnet"
+ },
+ "brio": {
+  "accepted": {},
+  "held": {},
+  "name": "BRIO",
+  "readme": true,
+  "slug": "helmercitterich-lab/BRIO"
+ },
+ "bwtool": {
+  "accepted": {},
+  "held": {},
+  "name": "bwtool 1.0 gamma",
+  "readme": true,
+  "slug": "CRG-Barcelona/bwtool"
+ },
+ "cLoops": {
+  "accepted": {},
+  "held": {},
+  "name": "cLoops",
+  "readme": true,
+  "slug": "YaqiangCao/cLoops"
+ },
+ "cRegulome": {
+  "accepted": {},
+  "held": {},
+  "name": "cRegulome",
+  "readme": true,
+  "slug": "ropensci/cRegulome"
+ },
+ "cabean": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/cabean/"
+  },
+  "held": {
+   "conda": [
+    "cabean-python"
+   ]
+  },
+  "name": "CABEAN",
+  "readme": true,
+  "slug": "algorecell/pyCabean"
+ },
+ "cagefightr": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/CAGEfightR/"
+  },
+  "held": {},
+  "name": "CAGEfightR",
+  "readme": true,
+  "slug": "MalteThodberg/CAGEfightR"
+ },
+ "cancercontextualized": {
+  "accepted": {},
+  "held": {},
+  "name": "Cancer Contextualized",
+  "readme": true,
+  "slug": "cnellington/CancerContextualized"
+ },
+ "canmethdb": {
+  "accepted": {},
+  "held": {},
+  "name": "CanMethdb",
+  "readme": true,
+  "slug": "chunquanlipathway/CanMethdb"
+ },
+ "cantata": {
+  "accepted": {},
+  "held": {},
+  "name": "CANTATA",
+  "readme": true,
+  "slug": "sysbio-bioinf/Cantata"
+ },
+ "capC-MAP": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/capc-map"
+  },
+  "held": {},
+  "name": "capC-MAP",
+  "readme": true,
+  "slug": "cbrackley/capC-MAP"
+ },
+ "capsnh_kcr": {
+  "accepted": {},
+  "held": {},
+  "name": "CapsNh-Kcr",
+  "readme": true,
+  "slug": "Jhabindra-bioinfo/CapsNh-Kcr"
+ },
+ "cardiopy": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/cardiopy/"
+  },
+  "held": {},
+  "name": "CardioPy",
+  "readme": true,
+  "slug": "CardioPy/CardioPy"
+ },
+ "casava": {
+  "accepted": {},
+  "held": {},
+  "name": "CASAVA",
+  "readme": true,
+  "slug": "zhanglabtools/CASAVA"
+ },
+ "casilico": {
+  "accepted": {},
+  "held": {},
+  "name": "CaSilico",
+  "readme": true,
+  "slug": "mrb20045/CaSilico"
+ },
+ "casowary": {
+  "accepted": {},
+  "held": {},
+  "name": "CASowary",
+  "readme": true,
+  "slug": "Janga-Lab/CASowary"
+ },
+ "castnet": {
+  "accepted": {},
+  "held": {},
+  "name": "CastNet",
+  "readme": true,
+  "slug": "carlosj-rr/CastNet"
+ },
+ "causaldag": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/causaldag.svg/"
+  },
+  "held": {},
+  "name": "CausalDAG",
+  "readme": true,
+  "slug": "uhlerlab/causaldag"
+ },
+ "cbnplot": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/CBNplot/"
+  },
+  "held": {},
+  "name": "CBNplot",
+  "readme": true,
+  "slug": "noriakis/CBNplot"
+ },
+ "ccip": {
+  "accepted": {},
+  "held": {},
+  "name": "CCIP",
+  "readme": true,
+  "slug": "GaoLabXDU/CCIP"
+ },
+ "ccnetviz": {
+  "accepted": {},
+  "held": {},
+  "name": "ccNetViz",
+  "readme": true,
+  "slug": "HelikarLab/ccNetViz"
+ },
+ "cdbprom": {
+  "accepted": {},
+  "held": {},
+  "name": "CDBProm",
+  "readme": true,
+  "slug": "gustavsganzerla/cdbprom"
+ },
+ "cell2location": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/cell2location/"
+  },
+  "held": {},
+  "name": "Cell2location",
+  "readme": true,
+  "slug": "BayraktarLab/cell2location"
+ },
+ "cellcano": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/Cellcano.svg/"
+  },
+  "held": {},
+  "name": "Cellcano",
+  "readme": true,
+  "slug": "marvinquiet/Cellcano"
+ },
+ "cellcraft": {
+  "accepted": {},
+  "held": {},
+  "name": "CellCraft",
+  "readme": true,
+  "slug": "cxinsys/cellcraft"
+ },
+ "cellrouter": {
+  "accepted": {},
+  "held": {},
+  "name": "CellRouter",
+  "readme": true,
+  "slug": "edroaldo/cellrouter"
+ },
+ "celltics": {
+  "accepted": {},
+  "held": {},
+  "name": "CellTICS",
+  "readme": true,
+  "slug": "qyyin0516/CellTICS"
+ },
+ "cellwalker": {
+  "accepted": {},
+  "held": {},
+  "name": "CellWalker",
+  "readme": true,
+  "slug": "PollardLab/CellWalker"
+ },
+ "cellwalkr": {
+  "accepted": {},
+  "held": {},
+  "name": "CellWalkR",
+  "readme": true,
+  "slug": "PFPrzytycki/CellWalkR"
+ },
+ "cemig": {
+  "accepted": {},
+  "held": {},
+  "name": "CEMIG",
+  "readme": true,
+  "slug": "OSU-BMBL/CEMIG"
+ },
+ "centre": {
+  "accepted": {},
+  "held": {},
+  "name": "CENTRE",
+  "readme": true,
+  "slug": "slrvv/CENTRE"
+ },
+ "cetf": {
+  "accepted": {
+   "docker": "https://hub.docker.com/r/biagii/ceTF"
+  },
+  "held": {},
+  "name": "CeTF",
+  "readme": true,
+  "slug": "cbiagii/CeTF"
+ },
+ "cfa": {
+  "accepted": {},
+  "held": {},
+  "name": "CFA",
+  "readme": true,
+  "slug": "cobisLab/CFA"
+ },
+ "cfdnapipe": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "release"
+   ],
+   "conda": [
+    "lftp"
+   ]
+  },
+  "name": "cfDNApipe",
+  "readme": true,
+  "slug": "XWangLabTHU/cfDNApipe"
+ },
+ "cfsp": {
+  "accepted": {},
+  "held": {},
+  "name": "CFSP",
+  "readme": true,
+  "slug": "HePeng2016/CFSP"
+ },
+ "cga-bni": {
+  "accepted": {},
+  "held": {},
+  "name": "CGA-BNI",
+  "readme": true,
+  "slug": "csclab/CGA-BNI"
+ },
+ "cgnaweb": {
+  "accepted": {},
+  "held": {},
+  "name": "cgNA+web",
+  "readme": true,
+  "slug": "rahul2512/cgNA_plus"
+ },
+ "charid": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "snakemake"
+   ]
+  },
+  "name": "CharID",
+  "readme": true,
+  "slug": "Yin-Shen/CharID"
+ },
+ "charplant": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "keras"
+   ],
+   "pypi": [
+    "MACS2",
+    "pyfiglet",
+    "snakemake"
+   ]
+  },
+  "name": "CharPlant",
+  "readme": true,
+  "slug": "Yin-Shen/CharPlant"
+ },
+ "chas": {
+  "accepted": {},
+  "held": {},
+  "name": "CHAS",
+  "readme": true,
+  "slug": "Marzi-lab/CHAS"
+ },
+ "cheap": {
+  "accepted": {},
+  "held": {},
+  "name": "ChEAP",
+  "readme": true,
+  "slug": "SBML-Kimlab/ChEAP"
+ },
+ "chia-pet2": {
+  "accepted": {},
+  "held": {},
+  "name": "ChIA-PET2",
+  "readme": true,
+  "slug": "GuipengLi/ChIA-PET2"
+ },
+ "chia-pipe": {
+  "accepted": {},
+  "held": {},
+  "name": "ChIA-PIPE",
+  "readme": true,
+  "slug": "TheJacksonLaboratory/ChIA-PIPE"
+ },
+ "chilin": {
+  "accepted": {
+   "docker": "https://hub.docker.com/r/qq06/chilin"
+  },
+  "held": {
+   "conda": [
+    "bwa"
+   ]
+  },
+  "name": "ChiLin",
+  "readme": true,
+  "slug": "cfce/chilin"
+ },
+ "chinn": {
+  "accepted": {},
+  "held": {},
+  "name": "ChINN",
+  "readme": true,
+  "slug": "mjflab/chinn"
+ },
+ "chip-ap": {
+  "accepted": {},
+  "held": {},
+  "name": "ChIP-AP",
+  "readme": true,
+  "slug": "JSuryatenggara/ChIP-AP"
+ },
+ "chip-atlas": {
+  "accepted": {},
+  "held": {},
+  "name": "ChIP-Atlas",
+  "readme": true,
+  "slug": "inutano/chip-atlas"
+ },
+ "chipexoqual": {
+  "accepted": {},
+  "held": {},
+  "name": "ChIPexoQual",
+  "readme": true,
+  "slug": "keleslab/ChIPexoQual"
+ },
+ "chipin": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "deeptools"
+   ]
+  },
+  "name": "CHIPIN",
+  "readme": true,
+  "slug": "BoevaLab/CHIPIN"
+ },
+ "chips-seq": {
+  "accepted": {},
+  "held": {},
+  "name": "CHIPS",
+  "readme": true,
+  "slug": "liulab-dfci/CHIPS"
+ },
+ "chipseeker": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/ChIPseeker/"
+  },
+  "held": {},
+  "name": "ChIPseeker",
+  "readme": true,
+  "slug": "YuLab-SMU/ChIPseeker"
+ },
+ "chipseeker_R": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/ChIPseeker/"
+  },
+  "held": {},
+  "name": "ChIPseeker",
+  "readme": true,
+  "slug": "YuLab-SMU/ChIPseeker"
+ },
+ "chrokit": {
+  "accepted": {
+   "docker": "https://hub.docker.com/r/ocroci/chrokit"
+  },
+  "held": {},
+  "name": "ChroKit",
+  "readme": true,
+  "slug": "ocroci/ChroKit"
+ },
+ "chromatinhd": {
+  "accepted": {},
+  "held": {},
+  "name": "ChromatinHD",
+  "readme": true,
+  "slug": "DeplanckeLab/ChromatinHD"
+ },
+ "chrombpnet": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/chrombpnet/"
+  },
+  "held": {
+   "conda": [
+    "samtools"
+   ]
+  },
+  "name": "ChromBPNet",
+  "readme": true,
+  "slug": "kundajelab/chrombpnet"
+ },
+ "chromdmm": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "S4Vectors.html",
+    "IRanges.html",
+    "DirichletMultinomial.html"
+   ],
+   "cran": [
+    "Rcpp",
+    "ggplot2",
+    "reshape2"
+   ]
+  },
+  "name": "ChromDMM",
+  "readme": true,
+  "slug": "MariaOsmala/ChromDMM"
+ },
+ "chromegcn": {
+  "accepted": {},
+  "held": {},
+  "name": "ChromeGCN",
+  "readme": true,
+  "slug": "QData/ChromeGCN"
+ },
+ "chromhmm": {
+  "accepted": {},
+  "held": {},
+  "name": "ChromHMM",
+  "readme": true,
+  "slug": "jernst98/ChromHMM"
+ },
+ "chromosight": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/chromosight",
+   "pypi": "https://pypi.org/project/chromosight.svg/"
+  },
+  "held": {},
+  "name": "Chromosight",
+  "readme": true,
+  "slug": "koszullab/chromosight"
+ },
+ "chromscape": {
+  "accepted": {},
+  "held": {},
+  "name": "ChromSCape",
+  "readme": true,
+  "slug": "vallotlab/ChromSCape_benchmarking"
+ },
+ "chromvar": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/chromVAR/"
+  },
+  "held": {},
+  "name": "chromVAR",
+  "readme": true,
+  "slug": "GreenleafLab/chromVAR"
+ },
+ "cipher": {
+  "accepted": {},
+  "held": {},
+  "name": "CIPHER",
+  "readme": true,
+  "slug": "c-guzman/cipher-workflow-platform"
+ },
+ "circe": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/circe-py/"
+  },
+  "held": {},
+  "name": "CIRCE",
+  "readme": true,
+  "slug": "cantinilab/circe"
+ },
+ "circlebase": {
+  "accepted": {},
+  "held": {},
+  "name": "CircleBase",
+  "readme": true,
+  "slug": "leishenggit/CircleBase"
+ },
+ "circlehunter": {
+  "accepted": {},
+  "held": {},
+  "name": "circlehunter",
+  "readme": true,
+  "slug": "suda-huanglab/circlehunter"
+ },
+ "cisformer": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/cisformer/"
+  },
+  "held": {
+   "conda": [
+    "pytorch",
+    "accelerate",
+    "scanpy"
+   ]
+  },
+  "name": "Cisformer",
+  "readme": true,
+  "slug": "wanglabtongji/Cisformer"
+ },
+ "cistopic": {
+  "accepted": {},
+  "held": {},
+  "name": "cisTopic",
+  "readme": true,
+  "slug": "aertslab/cistopic"
+ },
+ "citl": {
+  "accepted": {},
+  "held": {},
+  "name": "CITL",
+  "readme": true,
+  "slug": "wJDKnight/CITL-Rpackage"
+ },
+ "citrus": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "pytorch"
+   ]
+  },
+  "name": "CITRUS",
+  "readme": true,
+  "slug": "osmanbeyoglulab/CITRUS"
+ },
+ "clipper-fdr": {
+  "accepted": {},
+  "held": {},
+  "name": "Clipper",
+  "readme": true,
+  "slug": "JSB-UCLA/Clipper"
+ },
+ "clipseq": {
+  "accepted": {
+   "docker": "https://hub.docker.com/r/nfcore/clipseq"
+  },
+  "held": {},
+  "name": "nf-core clipseq",
+  "readme": true,
+  "slug": "nf-core/clipseq"
+ },
+ "clnn-loop": {
+  "accepted": {},
+  "held": {},
+  "name": "CLNN-loop",
+  "readme": true,
+  "slug": "HaoWuLab-Bioinformatics/CLNN-loop"
+ },
+ "cloops2": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/cLoops2/"
+  },
+  "held": {},
+  "name": "cLoops2",
+  "readme": true,
+  "slug": "KejiZhaoLab/cLoops2"
+ },
+ "cloudasm": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "dsub"
+   ]
+  },
+  "name": "CloudASM",
+  "readme": true,
+  "slug": "TyckoLab/CloudASM"
+ },
+ "cner": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/CNEr/"
+  },
+  "held": {},
+  "name": "CNEr",
+  "readme": true,
+  "slug": "ge11232002/CNEr"
+ },
+ "cnn-peaks": {
+  "accepted": {},
+  "held": {},
+  "name": "CNN-Peaks",
+  "readme": true,
+  "slug": "odb9402/CNNPeaks"
+ },
+ "cnn_pred": {
+  "accepted": {},
+  "held": {},
+  "name": "CNN-Pred",
+  "readme": true,
+  "slug": "MLBC-lab/CNN-Pred"
+ },
+ "cnvxplorer": {
+  "accepted": {},
+  "held": {},
+  "name": "CNVxplorer",
+  "readme": true,
+  "slug": "RausellLab/cnvxplorer"
+ },
+ "cobind": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/cobind/"
+  },
+  "held": {},
+  "name": "cobind",
+  "readme": true,
+  "slug": "liguowang/cobind"
+ },
+ "cobolt": {
+  "accepted": {},
+  "held": {},
+  "name": "Cobolt",
+  "readme": true,
+  "slug": "boyinggong/cobolt"
+ },
+ "cocoa": {
+  "accepted": {},
+  "held": {},
+  "name": "COCOA",
+  "readme": true,
+  "slug": "databio/COCOA_paper"
+ },
+ "combind": {
+  "accepted": {},
+  "held": {},
+  "name": "ComBind",
+  "readme": true,
+  "slug": "AnniAleksandra/ComBind"
+ },
+ "combsafe": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "pyensembl"
+   ]
+  },
+  "name": "CombSAFE",
+  "readme": true,
+  "slug": "DEIB-GECO/CombSAFE"
+ },
+ "comethyl": {
+  "accepted": {},
+  "held": {},
+  "name": "Comethyl",
+  "readme": true,
+  "slug": "cemordaunt/comethyl"
+ },
+ "congri": {
+  "accepted": {},
+  "held": {},
+  "name": "ConGRI",
+  "readme": true,
+  "slug": "lugimzheng/ConGRI"
+ },
+ "connectf": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "nodejs"
+   ],
+   "pypi": [
+    "mysql-connector-python",
+    "gunicorn"
+   ]
+  },
+  "name": "ConnecTF",
+  "readme": true,
+  "slug": "coruzzilab/connectf_server"
+ },
+ "conquer": {
+  "accepted": {},
+  "held": {},
+  "name": "CONQUER",
+  "readme": true,
+  "slug": "roderickslieker/CONQUER"
+ },
+ "conrel": {
+  "accepted": {},
+  "held": {},
+  "name": "CONREL",
+  "readme": true,
+  "slug": "cibiobcg/CONREL"
+ },
+ "consept": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/CoNSEPT/"
+  },
+  "held": {},
+  "name": "CoNSEPT",
+  "readme": true,
+  "slug": "PayamDiba/CoNSEPT"
+ },
+ "consreg": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/ConSReg/"
+  },
+  "held": {
+   "bioconductor": [
+    "ChIPseeker.html",
+    "DESeq2.html",
+    "ChIPseeker"
+   ],
+   "conda": [
+    "r-gglasso"
+   ],
+   "cran": [
+    "gglasso",
+    "RRF"
+   ]
+  },
+  "name": "ConSReg",
+  "readme": true,
+  "slug": "LiLabAtVT/ConSReg"
+ },
+ "cooboostr": {
+  "accepted": {},
+  "held": {},
+  "name": "COOBoostR",
+  "readme": true,
+  "slug": "SWJ9385/COOBoostR"
+ },
+ "coolbox": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/coolbox",
+   "docker": "https://hub.docker.com/r/nanguage/coolbox",
+   "pypi": "https://pypi.org/project/coolbox/"
+  },
+  "held": {},
+  "name": "CoolBox",
+  "readme": true,
+  "slug": "GangCaoLab/CoolBox"
+ },
+ "cooltools": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/cooltools",
+   "pypi": "https://pypi.org/project/cooltools/"
+  },
+  "held": {},
+  "name": "cooltools",
+  "readme": true,
+  "slug": "open2c/cooltools"
+ },
+ "copy-scat": {
+  "accepted": {},
+  "held": {},
+  "name": "Copy-scAT",
+  "readme": true,
+  "slug": "spcdot/CopyscAT"
+ },
+ "coreatac": {
+  "accepted": {},
+  "held": {},
+  "name": "CoRE-ATAC",
+  "readme": true,
+  "slug": "UcarLab/CoRE-ATAC"
+ },
+ "corec": {
+  "accepted": {},
+  "held": {},
+  "name": "CoRec",
+  "readme": true,
+  "slug": "Siggers-Lab/CoRec"
+ },
+ "corenup": {
+  "accepted": {},
+  "held": {},
+  "name": "CORENup",
+  "readme": true,
+  "slug": "DeepLearningForSequence/CORENup-A-Combination-of-Convolutional-and-Recurrent-Deep-Neural-Networks-for-NucleosomePositioning"
+ },
+ "corto": {
+  "accepted": {
+   "cran": "https://cran.r-project.org/package=corto"
+  },
+  "held": {},
+  "name": "corto",
+  "readme": true,
+  "slug": "federicogiorgi/corto"
+ },
+ "cpdseqer": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "edgeR"
+   ]
+  },
+  "name": "CPDSeqer",
+  "readme": true,
+  "slug": "shengqh/cpdseqer"
+ },
+ "cpg_transformer": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "catboost"
+   ]
+  },
+  "name": "CpG Transformer",
+  "readme": true,
+  "slug": "gdewael/cpg-transformer"
+ },
+ "cpgmotifs": {
+  "accepted": {
+   "docker": "https://hub.docker.com/r/grecolab/cpgmotifs"
+  },
+  "held": {},
+  "name": "CpGmotifs",
+  "readme": true,
+  "slug": "Greco-Lab/CpGmotifs"
+ },
+ "crepe": {
+  "accepted": {},
+  "held": {},
+  "name": "CREPE",
+  "readme": true,
+  "slug": "dirostri/CREPE"
+ },
+ "crinet": {
+  "accepted": {},
+  "held": {},
+  "name": "Crinet",
+  "readme": true,
+  "slug": "bozdaglab/crinet"
+ },
+ "crispr-gem": {
+  "accepted": {},
+  "held": {},
+  "name": "CRISPR-GEM",
+  "readme": true,
+  "slug": "jog822/CRISPR-GEM"
+ },
+ "croconet": {
+  "accepted": {},
+  "held": {},
+  "name": "CroCoNet",
+  "readme": true,
+  "slug": "Hellmann-Lab/CroCoNet"
+ },
+ "crocs": {
+  "accepted": {},
+  "held": {},
+  "name": "CROCS",
+  "readme": true,
+  "slug": "aLiehrmann/CROCS"
+ },
+ "cshmm-tf": {
+  "accepted": {},
+  "held": {},
+  "name": "CSHMM-TF",
+  "readme": true,
+  "slug": "jessica1338/CSHMM-TF-for-time-series-scRNA-Seq"
+ },
+ "cwords": {
+  "accepted": {},
+  "held": {},
+  "name": "cWords",
+  "readme": true,
+  "slug": "simras/cWords"
+ },
+ "dagbagm": {
+  "accepted": {},
+  "held": {},
+  "name": "DAGBagM",
+  "readme": true,
+  "slug": "jie108/dagbagM"
+ },
+ "damidseq_pipeline": {
+  "accepted": {},
+  "held": {},
+  "name": "damidseq_pipeline",
+  "readme": true,
+  "slug": "owenjm/damidseq_pipeline"
+ },
+ "dataremix": {
+  "accepted": {},
+  "held": {},
+  "name": "DataRemix",
+  "readme": true,
+  "slug": "wgmao/DataRemix"
+ },
+ "dci": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/causaldag.svg/"
+  },
+  "held": {},
+  "name": "DCI",
+  "readme": true,
+  "slug": "uhlerlab/causaldag"
+ },
+ "ddapred": {
+  "accepted": {},
+  "held": {},
+  "name": "DDAPRED",
+  "readme": true,
+  "slug": "nongdaxiaofeng/DDAPRED"
+ },
+ "decoden": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "poetry",
+    "c-compiler"
+   ]
+  },
+  "name": "DecoDen",
+  "readme": true,
+  "slug": "ntanmayee/decoden"
+ },
+ "deconpeaker": {
+  "accepted": {},
+  "held": {},
+  "name": "DeconPeaker",
+  "readme": true,
+  "slug": "lihuamei/DeconPeaker"
+ },
+ "decorate": {
+  "accepted": {},
+  "held": {},
+  "name": "decorate",
+  "readme": true,
+  "slug": "GabrielHoffman/decorate"
+ },
+ "decres": {
+  "accepted": {},
+  "held": {},
+  "name": "DECRES",
+  "readme": true,
+  "slug": "yifeng-li/DECRES"
+ },
+ "dedoc2": {
+  "accepted": {},
+  "held": {},
+  "name": "deDoc2",
+  "readme": true,
+  "slug": "zengguangjie/deDoc2"
+ },
+ "deep-loop": {
+  "accepted": {},
+  "held": {},
+  "name": "Deep-loop",
+  "readme": true,
+  "slug": "linDing-group/Deep-loop"
+ },
+ "deepRAM": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "Prerequisites"
+   ]
+  },
+  "name": "deepRAM",
+  "readme": true,
+  "slug": "MedChaabane/deepRAM"
+ },
+ "deepark": {
+  "accepted": {},
+  "held": {},
+  "name": "DeepArk",
+  "readme": true,
+  "slug": "FunctionLab/DeepArk"
+ },
+ "deepbound": {
+  "accepted": {},
+  "held": {},
+  "name": "DeepBound",
+  "readme": true,
+  "slug": "realbigws/DeepBound"
+ },
+ "deepc": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "pybedtools",
+    "pysam"
+   ]
+  },
+  "name": "deepC",
+  "readme": true,
+  "slug": "rschwess/deepC"
+ },
+ "deepcage": {
+  "accepted": {},
+  "held": {},
+  "name": "DeepCAGE",
+  "readme": true,
+  "slug": "kimmo1019/DeepCAGE"
+ },
+ "deepcyps": {
+  "accepted": {},
+  "held": {},
+  "name": "DEEPCYPs",
+  "readme": true,
+  "slug": "idrugLab/FP-GNN_CYP"
+ },
+ "deepd2v": {
+  "accepted": {},
+  "held": {},
+  "name": "DeepD2V",
+  "readme": true,
+  "slug": "Sparkleiii/DeepD2V"
+ },
+ "deepfun": {
+  "accepted": {},
+  "held": {},
+  "name": "DeepFun",
+  "readme": true,
+  "slug": "bsml320/DeepFun"
+ },
+ "deepg4": {
+  "accepted": {},
+  "held": {
+   "cran": [
+    "keras"
+   ]
+  },
+  "name": "DeepG4",
+  "readme": true,
+  "slug": "morphos30/DeepG4"
+ },
+ "deepgengrep": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "tensorflow-gpu"
+   ]
+  },
+  "name": "DeepGenGrep",
+  "readme": true,
+  "slug": "wx-cie/DeepGenGrep"
+ },
+ "deepgmap": {
+  "accepted": {},
+  "held": {},
+  "name": "DeepGMAP",
+  "readme": true,
+  "slug": "koonimaru/DeepGMAP"
+ },
+ "deepgrn": {
+  "accepted": {},
+  "held": {},
+  "name": "DeepGRN",
+  "readme": true,
+  "slug": "jianlin-cheng/DeepGRN"
+ },
+ "deephlapred": {
+  "accepted": {},
+  "held": {},
+  "name": "DeepHLAPred",
+  "readme": true,
+  "slug": "tangxingyu0/DeepHLApred"
+ },
+ "deeplncpro": {
+  "accepted": {},
+  "held": {},
+  "name": "DeepLncPro",
+  "readme": true,
+  "slug": "zhangtian-yang/DeepLncPro"
+ },
+ "deeplucia": {
+  "accepted": {},
+  "held": {},
+  "name": "DeepLUCIA",
+  "readme": true,
+  "slug": "bcbl-kaist/DeepLUCIA"
+ },
+ "deepmel": {
+  "accepted": {},
+  "held": {},
+  "name": "DeepMEL",
+  "readme": false,
+  "slug": "aertslab/DeepMEL"
+ },
+ "deepmotifsyn": {
+  "accepted": {},
+  "held": {},
+  "name": "DeepMotifSyn",
+  "readme": true,
+  "slug": "JasonLinjc/deepMotifSyn"
+ },
+ "deepmp": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "samtools",
+    "minimap2",
+    "openjdk"
+   ],
+   "pypi": [
+    "ont-tombo",
+    "biopython"
+   ]
+  },
+  "name": "DeepMP",
+  "readme": true,
+  "slug": "pepebonet/DeepMP"
+ },
+ "deepmr": {
+  "accepted": {},
+  "held": {},
+  "name": "DeepMR",
+  "readme": true,
+  "slug": "an1lam/deepmr"
+ },
+ "deepnd": {
+  "accepted": {},
+  "held": {},
+  "name": "DeepND",
+  "readme": true,
+  "slug": "ciceklab/deepnd"
+ },
+ "deeprc": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "dill"
+   ]
+  },
+  "name": "DeepRC",
+  "readme": true,
+  "slug": "ml-jku/DeepRC"
+ },
+ "deepregfinder": {
+  "accepted": {
+   "docker": "https://hub.docker.com/r/aarthir239/deepregfinder"
+  },
+  "held": {},
+  "name": "DeepRegFinder",
+  "readme": true,
+  "slug": "shenlab-sinai/DeepRegFinder"
+ },
+ "deepropre": {
+  "accepted": {},
+  "held": {},
+  "name": "DeeProPre",
+  "readme": true,
+  "slug": "zzwwmmm/DeeProPre"
+ },
+ "deepse": {
+  "accepted": {},
+  "held": {},
+  "name": "DeepSE",
+  "readme": true,
+  "slug": "QiaoyingJi/DeepSE"
+ },
+ "deepselex": {
+  "accepted": {},
+  "held": {},
+  "name": "DeepSELEX",
+  "readme": true,
+  "slug": "OrensteinLab/DeepSELEX"
+ },
+ "deeptools": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/deeptools",
+   "pypi": "https://pypi.org/project/deepTools/"
+  },
+  "held": {},
+  "name": "DeepTools",
+  "readme": true,
+  "slug": "deeptools/deepTools"
+ },
+ "deeptss": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "bedtools",
+    "samtools"
+   ],
+   "pypi": [
+    "pyBigWig",
+    "tensorflow-gpu",
+    "keras"
+   ]
+  },
+  "name": "DeepTSS",
+  "readme": true,
+  "slug": "DianaLaboratory/DeepTSS"
+ },
+ "deerect-tss": {
+  "accepted": {},
+  "held": {},
+  "name": "DeeReCT-TSS",
+  "readme": true,
+  "slug": "JoshuaChou2018/DeeReCT-TSS_release"
+ },
+ "delila-py": {
+  "accepted": {
+   "docker": "https://hub.docker.com/r/glbrc/delila"
+  },
+  "held": {},
+  "name": "Delila-PY",
+  "readme": true,
+  "slug": "GLBRC/delila"
+ },
+ "depicter-promotor": {
+  "accepted": {},
+  "held": {},
+  "name": "Depicter",
+  "readme": true,
+  "slug": "zhuyaner/Depicter"
+ },
+ "destin2": {
+  "accepted": {},
+  "held": {},
+  "name": "Destin2",
+  "readme": true,
+  "slug": "yuchaojiang/Destin2"
+ },
+ "dgw": {
+  "accepted": {},
+  "held": {},
+  "name": "DGW",
+  "readme": true,
+  "slug": "lukauskas/dgw"
+ },
+ "diane": {
+  "accepted": {},
+  "held": {
+   "docker": [
+    "rocker/shiny"
+   ]
+  },
+  "name": "DIANE",
+  "readme": true,
+  "slug": "OceaneCsn/DIANE"
+ },
+ "diffchipl": {
+  "accepted": {},
+  "held": {},
+  "name": "DiffChIPL",
+  "readme": true,
+  "slug": "yancychy/DiffChIPL"
+ },
+ "diffreps": {
+  "accepted": {},
+  "held": {},
+  "name": "diffReps",
+  "readme": true,
+  "slug": "shenlab-sinai/diffreps"
+ },
+ "dimelo-seq": {
+  "accepted": {},
+  "held": {},
+  "name": "DiMeLo-seq",
+  "readme": true,
+  "slug": "amaslan/dimelo-seq"
+ },
+ "dimpl": {
+  "accepted": {
+   "docker": "https://hub.docker.com/r/breakerlab/dimpl"
+  },
+  "held": {},
+  "name": "DIMPL",
+  "readme": true,
+  "slug": "breakerlab/dimpl"
+ },
+ "dinamo": {
+  "accepted": {},
+  "held": {},
+  "name": "DiNAMO",
+  "readme": true,
+  "slug": "bonsai-team/DiNAMO"
+ },
+ "discrover": {
+  "accepted": {},
+  "held": {},
+  "name": "discrover",
+  "readme": true,
+  "slug": "maaskola/discrover"
+ },
+ "dloopcaller": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "hic-straw"
+   ]
+  },
+  "name": "DLoopCaller",
+  "readme": true,
+  "slug": "wangguoguoa/DLoopCaller"
+ },
+ "dmchmm": {
+  "accepted": {},
+  "held": {},
+  "name": "DMCHMM",
+  "readme": false,
+  "slug": "shokoohi/DMCHMM"
+ },
+ "dmrscaler": {
+  "accepted": {},
+  "held": {},
+  "name": "DMRscaler",
+  "readme": true,
+  "slug": "leroybondhus/DMRscaler"
+ },
+ "dnabert": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "pytorch"
+   ]
+  },
+  "name": "DNABERT",
+  "readme": true,
+  "slug": "jerryji1993/DNABERT"
+ },
+ "dnacycp": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/DNAcycP2/"
+  },
+  "held": {},
+  "name": "DNAcycP",
+  "readme": true,
+  "slug": "jipingw/DNAcycP2"
+ },
+ "dnaffinity": {
+  "accepted": {},
+  "held": {},
+  "name": "DNAffinity",
+  "readme": true,
+  "slug": "Jalbiti/DNAffinity"
+ },
+ "dnalongbench": {
+  "accepted": {},
+  "held": {},
+  "name": "DNALONGBENCH",
+  "readme": true,
+  "slug": "ma-compbio/DNALONGBENCH"
+ },
+ "dnashapedtfbs": {
+  "accepted": {},
+  "held": {},
+  "name": "DNAshapedTFBS",
+  "readme": true,
+  "slug": "amathelier/DNAshapedTFBS"
+ },
+ "domino_web-server": {
+  "accepted": {},
+  "held": {},
+  "name": "DOMINO",
+  "readme": true,
+  "slug": "Shamir-Lab/domino_web"
+ },
+ "dragon": {
+  "accepted": {},
+  "held": {},
+  "name": "DRAGON",
+  "readme": true,
+  "slug": "katehoffshutta/DRAGON-TCGA-BRCA"
+ },
+ "dreg-pathway": {
+  "accepted": {
+   "docker": "https://hub.docker.com/r/biohpc/dreg"
+  },
+  "held": {},
+  "name": "dREG",
+  "readme": true,
+  "slug": "Danko-Lab/dREG"
+ },
+ "drivergroup": {
+  "accepted": {},
+  "held": {},
+  "name": "DriverGroup",
+  "readme": true,
+  "slug": "pvvhoang/DriverGroup"
+ },
+ "driverpower": {
+  "accepted": {},
+  "held": {},
+  "name": "DriverPower",
+  "readme": true,
+  "slug": "smshuai/DriverPower"
+ },
+ "dsac": {
+  "accepted": {},
+  "held": {},
+  "name": "DSAC",
+  "readme": true,
+  "slug": "YuBinLab-QUST/DSAC"
+ },
+ "dsbs": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "termcolor",
+    "pyfasta"
+   ]
+  },
+  "name": "DSBS",
+  "readme": true,
+  "slug": "tianguolangzi/DSBS"
+ },
+ "dynugene": {
+  "accepted": {
+   "cran": "https://cran.r-project.org/package=dynUGENE"
+  },
+  "held": {
+   "bioconductor": [
+    "release"
+   ]
+  },
+  "name": "dynUGENE",
+  "readme": true,
+  "slug": "tianyu-lu/dynUGENE"
+ },
+ "eagle-enhancer": {
+  "accepted": {},
+  "held": {},
+  "name": "EAGLE",
+  "readme": true,
+  "slug": "EvansGao/EAGLE"
+ },
+ "eat-uptf": {
+  "accepted": {},
+  "held": {},
+  "name": "EAT-UpTF",
+  "readme": true,
+  "slug": "sangreashim/EAT-UpTF"
+ },
+ "echolocator": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "biomaRt.html",
+    "MotifDb.html",
+    "regioneR.html"
+   ],
+   "cran": [
+    "haploR"
+   ]
+  },
+  "name": "echolocatoR",
+  "readme": true,
+  "slug": "RajLabMSSM/echolocatoR"
+ },
+ "ectracker": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "Package_name",
+    "karyoploteR"
+   ]
+  },
+  "name": "EcTracker",
+  "readme": true,
+  "slug": "the-ahuja-lab/EcTracker"
+ },
+ "element_2023": {
+  "accepted": {},
+  "held": {},
+  "name": "ElemeNT 2023",
+  "readme": true,
+  "slug": "OritAdato/ElemeNT"
+ },
+ "eliater": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/eliater/"
+  },
+  "held": {},
+  "name": "Eliater",
+  "readme": true,
+  "slug": "y0-causal-inference/eliater"
+ },
+ "eltetrado": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "mmcif"
+   ]
+  },
+  "name": "ElTetrado",
+  "readme": true,
+  "slug": "tzok/eltetrado"
+ },
+ "engrain": {
+  "accepted": {},
+  "held": {},
+  "name": "EnGRaiN",
+  "readme": true,
+  "slug": "AluruLab/EnGRaiN"
+ },
+ "enhancer-lstmatt": {
+  "accepted": {},
+  "held": {},
+  "name": "Enhancer-LSTMAtt",
+  "readme": true,
+  "slug": "feng-123/Enhancer-LSTMAtt"
+ },
+ "enhancer_mdlf": {
+  "accepted": {},
+  "held": {},
+  "name": "Enhancer-MDLF",
+  "readme": true,
+  "slug": "HaoWuLab-Bioinformatics/Enhancer-MDLF"
+ },
+ "epiScanpy": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/episcanpy/"
+  },
+  "held": {},
+  "name": "epiScanpy",
+  "readme": true,
+  "slug": "colomemaria/epiScanpy"
+ },
+ "epic2": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/epic2",
+   "pypi": "https://pypi.org/project/epic2/"
+  },
+  "held": {},
+  "name": "epic2",
+  "readme": true,
+  "slug": "biocore-ntnu/epic2"
+ },
+ "epicarousel": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/epicarousel/"
+  },
+  "held": {},
+  "name": "EpiCarousel",
+  "readme": true,
+  "slug": "biox-nku/epicarousel"
+ },
+ "epicompare_r": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/EpiCompare/"
+  },
+  "held": {},
+  "name": "EpiCompare",
+  "readme": true,
+  "slug": "neurogenomics/EpiCompare"
+ },
+ "epiconv": {
+  "accepted": {},
+  "held": {},
+  "name": "epiConv",
+  "readme": true,
+  "slug": "LiLin-biosoft/epiConv"
+ },
+ "epimolas": {
+  "accepted": {},
+  "held": {},
+  "name": "EpiMOLAS",
+  "readme": true,
+  "slug": "markchiang/EPI-MOLAS"
+ },
+ "epiregio": {
+  "accepted": {},
+  "held": {},
+  "name": "EpiRegio",
+  "readme": true,
+  "slug": "TeamRegio/EpiRegioDB"
+ },
+ "epiromics": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/epiRomics/"
+  },
+  "held": {},
+  "name": "epiRomics",
+  "readme": true,
+  "slug": "Huising-Lab/epiRomics"
+ },
+ "episcore": {
+  "accepted": {},
+  "held": {},
+  "name": "EPISCORE",
+  "readme": true,
+  "slug": "aet21/EpiSCORE"
+ },
+ "epivia": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/epiVIA/"
+  },
+  "held": {},
+  "name": "EpiVIA",
+  "readme": true,
+  "slug": "VahediLab/epiVIA"
+ },
+ "epoch": {
+  "accepted": {},
+  "held": {},
+  "name": "Epoch",
+  "readme": true,
+  "slug": "pcahan1/epoch"
+ },
+ "eqtlmapt": {
+  "accepted": {},
+  "held": {},
+  "name": "eQTLMAPT",
+  "readme": true,
+  "slug": "QidiPeng/eQTLMAPT"
+ },
+ "eqtlsingle": {
+  "accepted": {},
+  "held": {},
+  "name": "eQTLsingle",
+  "readme": true,
+  "slug": "horsedayday/eQTLsingle"
+ },
+ "ermer": {
+  "accepted": {},
+  "held": {},
+  "name": "ERMer",
+  "readme": true,
+  "slug": "tibbdc/ermer"
+ },
+ "esatac": {
+  "accepted": {},
+  "held": {},
+  "name": "esATAC",
+  "readme": false,
+  "slug": "wzthu/esATAC"
+ },
+ "esearch3d": {
+  "accepted": {},
+  "held": {},
+  "name": "Esearch3D",
+  "readme": true,
+  "slug": "InfOmics/Esearch3D"
+ },
+ "etenlnc": {
+  "accepted": {
+   "docker": "https://hub.docker.com/r/prangannath/etenlnc"
+  },
+  "held": {},
+  "name": "ETENLNC",
+  "readme": true,
+  "slug": "EvolOMICS-TU/ETENLNC"
+ },
+ "evoaug": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/evoaug/"
+  },
+  "held": {},
+  "name": "EvoAug",
+  "readme": true,
+  "slug": "p-koo/evoaug"
+ },
+ "evoaug_tf": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/evoaug-tf/"
+  },
+  "held": {},
+  "name": "EvoAug-TF",
+  "readme": true,
+  "slug": "p-koo/evoaug-tf"
+ },
+ "exodiversity": {
+  "accepted": {},
+  "held": {},
+  "name": "ExoDiversity",
+  "readme": true,
+  "slug": "NarlikarLab/exoDIVERSITY"
+ },
+ "expansion-network": {
+  "accepted": {},
+  "held": {
+   "cran": [
+    "QCA",
+    "XML",
+    "igraph"
+   ],
+   "pypi": [
+    "z3-solver",
+    "python-igraph"
+   ]
+  },
+  "name": "expansion-network",
+  "readme": true,
+  "slug": "regulomics/expansion-network"
+ },
+ "express": {
+  "accepted": {},
+  "held": {},
+  "name": "eXpress",
+  "readme": true,
+  "slug": "adarob/eXpress-d"
+ },
+ "expresso": {
+  "accepted": {},
+  "held": {},
+  "name": "Expresso",
+  "readme": true,
+  "slug": "doaa-altarawy/Expresso"
+ },
+ "ezgeno": {
+  "accepted": {},
+  "held": {},
+  "name": "ezGeno",
+  "readme": true,
+  "slug": "ailabstw/ezGeno"
+ },
+ "f-seq": {
+  "accepted": {},
+  "held": {},
+  "name": "F-seq",
+  "readme": true,
+  "slug": "aboyle/F-seq"
+ },
+ "fact-seq": {
+  "accepted": {},
+  "held": {},
+  "name": "FACT-seq",
+  "readme": true,
+  "slug": "pengweixing/FACT"
+ },
+ "fastsk": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/fastsk/"
+  },
+  "held": {},
+  "name": "FastSK",
+  "readme": true,
+  "slug": "QData/FastSK"
+ },
+ "fasttenet": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/fasttenet/"
+  },
+  "held": {
+   "conda": [
+    "pytorch",
+    "cupy"
+   ]
+  },
+  "name": "FastTENET",
+  "readme": true,
+  "slug": "cxinsys/fasttenet"
+ },
+ "fccac": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "devel"
+   ],
+   "conda": [
+    "bioconductor-fccac"
+   ]
+  },
+  "name": "fCCAC",
+  "readme": true,
+  "slug": "pmb59/fCCAC"
+ },
+ "fcngru": {
+  "accepted": {},
+  "held": {},
+  "name": "FCNGRU",
+  "readme": true,
+  "slug": "wangguoguoa/FCNGRU"
+ },
+ "fcscan": {
+  "accepted": {},
+  "held": {},
+  "name": "fcScan",
+  "readme": true,
+  "slug": "pkhoueiry/fcScan"
+ },
+ "filer": {
+  "accepted": {},
+  "held": {},
+  "name": "FILER",
+  "readme": true,
+  "slug": "pkuksa/FILER_giggle"
+ },
+ "find-tfbs": {
+  "accepted": {},
+  "held": {},
+  "name": "find-tfbs",
+  "readme": true,
+  "slug": "Helkafen/find-tfbs"
+ },
+ "findit2": {
+  "accepted": {},
+  "held": {},
+  "name": "FindIT2",
+  "readme": true,
+  "slug": "shangguandong1996/FindIT2_paper_relatedCode"
+ },
+ "finsurf": {
+  "accepted": {},
+  "held": {},
+  "name": "FINSURF",
+  "readme": true,
+  "slug": "DyogenIBENS/FINSURF"
+ },
+ "fivex": {
+  "accepted": {},
+  "held": {},
+  "name": "FIVEx",
+  "readme": true,
+  "slug": "statgen/fivex"
+ },
+ "flexflux": {
+  "accepted": {},
+  "held": {},
+  "name": "FlexFlux",
+  "readme": true,
+  "slug": "lmarmiesse/FlexFlux"
+ },
+ "flnc": {
+  "accepted": {},
+  "held": {},
+  "name": "Flnc",
+  "readme": true,
+  "slug": "CZhouLab/Flnc"
+ },
+ "flyode": {
+  "accepted": {},
+  "held": {},
+  "name": "FLyOde",
+  "readme": true,
+  "slug": "begum-alaybeyoglu/FlyOde"
+ },
+ "forge2": {
+  "accepted": {},
+  "held": {},
+  "name": "FORGE2",
+  "readme": true,
+  "slug": "charlesbreeze/FORGE2"
+ },
+ "funpart": {
+  "accepted": {},
+  "held": {},
+  "name": "FunPart",
+  "readme": true,
+  "slug": "BarlierC/FunPart"
+ },
+ "g4snvhunter": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/G4SNVHunter/"
+  },
+  "held": {},
+  "name": "G4SNVHunter",
+  "readme": true,
+  "slug": "rongxinzh/G4SNVHunter"
+ },
+ "gcapc": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/gcapc/"
+  },
+  "held": {},
+  "name": "gcapc",
+  "readme": true,
+  "slug": "tengmx/gcapc"
+ },
+ "gcmodeller": {
+  "accepted": {
+   "docker": "https://hub.docker.com/r/xieguigang/gcmodeller-env"
+  },
+  "held": {},
+  "name": "GCModeller",
+  "readme": true,
+  "slug": "SMRUCC/GCModeller"
+ },
+ "gcsenet": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "networkx"
+   ]
+  },
+  "name": "GCSENet",
+  "readme": true,
+  "slug": "Appleabc123/GCSENet"
+ },
+ "gdesigner": {
+  "accepted": {},
+  "held": {},
+  "name": "gDesigner",
+  "readme": true,
+  "slug": "jmacdona/gDesigner"
+ },
+ "geees": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "EnsDb.Hsapiens.v86",
+    "biovizBase",
+    "Seurat"
+   ],
+   "cran": [
+    "pbapply"
+   ]
+  },
+  "name": "GEEES",
+  "readme": true,
+  "slug": "keleslab/GEEES"
+ },
+ "genavos": {
+  "accepted": {},
+  "held": {},
+  "name": "GENAVOS",
+  "readme": true,
+  "slug": "hanif-y/GENAVOS"
+ },
+ "geneci": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/GENECI/"
+  },
+  "held": {},
+  "name": "GENECI",
+  "readme": true,
+  "slug": "AdrianSeguraOrtiz/GENECI"
+ },
+ "genedmrs": {
+  "accepted": {},
+  "held": {},
+  "name": "GeneDMRs",
+  "readme": true,
+  "slug": "xiaowangCN/GeneDMRs"
+ },
+ "genelink_scRNAseq": {
+  "accepted": {},
+  "held": {},
+  "name": "GENELink",
+  "readme": true,
+  "slug": "zpliulab/GENELink"
+ },
+ "genextender": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/geneXtendeR/"
+  },
+  "held": {},
+  "name": "geneXtendeR",
+  "readme": true,
+  "slug": "Bohdan-Khomtchouk/geneXtendeR"
+ },
+ "genie3": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "GENIE3.html"
+   ],
+   "cran": [
+    "randomForest"
+   ]
+  },
+  "name": "GENIE3",
+  "readme": true,
+  "slug": "vahuynh/GENIE3"
+ },
+ "genogam": {
+  "accepted": {},
+  "held": {},
+  "name": "GenoGAM",
+  "readme": true,
+  "slug": "gstricker/GenoGAM"
+ },
+ "genomesidekick": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "release"
+   ],
+   "cran": [
+    "ggplot2"
+   ]
+  },
+  "name": "genomeSidekick",
+  "readme": true,
+  "slug": "dchapski/genomeSidekick"
+ },
+ "genomictools": {
+  "accepted": {},
+  "held": {},
+  "name": "GenomicTools",
+  "readme": true,
+  "slug": "tsirigos/ibm-cbc-genomic-tools"
+ },
+ "genova": {
+  "accepted": {},
+  "held": {},
+  "name": "GENOVA",
+  "readme": true,
+  "slug": "dewitlab/GENOVA"
+ },
+ "ggmotif": {
+  "accepted": {},
+  "held": {},
+  "name": "ggmotif",
+  "readme": true,
+  "slug": "lixiang117423/ggmotif"
+ },
+ "gimmemotifs": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/gimmemotifs",
+   "pypi": "https://pypi.org/project/gimmemotifs.svg/"
+  },
+  "held": {},
+  "name": "GimmeMotifs",
+  "readme": true,
+  "slug": "simonvh/gimmemotifs"
+ },
+ "gkm-SVM / LS-GKM": {
+  "accepted": {},
+  "held": {},
+  "name": "gkm-SVM / LS-GKM",
+  "readme": true,
+  "slug": "Dongwon-Lee/lsgkm"
+ },
+ "gm_gcn": {
+  "accepted": {},
+  "held": {},
+  "name": "GM-GCN",
+  "readme": true,
+  "slug": "weiba/GM-GCN"
+ },
+ "gnet2": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "devel"
+   ]
+  },
+  "name": "GNET2",
+  "readme": true,
+  "slug": "jianlin-cheng/GNET2"
+ },
+ "gniplr": {
+  "accepted": {},
+  "held": {},
+  "name": "GNIPLR",
+  "readme": true,
+  "slug": "zyllluck/GNIPLR"
+ },
+ "gnocis": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/gnocis/"
+  },
+  "held": {},
+  "name": "Gnocis",
+  "readme": true,
+  "slug": "bjornbredesen/gnocis"
+ },
+ "goegcn": {
+  "accepted": {},
+  "held": {},
+  "name": "GOEGCN",
+  "readme": true,
+  "slug": "yxchspring/GOEGCN_BRCA_Subtypes"
+ },
+ "gopeaks": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/gopeaks"
+  },
+  "held": {},
+  "name": "GoPeaks",
+  "readme": true,
+  "slug": "maxsonBraunLab/gopeaks"
+ },
+ "gpro": {
+  "accepted": {},
+  "held": {},
+  "name": "GPro",
+  "readme": true,
+  "slug": "WangLabTHU/GPro"
+ },
+ "gpsmatch": {
+  "accepted": {},
+  "held": {
+   "cran": [
+    "data.table",
+    "tidyverse",
+    "rlang"
+   ]
+  },
+  "name": "GPSmatch",
+  "readme": true,
+  "slug": "Bao-Lab/GPSmatch"
+ },
+ "gpumotif": {
+  "accepted": {},
+  "held": {},
+  "name": "GPUmotif",
+  "readme": true,
+  "slug": "emorybiostat/GPUmotif"
+ },
+ "gpuzoo": {
+  "accepted": {},
+  "held": {},
+  "name": "gpuZoo",
+  "readme": true,
+  "slug": "QuackenbushLab/gpuzoo"
+ },
+ "grafimo": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/grafimo",
+   "docker": "https://hub.docker.com/r/pinellolab/grafimo",
+   "pypi": "https://pypi.org/project/grafimo/"
+  },
+  "held": {},
+  "name": "GRAFIMO",
+  "readme": true,
+  "slug": "pinellolab/GRAFIMO"
+ },
+ "grand-database": {
+  "accepted": {},
+  "held": {},
+  "name": "GRAND",
+  "readme": true,
+  "slug": "QuackenbushLab/grand"
+ },
+ "graphreg": {
+  "accepted": {},
+  "held": {},
+  "name": "GraphReg",
+  "readme": true,
+  "slug": "karbalayghareh/GraphReg"
+ },
+ "graphsim": {
+  "accepted": {
+   "cran": "https://cran.r-project.org/package=graphsim"
+  },
+  "held": {},
+  "name": "graphsim",
+  "readme": true,
+  "slug": "TomKellyGenetics/graphsim"
+ },
+ "graphsite": {
+  "accepted": {},
+  "held": {},
+  "name": "GraphSite",
+  "readme": true,
+  "slug": "biomed-AI/GraphSite"
+ },
+ "graphtgi": {
+  "accepted": {},
+  "held": {},
+  "name": "GraphTGI",
+  "readme": true,
+  "slug": "YanghanWu/GraphTGI"
+ },
+ "greap": {
+  "accepted": {},
+  "held": {},
+  "name": "GREAP",
+  "readme": false,
+  "slug": "yangyongsan-bio/GREAP"
+ },
+ "green-db": {
+  "accepted": {},
+  "held": {},
+  "name": "GREEN-DB",
+  "readme": true,
+  "slug": "edg1983/GREEN-VARAN"
+ },
+ "greenscreen": {
+  "accepted": {
+   "docker": "https://hub.docker.com/r/sklasfeld/greenscreen"
+  },
+  "held": {},
+  "name": "greenscreen",
+  "readme": true,
+  "slug": "sklasfeld/GreenscreenProject"
+ },
+ "greg": {
+  "accepted": {},
+  "held": {},
+  "name": "GREG",
+  "readme": true,
+  "slug": "mora-lab/GREG"
+ },
+ "grelu": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/gReLU/"
+  },
+  "held": {
+   "conda": [
+    "cudatoolkit-dev",
+    "bioconda"
+   ]
+  },
+  "name": "gReLU",
+  "readme": true,
+  "slug": "Genentech/gReLU"
+ },
+ "grema": {
+  "accepted": {},
+  "held": {},
+  "name": "GREMA",
+  "readme": true,
+  "slug": "NctuICLab/GREMA"
+ },
+ "grgmf": {
+  "accepted": {},
+  "held": {},
+  "name": "GRGMF",
+  "readme": true,
+  "slug": "happyalfred2016/GRGMF"
+ },
+ "grgnn": {
+  "accepted": {},
+  "held": {},
+  "name": "GRGNN",
+  "readme": true,
+  "slug": "juexinwang/GRGNN"
+ },
+ "grinch": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "gsl"
+   ]
+  },
+  "name": "GRiNCH",
+  "readme": true,
+  "slug": "Roy-lab/grinch"
+ },
+ "grins": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/grins/"
+  },
+  "held": {},
+  "name": "GRiNS",
+  "readme": true,
+  "slug": "MoltenEcdysone09/GRiNS"
+ },
+ "grisli": {
+  "accepted": {},
+  "held": {},
+  "name": "GRISLI",
+  "readme": true,
+  "slug": "PCAubin/GRISLI"
+ },
+ "grn-transformer": {
+  "accepted": {},
+  "held": {},
+  "name": "GRN-transformer",
+  "readme": true,
+  "slug": "HantaoShu/GRN-Transformer"
+ },
+ "grnsight": {
+  "accepted": {},
+  "held": {},
+  "name": "GRNsight",
+  "readme": true,
+  "slug": "dondi/GRNsight"
+ },
+ "grnular": {
+  "accepted": {},
+  "held": {},
+  "name": "GRNUlar",
+  "readme": true,
+  "slug": "Harshs27/GRNUlar"
+ },
+ "grrann": {
+  "accepted": {},
+  "held": {},
+  "name": "GRRANN",
+  "readme": true,
+  "slug": "kangtianyu/GRRANN"
+ },
+ "gtftools": {
+  "accepted": {},
+  "held": {},
+  "name": "GTFtools",
+  "readme": true,
+  "slug": "RacconC/gtftools"
+ },
+ "guidingnet": {
+  "accepted": {},
+  "held": {},
+  "name": "GuidingNet",
+  "readme": true,
+  "slug": "AMSSwanglab/GuidingNet"
+ },
+ "h4hichip-peaks": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/hichip-peaks/"
+  },
+  "held": {},
+  "name": "h4HiChIP-Peaks",
+  "readme": true,
+  "slug": "ChenfuShi/HiChIP_peaks"
+ },
+ "haforest": {
+  "accepted": {},
+  "held": {},
+  "name": "HaForest",
+  "readme": false,
+  "slug": "yangyn533/HaForest"
+ },
+ "haystack": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/haystack_bio",
+   "docker": "https://hub.docker.com/r/pinellolab/haystack_bio"
+  },
+  "held": {},
+  "name": "Haystack",
+  "readme": true,
+  "slug": "pinellolab/haystack_bio"
+ },
+ "hba-deals": {
+  "accepted": {},
+  "held": {},
+  "name": "HBA-DEALS",
+  "readme": true,
+  "slug": "TheJacksonLaboratory/HBA-DEALS"
+ },
+ "hera": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/hera"
+  },
+  "held": {},
+  "name": "HeRA",
+  "readme": true,
+  "slug": "bioturing/hera"
+ },
+ "hgetgi": {
+  "accepted": {},
+  "held": {},
+  "name": "HGETGI",
+  "readme": true,
+  "slug": "PGTSING/HGETGI"
+ },
+ "hgv_pass": {
+  "accepted": {},
+  "held": {},
+  "name": "hgv_pass",
+  "readme": true,
+  "slug": "galaxyproject/galaxy"
+ },
+ "hiloop": {
+  "accepted": {},
+  "held": {},
+  "name": "HiLoop",
+  "readme": true,
+  "slug": "BenNordick/HiLoop"
+ },
+ "hippie": {
+  "accepted": {},
+  "held": {},
+  "name": "HIPPIE",
+  "readme": true,
+  "slug": "yihchii/hippie"
+ },
+ "histonehmm": {
+  "accepted": {},
+  "held": {},
+  "name": "histoneHMM",
+  "readme": true,
+  "slug": "matthiasheinig/histoneHMM"
+ },
+ "histrader": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/histrader/"
+  },
+  "held": {},
+  "name": "HisTrader",
+  "readme": true,
+  "slug": "SvenBaileyLab/Histrader"
+ },
+ "hot_scan": {
+  "accepted": {},
+  "held": {},
+  "name": "hot_scan",
+  "readme": true,
+  "slug": "itojal/hot_scan"
+ },
+ "hotnet": {
+  "accepted": {},
+  "held": {},
+  "name": "HotNet",
+  "readme": true,
+  "slug": "raphael-group/hotnet"
+ },
+ "hpeak": {
+  "accepted": {},
+  "held": {},
+  "name": "HPeak",
+  "readme": true,
+  "slug": "cauyrd/HPeak"
+ },
+ "hreg-cncc": {
+  "accepted": {},
+  "held": {},
+  "name": "hReg-CNCC",
+  "readme": true,
+  "slug": "AMSSwanglab/hReg-CNCC"
+ },
+ "hsmotifdiscover": {
+  "accepted": {},
+  "held": {},
+  "name": "HSMotifDiscover",
+  "readme": true,
+  "slug": "bioinfoDZ/HSMotifDiscover"
+ },
+ "human-scatac-corpus": {
+  "accepted": {},
+  "held": {},
+  "name": "Human-scATAC-Corpus",
+  "readme": true,
+  "slug": "xy-chen16/Human-scATAC-Corpus"
+ },
+ "hyperchip": {
+  "accepted": {
+   "cran": "https://cran.r-project.org/package=MAnorm2"
+  },
+  "held": {
+   "pypi": [
+    "MACS"
+   ]
+  },
+  "name": "HyperChIP",
+  "readme": true,
+  "slug": "tushiqi/MAnorm2"
+ },
+ "iDHS-DMCAC": {
+  "accepted": {},
+  "held": {},
+  "name": "iDHS-DMCAC",
+  "readme": true,
+  "slug": "shengli0201/Datasets"
+ },
+ "iEnhancer-ECNN": {
+  "accepted": {},
+  "held": {},
+  "name": "iEnhancer-ECNN",
+  "readme": true,
+  "slug": "ngphubinh/enhancers"
+ },
+ "icgec": {
+  "accepted": {},
+  "held": {},
+  "name": "ICGEC",
+  "readme": true,
+  "slug": "FionaTJ/ICGEC"
+ },
+ "ichromo": {
+  "accepted": {},
+  "held": {},
+  "name": "ChroMo",
+  "readme": true,
+  "slug": "danilexn/chromo"
+ },
+ "icn": {
+  "accepted": {},
+  "held": {},
+  "name": "ICN",
+  "readme": true,
+  "slug": "qwu1221/ICN"
+ },
+ "icodon": {
+  "accepted": {},
+  "held": {},
+  "name": "iCodon",
+  "readme": true,
+  "slug": "santiago1234/iCodon"
+ },
+ "icyp-mfe": {
+  "accepted": {},
+  "held": {},
+  "name": "iCYP-MFE",
+  "readme": true,
+  "slug": "mldlproject/2021-iCYP-MFE"
+ },
+ "iddn": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/iddn/"
+  },
+  "held": {},
+  "name": "iDDN",
+  "readme": true,
+  "slug": "cbil-vt/iDDN"
+ },
+ "idirect": {
+  "accepted": {},
+  "held": {},
+  "name": "iDIRECT",
+  "readme": true,
+  "slug": "nxiao6gt/iDIRECT"
+ },
+ "idna-abf": {
+  "accepted": {},
+  "held": {},
+  "name": "iDNA-ABF",
+  "readme": true,
+  "slug": "FakeEnd/iDNA_ABF"
+ },
+ "ienhancer-dcla": {
+  "accepted": {},
+  "held": {},
+  "name": "iEnhancer-DCLA",
+  "readme": true,
+  "slug": "WamesM/iEnhancer-DCLA"
+ },
+ "ienhancer-kl": {
+  "accepted": {},
+  "held": {},
+  "name": "iEnhancer-KL",
+  "readme": true,
+  "slug": "Not-so-middle/iEnhancer-KL"
+ },
+ "ienhancer-rd": {
+  "accepted": {},
+  "held": {},
+  "name": "iEnhancer-RD",
+  "readme": true,
+  "slug": "YangHuan639/iEnhancer-RD"
+ },
+ "iflnc": {
+  "accepted": {},
+  "held": {},
+  "name": "iFlnc",
+  "readme": true,
+  "slug": "CZhouLab/Flnc"
+ },
+ "iform": {
+  "accepted": {},
+  "held": {},
+  "name": "iFORM",
+  "readme": true,
+  "slug": "wenjiegroup/iFORM"
+ },
+ "ihmnbs": {
+  "accepted": {},
+  "held": {},
+  "name": "iHMnBS",
+  "readme": true,
+  "slug": "lennylv/iHMnBS"
+ },
+ "imaging-amaretto": {
+  "accepted": {},
+  "held": {},
+  "name": "Imaging-AMARETTO",
+  "readme": true,
+  "slug": "broadinstitute/ImagingAMARETTO"
+ },
+ "imi-driver": {
+  "accepted": {},
+  "held": {},
+  "name": "IMI-driver",
+  "readme": true,
+  "slug": "coding0lion/IMI-Driver"
+ },
+ "imotifbreakr": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "MotIV.html",
+    "release"
+   ]
+  },
+  "name": "motifbreakR",
+  "readme": true,
+  "slug": "Simon-Coetzee/motifbreakR"
+ },
+ "improving_reliability_methylation": {
+  "accepted": {},
+  "held": {},
+  "name": "ont-methylation",
+  "readme": true,
+  "slug": "rki-mf1/ont-methylation"
+ },
+ "inferloop": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "monocle.html"
+   ]
+  },
+  "name": "InferLoop",
+  "readme": true,
+  "slug": "jumphone/inferloop"
+ },
+ "inpherno-chip": {
+  "accepted": {},
+  "held": {},
+  "name": "InPheRNo-ChIP",
+  "readme": true,
+  "slug": "Emad-COMBINE-lab/InPheRNo-ChIP"
+ },
+ "ipro-gan": {
+  "accepted": {},
+  "held": {},
+  "name": "iPro-GAN",
+  "readme": true,
+  "slug": "Bovbene/iPro-GAN"
+ },
+ "ipro-wael": {
+  "accepted": {},
+  "held": {},
+  "name": "iPro-WAEL",
+  "readme": true,
+  "slug": "HaoWuLab-Bioinformatics/iPro-WAEL"
+ },
+ "iprom-sigma54": {
+  "accepted": {},
+  "held": {},
+  "name": "iProm-Sigma54",
+  "readme": true,
+  "slug": "Shujaatmalik/iProm-Sigma54"
+ },
+ "ipromoter-5mc": {
+  "accepted": {},
+  "held": {},
+  "name": "iPromoter-5mC",
+  "readme": true,
+  "slug": "zlwuxi/iPromoter-5mC"
+ },
+ "ipromoter-seqvec": {
+  "accepted": {},
+  "held": {},
+  "name": "iPromoter-Seqvec",
+  "readme": true,
+  "slug": "mldlproject/2022-iPromoter-Seqvec"
+ },
+ "irena": {
+  "accepted": {},
+  "held": {},
+  "name": "IReNA",
+  "readme": true,
+  "slug": "jiang-junyao/IReNA"
+ },
+ "iris3": {
+  "accepted": {},
+  "held": {},
+  "name": "IRIS3",
+  "readme": true,
+  "slug": "OSU-BMBL/IRIS3"
+ },
+ "iscdnase-seq": {
+  "accepted": {},
+  "held": {},
+  "name": "iscDNase-seq",
+  "readme": true,
+  "slug": "wailimku/iscDNase-seq"
+ },
+ "ischip": {
+  "accepted": {},
+  "held": {},
+  "name": "isChIP",
+  "readme": true,
+  "slug": "fnaumenko/isChIP"
+ },
+ "ispace-log": {
+  "accepted": {},
+  "held": {},
+  "name": "ispace-log",
+  "readme": true,
+  "slug": "wuqian77/SpaceLog"
+ },
+ "itihi": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "Tihi-spectral-fitter"
+   ]
+  },
+  "name": "Tihi Toolkit",
+  "readme": true,
+  "slug": "kyunghoon-han/tihi"
+ },
+ "ivea": {
+  "accepted": {},
+  "held": {},
+  "name": "IVEA",
+  "readme": true,
+  "slug": "yasumasak/ivea"
+ },
+ "jamm": {
+  "accepted": {},
+  "held": {},
+  "name": "JAMM",
+  "readme": true,
+  "slug": "mahmoudibrahim/jamm"
+ },
+ "janggu": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/janggu/"
+  },
+  "held": {},
+  "name": "Janggu",
+  "readme": true,
+  "slug": "BIMSBbioinfo/janggu"
+ },
+ "jaspar": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/pyjaspar",
+   "pypi": "https://pypi.org/project/pyjaspar/"
+  },
+  "held": {},
+  "name": "JASPAR",
+  "readme": true,
+  "slug": "asntech/pyjaspar"
+ },
+ "jaspar_api": {
+  "accepted": {},
+  "held": {},
+  "name": "JASPAR RESTful API",
+  "readme": true,
+  "slug": "asntech/jaspar"
+ },
+ "jfuzzymachine": {
+  "accepted": {},
+  "held": {},
+  "name": "JFuzzyMachine",
+  "readme": true,
+  "slug": "paiyetan/jfuzzymachine"
+ },
+ "juxtapose": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "gensim",
+    "seaborn"
+   ]
+  },
+  "name": "Juxtapose",
+  "readme": true,
+  "slug": "klovens/juxtapose"
+ },
+ "kapac": {
+  "accepted": {},
+  "held": {
+   "cran": [
+    "optparse"
+   ]
+  },
+  "name": "KAPAC",
+  "readme": true,
+  "slug": "zavolanlab/PAQR_KAPAC"
+ },
+ "kas_analyzer": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "sra-tools"
+   ]
+  },
+  "name": "KAS-Analyzer",
+  "readme": true,
+  "slug": "Ruitulyu/KAS-Analyzer"
+ },
+ "kboost": {
+  "accepted": {},
+  "held": {},
+  "name": "KBoost",
+  "readme": true,
+  "slug": "Luisiglm/KBoost"
+ },
+ "kimi": {
+  "accepted": {},
+  "held": {},
+  "name": "KIMI",
+  "readme": true,
+  "slug": "xinbaiusc/KIMI"
+ },
+ "kplogo": {
+  "accepted": {},
+  "held": {},
+  "name": "kpLogo",
+  "readme": true,
+  "slug": "xuebingwu/kpLogo"
+ },
+ "lanceotron": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/lanceotron",
+   "pypi": "https://pypi.org/project/lanceotron/"
+  },
+  "held": {},
+  "name": "LanceOtron",
+  "readme": true,
+  "slug": "LHentges/LanceOtron"
+ },
+ "liquorice": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/liquorice"
+  },
+  "held": {},
+  "name": "LIQUORICE",
+  "readme": true,
+  "slug": "epigen/LIQUORICE"
+ },
+ "lisa": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/lisa"
+  },
+  "held": {},
+  "name": "Lisa",
+  "readme": true,
+  "slug": "liulab-dfci/lisa"
+ },
+ "lnclocformer": {
+  "accepted": {},
+  "held": {},
+  "name": "LncLocFormer",
+  "readme": true,
+  "slug": "CSUBioGroup/LncLocFormer"
+ },
+ "lncsea": {
+  "accepted": {},
+  "held": {},
+  "name": "LncSEA",
+  "readme": false,
+  "slug": "lxy-boy/LncSEA-Code"
+ },
+ "logicnet": {
+  "accepted": {},
+  "held": {},
+  "name": "LogicNet",
+  "readme": true,
+  "slug": "CompBioIPM/LogicNet"
+ },
+ "logo": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "biopython"
+   ]
+  },
+  "name": "LOGO",
+  "readme": true,
+  "slug": "melobio/LOGO"
+ },
+ "logomotif": {
+  "accepted": {},
+  "held": {},
+  "name": "LogoMotif",
+  "readme": true,
+  "slug": "HAugustijn/MiniMotif"
+ },
+ "lrloop": {
+  "accepted": {},
+  "held": {},
+  "name": "LRLoop",
+  "readme": true,
+  "slug": "Pinlyu3/LRLoop"
+ },
+ "lstrap-cloud": {
+  "accepted": {},
+  "held": {},
+  "name": "LSTrAP-Cloud",
+  "readme": true,
+  "slug": "tqiaowen/LSTrAP-Cloud"
+ },
+ "macs": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/macs3",
+   "pypi": "https://pypi.org/project/MACS3/"
+  },
+  "held": {},
+  "name": "MACS",
+  "readme": true,
+  "slug": "taoliu/MACS"
+ },
+ "maggie": {
+  "accepted": {},
+  "held": {},
+  "name": "MAGGIE",
+  "readme": true,
+  "slug": "zeyang-shen/maggie"
+ },
+ "magic_encode": {
+  "accepted": {},
+  "held": {},
+  "name": "MAGIC_Encode",
+  "readme": true,
+  "slug": "asroopra/MAGIC"
+ },
+ "malax": {
+  "accepted": {},
+  "held": {},
+  "name": "MALAX",
+  "readme": true,
+  "slug": "omerwe/MALAX"
+ },
+ "malboost": {
+  "accepted": {},
+  "held": {},
+  "name": "MALBoost",
+  "readme": false,
+  "slug": "roelof89/malboost"
+ },
+ "manorm": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/manorm",
+   "pypi": "https://pypi.org/project/MAnorm/"
+  },
+  "held": {},
+  "name": "MAnorm",
+  "readme": true,
+  "slug": "shao-lab/MAnorm"
+ },
+ "manorm_2": {
+  "accepted": {},
+  "held": {},
+  "name": "MAnorm_2",
+  "readme": true,
+  "slug": "tushiqi/MAnorm2_utils"
+ },
+ "maresnet": {
+  "accepted": {},
+  "held": {},
+  "name": "MAResNet",
+  "readme": true,
+  "slug": "csbio-njust-edu/maresnet"
+ },
+ "marge": {
+  "accepted": {},
+  "held": {},
+  "name": "MARGE",
+  "readme": true,
+  "slug": "suwangbio/MARGE_py3"
+ },
+ "matcha": {
+  "accepted": {},
+  "held": {},
+  "name": "MATCHA",
+  "readme": true,
+  "slug": "ma-compbio/MATCHA"
+ },
+ "maxatac": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/maxatac.svg/"
+  },
+  "held": {
+   "conda": [
+    "graphviz"
+   ]
+  },
+  "name": "maxATAC",
+  "readme": true,
+  "slug": "MiraldiLab/maxATAC"
+ },
+ "maxhic": {
+  "accepted": {},
+  "held": {},
+  "name": "MaxHiC",
+  "readme": true,
+  "slug": "Rassa-Gvm/MaxHiC"
+ },
+ "mcl": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "bioconda"
+   ]
+  },
+  "name": "MCL",
+  "readme": true,
+  "slug": "micans/mcl"
+ },
+ "mcland": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "python-libsbml"
+   ]
+  },
+  "name": "MCLand",
+  "readme": true,
+  "slug": "MCLand-NTU/MCLand"
+ },
+ "meconcord": {
+  "accepted": {},
+  "held": {},
+  "name": "MeConcord",
+  "readme": true,
+  "slug": "WangLabTHU/MeConcord"
+ },
+ "medea": {
+  "accepted": {},
+  "held": {},
+  "name": "MEDEA",
+  "readme": true,
+  "slug": "BulykLab/MEDEA"
+ },
+ "meirlop": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/meirlop"
+  },
+  "held": {},
+  "name": "MEIRLOP",
+  "readme": true,
+  "slug": "npdeloss/meirlop"
+ },
+ "memes": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/memes/"
+  },
+  "held": {
+   "docker": [
+    "snystrom/memes_docker"
+   ]
+  },
+  "name": "memes",
+  "readme": true,
+  "slug": "snystrom/memes"
+ },
+ "mepp": {
+  "accepted": {},
+  "held": {},
+  "name": "MEPP",
+  "readme": true,
+  "slug": "npdeloss/mepp"
+ },
+ "meripseqpipe": {
+  "accepted": {
+   "docker": "https://hub.docker.com/r/kingzhuky/meripseqpipe"
+  },
+  "held": {
+   "bioconductor": [
+    "DESeq2.html",
+    "edgeR.html"
+   ]
+  },
+  "name": "MeRIPseqPipe",
+  "readme": true,
+  "slug": "canceromics/MeRIPseqPipe"
+ },
+ "meta-base": {
+  "accepted": {},
+  "held": {},
+  "name": "META-BASE",
+  "readme": true,
+  "slug": "DEIB-GECO/Metadata-Manager"
+ },
+ "metaboverse": {
+  "accepted": {},
+  "held": {},
+  "name": "Metaboverse",
+  "readme": true,
+  "slug": "Metaboverse/metaboverse"
+ },
+ "metachrom": {
+  "accepted": {},
+  "held": {},
+  "name": "MetaChrom",
+  "readme": true,
+  "slug": "bl-2633/MetaChrom"
+ },
+ "metalogo": {
+  "accepted": {},
+  "held": {},
+  "name": "MetaLogo",
+  "readme": true,
+  "slug": "labomics/MetaLogo"
+ },
+ "metare": {
+  "accepted": {},
+  "held": {},
+  "name": "metaRE",
+  "readme": true,
+  "slug": "cheburechko/MetaRE"
+ },
+ "metaron": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/metaron/"
+  },
+  "held": {
+   "conda": [
+    "idba",
+    "prodigal",
+    "antismash"
+   ]
+  },
+  "name": "MetaRon",
+  "readme": true,
+  "slug": "zaidissa/MetaRon"
+ },
+ "metbp": {
+  "accepted": {},
+  "held": {},
+  "name": "MetBP",
+  "readme": true,
+  "slug": "computational-biology/metbp"
+ },
+ "methget": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "seaborn",
+    "argparse",
+    "openpyxl"
+   ]
+  },
+  "name": "MethGET",
+  "readme": true,
+  "slug": "Jason-Teng/MethGET"
+ },
+ "methhaplo": {
+  "accepted": {},
+  "held": {},
+  "name": "MethHaplo",
+  "readme": true,
+  "slug": "ZhouQiangwei/MethHaplo"
+ },
+ "methreg": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/MethReg/"
+  },
+  "held": {},
+  "name": "MethReg",
+  "readme": true,
+  "slug": "TransBioInfoLab/MethReg"
+ },
+ "methylcoder": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "pyfasta",
+    "py-tcdb",
+    "h5py"
+   ]
+  },
+  "name": "MethylCoder",
+  "readme": true,
+  "slug": "brentp/methylcode"
+ },
+ "methyldackel": {
+  "accepted": {},
+  "held": {},
+  "name": "MethylDackel",
+  "readme": true,
+  "slug": "dpryan79/MethylDackel"
+ },
+ "methylscaper": {
+  "accepted": {},
+  "held": {},
+  "name": "methylscaper",
+  "readme": false,
+  "slug": "rhondabacher/acmethylscaper"
+ },
+ "miRNAmotif": {
+  "accepted": {},
+  "held": {},
+  "name": "miRNAmotif",
+  "readme": true,
+  "slug": "martynaut/mirnamotif"
+ },
+ "microsalmon": {
+  "accepted": {},
+  "held": {},
+  "name": "MicroSalmon",
+  "readme": true,
+  "slug": "AndreassenLab/MicroSalmon"
+ },
+ "mini-ex": {
+  "accepted": {},
+  "held": {},
+  "name": "MINI-EX",
+  "readme": true,
+  "slug": "VIB-PSB/MINI-EX"
+ },
+ "miprip": {
+  "accepted": {},
+  "held": {},
+  "name": "MIPRIP",
+  "readme": true,
+  "slug": "KoenigLabNM/MIPRIP"
+ },
+ "mira_single-cell": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "mira-multiome"
+   ],
+   "pypi": [
+    "mira-multiome",
+    "mira-multiome.svg"
+   ]
+  },
+  "name": "MIRA",
+  "readme": true,
+  "slug": "cistrome/MIRA"
+ },
+ "mireya": {
+  "accepted": {},
+  "held": {},
+  "name": "MIREyA",
+  "readme": true,
+  "slug": "veania/MIREyA"
+ },
+ "miringo": {
+  "accepted": {},
+  "held": {},
+  "name": "miRinGO",
+  "readme": true,
+  "slug": "Fadeel/miRinGO"
+ },
+ "mixNBHMM": {
+  "accepted": {},
+  "held": {},
+  "name": "mixNBHMM",
+  "readme": false,
+  "slug": "plbaldoni/mixNBHMM"
+ },
+ "mocca": {
+  "accepted": {},
+  "held": {},
+  "name": "MOCCA",
+  "readme": true,
+  "slug": "bjornbredesen/MOCCA"
+ },
+ "moccs": {
+  "accepted": {},
+  "held": {},
+  "name": "MOCCS",
+  "readme": true,
+  "slug": "yuifu/moccs"
+ },
+ "moder2": {
+  "accepted": {},
+  "held": {},
+  "name": "MODER2",
+  "readme": true,
+  "slug": "jttoivon/moder2"
+ },
+ "modle": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/modle"
+  },
+  "held": {
+   "docker": [
+    "higlass/higlass-docker"
+   ]
+  },
+  "name": "MoDLE",
+  "readme": true,
+  "slug": "paulsengroup/modle"
+ },
+ "modularboost": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "rpy2"
+   ]
+  },
+  "name": "ModularBoost",
+  "readme": true,
+  "slug": "cosinalee/ModularBoost"
+ },
+ "moma": {
+  "accepted": {},
+  "held": {},
+  "name": "MoMA",
+  "readme": true,
+  "slug": "fjug/MoMA"
+ },
+ "monaLisa": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/monaLisa/"
+  },
+  "held": {},
+  "name": "monaLisa",
+  "readme": true,
+  "slug": "fmicompbio/monaLisa"
+ },
+ "monet_R": {
+  "accepted": {},
+  "held": {},
+  "name": "MoNET",
+  "readme": false,
+  "slug": "JW-Yan/MONET"
+ },
+ "moods": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "MOODS-python"
+   ]
+  },
+  "name": "MOODS",
+  "readme": true,
+  "slug": "jhkorhonen/MOODS"
+ },
+ "moonlight2r": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/Moonlight2R/"
+  },
+  "held": {},
+  "name": "Moonlight2R",
+  "readme": true,
+  "slug": "ELELAB/Moonlight2R"
+ },
+ "moonlightr": {
+  "accepted": {},
+  "held": {},
+  "name": "MoonlightR",
+  "readme": false,
+  "slug": "torongs82/Moonlight"
+ },
+ "most-motif": {
+  "accepted": {},
+  "held": {},
+  "name": "MOST+",
+  "readme": true,
+  "slug": "dreasysnail/most"
+ },
+ "motif-raptor": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/motifraptor"
+  },
+  "held": {},
+  "name": "Motif-Raptor",
+  "readme": true,
+  "slug": "pinellolab/MotifRaptor"
+ },
+ "motif_prob": {
+  "accepted": {},
+  "held": {},
+  "name": "motif_prob",
+  "readme": true,
+  "slug": "DataIntellSystLab/motif_prob"
+ },
+ "motif_scraper": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/motif_scraper/"
+  },
+  "held": {},
+  "name": "Motif scraper",
+  "readme": true,
+  "slug": "RobersonLab/motif_scraper"
+ },
+ "motifeR": {
+  "accepted": {},
+  "held": {
+   "cran": [
+    "pacman"
+   ]
+  },
+  "name": "motifeR",
+  "readme": true,
+  "slug": "wangshisheng/motifeRapp"
+ },
+ "motifgenie": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "bs3",
+    "logomaker"
+   ]
+  },
+  "name": "MotifGenie",
+  "readme": true,
+  "slug": "ceragoguztuzun/MotifGenie"
+ },
+ "motifmatchr": {
+  "accepted": {},
+  "held": {},
+  "name": "motifmatchr",
+  "readme": true,
+  "slug": "GreenleafLab/motifmatchr"
+ },
+ "motifpeeker": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "devel",
+    "memes.html"
+   ]
+  },
+  "name": "MotifPeeker",
+  "readme": true,
+  "slug": "neurogenomics/MotifPeeker"
+ },
+ "motimul": {
+  "accepted": {},
+  "held": {},
+  "name": "MotiMul",
+  "readme": true,
+  "slug": "ko-ichimo-ri/MotiMul"
+ },
+ "motto": {
+  "accepted": {},
+  "held": {},
+  "name": "Motto",
+  "readme": true,
+  "slug": "MichaelMW/motto"
+ },
+ "mpra": {
+  "accepted": {},
+  "held": {},
+  "name": "mpra",
+  "readme": true,
+  "slug": "hansenlab/mpra"
+ },
+ "mpra_design_tools": {
+  "accepted": {},
+  "held": {},
+  "name": "MPRA design tools",
+  "readme": true,
+  "slug": "andrewGhazi/mpradesigntools"
+ },
+ "mpralib": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/mpralib",
+   "pypi": "https://pypi.org/project/mpralib.svg/"
+  },
+  "held": {},
+  "name": "MPRAlib",
+  "readme": true,
+  "slug": "kircherlab/MPRAlib"
+ },
+ "mpvnn": {
+  "accepted": {},
+  "held": {},
+  "name": "MPVNN",
+  "readme": true,
+  "slug": "gourabghoshroy/MPVNN"
+ },
+ "mscentipede": {
+  "accepted": {},
+  "held": {},
+  "name": "msCentipede",
+  "readme": true,
+  "slug": "rajanil/msCentipede"
+ },
+ "msdb_h": {
+  "accepted": {},
+  "held": {},
+  "name": "MSdb",
+  "readme": false,
+  "slug": "wanluliuLab/MSdb"
+ },
+ "msifinder": {
+  "accepted": {},
+  "held": {},
+  "name": "MSIFinder",
+  "readme": true,
+  "slug": "861934367/MSIFinder"
+ },
+ "msisensor-pro": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/msisensor-pro.svg"
+  },
+  "held": {},
+  "name": "MSIsensor-pro",
+  "readme": true,
+  "slug": "xjtu-omics/msisensor-pro"
+ },
+ "mugvre": {
+  "accepted": {},
+  "held": {},
+  "name": "MuGVRE",
+  "readme": true,
+  "slug": "Multiscale-Genomics/VRE"
+ },
+ "multi_locus_view": {
+  "accepted": {},
+  "held": {},
+  "name": "Multi_Locus_View",
+  "readme": true,
+  "slug": "Hughes-Genome-Group/mlv"
+ },
+ "multiomix": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "ggca"
+   ]
+  },
+  "name": "Multiomix",
+  "readme": true,
+  "slug": "omics-datascience/multiomix"
+ },
+ "mustache": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/mustache-hic/"
+  },
+  "held": {},
+  "name": "Mustache",
+  "readme": true,
+  "slug": "ay-lab/mustache"
+ },
+ "mutviz_2.0": {
+  "accepted": {},
+  "held": {},
+  "name": "MutViz 2.0",
+  "readme": true,
+  "slug": "DEIB-GECO/MutViz"
+ },
+ "nae": {
+  "accepted": {},
+  "held": {},
+  "name": "NAE",
+  "readme": true,
+  "slug": "zpliulab/NAE"
+ },
+ "nallo": {
+  "accepted": {},
+  "held": {},
+  "name": "nallo",
+  "readme": true,
+  "slug": "genomic-medicine-sweden/nallo"
+ },
+ "neat-seq": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "samtools"
+   ],
+   "cran": [
+    "renv"
+   ],
+   "pypi": [
+    "pysam",
+    "macs3"
+   ]
+  },
+  "name": "NEAT-seq",
+  "readme": true,
+  "slug": "GreenleafLab/NEAT-seq_reproducibility"
+ },
+ "necare": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "pytorch"
+   ]
+  },
+  "name": "NECARE",
+  "readme": true,
+  "slug": "JiajunQiu/NECARE"
+ },
+ "neco": {
+  "accepted": {},
+  "held": {},
+  "name": "NECo",
+  "readme": true,
+  "slug": "bozdaglab/NECo"
+ },
+ "netprophet": {
+  "accepted": {},
+  "held": {},
+  "name": "NetProphet",
+  "readme": true,
+  "slug": "yiming-kang/NetProphet_2.0"
+ },
+ "netseekr": {
+  "accepted": {},
+  "held": {},
+  "name": "NetSeekR",
+  "readme": true,
+  "slug": "igbb-popescu-lab/NetSeekR"
+ },
+ "nettime": {
+  "accepted": {},
+  "held": {},
+  "name": "NetTIME",
+  "readme": true,
+  "slug": "ryi06/NetTIME"
+ },
+ "netzoor": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/netZooR/"
+  },
+  "held": {
+   "conda": [
+    "bioconductor-netzoor"
+   ],
+   "cran": [
+    "reticulate",
+    "rcmdcheck"
+   ]
+  },
+  "name": "netZooR",
+  "readme": true,
+  "slug": "netZoo/netZooR"
+ },
+ "nf-core-atacseq": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "DESeq2.html"
+   ]
+  },
+  "name": "nf-core-atacseq",
+  "readme": true,
+  "slug": "nf-core/atacseq"
+ },
+ "nf-core-cageseq": {
+  "accepted": {
+   "docker": "https://hub.docker.com/r/nfcore/cageseq"
+  },
+  "held": {},
+  "name": "nf-core-cageseq",
+  "readme": true,
+  "slug": "nf-core/cageseq"
+ },
+ "nf-core-chipseq": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "DESeq2.html"
+   ]
+  },
+  "name": "nf-core-chipseq",
+  "readme": true,
+  "slug": "nf-core/chipseq"
+ },
+ "nf-core-methylseq": {
+  "accepted": {},
+  "held": {},
+  "name": "nf-core-methylseq",
+  "readme": true,
+  "slug": "nf-core/methylseq"
+ },
+ "nglyalign": {
+  "accepted": {},
+  "held": {},
+  "name": "NGlyAlign",
+  "readme": true,
+  "slug": "UNSW-Mathematical-Biology/NGlyAlign_v1.0"
+ },
+ "ngphubinh": {
+  "accepted": {},
+  "held": {},
+  "name": "ngphubinh",
+  "readme": true,
+  "slug": "ngphubinh/adaptors"
+ },
+ "ngs-integrator": {
+  "accepted": {},
+  "held": {},
+  "name": "NGS-Integrator",
+  "readme": true,
+  "slug": "ESBL/NGS-Integrator"
+ },
+ "nimbus": {
+  "accepted": {},
+  "held": {},
+  "name": "NIMBus",
+  "readme": true,
+  "slug": "gersteinlab/nimbus"
+ },
+ "nimce": {
+  "accepted": {},
+  "held": {},
+  "name": "NIMCE",
+  "readme": true,
+  "slug": "CSUBioGroup/NIMCE"
+ },
+ "nlrexpress": {
+  "accepted": {},
+  "held": {},
+  "name": "NLRexpress",
+  "readme": true,
+  "slug": "eliza-m/NLRexpress"
+ },
+ "noisyr": {
+  "accepted": {},
+  "held": {},
+  "name": "noisyR",
+  "readme": true,
+  "slug": "Core-Bioinformatics/noisyR"
+ },
+ "nopeak": {
+  "accepted": {},
+  "held": {},
+  "name": "NoPeak",
+  "readme": true,
+  "slug": "menzel/nopeak"
+ },
+ "normr": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "devel"
+   ]
+  },
+  "name": "normr",
+  "readme": true,
+  "slug": "your-highness/normR"
+ },
+ "nt-seq": {
+  "accepted": {},
+  "held": {},
+  "name": "NT-seq",
+  "readme": true,
+  "slug": "TaoLabBCM/NT-seq"
+ },
+ "nucleoatac": {
+  "accepted": {},
+  "held": {},
+  "name": "NucleoATAC",
+  "readme": true,
+  "slug": "GreenleafLab/NucleoATAC"
+ },
+ "nucleomap": {
+  "accepted": {},
+  "held": {},
+  "name": "NucleoMap",
+  "readme": true,
+  "slug": "liu-bioinfo-lab/NucleoMap"
+ },
+ "nucleosim": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/nucleoSim/"
+  },
+  "held": {},
+  "name": "nucleoSim",
+  "readme": true,
+  "slug": "arnauddroitlab/nucleoSim"
+ },
+ "nucleosome_prediction": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "diffutils"
+   ]
+  },
+  "name": "nucleosome_prediction",
+  "readme": true,
+  "slug": "bgruening/galaxytools"
+ },
+ "nupop": {
+  "accepted": {},
+  "held": {},
+  "name": "NuPoP",
+  "readme": false,
+  "slug": "jiping/NuPoP_doc."
+ },
+ "ocean-c": {
+  "accepted": {},
+  "held": {},
+  "name": "OCEAN-C",
+  "readme": true,
+  "slug": "ChengLiLab/OCEAN-C"
+ },
+ "oipcq": {
+  "accepted": {},
+  "held": {},
+  "name": "OIPCQ",
+  "readme": true,
+  "slug": "haammim/OIPCQ-and-OIPCQ2"
+ },
+ "oktoberfest": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/oktoberfest/"
+  },
+  "held": {},
+  "name": "Oktoberfest",
+  "readme": true,
+  "slug": "wilhelm-lab/oktoberfest"
+ },
+ "oncoenrichr": {
+  "accepted": {},
+  "held": {},
+  "name": "oncoEnrichR",
+  "readme": true,
+  "slug": "sigven/oncoEnrichR"
+ },
+ "onesc": {
+  "accepted": {},
+  "held": {},
+  "name": "OneSC",
+  "readme": true,
+  "slug": "CahanLab/oneSC"
+ },
+ "ont-cappable-seq": {
+  "accepted": {},
+  "held": {},
+  "name": "ONT-cappable-seq",
+  "readme": true,
+  "slug": "LoGT-KULeuven/ONT-cappable-seq"
+ },
+ "openannotate": {
+  "accepted": {},
+  "held": {},
+  "name": "OpenAnnotate",
+  "readme": true,
+  "slug": "RJiangLab/OpenAnnotate"
+ },
+ "orange_network": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/orange3-network/"
+  },
+  "held": {},
+  "name": "Orange Network",
+  "readme": true,
+  "slug": "biolab/orange3-network"
+ },
+ "osconet": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "Oscope.html"
+   ],
+   "conda": [
+    "numba"
+   ]
+  },
+  "name": "OscoNet",
+  "readme": true,
+  "slug": "alexisboukouvalas/OscoNet"
+ },
+ "owas": {
+  "accepted": {},
+  "held": {
+   "cran": [
+    "OWAS_1.2.1.tar.gz"
+   ]
+  },
+  "name": "OWAS",
+  "readme": true,
+  "slug": "shuangsong0110/OWAS"
+ },
+ "p6ma": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "Biostrings"
+   ],
+   "cran": [
+    "xgboost",
+    "magrittr",
+    "stringr"
+   ]
+  },
+  "name": "p6mA",
+  "readme": true,
+  "slug": "Konglab404/p6mA"
+ },
+ "pafway": {
+  "accepted": {},
+  "held": {},
+  "name": "PAFway",
+  "readme": false,
+  "slug": "ezer/PAFway"
+ },
+ "pallas": {
+  "accepted": {},
+  "held": {},
+  "name": "PALLAS",
+  "readme": true,
+  "slug": "yukuntan92/PALLAS"
+ },
+ "papaml": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "hyphy"
+   ]
+  },
+  "name": "paPAML",
+  "readme": true,
+  "slug": "RetroWWU/paPAML"
+ },
+ "paperfly": {
+  "accepted": {},
+  "held": {},
+  "name": "PAPerFly",
+  "readme": true,
+  "slug": "Caeph/paperfly"
+ },
+ "parmigene": {
+  "accepted": {},
+  "held": {},
+  "name": "parmigene",
+  "readme": true,
+  "slug": "sales-lab/parmigene"
+ },
+ "pathext": {
+  "accepted": {},
+  "held": {},
+  "name": "PathExt",
+  "readme": true,
+  "slug": "NarmadaSambaturu/PathExt"
+ },
+ "patscanui": {
+  "accepted": {},
+  "held": {},
+  "name": "PatScanUI",
+  "readme": true,
+  "slug": "kblin/patscanui"
+ },
+ "paxtoolsr": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/paxtoolsr/"
+  },
+  "held": {},
+  "name": "paxtoolsr",
+  "readme": true,
+  "slug": "BioPAX/paxtoolsr"
+ },
+ "pda-pred": {
+  "accepted": {},
+  "held": {},
+  "name": "PDA-PreD",
+  "readme": true,
+  "slug": "Harinikannan98/PDA-PreD"
+ },
+ "pdgpcs": {
+  "accepted": {},
+  "held": {},
+  "name": "PDGPCS",
+  "readme": true,
+  "slug": "NWPU-903PR/PDGPCS"
+ },
+ "pdriver": {
+  "accepted": {},
+  "held": {},
+  "name": "pDriver",
+  "readme": true,
+  "slug": "pvvhoang/pDriver"
+ },
+ "peaKO": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/peako/"
+  },
+  "held": {
+   "conda": [
+    "beautifulsoup4",
+    "snakemake-minimal",
+    "pybedtools"
+   ]
+  },
+  "name": "peaKO",
+  "readme": true,
+  "slug": "hoffmangroup/peako"
+ },
+ "peakC": {
+  "accepted": {},
+  "held": {},
+  "name": "peakC",
+  "readme": true,
+  "slug": "deWitLab/peakC"
+ },
+ "peakachu": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/peakachu/"
+  },
+  "held": {},
+  "name": "Peakachu",
+  "readme": true,
+  "slug": "tariks/peakachu"
+ },
+ "peakhood": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/peakhood"
+  },
+  "held": {},
+  "name": "Peakhood",
+  "readme": true,
+  "slug": "BackofenLab/Peakhood"
+ },
+ "peaks2utr": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/peaks2utr/"
+  },
+  "held": {},
+  "name": "peaks2utr",
+  "readme": true,
+  "slug": "haessar/peaks2utr"
+ },
+ "peaksat": {
+  "accepted": {},
+  "held": {},
+  "name": "Peaksat",
+  "readme": true,
+  "slug": "FrietzeLabUVM/peaksat"
+ },
+ "peakzilla": {
+  "accepted": {},
+  "held": {},
+  "name": "Peakzilla",
+  "readme": true,
+  "slug": "steinmann/peakzilla"
+ },
+ "pegr": {
+  "accepted": {},
+  "held": {},
+  "name": "PEGR",
+  "readme": true,
+  "slug": "seqcode/pegr"
+ },
+ "pegs": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/pegs/"
+  },
+  "held": {},
+  "name": "PEGS",
+  "readme": true,
+  "slug": "fls-bioinformatics-core/pegs"
+ },
+ "pepatac": {
+  "accepted": {},
+  "held": {},
+  "name": "PEPATAC",
+  "readme": true,
+  "slug": "databio/pepatac"
+ },
+ "pepr": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/pepr/"
+  },
+  "held": {},
+  "name": "PePr",
+  "readme": true,
+  "slug": "shawnzhangyx/PePr"
+ },
+ "peril": {
+  "accepted": {},
+  "held": {},
+  "name": "Peril",
+  "readme": true,
+  "slug": "agroff11/PerilPaperAnalysis"
+ },
+ "periodicdna": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/periodicDNA/"
+  },
+  "held": {},
+  "name": "periodicDNA",
+  "readme": true,
+  "slug": "js2264/periodicDNA"
+ },
+ "perturbnet": {
+  "accepted": {},
+  "held": {},
+  "name": "PerturbNet",
+  "readme": true,
+  "slug": "SeyoungKimLab/PerturbNet"
+ },
+ "pfbnet": {
+  "accepted": {},
+  "held": {},
+  "name": "PFBNet",
+  "readme": true,
+  "slug": "ddche/PFBNet"
+ },
+ "pftools": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/pftools",
+   "docker": "https://hub.docker.com/r/sibswiss/pftools"
+  },
+  "held": {},
+  "name": "pftools",
+  "readme": true,
+  "slug": "sib-swiss/pftools3"
+ },
+ "pgltools": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "pytest-parameterized",
+    "PyGLtools"
+   ]
+  },
+  "name": "Pgltools",
+  "readme": true,
+  "slug": "billgreenwald/pgltools"
+ },
+ "phantompeakqualtools": {
+  "accepted": {},
+  "held": {},
+  "name": "phantompeakqualtools",
+  "readme": true,
+  "slug": "kundajelab/phantompeakqualtools"
+ },
+ "phyloconverge": {
+  "accepted": {},
+  "held": {},
+  "name": "phyloConverge",
+  "readme": true,
+  "slug": "ECSaputra/phyloConverge"
+ },
+ "phyloctcflooping": {
+  "accepted": {},
+  "held": {},
+  "name": "PhyloCTCFLooping",
+  "readme": true,
+  "slug": "morphos30/PhyloCTCFLooping"
+ },
+ "phylopgm": {
+  "accepted": {},
+  "held": {},
+  "name": "PhyloPGM",
+  "readme": true,
+  "slug": "BlanchetteLab/PhyloPGM"
+ },
+ "pique": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/pique/"
+  },
+  "held": {},
+  "name": "Pique",
+  "readme": true,
+  "slug": "ryneches/pique"
+ },
+ "placeback": {
+  "accepted": {},
+  "held": {},
+  "name": "PlaceBack",
+  "readme": true,
+  "slug": "GeorgievLab/design_of_promoter_logic"
+ },
+ "plantfunco": {
+  "accepted": {},
+  "held": {},
+  "name": "PlantFUNCO",
+  "readme": false,
+  "slug": "RocesV/PlantFUNCO_browser"
+ },
+ "plot2do": {
+  "accepted": {},
+  "held": {},
+  "name": "plot2DO",
+  "readme": true,
+  "slug": "rchereji/plot2DO"
+ },
+ "polobag": {
+  "accepted": {},
+  "held": {},
+  "name": "PoLoBag",
+  "readme": true,
+  "slug": "gourabghoshroy/PoLoBag"
+ },
+ "polya-dg": {
+  "accepted": {},
+  "held": {},
+  "name": "Poly(A)-DG",
+  "readme": true,
+  "slug": "Szym29/PolyADG"
+ },
+ "polygraph": {
+  "accepted": {},
+  "held": {},
+  "name": "Polygraph",
+  "readme": true,
+  "slug": "Genentech/polygraph"
+ },
+ "portia": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/portia-grn/"
+  },
+  "held": {},
+  "name": "PORTIA",
+  "readme": true,
+  "slug": "AntoinePassemiers/PORTIA"
+ },
+ "ppnet": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "biopython"
+   ]
+  },
+  "name": "PPNet",
+  "readme": true,
+  "slug": "liyangjie/PPNet"
+ },
+ "precisetad": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/preciseTAD/"
+  },
+  "held": {},
+  "name": "preciseTAD",
+  "readme": true,
+  "slug": "dozmorovlab/preciseTAD"
+ },
+ "predictf": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "diamond"
+   ],
+   "pypi": [
+    "https",
+    "nolearn",
+    "tqdm"
+   ]
+  },
+  "name": "PredicTF",
+  "readme": true,
+  "slug": "mdsufz/PredicTF"
+ },
+ "primaryAnnotation": {
+  "accepted": {},
+  "held": {},
+  "name": "primaryTranscriptAnnotation",
+  "readme": true,
+  "slug": "WarrenDavidAnderson/genomicsRpackage"
+ },
+ "primirtss": {
+  "accepted": {},
+  "held": {},
+  "name": "primirTSS",
+  "readme": true,
+  "slug": "ipumin/primirTSS"
+ },
+ "primo-multiomics": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "limma"
+   ],
+   "cran": [
+    "MASS",
+    "matrixStats",
+    "nnls"
+   ]
+  },
+  "name": "Primo",
+  "readme": true,
+  "slug": "kjgleason/Primo"
+ },
+ "prismexp": {
+  "accepted": {},
+  "held": {},
+  "name": "PrismEXP",
+  "readme": true,
+  "slug": "maayanlab/prismexp"
+ },
+ "prmd": {
+  "accepted": {},
+  "held": {},
+  "name": "PRMD",
+  "readme": true,
+  "slug": "rnainformatics/PRMD"
+ },
+ "probc": {
+  "accepted": {},
+  "held": {},
+  "name": "PROBC",
+  "readme": false,
+  "slug": "seferlab/probc"
+ },
+ "proberating": {
+  "accepted": {},
+  "held": {},
+  "name": "ProbeRating",
+  "readme": true,
+  "slug": "syang11/ProbeRating"
+ },
+ "prochipdb": {
+  "accepted": {},
+  "held": {},
+  "name": "proChIPdb",
+  "readme": true,
+  "slug": "SBRG/ChIPdb"
+ },
+ "prodface": {
+  "accepted": {},
+  "held": {},
+  "name": "ProDFace",
+  "readme": true,
+  "slug": "sdeyLab-IITJ/ProDFace"
+ },
+ "progeny": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/progeny/"
+  },
+  "held": {},
+  "name": "progeny",
+  "readme": true,
+  "slug": "saezlab/progeny"
+ },
+ "promintools": {
+  "accepted": {},
+  "held": {
+   "docker": [
+    "biologistatsea/promofi",
+    "biologistatsea/seprolyzer"
+   ]
+  },
+  "name": "ProminTools",
+  "readme": true,
+  "slug": "skeffington/Promin-tools"
+ },
+ "promotech": {
+  "accepted": {},
+  "held": {},
+  "name": "Promotech",
+  "readme": true,
+  "slug": "BioinformaticsLabAtMUN/PromoTech"
+ },
+ "propr": {
+  "accepted": {},
+  "held": {},
+  "name": "propr",
+  "readme": true,
+  "slug": "tpq/propr"
+ },
+ "pscanchip": {
+  "accepted": {},
+  "held": {},
+  "name": "PscanChIP",
+  "readme": true,
+  "slug": "martinaalvera/pscanchipRepo"
+ },
+ "ptnet": {
+  "accepted": {},
+  "held": {},
+  "name": "PTNet",
+  "readme": true,
+  "slug": "CompbioLabUCF/PTNet"
+ },
+ "pwrEWAS": {
+  "accepted": {},
+  "held": {},
+  "name": "pwrEWAS",
+  "readme": false,
+  "slug": "stefangraw/pwrEWAS"
+ },
+ "pyPINTS": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/pyPINTS/"
+  },
+  "held": {
+   "conda": [
+    "bioconda"
+   ]
+  },
+  "name": "PINTS",
+  "readme": true,
+  "slug": "hyulab/PINTS"
+ },
+ "pySCENIC": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/pyscenic/"
+  },
+  "held": {},
+  "name": "pySCENIC",
+  "readme": true,
+  "slug": "aertslab/pySCENIC"
+ },
+ "pycallingcards": {
+  "accepted": {
+   "docker": "https://hub.docker.com/r/juanruguo/pycallingcards",
+   "pypi": "https://pypi.org/project/pycallingcards/"
+  },
+  "held": {},
+  "name": "Pycallingcards",
+  "readme": true,
+  "slug": "The-Mitra-Lab/pycallingcards"
+ },
+ "pymegabase": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "https",
+    "pyBigWig"
+   ]
+  },
+  "name": "PyMEGABASE",
+  "readme": true,
+  "slug": "ed29rice/PyMEGABASE"
+ },
+ "pypanda": {
+  "accepted": {},
+  "held": {},
+  "name": "PyPanda",
+  "readme": true,
+  "slug": "davidvi/pypanda"
+ },
+ "pyprobound": {
+  "accepted": {},
+  "held": {},
+  "name": "PyProBound",
+  "readme": true,
+  "slug": "BussemakerLab/PyProBound"
+ },
+ "pyscnet": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "stream"
+   ],
+   "pypi": [
+    "dist",
+    "jupyterlab",
+    "anndata"
+   ]
+  },
+  "name": "PySCNet",
+  "readme": true,
+  "slug": "MingBit/PySCNet"
+ },
+ "pyspade": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/pySpade/"
+  },
+  "held": {},
+  "name": "pySpade",
+  "readme": true,
+  "slug": "Hon-lab/pySpade"
+ },
+ "pyviper": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "viper.html"
+   ],
+   "pypi": [
+    "viper-in-python"
+   ]
+  },
+  "name": "pyVIPER",
+  "readme": true,
+  "slug": "alevax/pyviper"
+ },
+ "q": {
+  "accepted": {},
+  "held": {},
+  "name": "Q",
+  "readme": true,
+  "slug": "charite/Q"
+ },
+ "qdrip": {
+  "accepted": {},
+  "held": {},
+  "name": "qDRIP",
+  "readme": false,
+  "slug": "cimprichlab/crossley_et_al_2019"
+ },
+ "qpms9": {
+  "accepted": {},
+  "held": {},
+  "name": "qPMS9",
+  "readme": true,
+  "slug": "mariusmni/qpms9"
+ },
+ "qpromoters": {
+  "accepted": {},
+  "held": {},
+  "name": "QPromoters",
+  "readme": true,
+  "slug": "DevangLiya/QPromoters"
+ },
+ "quaqc": {
+  "accepted": {},
+  "held": {},
+  "name": "quaqc",
+  "readme": true,
+  "slug": "bjmt/quaqc"
+ },
+ "r-loop": {
+  "accepted": {},
+  "held": {
+   "cran": [
+    "renv"
+   ]
+  },
+  "name": "R-loop",
+  "readme": true,
+  "slug": "Bishop-Laboratory/RLoop-QC-Meta-Analysis-Miller-2022"
+ },
+ "r3cpet": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/R3CPET/"
+  },
+  "held": {},
+  "name": "R3CPET",
+  "readme": true,
+  "slug": "sirusb/R3CPET"
+ },
+ "rSeqTU-A": {
+  "accepted": {},
+  "held": {},
+  "name": "rSeqTU-A",
+  "readme": true,
+  "slug": "s18692001/rSeqTU"
+ },
+ "racipe": {
+  "accepted": {},
+  "held": {},
+  "name": "RACIPE",
+  "readme": true,
+  "slug": "simonhb1990/RACIPE-1.0"
+ },
+ "ramen": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "S4Vectors",
+    "IRanges",
+    "GenomicRanges"
+   ]
+  },
+  "name": "RAMEN",
+  "readme": true,
+  "slug": "ErickNavarroD/RAMEN"
+ },
+ "raptgen": {
+  "accepted": {},
+  "held": {},
+  "name": "RaptGen",
+  "readme": true,
+  "slug": "hmdlab/raptgen"
+ },
+ "rbioapi": {
+  "accepted": {
+   "cran": "https://cran.r-project.org/package=rbioapi"
+  },
+  "held": {},
+  "name": "rbioapi",
+  "readme": true,
+  "slug": "moosa-r/rbioapi"
+ },
+ "rcade-recognition": {
+  "accepted": {},
+  "held": {
+   "cran": [
+    "randomForest"
+   ]
+  },
+  "name": "RCADE",
+  "readme": true,
+  "slug": "hsnajafabadi/rcade"
+ },
+ "rcistarget": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/RcisTarget/"
+  },
+  "held": {},
+  "name": "RcisTarget",
+  "readme": true,
+  "slug": "aertslab/RcisTarget"
+ },
+ "rdb2c2": {
+  "accepted": {},
+  "held": {},
+  "name": "RDb2C2",
+  "readme": true,
+  "slug": "DeeShao/RDB2C2"
+ },
+ "re-goa": {
+  "accepted": {},
+  "held": {},
+  "name": "RE-GOA",
+  "readme": true,
+  "slug": "AMSSwanglab/RE-GOA"
+ },
+ "readretro_web": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/readretro/"
+  },
+  "held": {
+   "conda": [
+    "pytorch",
+    "rdkit"
+   ]
+  },
+  "name": "READRetro",
+  "readme": true,
+  "slug": "SeulLee05/READRetro"
+ },
+ "recappable-seq": {
+  "accepted": {},
+  "held": {},
+  "name": "ReCappable-seq",
+  "readme": true,
+  "slug": "elitaone/cappable-seq"
+ },
+ "recognicer": {
+  "accepted": {},
+  "held": {},
+  "name": "RECOGNICER",
+  "readme": true,
+  "slug": "zanglab/recognicer"
+ },
+ "regshape": {
+  "accepted": {},
+  "held": {},
+  "name": "regshape",
+  "readme": true,
+  "slug": "ramseylab/regshape"
+ },
+ "regsnps-asb": {
+  "accepted": {},
+  "held": {},
+  "name": "regSNPs-ASB",
+  "readme": true,
+  "slug": "SiwenX/RegSNPs-ASB"
+ },
+ "regutools": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/regutools/"
+  },
+  "held": {
+   "cran": [
+    "usethis",
+    "rcmdcheck",
+    "covr"
+   ]
+  },
+  "name": "regutools",
+  "readme": true,
+  "slug": "ComunidadBioInfo/regutools"
+ },
+ "relics": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "IRanges",
+    "GenomicRanges"
+   ],
+   "cran": [
+    "ggplot2",
+    "gridExtra",
+    "poibin"
+   ]
+  },
+  "name": "RELICS",
+  "readme": true,
+  "slug": "patfiaux/RELICS"
+ },
+ "remm_score": {
+  "accepted": {},
+  "held": {},
+  "name": "ReMM score",
+  "readme": true,
+  "slug": "kircherlab/ReMM"
+ },
+ "remus-disease": {
+  "accepted": {},
+  "held": {},
+  "name": "Remus",
+  "readme": true,
+  "slug": "seru71/Remus"
+ },
+ "repentools": {
+  "accepted": {},
+  "held": {},
+  "name": "RepEnTools",
+  "readme": true,
+  "slug": "PavelBashtrykov/RepEnTools"
+ },
+ "rephine-drug": {
+  "accepted": {},
+  "held": {},
+  "name": "RePhine",
+  "readme": true,
+  "slug": "coexps/Rephine"
+ },
+ "revana": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "BSgenome.Hsapiens.UCSC.hg38"
+   ]
+  },
+  "name": "Revana",
+  "readme": true,
+  "slug": "KiTZ-Heidelberg/revana"
+ },
+ "revup": {
+  "accepted": {},
+  "held": {},
+  "name": "RevUP",
+  "readme": true,
+  "slug": "wassermanlab/revup"
+ },
+ "rg4-seeker": {
+  "accepted": {},
+  "held": {},
+  "name": "rG4-seeker",
+  "readme": true,
+  "slug": "TF-Chan-Lab/rG4-seeker"
+ },
+ "riborex": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/r-riborex"
+  },
+  "held": {},
+  "name": "Riborex",
+  "readme": true,
+  "slug": "smithlabcode/riborex"
+ },
+ "rispice": {
+  "accepted": {},
+  "held": {},
+  "name": "RiSPICE",
+  "readme": true,
+  "slug": "bioinfodlsu/rispice"
+ },
+ "river": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/RIVER/"
+  },
+  "held": {},
+  "name": "RIVER",
+  "readme": true,
+  "slug": "ipw012/RIVER"
+ },
+ "rjmcmcnucleosomes": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/RJMCMCNucleosomes/"
+  },
+  "held": {},
+  "name": "RJMCMCNucleosomes",
+  "readme": true,
+  "slug": "ArnaudDroitLab/RJMCMCNucleosomes"
+ },
+ "rlbase": {
+  "accepted": {},
+  "held": {
+   "cran": [
+    "renv"
+   ]
+  },
+  "name": "RLBase",
+  "readme": true,
+  "slug": "Bishop-Laboratory/RLBase"
+ },
+ "rldock": {
+  "accepted": {},
+  "held": {},
+  "name": "RLDOCK",
+  "readme": true,
+  "slug": "Vfold-RNA/RLDOCK"
+ },
+ "robocop": {
+  "accepted": {},
+  "held": {},
+  "name": "RoboCOP",
+  "readme": true,
+  "slug": "HarteminkLab/RoboCOP"
+ },
+ "rsat-retrieve-ensembl-seq": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "rsat-core"
+   ],
+   "docker": [
+    "biocontainers/rsat"
+   ]
+  },
+  "name": "RSAT retrieve-ensembl-seq",
+  "readme": true,
+  "slug": "rsa-tools/rsat-code"
+ },
+ "rseg_chipseq": {
+  "accepted": {},
+  "held": {},
+  "name": "RSEG",
+  "readme": true,
+  "slug": "smithlabcode/rseg"
+ },
+ "rsnet": {
+  "accepted": {},
+  "held": {},
+  "name": "RSNET",
+  "readme": true,
+  "slug": "zhanglab-wbgcas/rsnet"
+ },
+ "rtrm": {
+  "accepted": {},
+  "held": {},
+  "name": "rTRM",
+  "readme": false,
+  "slug": "ddiez/rTRM"
+ },
+ "rtrmui": {
+  "accepted": {},
+  "held": {},
+  "name": "rTRMui",
+  "readme": false,
+  "slug": "ddiez/rTRMui"
+ },
+ "s3v2-ideas": {
+  "accepted": {},
+  "held": {},
+  "name": "S3V2-IDEAS",
+  "readme": true,
+  "slug": "guanjue/S3V2_IDEAS_ESMP"
+ },
+ "sacsann": {
+  "accepted": {},
+  "held": {},
+  "name": "SACSANN",
+  "readme": true,
+  "slug": "BlanchetteLab/SACSANN"
+ },
+ "sailer": {
+  "accepted": {},
+  "held": {},
+  "name": "SAILER",
+  "readme": true,
+  "slug": "uci-cbcl/SAILER"
+ },
+ "samselect": {
+  "accepted": {},
+  "held": {},
+  "name": "SamSelect",
+  "readme": true,
+  "slug": "qyu071/samselect"
+ },
+ "sanpolya": {
+  "accepted": {},
+  "held": {},
+  "name": "SANPolyA",
+  "readme": true,
+  "slug": "yuht4/SANPolyA"
+ },
+ "satori": {
+  "accepted": {},
+  "held": {},
+  "name": "SATORI",
+  "readme": true,
+  "slug": "fahadahaf/SATORI"
+ },
+ "sbbadger": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/SBbadger/"
+  },
+  "held": {},
+  "name": "SBbadger",
+  "readme": true,
+  "slug": "sys-bio/SBbadger"
+ },
+ "sc-maestro": {
+  "accepted": {},
+  "held": {},
+  "name": "sc-MAESTRO",
+  "readme": true,
+  "slug": "liulab-dfci/MAESTRO"
+ },
+ "scATAC-pro": {
+  "accepted": {
+   "docker": "https://hub.docker.com/r/wbaopaul/scatac-pro"
+  },
+  "held": {},
+  "name": "scATAC-pro",
+  "readme": true,
+  "slug": "tanlabcode/scATAC-pro"
+ },
+ "scGraph2Vec": {
+  "accepted": {},
+  "held": {},
+  "name": "scGraph2Vec",
+  "readme": true,
+  "slug": "LPH-BIG/scGraph2Vec"
+ },
+ "scMNase-seq": {
+  "accepted": {},
+  "held": {},
+  "name": "scMNase-seq",
+  "readme": true,
+  "slug": "binbinlai2012/scMNase"
+ },
+ "scai": {
+  "accepted": {},
+  "held": {},
+  "name": "scAI",
+  "readme": true,
+  "slug": "amsszlh/scAI"
+ },
+ "scamace": {
+  "accepted": {},
+  "held": {},
+  "name": "scAMACE",
+  "readme": true,
+  "slug": "cuhklinlab/scAMACE_py"
+ },
+ "scan_db": {
+  "accepted": {
+   "cran": "https://cran.r-project.org/package=scan"
+  },
+  "held": {},
+  "name": "SCAN",
+  "readme": true,
+  "slug": "jazznbass/scan"
+ },
+ "scapa": {
+  "accepted": {},
+  "held": {},
+  "name": "scAPA",
+  "readme": true,
+  "slug": "ElkonLab/scAPA"
+ },
+ "scapatrap": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "samtools",
+    "subread",
+    "umi_tools"
+   ]
+  },
+  "name": "scAPAtrap",
+  "readme": true,
+  "slug": "BMILAB/scAPAtrap"
+ },
+ "scapture": {
+  "accepted": {},
+  "held": {},
+  "name": "SCAPTURE",
+  "readme": true,
+  "slug": "YangLab/SCAPTURE"
+ },
+ "scatacpipe": {
+  "accepted": {},
+  "held": {},
+  "name": "scATACpipe",
+  "readme": true,
+  "slug": "hukai916/scATACpipe"
+ },
+ "scatanno": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/scATAnno/"
+  },
+  "held": {},
+  "name": "scATAnno",
+  "readme": true,
+  "slug": "aj088/scATAnno-main"
+ },
+ "scawmv": {
+  "accepted": {},
+  "held": {},
+  "name": "scAWMV",
+  "readme": true,
+  "slug": "pengchengzeng/scAWMV"
+ },
+ "scbasset": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/scBasset/"
+  },
+  "held": {},
+  "name": "scBasset",
+  "readme": true,
+  "slug": "calico/scBasset"
+ },
+ "scenic": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "RcisTarget"
+   ]
+  },
+  "name": "SCENIC",
+  "readme": true,
+  "slug": "aertslab/SCENIC"
+ },
+ "scenicplus": {
+  "accepted": {},
+  "held": {},
+  "name": "scenicplus",
+  "readme": true,
+  "slug": "aertslab/scenicplus"
+ },
+ "scepisearch": {
+  "accepted": {},
+  "held": {},
+  "name": "scEpiSearch",
+  "readme": true,
+  "slug": "reggenlab/scEpiSearch"
+ },
+ "scepitools": {
+  "accepted": {},
+  "held": {},
+  "name": "scEpiTools",
+  "readme": true,
+  "slug": "ZjGaothu/scEpiTools"
+ },
+ "scgrnom": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "release",
+    "motifmatchr.html"
+   ]
+  },
+  "name": "scGRNom",
+  "readme": true,
+  "slug": "daifengwanglab/scGRNom"
+ },
+ "sci-l3": {
+  "accepted": {},
+  "held": {},
+  "name": "sci-L3Pipe",
+  "readme": true,
+  "slug": "recombinationlab/sciL3Pipe"
+ },
+ "sciddo": {
+  "accepted": {},
+  "held": {},
+  "name": "SCIDDO",
+  "readme": true,
+  "slug": "ptrebert/sciddo"
+ },
+ "scimet-cap": {
+  "accepted": {},
+  "held": {},
+  "name": "sciMET-cap",
+  "readme": true,
+  "slug": "adeylab/sciMETv2"
+ },
+ "sciope": {
+  "accepted": {},
+  "held": {},
+  "name": "Sciope",
+  "readme": true,
+  "slug": "Sciope/Sciope"
+ },
+ "sclc": {
+  "accepted": {},
+  "held": {},
+  "name": "SCLC",
+  "readme": true,
+  "slug": "pongorlorinc/SCLC_methylation"
+ },
+ "sclink": {
+  "accepted": {
+   "cran": "https://cran.r-project.org/package=scLink"
+  },
+  "held": {},
+  "name": "scLink",
+  "readme": true,
+  "slug": "Vivianstats/scLink"
+ },
+ "scmega": {
+  "accepted": {},
+  "held": {},
+  "name": "scMEGA",
+  "readme": true,
+  "slug": "CostaLab/scMEGA"
+ },
+ "scmlnet": {
+  "accepted": {},
+  "held": {},
+  "name": "scMLnet",
+  "readme": true,
+  "slug": "SunXQlab/scMLnet"
+ },
+ "scmomentum": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/scmomentum/"
+  },
+  "held": {},
+  "name": "scMomentum",
+  "readme": true,
+  "slug": "larisa-msoto/scMomentum"
+ },
+ "scnet-genes": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "GENIE3.html"
+   ],
+   "cran": [
+    "ppcor",
+    "GeneNet"
+   ]
+  },
+  "name": "scNET",
+  "readme": true,
+  "slug": "ComputationalSystemsBiology/scNET"
+ },
+ "scnucmap": {
+  "accepted": {},
+  "held": {},
+  "name": "scNucMap",
+  "readme": true,
+  "slug": "qianming-bioinfo/scNucMap"
+ },
+ "scoit": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/SCOIT/"
+  },
+  "held": {},
+  "name": "SCOIT",
+  "readme": true,
+  "slug": "deepomicslab/SCOIT"
+ },
+ "scorpion": {
+  "accepted": {
+   "cran": "https://cran.r-project.org/package=SCORPION"
+  },
+  "held": {},
+  "name": "SCORPION",
+  "readme": true,
+  "slug": "kuijjerlab/SCORPION"
+ },
+ "scour": {
+  "accepted": {},
+  "held": {},
+  "name": "SCOUR",
+  "readme": true,
+  "slug": "gtStyLab/SCOUR"
+ },
+ "scplant": {
+  "accepted": {},
+  "held": {},
+  "name": "scPlant",
+  "readme": true,
+  "slug": "compbioNJU/scPlant"
+ },
+ "scpower": {
+  "accepted": {},
+  "held": {},
+  "name": "scPower",
+  "readme": true,
+  "slug": "heiniglab/scPower"
+ },
+ "scprisma": {
+  "accepted": {},
+  "held": {},
+  "name": "scPrisma",
+  "readme": true,
+  "slug": "nitzanlab/scPrisma"
+ },
+ "scregclust": {
+  "accepted": {
+   "cran": "https://cran.r-project.org/package=scregclust"
+  },
+  "held": {},
+  "name": "scregclust",
+  "readme": true,
+  "slug": "scmethods/scregclust"
+ },
+ "scsgl": {
+  "accepted": {},
+  "held": {
+   "cran": [
+    "pcaPP"
+   ]
+  },
+  "name": "scSGL",
+  "readme": true,
+  "slug": "Single-Cell-Graph-Learning/scSGL"
+ },
+ "sctail": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/scTail/"
+  },
+  "held": {},
+  "name": "scTail",
+  "readme": true,
+  "slug": "StatBiomed/scTail"
+ },
+ "sctenifoldknk": {
+  "accepted": {
+   "cran": "https://cran.r-project.org/package=scTenifoldKnk"
+  },
+  "held": {},
+  "name": "scTenifoldKnk",
+  "readme": true,
+  "slug": "cailab-tamu/scTenifoldKnk"
+ },
+ "sctenifoldnet": {
+  "accepted": {
+   "cran": "https://cran.r-project.org/package=scTenifoldNet"
+  },
+  "held": {},
+  "name": "scTenifoldNet",
+  "readme": true,
+  "slug": "cailab-tamu/scTenifoldNet"
+ },
+ "seatac": {
+  "accepted": {},
+  "held": {},
+  "name": "SeATAC",
+  "readme": true,
+  "slug": "gongx030/seatac"
+ },
+ "segcond": {
+  "accepted": {},
+  "held": {},
+  "name": "SEGCOND",
+  "readme": true,
+  "slug": "AntonisK95/SEGCOND"
+ },
+ "segene": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "GenomicRanges.html",
+    "rhdf5.html",
+    "edgeR.html"
+   ],
+   "cran": [
+    "data.table",
+    "openxlsx",
+    "optparse"
+   ],
+   "docker": [
+    "condaforge/miniforge3"
+   ]
+  },
+  "name": "SEgene",
+  "readme": true,
+  "slug": "hamamoto-lab/SEgene"
+ },
+ "segtools": {
+  "accepted": {},
+  "held": {},
+  "name": "Segtools",
+  "readme": true,
+  "slug": "hoffmangroup/segtools"
+ },
+ "segway": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/segway/"
+  },
+  "held": {},
+  "name": "Segway",
+  "readme": true,
+  "slug": "hoffmangroup/segway"
+ },
+ "selansi": {
+  "accepted": {},
+  "held": {},
+  "name": "SELANSI",
+  "readme": true,
+  "slug": "selansi/Selansi"
+ },
+ "semplme": {
+  "accepted": {},
+  "held": {},
+  "name": "SEMplMe",
+  "readme": true,
+  "slug": "Boyle-Lab/SEMplMe"
+ },
+ "senies": {
+  "accepted": {},
+  "held": {},
+  "name": "SENIES",
+  "readme": true,
+  "slug": "hlju-liye/SENIES"
+ },
+ "seqacademy": {
+  "accepted": {},
+  "held": {},
+  "name": "SeqAcademy",
+  "readme": true,
+  "slug": "NCBI-Hackathons/seqacademy"
+ },
+ "seqcode": {
+  "accepted": {},
+  "held": {},
+  "name": "SeqCode",
+  "readme": true,
+  "slug": "eblancoga/seqcode"
+ },
+ "seqlogo": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/seqLogo/"
+  },
+  "held": {},
+  "name": "seqLogo",
+  "readme": true,
+  "slug": "ivanek/seqLogo"
+ },
+ "seqplots": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/seqplots/"
+  },
+  "held": {},
+  "name": "seqplots",
+  "readme": true,
+  "slug": "przemol/seqplots"
+ },
+ "sequence_in_sequence_finder": {
+  "accepted": {},
+  "held": {},
+  "name": "sequence_in_sequence_finder",
+  "readme": true,
+  "slug": "haschka/sequence_in_sequence_finder"
+ },
+ "sergio": {
+  "accepted": {},
+  "held": {},
+  "name": "SERGIO",
+  "readme": true,
+  "slug": "PayamDiba/SERGIO"
+ },
+ "sevenc": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/sevenC/"
+  },
+  "held": {},
+  "name": "sevenC",
+  "readme": true,
+  "slug": "ibn-salem/sevenC"
+ },
+ "sharenet": {
+  "accepted": {},
+  "held": {},
+  "name": "ShareNet",
+  "readme": true,
+  "slug": "alexw16/sharenet"
+ },
+ "shinyarchr_uio": {
+  "accepted": {},
+  "held": {},
+  "name": "ShinyArchR UiO",
+  "readme": true,
+  "slug": "EskelandLab/ShinyArchRUiO"
+ },
+ "siamprom": {
+  "accepted": {},
+  "held": {},
+  "name": "SiamProm",
+  "readme": true,
+  "slug": "Passion4ever/SiamProm"
+ },
+ "signac": {
+  "accepted": {},
+  "held": {},
+  "name": "Signac",
+  "readme": true,
+  "slug": "bioturing/signac"
+ },
+ "silencerdb": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "keras",
+    "tensorflow-gpu",
+    "hickle"
+   ]
+  },
+  "name": "SilencerDB",
+  "readme": true,
+  "slug": "xy-chen16/DeepSilencer"
+ },
+ "simatac": {
+  "accepted": {},
+  "held": {},
+  "name": "simATAC",
+  "readme": true,
+  "slug": "bowang-lab/simATAC"
+ },
+ "simic": {
+  "accepted": {},
+  "held": {},
+  "name": "SimiC",
+  "readme": true,
+  "slug": "jianhao2016/simicLASSO_git"
+ },
+ "similarpeak": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "similaRpeak.html"
+   ]
+  },
+  "name": "similaRpeak",
+  "readme": true,
+  "slug": "adeschen/similaRpeak"
+ },
+ "simsearch": {
+  "accepted": {},
+  "held": {},
+  "name": "SimSearch",
+  "readme": true,
+  "slug": "DEIB-GECO/simsearch-app"
+ },
+ "sincei": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/sincei/"
+  },
+  "held": {},
+  "name": "sincei",
+  "readme": true,
+  "slug": "bhardwaj-lab/sincei"
+ },
+ "sip": {
+  "accepted": {},
+  "held": {},
+  "name": "SIP",
+  "readme": true,
+  "slug": "PouletAxel/SIP"
+ },
+ "skipper": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "snakemake-executor-plugin-slurm"
+   ]
+  },
+  "name": "Skipper",
+  "readme": true,
+  "slug": "YeoLab/skipper"
+ },
+ "slncky": {
+  "accepted": {},
+  "held": {},
+  "name": "slncky",
+  "readme": true,
+  "slug": "slncky/slncky"
+ },
+ "smfm": {
+  "accepted": {},
+  "held": {},
+  "name": "SMFM",
+  "readme": true,
+  "slug": "no-banana/SMFM-master"
+ },
+ "snapatac": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "snaptools"
+   ]
+  },
+  "name": "SnapATAC",
+  "readme": true,
+  "slug": "r3fang/SnapATAC"
+ },
+ "snaphic": {
+  "accepted": {},
+  "held": {},
+  "name": "SnapHiC",
+  "readme": true,
+  "slug": "HuMingLab/SnapHiC"
+ },
+ "snapshot": {
+  "accepted": {},
+  "held": {},
+  "name": "Snapshot",
+  "readme": true,
+  "slug": "guanjue/Snapshot"
+ },
+ "snoglobe": {
+  "accepted": {},
+  "held": {},
+  "name": "snoGloBe",
+  "readme": true,
+  "slug": "scottgroup/snoGloBe"
+ },
+ "snpstarrseq": {
+  "accepted": {},
+  "held": {},
+  "name": "snpSTARRseq",
+  "readme": true,
+  "slug": "mortunco/snp-starrseq"
+ },
+ "spacelog": {
+  "accepted": {},
+  "held": {},
+  "name": "spacelog",
+  "readme": true,
+  "slug": "wuqian77/SpaceLog"
+ },
+ "spagtl": {
+  "accepted": {},
+  "held": {},
+  "name": "SpaGTL",
+  "readme": true,
+  "slug": "zccqq/SpaGTL"
+ },
+ "spartan_proteomics": {
+  "accepted": {},
+  "held": {},
+  "name": "SPaRTAN",
+  "readme": true,
+  "slug": "osmanbeyoglulab/SPaRTAN"
+ },
+ "spatzie": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/spatzie/"
+  },
+  "held": {},
+  "name": "spatzie",
+  "readme": true,
+  "slug": "gifford-lab/spatzie"
+ },
+ "specvar": {
+  "accepted": {},
+  "held": {},
+  "name": "SpecVar",
+  "readme": true,
+  "slug": "AMSSwanglab/SpecVar"
+ },
+ "spidermir": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/SpidermiR/"
+  },
+  "held": {},
+  "name": "SpidermiR",
+  "readme": true,
+  "slug": "claudiacava/SpidermiR"
+ },
+ "spikchip": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "MACS2"
+   ]
+  },
+  "name": "spikChIP",
+  "readme": true,
+  "slug": "eblancoga/spikChIP"
+ },
+ "srgs": {
+  "accepted": {},
+  "held": {},
+  "name": "SRGS",
+  "readme": true,
+  "slug": "JGuan-lab/SRGS"
+ },
+ "srna_workflow": {
+  "accepted": {},
+  "held": {},
+  "name": "sRNA workflow",
+  "readme": true,
+  "slug": "forestbiotech-lab/sRNA-workflow"
+ },
+ "ssblazer": {
+  "accepted": {},
+  "held": {},
+  "name": "SSBlazer",
+  "readme": true,
+  "slug": "sxu99/ssblazer"
+ },
+ "ssvqc": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "seqsetvis"
+   ]
+  },
+  "name": "ssvQC",
+  "readme": true,
+  "slug": "FrietzeLabUVM/ssvQC"
+ },
+ "stackepi": {
+  "accepted": {},
+  "held": {},
+  "name": "StackEPI",
+  "readme": true,
+  "slug": "20032303092/StackEPI"
+ },
+ "starrpeaker": {
+  "accepted": {},
+  "held": {},
+  "name": "STARRPeaker",
+  "readme": true,
+  "slug": "gersteinlab/starrpeaker"
+ },
+ "statepaintr": {
+  "accepted": {},
+  "held": {},
+  "name": "StatePaintR",
+  "readme": true,
+  "slug": "Simon-Coetzee/StatePaintR"
+ },
+ "stemnesscore": {
+  "accepted": {},
+  "held": {},
+  "name": "StemnesScoRe",
+  "readme": true,
+  "slug": "Necla/StemnesScoRe"
+ },
+ "svmatac": {
+  "accepted": {},
+  "held": {},
+  "name": "svmATAC",
+  "readme": true,
+  "slug": "mrcuizhe/svmATAC"
+ },
+ "svmil2": {
+  "accepted": {},
+  "held": {},
+  "name": "svMIL2",
+  "readme": true,
+  "slug": "UMCUGenetics/svMIL"
+ },
+ "swembl": {
+  "accepted": {},
+  "held": {},
+  "name": "SWEMBL",
+  "readme": true,
+  "slug": "stevenwilder/SWEMBL"
+ },
+ "systempiper": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "devel",
+    "stats"
+   ]
+  },
+  "name": "systemPipeR",
+  "readme": true,
+  "slug": "tgirke/systemPipeR"
+ },
+ "tREMAP": {
+  "accepted": {},
+  "held": {},
+  "name": "tREMAP",
+  "readme": true,
+  "slug": "hansaimlim/REMAP"
+ },
+ "tacs": {
+  "accepted": {},
+  "held": {},
+  "name": "tacs",
+  "readme": true,
+  "slug": "takenakayoichi/tacs"
+ },
+ "tadbd": {
+  "accepted": {},
+  "held": {},
+  "name": "TADBD",
+  "readme": true,
+  "slug": "bioinfo-lab/TADBD"
+ },
+ "tadeus2": {
+  "accepted": {},
+  "held": {},
+  "name": "TADeus2",
+  "readme": true,
+  "slug": "bposzewiecka/tadeus2"
+ },
+ "tadpole": {
+  "accepted": {},
+  "held": {},
+  "name": "TADpole",
+  "readme": true,
+  "slug": "3DGenomes/TADpole"
+ },
+ "tadreg": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "release"
+   ]
+  },
+  "name": "TADreg",
+  "readme": true,
+  "slug": "raphaelmourad/TADreg"
+ },
+ "targetdbpplus": {
+  "accepted": {},
+  "held": {},
+  "name": "TargetDBP+",
+  "readme": true,
+  "slug": "jun-csbio/TargetDBPplus"
+ },
+ "tca": {
+  "accepted": {},
+  "held": {},
+  "name": "TCA",
+  "readme": true,
+  "slug": "Soulnature/TCA"
+ },
+ "tcrconv": {
+  "accepted": {},
+  "held": {},
+  "name": "TCRconv",
+  "readme": true,
+  "slug": "emmijokinen/tcrconv"
+ },
+ "tejaas": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/tejaas/"
+  },
+  "held": {},
+  "name": "Tejaas",
+  "readme": true,
+  "slug": "soedinglab/tejaas"
+ },
+ "tempomage": {
+  "accepted": {},
+  "held": {},
+  "name": "TempoMAGE",
+  "readme": true,
+  "slug": "pkhoueiry/TempoMAGE"
+ },
+ "tenet-network": {
+  "accepted": {},
+  "held": {},
+  "name": "TENET",
+  "readme": true,
+  "slug": "neocaleb/TENET"
+ },
+ "tetrex": {
+  "accepted": {},
+  "held": {},
+  "name": "TetRex",
+  "readme": true,
+  "slug": "remyschwab/TetRex"
+ },
+ "tf-marker": {
+  "accepted": {},
+  "held": {},
+  "name": "TF-Marker",
+  "readme": false,
+  "slug": "LicLab-bio/PHP"
+ },
+ "tf-prioritizer": {
+  "accepted": {
+   "docker": "https://hub.docker.com/r/nicotru/tf-prioritizer"
+  },
+  "held": {},
+  "name": "TF-Prioritizer",
+  "readme": true,
+  "slug": "biomedbigdata/TF-Prioritizer"
+ },
+ "tf_prioritizer": {
+  "accepted": {
+   "docker": "https://hub.docker.com/r/nicotru/tf-prioritizer"
+  },
+  "held": {},
+  "name": "TF-Prioritizer",
+  "readme": true,
+  "slug": "biomedbigdata/TF-Prioritizer"
+ },
+ "tfanalysis": {
+  "accepted": {},
+  "held": {},
+  "name": "TFAnalysis",
+  "readme": true,
+  "slug": "SchulzLab/TFAnalysis"
+ },
+ "tfbind": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/TFBind/"
+  },
+  "held": {},
+  "name": "TFBIND",
+  "readme": true,
+  "slug": "jingpengLiu/TFBind"
+ },
+ "tfbminer": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "tqdm"
+   ]
+  },
+  "name": "TFBMiner",
+  "readme": true,
+  "slug": "UoMMIB/TFBMiner"
+ },
+ "tfbs": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "TFBSTools"
+   ]
+  },
+  "name": "TFBS",
+  "readme": true,
+  "slug": "ComputationalRegulatoryGenomicsICL/TFBS"
+ },
+ "tfbstools": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/TFBSTools/"
+  },
+  "held": {},
+  "name": "TFBSTools",
+  "readme": true,
+  "slug": "ge11232002/TFBSTools"
+ },
+ "tfea.chip": {
+  "accepted": {},
+  "held": {},
+  "name": "TFEA.ChIP",
+  "readme": false,
+  "slug": "yberda/TFEA.ChIP"
+ },
+ "tfhaz": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "TFHAZ.html"
+   ]
+  },
+  "name": "TFHAZ",
+  "readme": true,
+  "slug": "DEIB-GECO/TFHAZ"
+ },
+ "tflda": {
+  "accepted": {},
+  "held": {},
+  "name": "tfLDA",
+  "readme": true,
+  "slug": "lichen-lab/tfLDA"
+ },
+ "tflink": {
+  "accepted": {},
+  "held": {},
+  "name": "TFLink",
+  "readme": true,
+  "slug": "korcsmarosgroup/TFlink"
+ },
+ "tftenricher": {
+  "accepted": {},
+  "held": {},
+  "name": "TFTenricher",
+  "readme": true,
+  "slug": "rasma774/Tftenricher"
+ },
+ "threadna": {
+  "accepted": {},
+  "held": {},
+  "name": "ThreaDNA",
+  "readme": true,
+  "slug": "sammeyer2017/ThreaDNA"
+ },
+ "tigre": {
+  "accepted": {},
+  "held": {},
+  "name": "tigre",
+  "readme": false,
+  "slug": "ahonkela/tigre"
+ },
+ "timelessflex": {
+  "accepted": {},
+  "held": {},
+  "name": "TimelessFlex",
+  "readme": true,
+  "slug": "henriettemiko/TimelessFlex"
+ },
+ "timeor": {
+  "accepted": {
+   "docker": "https://hub.docker.com/r/ashleymaeconard/timeor"
+  },
+  "held": {
+   "bioconductor": [
+    "ImpulseDE2.html",
+    "maSigPro.html",
+    "DESeq2.html"
+   ]
+  },
+  "name": "TIMEOR",
+  "readme": true,
+  "slug": "ashleymaeconard/TIMEOR"
+ },
+ "timirgen": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "release"
+   ]
+  },
+  "name": "TimiRGeN",
+  "readme": true,
+  "slug": "Krutik6/TimiRGeN"
+ },
+ "ting": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/bio-ting",
+   "pypi": "https://pypi.org/project/bio-ting/"
+  },
+  "held": {},
+  "name": "ting",
+  "readme": true,
+  "slug": "FelixMoelder/ting"
+ },
+ "tivan-indel": {
+  "accepted": {},
+  "held": {
+   "bioconductor": [
+    "BSgenome.Hsapiens.UCSC.hg19"
+   ],
+   "cran": [
+    "data.table"
+   ]
+  },
+  "name": "TIVAN-indel",
+  "readme": true,
+  "slug": "lichen-lab/TIVAN-indel"
+ },
+ "tmeland": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "r-mass"
+   ]
+  },
+  "name": "TMELand",
+  "readme": true,
+  "slug": "JieZheng-ShanghaiTech/TMELand"
+ },
+ "tn-core": {
+  "accepted": {},
+  "held": {},
+  "name": "Tn-Core",
+  "readme": true,
+  "slug": "diCenzo-GC/Tn-Core"
+ },
+ "to_ast": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "flask",
+    "seaborn",
+    "hdbscan"
+   ]
+  },
+  "name": "TOAST",
+  "readme": true,
+  "slug": "ghaiyan/TOAST"
+ },
+ "topicnet": {
+  "accepted": {},
+  "held": {},
+  "name": "TopicNet",
+  "readme": true,
+  "slug": "gersteinlab/topicnet"
+ },
+ "toxinpred2": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/toxinpred2/"
+  },
+  "held": {},
+  "name": "ToxinPred2",
+  "readme": true,
+  "slug": "raghavagps/toxinpred2"
+ },
+ "transynergy": {
+  "accepted": {},
+  "held": {
+   "pypi": [
+    "zenodo-get"
+   ]
+  },
+  "name": "TranSynergy",
+  "readme": true,
+  "slug": "qiaoliuhub/drug_combination"
+ },
+ "trawlerweb": {
+  "accepted": {},
+  "held": {},
+  "name": "TrawlerWeb",
+  "readme": true,
+  "slug": "Ramialison-Lab-ARMI/Trawler-2.0"
+ },
+ "triplexfpp": {
+  "accepted": {},
+  "held": {},
+  "name": "TriplexFPP",
+  "readme": true,
+  "slug": "yuuuuzhang/TriplexFPP"
+ },
+ "tritan": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/TriTan/"
+  },
+  "held": {},
+  "name": "TriTan",
+  "readme": true,
+  "slug": "maxxxxxxxin/TriTan"
+ },
+ "trviz": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/trviz/"
+  },
+  "held": {},
+  "name": "TRviz",
+  "readme": true,
+  "slug": "Jong-hun-Park/trviz"
+ },
+ "tsminer": {
+  "accepted": {},
+  "held": {},
+  "name": "TSMiner",
+  "readme": true,
+  "slug": "free1234hm/tsminer-tool"
+ },
+ "tsptfbs": {
+  "accepted": {},
+  "held": {},
+  "name": "TSPTFBS",
+  "readme": true,
+  "slug": "liulifenyf/TSPTFBS"
+ },
+ "tsrexplorer": {
+  "accepted": {},
+  "held": {},
+  "name": "TSRexploreR",
+  "readme": true,
+  "slug": "zentnerlab/TSRexploreR"
+ },
+ "tssnote-cyaprombert": {
+  "accepted": {},
+  "held": {},
+  "name": "TSSNote-CyaPromBERT",
+  "readme": true,
+  "slug": "hanepira/TSSnote-CyaPromBert"
+ },
+ "tssr": {
+  "accepted": {
+   "bioconductor": "https://bioconductor.org/packages/TSSr/"
+  },
+  "held": {
+   "cran": [
+    "data.table",
+    "stringr"
+   ]
+  },
+  "name": "TSSr",
+  "readme": true,
+  "slug": "Linlab-slu/TSSr"
+ },
+ "turf": {
+  "accepted": {},
+  "held": {},
+  "name": "TURF",
+  "readme": true,
+  "slug": "Boyle-Lab/RegulomeDB-TURF"
+ },
+ "tuxnet": {
+  "accepted": {},
+  "held": {},
+  "name": "tuxnet",
+  "readme": true,
+  "slug": "rspurney/TuxNet"
+ },
+ "tvar": {
+  "accepted": {},
+  "held": {},
+  "name": "TVAR",
+  "readme": true,
+  "slug": "haiyang1986/TVAR"
+ },
+ "u-shape3D": {
+  "accepted": {},
+  "held": {},
+  "name": "u-shape3D",
+  "readme": true,
+  "slug": "DanuserLab/u-shape3D"
+ },
+ "umap-dbp": {
+  "accepted": {},
+  "held": {},
+  "name": "UMAP-DBP",
+  "readme": true,
+  "slug": "Wang-Jinyue/UMAP-DBP"
+ },
+ "umi-atac-seq": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "gzip",
+    "biopython",
+    "umi_tools"
+   ]
+  },
+  "name": "UMI-ATAC-seq",
+  "readme": true,
+  "slug": "tzhu-bio/UMI-ATAC-seq"
+ },
+ "unipath": {
+  "accepted": {},
+  "held": {},
+  "name": "UniPath",
+  "readme": false,
+  "slug": "reggenlab/UniPath"
+ },
+ "universal_TTSs": {
+  "accepted": {},
+  "held": {},
+  "name": "universal TTSs",
+  "readme": true,
+  "slug": "vanya-antonov/universal_tts"
+ },
+ "unpairreg": {
+  "accepted": {},
+  "held": {},
+  "name": "UnpairReg",
+  "readme": true,
+  "slug": "Durenlab/UnpairReg"
+ },
+ "uropa": {
+  "accepted": {
+   "pypi": "https://pypi.org/project/uropa/"
+  },
+  "held": {
+   "conda": [
+    "location"
+   ]
+  },
+  "name": "UROPA",
+  "readme": true,
+  "slug": "loosolab/UROPA"
+ },
+ "usmpep": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "pytorch",
+    "fastai",
+    "fire"
+   ],
+   "pypi": [
+    "sentencepiece"
+   ]
+  },
+  "name": "USMPep",
+  "readme": true,
+  "slug": "nstrodt/USMPep"
+ },
+ "vamos": {
+  "accepted": {},
+  "held": {},
+  "name": "vamos",
+  "readme": true,
+  "slug": "chaissonlab/vamos"
+ },
+ "varmole": {
+  "accepted": {},
+  "held": {},
+  "name": "Varmole",
+  "readme": true,
+  "slug": "daifengwanglab/Varmole"
+ },
+ "velorama": {
+  "accepted": {},
+  "held": {},
+  "name": "Velorama",
+  "readme": true,
+  "slug": "rs239/velorama"
+ },
+ "vernal": {
+  "accepted": {},
+  "held": {},
+  "name": "Vernal",
+  "readme": true,
+  "slug": "cgoliver/vernal"
+ },
+ "viennngs": {
+  "accepted": {},
+  "held": {},
+  "name": "ViennNGS",
+  "readme": true,
+  "slug": "mtw/Bio-ViennaNGS"
+ },
+ "virnatrap": {
+  "accepted": {},
+  "held": {},
+  "name": "viRNAtrap",
+  "readme": true,
+  "slug": "AuslanderLab/virnatrap"
+ },
+ "virtual_chip-seq": {
+  "accepted": {
+   "conda": "https://anaconda.org/bioconda/virchip",
+   "pypi": "https://pypi.org/project/virtualChipSeq/"
+  },
+  "held": {},
+  "name": "Virtual ChIP-seq",
+  "readme": true,
+  "slug": "hoffmangroup/virchip"
+ },
+ "vsrnafinder": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "bowtie",
+    "samtools",
+    "bedtools"
+   ]
+  },
+  "name": "vsRNAfinder",
+  "readme": true,
+  "slug": "ZenaCai/vsRNAfinder"
+ },
+ "washu_epigenome_browser": {
+  "accepted": {},
+  "held": {},
+  "name": "WashU Epigenome Browser",
+  "readme": true,
+  "slug": "lidaof/eg-react"
+ },
+ "web-mcot": {
+  "accepted": {},
+  "held": {},
+  "name": "Web-MCOT",
+  "readme": true,
+  "slug": "academiq/mcot-kernel"
+ },
+ "weblogo": {
+  "accepted": {},
+  "held": {},
+  "name": "WebLogo",
+  "readme": true,
+  "slug": "gecrooks/weblogo"
+ },
+ "wiggler": {
+  "accepted": {},
+  "held": {},
+  "name": "Wiggler",
+  "readme": true,
+  "slug": "akundaje/align2rawsignal"
+ },
+ "wintf": {
+  "accepted": {},
+  "held": {},
+  "name": "WINTF",
+  "readme": true,
+  "slug": "XieResearchGroup/WINTF"
+ },
+ "wto": {
+  "accepted": {},
+  "held": {},
+  "name": "wTO",
+  "readme": true,
+  "slug": "andrevo/DiffCoEx-WTO"
+ },
+ "x-cnn": {
+  "accepted": {},
+  "held": {},
+  "name": "X-CNN",
+  "readme": true,
+  "slug": "ernstlab/X-CNN"
+ },
+ "x-omics_action_demonstrator_multi-omics_analysis_workflow": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "nextflow"
+   ]
+  },
+  "name": "X-omics ACTION demonstrator multi-omics analysis workflow",
+  "readme": true,
+  "slug": "Xomics/ACTIONdemonstrator_workflow"
+ },
+ "xlnc1dcnn": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "all",
+    "tensorflow-gpu"
+   ]
+  },
+  "name": "Xlnc1DCNN",
+  "readme": true,
+  "slug": "cucpbioinfo/Xlnc1DCNN"
+ },
+ "xxmotif": {
+  "accepted": {},
+  "held": {},
+  "name": "XXmotif",
+  "readme": true,
+  "slug": "soedinglab/xxmotif"
+ },
+ "yodel": {
+  "accepted": {},
+  "held": {},
+  "name": "YODEL",
+  "readme": true,
+  "slug": "LancePalmerStJude/YODEL"
+ },
+ "ytlr": {
+  "accepted": {},
+  "held": {
+   "conda": [
+    "wget",
+    "pytorch"
+   ],
+   "pypi": [
+    "https"
+   ]
+  },
+  "name": "YTLR",
+  "readme": true,
+  "slug": "cobisLab/YTLR"
+ }
+}

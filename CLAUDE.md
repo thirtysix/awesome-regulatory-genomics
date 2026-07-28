@@ -17,6 +17,7 @@ These are overwritten on every build. Edits are lost without warning.
 | `docs/registry-discovery.md` | `pipeline/discover_registries.py`; promote rows into `seeds.yaml` |
 | `docs/literature-discovery.md` | `pipeline/discover_literature.py`; promote rows into `seeds.yaml` |
 | `docs/homepage-check.md` | `pipeline/check_homepages.py` |
+| `docs/install-review.md` | `pipeline/resolve_installs.py`; promote rows into `overlay.yaml` |
 | `curation/llm_proposals.yaml` | it is model output; promote things into `overlay.yaml` |
 
 `curation/overlay.yaml`, `curation/seeds.yaml` and `curation/benchmark.yaml` are
@@ -109,6 +110,22 @@ string, so an apostrophe in the prose terminates a JS string literal and ships a
 blank page. Extract the inline `<script>` blocks and run them under `node` with a
 stubbed DOM; this has caught a blank page once already.
 
+**Three vocabulary traps found while widening the scope on 2026-07-28.**
+`Hi-C` is a technology, not a field: genome assemblies are scaffolded with it,
+so putting it in the strong tier admitted "A high-quality genome sequence of
+alkaligrass". It lives in `KEEP_TEXT_PATTERNS`, needing a domain topic.
+`Loop modelling`, `Gene expression QTL analysis` and `Bisulfite mapping` are
+EDAM operations that look decisive and are not: bio.tools attaches them to RNA
+secondary structure, expression atlases and general commercial suites. They
+admit nothing, not even with topic corroboration. And `methylation` alone spans
+three fields, so only DNA-specific wording (bisulfite, WGBS, methylome, DMR,
+Bis-seq) admits.
+
+**The pipeline order is select -> enrich -> build.** Changing `select_domain.py`
+or the `config.py` rules and then running `make build` uses the PREVIOUS
+`enriched.json.gz`, so the change appears not to have worked. Re-run
+`make enrich` in between; it is cached, so only the new records cost anything.
+
 **`pkill -f "http.server 8000"` matches your own shell** and kills it. Use the
 bracket trick (`[h]ttp.server`) or kill by PID.
 
@@ -117,10 +134,13 @@ bracket trick (`[h]ttp.server`) or kill by PID.
 In scope: transcription-factor binding and motifs, promoters and enhancers,
 footprinting, ChIP/ATAC peak calling and annotation, chromatin accessibility and
 nucleosomes, gene-regulatory networks, regulatory variant effect, and the
-databases serving those.
+databases serving those. **Widened 2026-07-28** to DNA methylation, the 3D
+genome (Hi-C, HiChIP, loops, TADs), histone modifications, reporter assays
+(MPRA/STARR-seq) and molecular QTL (eQTL, caQTL).
 
 Out: general alignment and assembly, RNA structure, protein structure and
 docking, mass spectrometry, proteomics, metabolomics, phylogenetics, and generic
 differential-expression tooling, even when they share vocabulary like "motif",
-"peak" or "binding". The rules live in `pipeline/config.py`; rejected records are
+"peak" or "binding". Also out, and newly enforced: RNA modification
+(m6A/m5C/pseudouridine), protein methylation, and genome-announcement papers. The rules live in `pipeline/config.py`; rejected records are
 written to `data/raw/rejected.json` so the boundary can be argued with.

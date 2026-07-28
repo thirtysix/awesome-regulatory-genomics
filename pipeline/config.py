@@ -91,6 +91,13 @@ QUERY_OPERATIONS = [
     # networks
     "Gene regulatory network analysis",
     "Gene regulatory network prediction",
+    # methylation, 3D genome and QTL, added with the 2026-07-28 scope widening
+    "Methylation calling",
+    "Methylation analysis",
+    "Gene methylation analysis",
+    "Bisulfite mapping",
+    "Loop modelling",
+    "Gene expression QTL analysis",
 ]
 
 # Operation terms that look in-domain but are NOT queried and never admit
@@ -130,6 +137,8 @@ QUERY_TOPICS = [
     "Gene regulation",
     "ChIP-seq",
     "Epigenomics",
+    "Chromosome conformation capture",
+    "Methylated DNA immunoprecipitation",
 ]
 
 # bio.tools records that are unambiguously in scope but that no operation,
@@ -283,6 +292,10 @@ STRONG_OPERATIONS = {
     "Gene regulatory network analysis",
     "Gene regulatory network prediction",
     "Gene co-expression network analysis",
+    # Added 2026-07-28 with the scope widening. Only these two survived the
+    # first run: they name the DNA assay itself and nothing else uses them.
+    "Methylation calling",
+    "Gene methylation analysis",
 }
 
 # WEAK - genuinely in-domain terms that bio.tools also applies to protein
@@ -297,6 +310,31 @@ WEAK_OPERATIONS = {
     # actual comparative regulatory analysis.
     "Phylogenetic footprinting",
     "Phylogenetic footprinting / shadowing",
+    # "Methylation analysis" is applied to RNA m6A and protein PTM work as well
+    # as to DNA, so it needs a corroborating topic or text signal.
+    "Methylation analysis",
+    # These three were tried in STRONG on 2026-07-28 and demoted the same hour,
+    # because the first run showed what bio.tools actually attaches them to:
+    #
+    #   "Loop modelling"              -> RNA secondary-structure loops
+    #                                    (CRISPRtracrRNA) and protein
+    #                                    conformational landscapes (Rascore),
+    #                                    not only chromatin loops.
+    #   "Gene expression QTL analysis" -> expression atlases and model-organism
+    #                                    databases (ZFIN, Mouse Atlas of Gene
+    #                                    Expression, SAGE), not QTL methods.
+    #   "Bisulfite mapping"           -> general-purpose commercial suites that
+    #                                    list every assay they support (CLC
+    #                                    Main Workbench, Genedata Expressionist).
+    #
+    # A domain topic turned out to be too weak a corroboration for these:
+    # bio.tools applies "Transcription factors and regulatory sites" and
+    # "Epigenomics" liberally, so topic-corroboration alone still admitted ZFIN,
+    # the Mouse Atlas of Gene Expression, CLC Main Workbench and a RAS protein
+    # conformation tool. They are therefore not admitted by operation at all;
+    # the STRONG text patterns (bisulfite, methylome, Hi-C, eQTL) reach every
+    # genuine case on their own, which was verified by removing these and
+    # checking that nothing real was lost.
 }
 
 KEEP_OPERATIONS = STRONG_OPERATIONS | WEAK_OPERATIONS
@@ -316,6 +354,9 @@ DOMAIN_TOPICS = {
     "Functional, regulatory and non-coding RNA",
     "DNA binding sites",
     "ChIP-on-chip",
+    "Chromosome conformation capture",
+    "Methylated DNA immunoprecipitation",
+    "DNA methylation",
 }
 
 # STRONG text patterns: phrases so specific to this field that a match settles
@@ -347,6 +388,26 @@ STRONG_TEXT_PATTERNS = [
     r"\bDNA[- ]binding (site|preference|specificit|profile|domain)",
     r"\bnucleosome",
     r"\bepigenom(e|ic)s?\b",
+    # Added 2026-07-28. DNA methylation: every term here is DNA-specific.
+    # Deliberately NOT bare "methylation", which protein PTM and RNA m6A work
+    # use just as freely; those are soft-excluded below and lose to these.
+    r"\bbisulfite\b|\bWGBS\b|\bRRBS\b|\bmethylome\b|\bmethyl-?seq\b|\bB[iS]S?-?seq\b",
+    r"\bDNA methylation|\bdifferentially methylated|\bDMRs?\b|\bDMPs?\b",
+    r"\bCpG (island|site|methylation|dinucleotide)|\bmethylation (calling|caller)",
+    # 3D genome. NOT bare "Hi-C": the assay is used just as heavily to scaffold
+    # genome assemblies, and putting it here admitted "A high-quality genome
+    # sequence of alkaligrass". Hi-C stays in KEEP_TEXT_PATTERNS, where a
+    # domain topic has to corroborate it; "Chromosome conformation capture" is
+    # a domain topic, so the real 3D tools still arrive. What is listed here is
+    # only vocabulary that genome-assembly papers do not use.
+    r"\bmicro-?C\b|\bchromosome conformation capture\b|\b[3-5]C-seq\b",
+    r"\bchromatin (loop|contact|interaction)|\bA/B compartment|\bloop calling",
+    r"\bloop extrusion|\b(molecular|omics) QTL",
+    # Molecular QTL.
+    r"\b[a-z]{1,3}QTLs?\b|\bexpression quantitative trait|\bquantitative trait loc",
+    # Histone marks. The mark nomenclature (H3K27ac) is decisive; bare
+    # "histone methylation" is not, because that is also a protein PTM task.
+    r"\bH[1-4](K|R)\d+(me|ac|ub|ph)\d*\b|\bhistone (mark|modification|variant|acetylation)",
 ]
 
 # Records that fail the operation filter are still kept if their name or
@@ -465,6 +526,17 @@ HARD_EXCLUDE_PATTERNS = [
     r"\bretroposon|\bretrotransposon",
     r"\bviral taxonom",
     r"\bortholog(y|ue|s)? (inference|prediction|assignment|classifier)",
+    # Protein methylation is a post-translational-modification task and shares
+    # every word with DNA methylation. MethK ("identifying methylated lysines
+    # on histones and non-histone proteins") is the case that matters: it would
+    # otherwise ride in on the histone pattern.
+    r"\bmethylated lysine|\blysine (methylation|acetylation) site|\bPTM site",
+    # Genome-announcement papers, which are not tools at all. They reach the
+    # sweep because chromosome conformation capture is now routinely used to
+    # scaffold an assembly, so "A high-quality genome sequence of alkaligrass"
+    # matched a 3D-genome phrase. The give-away is in the opening clause.
+    r"\bhigh[- ]quality .{0,25}genome (sequence|assembly)",
+    r"\bchromosome[- ]?(level|scale) .{0,15}(genome )?(assembly|sequence)",
 ]
 
 # SOFT exclusions: the phrase merely suggests another field and can legitimately
@@ -501,6 +573,11 @@ EXCLUDE_TEXT_PATTERNS = [
     r"\bRNA (tertiary|structural|secondary) motif",
     r"\bviral taxonom|\btelomeric motif|\bmicrobiome",
     r"\blow complexity protein",
+    # RNA modification is a neighbouring field using the same word. Soft
+    # rather than hard on purpose: bacterial 6mA is a DNA modification, so a
+    # tool calling both (nanodisco) must still be admitted by the DNA-specific
+    # strong patterns above, which beat this.
+    r"\bepitranscriptom|\bRNA methylation|\bm6A\b|\bm5C\b|\bpseudouridin",
 ]
 
 # ---------------------------------------------------------------------------
@@ -521,6 +598,8 @@ CATEGORIES = [
      "Predicting transcription-factor binding sites, including sequence-based ML models."),
     ("regulatory-elements", "Promoter & enhancer prediction",
      "Prediction and annotation of promoters, enhancers and other cis-regulatory elements."),
+    ("reporter-assays", "Reporter assays",
+     "MPRA, STARR-seq and other massively parallel tests of regulatory activity."),
     ("footprinting", "Footprinting",
      "DNase/ATAC digital footprinting and phylogenetic footprinting."),
     ("peak-calling", "Peak calling",
@@ -533,8 +612,16 @@ CATEGORIES = [
      "Inferring and analysing TF-target networks and regulons."),
     ("regulatory-variants", "Regulatory variant effect",
      "Assessing the impact of sequence variants on binding and regulatory activity."),
+    ("molecular-qtl", "Molecular QTL",
+     "eQTL, caQTL and related mapping of variants to regulatory phenotypes."),
     ("nucleosome-chromatin", "Nucleosome & chromatin state",
      "Nucleosome positioning, chromatin accessibility and chromatin-state segmentation."),
+    ("histone-marks", "Histone modifications",
+     "Histone marks, super-enhancers and chromatin-state segmentation from histone data."),
+    ("chromatin-3d", "3D genome & chromatin interactions",
+     "Hi-C, HiChIP and ChIA-PET; loops, TADs, compartments and enhancer-promoter contacts."),
+    ("dna-methylation", "DNA methylation",
+     "Methylation calling, differential methylation and methylome resources."),
     ("single-cell", "Single-cell regulatory genomics",
      "Single-cell ATAC/multiome and single-cell regulatory network methods."),
     ("comparative", "Comparative & evolutionary",
@@ -573,6 +660,12 @@ OP_CATEGORY = {
     "Gene regulatory network analysis": ["grn-inference"],
     "Gene regulatory network prediction": ["grn-inference"],
     "Gene co-expression network analysis": ["grn-inference"],
+    "Methylation calling": ["dna-methylation"],
+    "Methylation analysis": ["dna-methylation"],
+    "Gene methylation analysis": ["dna-methylation"],
+    "Bisulfite mapping": ["dna-methylation"],
+    "Loop modelling": ["chromatin-3d"],
+    "Gene expression QTL analysis": ["molecular-qtl"],
 }
 
 # Regex applied to "name. description" -> extra categories.
@@ -600,7 +693,21 @@ TEXT_CATEGORY = {
     "regulatory-variants": [r"\b(SNP|SNV|variant|mutation)s? .{0,40}(binding|motif|regulatory)",
                             r"\bmotif.?break", r"\bregulatory variant", r"\bnon-?coding variant"],
     "nucleosome-chromatin": [r"\bnucleosome", r"\bchromatin (accessibilit|state|segmentation)",
-                             r"\bopen chromatin", r"\bhistone modification"],
+                             r"\bopen chromatin"],
+    "histone-marks": [r"\bH[1-4](K|R)\d+(me|ac|ub|ph)\d*\b",
+                      r"\bhistone (mark|modification|variant|acetylation|methylation)",
+                      r"\bsuper-?enhancer", r"\bchromatin[- ]state segmentation", r"\bChromHMM\b"],
+    "chromatin-3d": [r"\bloop extrusion", r"\bHi-?C\b", r"\bmicro-?C\b", r"\bHiChIP\b", r"\bChIA-?PET\b",
+                     r"\bcapture[- ]?C\b", r"\b[3-5]C-seq\b", r"\bchromosome conformation",
+                     r"\btopologically associat|\bTADs?\b", r"\bchromatin (loop|contact|interaction)",
+                     r"\bA/B compartment", r"\benhancer-?promoter (loop|contact|interaction)"],
+    "dna-methylation": [r"\bDNA methylation", r"\bbisulfite\b|\bB[iS]S?-?seq\b", r"\bWGBS\b|\bRRBS\b",
+                        r"\bmethylome\b", r"\bdifferentially methylated|\bDMRs?\b",
+                        r"\bCpG (island|site|methylation)", r"\bmethylation (call|profil|array)"],
+    "molecular-qtl": [r"\b[a-z]{1,3}QTLs?\b", r"\b(molecular|omics) QTL", r"\bexpression quantitative trait",
+                      r"\bquantitative trait loc"],
+    "reporter-assays": [r"\bMPRA\b", r"\bSTARR-?seq", r"\bmassively parallel reporter",
+                        r"\breporter assay", r"\blentiMPRA\b"],
     "single-cell": [r"\bsingle[- ]cell", r"\bscATAC", r"\bsnATAC", r"\bscRNA.{0,20}regulat", r"\bmultiome"],
     "comparative": [r"\b(cross|inter)[- ]species", r"\bcomparative genomic", r"\bconservation of .{0,30}regulat",
                     r"\bevolution(ary)? .{0,30}(regulat|motif|binding)"],
@@ -614,6 +721,9 @@ TOPIC_CATEGORY = {
     "Transcription factors and regulatory sites": ["tfbs-prediction"],
     "Gene regulatory networks": ["grn-inference"],
     "Molecular interactions, pathways and networks": [],
+    "Chromosome conformation capture": ["chromatin-3d"],
+    "Methylated DNA immunoprecipitation": ["dna-methylation"],
+    "DNA methylation": ["dna-methylation"],
 }
 
 # Database-ish tool types promote a tool into the *-databases/resources buckets.

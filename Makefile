@@ -2,7 +2,7 @@ PY ?= python3
 PORT ?= 8000        # override if 8000 is taken: make serve PORT=8420
 PIPELINE := $(PY) pipeline
 
-.PHONY: all harvest select enrich links build render audit curate refresh clean check test serve llm bench verify-additions repos repos-revalidate discover discover-refresh discover-lit check-links fill-metadata
+.PHONY: all harvest select enrich links build render audit curate refresh clean check test serve llm bench verify-additions repos repos-revalidate discover discover-refresh discover-lit check-links fill-metadata installs
 
 ## build everything from the existing sweep (no network beyond enrichment)
 all: select enrich repos links build render audit
@@ -45,6 +45,12 @@ links:
 ## only a 404/410 counts as dead. Cached, so re-runs only recheck stale entries.
 check-links:
 	$(PIPELINE)/check_homepages.py
+
+## read install routes (PyPI/conda/CRAN/Bioconductor/Docker) off each tool's
+## own repository README. Better evidence than a name match in a registry, and
+## it is how MACS, pySCENIC and RSAT get install links bio.tools never records.
+installs:
+	$(PIPELINE)/resolve_installs.py
 
 ## fill fields derivable from data already held: publication year from
 ## OpenAlex, licence from the resolved repository. Both are marked, neither
