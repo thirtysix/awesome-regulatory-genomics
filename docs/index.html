@@ -89,13 +89,19 @@ a.theme:hover{border-color:var(--accent);color:var(--accent);text-decoration:non
 .repo::before{content:"";width:15px;height:15px;flex:0 0 15px;background:currentColor;
   -webkit-mask:var(--gh) center/contain no-repeat;mask:var(--gh) center/contain no-repeat}
 .stats{margin:0 0 16px}
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:12px}
-.kpi{border:1px solid var(--line);border-radius:10px;padding:10px 13px;background:var(--card)}
+/* One cell per stat-and-chart pair, so the headline number always sits on the
+   distribution it summarises: "actively maintained" over "repository last
+   updated", "source repository" over "GitHub stars". Pairing them in ONE grid
+   cell rather than in two parallel grids means they cannot drift apart when
+   the row wraps at a narrower width. */
+.panels{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:10px}
+.panel{border:1px solid var(--line);border-radius:10px;background:var(--card);
+  display:flex;flex-direction:column}
+.kpi{padding:11px 13px 9px;border-bottom:1px solid var(--line)}
 .kpi .k{font-size:12px;color:var(--muted)}
 .kpi .v{font-size:25px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.25}
 .kpi .s{font-size:11.5px;color:var(--muted)}
-.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}
-.chart{border:1px solid var(--line);border-radius:10px;padding:10px 12px 6px;background:var(--card)}
+.chart{padding:9px 12px 6px}
 .chart h3{margin:0;font-size:12.5px;font-weight:600}
 .chart p{margin:1px 0 4px;font-size:11.5px;color:var(--muted)}
 .chart svg{display:block;width:100%;height:auto}
@@ -132,8 +138,7 @@ a.theme:hover{border-color:var(--accent);color:var(--accent);text-decoration:non
 <main>
   <div class="chips" id="cats"></div>
   <section class="stats" id="stats">
-    <div class="kpis" id="kpis"></div>
-    <div class="charts" id="charts"></div>
+    <div class="panels" id="panels"></div>
   </section>
   <div class="count" id="count"></div>
   <div class="tablewrap">
@@ -397,10 +402,32 @@ function columns(bins, width, height) {
          '" height="' + height + '" role="img">' + parts.join('') + '</svg>';
 }
 
-function card(title, sub, bins, width) {
-  return '<div class="chart"><h3>' + esc(title) + '</h3><p>' + esc(sub) + '</p>' +
-         columns(bins, width, 132) + '</div>';
+// A panel is one claim: the number, and the distribution behind it.
+function panel(stat, chart, width) {
+  return '<div class="panel">' +
+    '<div class="kpi"><div class="k">' + esc(stat[0]) + '</div>' +
+    '<div class="v">' + esc(stat[1]) + '</div>' +
+    '<div class="s">' + esc(stat[2]) + '</div></div>' +
+    (chart
+      ? '<div class="chart"><h3>' + esc(chart.title) + '</h3><p>' + esc(chart.sub) +
+        '</p>' + columns(chart.bins, width, 132) + '</div>'
+      : '') +
+    '</div>';
 }
+
+// Nominal categories, so they are ordered by size and share one hue: shading
+// them by value would encode the bar length twice.
+const registryBins = rows => {
+  const counts = {};
+  rows.forEach(t => (t.reg_names || []).forEach(r => counts[r] = (counts[r] || 0) + 1));
+  const NAMES = {bioconductor:'Bioc', pypi:'PyPI', conda:'conda', cran:'CRAN', docker:'Docker'};
+  const entries = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+  if (!entries.length) return null;
+  return { bins: entries.map(([r, n]) => ({
+             value: n, tick: NAMES[r] || r,
+             tip: '<b>' + (NAMES[r] || r) + '</b> ' + n.toLocaleString() + ' tools' })),
+           n: entries.reduce((a, e) => a + e[1], 0) };
+};
 
 const yearBins = (rows, key) => {
   const years = rows.map(t => parseInt(t[key], 10)).filter(y => y >= 1990 && y <= 2100);
@@ -438,6 +465,8 @@ function renderStats(rows) {
   const pct = n => total ? Math.round(100 * n / total) + '%' : '0%';
   const withRepo = rows.filter(t => t.repo_url).length;
   const install = rows.filter(t => t.n_registries).length;
+  const withPub = rows.filter(t => t.publication).length;
+  const preprint = rows.filter(t => t.publication && t.preprint).length;
   // "Actively maintained" says more about whether to reach for a tool than a
   // dead-link count does, and the dead links are still marked in the table and
   // listed in docs/homepage-check.md. Same rule as the Activity filter.
@@ -445,40 +474,48 @@ function renderStats(rows) {
   const tracked = rows.filter(t => t.repo_pushed).length;
   const active = rows.filter(t => t.repo_pushed && !t.repo_archived &&
                                   (Date.now() - Date.parse(t.repo_pushed)) / YR <= 2).length;
-  document.getElementById('kpis').innerHTML = [
-    ['Tools shown', total.toLocaleString(),
-     total === TOOLS.length ? 'the whole catalog' : 'of ' + TOOLS.length.toLocaleString() + ' total'],
-    ['Source repository', withRepo.toLocaleString(), pct(withRepo) + ' of these'],
-    ['Installable package', install.toLocaleString(), pct(install) + ' of these'],
-    ['Actively maintained', active.toLocaleString(),
-     // Against repositories we actually have activity data for. Dividing by
-     // every repository would count Bitbucket and SourceForge entries as
-     // inactive when the truth is that nothing was measured for them.
-     tracked ? Math.round(100 * active / tracked) + '% of ' + tracked.toLocaleString() +
-               ' with activity data'
-             : 'no activity data here'],
-  ].map(([k, v, sfx]) => '<div class="kpi"><div class="k">' + k + '</div><div class="v">' +
-      v + '</div><div class="s">' + sfx + '</div></div>').join('');
 
-  const box = document.getElementById('charts');
+  const box = document.getElementById('panels');
   // Measure, then draw at that size, so the text is never scaled by a viewBox.
-  const cols = Math.max(1, Math.floor((box.clientWidth + 10) / 290));
-  const w = Math.max(240, Math.floor((box.clientWidth - 10 * (cols - 1)) / cols) - 26);
+  const cols = Math.max(1, Math.floor((box.clientWidth + 10) / 300));
+  const w = Math.max(230, Math.floor((box.clientWidth - 10 * (cols - 1)) / cols) - 26);
 
-  const pub = yearBins(rows, 'year');
-  const push = yearBins(rows.map(t => ({ y: (t.repo_pushed || '').slice(0, 4) })), 'y');
-  const cites = logBins(rows, 'citations', 'citations');
-  const stars = logBins(rows, 'repo_stars', 'stars');
-  const out = [];
-  if (pub) out.push(card('Tools by publication year',
-      pub.n.toLocaleString() + ' with a known year', pub.bins, w));
-  if (push) out.push(card('Repository last updated',
-      push.n.toLocaleString() + ' with a live repository', push.bins, w));
-  if (cites) out.push(card('Citations of the primary paper',
-      cites.n.toLocaleString() + ' with a count', cites.bins, w));
-  if (stars) out.push(card('GitHub stars',
-      stars.n.toLocaleString() + ' with a repository', stars.bins, w));
-  box.innerHTML = out.join('');
+  const pubB = yearBins(rows, 'year');
+  const pushB = yearBins(rows.map(t => ({ y: (t.repo_pushed || '').slice(0, 4) })), 'y');
+  const citesB = logBins(rows, 'citations', 'citations');
+  const starsB = logBins(rows, 'repo_stars', 'stars');
+  const regB = registryBins(rows);
+
+  // Each pair is a number and the distribution underneath it.
+  const panels = [
+    [['Tools shown', total.toLocaleString(),
+      total === TOOLS.length ? 'the whole catalog'
+                             : 'of ' + TOOLS.length.toLocaleString() + ' total'],
+     pubB && { title: 'Tools by publication year',
+               sub: pubB.n.toLocaleString() + ' with a known year', bins: pubB.bins }],
+
+    [['Actively maintained', active.toLocaleString(),
+      tracked ? Math.round(100 * active / tracked) + '% of ' + tracked.toLocaleString() +
+                ' with activity data'
+              : 'no activity data here'],
+     pushB && { title: 'Repository last updated',
+                sub: pushB.n.toLocaleString() + ' with a live repository', bins: pushB.bins }],
+
+    [['Source repository', withRepo.toLocaleString(), pct(withRepo) + ' of these'],
+     starsB && { title: 'GitHub stars',
+                 sub: starsB.n.toLocaleString() + ' with a star count', bins: starsB.bins }],
+
+    [['With a publication', withPub.toLocaleString(),
+      preprint ? preprint.toLocaleString() + ' still a preprint' : pct(withPub) + ' of these'],
+     citesB && { title: 'Citations of the primary paper',
+                 sub: citesB.n.toLocaleString() + ' with a count', bins: citesB.bins }],
+
+    [['Installable package', install.toLocaleString(), pct(install) + ' of these'],
+     regB && { title: 'Where they ship from',
+               sub: regB.n.toLocaleString() + ' routes across ' + install.toLocaleString() +
+                    ' tools', bins: regB.bins }],
+  ];
+  box.innerHTML = panels.map(([stat, chart]) => panel(stat, chart, w)).join('');
   box.querySelectorAll('[data-tip]').forEach(el => {
     el.addEventListener('mousemove', e => showTip(e, el.dataset.tip));
     el.addEventListener('mouseleave', hideTip);

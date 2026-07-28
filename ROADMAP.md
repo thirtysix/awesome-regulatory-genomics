@@ -283,9 +283,13 @@ what the rules admitted: 168 to 221 entries, recall 82% to **153/221 (69%)**.
       scrolls, and the page itself never does. Prose in the footer keeps a
       110ch measure, because full bleed is right for a table and wrong for text.
 
-- [x] A statistics panel above the table: four stat tiles (tools shown, source
-      repository, installable, actively maintained) and four column charts (publication
-      year, repository last updated, citations, stars). Collapsible, and it
+- [x] A statistics panel above the table: five panels, each a headline number
+      sitting directly on the distribution behind it. *Actively maintained* over
+      *repository last updated*, *source repository* over *GitHub stars*, *with
+      a publication* over *citations*, *installable package* over *where they
+      ship from*, *tools shown* over *publication year*. Pairing them inside one
+      grid cell rather than in two parallel grids is what keeps them together
+      when the row wraps. Collapsible, and it
       **reflects the current filter**, which is the point: clicking *Peak
       calling* and reading the year chart answers "when was this subfield
       written, and is it still maintained".
