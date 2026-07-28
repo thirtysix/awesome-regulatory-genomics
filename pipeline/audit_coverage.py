@@ -61,7 +61,17 @@ def lookup(entry: dict, index: dict[str, dict]) -> dict | None:
 
 
 def probe_biotools(session: requests.Session, name: str) -> str | None:
-    """Is this tool in bio.tools at all? Distinguishes a rule bug from a gap."""
+    """Is this tool in bio.tools at all? Distinguishes a rule bug from a gap.
+
+    **This matches on the name, so the answer is a lead and not a fact.**
+    Checked by hand, three of the eight hits from one run were different tools
+    that merely share a name: `Thor` is a spatial-transcriptomics package
+    rather than the RGT differential peak caller, and `inps` and `maestro` are
+    protein-stability predictors rather than the nucleosome and single-cell
+    tools meant here. Acting on this output without opening the record is how
+    the FiMO error reached the README (see docs/provenance.md), so the report
+    states the caveat rather than presenting the ID as settled.
+    """
     try:
         r = session.get(BIOTOOLS_API, params={"name": f'"{name}"', "format": "json"}, timeout=25)
         for tool in r.json().get("list", []):
@@ -117,9 +127,11 @@ def main() -> None:
                     elif probe in swept:
                         reason = f"harvested as `{probe}` but not selected; check `select_domain.py`"
                     else:
-                        reason = (f"in bio.tools as `{probe}` but never harvested. "
-                                  "No query reaches it; widen `QUERY_TOPICS`/`QUERY_FREETEXT` "
-                                  "or add to `seeds.yaml`")
+                        reason = (f"a bio.tools record is *named* `{probe}` but was never "
+                                  "harvested. **Open it before acting**: the match is on "
+                                  "name alone, and roughly a third of these are a "
+                                  "different tool. If it is the right one, add it to "
+                                  "`SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml`")
                 rows.append((entry["name"], "no", "", reason))
                 misses.append((group, entry["name"], reason))
         sections.append((group, rows))

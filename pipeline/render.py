@@ -13,8 +13,10 @@ from __future__ import annotations
 import json
 import re
 from datetime import date
+from urllib.parse import urlparse
 
-from config import CATEGORIES, CATEGORY_DESC, CATEGORY_LABEL, DATA, DOCS, ROOT
+from config import (CATEGORIES, CATEGORY_DESC, CATEGORY_LABEL, CODE_HOSTS, DATA,
+                    DOCS, ROOT)
 
 CATALOG = DATA / "catalog.json"
 README = ROOT / "README.md"
@@ -30,6 +32,32 @@ def fmt_int(n) -> str:
         return f"{int(n):,}"
     except (TypeError, ValueError):
         return ""
+
+
+def _norm_url(u: str) -> str:
+    return (u or "").rstrip("/").lower().replace("://www.", "://")
+
+
+def site_url(t: dict) -> str:
+    """The tool's own website, when that is something other than its repository.
+
+    bio.tools' ``homepage`` is populated for every record, but for a third of
+    them it simply points at GitHub, so showing it verbatim would give a column
+    of 1,800 links that mostly duplicate the Code column. A "site" is therefore
+    a homepage that is neither the source repository nor any other code host:
+    the project page, web server or database front end you would cite. That
+    makes the column worth sorting and filtering on - "web-only resource" and
+    "repo, no site" become answerable questions.
+    """
+    homepage = t.get("homepage") or ""
+    if not homepage:
+        return ""
+    host = urlparse(homepage).netloc.lower().removeprefix("www.")
+    if host in CODE_HOSTS:
+        return ""
+    if _norm_url(homepage) == _norm_url(t.get("repo_url")):
+        return ""
+    return homepage
 
 
 def slug(label: str) -> str:
@@ -95,6 +123,11 @@ def render_readme(catalog: dict) -> str:
 
     total = len(tools)
     with_repo = meta["with_repo"]
+    with_site = sum(1 for t in tools if site_url(t))
+    with_pkg = sum(1 for t in tools if t.get("_registries"))
+    dead_links = sum(1 for t in tools
+                     if t.get("homepage_status") == "dead" or t.get("repo_status") == "dead")
+    with_year = sum(1 for t in tools if t.get("year"))
     featured_n = meta["featured"]
 
     out = []
@@ -102,7 +135,11 @@ def render_readme(catalog: dict) -> str:
 
     A("# Awesome Regulatory Genomics")
     A("")
-    A(f"[![Tools](https://img.shields.io/badge/tools-{total}-blue)]({SITE}) "
+    # The awesome.re badge is the one awesome.md asks for, unmodified and next
+    # to the title. It marks the list as following those guidelines; it is not a
+    # claim of inclusion in the sindresorhus/awesome index.
+    A("[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) "
+      f"[![Tools](https://img.shields.io/badge/tools-{total}-blue)]({SITE}) "
       "[![License: CC BY 4.0](https://img.shields.io/badge/data-CC--BY--4.0-lightgrey)](LICENSE-DATA) "
       f"[![Updated](https://img.shields.io/badge/updated-"
       f"{meta['generated'].replace('-', '--')}-brightgreen)](#)")
@@ -111,7 +148,8 @@ def render_readme(catalog: dict) -> str:
       "sequence motifs, regulatory elements, chromatin and gene-regulatory networks**.")
     A("")
     A(f"**[Browse and search all {total} tools →]({SITE})**. Filter by category, "
-      "tool type, language, licence, activity and citations.")
+      "tool type, language, repository activity, and per column by name, "
+      "description, links, package availability, stars, citations and year.")
     A("")
     A("This list is *generated and then curated*. A reproducible pipeline harvests "
       "[bio.tools](https://bio.tools), resolves source repositories, and pulls citation "
@@ -157,10 +195,19 @@ def render_readme(catalog: dict) -> str:
     A("```bash")
     A("pip install -r requirements.txt")
     A("cp .env.example .env        # optional; see below")
+    A("make test                   # unit-test the scope and linking rules")
     A("make curate                 # rebuild README and site from committed data")
     A("make all                    # re-select, enrich, resolve links, rebuild")
     A("make serve PORT=8000        # preview the site locally")
     A("```")
+    A("")
+    A("`make test` needs `pip install -r requirements-dev.txt` and runs offline. "
+      "It covers the three functions that decide the catalog's boundary, its "
+      "repository links and its citation counts, using the real records that "
+      "motivated each rule. Run it before changing "
+      "[`pipeline/config.py`](pipeline/config.py): every regression this "
+      "project has shipped came from loosening one of those rules, and the "
+      "tests encode why each is written the way it is.")
     A("")
     A("`.env` holds two optional settings, both blank by default:")
     A("")
@@ -178,6 +225,8 @@ def render_readme(catalog: dict) -> str:
     A("```")
     A("harvest.py        wide sweep of bio.tools (EDAM operation + free-text queries)")
     A("select_domain.py  tiered precision filter -> what is in scope")
+    A("discover_registries.py  the same filter over Bioconductor and Galaxy,")
+    A("                  for tools bio.tools does not index at all")
     A("enrich.py         resolve source repos, GitHub activity, OpenAlex citations")
     A("resolve_repos.py  find repos bio.tools omits (bioconda/PyPI/homepage), validated")
     A("resolve_pubs.py   upgrade preprint links to the published version, check DOIs")
@@ -204,19 +253,24 @@ def render_readme(catalog: dict) -> str:
       "tables go wrong:")
     A("")
     A("**Recall and precision are separated.** bio.tools' `operation=` parameter is a "
-      "fuzzy text match, not an ontology lookup. An unquoted query for `cis-regulatory` "
-      "returns 3,000 records matching \"cis\" *or* \"regulatory\". So the sweep is "
+      "fuzzy text match, not an ontology lookup. Quoting matters more than it should: "
+      "`q=\"cis-regulatory\"` returns 107 records, while the same query unquoted returns "
+      "about 3,500, matching \"cis\" *or* \"regulatory\". So the sweep is "
       "deliberately over-broad and precision is restored afterwards by filtering on the "
       "annotations a record actually carries.")
     A("")
-    A("**EDAM annotations are not trusted on their own.** They are frequently wrong: "
-      "FIMO is filed under *Genotyping*, HOCOMOCO under *Data handling*, MACS under "
-      "*Modelling and simulation*, and the operation *Peak detection* is used almost "
-      "exclusively by mass-spectrometry tools. Operations are therefore tiered: "
-      "specific terms admit a record on their own, ambiguous ones need a corroborating "
-      "topic or text signal, and four terms are queried but never used to admit anything. "
-      "A text-match escape hatch recovers in-domain tools with no usable annotation at "
-      "all. Every accepted record stores the rule that admitted it "
+    A("**EDAM annotations are not trusted on their own.** They are frequently wrong, and "
+      "wrong in ways no query can anticipate: HOCOMOCO, a motif database, is filed under "
+      "*Data handling*; SICER, a ChIP-seq peak caller, under *Sequence contamination "
+      "filtering*; ChIP-Atlas, a data portal, under *Genome assembly*. Whole operations "
+      "belong to another field: of the 204 records carrying *Peak detection*, roughly "
+      "three in four are proteomics, metabolomics or NMR tools. Operations are therefore "
+      "tiered. Seventeen specific terms admit a record on their own; five ambiguous ones "
+      "that bio.tools also applies to protein motifs, RNA structure and orthology need a "
+      "corroborating topic or text signal; and five that belong to a different field "
+      "outright are documented in `REJECTED_OPERATIONS`, never queried and never able to "
+      "admit anything. A text-match escape hatch recovers in-domain tools with no usable "
+      "annotation at all. Every accepted record stores the rule that admitted it "
       "(`_select_reason`), and every rejected one is written to "
       "[`data/raw/rejected.json`](data/raw/rejected.json) so the boundary can be argued "
       "with rather than taken on trust.")
@@ -249,6 +303,27 @@ def render_readme(catalog: dict) -> str:
       "wrong category, description or scope decision. Correcting the entry at "
       "[bio.tools](https://bio.tools) instead fixes it here on the next refresh, "
       "and for every other consumer of that registry.")
+    A(f"- **{with_site} ({with_site/max(total,1):.0%}) have a website of their own**, "
+      "meaning a project page, web server or database front end that is not just "
+      "their source repository. The rest live on a code host alone. The catalog "
+      f"site shows this as a sortable *Site* column, so \"web-only resource\" and "
+      "\"code, no documentation site\" are both answerable questions.")
+    A(f"- **{with_pkg} can be installed from a package registry** (Bioconductor, "
+      "CRAN, PyPI, conda or Docker), shown as a sortable *Install* column. "
+      "\"Can I install this today?\" is a more useful maintenance signal than a "
+      "star count, and it is not a question bio.tools answers. A package is only "
+      "linked when its description agrees with the tool's, never on a matching "
+      "name: bioconda's `medusa` is a genome scaffolder, and this catalog's "
+      "MEDUSA is a motif model.")
+    A(f"- **{dead_links} links are known to be dead** and are struck through on the "
+      "catalog site rather than quietly left to disappoint. Every homepage is "
+      "checked (`make check-links`), which matters because nearly half this "
+      "catalog has no repository, only a homepage, and academic URLs rot. "
+      "Only a 404 or 410 counts: a timeout is as often a slow institutional "
+      "host as a departed one, and 429 means the server is up and busy. The "
+      "full grading is in [`docs/homepage-check.md`](docs/homepage-check.md).")
+    A(f"- **{with_year} have a publication year**, recovered from OpenAlex where "
+      "the registry did not record one.")
     A(f"- **{featured_n} tools are featured** in the curated sections above; the rest are "
       f"in the [full catalog]({SITE}).")
     A("")
@@ -257,7 +332,12 @@ def render_readme(catalog: dict) -> str:
     A("- bio.tools skews toward tools with a publication and an ELIXIR-adjacent "
       "submitter. The sequence-to-function deep-learning literature is badly "
       "under-represented there; those entries come from `curation/seeds.yaml` and are "
-      "necessarily incomplete.")
+      "necessarily incomplete. `make discover` widens this by running the same "
+      "selection rules over registries that carry their own domain taxonomy "
+      "(Bioconductor's `biocViews`, the Galaxy ToolShed), which is how tools like "
+      "AlphaGenome, Cicero and Chromap reached this list; candidates land in "
+      "[`docs/registry-discovery.md`](docs/registry-discovery.md) for review "
+      "rather than being added automatically.")
     A("- Citation counts are the OpenAlex `cited_by_count` of a tool's **primary** "
       "publication only. Summing every linked publication, which is what the "
       "original dissertation script did, is badly wrong here: bio.tools attaches a suite's "
@@ -348,7 +428,7 @@ main{max-width:1180px;margin:0 auto;padding:18px 20px 60px}
 .chip .n{opacity:.65;margin-left:5px;font-variant-numeric:tabular-nums}
 .count{color:var(--muted);font-size:13px;margin:0 0 10px}
 .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
-table{border-collapse:collapse;width:100%;min-width:1080px;font-size:14px}
+table{border-collapse:collapse;width:100%;min-width:1240px;font-size:14px}
 th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
 th{position:sticky;top:0;background:var(--bg);cursor:pointer;white-space:nowrap;
    font-weight:600;font-size:12.5px;letter-spacing:.02em;text-transform:uppercase;color:var(--muted)}
@@ -372,6 +452,7 @@ td.lnk a{font-size:12.5px}
 .arch{color:var(--warn);font-size:11.5px}
 .seed{border-color:var(--accent);color:var(--accent)}
 a.inf{border-bottom:1px dotted currentColor}
+a.gone{color:var(--warn);text-decoration:line-through}
 a.rep{color:var(--muted);text-decoration:none;font-size:11px;padding:0 2px}
 a.rep:hover{color:var(--accent);text-decoration:none}
 footer{color:var(--muted);font-size:12.5px;margin-top:22px;line-height:1.7}
@@ -411,9 +492,11 @@ footer{color:var(--muted);font-size:12.5px;margin-top:22px;line-height:1.7}
         <th data-k="name">Tool</th>
         <th data-k="categories">Categories</th>
         <th class="desc" data-k="description">Description</th>
+        <th data-k="has_site" class="lnk">Site</th>
         <th data-k="has_code" class="lnk">Code</th>
         <th data-k="has_biotools" class="lnk">bio.tools</th>
         <th data-k="has_paper" class="lnk">Paper</th>
+        <th data-k="n_registries" class="lnk">Install</th>
         <th data-k="repo_stars" class="num">Stars</th>
         <th data-k="citations" class="num">Cites</th>
         <th data-k="year" class="num">Year</th>
@@ -422,9 +505,11 @@ footer{color:var(--muted);font-size:12.5px;margin-top:22px;line-height:1.7}
         <th><input data-f="name" type="search" placeholder="filter…"></th>
         <th><input data-f="categories" type="search" placeholder="filter…"></th>
         <th class="desc"><input data-f="description" type="search" placeholder="filter…"></th>
+        <th><select data-f="has_site"><option value="">any</option><option value="1">has</option><option value="0">none</option></select></th>
         <th><select data-f="has_code"><option value="">any</option><option value="1">has</option><option value="0">none</option></select></th>
         <th><select data-f="has_biotools"><option value="">any</option><option value="1">has</option><option value="0">none</option></select></th>
         <th><select data-f="has_paper"><option value="">any</option><option value="1">paper</option><option value="2">preprint</option><option value="0">none</option></select></th>
+        <th><select data-f="has_install"><option value="">any</option><option value="1">packaged</option><option value="0">none</option></select></th>
         <th><input data-f="repo_stars" type="number" min="0" placeholder="min"></th>
         <th><input data-f="citations" type="number" min="0" placeholder="min"></th>
         <th><input data-f="year" type="number" min="1980" placeholder="min"></th>
@@ -444,6 +529,12 @@ footer{color:var(--muted);font-size:12.5px;margin-top:22px;line-height:1.7}
     link check</a>.
     Entries marked <span class="cat seed">curated</span>
     are absent from bio.tools and were added by hand.
+    A <span class="gone">struck-through</span> link returned 404 when last checked;
+    links that merely timed out are not marked, because a slow institutional host
+    looks identical to a departed one.
+    <b>Site</b> is the tool's own page where that is something other than its source
+    repository: a project page, web server or database front end. Tools hosted only on
+    GitHub or another code host show a dash there rather than repeating the code link.
     <br><b>Maintainers:</b> a <span class="inf">dotted</span> code link was <i>inferred</i> from a
     homepage or a GitHub search rather than recorded upstream, so it is our guess and may be
     wrong. The <b>?</b> beside it opens a pre-filled issue. Corrections of any kind are welcome:
@@ -500,9 +591,13 @@ CATS.forEach(([key,label]) => {
 // as "which rows have one", so each link column sorts on 0/1 (paper uses 2 for
 // a peer-reviewed link and 1 for a preprint, so sorting separates them).
 TOOLS.forEach(t => {
+  t.has_site = t.site ? 1 : 0;
   t.has_code = t.repo_url ? 1 : 0;
   t.has_biotools = t.biotools_url ? 1 : 0;
   t.has_paper = !t.publication ? 0 : (t.preprint ? 1 : 2);
+  t.reg_names = Object.keys(t.registries || {}).sort();
+  t.n_registries = t.reg_names.length;
+  t.has_install = t.n_registries ? 1 : 0;
 });
 
 const YEAR_MS = 365.25*24*3600*1000;
@@ -524,7 +619,8 @@ const matches = t => {
     } else if (k === 'categories') {
       const txt = t.categories.map(c => (catLabel[c]||c)).join(' ').toLowerCase();
       if (!txt.includes(v)) return false;
-    } else if (k === 'has_code' || k === 'has_biotools') {
+    } else if (k === 'has_site' || k === 'has_code' || k === 'has_biotools'
+               || k === 'has_install') {
       if (t[k] !== Number(v)) return false;
     } else if (k === 'has_paper') {
       if (t.has_paper !== Number(v)) return false;
@@ -566,12 +662,27 @@ function render(){
   $('rows').innerHTML = rows.map(t => {
     const href = t.homepage || t.repo_url || t.biotools_url;
     const dash = '<span class="no">-</span>';
+    // The tool's own page, only where that is not just its repository. The
+    // hostname goes in the tooltip: it is the fastest way to see whether a
+    // link is a maintained project page or a lab URL from 2009.
+    // A 404 is worth saying out loud; a timeout is not, because it is as
+    // often a slow institutional host as a departed one.
+    const siteDead = t.homepage_status === 'dead';
+    const siteCell = t.site
+      ? '<a href="'+esc(t.site)+'" class="'+(siteDead?'gone':'')+'" title="'
+          + (siteDead ? 'This page returned 404 when last checked. ' : '')
+          + esc(t.site.replace(/^https?:\\/\\/(www\\.)?/, '').replace(/\\/.*$/, ''))+'">site</a>'
+      : dash;
     // An inferred link is our guess, not the tool's own statement. Say so, and
     // make reporting it one click rather than a hunt for the issue tracker.
     let codeCell = dash;
     if (t.repo_url) {
       const inferred = t.repo_origin === 'inferred';
-      codeCell = '<a href="'+esc(t.repo_url)+'"'+(inferred?' class="inf" title="Inferred from its homepage or a GitHub search, not recorded upstream. Please report if wrong."':'')+'>code</a>';
+      const repoDead = t.repo_status === 'dead';
+      const cls = [inferred?'inf':'', repoDead?'gone':''].filter(Boolean).join(' ');
+      const tip = (repoDead ? 'This repository returned 404 when last checked. ' : '')
+        + (inferred ? 'Inferred from its homepage or a GitHub search, not recorded upstream. Please report if wrong.' : '');
+      codeCell = '<a href="'+esc(t.repo_url)+'"'+(cls?' class="'+cls+'"':'')+(tip?' title="'+esc(tip)+'"':'')+'>code</a>';
       if (inferred) codeCell += ' <a class="rep" title="Report a wrong repository link" href="'+reportUrl(t)+'">?</a>';
     }
     const btCell = t.biotools_url ? '<a href="'+esc(t.biotools_url)+'">bio.tools</a>' : dash;
@@ -583,15 +694,24 @@ function render(){
       else if (p.startsWith('doi:'))
         paperCell = '<a href="https://doi.org/'+esc(p.slice(4))+'">'+(t.preprint?'preprint':'paper')+'</a>';
     }
+    // Where the tool can actually be installed from. Two letters keeps the
+    // column narrow; the tooltip and the link carry the detail.
+    const REG = {bioconductor:'Bc', cran:'CR', pypi:'Py', conda:'Cn', docker:'Dk'};
+    const installCell = t.n_registries
+      ? t.reg_names.map(r => '<a href="'+esc(t.registries[r])+'" title="'+esc(r)+'">'
+          + esc(REG[r] || r.slice(0,2)) + '</a>').join(' ')
+      : dash;
     const cats = t.categories.map(c=>'<span class="cat">'+esc(catLabel[c]||c)+'</span>').join('') +
       (t.source === 'curated' ? '<span class="cat seed">curated</span>' : '');
     return '<tr><td class="name">' + (href ? '<a href="'+esc(href)+'">'+esc(t.name)+'</a>' : esc(t.name)) +
       (t.repo_archived ? '<br><span class="arch">archived</span>' : '') + '</td>' +
       '<td>' + cats + '</td>' +
       '<td class="desc">' + esc(t.description) + '</td>' +
+      '<td class="lnk">' + siteCell + '</td>' +
       '<td class="lnk">' + codeCell + '</td>' +
       '<td class="lnk">' + btCell + '</td>' +
       '<td class="lnk">' + paperCell + '</td>' +
+      '<td class="lnk">' + installCell + '</td>' +
       '<td class="num">' + (t.repo_stars ?? '') + '</td>' +
       '<td class="num">' + (t.citations ? t.citations.toLocaleString() : '') + '</td>' +
       '<td class="num">' + esc(t.year) + '</td></tr>';
@@ -642,10 +762,14 @@ def render_site(catalog: dict) -> None:
     tools = catalog["tools"]
     slim = [{
         "name": t["name"], "description": t["description"], "categories": t["categories"],
-        "homepage": t["homepage"], "repo_url": t["repo_url"], "biotools_url": t["biotools_url"],
+        "homepage": t["homepage"], "site": site_url(t),
+        "homepage_status": t.get("homepage_status", ""),
+        "repo_status": t.get("repo_status", ""),
+        "repo_url": t["repo_url"], "biotools_url": t["biotools_url"],
         "repo_stars": t["repo_stars"], "repo_pushed": t["repo_pushed"],
         "repo_archived": t["repo_archived"], "repo_language": t["repo_language"],
         "repo_origin": t.get("repo_origin", ""),
+        "registries": t.get("_registries") or {},
         "tool_type": t["tool_type"], "languages": t["languages"],
         "citations": t["citations"], "year": t["year"], "publication": t["publication"],
         "preprint": bool(t.get("publication_is_preprint")),

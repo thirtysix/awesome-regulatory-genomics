@@ -1,0 +1,4 @@
+# Development-only. The pipeline itself needs nothing here; see requirements.txt.
+#   pytest  - the rule-function tests in tests/, run by `make test` and CI
+-r requirements.txt
+pytest>=8.0

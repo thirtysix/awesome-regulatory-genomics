@@ -37,9 +37,9 @@ TEXT_CATEGORY_RE = {k: [re.compile(p, re.I) for p in v] for k, v in TEXT_CATEGOR
 
 COLUMNS = [
     "id", "name", "description", "categories", "primary_category", "tier",
-    "homepage", "repo_url", "repo_origin", "repo_stars", "repo_pushed", "repo_archived",
+    "homepage", "homepage_status", "repo_url", "repo_status", "repo_origin", "repo_stars", "repo_pushed", "repo_archived",
     "repo_language", "repo_license", "tool_type", "topics", "languages",
-    "license", "maturity", "cost", "citations", "citation_note", "year", "publication",
+    "license", "license_source", "maturity", "cost", "registries", "citations", "citation_note", "year", "publication",
     "publication_is_preprint",
     "biotools_id", "biotools_url", "last_update", "source", "tags", "featured",
 ]
@@ -160,6 +160,64 @@ def repo_origin(tool: dict, repomap: dict[str, str]) -> str:
     return ""
 
 
+def load_registry_map() -> dict[str, dict[str, str]]:
+    """Tool id -> {registry: url}, from pipeline/discover_registries.py.
+
+    Kept separate from the enrichment pass because it answers a different
+    question: enrichment records what bio.tools *says* a tool ships as, while
+    this records where the package can actually be installed from today. Only
+    name-plus-description matches are written, never a name alone.
+    """
+    path = DATA / "cache" / "registry_map.json"
+    if not path.exists():
+        return {}
+    try:
+        return json.loads(path.read_text())
+    except ValueError:
+        return {}
+
+
+def load_year_map() -> dict[str, str]:
+    """Publication identifier key -> year, from pipeline/fill_metadata.py."""
+    path = DATA / "cache" / "pubyear_cache.json"
+    if not path.exists():
+        return {}
+    try:
+        return {k: v for k, v in json.loads(path.read_text()).items() if v}
+    except ValueError:
+        return {}
+
+
+def load_homepage_status() -> dict[str, str]:
+    """Homepage URL -> state, from pipeline/check_homepages.py.
+
+    Only `dead` (404/410) is carried into the catalog. `unreachable` is a
+    timeout or a DNS failure, which is as often a slow institutional host as a
+    departed one, and asserting it would repeat the mistake the DOI checker
+    made when it called 151 rate-limited requests broken links.
+    """
+    path = DATA / "cache" / "homepage_check.json"
+    if not path.exists():
+        return {}
+    try:
+        blob = json.loads(path.read_text())
+    except ValueError:
+        return {}
+    # Canonicalised, because the same page appears as a homepage and as a
+    # repository link with a different scheme or a www prefix: PROBC's record
+    # holds `http://www.github.com/seferlab/probc` and
+    # `https://github.com/seferlab/probc` for one deleted repository.
+    dead = {}
+    for url, r in blob.items():
+        if r.get("state") == "dead":
+            dead[canon_link(url)] = "dead"
+    return dead
+
+
+def canon_link(url: str) -> str:
+    return re.sub(r"^https?://(www\.)?", "", (url or "").strip().lower()).rstrip("/")
+
+
 def load_publication_map() -> dict[str, str]:
     """preprint DOI -> published DOI, from pipeline/resolve_pubs.py."""
     path = DATA / "cache" / "publication_map.json"
@@ -215,8 +273,16 @@ def norm_name(name: str) -> str:
     bio.tools spells the same tool several ways - "Cluster Buster" vs
     "Cluster-Buster", "SCENIC+" vs "scenicplus" - and an exact lowercase match
     lets both into the catalog.
+
+    ``+`` is spelled out rather than stripped, because stripping it merges a
+    successor tool into its predecessor. Bare removal made "SCENIC+" normalise
+    to "scenic", so the hand-written SCENIC+ seed was skipped as a duplicate of
+    SCENIC - a different tool - while bio.tools' own `scenicplus` record sat in
+    the catalog beside it. Naming a successor after its parent plus a symbol is
+    a convention here (SCENIC+, Yeastract+, DeltaNeTS+), so this is a family of
+    bugs rather than one.
     """
-    return re.sub(r"[^a-z0-9]", "", name.lower())
+    return re.sub(r"[^a-z0-9]", "", name.lower().replace("+", "plus"))
 
 
 def repo_url(tool: dict, repomap: dict[str, str] | None = None) -> str:
@@ -281,12 +347,30 @@ def from_biotools(tool: dict, cites: dict[str, int], shared: dict[str, int],
     }
 
 
-def from_seed(seed: dict) -> dict:
+def from_seed(seed: dict, cites: dict[str, int] | None = None,
+              shared: dict[str, int] | None = None) -> dict:
+    """A hand-written entry, given the same citation treatment as a harvested one.
+
+    Seeds used to be built with `citations: None` unconditionally, which meant a
+    curated tool showed no count even when its DOI was sitting in the citation
+    cache. FIMO was the visible case: one of the most-cited papers in the field,
+    displayed blank, purely because it is carried as a seed rather than by
+    bio.tools. The suite-paper suppression applies here too, so a seed sharing
+    its primary publication with two or more other tools is still left blank.
+    """
     ident = ""
     if seed.get("pmid"):
         ident = f"pmid:{seed['pmid']}"
     elif seed.get("doi"):
         ident = f"doi:{seed['doi']}"
+
+    citations, note = None, ""
+    n_sharing = (shared or {}).get(ident, 0)
+    if ident and n_sharing >= 3:
+        note = f"primary publication shared by {n_sharing} tools"
+    elif ident:
+        # The cache is keyed by cache_key(), not by the raw identifier.
+        citations = (cites or {}).get(cache_key(ident))
     return {
         "id": seed["name"],
         "name": seed["name"],
@@ -300,7 +384,7 @@ def from_seed(seed: dict) -> dict:
         "repo_language": "", "repo_license": "",
         "tool_type": [], "topics": [], "languages": [],
         "license": "", "maturity": "", "cost": "",
-        "citations": None, "citation_note": "", "year": "",
+        "citations": citations, "citation_note": note, "year": seed.get("year", ""),
         "publication": ident,
         "publication_is_preprint": ident.removeprefix("doi:").startswith(PREPRINT_PREFIXES),
         "biotools_id": "", "biotools_url": "",
@@ -329,6 +413,9 @@ def main() -> None:
     cites = load_citation_counts()
     pubmap = load_publication_map()
     repomap = load_repo_map()
+    regmap = load_registry_map()
+    yearmap = load_year_map()
+    deadpages = load_homepage_status()
     # How many catalog tools claim each publication as their primary one.
     shared = Counter(p for p in (primary_identifier(t, pubmap) for t in enriched) if p)
     seeds = yaml.safe_load(SEEDS.read_text()) or {}
@@ -382,7 +469,7 @@ def main() -> None:
     for seed in seeds.get("tools") or []:
         if norm_name(seed["name"]) in seen_names:
             continue          # bio.tools already has it; the harvested record wins
-        rows.append(from_seed(seed))
+        rows.append(from_seed(seed, cites, shared))
         seeded += 1
 
     # LLM proposals, applied BELOW the hand-written overlay so a human
@@ -418,6 +505,33 @@ def main() -> None:
 
     rows.sort(key=lambda r: (-int(r["citations"] or 0), r["name"].lower()))
 
+    # Fill what is derivable rather than leaving a blank the reader has to
+    # research. Both are marked, and neither overwrites a stated value.
+    for r in rows:
+        r["homepage_status"] = deadpages.get(canon_link(r.get("homepage")), "")
+        # A deleted repository is a dead link too, and for six tools here the
+        # repository *is* the homepage.
+        r["repo_status"] = deadpages.get(canon_link(r.get("repo_url")), "")
+        if not r.get("year") and r.get("publication"):
+            r["year"] = yearmap.get(cache_key(r["publication"]), "")
+        # A repository's licence is weaker evidence than a declared one, so say
+        # which it is rather than quietly merging the two.
+        if r.get("license"):
+            r["license_source"] = "declared"
+        elif r.get("repo_license"):
+            r["license"] = r["repo_license"]
+            r["license_source"] = "repository"
+        else:
+            r["license_source"] = ""
+
+    # Package availability: what bio.tools recorded, plus what the registry
+    # sweep verified. Sorted so the TSV column is stable across rebuilds.
+    for r in rows:
+        merged = dict(r.get("_registries") or {})
+        merged.update(regmap.get(r["id"], {}))
+        r["_registries"] = merged
+        r["registries"] = "|".join(sorted(merged))
+
     meta = {
         "generated": date.today().isoformat(),
         "count": len(rows),
@@ -438,8 +552,8 @@ def main() -> None:
         w.writerow(COLUMNS)
         for r in rows:
             w.writerow([
-                "|".join(r[c]) if isinstance(r[c], list) else
-                ("" if r[c] is None else r[c])
+                "|".join(r.get(c) or []) if isinstance(r.get(c), list) else
+                ("" if r.get(c) is None else r.get(c))
                 for c in COLUMNS
             ])
 

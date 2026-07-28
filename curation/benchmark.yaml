@@ -120,3 +120,113 @@ regulatory variants:
   - {name: GWAVA}
   - {name: FunSeq2}
   - {name: FABIAN-variant}
+
+# ---------------------------------------------------------------------------
+# Second tier, added 2026-07-28.
+#
+# The first 89 entries all passed, which meant the number had stopped
+# discriminating: a benchmark you always score 100% on measures nothing except
+# that it has not been made harder. These are deliberately less obvious -
+# widely used but narrower tools, older methods still cited, and the parts of
+# the field that registries cover worst. A miss here is a finding, not a
+# failure; work it back into pipeline/config.py or curation/seeds.yaml.
+# ---------------------------------------------------------------------------
+
+motif comparison and visualisation:
+  - {name: Tomtom}
+  - {name: STAMP}
+  - {name: MoSBAT}
+  - {name: matrix-clustering, aka: [RSAT matrix-clustering, compare-matrices]}
+  - {name: universalmotif}
+  - {name: ggseqlogo}
+  - {name: Logolas}
+  - {name: seqLogo}
+
+nucleosome and chromatin state:
+  - {name: ChromHMM}
+  - {name: Segway}
+  - {name: NucleoATAC}
+  - {name: DANPOS, aka: [DANPOS2, DANPOS3]}
+  - {name: iNPS}
+  - {name: NucTools}
+  - {name: nucleR}
+  - {name: NuPoP}
+
+single-cell regulatory genomics:
+  - {name: Signac}
+  - {name: ArchR}
+  - {name: SnapATAC, aka: [SnapATAC2]}
+  - {name: cisTopic, aka: [pycisTopic]}
+  - {name: scBasset}
+  - {name: MAESTRO}
+  - {name: Cicero}
+  - {name: chromVAR}
+  - {name: scATAC-pro}
+  - {name: PeakVI}
+
+harder motif discovery:
+  - {name: MEME-ChIP}
+  - {name: Weeder, aka: [Weeder2]}
+  - {name: Improbizer}
+  - {name: Amadeus}
+  - {name: CisFinder}
+  - {name: ProSampler}
+  - {name: GADEM, aka: [rGADEM]}
+  - {name: XXmotif}
+
+harder peak calling:
+  - {name: MACS, aka: [MACS2, MACS3, MACSr]}
+  - {name: SICER, aka: [SICER2, epic2]}
+  - {name: HMMRATAC}
+  - {name: SEACR}
+  - {name: LanceOtron}
+  - {name: THOR}
+  - {name: PePr}
+  - {name: csaw}
+  - {name: MSPC, aka: [rmspc]}
+  - {name: JAMM}
+  - {name: Ritornello}
+  - {name: BCP}
+
+harder footprinting:
+  - {name: Wellington, aka: [pyDNase, Wellington-bootstrap]}
+  - {name: BaGFoot}
+  - {name: DNase2TF}
+  - {name: seqOutBias}
+  - {name: Romulus}
+  - {name: msCentipede}
+
+harder gene regulatory networks:
+  - {name: GRNBoost2, aka: [Arboreto]}
+  - {name: CLR}
+  - {name: SCODE}
+  - {name: PIDC}
+  - {name: CellOracle}
+  - {name: Pando}
+  - {name: FigR}
+  - {name: Dictys}
+
+harder regulatory variants:
+  - {name: deltaSVM}
+  - {name: motifbreakR}
+  - {name: SNP2TFBS}
+  - {name: GWAVA}
+  - {name: FunSeq2}
+  - {name: RegulomeDB}
+  - {name: Sasquatch}
+  - {name: GERV}
+
+harder peak annotation:
+  - {name: rGREAT}
+  - {name: annotatr}
+  - {name: PAVIS}
+  - {name: LOLA}
+  - {name: DiffBind}
+
+harder ChIP and ATAC resources:
+  - {name: Cistrome DB, aka: [Cistrome, CistromeDB]}
+  - {name: SEdb}
+  - {name: dbSUPER}
+  - {name: ChIPBase}
+  - {name: CistromeMap}
+  - {name: hmChIP}

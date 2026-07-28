@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Awesome Regulatory Genomics: catalog</title>
-<meta name="description" content="Searchable catalog of 1800 tools for transcription-factor binding, sequence motifs, regulatory elements, chromatin and gene-regulatory networks.">
+<meta name="description" content="Searchable catalog of 1893 tools for transcription-factor binding, sequence motifs, regulatory elements, chromatin and gene-regulatory networks.">
 <style>
 :root{
   --bg:#ffffff; --fg:#1a1d21; --muted:#5c6570; --line:#e3e6ea; --accent:#1b6ac9;
@@ -38,7 +38,7 @@ main{max-width:1180px;margin:0 auto;padding:18px 20px 60px}
 .chip .n{opacity:.65;margin-left:5px;font-variant-numeric:tabular-nums}
 .count{color:var(--muted);font-size:13px;margin:0 0 10px}
 .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
-table{border-collapse:collapse;width:100%;min-width:1080px;font-size:14px}
+table{border-collapse:collapse;width:100%;min-width:1240px;font-size:14px}
 th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
 th{position:sticky;top:0;background:var(--bg);cursor:pointer;white-space:nowrap;
    font-weight:600;font-size:12.5px;letter-spacing:.02em;text-transform:uppercase;color:var(--muted)}
@@ -62,6 +62,7 @@ td.lnk a{font-size:12.5px}
 .arch{color:var(--warn);font-size:11.5px}
 .seed{border-color:var(--accent);color:var(--accent)}
 a.inf{border-bottom:1px dotted currentColor}
+a.gone{color:var(--warn);text-decoration:line-through}
 a.rep{color:var(--muted);text-decoration:none;font-size:11px;padding:0 2px}
 a.rep:hover{color:var(--accent);text-decoration:none}
 footer{color:var(--muted);font-size:12.5px;margin-top:22px;line-height:1.7}
@@ -74,7 +75,7 @@ footer{color:var(--muted);font-size:12.5px;margin-top:22px;line-height:1.7}
 <header>
   <div class="wrap">
     <h1><a href="https://github.com/thirtysix/awesome-regulatory-genomics">Awesome Regulatory Genomics</a></h1>
-    <div class="sub">1800 tools for transcription-factor binding, motifs, regulatory
+    <div class="sub">1893 tools for transcription-factor binding, motifs, regulatory
       elements, chromatin and gene-regulatory networks · updated 2026-07-28</div>
     <div class="controls">
       <input type="search" id="q" placeholder="Search name, description, category, language…" autocomplete="off">
@@ -101,9 +102,11 @@ footer{color:var(--muted);font-size:12.5px;margin-top:22px;line-height:1.7}
         <th data-k="name">Tool</th>
         <th data-k="categories">Categories</th>
         <th class="desc" data-k="description">Description</th>
+        <th data-k="has_site" class="lnk">Site</th>
         <th data-k="has_code" class="lnk">Code</th>
         <th data-k="has_biotools" class="lnk">bio.tools</th>
         <th data-k="has_paper" class="lnk">Paper</th>
+        <th data-k="n_registries" class="lnk">Install</th>
         <th data-k="repo_stars" class="num">Stars</th>
         <th data-k="citations" class="num">Cites</th>
         <th data-k="year" class="num">Year</th>
@@ -112,9 +115,11 @@ footer{color:var(--muted);font-size:12.5px;margin-top:22px;line-height:1.7}
         <th><input data-f="name" type="search" placeholder="filter…"></th>
         <th><input data-f="categories" type="search" placeholder="filter…"></th>
         <th class="desc"><input data-f="description" type="search" placeholder="filter…"></th>
+        <th><select data-f="has_site"><option value="">any</option><option value="1">has</option><option value="0">none</option></select></th>
         <th><select data-f="has_code"><option value="">any</option><option value="1">has</option><option value="0">none</option></select></th>
         <th><select data-f="has_biotools"><option value="">any</option><option value="1">has</option><option value="0">none</option></select></th>
         <th><select data-f="has_paper"><option value="">any</option><option value="1">paper</option><option value="2">preprint</option><option value="0">none</option></select></th>
+        <th><select data-f="has_install"><option value="">any</option><option value="1">packaged</option><option value="0">none</option></select></th>
         <th><input data-f="repo_stars" type="number" min="0" placeholder="min"></th>
         <th><input data-f="citations" type="number" min="0" placeholder="min"></th>
         <th><input data-f="year" type="number" min="1980" placeholder="min"></th>
@@ -134,6 +139,12 @@ footer{color:var(--muted);font-size:12.5px;margin-top:22px;line-height:1.7}
     link check</a>.
     Entries marked <span class="cat seed">curated</span>
     are absent from bio.tools and were added by hand.
+    A <span class="gone">struck-through</span> link returned 404 when last checked;
+    links that merely timed out are not marked, because a slow institutional host
+    looks identical to a departed one.
+    <b>Site</b> is the tool's own page where that is something other than its source
+    repository: a project page, web server or database front end. Tools hosted only on
+    GitHub or another code host show a dash there rather than repeating the code link.
     <br><b>Maintainers:</b> a <span class="inf">dotted</span> code link was <i>inferred</i> from a
     homepage or a GitHub search rather than recorded upstream, so it is our guess and may be
     wrong. The <b>?</b> beside it opens a pre-filled issue. Corrections of any kind are welcome:
@@ -190,9 +201,13 @@ CATS.forEach(([key,label]) => {
 // as "which rows have one", so each link column sorts on 0/1 (paper uses 2 for
 // a peer-reviewed link and 1 for a preprint, so sorting separates them).
 TOOLS.forEach(t => {
+  t.has_site = t.site ? 1 : 0;
   t.has_code = t.repo_url ? 1 : 0;
   t.has_biotools = t.biotools_url ? 1 : 0;
   t.has_paper = !t.publication ? 0 : (t.preprint ? 1 : 2);
+  t.reg_names = Object.keys(t.registries || {}).sort();
+  t.n_registries = t.reg_names.length;
+  t.has_install = t.n_registries ? 1 : 0;
 });
 
 const YEAR_MS = 365.25*24*3600*1000;
@@ -214,7 +229,8 @@ const matches = t => {
     } else if (k === 'categories') {
       const txt = t.categories.map(c => (catLabel[c]||c)).join(' ').toLowerCase();
       if (!txt.includes(v)) return false;
-    } else if (k === 'has_code' || k === 'has_biotools') {
+    } else if (k === 'has_site' || k === 'has_code' || k === 'has_biotools'
+               || k === 'has_install') {
       if (t[k] !== Number(v)) return false;
     } else if (k === 'has_paper') {
       if (t.has_paper !== Number(v)) return false;
@@ -256,12 +272,27 @@ function render(){
   $('rows').innerHTML = rows.map(t => {
     const href = t.homepage || t.repo_url || t.biotools_url;
     const dash = '<span class="no">-</span>';
+    // The tool's own page, only where that is not just its repository. The
+    // hostname goes in the tooltip: it is the fastest way to see whether a
+    // link is a maintained project page or a lab URL from 2009.
+    // A 404 is worth saying out loud; a timeout is not, because it is as
+    // often a slow institutional host as a departed one.
+    const siteDead = t.homepage_status === 'dead';
+    const siteCell = t.site
+      ? '<a href="'+esc(t.site)+'" class="'+(siteDead?'gone':'')+'" title="'
+          + (siteDead ? 'This page returned 404 when last checked. ' : '')
+          + esc(t.site.replace(/^https?:\/\/(www\.)?/, '').replace(/\/.*$/, ''))+'">site</a>'
+      : dash;
     // An inferred link is our guess, not the tool's own statement. Say so, and
     // make reporting it one click rather than a hunt for the issue tracker.
     let codeCell = dash;
     if (t.repo_url) {
       const inferred = t.repo_origin === 'inferred';
-      codeCell = '<a href="'+esc(t.repo_url)+'"'+(inferred?' class="inf" title="Inferred from its homepage or a GitHub search, not recorded upstream. Please report if wrong."':'')+'>code</a>';
+      const repoDead = t.repo_status === 'dead';
+      const cls = [inferred?'inf':'', repoDead?'gone':''].filter(Boolean).join(' ');
+      const tip = (repoDead ? 'This repository returned 404 when last checked. ' : '')
+        + (inferred ? 'Inferred from its homepage or a GitHub search, not recorded upstream. Please report if wrong.' : '');
+      codeCell = '<a href="'+esc(t.repo_url)+'"'+(cls?' class="'+cls+'"':'')+(tip?' title="'+esc(tip)+'"':'')+'>code</a>';
       if (inferred) codeCell += ' <a class="rep" title="Report a wrong repository link" href="'+reportUrl(t)+'">?</a>';
     }
     const btCell = t.biotools_url ? '<a href="'+esc(t.biotools_url)+'">bio.tools</a>' : dash;
@@ -273,15 +304,24 @@ function render(){
       else if (p.startsWith('doi:'))
         paperCell = '<a href="https://doi.org/'+esc(p.slice(4))+'">'+(t.preprint?'preprint':'paper')+'</a>';
     }
+    // Where the tool can actually be installed from. Two letters keeps the
+    // column narrow; the tooltip and the link carry the detail.
+    const REG = {bioconductor:'Bc', cran:'CR', pypi:'Py', conda:'Cn', docker:'Dk'};
+    const installCell = t.n_registries
+      ? t.reg_names.map(r => '<a href="'+esc(t.registries[r])+'" title="'+esc(r)+'">'
+          + esc(REG[r] || r.slice(0,2)) + '</a>').join(' ')
+      : dash;
     const cats = t.categories.map(c=>'<span class="cat">'+esc(catLabel[c]||c)+'</span>').join('') +
       (t.source === 'curated' ? '<span class="cat seed">curated</span>' : '');
     return '<tr><td class="name">' + (href ? '<a href="'+esc(href)+'">'+esc(t.name)+'</a>' : esc(t.name)) +
       (t.repo_archived ? '<br><span class="arch">archived</span>' : '') + '</td>' +
       '<td>' + cats + '</td>' +
       '<td class="desc">' + esc(t.description) + '</td>' +
+      '<td class="lnk">' + siteCell + '</td>' +
       '<td class="lnk">' + codeCell + '</td>' +
       '<td class="lnk">' + btCell + '</td>' +
       '<td class="lnk">' + paperCell + '</td>' +
+      '<td class="lnk">' + installCell + '</td>' +
       '<td class="num">' + (t.repo_stars ?? '') + '</td>' +
       '<td class="num">' + (t.citations ? t.citations.toLocaleString() : '') + '</td>' +
       '<td class="num">' + esc(t.year) + '</td></tr>';

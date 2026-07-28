@@ -16,14 +16,185 @@ incomplete, so the next session starts from evidence rather than from memory.
 - [x] Searchable site with per-column filters and sortable link columns
 - [x] Published: repository public, GitHub Pages live
 
-## Next, roughly in order of value
+## Committed, in the agreed order
 
-- [ ] **Unit tests for the rule functions.** `select_domain.classify()`,
-      `resolve_repos.validate()` and `build.primary_identifier()` are where every
-      bug this project has had actually lived, and nothing tests them directly.
-      `make check` only validates the output shape; the 89/89 benchmark is real
-      but coarse. A contributor loosening a regex currently has no safety net.
-      This is the single highest-value item.
+Chosen 2026-07-28. The aim of this block is to be *more complete and better
+evidenced than bio.tools*, which is the only defensible reason for this resource
+to exist. Curation depth (featured entries, superseded markers, task-oriented
+paths) is deliberately deferred until after it.
+
+- [x] **1. Unit tests for the rule functions.** Done 2026-07-28. 42 tests in
+      `tests/`, run by `make test` and by `.github/workflows/test.yml` on every
+      push and pull request, offline and in under a second. They cover
+      `select_domain.classify()`, `resolve_repos.validate()` and
+      `build.primary_identifier()`, using the real records that motivated each
+      rule: the `cudameme`/`cudamemeticalgorithm` prefix collision, the WebLogo
+      stopword failure, MEDUSA's cross-field name clash, SEProm's lab
+      boilerplate, TOBIAS's preprint-before-paper ordering, and FiMO as the
+      backstop against the name collision documented in `docs/provenance.md`.
+      CI also rebuilds from committed data and fails if the outputs drift.
+
+      *Found a real bug.* `norm_name()` stripped `+`, so "SCENIC+" normalised to
+      "scenic" and the hand-written SCENIC+ seed was skipped as a duplicate of
+      SCENIC, a different tool. `+` is now spelled out. The catalog is
+      byte-identical (bio.tools' own `scenicplus` record was already carrying
+      the tool), but the latent failure is gone and the convention is tested.
+
+- [x] **2. Discovery beyond bio.tools.** Done 2026-07-28.
+      `pipeline/discover_registries.py` (`make discover`) sweeps Bioconductor's
+      `VIEWS` and the Galaxy ToolShed and puts every candidate through
+      `select_domain.classify()`, the same filter the bio.tools records face.
+      A registry's own taxonomy supplies the corroborating signal EDAM topics
+      normally provide: `biocViews: ChIPSeq` maps to the EDAM topic `ChIP-seq`.
+      Scanned 2,418 Bioconductor packages and 7,772 ToolShed repositories,
+      found 161 in-domain candidates absent from the catalog, and **46 were
+      promoted into `seeds.yaml` by hand**, taking the catalog from 1,800 to
+      1,846. Among them: AlphaGenome, SnapATAC2, Cicero, Chromap, MotifDb,
+      epic2, VIPER and RTN, none of which bio.tools indexes.
+
+      Two things were needed to make the Galaxy source usable. The ToolShed
+      publishes one repository per *wrapper*, so candidates sharing a homepage
+      are merged (AlphaGenome arrived five times); and it has no domain
+      taxonomy, so its candidates must clear a strong text pattern unaided.
+      That cut Galaxy's raw 90 candidates to 37 real ones.
+
+      **bioconda was evaluated and rejected as a discovery source.** Its public
+      index gives names without summaries and the API that carried them now
+      returns 401, so admitting from it would mean matching on a name alone,
+      which is the failure this project rejects everywhere else. It remains in
+      use for resolving repositories of tools already known.
+
+- [ ] **2b. Follow-up: the remaining 115 candidates.** `docs/registry-discovery.md`
+      still lists them. Most of the untaken ones are Hi-C/TAD and DNA
+      methylation tools, which raises a scope question rather than a curation
+      one: neither is currently named in `pipeline/config.py`'s scope, but 3D
+      contact and methylation sit close to the chromatin boundary. Decide the
+      boundary first, then promote in a batch. Also run `make repos` to resolve
+      repositories for the 46 new seeds; only the GitHub-hosted ones carry a
+      code link so far.
+
+- [x] **3. Literature-driven discovery.** Done 2026-07-28.
+      `pipeline/discover_literature.py` (`make discover-lit`) exploits the
+      naming convention of the field: tool papers are titled *NAME: what it
+      does*, which turns tool-name extraction into a regular expression. The
+      name comes from before the colon, the evidence from after it, and the
+      evidence goes through `select_domain.classify()` like everything else.
+      18 title-scoped Europe PMC queries over 10,926 papers yielded 673 named
+      in-domain tools, 437 of them absent from the catalog, and **47 were
+      promoted**. The catalog is now 1,893 tools, up from 1,800 at the start.
+
+      Queries are title-scoped deliberately: an abstract-scoped query returns
+      every paper that merely *uses* a tool, and the name before the colon is
+      then the wrong name. The 236 extracted tools already in the catalog are
+      the control, and they are the field's canonical entries (JASPAR, STREME,
+      HOCOMOCO, iRegulon, ChIPpeakAnno), which is evidence the extraction is
+      finding this population rather than a neighbouring one.
+
+      Better than the registry sweep in one respect: every row carries a DOI, a
+      PMID and a year, so a promoted seed gets a real publication and citation
+      count instead of a bare link.
+
+      *Found a second bug.* `from_seed()` hard-coded `citations: None`, so a
+      curated tool showed no count even with its DOI in the citation cache.
+      FIMO, one of the most-cited papers in the field, displayed blank. Seeds
+      now take the same citation path as harvested records, including the
+      suite-paper suppression. 80 of 129 seeds gained a count; FIMO reads 4,992.
+
+      Known noise: the title convention also matches assay and protocol papers
+      ("ChIP-chip", "ChIPmentation") and the occasional biological element
+      ("R11"). That is acceptable in a review queue and is documented in the
+      report.
+
+- [x] **4. Harden the benchmark.** Done 2026-07-28. A second tier takes
+      `curation/benchmark.yaml` from 89 entries to 168, across ten new groups
+      covering motif comparison, nucleosome and chromatin state, single-cell,
+      and harder tiers of the existing categories. **Recall fell from 100% to
+      137/168 (82%)**, which is the point: the number discriminates again, and
+      `docs/coverage.md` now lists 31 concrete, diagnosed gaps.
+
+      *Found a third bug, in the audit itself.* `probe_biotools()` decides
+      whether a miss is "in bio.tools but unharvested" or "absent from
+      bio.tools" by matching on the **name**, and reported it as settled fact.
+      Of the eight records it offered, three were different tools wearing the
+      same name: `Thor` is a spatial-transcriptomics package rather than the
+      RGT differential peak caller, and `inps` and `maestro` are both
+      protein-stability predictors. The same failure as FiMO, in the tool whose
+      job is to find failures. The diagnosis now says the match is on name
+      alone and must be opened before acting.
+
+      Five verified IDs were added to `SEED_BIOTOOLS_IDS` (`danpos`, `dbsuper`,
+      `ggseqlogo`, `logolas`, `rgreat`); they take effect on the next
+      `make refresh`, since fetch-by-ID happens during harvest.
+
+- [ ] **4b. Follow-up: work the 31 misses down.** Most are genuinely absent
+      from bio.tools and belong in `seeds.yaml`: Tomtom, MoSBAT, universalmotif,
+      MEME-ChIP, HMMRATAC, Wellington, CellOracle, Pando, FigR, deltaSVM,
+      dbSUPER and the rest. That is curation work rather than pipeline work, so
+      it sits with the deferred block below. Re-run `make audit` after each
+      batch; treat a fall in recall as a blocker.
+
+- [x] **5. Surface package availability.** Done 2026-07-28. `_registries` was
+      collected and never displayed. It is now an *Install* column on the
+      catalog site (sortable, filterable, one short link per registry) and a
+      `registries` field in `data/catalog.tsv`.
+
+      Coverage was widened at the same time, reusing the Bioconductor data the
+      discovery sweep already caches: `discover_registries.py` now also matches
+      packages to tools the catalog *already has*, taking availability from 219
+      tools to **278**, with Bioconductor alone going 168 to 227. The match
+      requires the package description to share at least two content words with
+      the tool's, the same bar `resolve_repos.validate()` applies, because
+      matching a package on its name is the `medusa` failure again.
+
+      *A build-order trap worth remembering.* `build.py` writes
+      `data/catalog.json` before it writes the TSV, so a row mutation placed
+      between the two lands in the TSV and silently not in the JSON, and
+      therefore not on the site. The symptom was the new links appearing in the
+      TSV while the site stayed at 219.
+
+- [x] **6. Homepage liveness.** Done 2026-07-28. `pipeline/check_homepages.py`
+      (`make check-links`) checked all 1,837 distinct homepages: **1,384 ok
+      (75%), 131 dead, 283 unreachable, 20 rate-limited, 19 blocked**.
+
+      Outcomes are graded rather than binary, because the DOI checker learned
+      the cost of the alternative when it reported 152 broken DOIs of which 151
+      were rate-limiting. Only 404 and 410 count as `dead`; a timeout is
+      `unreachable` and is not asserted anywhere the reader sees, since a slow
+      institutional host looks identical to a departed one. Requests are spaced
+      one second per host, because a single lab often hosts a dozen entries
+      here. Results are cached with the date obtained, so `--max-age` decides
+      what to recheck rather than refetching 1,837 URLs.
+
+      The 131 dead links are struck through on the catalog site. Six of them
+      are deleted *repositories* rather than homepages, which needed the check
+      to compare canonicalised links: PROBC's record holds
+      `http://www.github.com/seferlab/probc` and `https://github.com/seferlab/probc`
+      for the same dead repository.
+
+- [x] **7. Fill the missing fields.** Done 2026-07-28.
+      `pipeline/fill_metadata.py` (`make fill-metadata`) fills what is
+      derivable from data already held, and marks it rather than merging it
+      silently.
+
+      **Year: 1,052 to 1,800 of 1,893 (95%).** 729 publications were looked up
+      in OpenAlex and 723 resolved. An empty answer is cached as an answer, so
+      a missing year is not re-asked on every run.
+
+      **Licence: 772 to 857.** Where a tool declares none but its resolved
+      repository has one, the repository's is used and `license_source` records
+      which it is. A repository licence is weaker evidence than a declared one,
+      so the two are distinguishable rather than merged.
+
+      **Citations for seeds** were fixed as part of item 3: 80 of 129 seeds now
+      carry a count, FIMO among them at 4,992.
+
+- [ ] **7b. Follow-up: the 144 preprints and the remaining 1,036 licences.**
+      The preprints are the known-hard case already documented below: Crossref
+      records no published version, and loose title matching was tried and
+      rejected. The licences are mostly genuinely unstated upstream rather than
+      derivable, so this needs contributions, not code.
+
+## Also outstanding
 
 - [ ] **Work through the unsearched records.** ~940 of the repo-less records were
       never reached by GitHub search, because each run is budget-capped at 80 to
@@ -36,15 +207,21 @@ incomplete, so the next session starts from evidence rather than from memory.
       model opinions only. Sampling suggests roughly a quarter of the closest
       repo near-misses are genuine.
 
-- [ ] **The 135 preprint links.** Crossref records no published version for them.
-      Title matching was tested and rejected: preprint titles routinely change on
-      publication, so strict matching finds almost nothing and loose matching
-      attaches wrong papers. Hand-correction via `overlay.yaml` works, as done
-      for Signac and ArchR.
-
 - [ ] **Watch the first automated refresh** (1 August 2026, 04:00 UTC). It opens
       a PR rather than committing. Review the `data/catalog.tsv` diff; treat a
       drop in `docs/coverage.md` recall as a blocker rather than noise.
+
+## Deferred: curation depth
+
+Queued behind the block above, by decision rather than by oversight.
+
+- [ ] **Expand the featured set.** 19 of 1,800 entries are featured. A registry
+      can list; only a curated list can say which tool to reach for. This is the
+      largest single difference between this resource and a data dump.
+- [ ] **Mark superseded and abandoned tools.** 186 repositories have had no push
+      since before 2021. "Use X instead" is information bio.tools cannot give.
+- [ ] **Task-oriented entry points.** Categories answer *what is this*; users
+      arrive with *what do I do*.
 
 ## Considered and deliberately not done
 

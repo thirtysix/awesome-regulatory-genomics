@@ -14,6 +14,9 @@ These are overwritten on every build. Edits are lost without warning.
 | `data/catalog.json`, `data/catalog.tsv` | `curation/*.yaml`, then `make curate` |
 | `docs/coverage.md` | `curation/benchmark.yaml` |
 | `docs/link-check.md`, `docs/repo-review.md`, `docs/addition-review.md` | their pipeline stage |
+| `docs/registry-discovery.md` | `pipeline/discover_registries.py`; promote rows into `seeds.yaml` |
+| `docs/literature-discovery.md` | `pipeline/discover_literature.py`; promote rows into `seeds.yaml` |
+| `docs/homepage-check.md` | `pipeline/check_homepages.py` |
 | `curation/llm_proposals.yaml` | it is model output; promote things into `overlay.yaml` |
 
 `curation/overlay.yaml`, `curation/seeds.yaml` and `curation/benchmark.yaml` are
@@ -22,7 +25,9 @@ the hand-written layer and are never overwritten.
 ## Commands
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements-dev.txt   # requirements.txt + pytest
+make test          # unit-test the rule functions. Run this FIRST after any
+                   # change to config.py, select_domain.py or resolve_repos.py
 make curate        # rebuild catalog + README + site from committed data (offline)
 make build-strict  # rebuild ignoring all LLM proposals
 make all           # re-select, enrich, resolve repos and links, rebuild, audit
@@ -87,8 +92,17 @@ linked to dozens of commands, the Bioconductor paper to 23 packages. Where a
 primary publication is shared by three or more tools, no count is shown.
 
 **bio.tools `operation=` and `q=` are fuzzy text search, not ontology lookup.**
-Always quote the value. Unquoted `q=cis-regulatory` returns 3,000 records
-matching "cis" OR "regulatory".
+Always quote the value. `q="cis-regulatory"` returns 107 records; unquoted it
+returns about 3,500, matching "cis" OR "regulatory".
+
+**Two of the README's own examples of bad EDAM annotation were themselves
+wrong**, and both were caught only by querying the live API rather than
+believing the doc. There is no bio.tools record for the MEME Suite's FIMO: the
+ID `fimo` is FiMO, an unrelated genotyping tool, so "FIMO is filed under
+Genotyping" was a name collision. MACS is annotated `Peak calling` and always
+was, not "Modelling and simulation". Verified examples, safe to reuse: HOCOMOCO
+under `Data handling`, SICER under `Sequence contamination filtering`,
+ChIP-Atlas under `Genome assembly`, Cluster Buster under `Document clustering`.
 
 **Syntax-check the site JavaScript before shipping.** It is generated as a Python
 string, so an apostrophe in the prose terminates a JS string literal and ships a

@@ -7,9 +7,9 @@ where the scope of the resource is actually decided. Admission is tiered:
   ``core``      a STRONG EDAM operation - specific enough to stand alone.
   ``extended``  a WEAK operation, or a text match, corroborated by a domain
                 topic. This is the escape hatch for bio.tools' annotation gaps:
-                FIMO is filed under "Genotyping", HOCOMOCO under "Data
-                handling", and peak callers like gcapc, Q and CCAT carry no
-                usable operation at all.
+                HOCOMOCO is filed under "Data handling", SICER under "Sequence
+                contamination filtering", and peak callers like gcapc, Q and
+                CCAT carry no usable operation at all.
 
 Every record is then tested against EXCLUDE_TEXT_PATTERNS, which removes
 neighbouring fields that share vocabulary - mass spectrometry "peak detection",

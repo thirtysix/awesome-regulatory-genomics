@@ -42,10 +42,10 @@ rather than a proper lookup, so asking precisely gets you nothing. The pipeline
 deliberately over-collects, then applies strict rules afterwards.
 
 **Don't trust the labels.** The registry lets people tag tools with standard
-categories, and those tags are frequently wrong: a well-known motif scanner is
-filed under "Genotyping", a major database under "Data handling". So the rules
-are tiered, and there is a fallback that reads the tool's own description when
-the labels are useless.
+categories, and those tags are frequently wrong: a major motif database is filed
+under "Data handling", a peak caller under "Sequence contamination filtering".
+So the rules are tiered, and there is a fallback that reads the tool's own
+description when the labels are useless.
 
 **Show your working.** Every tool that was rejected is written to a file with the
 reason. Anyone who thinks the boundary is wrong can argue with the evidence

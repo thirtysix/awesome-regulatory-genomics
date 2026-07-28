@@ -86,7 +86,9 @@ long exclusion list.
 
 ```bash
 pip install -r requirements.txt      # requests, PyYAML; Python 3.12+
+pip install -r requirements-dev.txt  # the above plus pytest, for `make test`
 
+make test             # unit-test the scope, repository and citation rules
 make curate           # rebuild from cached data after editing curation/*.yaml
 make build-strict     # rebuild on rules alone, ignoring the LLM proposals
 make all              # re-select, enrich, resolve links, rebuild  (needs network)
@@ -104,6 +106,18 @@ make llm               # category, description and scope proposals
 make verify-additions  # third-model check on hand-added records
 make bench             # compare candidate models on this task
 ```
+
+### Changing a rule
+
+`pipeline/config.py` holds the patterns and term sets that decide what is in
+scope; `select_domain.py`, `resolve_repos.py` and `build.py` apply them. If you
+are loosening a rule to admit a tool you think is missing, run `make test`
+first. Those tests exist because every regression this project has shipped came
+from a reasonable-looking loosening: adding `sequence` and `genome` to the
+repository stopword list rejected the correct WebLogo repository, and substring
+matching gave CUDA-MEME an unrelated particle-swarm project. A failure there is
+usually the rule protecting something, not the test being wrong. CI runs the
+same suite on every pull request.
 
 Enrichment uses the GitHub API. It works unauthenticated at 60 requests/hour,
 but set `GITHUB_TOKEN` (or run `gh auth login`) for 5,000/hour. Both the GitHub

@@ -74,18 +74,17 @@ HOMER, Weeder and ChIPMunk. A fourth result set of 241 motif tools was computed
 and discarded; 208 of them appear nowhere in the final table.
 
 **2. EDAM annotations in bio.tools are unreliable.** Of 85 canonical tools in
-this field checked against the live API, 58 were missed by the original queries
-and 26 of those are *in* bio.tools, filed under operations no sensible query
-would target:
+this field checked against the live API, 58 were missed by the original queries.
+A substantial share of those are *in* bio.tools, filed under operations no
+sensible query would target (each row re-verified against the live API on
+2026-07-28):
 
-| Tool | bio.tools operation |
-| --- | --- |
-| FIMO | Genotyping, Quantification, Standardisation and normalisation |
-| HOCOMOCO | Data handling |
-| MACS | Modelling and simulation |
-| SICER | Sequence contamination filtering |
-| ChIP-Atlas | Genome assembly, Genome visualisation |
-| Cluster-Buster | Clustering, Document clustering |
+| Tool | bio.tools ID | bio.tools operation |
+| --- | --- | --- |
+| HOCOMOCO | `hocomoco` | Data handling |
+| SICER | `sicer` | Sequence contamination filtering |
+| ChIP-Atlas | `chip-atlas` | Genome assembly, Genome visualisation |
+| Cluster Buster | `cluster_buster` | Clustering, Document clustering |
 
 **3. bio.tools does not index a large part of the field.** 32 of the 85 are
 absent outright: the sequence-to-function deep-learning generation (DeepBind,
@@ -93,17 +92,30 @@ DeepSEA, Basset, Basenji, Enformer, DanQ, Sei, DeepSTARR), most digital
 footprinting methods (HINT-ATAC, PIQ, Wellington, pyDNase, CENTIPEDE), and
 several major motif databases (CIS-BP, TRRUST, footprintDB).
 
+A fourth failure mode sits between 2 and 3, and it is the one most likely to
+fool an audit. Widely used tools are sometimes absent as records in their own
+right while a *different* tool holds the obvious name. There is no bio.tools
+record for the MEME Suite's FIMO: the ID `fimo` belongs to FiMO, an unrelated
+genotyping and normalisation tool, and the scanner itself exists only as one
+function of the `meme_suite` record. Searching by name finds something, so the
+gap reads as coverage. FIMO is therefore carried in `seeds.yaml`, and this is
+the same collision the resolvers guard against everywhere else: a matching name
+is necessary but never sufficient.
+
 ### Consequences for the design
 
 - **Query wide, filter narrow.** bio.tools' `operation=` is a fuzzy text match,
-  not an ontology lookup: an unquoted `q=cis-regulatory` returns 3,000 records
-  matching "cis" *or* "regulatory". Precision is therefore applied afterwards,
-  against the annotations a record actually carries.
-- **Tier the operations.** Specific terms admit a record on their own; ambiguous
-  ones (`Sequence motif recognition`, which bio.tools also applies to protein and
-  RNA motifs) need a corroborating topic or text signal. Four terms are queried
-  but never used to admit anything. `Peak detection` in particular is used
-  almost exclusively by mass-spectrometry tools.
+  not an ontology lookup: `q="cis-regulatory"` returns 107 records, while the
+  same query unquoted returns about 3,500, matching "cis" *or* "regulatory".
+  Precision is therefore applied afterwards, against the annotations a record
+  actually carries.
+- **Tier the operations.** Seventeen specific terms admit a record on their own;
+  five ambiguous ones (`Sequence motif recognition`, which bio.tools also applies
+  to protein and RNA motifs) need a corroborating topic or text signal; and five
+  that belong to another field are listed in `REJECTED_OPERATIONS`, never queried
+  and never able to admit anything. `Peak detection` is the clearest case: of the
+  204 records carrying it, roughly three in four are proteomics, metabolomics or
+  NMR tools.
 - **Keep a text escape hatch.** Matching name and description against domain
   patterns, gated on a plausible EDAM topic, recovers in-domain tools with no
   usable annotation at all (gcapc, Q, CCAT, MixChIP, ChIPanalyser).

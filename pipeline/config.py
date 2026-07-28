@@ -93,14 +93,22 @@ QUERY_OPERATIONS = [
     "Gene regulatory network prediction",
 ]
 
-# Queried but deliberately NOT used to admit records, because bio.tools applies
-# them to a different field entirely:
-#   "Peak detection"                     -> mass spectrometry / chromatography
-#   "DNA-binding protein prediction"     -> protein-function prediction, not TFBS
+# Operation terms that look in-domain but are NOT queried and never admit
+# anything, because bio.tools applies them to a different field entirely:
+#   "Peak detection"                        -> mass spectrometry / chromatography.
+#                                              Of the 204 records carrying it,
+#                                              roughly three in four are
+#                                              proteomics, metabolomics or NMR.
+#   "DNA-binding protein prediction"        -> protein-function prediction, not TFBS
 #   "Nucleic acids-binding site prediction" -> protein structure annotation
-#   "Protein-nucleic acid binding prediction"
-# Auditing these is what keeps the catalog from silently absorbing 200
-# metabolomics tools.
+#   "Protein-nucleic acid binding prediction"      -> likewise
+#   "Protein-nucleic acid binding site analysis"   -> likewise
+#
+# This list is documentation, not control flow: nothing imports it. The
+# exclusion is enforced by these terms being absent from STRONG_OPERATIONS,
+# WEAK_OPERATIONS and QUERY_OPERATIONS. Keep it in sync with those three, since
+# it is the record of *why* they are absent - which is what keeps someone from
+# helpfully adding "Peak detection" and absorbing 200 metabolomics tools.
 REJECTED_OPERATIONS = [
     "Peak detection",
     "DNA-binding protein prediction",
@@ -136,6 +144,19 @@ SEED_BIOTOOLS_IDS = [
     "atsnp",          # variant effect on TF binding
     "HaploReg",       # regulatory annotation of variants
     "uniprobe",       # PBM-derived DNA-binding specificities
+
+    # Surfaced by the harder benchmark tier (2026-07-28). Each record was
+    # opened and read before being added: probing bio.tools by NAME offered
+    # eight, and three were different tools wearing the same name. `Thor` is a
+    # spatial-transcriptomics package, not the RGT differential peak caller;
+    # `inps` and `maestro` are protein-stability predictors, not the nucleosome
+    # and single-cell tools. Those three are absent from bio.tools and belong
+    # in seeds.yaml instead. These five are the genuine articles.
+    "danpos",         # nucleosome position dynamics
+    "dbsuper",        # super-enhancer database
+    "ggseqlogo",      # sequence logos in ggplot2
+    "logolas",        # enrichment/depletion logo plots
+    "rgreat",         # GREAT region-enrichment from R
 
     # Reviewed individually after the adjudication pass over the reject pile.
     # Each is in scope but phrased so idiosyncratically that no pattern reaches
@@ -214,8 +235,9 @@ SEED_BIOTOOLS_IDS = [
 ]
 
 # Free-text queries, for tools whose EDAM annotation is wrong or absent.
-# bio.tools' ``q=`` searches name + description, so this recovers records like
-# FIMO (annotated "Genotyping") that no operation query can reach.
+# bio.tools' ``q=`` searches name + description, so this recovers records that
+# no operation query can reach: peak callers like gcapc, Q, CCAT and MixChIP
+# carry no usable operation at all.
 QUERY_FREETEXT = [
     "transcription factor binding site",
     "TFBS",

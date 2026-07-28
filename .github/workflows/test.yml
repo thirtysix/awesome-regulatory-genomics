@@ -1,0 +1,46 @@
+name: Tests
+
+# The rule functions decide what is in scope, which repository link is
+# trustworthy and which paper a citation count belongs to. Every bug this
+# project has had lived in one of them, so they are tested on every push.
+#
+# Deliberately offline: no API keys, no network. The live-data checks belong to
+# refresh.yml, which runs monthly and opens a PR.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt -r requirements-dev.txt
+
+      - name: Unit tests
+        run: make test
+
+      - name: Rebuild from committed data and check it converges
+        # `make curate` is offline: it rebuilds the catalog, README and site
+        # from data/ and curation/ only. A diff here means the committed
+        # outputs are stale relative to the inputs, which is the failure mode
+        # that ships a README disagreeing with its own catalog.
+        run: |
+          make curate
+          make check
+          git diff --exit-code -- README.md data/catalog.json data/catalog.tsv docs/

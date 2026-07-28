@@ -355,3 +355,577 @@ tools:
     categories: [peak-annotation]
     tags: [r, bioconductor]
     doi: 10.1093/bioinformatics/btv612
+
+  # ---------------------------------------------------------------------
+  # Found by pipeline/discover_registries.py (2026-07-28) in Bioconductor's
+  # biocViews and the Galaxy ToolShed, then selected by hand from
+  # docs/registry-discovery.md. None of these are indexed by bio.tools.
+  # ---------------------------------------------------------------------
+
+  - name: MotifDb
+    url: https://bioconductor.org/packages/MotifDb/
+    description: Annotated collection of protein-DNA binding motifs assembled from many public sources
+    categories: [motif-databases]
+    tags: [bioconductor]
+
+  - name: motifcounter
+    url: https://bioconductor.org/packages/motifcounter/
+    description: Statistical framework for motif enrichment in DNA sequences with an order-aware background
+    categories: [motif-scanning]
+    tags: [bioconductor]
+
+  - name: motifTestR
+    url: https://bioconductor.org/packages/motifTestR/
+    description: Tests for positional bias and enrichment of binding motifs in sequence sets
+    categories: [motif-scanning]
+    tags: [bioconductor]
+
+  - name: MatrixRider
+    url: https://bioconductor.org/packages/MatrixRider/
+    description: Total binding affinity of a PWM over a sequence, rather than a thresholded hit count
+    categories: [motif-scanning]
+    tags: [bioconductor]
+
+  - name: sarks
+    url: https://bioconductor.org/packages/sarks/
+    description: Suffix-array kernel smoothing to find motifs correlated with a continuous score
+    categories: [motif-discovery]
+    tags: [bioconductor]
+
+  - name: Motif2Site
+    url: https://bioconductor.org/packages/Motif2Site/
+    description: Detects binding sites by combining motif occurrences with ChIP-seq evidence
+    categories: [tfbs-prediction, peak-calling]
+    tags: [bioconductor]
+
+  - name: nucleR
+    url: https://bioconductor.org/packages/nucleR/
+    description: Nucleosome positioning from MNase-seq coverage, with peak calling and scoring
+    categories: [nucleosome-chromatin]
+    tags: [bioconductor]
+
+  - name: nuCpos
+    url: https://bioconductor.org/packages/nuCpos/
+    description: Predicts nucleosome positioning and rotational setting from sequence alone
+    categories: [nucleosome-chromatin]
+    tags: [bioconductor]
+
+  - name: dinoR
+    url: https://bioconductor.org/packages/dinoR/
+    description: Differential NOMe-seq analysis of nucleosome occupancy and TF footprints
+    categories: [nucleosome-chromatin, footprinting]
+    tags: [bioconductor]
+
+  - name: segmenter
+    url: https://bioconductor.org/packages/segmenter/
+    description: Chromatin state segmentation in R, wrapping ChromHMM end to end
+    categories: [nucleosome-chromatin]
+    tags: [bioconductor]
+
+  - name: VplotR
+    url: https://bioconductor.org/packages/VplotR/
+    description: V-plots and footprint profiles from paired-end ATAC and MNase data
+    categories: [footprinting]
+    tags: [bioconductor]
+
+  - name: SingleMoleculeFootprinting
+    url: https://bioconductor.org/packages/SingleMoleculeFootprinting/
+    description: Analysis of single-molecule footprinting data, resolving co-occupancy on one molecule
+    categories: [footprinting]
+    tags: [bioconductor]
+
+  - name: ATACseqTFEA
+    url: https://bioconductor.org/packages/ATACseqTFEA/
+    description: Transcription factor enrichment analysis from ATAC-seq footprint signal
+    categories: [footprinting, motif-scanning]
+    tags: [bioconductor]
+
+  - name: Cicero
+    url: https://bioconductor.org/packages/cicero/
+    description: Predicts cis-regulatory co-accessibility links from single-cell chromatin accessibility
+    categories: [single-cell, regulatory-elements]
+    tags: [bioconductor]
+
+  - name: epiregulon
+    url: https://bioconductor.org/packages/epiregulon/
+    description: Gene regulatory network inference from single-cell epigenomic data
+    categories: [grn-inference, single-cell]
+    tags: [bioconductor]
+
+  - name: RTN
+    url: https://bioconductor.org/packages/RTN/
+    description: Reconstructs transcriptional regulatory networks and analyses regulons
+    categories: [grn-inference]
+    tags: [bioconductor]
+
+  - name: VIPER
+    url: https://bioconductor.org/packages/viper/
+    description: Infers protein activity from the expression of its regulon
+    categories: [grn-inference]
+    tags: [bioconductor]
+
+  - name: magrene
+    url: https://bioconductor.org/packages/magrene/
+    description: Finds network motifs in gene regulatory networks and tests them against null models
+    categories: [grn-inference]
+    tags: [bioconductor]
+
+  - name: pageRank
+    url: https://bioconductor.org/packages/pageRank/
+    description: Temporal and multiplex PageRank for ranking regulators in gene regulatory networks
+    categories: [grn-inference]
+    tags: [bioconductor]
+
+  - name: TFARM
+    url: https://bioconductor.org/packages/TFARM/
+    description: Mines association rules among transcription factors from binding-site data
+    categories: [grn-inference]
+    tags: [bioconductor]
+
+  - name: xcore
+    url: https://bioconductor.org/packages/xcore/
+    description: Infers regulatory activity by regressing expression against motif and ChIP signal
+    categories: [grn-inference]
+    tags: [bioconductor]
+
+  - name: crupR
+    url: https://bioconductor.org/packages/crupR/
+    description: Predicts condition-specific enhancers from histone ChIP-seq and links them to genes
+    categories: [regulatory-elements]
+    tags: [bioconductor]
+
+  - name: LedPred
+    url: https://bioconductor.org/packages/LedPred/
+    description: Learns enhancer models from DNA features with a support vector machine
+    categories: [regulatory-elements]
+    tags: [bioconductor]
+
+  - name: DegCre
+    url: https://bioconductor.org/packages/DegCre/
+    description: Probabilistic association of differentially expressed genes to candidate regulatory elements
+    categories: [regulatory-elements]
+    tags: [bioconductor]
+
+  - name: enhancerHomologSearch
+    url: https://bioconductor.org/packages/enhancerHomologSearch/
+    description: Finds putative mammalian orthologues of a given enhancer
+    categories: [comparative, regulatory-elements]
+    tags: [bioconductor]
+
+  - name: proActiv
+    url: https://bioconductor.org/packages/proActiv/
+    description: Estimates promoter activity from RNA-seq junction reads
+    categories: [regulatory-elements]
+    tags: [bioconductor]
+
+  - name: icetea
+    url: https://bioconductor.org/packages/icetea/
+    description: Transcription start site detection and differential TSS usage from cap-enrichment data
+    categories: [regulatory-elements]
+    tags: [bioconductor]
+
+  - name: CexoR
+    url: https://bioconductor.org/packages/CexoR/
+    description: Calls high-resolution protein-DNA interaction sites from ChIP-exo replicates
+    categories: [peak-calling]
+    tags: [bioconductor]
+
+  - name: epigraHMM
+    url: https://bioconductor.org/packages/epigraHMM/
+    description: Hidden Markov models for consensus and differential peak calling across ChIP and ATAC
+    categories: [peak-calling]
+    tags: [bioconductor]
+
+  - name: rmspc
+    url: https://bioconductor.org/packages/rmspc/
+    description: Combines weak peaks across replicates to rescue sites no single sample calls
+    categories: [peak-calling]
+    tags: [bioconductor]
+
+  - name: DEScan2
+    url: https://bioconductor.org/packages/DEScan2/
+    description: Differential enrichment scan for low-signal ChIP and ATAC regions
+    categories: [peak-calling]
+    tags: [bioconductor]
+
+  - name: consensusSeekeR
+    url: https://bioconductor.org/packages/consensusSeekeR/
+    description: Finds consensus regions across peak sets from several experiments
+    categories: [peak-annotation]
+    tags: [bioconductor]
+
+  - name: extraChIPs
+    url: https://bioconductor.org/packages/extraChIPs/
+    description: Range-based helpers for differential binding and ChIP-seq annotation workflows
+    categories: [peak-annotation]
+    tags: [bioconductor]
+
+  - name: profileplyr
+    url: https://bioconductor.org/packages/profileplyr/
+    description: Annotates and visualises read signal over genomic ranges, grouped by feature
+    categories: [peak-annotation]
+    tags: [bioconductor]
+
+  - name: genomation
+    url: https://bioconductor.org/packages/genomation/
+    description: Summarises and visualises genomic intervals over annotation features
+    categories: [peak-annotation]
+    tags: [bioconductor]
+
+  - name: SEMPLR
+    url: https://bioconductor.org/packages/SEMPLR/
+    description: Scores the effect of SNPs on transcription factor binding via SNP effect matrices
+    categories: [regulatory-variants]
+    tags: [bioconductor]
+
+  - name: GARFIELD
+    url: https://bioconductor.org/packages/garfield/
+    description: Tests GWAS signal for enrichment in regulatory annotations, correcting for LD
+    categories: [regulatory-variants]
+    tags: [bioconductor]
+
+  - name: vtpnet
+    url: https://bioconductor.org/packages/vtpnet/
+    description: Builds variant to transcription factor to phenotype networks
+    categories: [regulatory-variants]
+    tags: [bioconductor]
+
+  - name: planttfhunter
+    url: https://bioconductor.org/packages/planttfhunter/
+    description: Identifies and classifies plant transcription factors by DNA-binding domain
+    categories: [motif-databases]
+    tags: [bioconductor]
+
+  - name: target
+    url: https://bioconductor.org/packages/target/
+    description: Predicts the combined regulatory function of transcription factors from binding and expression
+    categories: [tfbs-prediction]
+    tags: [bioconductor]
+
+  - name: AlphaGenome
+    url: https://github.com/google-deepmind/alphagenome
+    repo: google-deepmind/alphagenome
+    description: Sequence-to-function foundation model predicting regulatory activity and variant effects
+    categories: [tfbs-prediction, regulatory-elements, regulatory-variants]
+    tags: [galaxy]
+
+  - name: SnapATAC2
+    url: https://kzhang.org/SnapATAC2/
+    description: Single-cell epigenomics analysis for scATAC and multiome at large scale
+    categories: [single-cell]
+    tags: [galaxy]
+
+  - name: Chromap
+    url: https://github.com/haowenz/chromap
+    repo: haowenz/chromap
+    description: Fast aligner and preprocessor for ChIP, ATAC and Hi-C chromatin profiling reads
+    categories: [peak-calling]
+    tags: [galaxy]
+
+  - name: epic2
+    url: https://github.com/biocore-ntnu/epic2
+    repo: biocore-ntnu/epic2
+    description: Peak caller for broad chromatin marks, a fast reimplementation of SICER
+    categories: [peak-calling]
+    tags: [galaxy]
+
+  - name: Zerone
+    url: https://github.com/nanakiksc/zerone
+    repo: nanakiksc/zerone
+    description: Discretises ChIP-seq signal across replicates and flags low-quality experiments
+    categories: [peak-calling]
+    tags: [galaxy]
+
+  - name: MultiGPS
+    url: http://mahonylab.org/software/multigps/
+    description: Joint analysis of multi-condition ChIP-seq with shared binding-event detection
+    categories: [peak-calling]
+    tags: [galaxy]
+
+  # ---------------------------------------------------------------------
+  # Found by pipeline/discover_literature.py (2026-07-28) from the naming
+  # convention of tool papers, then selected by hand from
+  # docs/literature-discovery.md. Each carries the paper it was announced in.
+  # ---------------------------------------------------------------------
+
+  - name: FactorNet
+    description: Deep learning framework predicting cell-type-specific TF binding from sequence and chromatin
+    categories: [tfbs-prediction]
+    tags: [literature]
+    pmid: 30922998
+
+  - name: PeakVI
+    description: Deep generative model for single-cell chromatin accessibility analysis
+    categories: [single-cell]
+    tags: [literature]
+    pmid: 35475224
+
+  - name: Dictys
+    description: Dynamic gene regulatory network inference across a developmental continuum from single-cell multiome
+    categories: [grn-inference, single-cell]
+    tags: [literature]
+    pmid: 37537351
+
+  - name: DeepDRIM
+    description: Deep neural network reconstructing cell-type-specific gene regulatory networks
+    categories: [grn-inference, single-cell]
+    tags: [literature]
+    pmid: 34424948
+
+  - name: oPOSSUM-3
+    description: Motif over-representation analysis across gene sets or ChIP-seq peak sets
+    categories: [motif-scanning]
+    tags: [literature]
+    pmid: 22973536
+
+  - name: PlantPAN3.0
+    description: Plant promoter analysis resource with binding profiles and regulatory network reconstruction
+    categories: [motif-databases, grn-inference]
+    tags: [literature]
+    pmid: 30395277
+
+  - name: Factorbook.org
+    description: Wiki-based database of ENCODE transcription factor binding and motif data
+    categories: [chip-resources, motif-databases]
+    tags: [literature]
+    pmid: 23203885
+
+  - name: TRED
+    description: Transcriptional regulatory element database of promoters and TF-target relationships
+    categories: [motif-databases]
+    tags: [literature]
+    pmid: 17202159
+
+  - name: MAPPER
+    description: Search engine for computational identification of putative transcription factor binding sites
+    categories: [tfbs-prediction]
+    tags: [literature]
+    pmid: 15799782
+
+  - name: CisModule
+    description: De novo discovery of cis-regulatory modules by hierarchical mixture modelling
+    categories: [motif-discovery, regulatory-elements]
+    tags: [literature]
+    pmid: 15297614
+
+  - name: AMULET
+    description: Read-count based multiplet detection for single-cell ATAC-seq
+    categories: [single-cell]
+    tags: [literature]
+    pmid: 34465366
+
+  - name: DROMPA
+    description: Peak calling and visualisation for ChIP-seq, built for ease of handling
+    categories: [peak-calling]
+    tags: [literature]
+    pmid: 23672187
+
+  - name: PReMod
+    description: Database of genome-wide mammalian cis-regulatory module predictions
+    categories: [motif-databases, regulatory-elements]
+    tags: [literature]
+    pmid: 17148480
+
+  - name: NARROMI
+    description: Noise and redundancy reduction improving accuracy of gene regulatory network inference
+    categories: [grn-inference]
+    tags: [literature]
+    pmid: 23080116
+
+  - name: Sole-Search
+    description: Integrated peak detection and functional annotation for ChIP-seq
+    categories: [peak-calling, peak-annotation]
+    tags: [literature]
+    pmid: 19906703
+
+  - name: PAINT
+    description: Promoter analysis and interaction network generation for regulatory studies
+    categories: [grn-inference, regulatory-elements]
+    tags: [literature]
+    pmid: 14583114
+
+  - name: ANN-Spec
+    description: Neural network method for discovering transcription factor binding sites with improved specificity
+    categories: [motif-discovery]
+    tags: [literature]
+    pmid: 10902194
+
+  - name: STIFDB2
+    description: Database of stress-responsive transcription factors and binding sites in plants
+    categories: [motif-databases]
+    tags: [literature]
+    pmid: 23314754
+
+  - name: ECRbase
+    description: Database of evolutionarily conserved regions, promoters and transcription factor binding sites
+    categories: [comparative, motif-databases]
+    tags: [literature]
+    pmid: 17090579
+
+  - name: AliBaba2
+    description: Context-specific identification of transcription factor binding sites
+    categories: [tfbs-prediction]
+    tags: [literature]
+    pmid: 11808873
+
+  - name: Trawler
+    description: De novo regulatory motif discovery pipeline for chromatin immunoprecipitation data
+    categories: [motif-discovery]
+    tags: [literature]
+    pmid: 17589518
+
+  - name: ConTra
+    description: Promoter alignment analysis identifying conserved transcription factor binding sites
+    categories: [comparative, tfbs-prediction]
+    tags: [literature]
+    pmid: 18453628
+
+  - name: MUSIC
+    description: Identifies enriched regions in ChIP-seq using a multiscale decomposition
+    categories: [peak-calling]
+    tags: [literature]
+    pmid: 25292436
+
+  - name: CHANCE
+    description: Quality control and validation of ChIP-seq experiments before peak calling
+    categories: [peak-calling]
+    tags: [literature]
+    pmid: 23068444
+
+  - name: DIRECT-NET
+    description: Discovers cis-regulatory elements and builds regulatory networks from single-cell multiome
+    categories: [regulatory-elements, grn-inference]
+    tags: [literature]
+    pmid: 35648859
+
+  - name: MSCAN
+    description: Identifies functional clusters of transcription factor binding sites in sequence
+    categories: [motif-scanning]
+    tags: [literature]
+    pmid: 15215379
+
+  - name: BinDNase
+    description: Discriminative DNase footprinting for transcription factor binding prediction
+    categories: [footprinting]
+    tags: [literature]
+    pmid: 25957350
+
+  - name: TIP
+    description: Probabilistic identification of transcription factor target genes from binding data
+    categories: [tfbs-prediction, grn-inference]
+    tags: [literature]
+    pmid: 22039215
+
+  - name: Stubb
+    description: Discovery and analysis of cis-regulatory modules in genomic sequence
+    categories: [regulatory-elements]
+    tags: [literature]
+    pmid: 16845069
+
+  - name: jMOSAiCS
+    description: Joint analysis of multiple ChIP-seq datasets to find shared and distinct regions
+    categories: [peak-calling]
+    tags: [literature]
+    pmid: 23844871
+
+  - name: dbCoRC
+    description: Database of core transcriptional regulatory circuitries modelled from super-enhancers
+    categories: [motif-databases, grn-inference]
+    tags: [literature]
+    pmid: 28977473
+
+  - name: GERV
+    description: Generative evaluation of regulatory variants and their effect on binding
+    categories: [regulatory-variants]
+    tags: [literature]
+    pmid: 26476779
+
+  - name: ChIP-R
+    description: Assembles reproducible peak sets from ChIP-seq and ATAC-seq replicates
+    categories: [peak-calling]
+    tags: [literature]
+    pmid: 33878366
+
+  - name: Wellington-bootstrap
+    description: Differential DNase-seq footprinting identifying cell-type determining factors
+    categories: [footprinting]
+    tags: [literature]
+    pmid: 26608661
+
+  - name: Sasquatch
+    description: Predicts the impact of regulatory SNPs on transcription factor binding from DNase data
+    categories: [regulatory-variants]
+    tags: [literature]
+    pmid: 28904015
+
+  - name: nuScore
+    description: Web interface for sequence-based nucleosome positioning prediction
+    categories: [nucleosome-chromatin]
+    tags: [literature]
+    pmid: 18445607
+
+  - name: LeNup
+    description: Convolutional network learning nucleosome positioning from DNA sequence
+    categories: [nucleosome-chromatin]
+    tags: [literature]
+    pmid: 29329398
+
+  - name: EP-DNN
+    description: Deep neural network for genome-wide enhancer prediction
+    categories: [regulatory-elements]
+    tags: [literature]
+    pmid: 27929098
+
+  - name: Mocap
+    description: Large-scale inference of transcription factor binding sites from chromatin accessibility
+    categories: [tfbs-prediction]
+    tags: [literature]
+    pmid: 28334916
+
+  - name: Destin
+    description: Toolkit for single-cell chromatin accessibility analysis
+    categories: [single-cell]
+    tags: [literature]
+    pmid: 30821321
+
+  - name: Cscan
+    description: Finds common regulators of a gene set using a collection of genome-wide ChIP experiments
+    categories: [grn-inference]
+    tags: [literature]
+    pmid: 22669907
+
+  - name: hmChIP
+    description: Database and web server of publicly available human and mouse ChIP data
+    categories: [chip-resources]
+    tags: [literature]
+    pmid: 21450710
+
+  - name: CistromeMap
+    description: Knowledgebase and web server for ChIP-seq and DNase-seq studies
+    categories: [chip-resources]
+    tags: [literature]
+    pmid: 22495751
+
+  - name: BloodChIP
+    description: Comparative genome-wide transcription factor binding profiles in blood cells
+    categories: [chip-resources]
+    tags: [literature]
+    pmid: 24185696
+
+  - name: EXTREME
+    description: Online expectation-maximisation algorithm for motif discovery
+    categories: [motif-discovery]
+    tags: [literature]
+    pmid: 24532725
+
+  - name: Seeder
+    description: Discriminative seeding approach to DNA motif discovery
+    categories: [motif-discovery]
+    tags: [literature]
+    pmid: 18718942
+
+  - name: LASAGNA
+    description: Transcription factor binding site alignment and prediction algorithm
+    categories: [tfbs-prediction]
+    tags: [literature]
+    pmid: 23522376

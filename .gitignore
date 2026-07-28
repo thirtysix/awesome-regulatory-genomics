@@ -5,6 +5,14 @@ __pycache__/
 # Bulky per-work OpenAlex responses; the compact citation_cache.csv is tracked.
 data/cache/openalex/
 
+# Raw upstream dumps for the discovery stages: Bioconductor VIEWS, the Galaxy
+# ToolShed listing and the Europe PMC result sets. ~18 MB, and re-fetchable
+# with `make discover-refresh` / `make discover-lit --refresh`. The compact
+# products derived from them ARE tracked, because the build reads those:
+# registry_map.json, pubyear_cache.json, homepage_check.json.
+data/cache/registries/
+data/cache/literature/
+
 # Never commit credentials; the LLM stage reads DEEPINFRA_API_KEY from the env.
 .env
 *.key

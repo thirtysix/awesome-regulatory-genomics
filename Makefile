@@ -2,7 +2,7 @@ PY ?= python3
 PORT ?= 8000        # override if 8000 is taken: make serve PORT=8420
 PIPELINE := $(PY) pipeline
 
-.PHONY: all harvest select enrich links build render audit curate refresh clean check serve llm bench verify-additions repos repos-revalidate
+.PHONY: all harvest select enrich links build render audit curate refresh clean check test serve llm bench verify-additions repos repos-revalidate discover discover-refresh discover-lit check-links fill-metadata
 
 ## build everything from the existing sweep (no network beyond enrichment)
 all: select enrich repos links build render audit
@@ -40,9 +40,37 @@ repos-revalidate:
 links:
 	$(PIPELINE)/resolve_pubs.py
 
+## check that the tools' own homepages still resolve. Nearly half the catalog
+## has no repository, only a homepage, and academic URLs rot. Graded outcomes:
+## only a 404/410 counts as dead. Cached, so re-runs only recheck stale entries.
+check-links:
+	$(PIPELINE)/check_homepages.py
+
+## fill fields derivable from data already held: publication year from
+## OpenAlex, licence from the resolved repository. Both are marked, neither
+## overwrites a stated value.
+fill-metadata:
+	$(PIPELINE)/fill_metadata.py
+
 ## measure recall against curation/benchmark.yaml
 audit:
 	$(PIPELINE)/audit_coverage.py --probe
+
+## find in-domain tools bio.tools does not index, from registries that carry
+## their own domain taxonomy. Writes docs/registry-discovery.md for review;
+## nothing is added to the catalog automatically. Cached, so re-runs are
+## offline; use `make discover-refresh` to re-fetch.
+discover:
+	$(PIPELINE)/discover_registries.py
+
+discover-refresh:
+	$(PIPELINE)/discover_registries.py --refresh
+
+## find tools announced in the literature but indexed nowhere, using the
+## "NAME: what it does" title convention of tool papers. Writes
+## docs/literature-discovery.md for review. Every row carries a DOI and a year.
+discover-lit:
+	$(PIPELINE)/discover_literature.py
 
 ## OPTIONAL: LLM proposals for categories, descriptions and the reject pile.
 ## Needs DEEPINFRA_API_KEY. Writes curation/llm_proposals.yaml for review;
@@ -69,6 +97,11 @@ curate: build render
 ## serve the site locally (make serve PORT=8420 if 8000 is in use)
 serve:
 	$(PY) -m http.server $(PORT) --directory docs
+
+## unit-test the rule functions that decide scope, repository links and
+## citations. Offline and fast; run it before touching pipeline/config.py.
+test:
+	$(PY) -m pytest tests/ -q
 
 check:
 	$(PY) -c "import json,sys; c=json.load(open('data/catalog.json')); \

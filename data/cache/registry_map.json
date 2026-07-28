@@ -1,0 +1,521 @@
+{
+ "ATACseqTFEA": {
+  "bioconductor": "https://bioconductor.org/packages/ATACseqTFEA/"
+ },
+ "CexoR": {
+  "bioconductor": "https://bioconductor.org/packages/CexoR/"
+ },
+ "Cicero": {
+  "bioconductor": "https://bioconductor.org/packages/cicero/"
+ },
+ "DEScan2": {
+  "bioconductor": "https://bioconductor.org/packages/DEScan2/"
+ },
+ "DegCre": {
+  "bioconductor": "https://bioconductor.org/packages/DegCre/"
+ },
+ "GARFIELD": {
+  "bioconductor": "https://bioconductor.org/packages/garfield/"
+ },
+ "LOLA": {
+  "bioconductor": "https://bioconductor.org/packages/LOLA/"
+ },
+ "LedPred": {
+  "bioconductor": "https://bioconductor.org/packages/LedPred/"
+ },
+ "MPRAnalyze": {
+  "bioconductor": "https://bioconductor.org/packages/MPRAnalyze/"
+ },
+ "MatrixRider": {
+  "bioconductor": "https://bioconductor.org/packages/MatrixRider/"
+ },
+ "Motif2Site": {
+  "bioconductor": "https://bioconductor.org/packages/Motif2Site/"
+ },
+ "MotifDb": {
+  "bioconductor": "https://bioconductor.org/packages/MotifDb/"
+ },
+ "RTN": {
+  "bioconductor": "https://bioconductor.org/packages/RTN/"
+ },
+ "SEMPLR": {
+  "bioconductor": "https://bioconductor.org/packages/SEMPLR/"
+ },
+ "SingleMoleculeFootprinting": {
+  "bioconductor": "https://bioconductor.org/packages/SingleMoleculeFootprinting/"
+ },
+ "TFARM": {
+  "bioconductor": "https://bioconductor.org/packages/TFARM/"
+ },
+ "VIPER": {
+  "bioconductor": "https://bioconductor.org/packages/viper/"
+ },
+ "VplotR": {
+  "bioconductor": "https://bioconductor.org/packages/VplotR/"
+ },
+ "annotatr": {
+  "bioconductor": "https://bioconductor.org/packages/annotatr/"
+ },
+ "atacseqqc": {
+  "bioconductor": "https://bioconductor.org/packages/ATACseqQC/"
+ },
+ "atsnp": {
+  "bioconductor": "https://bioconductor.org/packages/atSNP/"
+ },
+ "aucell": {
+  "bioconductor": "https://bioconductor.org/packages/AUCell/"
+ },
+ "baalchip": {
+  "bioconductor": "https://bioconductor.org/packages/BaalChIP/"
+ },
+ "basicstarrseq": {
+  "bioconductor": "https://bioconductor.org/packages/BasicSTARRseq/"
+ },
+ "bcrank": {
+  "bioconductor": "https://bioconductor.org/packages/BCRANK/"
+ },
+ "bifet": {
+  "bioconductor": "https://bioconductor.org/packages/BiFET/"
+ },
+ "bindingsitefinder": {
+  "bioconductor": "https://bioconductor.org/packages/BindingSiteFinder/"
+ },
+ "bionero": {
+  "bioconductor": "https://bioconductor.org/packages/BioNERO/"
+ },
+ "biotip": {
+  "bioconductor": "https://bioconductor.org/packages/BioTIP/"
+ },
+ "cagefightr": {
+  "bioconductor": "https://bioconductor.org/packages/CAGEfightR/"
+ },
+ "cager": {
+  "bioconductor": "https://bioconductor.org/packages/CAGEr/"
+ },
+ "causalr": {
+  "bioconductor": "https://bioconductor.org/packages/CausalR/"
+ },
+ "cbnplot": {
+  "bioconductor": "https://bioconductor.org/packages/CBNplot/"
+ },
+ "cetf": {
+  "bioconductor": "https://bioconductor.org/packages/CeTF/"
+ },
+ "chipanalyser": {
+  "bioconductor": "https://bioconductor.org/packages/ChIPanalyser/"
+ },
+ "chipcomp": {
+  "bioconductor": "https://bioconductor.org/packages/ChIPComp/"
+ },
+ "chipenrich": {
+  "bioconductor": "https://bioconductor.org/packages/chipenrich/"
+ },
+ "chipexoqual": {
+  "bioconductor": "https://bioconductor.org/packages/ChIPexoQual/"
+ },
+ "chippeakanno": {
+  "bioconductor": "https://bioconductor.org/packages/ChIPpeakAnno/"
+ },
+ "chipqc": {
+  "bioconductor": "https://bioconductor.org/packages/ChIPQC/"
+ },
+ "chipseeker": {
+  "bioconductor": "https://bioconductor.org/packages/ChIPseeker/"
+ },
+ "chipseeker_R": {
+  "bioconductor": "https://bioconductor.org/packages/ChIPseeker/"
+ },
+ "chipseq": {
+  "bioconductor": "https://bioconductor.org/packages/chipseq/"
+ },
+ "chipseqr": {
+  "bioconductor": "https://bioconductor.org/packages/ChIPseqR/"
+ },
+ "chipsim": {
+  "bioconductor": "https://bioconductor.org/packages/ChIPsim/"
+ },
+ "chipxpress": {
+  "bioconductor": "https://bioconductor.org/packages/ChIPXpress/"
+ },
+ "chromscape": {
+  "bioconductor": "https://bioconductor.org/packages/ChromSCape/"
+ },
+ "chromvar": {
+  "bioconductor": "https://bioconductor.org/packages/chromVAR/"
+ },
+ "cner": {
+  "bioconductor": "https://bioconductor.org/packages/CNEr/"
+ },
+ "cocoa": {
+  "bioconductor": "https://bioconductor.org/packages/COCOA/"
+ },
+ "cogito": {
+  "bioconductor": "https://bioconductor.org/packages/Cogito/"
+ },
+ "compepitools": {
+  "bioconductor": "https://bioconductor.org/packages/compEpiTools/"
+ },
+ "consensusSeekeR": {
+  "bioconductor": "https://bioconductor.org/packages/consensusSeekeR/"
+ },
+ "coverageview": {
+  "bioconductor": "https://bioconductor.org/packages/CoverageView/"
+ },
+ "crupR": {
+  "bioconductor": "https://bioconductor.org/packages/crupR/"
+ },
+ "csar": {
+  "bioconductor": "https://bioconductor.org/packages/CSAR/"
+ },
+ "csaw": {
+  "bioconductor": "https://bioconductor.org/packages/csaw/"
+ },
+ "cssq": {
+  "bioconductor": "https://bioconductor.org/packages/CSSQ/"
+ },
+ "diffbind": {
+  "bioconductor": "https://bioconductor.org/packages/DiffBind/"
+ },
+ "dinoR": {
+  "bioconductor": "https://bioconductor.org/packages/dinoR/"
+ },
+ "edger": {
+  "bioconductor": "https://bioconductor.org/packages/edgeR/"
+ },
+ "elmer": {
+  "bioconductor": "https://bioconductor.org/packages/ELMER/"
+ },
+ "enhancerHomologSearch": {
+  "bioconductor": "https://bioconductor.org/packages/enhancerHomologSearch/"
+ },
+ "epicompare_r": {
+  "bioconductor": "https://bioconductor.org/packages/EpiCompare/"
+ },
+ "epigenomix": {
+  "bioconductor": "https://bioconductor.org/packages/epigenomix/"
+ },
+ "epigraHMM": {
+  "bioconductor": "https://bioconductor.org/packages/epigraHMM/"
+ },
+ "epiregulon": {
+  "bioconductor": "https://bioconductor.org/packages/epiregulon/"
+ },
+ "epiromics": {
+  "bioconductor": "https://bioconductor.org/packages/epiRomics/"
+ },
+ "esatac": {
+  "bioconductor": "https://bioconductor.org/packages/esATAC/"
+ },
+ "extraChIPs": {
+  "bioconductor": "https://bioconductor.org/packages/extraChIPs/"
+ },
+ "fccac": {
+  "bioconductor": "https://bioconductor.org/packages/fCCAC/"
+ },
+ "fcscan": {
+  "bioconductor": "https://bioconductor.org/packages/fcScan/"
+ },
+ "findit2": {
+  "bioconductor": "https://bioconductor.org/packages/FindIT2/"
+ },
+ "flowtime": {
+  "bioconductor": "https://bioconductor.org/packages/flowTime/"
+ },
+ "g4snvhunter": {
+  "bioconductor": "https://bioconductor.org/packages/G4SNVHunter/"
+ },
+ "gcapc": {
+  "bioconductor": "https://bioconductor.org/packages/gcapc/"
+ },
+ "genenetworkbuilder": {
+  "bioconductor": "https://bioconductor.org/packages/GeneNetworkBuilder/"
+ },
+ "genextender": {
+  "bioconductor": "https://bioconductor.org/packages/geneXtendeR/"
+ },
+ "genie3": {
+  "bioconductor": "https://bioconductor.org/packages/GENIE3/"
+ },
+ "genomation": {
+  "bioconductor": "https://bioconductor.org/packages/genomation/"
+ },
+ "gnet2": {
+  "bioconductor": "https://bioconductor.org/packages/GNET2/"
+ },
+ "gothic": {
+  "bioconductor": "https://bioconductor.org/packages/GOTHiC/"
+ },
+ "granie": {
+  "bioconductor": "https://bioconductor.org/packages/GRaNIE/"
+ },
+ "grenits": {
+  "bioconductor": "https://bioconductor.org/packages/GRENITS/"
+ },
+ "greylistchip": {
+  "bioconductor": "https://bioconductor.org/packages/GreyListChIP/"
+ },
+ "heatmaps": {
+  "bioconductor": "https://bioconductor.org/packages/heatmaps/"
+ },
+ "iaseq": {
+  "bioconductor": "https://bioconductor.org/packages/iASeq/"
+ },
+ "icetea": {
+  "bioconductor": "https://bioconductor.org/packages/icetea/"
+ },
+ "ichip": {
+  "bioconductor": "https://bioconductor.org/packages/iChip/"
+ },
+ "idr2d": {
+  "bioconductor": "https://bioconductor.org/packages/idr2d/"
+ },
+ "imotifbreakr": {
+  "bioconductor": "https://bioconductor.org/packages/motifbreakR/"
+ },
+ "intad": {
+  "bioconductor": "https://bioconductor.org/packages/InTAD/"
+ },
+ "iseq": {
+  "bioconductor": "https://bioconductor.org/packages/iSeq/"
+ },
+ "iwtomics": {
+  "bioconductor": "https://bioconductor.org/packages/IWTomics/"
+ },
+ "kboost": {
+  "bioconductor": "https://bioconductor.org/packages/KBoost/"
+ },
+ "les": {
+  "bioconductor": "https://bioconductor.org/packages/les/"
+ },
+ "linnorm": {
+  "bioconductor": "https://bioconductor.org/packages/Linnorm/"
+ },
+ "lpnet": {
+  "bioconductor": "https://bioconductor.org/packages/lpNet/"
+ },
+ "magrene": {
+  "bioconductor": "https://bioconductor.org/packages/magrene/"
+ },
+ "memes": {
+  "bioconductor": "https://bioconductor.org/packages/memes/"
+ },
+ "methodical": {
+  "bioconductor": "https://bioconductor.org/packages/methodical/"
+ },
+ "methreg": {
+  "bioconductor": "https://bioconductor.org/packages/MethReg/"
+ },
+ "methylscaper": {
+  "bioconductor": "https://bioconductor.org/packages/methylscaper/"
+ },
+ "mira_single-cell": {
+  "bioconductor": "https://bioconductor.org/packages/MIRA/"
+ },
+ "mirage": {
+  "bioconductor": "https://bioconductor.org/packages/MiRaGE/"
+ },
+ "mmdiff2": {
+  "bioconductor": "https://bioconductor.org/packages/MMDiff2/"
+ },
+ "monaLisa": {
+  "bioconductor": "https://bioconductor.org/packages/monaLisa/"
+ },
+ "moonlight2r": {
+  "bioconductor": "https://bioconductor.org/packages/Moonlight2R/"
+ },
+ "moonlightr": {
+  "bioconductor": "https://bioconductor.org/packages/MoonlightR/"
+ },
+ "mosaics": {
+  "bioconductor": "https://bioconductor.org/packages/mosaics/"
+ },
+ "motifTestR": {
+  "bioconductor": "https://bioconductor.org/packages/motifTestR/"
+ },
+ "motifcounter": {
+  "bioconductor": "https://bioconductor.org/packages/motifcounter/"
+ },
+ "motifmatchr": {
+  "bioconductor": "https://bioconductor.org/packages/motifmatchr/"
+ },
+ "motifpeeker": {
+  "bioconductor": "https://bioconductor.org/packages/MotifPeeker/"
+ },
+ "mpra": {
+  "bioconductor": "https://bioconductor.org/packages/mpra/"
+ },
+ "nadfinder": {
+  "bioconductor": "https://bioconductor.org/packages/NADfinder/"
+ },
+ "netactivity": {
+  "bioconductor": "https://bioconductor.org/packages/NetActivity/"
+ },
+ "netzoor": {
+  "bioconductor": "https://bioconductor.org/packages/netZooR/"
+ },
+ "normr": {
+  "bioconductor": "https://bioconductor.org/packages/normr/"
+ },
+ "ntw": {
+  "bioconductor": "https://bioconductor.org/packages/NTW/"
+ },
+ "nuCpos": {
+  "bioconductor": "https://bioconductor.org/packages/nuCpos/"
+ },
+ "nucleR": {
+  "bioconductor": "https://bioconductor.org/packages/nucleR/"
+ },
+ "nucleosim": {
+  "bioconductor": "https://bioconductor.org/packages/nucleoSim/"
+ },
+ "nupop": {
+  "bioconductor": "https://bioconductor.org/packages/NuPoP/"
+ },
+ "pageRank": {
+  "bioconductor": "https://bioconductor.org/packages/pageRank/"
+ },
+ "periodicdna": {
+  "bioconductor": "https://bioconductor.org/packages/periodicDNA/"
+ },
+ "planttfhunter": {
+  "bioconductor": "https://bioconductor.org/packages/planttfhunter/"
+ },
+ "precisetad": {
+  "bioconductor": "https://bioconductor.org/packages/preciseTAD/"
+ },
+ "primirtss": {
+  "bioconductor": "https://bioconductor.org/packages/primirTSS/"
+ },
+ "proActiv": {
+  "bioconductor": "https://bioconductor.org/packages/proActiv/"
+ },
+ "profileplyr": {
+  "bioconductor": "https://bioconductor.org/packages/profileplyr/"
+ },
+ "profilescoredist": {
+  "bioconductor": "https://bioconductor.org/packages/profileScoreDist/"
+ },
+ "progeny": {
+  "bioconductor": "https://bioconductor.org/packages/progeny/"
+ },
+ "pwmenrich": {
+  "bioconductor": "https://bioconductor.org/packages/PWMEnrich/"
+ },
+ "qsea": {
+  "bioconductor": "https://bioconductor.org/packages/qsea/"
+ },
+ "r3cpet": {
+  "bioconductor": "https://bioconductor.org/packages/R3CPET/"
+ },
+ "rcistarget": {
+  "bioconductor": "https://bioconductor.org/packages/RcisTarget/"
+ },
+ "regenrich": {
+  "bioconductor": "https://bioconductor.org/packages/RegEnrich/"
+ },
+ "regutools": {
+  "bioconductor": "https://bioconductor.org/packages/regutools/"
+ },
+ "river": {
+  "bioconductor": "https://bioconductor.org/packages/RIVER/"
+ },
+ "rjmcmcnucleosomes": {
+  "bioconductor": "https://bioconductor.org/packages/RJMCMCNucleosomes/"
+ },
+ "rmspc": {
+  "bioconductor": "https://bioconductor.org/packages/rmspc/"
+ },
+ "rtnduals": {
+  "bioconductor": "https://bioconductor.org/packages/RTNduals/"
+ },
+ "rtnsurvival": {
+  "bioconductor": "https://bioconductor.org/packages/RTNsurvival/"
+ },
+ "rtrm": {
+  "bioconductor": "https://bioconductor.org/packages/rTRM/"
+ },
+ "rtrmui": {
+  "bioconductor": "https://bioconductor.org/packages/rTRMui/"
+ },
+ "sarks": {
+  "bioconductor": "https://bioconductor.org/packages/sarks/"
+ },
+ "segmenter": {
+  "bioconductor": "https://bioconductor.org/packages/segmenter/"
+ },
+ "selex": {
+  "bioconductor": "https://bioconductor.org/packages/SELEX/"
+ },
+ "seqlogo": {
+  "bioconductor": "https://bioconductor.org/packages/seqLogo/"
+ },
+ "seqpattern": {
+  "bioconductor": "https://bioconductor.org/packages/seqPattern/"
+ },
+ "seqsetvis": {
+  "bioconductor": "https://bioconductor.org/packages/seqsetvis/"
+ },
+ "sevenc": {
+  "bioconductor": "https://bioconductor.org/packages/sevenC/"
+ },
+ "similarpeak": {
+  "bioconductor": "https://bioconductor.org/packages/similaRpeak/"
+ },
+ "snphood": {
+  "bioconductor": "https://bioconductor.org/packages/SNPhood/"
+ },
+ "soggi": {
+  "bioconductor": "https://bioconductor.org/packages/soGGi/"
+ },
+ "spatzie": {
+  "bioconductor": "https://bioconductor.org/packages/spatzie/"
+ },
+ "sponge": {
+  "bioconductor": "https://bioconductor.org/packages/SPONGE/"
+ },
+ "systempiper": {
+  "bioconductor": "https://bioconductor.org/packages/systemPipeR/"
+ },
+ "target": {
+  "bioconductor": "https://bioconductor.org/packages/target/"
+ },
+ "tcseq": {
+  "bioconductor": "https://bioconductor.org/packages/TCseq/"
+ },
+ "tenet-network": {
+  "bioconductor": "https://bioconductor.org/packages/TENET/"
+ },
+ "ternarynet": {
+  "bioconductor": "https://bioconductor.org/packages/ternarynet/"
+ },
+ "tfbstools": {
+  "bioconductor": "https://bioconductor.org/packages/TFBSTools/"
+ },
+ "tfea.chip": {
+  "bioconductor": "https://bioconductor.org/packages/TFEA.ChIP/"
+ },
+ "tfhaz": {
+  "bioconductor": "https://bioconductor.org/packages/TFHAZ/"
+ },
+ "tigre": {
+  "bioconductor": "https://bioconductor.org/packages/tigre/"
+ },
+ "to_ast": {
+  "bioconductor": "https://bioconductor.org/packages/TOAST/"
+ },
+ "transcriptr": {
+  "bioconductor": "https://bioconductor.org/packages/transcriptR/"
+ },
+ "tress": {
+  "bioconductor": "https://bioconductor.org/packages/TRESS/"
+ },
+ "vtpnet": {
+  "bioconductor": "https://bioconductor.org/packages/vtpnet/"
+ },
+ "vulcan": {
+  "bioconductor": "https://bioconductor.org/packages/vulcan/"
+ },
+ "xcore": {
+  "bioconductor": "https://bioconductor.org/packages/xcore/"
+ }
+}
