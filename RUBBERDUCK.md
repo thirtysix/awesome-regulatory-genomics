@@ -22,9 +22,13 @@ trust, and it rebuilds itself.
 
 ## The output
 
-A catalog of about 1,800 tools, published two ways: a readable list for people
-browsing, and a searchable table for people looking for something specific. Plus
-a set of honesty documents that record what the catalog is unsure about.
+A catalog of a couple of thousand tools, published two ways: a readable list
+for people browsing, and a searchable table for people looking for something
+specific. Alongside each tool it records what can be checked rather than only
+what was claimed: where the source lives, whether the link still resolves,
+whether you can install it, when it was last touched, and how often its paper is
+cited. Plus a set of honesty documents recording what the catalog is unsure
+about.
 
 ## The objective
 
@@ -36,6 +40,13 @@ Not "as many tools as possible". Two things matter more:
    one, so it misleads silently. Everything inferred is marked as inferred.
 
 ## The approach, and why it looks like this
+
+**One registry is not enough.** The main source misses a large part of the
+field, so the same rules are also run over the places software actually gets
+published: the R and Python package archives, the workflow-tool repositories,
+and the literature itself, where tools are announced in papers titled "NAME:
+what it does". Anything found that way is proposed for review rather than added
+automatically.
 
 **Search widely, then filter hard.** The registry's search is fuzzy text matching
 rather than a proper lookup, so asking precisely gets you nothing. The pipeline

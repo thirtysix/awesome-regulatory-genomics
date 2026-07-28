@@ -3,85 +3,90 @@
 **Last updated:** 2026-07-28
 **Start with:** `CLAUDE.md` (traps and generated-file rules), then `ROADMAP.md`.
 Memory notes: `[[awesome-regulatory-genomics]]`, `[[biotools-edam-annotations-unreliable]]`,
-`[[verify-inferred-data-not-just-resolvable]]`.
+`[[verify-inferred-data-not-just-resolvable]]`, `[[upstream-fields-can-be-populated-and-wrong]]`.
 
 ## Current state
 
 - **Public** at https://github.com/thirtysix/awesome-regulatory-genomics
 - **Site live** at https://thirtysix.github.io/awesome-regulatory-genomics/
-- Local path: `~/Dropbox/manuscripts/0.datasets_visualizations/002.AI_projects/awesome-regulatory-genomics`
-- Commit `d9a5a8c` is pushed (tests, discovery, install column, liveness).
-  **The scope widening and the README install-route work after it are NOT
-  committed.**
+- Local: `~/Dropbox/manuscripts/0.datasets_visualizations/002.AI_projects/awesome-regulatory-genomics`
+- **Working tree clean, `main` level with `origin/main` at `d8c7266`.** Everything
+  from this session is committed, pushed, and both CI workflows are green.
 - Credentials: none in the repo. `DEEPINFRA_API_KEY` and `CONTACT_EMAIL` are
   optional, documented in `.env.example`, and `.env` is gitignored
 
 ## Headline results
 
-**1,951 tools**, up from 1,800 at the start of the session.
-Benchmark recall **153/221 (69%)** against a benchmark grown from 89 to 221
-entries; the original scored 100% and had stopped measuring.
+**1,951 tools** across **20 categories**, up from 1,800 and 15 at the start of
+the session. Benchmark recall **153/221 (69%)** against a benchmark grown from 89
+entries; the original scored 100% and had stopped measuring anything.
 
-**20 categories**, up from 15: DNA methylation (96), 3D genome (72), histone
-modifications (33), molecular QTL (19) and reporter assays (4) were added on
-2026-07-28.
-
-Per-record coverage: 990 with a repository, 1,269 with a site of their own,
-1,800+ with a year, 413 with a package install route, 130 links known dead and
-struck through.
+Per-record evidence: 988 with a source repository, 1,269 with a site of their
+own, 413 installable from a package registry, ~1,800 with a publication year,
+1,861 with a publication, 130 links known dead and struck through.
 
 ## What changed this session
 
-Seven items, all in `ROADMAP.md` with full detail:
+Six commits. Full detail in `ROADMAP.md`; the shape of it:
 
-1. **Unit tests** (`make test`, CI on every push): 70 tests over the rule
-   functions, offline, sub-second.
-2. **Registry discovery** (`make discover`): Bioconductor + Galaxy ToolShed
-   through the same filter. 46 tools promoted.
-3. **Literature discovery** (`make discover-lit`): the "NAME: what it does"
-   title convention over Europe PMC. 47 tools promoted.
-4. **Harder benchmark**: 89 to 168 entries, recall 100% to 82%.
-5. **Install column**: package availability surfaced, 219 to 278 tools.
-6. **Homepage liveness** (`make check-links`): all 1,837 homepages graded.
-7. **Field filling** (`make fill-metadata`): year and licence.
-
-**Three real bugs fell out of this work**, all the same shape: something
-matched on a name and was believed.
-
-- `norm_name()` stripped `+`, merging the SCENIC+ seed into the unrelated SCENIC.
-- `from_seed()` hard-coded `citations: None`, so FIMO showed blank instead of 4,992.
-- `probe_biotools()` reported name matches as fact; three of eight were
-  different tools (`Thor`, `inps`, `maestro`).
+1. **Tests and CI.** 120 offline tests over the rule functions, run on every push
+   plus a rebuild-and-check-for-drift gate.
+2. **Discovery beyond bio.tools.** Bioconductor + Galaxy ToolShed (`make
+   discover`) and Europe PMC via the "NAME: what it does" tool-paper title
+   convention (`make discover-lit`). 93 tools promoted by hand.
+3. **Scope widened** to DNA methylation, 3D genome, histone marks, reporter
+   assays and molecular QTL, with a third benchmark tier written first.
+4. **Evidence per record.** Homepage liveness (`make check-links`), install
+   routes read off each repository README (`make installs`), publication year and
+   licence backfill (`make fill-metadata`).
+5. **The site.** Full bleed, a statistics panel that follows the current filter,
+   category rack ordered by size, repository link in the header.
 
 ## Gotchas discovered this session
 
-Full list in `CLAUDE.md`. New ones worth not re-deriving:
+Full list in `CLAUDE.md`. The ones most likely to bite again:
 
+- **The pipeline order is select -> enrich -> build.** Changing the selection
+  rules and running `make build` alone silently reuses the previous
+  `enriched.json.gz`, and the change looks like it did nothing.
 - **`build.py` writes `catalog.json` before the TSV.** A row mutation placed
   between the two lands in the TSV and silently not on the site.
-- **The Galaxy ToolShed publishes one repository per wrapper, not per tool.**
-  AlphaGenome arrived five times. Merge by shared homepage, never by name.
-- **bioconda is unusable for discovery**: its public index has names without
-  summaries, and the API that carried them now returns 401.
+- **A monorepo is not a tool's repository.** `hgv_pass` inherited Galaxy's 1,818
+  stars and outranked MACS. Dropping the URL is not enough; the stars, activity,
+  licence and language all come from the same blob.
+- **Four bugs this session were the same shape:** something matched on a name and
+  was believed. `norm_name` merging SCENIC+ into SCENIC, `from_seed` never
+  reading the citation cache, `probe_biotools` reporting name hits as fact, and
+  the monorepo link.
+- **Two of the README's own examples of bad EDAM metadata were themselves
+  wrong** (FIMO, MACS). A plausible claim about bad metadata reads as
+  self-evidently true. Query the live record.
+- **Hi-C is a technology, not a field.** In the strong tier it admitted a genome
+  announcement paper that used Hi-C to scaffold an assembly.
 - **A partial link check sorted alphabetically is a biased sample** - every
   `http://` URL sorts first, which is exactly the rottenest hosts.
 
 ## Possible next steps
 
-1. **Commit and push** this session's work. Nothing has been pushed.
-2. `make repos` for the 93 new seeds; only the GitHub-hosted ones have a code link.
-3. `make refresh` to pick up the 5 new `SEED_BIOTOOLS_IDS` (fetch-by-ID only
-   happens during harvest).
-4. Work the 31 benchmark misses down (`docs/coverage.md`), and the 115 + 390
-   remaining discovery candidates.
-5. Decide the Hi-C/TAD and DNA-methylation scope question before promoting more
-   registry candidates; it is what most of the untaken ones are.
-6. Then the deferred curation block: featured entries beyond the current 19,
-   superseded markers, task-oriented entry points.
+None committed; ask the user. In rough order of value:
+
+1. **The deferred curation block.** 19 of 1,951 entries are featured. Expanding
+   that, marking superseded tools, and adding task-oriented entry points is the
+   main thing left between this and being genuinely *better* than bio.tools
+   rather than merely more complete.
+2. **68 benchmark misses** in `docs/coverage.md`, concentrated in the new areas:
+   Juicer, cooler, HiC-Pro, MPRAnalyze, coloc, SuSiE. Absent from bio.tools, so
+   this is `seeds.yaml` work.
+3. **Review queues:** 134 held install routes, ~500 discovery candidates, 235
+   repository near-misses, 147 scope disputes.
+4. `make refresh` to pick up the 5 new `SEED_BIOTOOLS_IDS` (fetch-by-ID only
+   happens during harvest), and `make repos` for the 93 new seeds.
+5. CRISPR screens, the half of scope batch 2 deliberately skipped.
+6. Watch the first automated refresh on 1 August 2026, 04:00 UTC.
 
 ## Outstanding, needs the user
 
-- **Rotate the DeepInfra key** used in the previous session. It never entered
-  the repository but is in that conversation transcript.
+- **Rotate the DeepInfra key** used in an earlier session. It never entered the
+  repository but is in that conversation transcript. Still outstanding.
 - The `jobscout` repo has three commits from a stop-hook sweep that were
   deliberately **not pushed**. Unrelated to this project.
