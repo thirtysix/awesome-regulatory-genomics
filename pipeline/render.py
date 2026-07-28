@@ -341,6 +341,15 @@ tbody tr:hover{background:var(--chip)}
 td.name{font-weight:600;min-width:150px}
 td.desc{color:var(--muted);max-width:520px}
 td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+th.lnk,td.lnk{text-align:center;white-space:nowrap}
+tr.filters th{position:sticky;top:34px;background:var(--bg);padding:4px 6px;cursor:default;
+  text-transform:none;letter-spacing:0;font-weight:400}
+tr.filters input,tr.filters select{width:100%;min-width:58px;box-sizing:border-box;
+  background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:5px;
+  padding:3px 6px;font:inherit;font-size:12px}
+tr.filters input[type=number]{min-width:52px}
+td.lnk a{font-size:12.5px}
+.no{color:var(--muted);opacity:.45}
 .cat{display:inline-block;background:var(--chip);border:1px solid var(--line);border-radius:5px;
   padding:1px 6px;font-size:11.5px;margin:1px 3px 1px 0;color:var(--muted);white-space:nowrap}
 .links{white-space:nowrap;font-size:13px}
@@ -378,15 +387,30 @@ footer{color:var(--muted);font-size:12.5px;margin-top:22px;line-height:1.7}
   <div class="count" id="count"></div>
   <div class="tablewrap">
     <table>
-      <thead><tr>
+      <thead>
+      <tr>
         <th data-k="name">Tool</th>
         <th data-k="categories">Categories</th>
         <th class="desc" data-k="description">Description</th>
+        <th data-k="has_code" class="lnk">Code</th>
+        <th data-k="has_biotools" class="lnk">bio.tools</th>
+        <th data-k="has_paper" class="lnk">Paper</th>
         <th data-k="repo_stars" class="num">Stars</th>
         <th data-k="citations" class="num">Cites</th>
         <th data-k="year" class="num">Year</th>
-        <th>Links</th>
-      </tr></thead>
+      </tr>
+      <tr class="filters">
+        <th><input data-f="name" type="search" placeholder="filter…"></th>
+        <th><input data-f="categories" type="search" placeholder="filter…"></th>
+        <th class="desc"><input data-f="description" type="search" placeholder="filter…"></th>
+        <th><select data-f="has_code"><option value="">any</option><option value="1">has</option><option value="0">none</option></select></th>
+        <th><select data-f="has_biotools"><option value="">any</option><option value="1">has</option><option value="0">none</option></select></th>
+        <th><select data-f="has_paper"><option value="">any</option><option value="1">paper</option><option value="2">preprint</option><option value="0">none</option></select></th>
+        <th><input data-f="repo_stars" type="number" min="0" placeholder="min"></th>
+        <th><input data-f="citations" type="number" min="0" placeholder="min"></th>
+        <th><input data-f="year" type="number" min="1980" placeholder="min"></th>
+      </tr>
+      </thead>
       <tbody id="rows"></tbody>
     </table>
   </div>
@@ -416,7 +440,7 @@ themeBtn.onclick = () => {
 };
 
 const $ = id => document.getElementById(id);
-const state = { q:'', cats:new Set(), type:'', lang:'', activity:'', sort:'citations', dir:-1 };
+const state = { q:'', cats:new Set(), type:'', lang:'', activity:'', col:{}, sort:'citations', dir:-1 };
 
 const params = new URLSearchParams(location.search);
 if (params.get('category')) state.cats.add(params.get('category'));
@@ -448,6 +472,15 @@ CATS.forEach(([key,label]) => {
   chipBox.append(b);
 });
 
+// Presence flags, computed once. Sorting a column of links is only meaningful
+// as "which rows have one", so each link column sorts on 0/1 (paper uses 2 for
+// a peer-reviewed link and 1 for a preprint, so sorting separates them).
+TOOLS.forEach(t => {
+  t.has_code = t.repo_url ? 1 : 0;
+  t.has_biotools = t.biotools_url ? 1 : 0;
+  t.has_paper = !t.publication ? 0 : (t.preprint ? 1 : 2);
+});
+
 const YEAR_MS = 365.25*24*3600*1000;
 const matches = t => {
   if (state.cats.size && !t.categories.some(c => state.cats.has(c))) return false;
@@ -459,6 +492,22 @@ const matches = t => {
     if (state.activity === 'active' && !(age !== null && age <= 2 && !t.repo_archived)) return false;
     if (state.activity === 'stale' && !(age !== null && age >= 5)) return false;
     if (state.activity === 'archived' && !t.repo_archived) return false;
+  }
+  for (const [k,v] of Object.entries(state.col)) {
+    if (v === '' || v === undefined) continue;
+    if (k === 'name' || k === 'description') {
+      if (!String(t[k]||'').toLowerCase().includes(v)) return false;
+    } else if (k === 'categories') {
+      const txt = t.categories.map(c => (catLabel[c]||c)).join(' ').toLowerCase();
+      if (!txt.includes(v)) return false;
+    } else if (k === 'has_code' || k === 'has_biotools') {
+      if (t[k] !== Number(v)) return false;
+    } else if (k === 'has_paper') {
+      if (t.has_paper !== Number(v)) return false;
+    } else {                       // numeric minimums
+      const n = k === 'year' ? Number(t.year) : Number(t[k]);
+      if (!Number.isFinite(n) || n < Number(v)) return false;
+    }
   }
   if (state.q) {
     const hay = (t.name + ' ' + t.description + ' ' + t.categories.join(' ') + ' ' +
@@ -488,13 +537,16 @@ function render(){
     (state.cats.size ? ' · ' + [...state.cats].map(c=>catLabel[c]).join(', ') : '');
   $('rows').innerHTML = rows.map(t => {
     const href = t.homepage || t.repo_url || t.biotools_url;
-    const links = [];
-    if (t.repo_url) links.push('<a href="'+esc(t.repo_url)+'">code</a>');
-    if (t.biotools_url) links.push('<a href="'+esc(t.biotools_url)+'">bio.tools</a>');
+    const dash = '<span class="no">-</span>';
+    const codeCell = t.repo_url ? '<a href="'+esc(t.repo_url)+'">code</a>' : dash;
+    const btCell = t.biotools_url ? '<a href="'+esc(t.biotools_url)+'">bio.tools</a>' : dash;
+    let paperCell = dash;
     if (t.publication) {
       const p = t.publication;
-      if (p.startsWith('pmid:')) links.push('<a href="https://pubmed.ncbi.nlm.nih.gov/'+esc(p.slice(5))+'/">paper</a>');
-      else if (p.startsWith('doi:')) links.push('<a href="https://doi.org/'+esc(p.slice(4))+'">'+(t.preprint?'preprint':'paper')+'</a>');
+      if (p.startsWith('pmid:'))
+        paperCell = '<a href="https://pubmed.ncbi.nlm.nih.gov/'+esc(p.slice(5))+'/">paper</a>';
+      else if (p.startsWith('doi:'))
+        paperCell = '<a href="https://doi.org/'+esc(p.slice(4))+'">'+(t.preprint?'preprint':'paper')+'</a>';
     }
     const cats = t.categories.map(c=>'<span class="cat">'+esc(catLabel[c]||c)+'</span>').join('') +
       (t.source === 'curated' ? '<span class="cat seed">curated</span>' : '');
@@ -502,12 +554,32 @@ function render(){
       (t.repo_archived ? '<br><span class="arch">archived</span>' : '') + '</td>' +
       '<td>' + cats + '</td>' +
       '<td class="desc">' + esc(t.description) + '</td>' +
+      '<td class="lnk">' + codeCell + '</td>' +
+      '<td class="lnk">' + btCell + '</td>' +
+      '<td class="lnk">' + paperCell + '</td>' +
       '<td class="num">' + (t.repo_stars ?? '') + '</td>' +
       '<td class="num">' + (t.citations ? t.citations.toLocaleString() : '') + '</td>' +
-      '<td class="num">' + esc(t.year) + '</td>' +
-      '<td class="links">' + links.join(' · ') + '</td></tr>';
+      '<td class="num">' + esc(t.year) + '</td></tr>';
   }).join('');
 }
+
+document.querySelectorAll('[data-f]').forEach(el => {
+  const apply = () => {
+    const v = el.value.trim();
+    if (v === '') delete state.col[el.dataset.f];
+    else state.col[el.dataset.f] = el.type === 'search' ? v.toLowerCase() : v;
+    render();
+  };
+  // The debounce timer is PER ELEMENT. A single shared timer meant editing one
+  // filter then another quickly cancelled the first one's pending update, so
+  // clearing a box left its filter silently applied.
+  let timer;
+  el.addEventListener(el.tagName === 'SELECT' ? 'change' : 'input',
+    () => { clearTimeout(timer); timer = setTimeout(apply, 120); });
+  // The filter row sits inside <thead>; without this, typing in a box would
+  // also trigger the column's sort handler.
+  el.addEventListener('click', e => e.stopPropagation());
+});
 
 document.querySelectorAll('th[data-k]').forEach(th => {
   th.onclick = () => {
