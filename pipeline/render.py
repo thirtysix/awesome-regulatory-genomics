@@ -233,7 +233,10 @@ def render_readme(catalog: dict) -> str:
       "tool's description before it is used: matching on name alone resolves MEME "
       "to a meme generator and MEDUSA to a genome scaffolder that merely shares "
       "the name. Near-misses are listed in "
-      "[`docs/repo-review.md`](docs/repo-review.md) rather than applied.")
+      "[`docs/repo-review.md`](docs/repo-review.md) rather than applied. "
+      "Publication links get the same treatment in "
+      "[`docs/link-check.md`](docs/link-check.md), which records every preprint "
+      "upgraded to its published version and every DOI that does not resolve.")
     A("")
     origins = meta.get("repo_by_origin") or {}
     A("**If you maintain a tool listed here and its link is wrong, please say so.** "
@@ -344,7 +347,7 @@ main{max-width:1180px;margin:0 auto;padding:18px 20px 60px}
 .chip .n{opacity:.65;margin-left:5px;font-variant-numeric:tabular-nums}
 .count{color:var(--muted);font-size:13px;margin:0 0 10px}
 .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
-table{border-collapse:collapse;width:100%;min-width:820px;font-size:14px}
+table{border-collapse:collapse;width:100%;min-width:1080px;font-size:14px}
 th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
 th{position:sticky;top:0;background:var(--bg);cursor:pointer;white-space:nowrap;
    font-weight:600;font-size:12.5px;letter-spacing:.02em;text-transform:uppercase;color:var(--muted)}

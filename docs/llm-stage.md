@@ -23,7 +23,7 @@ of something that reads the sentence.
 | --- | --- |
 | `categorise` | Categories come from EDAM lookups plus ~50 regex patterns. That handles the clear cases and degrades at the margins: a record described as "an integrated platform for ChIP-Seq data interpretation" gets whatever pattern happens to fire, and some land uncategorised. |
 | `describe` | bio.tools descriptions are wildly inconsistent: some are one clean sentence, many open with "XYZ is a tool that…", some run to a paragraph with embedded citations. `first_sentence()` is a blunt instrument. |
-| `adjudicate` | Around 1,700 records are rejected as out of scope. The boundary has been spot-checked, not read. This re-reads every rejection and flags likely false negatives. |
+| `adjudicate` | Roughly 1,500 records are rejected as out of scope. The boundary has been spot-checked, not read. This re-reads every rejection and flags likely false negatives. |
 
 ## The three properties that are preserved
 
@@ -92,7 +92,13 @@ the full run bore that out: `tfbs-prediction` fell from 750 tools to 295
 (the patterns were firing on any passing mention of TF binding) while
 `peak-annotation` rose from 23 to 111.
 
-### What the full run produced
+### What the first full run produced (2026-07-25)
+
+A record of one run, not of current state. The selection rules were tightened
+several times afterwards, so a rerun today reports different figures: the
+adjudication pass now flags 22 records rather than 224, because the rule fixes
+absorbed the rest. The point of keeping this is the shape of the result, not
+the counts.
 
 One pass over the catalog and the reject pile, ~5,400 calls, **$0.175 total**,
 zero escalations and zero unusable responses:
@@ -158,7 +164,7 @@ think, and thinking models leak non-JSON when allowed to.
 
 ## Cost
 
-At roughly 400 input and 120 output tokens per record over ~1,700 records, a
+At roughly 400 input and 120 output tokens per record over ~1,800 records, a
 full categorisation pass costs on the order of **$0.11 with the bulk model** and
 about **$0.38 with the quality tier**. Cost is not the deciding factor at this
 volume; accuracy on the enum is. Run `make bench` and pick on `gold_F1` and

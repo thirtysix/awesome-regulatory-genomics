@@ -459,7 +459,14 @@ def main() -> None:
         if not accepted and may_search(tool):
             accepted, best = judge(from_github_search(http, tool, token), best)
 
-        result = accepted or best
+        # Cache misses too. Without this, every record that yields no candidate
+        # is retried on every run, which for the monthly refresh means fetching
+        # roughly 800 third-party homepages again each time to learn nothing
+        # new. `--refresh` reconsiders them.
+        result = accepted or best or {
+            "slug": "", "source": "", "reason": "no candidate from any source",
+            "accepted": False, "stars": None, "repo_desc": "",
+            "tool_desc": (tool.get("description") or "")[:140], "name": name}
         time.sleep(0.3)          # be gentle with the registries
         with lock:
             done[0] += 1
@@ -485,7 +492,9 @@ def main() -> None:
 
     accepted = {k: v for k, v in found.items() if v["accepted"]}
     rejected = {k: v for k, v in found.items() if not v["accepted"]}
-    print(f"\naccepted {len(accepted)}, held for review {len(rejected)}")
+    candidates = {k: v for k, v in rejected.items() if v.get("slug")}
+    print(f"\naccepted {len(accepted)}, held for review {len(candidates)}, "
+          f"no candidate {len(rejected) - len(candidates)}")
 
     out = ["# Repository resolution review", "",
            f"Generated {date.today().isoformat()} by `make repos`.", "",
@@ -499,12 +508,17 @@ def main() -> None:
            "error as a wrong DOI, so a candidate is accepted only on an exact name "
            "match or real vocabulary overlap between repository and tool.", "",
            f"- **{len(accepted)} accepted** and applied to the catalog.",
-           f"- **{len(rejected)} held for review** below; none of these are applied.", ""]
-    if rejected:
+           f"- **{len(candidates)} held for review** below; none of these are applied.",
+           f"- **{len(rejected) - len(candidates)} records yielded no candidate at all** "
+           "from any source. These are cached as such so the monthly refresh does "
+           "not re-fetch the same third-party homepages to learn nothing new; "
+           "`--refresh` reconsiders them.", ""]
+    if candidates:
         out += ["## Held for review", "",
                 "| Tool | Candidate | Source | Why it was not accepted | Repo description |",
                 "| --- | --- | --- | --- | --- |"]
-        for v in sorted(rejected.values(), key=lambda x: x["name"].lower()):
+        for v in sorted((r for r in rejected.values() if r.get("slug")),
+                        key=lambda x: x["name"].lower()):
             out.append(f"| {cell(v['name'])} | [{cell(v['slug'])}](https://github.com/{v['slug']}) "
                        f"| {cell(v['source'])} | {cell(v['reason'], 60)} | {cell(v['repo_desc'], 80)} |")
         out.append("")
