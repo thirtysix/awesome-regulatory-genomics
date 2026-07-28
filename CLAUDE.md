@@ -56,7 +56,7 @@ the sweep's stored `forced` list makes *additions* fail until a re-harvest;
 unioning the two makes *removals* fail. Both happened. config is the single
 source of truth in both directions.
 
-**A matching name is necessary but never sufficient** — for repositories and for
+**A matching name is necessary but never sufficient**, for repositories and for
 publications alike. Tool names in this field are short and collide across all of
 software: `Match` resolved to a text-matching library, `SEA` to an RPC
 framework, `MEDUSA` to a genome scaffolder that shares the name. Substring

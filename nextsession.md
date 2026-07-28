@@ -62,7 +62,7 @@ Full list with detail in `CLAUDE.md`. The ones most likely to bite again:
 
 None committed; ask the user. In rough order of value:
 
-1. Unit tests for `classify()`, `validate()`, `primary_identifier()` — every bug
+1. Unit tests for `classify()`, `validate()`, `primary_identifier()`. Every bug
    this project has had lived in those three functions and none are tested.
 2. Further `make repos` runs for the ~940 records never reached by search.
 3. Human review of `docs/repo-review.md` (235) and `docs/addition-review.md` (147).
