@@ -1,0 +1,36 @@
+name: Wrong categorisation, description or scope
+description: A tool is in the wrong category, described wrongly, or should not be listed
+title: "entry: <tool name>"
+labels: ["catalog-entry"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Categories and one-line descriptions are generated and then corrected by
+        hand, so mistakes are expected rather than surprising. Scope decisions
+        are documented in [`docs/addition-review.md`](../blob/main/docs/addition-review.md)
+        and the boundary rules live in `pipeline/config.py`.
+  - type: input
+    id: tool
+    attributes:
+      label: Tool name
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is wrong
+      options:
+        - Wrong category
+        - Missing category
+        - Description is inaccurate
+        - Should not be in this catalog at all
+        - Missing tool that should be listed
+        - Wrong publication link
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: Details
+      description: For a missing tool, a link is enough

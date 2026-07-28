@@ -7,6 +7,23 @@ Corrections and additions are welcome. Two rules keep this maintainable:
    on the next build.
 2. **Edit the curation files instead**, then run `make curate`.
 
+## If you maintain a tool listed here
+
+Repository links come from three places, and only the last is a guess:
+
+1. recorded in the tool's [bio.tools](https://bio.tools) entry
+2. read from a bioconda recipe, Bioconductor, CRAN or PyPI metadata
+3. **inferred** by matching against the tool's homepage or a GitHub search,
+   then validated against the description
+
+The third kind is marked with a dotted underline on the catalog site and carries
+a report button that opens a pre-filled issue. Those are the links most likely to
+be wrong, and a correction takes one line in `curation/overlay.yaml`.
+
+Correcting the entry at bio.tools instead fixes it here on the next monthly
+refresh, and for everyone else consuming that registry, which is worth more than
+correcting it only here.
+
 ## Adding a tool
 
 First check whether it is already in [bio.tools](https://bio.tools). If it is

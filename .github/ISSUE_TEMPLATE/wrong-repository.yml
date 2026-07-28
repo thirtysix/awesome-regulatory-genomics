@@ -1,0 +1,45 @@
+name: Wrong or missing repository link
+description: The "code" link for a tool points somewhere wrong, or is missing
+title: "repo: <tool name>"
+labels: ["repository-link"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for correcting this. Repository links come from three places and
+        the last is the one that gets things wrong:
+
+        1. recorded directly in the tool's [bio.tools](https://bio.tools) entry
+        2. read from a bioconda recipe, Bioconductor, CRAN or PyPI metadata
+        3. **inferred** by matching the tool against its homepage or a GitHub
+           search, then validated against the description
+
+        Links of the third kind are marked *inferred* in the catalog. If one is
+        wrong, the fix is a one-line entry in `curation/overlay.yaml` and takes
+        a moment, so please do report it.
+
+        If you maintain the tool, saying so is useful: it settles the question
+        immediately rather than by resemblance of descriptions.
+  - type: input
+    id: tool
+    attributes:
+      label: Tool name
+      description: As it appears in the catalog
+    validations:
+      required: true
+  - type: input
+    id: correct
+    attributes:
+      label: Correct repository URL
+      description: Leave blank if there is no public repository, which is also worth telling us
+  - type: input
+    id: current
+    attributes:
+      label: What the catalog currently shows
+      placeholder: https://github.com/wrong/repo
+  - type: checkboxes
+    id: maintainer
+    attributes:
+      label: Relationship to the tool
+      options:
+        - label: I maintain or contribute to this tool

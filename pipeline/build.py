@@ -37,7 +37,7 @@ TEXT_CATEGORY_RE = {k: [re.compile(p, re.I) for p in v] for k, v in TEXT_CATEGOR
 
 COLUMNS = [
     "id", "name", "description", "categories", "primary_category", "tier",
-    "homepage", "repo_url", "repo_stars", "repo_pushed", "repo_archived",
+    "homepage", "repo_url", "repo_origin", "repo_stars", "repo_pushed", "repo_archived",
     "repo_language", "repo_license", "tool_type", "topics", "languages",
     "license", "maturity", "cost", "citations", "citation_note", "year", "publication",
     "publication_is_preprint",
@@ -146,6 +146,20 @@ def load_repo_map() -> dict[str, str]:
     return {k: v["slug"] for k, v in blob.items() if v.get("accepted")}
 
 
+def repo_origin(tool: dict, repomap: dict[str, str]) -> str:
+    """Where a repository link came from, because it changes how much to trust it.
+
+    Links recorded upstream are the tool's own statement. Links *inferred* by
+    matching a homepage or a GitHub search are our guess, validated but still a
+    guess, and those are the ones worth inviting corrections on.
+    """
+    if tool.get("_repo_slug") or tool.get("_repo_other"):
+        return "recorded"          # GitHub, or GitLab/SourceForge/Bitbucket
+    if tool.get("biotoolsID", "") in repomap:
+        return "inferred"
+    return ""
+
+
 def load_publication_map() -> dict[str, str]:
     """preprint DOI -> published DOI, from pipeline/resolve_pubs.py."""
     path = DATA / "cache" / "publication_map.json"
@@ -238,6 +252,7 @@ def from_biotools(tool: dict, cites: dict[str, int], shared: dict[str, int],
         "tier": tool.get("_tier", "core"),
         "homepage": tool.get("homepage") or "",
         "repo_url": repo_url(tool, repomap),
+        "repo_origin": repo_origin(tool, repomap),
         "repo_stars": gh.get("stars") if gh.get("status") == "ok" else None,
         "repo_pushed": gh.get("pushed_at") or "" if gh.get("status") == "ok" else "",
         "repo_archived": bool(gh.get("archived")) if gh.get("status") == "ok" else None,
@@ -280,6 +295,7 @@ def from_seed(seed: dict) -> dict:
         "tier": "seed",
         "homepage": seed.get("url", ""),
         "repo_url": f"https://github.com/{seed['repo']}" if seed.get("repo") else "",
+        "repo_origin": "curated" if seed.get("repo") else "",
         "repo_stars": None, "repo_pushed": "", "repo_archived": None,
         "repo_language": "", "repo_license": "",
         "tool_type": [], "topics": [], "languages": [],
@@ -388,6 +404,8 @@ def main() -> None:
                 row["categories"] = [c for c in CATEGORY_KEYS
                                      if c in set(row["categories"]) | set(extra)]
             row.update(fix)
+        if key in corrections and "repo_url" in corrections[key]:
+            row["repo_origin"] = "curated"
         if key in pub_overrides:
             row["publication"] = pub_overrides[key]
             row["publication_is_preprint"] = (
@@ -408,6 +426,8 @@ def main() -> None:
         "featured": sum(1 for r in rows if r["featured"]),
         "with_repo": sum(1 for r in rows if r["repo_url"]),
         "repo_recovered": sum(1 for r in rows if r["repo_url"] and r["id"] in repomap),
+        "repo_by_origin": {k: sum(1 for r in rows if r["repo_url"] and r["repo_origin"] == k)
+                           for k in ("recorded", "inferred", "curated")},
         "llm_assisted": sum(1 for r in rows if r.get("_llm_applied")),
         "llm_scope_dropped": len(llm_out_of_scope),
     }

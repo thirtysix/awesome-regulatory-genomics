@@ -1,6 +1,6 @@
 # Awesome Regulatory Genomics
 
-[![Tools](https://img.shields.io/badge/tools-1800-blue)](https://thirtysix.github.io/awesome-regulatory-genomics/) [![License: CC BY 4.0](https://img.shields.io/badge/data-CC--BY--4.0-lightgrey)](LICENSE-DATA) [![Updated](https://img.shields.io/badge/updated-2026--07--27-brightgreen)](#)
+[![Tools](https://img.shields.io/badge/tools-1800-blue)](https://thirtysix.github.io/awesome-regulatory-genomics/) [![License: CC BY 4.0](https://img.shields.io/badge/data-CC--BY--4.0-lightgrey)](LICENSE-DATA) [![Updated](https://img.shields.io/badge/updated-2026--07--28-brightgreen)](#)
 
 A catalog of tools, databases and methods for **transcription-factor binding, sequence motifs, regulatory elements, chromatin and gene-regulatory networks**.
 
@@ -266,6 +266,8 @@ Two design decisions are worth stating, because they are where most tool tables 
 
 - **1800 tools**: 1764 harvested from bio.tools, 36 added by hand because bio.tools does not index them.
 - **950 (53%) have a resolvable source repository.** bio.tools rarely records one directly, so repositories are also recovered from Bioconductor, CRAN and PyPI metadata, from bioconda recipes and from links on the tool's own homepage. Every candidate is validated against the tool's description before it is used: matching on name alone resolves MEME to a meme generator and MEDUSA to a genome scaffolder that merely shares the name. Near-misses are listed in [`docs/repo-review.md`](docs/repo-review.md) rather than applied.
+
+**If you maintain a tool listed here and its link is wrong, please say so.** Of the 950 links shown, 873 are recorded upstream, 27 are hand-verified and 50 are *inferred* from a homepage or a GitHub search. Inferred links are marked with a dotted underline on the [catalog site](https://thirtysix.github.io/awesome-regulatory-genomics/) and carry a one-click report button; there are [issue templates](.github/ISSUE_TEMPLATE) for a wrong repository and for a wrong category, description or scope decision. Correcting the entry at [bio.tools](https://bio.tools) instead fixes it here on the next refresh, and for every other consumer of that registry.
 - **19 tools are featured** in the curated sections above; the rest are in the [full catalog](https://thirtysix.github.io/awesome-regulatory-genomics/).
 
 Honest limitations:

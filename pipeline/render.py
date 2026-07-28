@@ -234,6 +234,18 @@ def render_readme(catalog: dict) -> str:
       "to a meme generator and MEDUSA to a genome scaffolder that merely shares "
       "the name. Near-misses are listed in "
       "[`docs/repo-review.md`](docs/repo-review.md) rather than applied.")
+    A("")
+    origins = meta.get("repo_by_origin") or {}
+    A("**If you maintain a tool listed here and its link is wrong, please say so.** "
+      f"Of the {with_repo} links shown, {origins.get('recorded', 0)} are recorded "
+      f"upstream, {origins.get('curated', 0)} are hand-verified and "
+      f"{origins.get('inferred', 0)} are *inferred* from a homepage or a GitHub "
+      "search. Inferred links are marked with a dotted underline on the "
+      f"[catalog site]({SITE}) and carry a one-click report button; there are "
+      "[issue templates](.github/ISSUE_TEMPLATE) for a wrong repository and for a "
+      "wrong category, description or scope decision. Correcting the entry at "
+      "[bio.tools](https://bio.tools) instead fixes it here on the next refresh, "
+      "and for every other consumer of that registry.")
     A(f"- **{featured_n} tools are featured** in the curated sections above; the rest are "
       f"in the [full catalog]({SITE}).")
     A("")
@@ -355,6 +367,9 @@ td.lnk a{font-size:12.5px}
 .links{white-space:nowrap;font-size:13px}
 .arch{color:var(--warn);font-size:11.5px}
 .seed{border-color:var(--accent);color:var(--accent)}
+a.inf{border-bottom:1px dotted currentColor}
+a.rep{color:var(--muted);text-decoration:none;font-size:11px;padding:0 2px}
+a.rep:hover{color:var(--accent);text-decoration:none}
 footer{color:var(--muted);font-size:12.5px;margin-top:22px;line-height:1.7}
 .theme{background:none;border:1px solid var(--line);border-radius:7px;color:var(--fg);
   padding:8px 11px;cursor:pointer;font:inherit;font-size:14px}
@@ -425,7 +440,12 @@ footer{color:var(--muted);font-size:12.5px;margin-top:22px;line-height:1.7}
     link check</a>.
     Entries marked <span class="cat seed">curated</span>
     are absent from bio.tools and were added by hand.
-    <br>Corrections welcome: <a href="https://github.com/__REPO__/issues">open an issue</a>.
+    <br><b>Maintainers:</b> a <span class="inf">dotted</span> code link was <i>inferred</i> from a
+    homepage or a GitHub search rather than recorded upstream, so it is our guess and may be
+    wrong. The <b>?</b> beside it opens a pre-filled issue. Corrections of any kind are welcome:
+    <a href="https://github.com/__REPO__/issues/new/choose">open an issue</a>. Fixing the entry
+    at <a href="https://bio.tools">bio.tools</a> instead fixes it here on the next refresh, and
+    everywhere else that registry is used.
   </footer>
 </main>
 <script src="catalog.js"></script>
@@ -528,6 +548,10 @@ const cmp = (a,b) => {
   return String(x).localeCompare(String(y)) * state.dir;
 };
 
+const REPORT = 'https://github.com/__REPO__/issues/new';
+const reportUrl = t => REPORT + '?template=wrong-repository.yml&title='
+  + encodeURIComponent('repo: ' + t.name);
+
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const catLabel = Object.fromEntries(CATS);
 
@@ -538,7 +562,14 @@ function render(){
   $('rows').innerHTML = rows.map(t => {
     const href = t.homepage || t.repo_url || t.biotools_url;
     const dash = '<span class="no">-</span>';
-    const codeCell = t.repo_url ? '<a href="'+esc(t.repo_url)+'">code</a>' : dash;
+    // An inferred link is our guess, not the tool's own statement. Say so, and
+    // make reporting it one click rather than a hunt for the issue tracker.
+    let codeCell = dash;
+    if (t.repo_url) {
+      const inferred = t.repo_origin === 'inferred';
+      codeCell = '<a href="'+esc(t.repo_url)+'"'+(inferred?' class="inf" title="Inferred from its homepage or a GitHub search, not recorded upstream. Please report if wrong."':'')+'>code</a>';
+      if (inferred) codeCell += ' <a class="rep" title="Report a wrong repository link" href="'+reportUrl(t)+'">?</a>';
+    }
     const btCell = t.biotools_url ? '<a href="'+esc(t.biotools_url)+'">bio.tools</a>' : dash;
     let paperCell = dash;
     if (t.publication) {
@@ -610,6 +641,7 @@ def render_site(catalog: dict) -> None:
         "homepage": t["homepage"], "repo_url": t["repo_url"], "biotools_url": t["biotools_url"],
         "repo_stars": t["repo_stars"], "repo_pushed": t["repo_pushed"],
         "repo_archived": t["repo_archived"], "repo_language": t["repo_language"],
+        "repo_origin": t.get("repo_origin", ""),
         "tool_type": t["tool_type"], "languages": t["languages"],
         "citations": t["citations"], "year": t["year"], "publication": t["publication"],
         "preprint": bool(t.get("publication_is_preprint")),

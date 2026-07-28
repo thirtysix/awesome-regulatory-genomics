@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Add or fix the tool in bio.tools
+    url: https://bio.tools
+    about: >-
+      Most of this catalog is harvested from bio.tools. Correcting an entry
+      there fixes it here on the next refresh, and for everyone else using that
+      registry, which is worth more than correcting it only here.

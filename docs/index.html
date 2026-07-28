@@ -61,6 +61,9 @@ td.lnk a{font-size:12.5px}
 .links{white-space:nowrap;font-size:13px}
 .arch{color:var(--warn);font-size:11.5px}
 .seed{border-color:var(--accent);color:var(--accent)}
+a.inf{border-bottom:1px dotted currentColor}
+a.rep{color:var(--muted);text-decoration:none;font-size:11px;padding:0 2px}
+a.rep:hover{color:var(--accent);text-decoration:none}
 footer{color:var(--muted);font-size:12.5px;margin-top:22px;line-height:1.7}
 .theme{background:none;border:1px solid var(--line);border-radius:7px;color:var(--fg);
   padding:8px 11px;cursor:pointer;font:inherit;font-size:14px}
@@ -72,7 +75,7 @@ footer{color:var(--muted);font-size:12.5px;margin-top:22px;line-height:1.7}
   <div class="wrap">
     <h1><a href="https://github.com/thirtysix/awesome-regulatory-genomics">Awesome Regulatory Genomics</a></h1>
     <div class="sub">1800 tools for transcription-factor binding, motifs, regulatory
-      elements, chromatin and gene-regulatory networks · updated 2026-07-27</div>
+      elements, chromatin and gene-regulatory networks · updated 2026-07-28</div>
     <div class="controls">
       <input type="search" id="q" placeholder="Search name, description, category, language…" autocomplete="off">
       <select id="type"><option value="">Any tool type</option></select>
@@ -131,7 +134,12 @@ footer{color:var(--muted);font-size:12.5px;margin-top:22px;line-height:1.7}
     link check</a>.
     Entries marked <span class="cat seed">curated</span>
     are absent from bio.tools and were added by hand.
-    <br>Corrections welcome: <a href="https://github.com/thirtysix/awesome-regulatory-genomics/issues">open an issue</a>.
+    <br><b>Maintainers:</b> a <span class="inf">dotted</span> code link was <i>inferred</i> from a
+    homepage or a GitHub search rather than recorded upstream, so it is our guess and may be
+    wrong. The <b>?</b> beside it opens a pre-filled issue. Corrections of any kind are welcome:
+    <a href="https://github.com/thirtysix/awesome-regulatory-genomics/issues/new/choose">open an issue</a>. Fixing the entry
+    at <a href="https://bio.tools">bio.tools</a> instead fixes it here on the next refresh, and
+    everywhere else that registry is used.
   </footer>
 </main>
 <script src="catalog.js"></script>
@@ -234,6 +242,10 @@ const cmp = (a,b) => {
   return String(x).localeCompare(String(y)) * state.dir;
 };
 
+const REPORT = 'https://github.com/thirtysix/awesome-regulatory-genomics/issues/new';
+const reportUrl = t => REPORT + '?template=wrong-repository.yml&title='
+  + encodeURIComponent('repo: ' + t.name);
+
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const catLabel = Object.fromEntries(CATS);
 
@@ -244,7 +256,14 @@ function render(){
   $('rows').innerHTML = rows.map(t => {
     const href = t.homepage || t.repo_url || t.biotools_url;
     const dash = '<span class="no">-</span>';
-    const codeCell = t.repo_url ? '<a href="'+esc(t.repo_url)+'">code</a>' : dash;
+    // An inferred link is our guess, not the tool's own statement. Say so, and
+    // make reporting it one click rather than a hunt for the issue tracker.
+    let codeCell = dash;
+    if (t.repo_url) {
+      const inferred = t.repo_origin === 'inferred';
+      codeCell = '<a href="'+esc(t.repo_url)+'"'+(inferred?' class="inf" title="Inferred from its homepage or a GitHub search, not recorded upstream. Please report if wrong."':'')+'>code</a>';
+      if (inferred) codeCell += ' <a class="rep" title="Report a wrong repository link" href="'+reportUrl(t)+'">?</a>';
+    }
     const btCell = t.biotools_url ? '<a href="'+esc(t.biotools_url)+'">bio.tools</a>' : dash;
     let paperCell = dash;
     if (t.publication) {
