@@ -10,7 +10,18 @@ import re
 # Description/Notes ############################################################
 ################################################################################
 """
+PRESERVED ARTEFACT. This is the script that produced the dissertation table, kept
+for provenance rather than for use.
 
+The ONLY modification is redaction: the five absolute input/output paths, which
+pointed at a local working directory, now read "<data-dir>/". Nothing else has
+been touched, so the logic that produced the published table is verbatim: the
+HTML stripping, the first-sentence rule with its e.g./i.e./etc./vs. guards, and
+the set subtraction of the regulatory-element names from the TF names.
+
+The script did not run as written even before redaction, because that working
+directory no longer holds those files. See ../docs/provenance.md for the
+field-by-field verification of the table it produced.
 """
 
 ################################################################################
@@ -26,15 +37,15 @@ import re
 ################################################################################
 # Initiating Variables #########################################################
 ################################################################################
-tf_results_fn = "/home/harl/Dropbox/manuscripts/0.datasets_visualizations/bio_tools/transcription_factor.results.tsv"
+tf_results_fn = "<data-dir>/transcription_factor.results.tsv"
 tf_results_df = pd.read_csv(tf_results_fn, sep="\t")
 
-reg_elem_fn = "/home/harl/Dropbox/manuscripts/0.datasets_visualizations/bio_tools/reg_element_pred.results.tsv"
+reg_elem_fn = "<data-dir>/reg_element_pred.results.tsv"
 reg_elem_df = pd.read_csv(reg_elem_fn, sep="\t")
 
-tf_results_unique_fn = "/home/harl/Dropbox/manuscripts/0.datasets_visualizations/bio_tools/transcription_factor.results_unique.tsv"
-reg_elem_unique_fn = "/home/harl/Dropbox/manuscripts/0.datasets_visualizations/bio_tools/reg_element_pred.results_unique.tsv"
-common_results_fn = "/home/harl/Dropbox/manuscripts/0.datasets_visualizations/bio_tools/common_results.tsv"
+tf_results_unique_fn = "<data-dir>/transcription_factor.results_unique.tsv"
+reg_elem_unique_fn = "<data-dir>/reg_element_pred.results_unique.tsv"
+common_results_fn = "<data-dir>/common_results.tsv"
 ################################################################################
 # Execution ####################################################################
 ################################################################################

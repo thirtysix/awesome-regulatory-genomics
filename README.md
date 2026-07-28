@@ -285,7 +285,7 @@ Additions, corrections and re-categorisations are welcome; see [CONTRIBUTING.md]
 
 ## Provenance
 
-This catalog began as a table in a doctoral dissertation on transcription-factor binding site prediction. That table and the scripts that produced it are preserved unchanged in [`dissertation/`](dissertation/) for citation; [`docs/provenance.md`](docs/provenance.md) documents how it was derived and what this catalog changes.
+This catalog began as a table in a doctoral dissertation on transcription-factor binding site prediction. That table and the scripts that produced it are kept in [`dissertation/`](dissertation/) for citation, edited only to redact five absolute working-directory paths; [`docs/provenance.md`](docs/provenance.md) documents how it was derived and what this catalog changes.
 
 ## Licence
 

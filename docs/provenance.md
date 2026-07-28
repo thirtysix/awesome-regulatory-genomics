@@ -2,8 +2,10 @@
 
 This catalog grew out of a table in a doctoral dissertation on transcription-factor
 binding site prediction. The original table and the scripts that produced it are
-preserved unchanged in [`../dissertation/`](../dissertation/), because the
-dissertation cites them. This page records how that table was derived, what was
+preserved in [`../dissertation/`](../dissertation/), because the dissertation
+refers to them. The only edit anywhere in that directory is the redaction of
+five absolute working-directory paths in `filter_results.001.py`; its logic is
+verbatim. This page records how that table was derived, what was
 verified, and what this catalog does differently.
 
 ## The original table
