@@ -741,6 +741,28 @@ CODE_HOSTS = {
     "r-forge.r-project.org": "r-forge",
     "git.bioconductor.org": "bioconductor",
 }
+# Shared repositories that hold hundreds of unrelated tools. A member of one of
+# these does NOT have its own repository, and treating the monorepo as its
+# source hands the tool the whole project's stars, activity, licence and
+# language. bio.tools points hgv_pass at github.com/galaxyproject/galaxy, which
+# made a small Galaxy wrapper the most-starred entry in this catalog at 1,818
+# stars; nucleosome_prediction picked up 123 stars from bgruening/galaxytools
+# the same way.
+#
+# The tool may still be real and in scope. It simply has no repository of its
+# own, and saying so is more honest than crediting it with someone else's.
+MONOREPOS = {
+    "galaxyproject/galaxy",
+    "galaxyproject/tools-iuc",
+    "bgruening/galaxytools",
+    "bioconda/bioconda-recipes",
+    "biocontainers/containers",
+    "nf-core/modules",
+    "snakemake/snakemake-wrappers",
+    "broadinstitute/gatk",
+    "ncbi/sra-tools",
+}
+
 REGISTRY_HOSTS = {
     "bioconductor.org": "bioconductor",
     "pypi.org": "pypi",

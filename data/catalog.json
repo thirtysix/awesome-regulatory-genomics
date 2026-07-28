@@ -5,10 +5,10 @@
   "from_biotools": 1822,
   "curated_seeds": 129,
   "featured": 19,
-  "with_repo": 990,
+  "with_repo": 988,
   "repo_recovered": 54,
   "repo_by_origin": {
-   "recorded": 909,
+   "recorded": 907,
    "inferred": 50,
    "curated": 31
   },
@@ -1068,13 +1068,13 @@
    ],
    "tier": "core",
    "homepage": "https://genie.weizmann.ac.il/software/nucleo_exe.html",
-   "repo_url": "https://github.com/bgruening/galaxytools",
-   "repo_origin": "recorded",
-   "repo_stars": 123,
-   "repo_pushed": "2026-07-25",
-   "repo_archived": false,
-   "repo_language": "HTML",
-   "repo_license": "MIT",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
    "tool_type": [
     "Command-line tool"
    ],
@@ -1085,7 +1085,7 @@
    "languages": [
     "Perl"
    ],
-   "license": "MIT",
+   "license": "",
    "maturity": "Mature",
    "cost": "Free of charge",
    "citations": 1249,
@@ -1115,7 +1115,7 @@
    "primary_category": "nucleosome-chromatin",
    "homepage_status": "",
    "repo_status": "",
-   "license_source": "repository",
+   "license_source": "",
    "registries": ""
   },
   {
@@ -56666,13 +56666,13 @@
    ],
    "tier": "core",
    "homepage": "https://github.com/galaxyproject/galaxy/tree/dev/tools",
-   "repo_url": "https://github.com/galaxyproject/galaxy",
-   "repo_origin": "recorded",
-   "repo_stars": 1818,
-   "repo_pushed": "2026-07-24",
-   "repo_archived": false,
-   "repo_language": "Python",
-   "repo_license": "NOASSERTION",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
    "tool_type": [
     "Web application"
    ],
@@ -56683,7 +56683,7 @@
     "Data mining"
    ],
    "languages": [],
-   "license": "NOASSERTION",
+   "license": "",
    "maturity": "Mature",
    "cost": "",
    "citations": 10,
@@ -56715,7 +56715,7 @@
    "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
-   "license_source": "repository",
+   "license_source": "",
    "registries": ""
   },
   {

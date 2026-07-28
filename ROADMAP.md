@@ -332,6 +332,26 @@ what the rules admitted: 168 to 221 entries, recall 82% to **153/221 (69%)**.
       SourceForge entries as inactive when the truth is that nothing was
       measured for them.
 
+## Monorepo star contamination, 2026-07-28
+
+- [x] Found while pulling numbers for a promotional post: `hgv_pass`, a small
+      Galaxy wrapper, was the **most-starred tool in the catalog at 1,818
+      stars**, ahead of MACS. bio.tools records its homepage as
+      `github.com/galaxyproject/galaxy`, so it had inherited the entire Galaxy
+      project. `nucleosome_prediction` had picked up 123 stars from
+      `bgruening/galaxytools` the same way.
+
+      `build.is_monorepo()` now drops the link *and* everything derived from it,
+      against the `MONOREPOS` list in `config.py`. Dropping the URL alone would
+      not have worked: stars, activity, licence and language all come from the
+      `_github` blob and would have outlived the link that justified them. Both
+      tools stay in the catalog; they simply have no repository, which is the
+      truth. MACS is now correctly the top-starred entry at 781.
+
+      The general lesson is the one this project keeps relearning in new
+      clothes: an upstream field can be *populated and wrong*, and the failure
+      is invisible until something ranks on it.
+
 ## Deferred: curation depth
 
 Queued behind the block above, by decision rather than by oversight.

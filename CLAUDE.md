@@ -105,6 +105,14 @@ was, not "Modelling and simulation". Verified examples, safe to reuse: HOCOMOCO
 under `Data handling`, SICER under `Sequence contamination filtering`,
 ChIP-Atlas under `Genome assembly`, Cluster Buster under `Document clustering`.
 
+**A monorepo is not a tool's repository.** bio.tools records hgv_pass with a
+homepage of `github.com/galaxyproject/galaxy`, so it inherited the whole Galaxy
+project's 1,818 stars and became the most-starred entry in the catalog, ahead of
+MACS. `build.is_monorepo()` drops the link and everything derived from it;
+`MONOREPOS` in `config.py` is the list. Dropping the URL alone is not enough:
+the stars, activity, licence and language all come from `_github` and survive
+the link that justified them.
+
 **Syntax-check the site JavaScript before shipping.** It is generated as a Python
 string, so an apostrophe in the prose terminates a JS string literal and ships a
 blank page. Extract the inline `<script>` blocks and run them under `node` with a

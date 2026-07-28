@@ -117,3 +117,37 @@ def test_the_plus_convention_holds_for_the_other_known_cases():
                               ("MOST", "MOST+")]:
         assert norm_name(parent) != norm_name(successor), (
             f"{successor} must not collapse into {parent}")
+
+
+# ---------------------------------------------------------------------------
+# monorepos are not a tool's repository
+# ---------------------------------------------------------------------------
+def test_a_monorepo_is_not_a_tools_repository():
+    """bio.tools points hgv_pass at github.com/galaxyproject/galaxy.
+
+    Accepting that made a small Galaxy wrapper the most-starred entry in the
+    catalog at 1,818 stars, ahead of MACS. nucleosome_prediction picked up 123
+    stars from bgruening/galaxytools the same way.
+    """
+    from build import is_monorepo
+    assert is_monorepo("https://github.com/galaxyproject/galaxy")
+    assert is_monorepo("https://github.com/galaxyproject/galaxy/tree/dev/tools")
+    assert is_monorepo("https://www.github.com/bgruening/galaxytools/")
+    assert is_monorepo("https://github.com/bioconda/bioconda-recipes")
+
+
+def test_a_real_project_repository_is_kept():
+    from build import is_monorepo
+    for url in ["https://github.com/taoliu/MACS",
+                "https://github.com/aertslab/pySCENIC",
+                "https://github.com/FelixKrueger/Bismark",
+                "https://bitbucket.org/CBGR/unibind_enrichment/",
+                ""]:
+        assert not is_monorepo(url), url
+
+
+def test_the_monorepo_list_is_lowercase():
+    """is_monorepo() lowercases the slug before comparing, so an entry with a
+    capital in it would silently never match."""
+    from config import MONOREPOS
+    assert all(m == m.lower() for m in MONOREPOS)

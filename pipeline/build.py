@@ -23,8 +23,8 @@ import yaml
 from collections import Counter
 
 from jsonio import read_json
-from config import (CATEGORY_KEYS, CURATION, DATA, DB_TOOLTYPES, OP_CATEGORY,
-                    RAW, TEXT_CATEGORY, TOPIC_CATEGORY)
+from config import (CATEGORY_KEYS, CURATION, DATA, DB_TOOLTYPES, MONOREPOS,
+                    OP_CATEGORY, RAW, TEXT_CATEGORY, TOPIC_CATEGORY)
 
 ENRICHED = RAW / "enriched.json.gz"
 SEEDS = CURATION / "seeds.yaml"
@@ -144,6 +144,18 @@ def load_repo_map() -> dict[str, str]:
     except ValueError:
         return {}
     return {k: v["slug"] for k, v in blob.items() if v.get("accepted")}
+
+
+def is_monorepo(url: str) -> bool:
+    """Is this link a shared repository holding hundreds of unrelated tools?
+
+    A Galaxy wrapper whose recorded homepage is `github.com/galaxyproject/galaxy`
+    does not have a repository; it lives inside someone else's. Accepting it
+    credits the tool with the monorepo's stars, activity, licence and language,
+    which is how a small wrapper became the most-starred entry in this catalog.
+    """
+    m = re.match(r"https?://(?:www\.)?github\.com/([^/]+/[^/#?]+)", url or "")
+    return bool(m) and m.group(1).rstrip("/").lower() in MONOREPOS
 
 
 def repo_origin(tool: dict, repomap: dict[str, str]) -> str:
@@ -320,6 +332,11 @@ def from_biotools(tool: dict, cites: dict[str, int], shared: dict[str, int],
                   pubmap: dict[str, str], repomap: dict[str, str]) -> dict:
     gh = tool.get("_github") or {}
     ids = tool.get("_identifiers") or []
+    # A monorepo is not this tool's repository. Drop the link AND everything
+    # derived from it, or the stars survive the link that justified them.
+    repo = repo_url(tool, repomap)
+    if is_monorepo(repo):
+        repo, gh = "", {}
     primary = primary_identifier(tool, pubmap)
     n_sharing = shared.get(primary, 0)
     # A publication linked by several tools is a suite paper, not this tool's
@@ -336,8 +353,8 @@ def from_biotools(tool: dict, cites: dict[str, int], shared: dict[str, int],
         "categories": assign_categories(tool),
         "tier": tool.get("_tier", "core"),
         "homepage": tool.get("homepage") or "",
-        "repo_url": repo_url(tool, repomap),
-        "repo_origin": repo_origin(tool, repomap),
+        "repo_url": repo,
+        "repo_origin": repo_origin(tool, repomap) if repo else "",
         "repo_stars": gh.get("stars") if gh.get("status") == "ok" else None,
         "repo_pushed": gh.get("pushed_at") or "" if gh.get("status") == "ok" else "",
         "repo_archived": bool(gh.get("archived")) if gh.get("status") == "ok" else None,
