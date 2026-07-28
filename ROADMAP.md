@@ -284,7 +284,7 @@ what the rules admitted: 168 to 221 entries, recall 82% to **153/221 (69%)**.
       110ch measure, because full bleed is right for a table and wrong for text.
 
 - [x] A statistics panel above the table: four stat tiles (tools shown, source
-      repository, installable, dead links) and four column charts (publication
+      repository, installable, actively maintained) and four column charts (publication
       year, repository last updated, citations, stars). Collapsible, and it
       **reflects the current filter**, which is the point: clicking *Peak
       calling* and reading the year chart answers "when was this subfield
@@ -306,6 +306,27 @@ what the rules admitted: 168 to 221 entries, recall 82% to **153/221 (69%)**.
       SVG is generated in the page. Charts are drawn at a measured pixel width
       instead of being scaled by a viewBox, so a resize redraws them rather than
       stretching the type.
+
+## Header and facet tidy-up, 2026-07-28
+
+- [x] **Category chips are ordered by size and gridded to one width.** The rack
+      now reads as the shape of the field (TFBS prediction 641 down to Reporter
+      assays 4) instead of an arbitrary taxonomy order in a ragged wrap. The
+      ORDER in `CATEGORIES` still drives the README sections and the
+      primary-category choice; this is presentation only. Cells fit the longest
+      label on one line at desktop widths and wrap to two lines below that
+      rather than truncating, since a clipped category name is worse than an
+      uneven row.
+- [x] **A visible Repository link in the header.** The `<h1>` already linked to
+      GitHub but inherited the text colour, so nobody would guess.
+- [x] **"Links known dead" replaced by "Actively maintained"** in the fourth
+      stat tile. Whether a tool is still being pushed to is more use when
+      choosing one than a defect count is, and the dead links are still struck
+      through in the table and listed in `docs/homepage-check.md`. The
+      percentage is against repositories that *have* activity data, not all
+      repositories: dividing by every repository counts Bitbucket and
+      SourceForge entries as inactive when the truth is that nothing was
+      measured for them.
 
 ## Deferred: curation depth
 

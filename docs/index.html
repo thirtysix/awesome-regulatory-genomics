@@ -12,6 +12,7 @@
   /* Data marks. One hue: bar length carries magnitude, so colour is not a
      second encoding of the same thing. Validated against this surface. */
   --series-1:#2a78d6; --grid:#e8ebee;
+  --gh:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>');
 }
 @media (prefers-color-scheme:dark){
   :root{ --bg:#14171a; --fg:#e6e9ec; --muted:#98a2ad; --line:#2a2f35; --accent:#6aa9f0;
@@ -38,11 +39,19 @@ input[type=search],select{background:var(--card);color:var(--fg);border:1px soli
 input[type=search]{flex:1 1 300px;min-width:200px}
 main{max-width:none;margin:0;padding:18px 24px 60px}
 footer{max-width:110ch}   /* prose stays readable even when the table does not */
-.chips{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px}
-.chip{background:var(--chip);border:1px solid var(--line);border-radius:999px;
-  padding:4px 11px;font-size:12.5px;cursor:pointer;user-select:none;white-space:nowrap}
+/* One grid cell per category, so the block is a tidy rack rather than a ragged
+   wrap. Cells are wide enough for the longest label ("Peak annotation &
+   differential binding") to sit on one line at desktop widths; narrower than
+   that it wraps to two lines rather than truncating, since a clipped category
+   name is worse than an uneven row. */
+.chips{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));
+  gap:6px;margin:0 0 14px}
+.chip{background:var(--chip);border:1px solid var(--line);border-radius:8px;
+  padding:5px 11px;font-size:12.5px;cursor:pointer;user-select:none;text-align:left;
+  display:flex;align-items:center;gap:8px;min-height:30px;color:inherit;font-family:inherit}
+.chip .lab{flex:1 1 auto;line-height:1.25}
 .chip[aria-pressed=true]{background:var(--chip-on);color:var(--chip-on-fg);border-color:var(--chip-on)}
-.chip .n{opacity:.65;margin-left:5px;font-variant-numeric:tabular-nums}
+.chip .n{opacity:.65;font-variant-numeric:tabular-nums;flex:0 0 auto}
 .count{color:var(--muted);font-size:13px;margin:0 0 10px}
 .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
 table{border-collapse:collapse;width:100%;min-width:1120px;font-size:14px}
@@ -75,6 +84,10 @@ a.rep:hover{color:var(--accent);text-decoration:none}
 footer{color:var(--muted);font-size:12.5px;margin-top:22px;line-height:1.7}
 .theme{background:none;border:1px solid var(--line);border-radius:7px;color:var(--fg);
   padding:8px 11px;cursor:pointer;font:inherit;font-size:14px}
+a.theme{text-decoration:none;display:inline-flex;align-items:center;gap:6px;line-height:1.5}
+a.theme:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.repo::before{content:"";width:15px;height:15px;flex:0 0 15px;background:currentColor;
+  -webkit-mask:var(--gh) center/contain no-repeat;mask:var(--gh) center/contain no-repeat}
 .stats{margin:0 0 16px}
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:12px}
 .kpi{border:1px solid var(--line);border-radius:10px;padding:10px 13px;background:var(--card)}
@@ -111,6 +124,7 @@ footer{color:var(--muted);font-size:12.5px;margin-top:22px;line-height:1.7}
         <option value="archived">Archived</option>
       </select>
       <button class="theme" id="stats-toggle" type="button" aria-expanded="true">Hide stats</button>
+      <a class="theme repo" href="https://github.com/thirtysix/awesome-regulatory-genomics">Repository</a>
       <button class="theme" id="theme" type="button">◐</button>
     </div>
   </div>
@@ -211,12 +225,17 @@ fill($('lang'), TOOLS.flatMap(t => t.languages.concat(t.repo_language ? [t.repo_
 const catCounts = {};
 TOOLS.forEach(t => t.categories.forEach(c => catCounts[c] = (catCounts[c]||0)+1));
 const chipBox = $('cats');
-CATS.forEach(([key,label]) => {
-  if (!catCounts[key]) return;
+// Ordered by size, so the shape of the field is legible from the rack itself.
+// The ORDER of CATS still drives the README and the primary-category choice;
+// this is presentation only.
+[...CATS].filter(([k]) => catCounts[k])
+         .sort((a, b) => catCounts[b[0]] - catCounts[a[0]])
+         .forEach(([key,label]) => {
   const b = document.createElement('button');
-  b.className = 'chip'; b.type = 'button';
+  b.className = 'chip'; b.type = 'button'; b.title = label;
   b.setAttribute('aria-pressed', state.cats.has(key));
-  b.innerHTML = label + '<span class="n">' + catCounts[key] + '</span>';
+  b.innerHTML = '<span class="lab">' + label + '</span>' +
+                '<span class="n">' + catCounts[key] + '</span>';
   b.onclick = () => {
     state.cats.has(key) ? state.cats.delete(key) : state.cats.add(key);
     b.setAttribute('aria-pressed', state.cats.has(key));
@@ -419,13 +438,25 @@ function renderStats(rows) {
   const pct = n => total ? Math.round(100 * n / total) + '%' : '0%';
   const withRepo = rows.filter(t => t.repo_url).length;
   const install = rows.filter(t => t.n_registries).length;
-  const dead = rows.filter(t => t.homepage_status === 'dead' || t.repo_status === 'dead').length;
+  // "Actively maintained" says more about whether to reach for a tool than a
+  // dead-link count does, and the dead links are still marked in the table and
+  // listed in docs/homepage-check.md. Same rule as the Activity filter.
+  const YR = 365.25 * 24 * 3600 * 1000;
+  const tracked = rows.filter(t => t.repo_pushed).length;
+  const active = rows.filter(t => t.repo_pushed && !t.repo_archived &&
+                                  (Date.now() - Date.parse(t.repo_pushed)) / YR <= 2).length;
   document.getElementById('kpis').innerHTML = [
     ['Tools shown', total.toLocaleString(),
      total === TOOLS.length ? 'the whole catalog' : 'of ' + TOOLS.length.toLocaleString() + ' total'],
     ['Source repository', withRepo.toLocaleString(), pct(withRepo) + ' of these'],
     ['Installable package', install.toLocaleString(), pct(install) + ' of these'],
-    ['Links known dead', dead.toLocaleString(), dead ? 'struck through below' : 'none in this view'],
+    ['Actively maintained', active.toLocaleString(),
+     // Against repositories we actually have activity data for. Dividing by
+     // every repository would count Bitbucket and SourceForge entries as
+     // inactive when the truth is that nothing was measured for them.
+     tracked ? Math.round(100 * active / tracked) + '% of ' + tracked.toLocaleString() +
+               ' with activity data'
+             : 'no activity data here'],
   ].map(([k, v, sfx]) => '<div class="kpi"><div class="k">' + k + '</div><div class="v">' +
       v + '</div><div class="s">' + sfx + '</div></div>').join('');
 
