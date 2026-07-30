@@ -617,6 +617,13 @@ def main() -> None:
         r["repo_status"] = deadpages.get(canon_link(r.get("repo_url")), "")
         if not r.get("year") and r.get("publication"):
             r["year"] = yearmap.get(cache_key(r["publication"]), "")
+        # An empty citation cell has three quite different causes, and a reader
+        # cannot tell them apart. Sierra showed blank because its published DOI
+        # was never fetched, which looked identical to a tool with no paper at
+        # all; say which it is instead of leaving it to be re-investigated.
+        if r["citations"] is None and not r["citation_note"]:
+            r["citation_note"] = ("no publication recorded" if not r.get("publication")
+                                  else "publication not indexed by OpenAlex")
         # A repository's licence is weaker evidence than a declared one, so say
         # which it is rather than quietly merging the two.
         if r.get("license"):

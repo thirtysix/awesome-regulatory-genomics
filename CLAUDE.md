@@ -125,9 +125,29 @@ lookup failures as `0`, which is indistinguishable from an uncited paper. 410 of
 them were hiding real counts, including JASPAR 2018 at 0 against a true 1,615,
 and they masked contamination: three out-of-scope records (`erange`, `edger`,
 `express`) only became visible in the top 15 once the real numbers arrived. The
-cache also held 1,126 fewer identifiers than the harvest actually uses. Refresh
-with the identifiers from `enriched.json.gz` plus the overlay's overrides, and
-write an unresolved count as empty rather than 0.
+cache also held 1,126 fewer identifiers than the harvest actually uses.
+`openalex_lookup()` now leaves an unresolved key absent, costing one retry.
+
+**Citations must be fetched for what the catalog DISPLAYS, not for what the
+harvest contains.** `enrich.py` iterates the bio.tools sweep, so two whole
+classes of publication were never looked up and 148 tools showed a blank cell:
+seed entries from `seeds.yaml`, which never appear in the sweep at all, and
+preprints that `resolve_pubs.py` upgraded to their published version, where only
+the preprint is in the harvest. bio.tools records Sierra as bioRxiv
+`10.1101/867309`; the catalog correctly links its Genome Biology paper and showed
+nothing, because that DOI was never fetched. TOBIAS, a featured tool with 251
+stars, was blank for the seed reason. `enrich.displayed_identifiers()` collects
+seeds, `publication_map.json` upgrades and the overlay's own lists;
+`publication_map.json` is written by a later stage, so a brand-new upgrade is
+picked up on the following run.
+
+**An empty citation cell has three causes and the reader cannot tell them
+apart.** No paper recorded upstream (90 tools), a paper OpenAlex does not index
+(7, mostly Zenodo and Bioconductor package DOIs), and a suppressed platform
+paper. `citation_note` now always says which, and the site renders the blank as a
+dash carrying that reason as a tooltip. Note the 90 include tools that plainly do
+have papers, HOMER among them: that is a curation gap in `seeds.yaml` and
+bio.tools, not a pipeline fault.
 
 **bio.tools `operation=` and `q=` are fuzzy text search, not ontology lookup.**
 Always quote the value. `q="cis-regulatory"` returns 107 records; unquoted it

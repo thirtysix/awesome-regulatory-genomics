@@ -40,12 +40,12 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 
 - **[JASPAR](http://jaspar.genereg.net/)**: The default open motif database; six taxonomic groups, versioned releases
   <sub>[code](https://github.com/asntech/pyjaspar) · [bio.tools](https://bio.tools/jaspar) · [paper](https://pubmed.ncbi.nlm.nih.gov/34850907/) · `38 stars | 2,171 cites, 11,177 across 9 papers`</sub>
+- **[BPNet](https://github.com/kundajelab/bpnet)**: Base-resolution TF binding model that recovers motif syntax
+  <sub>[code](https://github.com/kundajelab/bpnet) · [paper](https://doi.org/10.1038/s41588-021-00782-6) · `706 cites`</sub>
 - **[TFBSTools](http://bioconductor.org/packages/release/bioc/html/TFBSTools.html)**: R interface to motif matrices, scanning and JASPAR
   <sub>[code](https://github.com/ge11232002/TFBSTools) · [bio.tools](https://bio.tools/tfbstools) · [paper](https://pubmed.ncbi.nlm.nih.gov/26794315/) · `37 stars | 430 cites`</sub>
 - **[RSAT suite](http://rsat.eu)**: Long-running suite covering matrix scanning, comparison and enrichment
   <sub>[bio.tools](https://bio.tools/rsat) · [paper](https://pubmed.ncbi.nlm.nih.gov/10641039/) · `180 cites`</sub>
-- **[BPNet](https://github.com/kundajelab/bpnet)**: Base-resolution TF binding model that recovers motif syntax
-  <sub>[code](https://github.com/kundajelab/bpnet) · [paper](https://doi.org/10.1038/s41588-021-00782-6)</sub>
 - **[homer](http://homer.ucsd.edu/homer/motif/)**: Motif discovery plus peak annotation; the pragmatic first stop for ChIP-seq
   <sub>[bio.tools](https://bio.tools/homer)</sub>
 
@@ -83,6 +83,8 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 
 - **[JASPAR](http://jaspar.genereg.net/)**: The default open motif database; six taxonomic groups, versioned releases
   <sub>[code](https://github.com/asntech/pyjaspar) · [bio.tools](https://bio.tools/jaspar) · [paper](https://pubmed.ncbi.nlm.nih.gov/34850907/) · `38 stars | 2,171 cites, 11,177 across 9 papers`</sub>
+- **[CIS-BP](http://cisbp.ccbr.utoronto.ca/)**: Motif inference across species by DNA-binding-domain similarity
+  <sub>[paper](https://doi.org/10.1016/j.cell.2014.08.009) · `2,049 cites`</sub>
 - **[HOCOMOCO](https://hocomoco.autosome.org)**: Human and mouse motifs derived from uniform ChIP-seq reprocessing
   <sub>[bio.tools](https://bio.tools/hocomoco) · [paper](https://pubmed.ncbi.nlm.nih.gov/29140464/) · `1,095 cites`</sub>
 - **[ReMap](https://remap.univ-amu.fr/)**: Large-scale atlas of regulatory regions from public DNA-binding experiments
@@ -91,8 +93,6 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
   <sub>[bio.tools](https://bio.tools/gtrd) · [paper](https://pubmed.ncbi.nlm.nih.gov/33231677/) · `307 cites`</sub>
 - **[UniBind](https://unibind.uio.no/)**: TFBS predictions restricted to ChIP-seq-supported, high-confidence sites
   <sub>[code](https://bitbucket.org/CBGR/unibind_enrichment/) · [bio.tools](https://bio.tools/unibind) · [preprint](https://doi.org/10.1101/2020.11.17.384578) · `7 cites`</sub>
-- **[CIS-BP](http://cisbp.ccbr.utoronto.ca/)**: Motif inference across species by DNA-binding-domain similarity
-  <sub>[paper](https://doi.org/10.1016/j.cell.2014.08.009)</sub>
 
 <sub>[+ 110 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=motif-databases)</sub>
 
@@ -102,6 +102,12 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 
 - **[JASPAR](http://jaspar.genereg.net/)**: The default open motif database; six taxonomic groups, versioned releases
   <sub>[code](https://github.com/asntech/pyjaspar) · [bio.tools](https://bio.tools/jaspar) · [paper](https://pubmed.ncbi.nlm.nih.gov/34850907/) · `38 stars | 2,171 cites, 11,177 across 9 papers`</sub>
+- **[Enformer](https://github.com/google-deepmind/deepmind-research/tree/master/enformer)**: Long-range sequence-to-expression model; a common baseline for regulatory prediction
+  <sub>[code](https://github.com/google-deepmind/deepmind-research) · [paper](https://doi.org/10.1038/s41592-021-01252-x) · `1,344 cites`</sub>
+- **[TOBIAS](https://github.com/loosolab/TOBIAS)**: Differential ATAC-seq footprinting between conditions
+  <sub>[code](https://github.com/loosolab/TOBIAS) · [bio.tools](https://bio.tools/TOBIAS) · [paper](https://doi.org/10.1038/s41467-020-18035-1) · `251 stars | 764 cites`</sub>
+- **[BPNet](https://github.com/kundajelab/bpnet)**: Base-resolution TF binding model that recovers motif syntax
+  <sub>[code](https://github.com/kundajelab/bpnet) · [paper](https://doi.org/10.1038/s41588-021-00782-6) · `706 cites`</sub>
 - **[ReMap](https://remap.univ-amu.fr/)**: Large-scale atlas of regulatory regions from public DNA-binding experiments
   <sub>[bio.tools](https://bio.tools/inserm-remap) · [paper](https://pubmed.ncbi.nlm.nih.gov/34751401/) · `505 cites, 1,070 across 4 papers`</sub>
 - **[TFBSTools](http://bioconductor.org/packages/release/bioc/html/TFBSTools.html)**: R interface to motif matrices, scanning and JASPAR
@@ -110,16 +116,10 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
   <sub>[bio.tools](https://bio.tools/rsat) · [paper](https://pubmed.ncbi.nlm.nih.gov/10641039/) · `180 cites`</sub>
 - **[UniBind](https://unibind.uio.no/)**: TFBS predictions restricted to ChIP-seq-supported, high-confidence sites
   <sub>[code](https://bitbucket.org/CBGR/unibind_enrichment/) · [bio.tools](https://bio.tools/unibind) · [preprint](https://doi.org/10.1101/2020.11.17.384578) · `7 cites`</sub>
-- **[BPNet](https://github.com/kundajelab/bpnet)**: Base-resolution TF binding model that recovers motif syntax
-  <sub>[code](https://github.com/kundajelab/bpnet) · [paper](https://doi.org/10.1038/s41588-021-00782-6)</sub>
-- **[Enformer](https://github.com/google-deepmind/deepmind-research/tree/master/enformer)**: Long-range sequence-to-expression model; a common baseline for regulatory prediction
-  <sub>[code](https://github.com/google-deepmind/deepmind-research) · [paper](https://doi.org/10.1038/s41592-021-01252-x)</sub>
 - **[SCENIC](http://scenic.aertslab.org)**: Single-cell regulatory network inference; regulons rather than raw correlations
   <sub>[code](https://github.com/aertslab/SCENIC) · [bio.tools](https://bio.tools/scenic) · [paper](https://pubmed.ncbi.nlm.nih.gov/28991892/) · `491 stars`</sub>
 - **[TFBSFootprinter](https://github.com/thirtysix/TFBS_footprinting3)**: Multi-evidence TFBS scoring combining conservation, CAGE, eQTL and chromatin data
   <sub>[code](https://github.com/thirtysix/TFBS_footprinting3) · [paper](https://pubmed.ncbi.nlm.nih.gov/40646689/)</sub>
-- **[TOBIAS](https://github.com/loosolab/TOBIAS)**: Differential ATAC-seq footprinting between conditions
-  <sub>[code](https://github.com/loosolab/TOBIAS) · [bio.tools](https://bio.tools/TOBIAS) · [paper](https://doi.org/10.1038/s41467-020-18035-1) · `251 stars`</sub>
 
 <sub>[+ 631 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=tfbs-prediction)</sub>
 
@@ -127,12 +127,12 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 
 *Prediction and annotation of promoters, enhancers and other cis-regulatory elements.*
 
+- **[Enformer](https://github.com/google-deepmind/deepmind-research/tree/master/enformer)**: Long-range sequence-to-expression model; a common baseline for regulatory prediction
+  <sub>[code](https://github.com/google-deepmind/deepmind-research) · [paper](https://doi.org/10.1038/s41592-021-01252-x) · `1,344 cites`</sub>
 - **[TFBSTools](http://bioconductor.org/packages/release/bioc/html/TFBSTools.html)**: R interface to motif matrices, scanning and JASPAR
   <sub>[code](https://github.com/ge11232002/TFBSTools) · [bio.tools](https://bio.tools/tfbstools) · [paper](https://pubmed.ncbi.nlm.nih.gov/26794315/) · `37 stars | 430 cites`</sub>
 - **[RSAT suite](http://rsat.eu)**: Long-running suite covering matrix scanning, comparison and enrichment
   <sub>[bio.tools](https://bio.tools/rsat) · [paper](https://pubmed.ncbi.nlm.nih.gov/10641039/) · `180 cites`</sub>
-- **[Enformer](https://github.com/google-deepmind/deepmind-research/tree/master/enformer)**: Long-range sequence-to-expression model; a common baseline for regulatory prediction
-  <sub>[code](https://github.com/google-deepmind/deepmind-research) · [paper](https://doi.org/10.1038/s41592-021-01252-x)</sub>
 - **[homer](http://homer.ucsd.edu/homer/motif/)**: Motif discovery plus peak annotation; the pragmatic first stop for ChIP-seq
   <sub>[bio.tools](https://bio.tools/homer)</sub>
 
@@ -148,12 +148,12 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 
 *DNase/ATAC digital footprinting and phylogenetic footprinting.*
 
+- **[TOBIAS](https://github.com/loosolab/TOBIAS)**: Differential ATAC-seq footprinting between conditions
+  <sub>[code](https://github.com/loosolab/TOBIAS) · [bio.tools](https://bio.tools/TOBIAS) · [paper](https://doi.org/10.1038/s41467-020-18035-1) · `251 stars | 764 cites`</sub>
 - **[RSAT suite](http://rsat.eu)**: Long-running suite covering matrix scanning, comparison and enrichment
   <sub>[bio.tools](https://bio.tools/rsat) · [paper](https://pubmed.ncbi.nlm.nih.gov/10641039/) · `180 cites`</sub>
 - **[TFBSFootprinter](https://github.com/thirtysix/TFBS_footprinting3)**: Multi-evidence TFBS scoring combining conservation, CAGE, eQTL and chromatin data
   <sub>[code](https://github.com/thirtysix/TFBS_footprinting3) · [paper](https://pubmed.ncbi.nlm.nih.gov/40646689/)</sub>
-- **[TOBIAS](https://github.com/loosolab/TOBIAS)**: Differential ATAC-seq footprinting between conditions
-  <sub>[code](https://github.com/loosolab/TOBIAS) · [bio.tools](https://bio.tools/TOBIAS) · [paper](https://doi.org/10.1038/s41467-020-18035-1) · `251 stars`</sub>
 
 <sub>[+ 37 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=footprinting)</sub>
 
@@ -161,14 +161,14 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 
 *Calling enriched regions from ChIP-seq, ATAC-seq, CUT&RUN and related assays.*
 
+- **[TOBIAS](https://github.com/loosolab/TOBIAS)**: Differential ATAC-seq footprinting between conditions
+  <sub>[code](https://github.com/loosolab/TOBIAS) · [bio.tools](https://bio.tools/TOBIAS) · [paper](https://doi.org/10.1038/s41467-020-18035-1) · `251 stars | 764 cites`</sub>
 - **[ReMap](https://remap.univ-amu.fr/)**: Large-scale atlas of regulatory regions from public DNA-binding experiments
   <sub>[bio.tools](https://bio.tools/inserm-remap) · [paper](https://pubmed.ncbi.nlm.nih.gov/34751401/) · `505 cites, 1,070 across 4 papers`</sub>
 - **[ChIP-Atlas](https://chip-atlas.org)**: Reprocessed public ChIP-seq, ATAC-seq and Bisulfite-seq across six organisms
   <sub>[code](https://github.com/inutano/chip-atlas) · [bio.tools](https://bio.tools/chip-atlas) · [paper](https://pubmed.ncbi.nlm.nih.gov/35325188/) · `84 stars | 403 cites`</sub>
 - **[Genrich](https://github.com/jsh58/Genrich)**: Peak caller with replicate handling and an ATAC mode
   <sub>[code](https://github.com/jsh58/Genrich)</sub>
-- **[TOBIAS](https://github.com/loosolab/TOBIAS)**: Differential ATAC-seq footprinting between conditions
-  <sub>[code](https://github.com/loosolab/TOBIAS) · [bio.tools](https://bio.tools/TOBIAS) · [paper](https://doi.org/10.1038/s41467-020-18035-1) · `251 stars`</sub>
 
 <sub>[+ 511 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=peak-calling)</sub>
 
@@ -196,7 +196,7 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 *Inferring and analysing TF-target networks and regulons.*
 
 - **[pySCENIC](https://github.com/aertslab/pySCENIC)**: Fast implementation of SCENIC
-  <sub>[code](https://github.com/aertslab/pySCENIC) · [paper](https://doi.org/10.1038/s41596-020-0336-2)</sub>
+  <sub>[code](https://github.com/aertslab/pySCENIC) · [paper](https://doi.org/10.1038/s41596-020-0336-2) · `1,579 cites`</sub>
 - **[SCENIC](http://scenic.aertslab.org)**: Single-cell regulatory network inference; regulons rather than raw correlations
   <sub>[code](https://github.com/aertslab/SCENIC) · [bio.tools](https://bio.tools/scenic) · [paper](https://pubmed.ncbi.nlm.nih.gov/28991892/) · `491 stars`</sub>
 
@@ -246,7 +246,7 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 *Single-cell ATAC/multiome and single-cell regulatory network methods.*
 
 - **[pySCENIC](https://github.com/aertslab/pySCENIC)**: Fast implementation of SCENIC
-  <sub>[code](https://github.com/aertslab/pySCENIC) · [paper](https://doi.org/10.1038/s41596-020-0336-2)</sub>
+  <sub>[code](https://github.com/aertslab/pySCENIC) · [paper](https://doi.org/10.1038/s41596-020-0336-2) · `1,579 cites`</sub>
 - **[SCENIC](http://scenic.aertslab.org)**: Single-cell regulatory network inference; regulons rather than raw correlations
   <sub>[code](https://github.com/aertslab/SCENIC) · [bio.tools](https://bio.tools/scenic) · [paper](https://pubmed.ncbi.nlm.nih.gov/28991892/) · `491 stars`</sub>
 

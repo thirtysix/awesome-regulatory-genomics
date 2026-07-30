@@ -535,6 +535,8 @@ a.theme:hover{border-color:var(--accent);color:var(--accent);text-decoration:non
         <option value="archived">Archived</option>
       </select>
       <button class="theme" id="stats-toggle" type="button" aria-expanded="true">Hide stats</button>
+      <button class="theme" id="dl" type="button"
+        title="Download the rows currently shown, in the current sort order, as a tab-separated file">Download</button>
       <a class="theme repo" href="https://github.com/__REPO__">Repository</a>
       <button class="theme" id="theme" type="button">◐</button>
     </div>
@@ -618,6 +620,7 @@ themeBtn.onclick = () => {
 
 const $ = id => document.getElementById(id);
 const state = { q:'', cats:new Set(), type:'', lang:'', activity:'', col:{}, sort:'citations', dir:-1 };
+let visible = [];
 
 const params = new URLSearchParams(location.search);
 if (params.get('category')) state.cats.add(params.get('category'));
@@ -929,6 +932,7 @@ function renderStats(rows) {
 
 function render(){
   const rows = TOOLS.filter(matches).sort(cmp);
+  visible = rows;                     // what Download exports, exactly as shown
   if (statsOpen) renderStats(rows);
   $('count').textContent = rows.length + ' of ' + TOOLS.length + ' tools' +
     (state.cats.size ? ' · ' + [...state.cats].map(c=>catLabel[c]).join(', ') : '');
@@ -976,7 +980,10 @@ function render(){
       : dash;
     // The column sorts and filters on one paper, so the total sits beneath it as
     // a labelled second line rather than replacing the value.
-    let citesCell = t.citations ? t.citations.toLocaleString() : '';
+    // An empty cell is ambiguous, so carry the reason as a tooltip rather than
+    // letting a reader conclude the count is simply missing.
+    let citesCell = t.citations ? t.citations.toLocaleString()
+      : (t.cite_note ? '<span class="why" title="'+esc(t.cite_note)+'">' + dash + '</span>' : '');
     if (t.citations && t.cites_total && t.cites_papers) {
       citesCell += '<span class="agg" title="Total across the '
         + t.cites_papers + ' publications verified as this tool own work. '
@@ -1050,6 +1057,76 @@ addEventListener('resize', () => {
   rzTimer = setTimeout(() => { if (statsOpen) renderStats(TOOLS.filter(matches)); }, 150);
 });
 ['type','lang','activity'].forEach(id => $(id).onchange = e => { state[id] = e.target.value; render(); });
+
+// Download exactly what is on screen: the current filters, in the current sort
+// order. Tab-separated to match data/catalog.tsv in the repository, and because
+// descriptions here contain commas but never tabs, so no quoting is needed.
+// Anything that could still hold a tab or newline is collapsed rather than
+// quoted, so the file stays one record per line for awk, cut and pandas alike.
+const DL_COLS = [
+  ['name',        t => t.name],
+  ['categories',  t => t.categories.map(c => catLabel[c] || c).join('; ')],
+  ['description', t => t.description],
+  ['tool_type',   t => (t.tool_type || []).join('; ')],
+  ['languages',   t => (t.languages || []).join('; ')],
+  ['homepage',    t => t.homepage],
+  ['repository',  t => t.repo_url],
+  ['biotools',    t => t.biotools_url],
+  ['publication', t => t.publication],
+  ['is_preprint', t => t.publication ? (t.preprint ? 'yes' : 'no') : ''],
+  ['stars',       t => t.repo_stars],
+  ['last_push',   t => t.repo_pushed],
+  ['language',    t => t.repo_language],
+  ['license',     t => t.repo_license],
+  ['install',     t => (t.reg_names || []).join('; ')],
+  ['citations',   t => t.citations],
+  ['citations_verified_total',  t => t.cites_total],
+  ['citations_verified_papers', t => t.cites_papers],
+  ['citations_note', t => t.cite_note],
+  ['year',        t => t.year],
+];
+
+function tsvCell(v) {
+  if (v === null || v === undefined) return '';
+  return String(v).replace(/[\\t\\r\\n]+/g, ' ').trim();
+}
+
+function downloadVisible() {
+  const lines = [DL_COLS.map(c => c[0]).join('\\t')];
+  for (const t of visible) lines.push(DL_COLS.map(c => tsvCell(c[1](t))).join('\\t'));
+  // Name the file after what was actually exported, so a folder of downloads
+  // stays readable: the filters are the interesting part, not the date alone.
+  const bits = [];
+  if (state.q) bits.push(state.q.replace(/[^a-z0-9]+/gi, '-'));
+  if (state.cats.size) bits.push([...state.cats].join('-'));
+  if (state.type) bits.push(state.type.replace(/[^a-z0-9]+/gi, '-'));
+  if (state.lang) bits.push(state.lang.replace(/[^a-z0-9]+/gi, '-'));
+  if (state.activity) bits.push(state.activity);
+  const stem = ['regulatory-genomics', ...bits, visible.length + 'tools']
+    .join('_').replace(/_+/g, '_').slice(0, 120);
+  // \\ufeff so Excel opens the UTF-8 tool names correctly instead of mojibake.
+  const blob = new Blob(['\\ufeff' + lines.join('\\n') + '\\n'],
+                        {type: 'text/tab-separated-values;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = stem + '.tsv';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  // Revoking immediately can cancel the download in some browsers.
+  setTimeout(() => URL.revokeObjectURL(url), 30000);
+}
+
+const dlBtn = $('dl');
+dlBtn.onclick = () => {
+  if (!visible.length) return;
+  downloadVisible();
+  const was = dlBtn.textContent;
+  dlBtn.textContent = visible.length + ' rows';
+  setTimeout(() => { dlBtn.textContent = was; }, 1400);
+};
+
 render();
 </script>
 </body>
@@ -1071,6 +1148,7 @@ def render_site(catalog: dict) -> None:
         "registries": t.get("_registries") or {},
         "tool_type": t["tool_type"], "languages": t["languages"],
         "citations": t["citations"], "year": t["year"], "publication": t["publication"],
+        **({"cite_note": t["citation_note"]} if not t["citations"] and t["citation_note"] else {}),
         # Only 37 of ~1,950 tools have a verified total. Emitting the pair as
         # null for the rest cost 74 KB in a payload every visitor downloads.
         **({"cites_total": t["citations_total"], "cites_papers": t["citations_papers"]}

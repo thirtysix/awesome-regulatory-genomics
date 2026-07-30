@@ -24,9 +24,10 @@ import time
 from urllib.parse import urlparse
 
 import requests
+import yaml
 
 from jsonio import read_json, write_json
-from config import (CACHE, CODE_HOSTS, GITHUB_API, OPENALEX_API, RAW,
+from config import (CACHE, CODE_HOSTS, CURATION, GITHUB_API, OPENALEX_API, RAW,
                     REGISTRY_HOSTS, polite_params, user_agent)
 
 SELECTED = RAW / "selected.json.gz"
@@ -232,7 +233,17 @@ def pub_identifiers(tool: dict) -> list[str]:
     return ids
 
 
-def openalex_lookup(session: requests.Session, ident: str, cache: dict[str, int]) -> tuple[int, dict]:
+def openalex_lookup(session: requests.Session, ident: str,
+                    cache: dict[str, int]) -> tuple[int | None, dict]:
+    """Citation count for one identifier, or None if it could not be resolved.
+
+    A failed lookup must NOT be cached as 0. Doing so made a network error or an
+    unindexed DOI indistinguishable from a genuinely uncited paper, and left 410
+    such zeros in the cache hiding real counts - JASPAR 2018 sat at 0 against a
+    true 1,615. Worse, the zeros suppressed the ranking signal that would have
+    exposed three out-of-scope records sitting in the top 15. Leaving the key
+    absent costs one retry next run and keeps "unknown" distinct from "uncited".
+    """
     kind, _, value = ident.partition(":")
     key = f"{kind}_{value}".replace("/", "_").replace(":", "_")
     if key in cache:
@@ -244,12 +255,55 @@ def openalex_lookup(session: requests.Session, ident: str, cache: dict[str, int]
     except (requests.RequestException, ValueError):
         results = []
     if not results:
-        cache[key] = 0
-        return 0, {}
+        return None, {}
     w = results[0]
-    cache[key] = w.get("cited_by_count", 0)
+    cache[key] = w.get("cited_by_count") or 0
     return cache[key], {"title": w.get("title"), "year": w.get("publication_year"),
                         "venue": ((w.get("primary_location") or {}).get("source") or {}).get("display_name")}
+
+
+def displayed_identifiers() -> list[str]:
+    """Publications the build will show that no harvested record mentions.
+
+    Two sources, together accounting for 148 blank citation cells:
+
+    - `seeds.yaml`. Hand-written entries never appear in the sweep, so iterating
+      the harvest alone skips their papers entirely. TOBIAS is a featured tool
+      with 251 stars and showed no count for this reason.
+    - `publication_map.json`. resolve_pubs.py upgrades a bio.tools preprint DOI
+      to the published version, and build.py displays the upgrade, but only the
+      preprint is in the harvest. bio.tools records Sierra as bioRxiv
+      `10.1101/867309`; the catalog links its Genome Biology paper, whose count
+      was never fetched.
+
+    publication_map.json is written by a later stage, so a brand-new upgrade is
+    picked up on the following run. Everything already resolved is covered now.
+    """
+    out: list[str] = []
+    seeds_path = CURATION / "seeds.yaml"
+    if seeds_path.exists():
+        seeds = yaml.safe_load(seeds_path.read_text()) or {}
+        for seed in seeds.get("tools") or []:
+            if seed.get("pmid"):
+                out.append(f"pmid:{seed['pmid']}")
+            elif seed.get("doi"):
+                out.append(f"doi:{seed['doi']}")
+    pubmap_path = CACHE / "publication_map.json"
+    if pubmap_path.exists():
+        try:
+            blob = json.loads(pubmap_path.read_text())
+        except ValueError:
+            blob = {}
+        for entry in blob.values():
+            if entry.get("published_doi"):
+                out.append(f"doi:{entry['published_doi']}")
+    overlay_path = CURATION / "overlay.yaml"
+    if overlay_path.exists():
+        overlay = yaml.safe_load(overlay_path.read_text()) or {}
+        out.extend((overlay.get("publications") or {}).values())
+        for entry in (overlay.get("verified_publications") or {}).values():
+            out.extend(entry.get("papers") or [])
+    return list(dict.fromkeys(out))
 
 
 # ---------------------------------------------------------------------------
@@ -312,7 +366,7 @@ def main() -> None:
         if not args.no_citations:
             for ident in ids:
                 n, meta = openalex_lookup(http, ident, cite_cache)
-                citations += n
+                citations += n or 0        # an unresolved lookup returns None
                 if meta and not pubmeta:
                     pubmeta = meta
 
@@ -336,6 +390,22 @@ def main() -> None:
             save_citation_cache(cite_cache)
 
     GH_CACHE.write_text(json.dumps(gh_cache, indent=1))
+
+    # Papers the catalog displays that the harvest never mentions: seed entries
+    # and preprints upgraded to their published version. Skipping these left 148
+    # tools with a blank citation cell, TOBIAS and Sierra among them.
+    if not args.no_citations:
+        extra = [i for i in displayed_identifiers()
+                 if f"{i.partition(':')[0]}_{i.partition(':')[2]}"
+                 .replace("/", "_").replace(":", "_") not in cite_cache]
+        if extra:
+            print(f"  {len(extra)} displayed publications not yet in the cache")
+            for n_done, ident in enumerate(extra, 1):
+                openalex_lookup(http, ident, cite_cache)
+                if n_done % 50 == 0:
+                    print(f"    {n_done}/{len(extra)}", flush=True)
+                    save_citation_cache(cite_cache)
+
     save_citation_cache(cite_cache)
     write_json(ENRICHED, {"count": len(out), "list": out})
 
