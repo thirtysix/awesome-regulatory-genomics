@@ -520,6 +520,7 @@ def main() -> None:
     pub_overrides = overlay.get("publications") or {}
     verified_pubs = {k: v["papers"] for k, v in
                      (overlay.get("verified_publications") or {}).items()}
+    no_article = overlay.get("no_article") or {}
     alias_targets = {bid for ids in aliases.values() for bid in ids}
 
     proposed, llm_out_of_scope = {}, {}
@@ -622,8 +623,14 @@ def main() -> None:
         # was never fetched, which looked identical to a tool with no paper at
         # all; say which it is instead of leaving it to be re-investigated.
         if r["citations"] is None and not r["citation_note"]:
-            r["citation_note"] = ("no publication recorded" if not r.get("publication")
-                                  else "publication not indexed by OpenAlex")
+            # "no publication recorded" reads as missing data waiting to be
+            # filled. For these it is settled: the software has no paper, or the
+            # only candidate was examined and rejected. Say which.
+            if r["id"] in no_article:
+                r["citation_note"] = no_article[r["id"]]
+            else:
+                r["citation_note"] = ("no publication recorded" if not r.get("publication")
+                                      else "publication not indexed by OpenAlex")
         # A repository's licence is weaker evidence than a declared one, so say
         # which it is rather than quietly merging the two.
         if r.get("license"):

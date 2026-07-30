@@ -18,6 +18,7 @@ These are overwritten on every build. Edits are lost without warning.
 | `docs/literature-discovery.md` | `pipeline/discover_literature.py`; promote rows into `seeds.yaml` |
 | `docs/homepage-check.md` | `pipeline/check_homepages.py` |
 | `docs/install-review.md` | `pipeline/resolve_installs.py`; promote rows into `overlay.yaml` |
+| `docs/publication-discovery.md` | `pipeline/discover_pubs.py`; promote rows into `overlay.yaml` or `seeds.yaml` |
 | `curation/llm_proposals.yaml` | it is model output; promote things into `overlay.yaml` |
 | `data/cache/citation_cache.csv` | refreshed from OpenAlex; see the citation gotchas below |
 
@@ -141,13 +142,39 @@ seeds, `publication_map.json` upgrades and the overlay's own lists;
 `publication_map.json` is written by a later stage, so a brand-new upgrade is
 picked up on the following run.
 
-**An empty citation cell has three causes and the reader cannot tell them
-apart.** No paper recorded upstream (90 tools), a paper OpenAlex does not index
-(7, mostly Zenodo and Bioconductor package DOIs), and a suppressed platform
-paper. `citation_note` now always says which, and the site renders the blank as a
-dash carrying that reason as a tooltip. Note the 90 include tools that plainly do
-have papers, HOMER among them: that is a curation gap in `seeds.yaml` and
-bio.tools, not a pipeline fault.
+**An empty citation cell has several causes and the reader cannot tell them
+apart.** `citation_note` now always says which, and the site renders the blank as
+a dash carrying that reason as a tooltip. No blank is unexplained.
+
+**To find a missing paper, ask the tool, never the literature.**
+`discover_pubs.py` (`make discover-pubs`) reads each tool's own declared citation:
+the Bioconductor citation page, `CITATION.cff`, `codemeta.json`, the README, then
+the homepage. It never searches by name, because that is what put a text-matching
+library in this catalog under `Match`. Of the 90 tools that had no publication, 24
+were recovered, 32 have no article at all, and the rest are in
+`docs/publication-discovery.md`. Four traps, each of which cost a rerun:
+
+- **A DOI contains dots.** A lazy regex stopping at the first one turned every
+  `10.18129/B9.bioc.<pkg>` into `10.18129/B9`, which then failed the
+  self-citation test, so 31 packages with no paper were reported as recoveries.
+- **`10.18129/B9.bioc.*`, Zenodo and figshare DOIs are deposits, not papers.**
+  A Bioconductor page declaring only its own DOI means "cite the package", which
+  is a permanent answer; Attune's README yields a figshare DOI for model weights.
+  These live in `overlay.yaml: no_article` so nothing re-proposes them.
+- **A citation may be stated in prose with no identifier anywhere.** HOMER is the
+  case that matters: featured, 14,799 citations, and it showed blank. Its page
+  says "cite the following paper: Heinz S, ..." with no DOI or PMID, its title
+  carries no hint of the name, and the citation is on `homer.ucsd.edu/homer/`
+  while the record points at `.../homer/motif/`. Resolving it needs a parent-path
+  walk plus a Crossref reference-string query, gated on the returned title being
+  mostly words from the reference asked about.
+- **A period is not the end of a reference.** Matching `[^.]{0,500}` after "cite"
+  truncated HOMER at "Bertolino E et al." - precisely before the title - leaving a
+  query with authors and no title, which silently found nothing.
+
+The declared citation can also be the wrong thing to record: `rmspc` declares the
+MSPC paper it wraps, and `consensusSeekeR` a t-mixture statistics paper. Read the
+title before promoting a row.
 
 **bio.tools `operation=` and `q=` are fuzzy text search, not ontology lookup.**
 Always quote the value. `q="cis-regulatory"` returns 107 records; unquoted it

@@ -391,6 +391,7 @@ tools:
     description: Suffix-array kernel smoothing to find motifs correlated with a continuous score
     categories: [motif-discovery]
     tags: [bioconductor]
+    doi: 10.1093/bioinformatics/btz198    # SArKS: de novo discovery of gene expression regulatory motif sites
 
   - name: Motif2Site
     url: https://bioconductor.org/packages/Motif2Site/
@@ -403,6 +404,7 @@ tools:
     description: Nucleosome positioning from MNase-seq coverage, with peak calling and scoring
     categories: [nucleosome-chromatin]
     tags: [bioconductor]
+    doi: 10.1093/bioinformatics/btr345    # nucleR: a package for non-parametric nucleosome positioning
 
   - name: nuCpos
     url: https://bioconductor.org/packages/nuCpos/
@@ -433,6 +435,7 @@ tools:
     description: Analysis of single-molecule footprinting data, resolving co-occupancy on one molecule
     categories: [footprinting]
     tags: [bioconductor]
+    doi: 10.1038/s41596-021-00630-1    # Genome-wide quantification of transcription factor binding at sing
 
   - name: ATACseqTFEA
     url: https://bioconductor.org/packages/ATACseqTFEA/
@@ -445,24 +448,28 @@ tools:
     description: Predicts cis-regulatory co-accessibility links from single-cell chromatin accessibility
     categories: [single-cell, regulatory-elements]
     tags: [bioconductor]
+    doi: 10.1016/j.molcel.2018.06.044    # Cicero Predicts cis-Regulatory DNA Interactions from Single-Cell C
 
   - name: epiregulon
     url: https://bioconductor.org/packages/epiregulon/
     description: Gene regulatory network inference from single-cell epigenomic data
     categories: [grn-inference, single-cell]
     tags: [bioconductor]
+    doi: 10.1038/s41467-025-62252-5    # Epiregulon: Single-cell transcription factor activity inference to
 
   - name: RTN
     url: https://bioconductor.org/packages/RTN/
     description: Reconstructs transcriptional regulatory networks and analyses regulons
     categories: [grn-inference]
     tags: [bioconductor]
+    doi: 10.1038/ng.3458    # Regulators of genetic risk of breast cancer identified by integrat
 
   - name: VIPER
     url: https://bioconductor.org/packages/viper/
     description: Infers protein activity from the expression of its regulon
     categories: [grn-inference]
     tags: [bioconductor]
+    doi: 10.1038/ng.3593    # Functional characterization of somatic mutations in cancer using n
 
   - name: magrene
     url: https://bioconductor.org/packages/magrene/
@@ -493,18 +500,21 @@ tools:
     description: Predicts condition-specific enhancers from histone ChIP-seq and links them to genes
     categories: [regulatory-elements]
     tags: [bioconductor]
+    doi: 10.1186/s13059-019-1860-7    # CRUP: a comprehensive framework to predict condition-specific regu
 
   - name: LedPred
     url: https://bioconductor.org/packages/LedPred/
     description: Learns enhancer models from DNA features with a support vector machine
     categories: [regulatory-elements]
     tags: [bioconductor]
+    doi: 10.1093/bioinformatics/btv705    # LedPred: an R/bioconductor package to predict regulatory sequences
 
   - name: DegCre
     url: https://bioconductor.org/packages/DegCre/
     description: Probabilistic association of differentially expressed genes to candidate regulatory elements
     categories: [regulatory-elements]
     tags: [bioconductor]
+    doi: 10.1101/gr.278598.123    # Probabilistic association of differentially expressed genes withci
 
   - name: enhancerHomologSearch
     url: https://bioconductor.org/packages/enhancerHomologSearch/
@@ -517,18 +527,21 @@ tools:
     description: Estimates promoter activity from RNA-seq junction reads
     categories: [regulatory-elements]
     tags: [bioconductor]
+    doi: 10.1016/j.cell.2019.08.018    # A Pan-cancer Transcriptome Analysis Reveals Pervasive Regulation t
 
   - name: icetea
     url: https://bioconductor.org/packages/icetea/
     description: Transcription start site detection and differential TSS usage from cap-enrichment data
     categories: [regulatory-elements]
     tags: [bioconductor]
+    doi: 10.1038/s41467-019-11115-x    # MAPCap allows high-resolution detection and differential expressio
 
   - name: CexoR
     url: https://bioconductor.org/packages/CexoR/
     description: Calls high-resolution protein-DNA interaction sites from ChIP-exo replicates
     categories: [peak-calling]
     tags: [bioconductor]
+    doi: 10.14806/ej.21.0.837    # CexoR: an R/Bioconductor package to uncover high-resolution protei
 
   - name: epigraHMM
     url: https://bioconductor.org/packages/epigraHMM/
@@ -571,6 +584,7 @@ tools:
     description: Summarises and visualises genomic intervals over annotation features
     categories: [peak-annotation]
     tags: [bioconductor]
+    doi: 10.1093/bioinformatics/btu775    # genomation: a toolkit to summarize, annotate and visualize genomic
 
   - name: SEMPLR
     url: https://bioconductor.org/packages/SEMPLR/
@@ -608,6 +622,7 @@ tools:
     description: Sequence-to-function foundation model predicting regulatory activity and variant effects
     categories: [tfbs-prediction, regulatory-elements, regulatory-variants]
     tags: [galaxy]
+    doi: 10.1038/s41586-025-10014-0    # Advancing regulatory variant effect prediction with AlphaGenome
 
   - name: SnapATAC2
     url: https://kzhang.org/SnapATAC2/
@@ -621,6 +636,7 @@ tools:
     description: Fast aligner and preprocessor for ChIP, ATAC and Hi-C chromatin profiling reads
     categories: [peak-calling]
     tags: [galaxy]
+    doi: 10.1038/s41467-021-26865-w    # Fast alignment and preprocessing of chromatin profiles with Chroma
 
   - name: epic2
     url: https://github.com/biocore-ntnu/epic2
@@ -628,6 +644,7 @@ tools:
     description: Peak caller for broad chromatin marks, a fast reimplementation of SICER
     categories: [peak-calling]
     tags: [galaxy]
+    doi: 10.1093/bioinformatics/btz232    # epic2 efficiently finds diffuse domains in ChIP-seq data
 
   - name: Zerone
     url: https://github.com/nanakiksc/zerone
@@ -635,12 +652,14 @@ tools:
     description: Discretises ChIP-seq signal across replicates and flags low-quality experiments
     categories: [peak-calling]
     tags: [galaxy]
+    doi: 10.1093/bioinformatics/btw336    # Zerone: a ChIP-seq discretizer for multiple replicates with built-
 
   - name: MultiGPS
     url: http://mahonylab.org/software/multigps/
     description: Joint analysis of multi-condition ChIP-seq with shared binding-event detection
     categories: [peak-calling]
     tags: [galaxy]
+    doi: 10.1371/journal.pcbi.1003501    # An Integrated Model of Multiple-Condition ChIP-Seq Data
 
   # ---------------------------------------------------------------------
   # Found by pipeline/discover_literature.py (2026-07-28) from the naming

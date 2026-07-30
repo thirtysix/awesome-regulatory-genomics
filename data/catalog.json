@@ -84,6 +84,58 @@
    "registries": "conda|pypi"
   },
   {
+   "id": "homer",
+   "name": "homer",
+   "description": "Discovers sequence motifs in genomic DNA for regulatory element analysis",
+   "categories": [
+    "motif-discovery",
+    "motif-scanning",
+    "regulatory-elements"
+   ],
+   "tier": "core",
+   "homepage": "http://homer.ucsd.edu/homer/motif/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 14799,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1016/j.molcel.2010.05.004",
+   "publication_is_preprint": false,
+   "biotools_id": "homer",
+   "biotools_url": "https://bio.tools/homer",
+   "last_update": "2021-02-02",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Sequence motif discovery"
+   ],
+   "_select_reason": "text:\\bcis-regulatory|\\bregulatory elemen",
+   "_identifiers": [],
+   "_registries": {},
+   "_llm_applied": [
+    "description"
+   ],
+   "featured": "Motif discovery plus peak annotation; the pragmatic first stop for ChIP-seq",
+   "primary_category": "motif-discovery",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "",
+   "registries": ""
+  },
+  {
    "id": "weblogo",
    "name": "WebLogo",
    "description": "Generate sequence logos from aligned sequences via a web application",
@@ -2225,6 +2277,57 @@
    "registries": ""
   },
   {
+   "id": "VIPER",
+   "name": "VIPER",
+   "description": "Infers protein activity from the expression of its regulon",
+   "categories": [
+    "grn-inference"
+   ],
+   "tier": "seed",
+   "homepage": "https://bioconductor.org/packages/viper/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 1079,
+   "citation_note": "",
+   "year": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "publication": "doi:10.1038/ng.3593",
+   "publication_is_preprint": false,
+   "biotools_id": "",
+   "biotools_url": "",
+   "last_update": "",
+   "source": "curated",
+   "tags": [
+    "bioconductor"
+   ],
+   "_operations": [],
+   "_select_reason": "curated seed",
+   "_identifiers": [
+    "doi:10.1038/ng.3593"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/viper/"
+   },
+   "featured": "",
+   "primary_category": "grn-inference",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "",
+   "registries": "bioconductor"
+  },
+  {
    "id": "vulcan",
    "name": "vulcan",
    "description": "Interrogates gene regulatory networks to infer cofactors enriched in differential ChIP-Seq binding signatures",
@@ -2569,6 +2672,58 @@
    "repo_status": "",
    "license_source": "",
    "registries": ""
+  },
+  {
+   "id": "Cicero",
+   "name": "Cicero",
+   "description": "Predicts cis-regulatory co-accessibility links from single-cell chromatin accessibility",
+   "categories": [
+    "regulatory-elements",
+    "single-cell"
+   ],
+   "tier": "seed",
+   "homepage": "https://bioconductor.org/packages/cicero/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 930,
+   "citation_note": "",
+   "year": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "publication": "doi:10.1016/j.molcel.2018.06.044",
+   "publication_is_preprint": false,
+   "biotools_id": "",
+   "biotools_url": "",
+   "last_update": "",
+   "source": "curated",
+   "tags": [
+    "bioconductor"
+   ],
+   "_operations": [],
+   "_select_reason": "curated seed",
+   "_identifiers": [
+    "doi:10.1016/j.molcel.2018.06.044"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/cicero/"
+   },
+   "featured": "",
+   "primary_category": "regulatory-elements",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "",
+   "registries": "bioconductor"
   },
   {
    "id": "consensuspathdb",
@@ -6261,6 +6416,57 @@
    "registries": "docker"
   },
   {
+   "id": "genomation",
+   "name": "genomation",
+   "description": "Summarises and visualises genomic intervals over annotation features",
+   "categories": [
+    "peak-annotation"
+   ],
+   "tier": "seed",
+   "homepage": "https://bioconductor.org/packages/genomation/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 431,
+   "citation_note": "",
+   "year": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "publication": "doi:10.1093/bioinformatics/btu775",
+   "publication_is_preprint": false,
+   "biotools_id": "",
+   "biotools_url": "",
+   "last_update": "",
+   "source": "curated",
+   "tags": [
+    "bioconductor"
+   ],
+   "_operations": [],
+   "_select_reason": "curated seed",
+   "_identifiers": [
+    "doi:10.1093/bioinformatics/btu775"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/genomation/"
+   },
+   "featured": "",
+   "primary_category": "peak-annotation",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "",
+   "registries": "bioconductor"
+  },
+  {
    "id": "tfbstools",
    "name": "TFBSTools",
    "description": "Analyse and manipulate transcription factor binding sites from sequence data",
@@ -9835,6 +10041,57 @@
    "registries": ""
   },
   {
+   "id": "proActiv",
+   "name": "proActiv",
+   "description": "Estimates promoter activity from RNA-seq junction reads",
+   "categories": [
+    "regulatory-elements"
+   ],
+   "tier": "seed",
+   "homepage": "https://bioconductor.org/packages/proActiv/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 271,
+   "citation_note": "",
+   "year": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "publication": "doi:10.1016/j.cell.2019.08.018",
+   "publication_is_preprint": false,
+   "biotools_id": "",
+   "biotools_url": "",
+   "last_update": "",
+   "source": "curated",
+   "tags": [
+    "bioconductor"
+   ],
+   "_operations": [],
+   "_select_reason": "curated seed",
+   "_identifiers": [
+    "doi:10.1016/j.cell.2019.08.018"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/proActiv/"
+   },
+   "featured": "",
+   "primary_category": "regulatory-elements",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "",
+   "registries": "bioconductor"
+  },
+  {
    "id": "interferome",
    "name": "INTERFEROME",
    "description": "Open access database of types I, II and III Interferon regulated genes from expression data sets",
@@ -12175,6 +12432,57 @@
    "registries": ""
   },
   {
+   "id": "RTN",
+   "name": "RTN",
+   "description": "Reconstructs transcriptional regulatory networks and analyses regulons",
+   "categories": [
+    "grn-inference"
+   ],
+   "tier": "seed",
+   "homepage": "https://bioconductor.org/packages/RTN/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 207,
+   "citation_note": "",
+   "year": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "publication": "doi:10.1038/ng.3458",
+   "publication_is_preprint": false,
+   "biotools_id": "",
+   "biotools_url": "",
+   "last_update": "",
+   "source": "curated",
+   "tags": [
+    "bioconductor"
+   ],
+   "_operations": [],
+   "_select_reason": "curated seed",
+   "_identifiers": [
+    "doi:10.1038/ng.3458"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/RTN/"
+   },
+   "featured": "",
+   "primary_category": "grn-inference",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "",
+   "registries": "bioconductor"
+  },
+  {
    "id": "rtnduals",
    "name": "RTNduals",
    "description": "Searches for co-regulatory loops between regulon pairs generated by the RTN package",
@@ -12420,6 +12728,57 @@
    "registries": ""
   },
   {
+   "id": "Chromap",
+   "name": "Chromap",
+   "description": "Fast aligner and preprocessor for ChIP, ATAC and Hi-C chromatin profiling reads",
+   "categories": [
+    "peak-calling"
+   ],
+   "tier": "seed",
+   "homepage": "https://github.com/haowenz/chromap",
+   "repo_url": "https://github.com/haowenz/chromap",
+   "repo_origin": "curated",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 202,
+   "citation_note": "",
+   "year": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "publication": "doi:10.1038/s41467-021-26865-w",
+   "publication_is_preprint": false,
+   "biotools_id": "",
+   "biotools_url": "",
+   "last_update": "",
+   "source": "curated",
+   "tags": [
+    "galaxy"
+   ],
+   "_operations": [],
+   "_select_reason": "curated seed",
+   "_identifiers": [
+    "doi:10.1038/s41467-021-26865-w"
+   ],
+   "_registries": {
+    "conda": "https://anaconda.org/bioconda/chromap"
+   },
+   "featured": "",
+   "primary_category": "peak-calling",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "",
+   "registries": "conda"
+  },
+  {
    "id": "MAPPER",
    "name": "MAPPER",
    "description": "Search engine for computational identification of putative transcription factor binding sites",
@@ -12661,6 +13020,58 @@
    "repo_status": "",
    "license_source": "",
    "registries": ""
+  },
+  {
+   "id": "epic2",
+   "name": "epic2",
+   "description": "Peak caller for broad chromatin marks, a fast reimplementation of SICER",
+   "categories": [
+    "peak-calling"
+   ],
+   "tier": "seed",
+   "homepage": "https://github.com/biocore-ntnu/epic2",
+   "repo_url": "https://github.com/biocore-ntnu/epic2",
+   "repo_origin": "curated",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 194,
+   "citation_note": "",
+   "year": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "publication": "doi:10.1093/bioinformatics/btz232",
+   "publication_is_preprint": false,
+   "biotools_id": "",
+   "biotools_url": "",
+   "last_update": "",
+   "source": "curated",
+   "tags": [
+    "galaxy"
+   ],
+   "_operations": [],
+   "_select_reason": "curated seed",
+   "_identifiers": [
+    "doi:10.1093/bioinformatics/btz232"
+   ],
+   "_registries": {
+    "conda": "https://anaconda.org/bioconda/epic2",
+    "pypi": "https://pypi.org/project/epic2/"
+   },
+   "featured": "",
+   "primary_category": "peak-calling",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "",
+   "registries": "conda|pypi"
   },
   {
    "id": "x2k",
@@ -15763,6 +16174,59 @@
    "registries": ""
   },
   {
+   "id": "AlphaGenome",
+   "name": "AlphaGenome",
+   "description": "Sequence-to-function foundation model predicting regulatory activity and variant effects",
+   "categories": [
+    "tfbs-prediction",
+    "regulatory-elements",
+    "regulatory-variants"
+   ],
+   "tier": "seed",
+   "homepage": "https://github.com/google-deepmind/alphagenome",
+   "repo_url": "https://github.com/google-deepmind/alphagenome",
+   "repo_origin": "curated",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 155,
+   "citation_note": "",
+   "year": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "publication": "doi:10.1038/s41586-025-10014-0",
+   "publication_is_preprint": false,
+   "biotools_id": "",
+   "biotools_url": "",
+   "last_update": "",
+   "source": "curated",
+   "tags": [
+    "galaxy"
+   ],
+   "_operations": [],
+   "_select_reason": "curated seed",
+   "_identifiers": [
+    "doi:10.1038/s41586-025-10014-0"
+   ],
+   "_registries": {
+    "pypi": "https://pypi.org/project/AlphaGenome/"
+   },
+   "featured": "",
+   "primary_category": "tfbs-prediction",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "",
+   "registries": "pypi"
+  },
+  {
    "id": "chromasig",
    "name": "ChromaSig",
    "description": "Finds commonly occurring chromatin signatures in tiling microarray and sequencing data using unsupervised learning",
@@ -18835,6 +19299,67 @@
    "registries": "bioconductor"
   },
   {
+   "id": "nadfinder",
+   "name": "NADfinder",
+   "description": "Normalises, smooths, calls peaks, trims and annotates NAD-seq data",
+   "categories": [
+    "peak-calling"
+   ],
+   "tier": "core",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/NADfinder.html",
+   "repo_url": "https://git.bioconductor.org/packages/NADfinder",
+   "repo_origin": "recorded",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Library"
+   ],
+   "topics": [
+    "Sequencing",
+    "Gene regulation"
+   ],
+   "languages": [
+    "R"
+   ],
+   "license": "GPL-2.0",
+   "maturity": "",
+   "cost": "",
+   "citations": 132,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1101/gr.247072.118",
+   "publication_is_preprint": true,
+   "biotools_id": "nadfinder",
+   "biotools_url": "https://bio.tools/nadfinder",
+   "last_update": "2018-12-10",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Annotation",
+    "Peak detection",
+    "Standardisation and normalisation"
+   ],
+   "_select_reason": "text:\\bpeak[- ]call(er|ing)?\\b|\\bcalls? p",
+   "_identifiers": [],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/NADfinder/"
+   },
+   "_llm_applied": [
+    "description"
+   ],
+   "featured": "",
+   "primary_category": "peak-calling",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "declared",
+   "registries": "bioconductor"
+  },
+  {
    "id": "scmlnet",
    "name": "scMLnet",
    "description": "Infers microenvironmental regulation of gene expression from single-cell RNA sequencing data",
@@ -21485,6 +22010,57 @@
    "repo_status": "",
    "license_source": "declared",
    "registries": ""
+  },
+  {
+   "id": "nucleR",
+   "name": "nucleR",
+   "description": "Nucleosome positioning from MNase-seq coverage, with peak calling and scoring",
+   "categories": [
+    "nucleosome-chromatin"
+   ],
+   "tier": "seed",
+   "homepage": "https://bioconductor.org/packages/nucleR/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 107,
+   "citation_note": "",
+   "year": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "publication": "doi:10.1093/bioinformatics/btr345",
+   "publication_is_preprint": false,
+   "biotools_id": "",
+   "biotools_url": "",
+   "last_update": "",
+   "source": "curated",
+   "tags": [
+    "bioconductor"
+   ],
+   "_operations": [],
+   "_select_reason": "curated seed",
+   "_identifiers": [
+    "doi:10.1093/bioinformatics/btr345"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/nucleR/"
+   },
+   "featured": "",
+   "primary_category": "nucleosome-chromatin",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "",
+   "registries": "bioconductor"
   },
   {
    "id": "sea-archive",
@@ -25753,6 +26329,55 @@
    "repo_status": "",
    "license_source": "declared",
    "registries": "bioconductor"
+  },
+  {
+   "id": "MultiGPS",
+   "name": "MultiGPS",
+   "description": "Joint analysis of multi-condition ChIP-seq with shared binding-event detection",
+   "categories": [
+    "peak-calling"
+   ],
+   "tier": "seed",
+   "homepage": "http://mahonylab.org/software/multigps/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 86,
+   "citation_note": "",
+   "year": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "publication": "doi:10.1371/journal.pcbi.1003501",
+   "publication_is_preprint": false,
+   "biotools_id": "",
+   "biotools_url": "",
+   "last_update": "",
+   "source": "curated",
+   "tags": [
+    "galaxy"
+   ],
+   "_operations": [],
+   "_select_reason": "curated seed",
+   "_identifiers": [
+    "doi:10.1371/journal.pcbi.1003501"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "peak-calling",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "",
+   "registries": ""
   },
   {
    "id": "probis",
@@ -33290,6 +33915,65 @@
    "repo_status": "",
    "license_source": "",
    "registries": ""
+  },
+  {
+   "id": "sponge",
+   "name": "SPONGE",
+   "description": "This package provides methods to efficiently detect competitive endogeneous RNA interactions between two genes",
+   "categories": [
+    "tfbs-prediction"
+   ],
+   "tier": "core",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/SPONGE.html",
+   "repo_url": "https://git.bioconductor.org/packages/SPONGE",
+   "repo_origin": "recorded",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Library"
+   ],
+   "topics": [
+    "Gene expression",
+    "Gene regulation",
+    "Systems biology",
+    "Transcriptomics"
+   ],
+   "languages": [
+    "R"
+   ],
+   "license": "GPL-3.0",
+   "maturity": "",
+   "cost": "",
+   "citations": 59,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1093/bioinformatics/btz314",
+   "publication_is_preprint": false,
+   "biotools_id": "sponge",
+   "biotools_url": "https://bio.tools/sponge",
+   "last_update": "2018-12-10",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Regression analysis",
+    "Transcription factor binding site prediction"
+   ],
+   "_select_reason": "operation:Transcription factor binding site prediction",
+   "_identifiers": [],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/SPONGE/"
+   },
+   "featured": "",
+   "primary_category": "tfbs-prediction",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "declared",
+   "registries": "bioconductor"
   },
   {
    "id": "chip-array",
@@ -44016,6 +44700,57 @@
    "repo_status": "",
    "license_source": "",
    "registries": ""
+  },
+  {
+   "id": "crupR",
+   "name": "crupR",
+   "description": "Predicts condition-specific enhancers from histone ChIP-seq and links them to genes",
+   "categories": [
+    "regulatory-elements"
+   ],
+   "tier": "seed",
+   "homepage": "https://bioconductor.org/packages/crupR/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 38,
+   "citation_note": "",
+   "year": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "publication": "doi:10.1186/s13059-019-1860-7",
+   "publication_is_preprint": false,
+   "biotools_id": "",
+   "biotools_url": "",
+   "last_update": "",
+   "source": "curated",
+   "tags": [
+    "bioconductor"
+   ],
+   "_operations": [],
+   "_select_reason": "curated seed",
+   "_identifiers": [
+    "doi:10.1186/s13059-019-1860-7"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/crupR/"
+   },
+   "featured": "",
+   "primary_category": "regulatory-elements",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "",
+   "registries": "bioconductor"
   },
   {
    "id": "dnaffinity",
@@ -57111,6 +57846,57 @@
    "registries": ""
   },
   {
+   "id": "SingleMoleculeFootprinting",
+   "name": "SingleMoleculeFootprinting",
+   "description": "Analysis of single-molecule footprinting data, resolving co-occupancy on one molecule",
+   "categories": [
+    "footprinting"
+   ],
+   "tier": "seed",
+   "homepage": "https://bioconductor.org/packages/SingleMoleculeFootprinting/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 22,
+   "citation_note": "",
+   "year": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "publication": "doi:10.1038/s41596-021-00630-1",
+   "publication_is_preprint": false,
+   "biotools_id": "",
+   "biotools_url": "",
+   "last_update": "",
+   "source": "curated",
+   "tags": [
+    "bioconductor"
+   ],
+   "_operations": [],
+   "_select_reason": "curated seed",
+   "_identifiers": [
+    "doi:10.1038/s41596-021-00630-1"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/SingleMoleculeFootprinting/"
+   },
+   "featured": "",
+   "primary_category": "footprinting",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "",
+   "registries": "bioconductor"
+  },
+  {
    "id": "tf-marker",
    "name": "TF-Marker",
    "description": "A manually curated database of transcription factors and related markers in human cell and tissue types",
@@ -61652,6 +62438,57 @@
    "registries": ""
   },
   {
+   "id": "icetea",
+   "name": "icetea",
+   "description": "Transcription start site detection and differential TSS usage from cap-enrichment data",
+   "categories": [
+    "regulatory-elements"
+   ],
+   "tier": "seed",
+   "homepage": "https://bioconductor.org/packages/icetea/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 18,
+   "citation_note": "",
+   "year": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "publication": "doi:10.1038/s41467-019-11115-x",
+   "publication_is_preprint": false,
+   "biotools_id": "",
+   "biotools_url": "",
+   "last_update": "",
+   "source": "curated",
+   "tags": [
+    "bioconductor"
+   ],
+   "_operations": [],
+   "_select_reason": "curated seed",
+   "_identifiers": [
+    "doi:10.1038/s41467-019-11115-x"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/icetea/"
+   },
+   "featured": "",
+   "primary_category": "regulatory-elements",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "",
+   "registries": "bioconductor"
+  },
+  {
    "id": "ichip",
    "name": "iChip",
    "description": "Identifies enriched genomic regions in ChIP-chip data using hidden Ising models",
@@ -61702,6 +62539,71 @@
    ],
    "_registries": {
     "bioconductor": "https://bioconductor.org/packages/iChip/"
+   },
+   "_llm_applied": [
+    "description"
+   ],
+   "featured": "",
+   "primary_category": "peak-calling",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "declared",
+   "registries": "bioconductor"
+  },
+  {
+   "id": "intad",
+   "name": "InTAD",
+   "description": "Detects correlation between expressed genes and epigenomic signals within TADs using ChIP-seq data",
+   "categories": [
+    "peak-calling",
+    "nucleosome-chromatin",
+    "chromatin-3d"
+   ],
+   "tier": "core",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/InTAD.html",
+   "repo_url": "https://git.bioconductor.org/packages/InTAD",
+   "repo_origin": "recorded",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Library"
+   ],
+   "topics": [
+    "ChIP-seq",
+    "Epigenetics",
+    "Gene expression",
+    "RNA-seq",
+    "Sequencing"
+   ],
+   "languages": [
+    "R"
+   ],
+   "license": "GPL-2.0",
+   "maturity": "",
+   "cost": "",
+   "citations": 18,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1186/s12859-019-2655-2",
+   "publication_is_preprint": false,
+   "biotools_id": "intad",
+   "biotools_url": "https://bio.tools/intad",
+   "last_update": "2018-12-10",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Prediction and recognition",
+    "Visualisation"
+   ],
+   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
+   "_identifiers": [],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/InTAD/"
    },
    "_llm_applied": [
     "description"
@@ -64708,6 +65610,63 @@
    "repo_status": "",
    "license_source": "declared",
    "registries": ""
+  },
+  {
+   "id": "dmchmm",
+   "name": "DMCHMM",
+   "description": "It is a novel profiling tool for identifying differentially methylated CpG sites using Hidden Markov Model in bisulfite sequencing data.",
+   "categories": [
+    "tfbs-prediction",
+    "dna-methylation"
+   ],
+   "tier": "core",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/DMCHMM.html",
+   "repo_url": "https://github.com/shokoohi/DMCHMM",
+   "repo_origin": "recorded",
+   "repo_stars": 0,
+   "repo_pushed": "2022-04-18",
+   "repo_archived": false,
+   "repo_language": "HTML",
+   "repo_license": "",
+   "tool_type": [
+    "Library"
+   ],
+   "topics": [
+    "Sequencing",
+    "Transcription factors and regulatory sites"
+   ],
+   "languages": [
+    "R"
+   ],
+   "license": "GPL-3.0",
+   "maturity": "",
+   "cost": "",
+   "citations": 16,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1111/biom.12965",
+   "publication_is_preprint": false,
+   "biotools_id": "dmchmm",
+   "biotools_url": "https://bio.tools/dmchmm",
+   "last_update": "2018-12-10",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Methylation analysis"
+   ],
+   "_select_reason": "text:\\bbisulfite\\b|\\bWGBS\\b|\\bRRBS\\b|\\bme",
+   "_identifiers": [],
+   "_registries": {
+    "bioconductor": "http://bioconductor.org/packages/release/bioc/html/DMCHMM.html"
+   },
+   "featured": "",
+   "primary_category": "tfbs-prediction",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "declared",
+   "registries": "bioconductor"
   },
   {
    "id": "epiannotator",
@@ -74928,6 +75887,57 @@
    "registries": ""
   },
   {
+   "id": "Zerone",
+   "name": "Zerone",
+   "description": "Discretises ChIP-seq signal across replicates and flags low-quality experiments",
+   "categories": [
+    "peak-calling"
+   ],
+   "tier": "seed",
+   "homepage": "https://github.com/nanakiksc/zerone",
+   "repo_url": "https://github.com/nanakiksc/zerone",
+   "repo_origin": "curated",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 11,
+   "citation_note": "",
+   "year": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "publication": "doi:10.1093/bioinformatics/btw336",
+   "publication_is_preprint": false,
+   "biotools_id": "",
+   "biotools_url": "",
+   "last_update": "",
+   "source": "curated",
+   "tags": [
+    "galaxy"
+   ],
+   "_operations": [],
+   "_select_reason": "curated seed",
+   "_identifiers": [
+    "doi:10.1093/bioinformatics/btw336"
+   ],
+   "_registries": {
+    "docker": "https://hub.docker.com/r/nanakiksc/zerone"
+   },
+   "featured": "",
+   "primary_category": "peak-calling",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "",
+   "registries": "docker"
+  },
+  {
    "id": "3dgene",
    "name": "3DGene",
    "description": "Predicts and visualises 3D gene conformations in GM12878 cells using e-HiP-HoP",
@@ -75115,6 +76125,57 @@
    "repo_status": "",
    "license_source": "",
    "registries": ""
+  },
+  {
+   "id": "CexoR",
+   "name": "CexoR",
+   "description": "Calls high-resolution protein-DNA interaction sites from ChIP-exo replicates",
+   "categories": [
+    "peak-calling"
+   ],
+   "tier": "seed",
+   "homepage": "https://bioconductor.org/packages/CexoR/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 10,
+   "citation_note": "",
+   "year": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "publication": "doi:10.14806/ej.21.0.837",
+   "publication_is_preprint": false,
+   "biotools_id": "",
+   "biotools_url": "",
+   "last_update": "",
+   "source": "curated",
+   "tags": [
+    "bioconductor"
+   ],
+   "_operations": [],
+   "_select_reason": "curated seed",
+   "_identifiers": [
+    "doi:10.14806/ej.21.0.837"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/CexoR/"
+   },
+   "featured": "",
+   "primary_category": "peak-calling",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "",
+   "registries": "bioconductor"
   },
   {
    "id": "charid",
@@ -77534,6 +78595,58 @@
    "repo_status": "",
    "license_source": "declared",
    "registries": ""
+  },
+  {
+   "id": "epiregulon",
+   "name": "epiregulon",
+   "description": "Gene regulatory network inference from single-cell epigenomic data",
+   "categories": [
+    "grn-inference",
+    "single-cell"
+   ],
+   "tier": "seed",
+   "homepage": "https://bioconductor.org/packages/epiregulon/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 9,
+   "citation_note": "",
+   "year": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "publication": "doi:10.1038/s41467-025-62252-5",
+   "publication_is_preprint": false,
+   "biotools_id": "",
+   "biotools_url": "",
+   "last_update": "",
+   "source": "curated",
+   "tags": [
+    "bioconductor"
+   ],
+   "_operations": [],
+   "_select_reason": "curated seed",
+   "_identifiers": [
+    "doi:10.1038/s41467-025-62252-5"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/epiregulon/"
+   },
+   "featured": "",
+   "primary_category": "grn-inference",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "",
+   "registries": "bioconductor"
   },
   {
    "id": "epixplorer",
@@ -97385,6 +98498,57 @@
    "registries": ""
   },
   {
+   "id": "LedPred",
+   "name": "LedPred",
+   "description": "Learns enhancer models from DNA features with a support vector machine",
+   "categories": [
+    "regulatory-elements"
+   ],
+   "tier": "seed",
+   "homepage": "https://bioconductor.org/packages/LedPred/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 3,
+   "citation_note": "",
+   "year": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "publication": "doi:10.1093/bioinformatics/btv705",
+   "publication_is_preprint": false,
+   "biotools_id": "",
+   "biotools_url": "",
+   "last_update": "",
+   "source": "curated",
+   "tags": [
+    "bioconductor"
+   ],
+   "_operations": [],
+   "_select_reason": "curated seed",
+   "_identifiers": [
+    "doi:10.1093/bioinformatics/btv705"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/LedPred/"
+   },
+   "featured": "",
+   "primary_category": "regulatory-elements",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "",
+   "registries": "bioconductor"
+  },
+  {
    "id": "MASSIF",
    "name": "MASSIF",
    "description": "Links sequence motifs to transcription factors using domain information",
@@ -98137,6 +99301,57 @@
    "repo_status": "",
    "license_source": "",
    "registries": ""
+  },
+  {
+   "id": "sarks",
+   "name": "sarks",
+   "description": "Suffix-array kernel smoothing to find motifs correlated with a continuous score",
+   "categories": [
+    "motif-discovery"
+   ],
+   "tier": "seed",
+   "homepage": "https://bioconductor.org/packages/sarks/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 3,
+   "citation_note": "",
+   "year": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "publication": "doi:10.1093/bioinformatics/btz198",
+   "publication_is_preprint": false,
+   "biotools_id": "",
+   "biotools_url": "",
+   "last_update": "",
+   "source": "curated",
+   "tags": [
+    "bioconductor"
+   ],
+   "_operations": [],
+   "_select_reason": "curated seed",
+   "_identifiers": [
+    "doi:10.1093/bioinformatics/btz198"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/sarks/"
+   },
+   "featured": "",
+   "primary_category": "motif-discovery",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "",
+   "registries": "bioconductor"
   },
   {
    "id": "sbbadger",
@@ -99921,6 +101136,57 @@
    "repo_status": "",
    "license_source": "declared",
    "registries": "docker"
+  },
+  {
+   "id": "DegCre",
+   "name": "DegCre",
+   "description": "Probabilistic association of differentially expressed genes to candidate regulatory elements",
+   "categories": [
+    "regulatory-elements"
+   ],
+   "tier": "seed",
+   "homepage": "https://bioconductor.org/packages/DegCre/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 2,
+   "citation_note": "",
+   "year": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "publication": "doi:10.1101/gr.278598.123",
+   "publication_is_preprint": true,
+   "biotools_id": "",
+   "biotools_url": "",
+   "last_update": "",
+   "source": "curated",
+   "tags": [
+    "bioconductor"
+   ],
+   "_operations": [],
+   "_select_reason": "curated seed",
+   "_identifiers": [
+    "doi:10.1101/gr.278598.123"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/DegCre/"
+   },
+   "featured": "",
+   "primary_category": "regulatory-elements",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "",
+   "registries": "bioconductor"
   },
   {
    "id": "DeltaNeTS",
@@ -108044,57 +109310,6 @@
    "registries": ""
   },
   {
-   "id": "AlphaGenome",
-   "name": "AlphaGenome",
-   "description": "Sequence-to-function foundation model predicting regulatory activity and variant effects",
-   "categories": [
-    "tfbs-prediction",
-    "regulatory-elements",
-    "regulatory-variants"
-   ],
-   "tier": "seed",
-   "homepage": "https://github.com/google-deepmind/alphagenome",
-   "repo_url": "https://github.com/google-deepmind/alphagenome",
-   "repo_origin": "curated",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "no publication recorded",
-   "year": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "publication": "",
-   "publication_is_preprint": false,
-   "biotools_id": "",
-   "biotools_url": "",
-   "last_update": "",
-   "source": "curated",
-   "tags": [
-    "galaxy"
-   ],
-   "_operations": [],
-   "_select_reason": "curated seed",
-   "_identifiers": [],
-   "_registries": {
-    "pypi": "https://pypi.org/project/AlphaGenome/"
-   },
-   "featured": "",
-   "primary_category": "tfbs-prediction",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "",
-   "registries": "pypi"
-  },
-  {
    "id": "annotategenes",
    "name": "annotategenes",
    "description": "Annotates peaks with genomic features and creates a distribution PNG file",
@@ -108297,7 +109512,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -108715,7 +109930,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "citations_total": null,
    "citations_papers": null,
    "year": "",
@@ -109237,55 +110452,6 @@
    "registries": ""
   },
   {
-   "id": "CexoR",
-   "name": "CexoR",
-   "description": "Calls high-resolution protein-DNA interaction sites from ChIP-exo replicates",
-   "categories": [
-    "peak-calling"
-   ],
-   "tier": "seed",
-   "homepage": "https://bioconductor.org/packages/CexoR/",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "no publication recorded",
-   "year": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "publication": "",
-   "publication_is_preprint": false,
-   "biotools_id": "",
-   "biotools_url": "",
-   "last_update": "",
-   "source": "curated",
-   "tags": [
-    "bioconductor"
-   ],
-   "_operations": [],
-   "_select_reason": "curated seed",
-   "_identifiers": [],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/CexoR/"
-   },
-   "featured": "",
-   "primary_category": "peak-calling",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "",
-   "registries": "bioconductor"
-  },
-  {
    "id": "charplant",
    "name": "CharPlant",
    "description": "Predicts open chromatin regions in plants using a deep learning model",
@@ -109511,7 +110677,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "citations_total": null,
    "citations_papers": null,
    "year": "",
@@ -109798,105 +110964,6 @@
    "repo_status": "",
    "license_source": "declared",
    "registries": ""
-  },
-  {
-   "id": "Chromap",
-   "name": "Chromap",
-   "description": "Fast aligner and preprocessor for ChIP, ATAC and Hi-C chromatin profiling reads",
-   "categories": [
-    "peak-calling"
-   ],
-   "tier": "seed",
-   "homepage": "https://github.com/haowenz/chromap",
-   "repo_url": "https://github.com/haowenz/chromap",
-   "repo_origin": "curated",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "no publication recorded",
-   "year": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "publication": "",
-   "publication_is_preprint": false,
-   "biotools_id": "",
-   "biotools_url": "",
-   "last_update": "",
-   "source": "curated",
-   "tags": [
-    "galaxy"
-   ],
-   "_operations": [],
-   "_select_reason": "curated seed",
-   "_identifiers": [],
-   "_registries": {
-    "conda": "https://anaconda.org/bioconda/chromap"
-   },
-   "featured": "",
-   "primary_category": "peak-calling",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "",
-   "registries": "conda"
-  },
-  {
-   "id": "Cicero",
-   "name": "Cicero",
-   "description": "Predicts cis-regulatory co-accessibility links from single-cell chromatin accessibility",
-   "categories": [
-    "regulatory-elements",
-    "single-cell"
-   ],
-   "tier": "seed",
-   "homepage": "https://bioconductor.org/packages/cicero/",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "no publication recorded",
-   "year": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "publication": "",
-   "publication_is_preprint": false,
-   "biotools_id": "",
-   "biotools_url": "",
-   "last_update": "",
-   "source": "curated",
-   "tags": [
-    "bioconductor"
-   ],
-   "_operations": [],
-   "_select_reason": "curated seed",
-   "_identifiers": [],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/cicero/"
-   },
-   "featured": "",
-   "primary_category": "regulatory-elements",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "",
-   "registries": "bioconductor"
   },
   {
    "id": "circe",
@@ -110310,7 +111377,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Candidate rejected - a t-mixture statistics paper, not this package",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -110718,55 +111785,6 @@
    "registries": ""
   },
   {
-   "id": "crupR",
-   "name": "crupR",
-   "description": "Predicts condition-specific enhancers from histone ChIP-seq and links them to genes",
-   "categories": [
-    "regulatory-elements"
-   ],
-   "tier": "seed",
-   "homepage": "https://bioconductor.org/packages/crupR/",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "no publication recorded",
-   "year": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "publication": "",
-   "publication_is_preprint": false,
-   "biotools_id": "",
-   "biotools_url": "",
-   "last_update": "",
-   "source": "curated",
-   "tags": [
-    "bioconductor"
-   ],
-   "_operations": [],
-   "_select_reason": "curated seed",
-   "_identifiers": [],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/crupR/"
-   },
-   "featured": "",
-   "primary_category": "regulatory-elements",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "",
-   "registries": "bioconductor"
-  },
-  {
    "id": "dbscatac",
    "name": "dbscATAC",
    "description": "Annotates single-cell super-enhancers, gene markers, and enhancer-gene interactions from scATAC-seq data across thirteen species",
@@ -111085,55 +112103,6 @@
    "registries": ""
   },
   {
-   "id": "DegCre",
-   "name": "DegCre",
-   "description": "Probabilistic association of differentially expressed genes to candidate regulatory elements",
-   "categories": [
-    "regulatory-elements"
-   ],
-   "tier": "seed",
-   "homepage": "https://bioconductor.org/packages/DegCre/",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "no publication recorded",
-   "year": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "publication": "",
-   "publication_is_preprint": false,
-   "biotools_id": "",
-   "biotools_url": "",
-   "last_update": "",
-   "source": "curated",
-   "tags": [
-    "bioconductor"
-   ],
-   "_operations": [],
-   "_select_reason": "curated seed",
-   "_identifiers": [],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/DegCre/"
-   },
-   "featured": "",
-   "primary_category": "regulatory-elements",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "",
-   "registries": "bioconductor"
-  },
-  {
    "id": "DEScan2",
    "name": "DEScan2",
    "description": "Differential enrichment scan for low-signal ChIP and ATAC regions",
@@ -111156,7 +112125,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -111273,7 +112242,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -111297,63 +112266,6 @@
    "homepage_status": "",
    "repo_status": "",
    "license_source": "",
-   "registries": "bioconductor"
-  },
-  {
-   "id": "dmchmm",
-   "name": "DMCHMM",
-   "description": "It is a novel profiling tool for identifying differentially methylated CpG sites using Hidden Markov Model in bisulfite sequencing data.",
-   "categories": [
-    "tfbs-prediction",
-    "dna-methylation"
-   ],
-   "tier": "core",
-   "homepage": "http://bioconductor.org/packages/release/bioc/html/DMCHMM.html",
-   "repo_url": "https://github.com/shokoohi/DMCHMM",
-   "repo_origin": "recorded",
-   "repo_stars": 0,
-   "repo_pushed": "2022-04-18",
-   "repo_archived": false,
-   "repo_language": "HTML",
-   "repo_license": "",
-   "tool_type": [
-    "Library"
-   ],
-   "topics": [
-    "Sequencing",
-    "Transcription factors and regulatory sites"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "GPL-3.0",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "no publication recorded",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "",
-   "publication": "",
-   "publication_is_preprint": false,
-   "biotools_id": "dmchmm",
-   "biotools_url": "https://bio.tools/dmchmm",
-   "last_update": "2018-12-10",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Methylation analysis"
-   ],
-   "_select_reason": "text:\\bbisulfite\\b|\\bWGBS\\b|\\bRRBS\\b|\\bme",
-   "_identifiers": [],
-   "_registries": {
-    "bioconductor": "http://bioconductor.org/packages/release/bioc/html/DMCHMM.html"
-   },
-   "featured": "",
-   "primary_category": "tfbs-prediction",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "declared",
    "registries": "bioconductor"
   },
   {
@@ -111572,7 +112484,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -111664,56 +112576,6 @@
    "repo_status": "",
    "license_source": "declared",
    "registries": ""
-  },
-  {
-   "id": "epic2",
-   "name": "epic2",
-   "description": "Peak caller for broad chromatin marks, a fast reimplementation of SICER",
-   "categories": [
-    "peak-calling"
-   ],
-   "tier": "seed",
-   "homepage": "https://github.com/biocore-ntnu/epic2",
-   "repo_url": "https://github.com/biocore-ntnu/epic2",
-   "repo_origin": "curated",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "no publication recorded",
-   "year": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "publication": "",
-   "publication_is_preprint": false,
-   "biotools_id": "",
-   "biotools_url": "",
-   "last_update": "",
-   "source": "curated",
-   "tags": [
-    "galaxy"
-   ],
-   "_operations": [],
-   "_select_reason": "curated seed",
-   "_identifiers": [],
-   "_registries": {
-    "conda": "https://anaconda.org/bioconda/epic2",
-    "pypi": "https://pypi.org/project/epic2/"
-   },
-   "featured": "",
-   "primary_category": "peak-calling",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "",
-   "registries": "conda|pypi"
   },
   {
    "id": "EPIGENE",
@@ -111866,7 +112728,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -111887,56 +112749,6 @@
    },
    "featured": "",
    "primary_category": "peak-calling",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "",
-   "registries": "bioconductor"
-  },
-  {
-   "id": "epiregulon",
-   "name": "epiregulon",
-   "description": "Gene regulatory network inference from single-cell epigenomic data",
-   "categories": [
-    "grn-inference",
-    "single-cell"
-   ],
-   "tier": "seed",
-   "homepage": "https://bioconductor.org/packages/epiregulon/",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "no publication recorded",
-   "year": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "publication": "",
-   "publication_is_preprint": false,
-   "biotools_id": "",
-   "biotools_url": "",
-   "last_update": "",
-   "source": "curated",
-   "tags": [
-    "bioconductor"
-   ],
-   "_operations": [],
-   "_select_reason": "curated seed",
-   "_identifiers": [],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/epiregulon/"
-   },
-   "featured": "",
-   "primary_category": "grn-inference",
    "homepage_status": "",
    "repo_status": "",
    "license_source": "",
@@ -111965,7 +112777,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -112327,7 +113139,7 @@
    "maturity": "",
    "cost": "Free of charge",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "citations_total": null,
    "citations_papers": null,
    "year": "",
@@ -112500,7 +113312,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -112563,7 +113375,7 @@
    "maturity": "Emerging",
    "cost": "Free of charge",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Candidate rejected - a Xanthomonas plasmid genome paper, found in a README with no citation context",
    "citations_total": null,
    "citations_papers": null,
    "year": "",
@@ -112726,55 +113538,6 @@
    "repo_status": "",
    "license_source": "",
    "registries": ""
-  },
-  {
-   "id": "genomation",
-   "name": "genomation",
-   "description": "Summarises and visualises genomic intervals over annotation features",
-   "categories": [
-    "peak-annotation"
-   ],
-   "tier": "seed",
-   "homepage": "https://bioconductor.org/packages/genomation/",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "no publication recorded",
-   "year": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "publication": "",
-   "publication_is_preprint": false,
-   "biotools_id": "",
-   "biotools_url": "",
-   "last_update": "",
-   "source": "curated",
-   "tags": [
-    "bioconductor"
-   ],
-   "_operations": [],
-   "_select_reason": "curated seed",
-   "_identifiers": [],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/genomation/"
-   },
-   "featured": "",
-   "primary_category": "peak-annotation",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "",
-   "registries": "bioconductor"
   },
   {
    "id": "Genrich",
@@ -113278,7 +114041,7 @@
    "maturity": "",
    "cost": "Free of charge",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "citations_total": null,
    "citations_papers": null,
    "year": "",
@@ -113378,58 +114141,6 @@
    "registries": "pypi"
   },
   {
-   "id": "homer",
-   "name": "homer",
-   "description": "Discovers sequence motifs in genomic DNA for regulatory element analysis",
-   "categories": [
-    "motif-discovery",
-    "motif-scanning",
-    "regulatory-elements"
-   ],
-   "tier": "core",
-   "homepage": "http://homer.ucsd.edu/homer/motif/",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "no publication recorded",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "",
-   "publication": "",
-   "publication_is_preprint": false,
-   "biotools_id": "homer",
-   "biotools_url": "https://bio.tools/homer",
-   "last_update": "2021-02-02",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Sequence motif discovery"
-   ],
-   "_select_reason": "text:\\bcis-regulatory|\\bregulatory elemen",
-   "_identifiers": [],
-   "_registries": {},
-   "_llm_applied": [
-    "description"
-   ],
-   "featured": "Motif discovery plus peak annotation; the pragmatic first stop for ChIP-seq",
-   "primary_category": "motif-discovery",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "",
-   "registries": ""
-  },
-  {
    "id": "hsmotifdiscover",
    "name": "HSMotifDiscover",
    "description": "Identifies motifs in sequences composed of non-single-letter elements",
@@ -113496,55 +114207,6 @@
    "registries": ""
   },
   {
-   "id": "icetea",
-   "name": "icetea",
-   "description": "Transcription start site detection and differential TSS usage from cap-enrichment data",
-   "categories": [
-    "regulatory-elements"
-   ],
-   "tier": "seed",
-   "homepage": "https://bioconductor.org/packages/icetea/",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "no publication recorded",
-   "year": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "publication": "",
-   "publication_is_preprint": false,
-   "biotools_id": "",
-   "biotools_url": "",
-   "last_update": "",
-   "source": "curated",
-   "tags": [
-    "bioconductor"
-   ],
-   "_operations": [],
-   "_select_reason": "curated seed",
-   "_identifiers": [],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/icetea/"
-   },
-   "featured": "",
-   "primary_category": "regulatory-elements",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "",
-   "registries": "bioconductor"
-  },
-  {
    "id": "impulsede2",
    "name": "ImpulseDE2",
    "description": "It is a differential expression algorithm for longitudinal count data sets which arise in sequencing experiments such as RNA-seq, ChIP-seq, ATAC-seq and DNaseI-seq",
@@ -113600,71 +114262,6 @@
    "featured": "",
    "primary_category": "peak-calling",
    "homepage_status": "dead",
-   "repo_status": "",
-   "license_source": "declared",
-   "registries": "bioconductor"
-  },
-  {
-   "id": "intad",
-   "name": "InTAD",
-   "description": "Detects correlation between expressed genes and epigenomic signals within TADs using ChIP-seq data",
-   "categories": [
-    "peak-calling",
-    "nucleosome-chromatin",
-    "chromatin-3d"
-   ],
-   "tier": "core",
-   "homepage": "http://bioconductor.org/packages/release/bioc/html/InTAD.html",
-   "repo_url": "https://git.bioconductor.org/packages/InTAD",
-   "repo_origin": "recorded",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Library"
-   ],
-   "topics": [
-    "ChIP-seq",
-    "Epigenetics",
-    "Gene expression",
-    "RNA-seq",
-    "Sequencing"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "GPL-2.0",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "no publication recorded",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "",
-   "publication": "",
-   "publication_is_preprint": false,
-   "biotools_id": "intad",
-   "biotools_url": "https://bio.tools/intad",
-   "last_update": "2018-12-10",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Prediction and recognition",
-    "Visualisation"
-   ],
-   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
-   "_identifiers": [],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/InTAD/"
-   },
-   "_llm_applied": [
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "peak-calling",
-   "homepage_status": "",
    "repo_status": "",
    "license_source": "declared",
    "registries": "bioconductor"
@@ -114030,55 +114627,6 @@
    "registries": ""
   },
   {
-   "id": "LedPred",
-   "name": "LedPred",
-   "description": "Learns enhancer models from DNA features with a support vector machine",
-   "categories": [
-    "regulatory-elements"
-   ],
-   "tier": "seed",
-   "homepage": "https://bioconductor.org/packages/LedPred/",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "no publication recorded",
-   "year": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "publication": "",
-   "publication_is_preprint": false,
-   "biotools_id": "",
-   "biotools_url": "",
-   "last_update": "",
-   "source": "curated",
-   "tags": [
-    "bioconductor"
-   ],
-   "_operations": [],
-   "_select_reason": "curated seed",
-   "_identifiers": [],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/LedPred/"
-   },
-   "featured": "",
-   "primary_category": "regulatory-elements",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "",
-   "registries": "bioconductor"
-  },
-  {
    "id": "limbnet",
    "name": "LimbNET",
    "description": "Simulates spatial patterns of gene networks in limb development via a web-based platform",
@@ -114291,7 +114839,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -114587,7 +115135,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -114715,7 +115263,7 @@
    "maturity": "Mature",
    "cost": "Free of charge",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "citations_total": null,
    "citations_papers": null,
    "year": "",
@@ -114842,7 +115390,7 @@
    "maturity": "Mature",
    "cost": "Free of charge",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Candidate rejected - an unrelated Hi-Culfite preprint; MethylDackel has no paper of its own",
    "citations_total": null,
    "citations_papers": null,
    "year": "",
@@ -115212,7 +115760,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -115322,7 +115870,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -115371,7 +115919,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -115537,7 +116085,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -115752,53 +116300,6 @@
    "registries": ""
   },
   {
-   "id": "MultiGPS",
-   "name": "MultiGPS",
-   "description": "Joint analysis of multi-condition ChIP-seq with shared binding-event detection",
-   "categories": [
-    "peak-calling"
-   ],
-   "tier": "seed",
-   "homepage": "http://mahonylab.org/software/multigps/",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "no publication recorded",
-   "year": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "publication": "",
-   "publication_is_preprint": false,
-   "biotools_id": "",
-   "biotools_url": "",
-   "last_update": "",
-   "source": "curated",
-   "tags": [
-    "galaxy"
-   ],
-   "_operations": [],
-   "_select_reason": "curated seed",
-   "_identifiers": [],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "peak-calling",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "",
-   "registries": ""
-  },
-  {
    "id": "MutaNET",
    "name": "MutaNET",
    "description": "Automated analysis of genomic mutations in gene regulatory networks",
@@ -115989,67 +116490,6 @@
    "repo_status": "",
    "license_source": "",
    "registries": ""
-  },
-  {
-   "id": "nadfinder",
-   "name": "NADfinder",
-   "description": "Normalises, smooths, calls peaks, trims and annotates NAD-seq data",
-   "categories": [
-    "peak-calling"
-   ],
-   "tier": "core",
-   "homepage": "http://bioconductor.org/packages/release/bioc/html/NADfinder.html",
-   "repo_url": "https://git.bioconductor.org/packages/NADfinder",
-   "repo_origin": "recorded",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Library"
-   ],
-   "topics": [
-    "Sequencing",
-    "Gene regulation"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "GPL-2.0",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "no publication recorded",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "",
-   "publication": "",
-   "publication_is_preprint": false,
-   "biotools_id": "nadfinder",
-   "biotools_url": "https://bio.tools/nadfinder",
-   "last_update": "2018-12-10",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Annotation",
-    "Peak detection",
-    "Standardisation and normalisation"
-   ],
-   "_select_reason": "text:\\bpeak[- ]call(er|ing)?\\b|\\bcalls? p",
-   "_identifiers": [],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/NADfinder/"
-   },
-   "_llm_applied": [
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "peak-calling",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "declared",
-   "registries": "bioconductor"
   },
   {
    "id": "neco",
@@ -116440,55 +116880,6 @@
    "registries": ""
   },
   {
-   "id": "nucleR",
-   "name": "nucleR",
-   "description": "Nucleosome positioning from MNase-seq coverage, with peak calling and scoring",
-   "categories": [
-    "nucleosome-chromatin"
-   ],
-   "tier": "seed",
-   "homepage": "https://bioconductor.org/packages/nucleR/",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "no publication recorded",
-   "year": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "publication": "",
-   "publication_is_preprint": false,
-   "biotools_id": "",
-   "biotools_url": "",
-   "last_update": "",
-   "source": "curated",
-   "tags": [
-    "bioconductor"
-   ],
-   "_operations": [],
-   "_select_reason": "curated seed",
-   "_identifiers": [],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/nucleR/"
-   },
-   "featured": "",
-   "primary_category": "nucleosome-chromatin",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "",
-   "registries": "bioconductor"
-  },
-  {
    "id": "nuCpos",
    "name": "nuCpos",
    "description": "Predicts nucleosome positioning and rotational setting from sequence alone",
@@ -116511,7 +116902,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -116737,7 +117128,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -117343,7 +117734,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -117364,55 +117755,6 @@
    },
    "featured": "",
    "primary_category": "motif-databases",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "",
-   "registries": "bioconductor"
-  },
-  {
-   "id": "proActiv",
-   "name": "proActiv",
-   "description": "Estimates promoter activity from RNA-seq junction reads",
-   "categories": [
-    "regulatory-elements"
-   ],
-   "tier": "seed",
-   "homepage": "https://bioconductor.org/packages/proActiv/",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "no publication recorded",
-   "year": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "publication": "",
-   "publication_is_preprint": false,
-   "biotools_id": "",
-   "biotools_url": "",
-   "last_update": "",
-   "source": "curated",
-   "tags": [
-    "bioconductor"
-   ],
-   "_operations": [],
-   "_select_reason": "curated seed",
-   "_identifiers": [],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/proActiv/"
-   },
-   "featured": "",
-   "primary_category": "regulatory-elements",
    "homepage_status": "",
    "repo_status": "",
    "license_source": "",
@@ -117441,7 +117783,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -118497,7 +118839,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Candidate rejected - the MSPC method paper that rmspc wraps, not the R package",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -118575,55 +118917,6 @@
    "registries": ""
   },
   {
-   "id": "RTN",
-   "name": "RTN",
-   "description": "Reconstructs transcriptional regulatory networks and analyses regulons",
-   "categories": [
-    "grn-inference"
-   ],
-   "tier": "seed",
-   "homepage": "https://bioconductor.org/packages/RTN/",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "no publication recorded",
-   "year": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "publication": "",
-   "publication_is_preprint": false,
-   "biotools_id": "",
-   "biotools_url": "",
-   "last_update": "",
-   "source": "curated",
-   "tags": [
-    "bioconductor"
-   ],
-   "_operations": [],
-   "_select_reason": "curated seed",
-   "_identifiers": [],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/RTN/"
-   },
-   "featured": "",
-   "primary_category": "grn-inference",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "",
-   "registries": "bioconductor"
-  },
-  {
    "id": "rtrmui",
    "name": "rTRMui",
    "description": "Compute transcriptional regulatory modules via a web interface",
@@ -118683,55 +118976,6 @@
    "homepage_status": "",
    "repo_status": "",
    "license_source": "declared",
-   "registries": "bioconductor"
-  },
-  {
-   "id": "sarks",
-   "name": "sarks",
-   "description": "Suffix-array kernel smoothing to find motifs correlated with a continuous score",
-   "categories": [
-    "motif-discovery"
-   ],
-   "tier": "seed",
-   "homepage": "https://bioconductor.org/packages/sarks/",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "no publication recorded",
-   "year": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "publication": "",
-   "publication_is_preprint": false,
-   "biotools_id": "",
-   "biotools_url": "",
-   "last_update": "",
-   "source": "curated",
-   "tags": [
-    "bioconductor"
-   ],
-   "_operations": [],
-   "_select_reason": "curated seed",
-   "_identifiers": [],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/sarks/"
-   },
-   "featured": "",
-   "primary_category": "motif-discovery",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "",
    "registries": "bioconductor"
   },
   {
@@ -118942,7 +119186,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -119053,7 +119297,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -119229,7 +119473,7 @@
    "maturity": "",
    "cost": "Free of charge",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "citations_total": null,
    "citations_papers": null,
    "year": "",
@@ -119500,55 +119744,6 @@
    "registries": "bioconductor"
   },
   {
-   "id": "SingleMoleculeFootprinting",
-   "name": "SingleMoleculeFootprinting",
-   "description": "Analysis of single-molecule footprinting data, resolving co-occupancy on one molecule",
-   "categories": [
-    "footprinting"
-   ],
-   "tier": "seed",
-   "homepage": "https://bioconductor.org/packages/SingleMoleculeFootprinting/",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "no publication recorded",
-   "year": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "publication": "",
-   "publication_is_preprint": false,
-   "biotools_id": "",
-   "biotools_url": "",
-   "last_update": "",
-   "source": "curated",
-   "tags": [
-    "bioconductor"
-   ],
-   "_operations": [],
-   "_select_reason": "curated seed",
-   "_identifiers": [],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/SingleMoleculeFootprinting/"
-   },
-   "featured": "",
-   "primary_category": "footprinting",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "",
-   "registries": "bioconductor"
-  },
-  {
    "id": "SnapATAC2",
    "name": "SnapATAC2",
    "description": "Single-cell epigenomics analysis for scATAC and multiome at large scale",
@@ -119785,65 +119980,6 @@
    "repo_status": "",
    "license_source": "",
    "registries": "docker"
-  },
-  {
-   "id": "sponge",
-   "name": "SPONGE",
-   "description": "This package provides methods to efficiently detect competitive endogeneous RNA interactions between two genes",
-   "categories": [
-    "tfbs-prediction"
-   ],
-   "tier": "core",
-   "homepage": "http://bioconductor.org/packages/release/bioc/html/SPONGE.html",
-   "repo_url": "https://git.bioconductor.org/packages/SPONGE",
-   "repo_origin": "recorded",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Library"
-   ],
-   "topics": [
-    "Gene expression",
-    "Gene regulation",
-    "Systems biology",
-    "Transcriptomics"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "GPL-3.0",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "no publication recorded",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "",
-   "publication": "",
-   "publication_is_preprint": false,
-   "biotools_id": "sponge",
-   "biotools_url": "https://bio.tools/sponge",
-   "last_update": "2018-12-10",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Regression analysis",
-    "Transcription factor binding site prediction"
-   ],
-   "_select_reason": "operation:Transcription factor binding site prediction",
-   "_identifiers": [],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/SPONGE/"
-   },
-   "featured": "",
-   "primary_category": "tfbs-prediction",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "declared",
-   "registries": "bioconductor"
   },
   {
    "id": "ssvqc",
@@ -120365,7 +120501,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -120424,7 +120560,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "citations_total": null,
    "citations_papers": null,
    "year": "",
@@ -120596,7 +120732,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -120888,7 +121024,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "citations_total": null,
    "citations_papers": null,
    "year": "",
@@ -121487,55 +121623,6 @@
    "registries": "bioconductor"
   },
   {
-   "id": "VIPER",
-   "name": "VIPER",
-   "description": "Infers protein activity from the expression of its regulon",
-   "categories": [
-    "grn-inference"
-   ],
-   "tier": "seed",
-   "homepage": "https://bioconductor.org/packages/viper/",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "no publication recorded",
-   "year": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "publication": "",
-   "publication_is_preprint": false,
-   "biotools_id": "",
-   "biotools_url": "",
-   "last_update": "",
-   "source": "curated",
-   "tags": [
-    "bioconductor"
-   ],
-   "_operations": [],
-   "_select_reason": "curated seed",
-   "_identifiers": [],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/viper/"
-   },
-   "featured": "",
-   "primary_category": "grn-inference",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "",
-   "registries": "bioconductor"
-  },
-  {
    "id": "VplotR",
    "name": "VplotR",
    "description": "V-plots and footprint profiles from paired-end ATAC and MNase data",
@@ -121558,7 +121645,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -121607,7 +121694,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -121656,7 +121743,7 @@
    "maturity": "",
    "cost": "",
    "citations": null,
-   "citation_note": "no publication recorded",
+   "citation_note": "Bioconductor reports the package citing itself; no article exists",
    "year": "",
    "citations_total": null,
    "citations_papers": null,
@@ -121681,55 +121768,6 @@
    "repo_status": "",
    "license_source": "",
    "registries": "bioconductor"
-  },
-  {
-   "id": "Zerone",
-   "name": "Zerone",
-   "description": "Discretises ChIP-seq signal across replicates and flags low-quality experiments",
-   "categories": [
-    "peak-calling"
-   ],
-   "tier": "seed",
-   "homepage": "https://github.com/nanakiksc/zerone",
-   "repo_url": "https://github.com/nanakiksc/zerone",
-   "repo_origin": "curated",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "no publication recorded",
-   "year": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "publication": "",
-   "publication_is_preprint": false,
-   "biotools_id": "",
-   "biotools_url": "",
-   "last_update": "",
-   "source": "curated",
-   "tags": [
-    "galaxy"
-   ],
-   "_operations": [],
-   "_select_reason": "curated seed",
-   "_identifiers": [],
-   "_registries": {
-    "docker": "https://hub.docker.com/r/nanakiksc/zerone"
-   },
-   "featured": "",
-   "primary_category": "peak-calling",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "",
-   "registries": "docker"
   }
  ]
 }

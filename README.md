@@ -38,6 +38,8 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 
 *De novo discovery of sequence motifs from sets of sequences or peaks.*
 
+- **[homer](http://homer.ucsd.edu/homer/motif/)**: Motif discovery plus peak annotation; the pragmatic first stop for ChIP-seq
+  <sub>[bio.tools](https://bio.tools/homer) · [paper](https://doi.org/10.1016/j.molcel.2010.05.004) · `14,799 cites`</sub>
 - **[JASPAR](http://jaspar.genereg.net/)**: The default open motif database; six taxonomic groups, versioned releases
   <sub>[code](https://github.com/asntech/pyjaspar) · [bio.tools](https://bio.tools/jaspar) · [paper](https://pubmed.ncbi.nlm.nih.gov/34850907/) · `38 stars | 2,171 cites, 11,177 across 9 papers`</sub>
 - **[BPNet](https://github.com/kundajelab/bpnet)**: Base-resolution TF binding model that recovers motif syntax
@@ -46,8 +48,6 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
   <sub>[code](https://github.com/ge11232002/TFBSTools) · [bio.tools](https://bio.tools/tfbstools) · [paper](https://pubmed.ncbi.nlm.nih.gov/26794315/) · `37 stars | 430 cites`</sub>
 - **[RSAT suite](http://rsat.eu)**: Long-running suite covering matrix scanning, comparison and enrichment
   <sub>[bio.tools](https://bio.tools/rsat) · [paper](https://pubmed.ncbi.nlm.nih.gov/10641039/) · `180 cites`</sub>
-- **[homer](http://homer.ucsd.edu/homer/motif/)**: Motif discovery plus peak annotation; the pragmatic first stop for ChIP-seq
-  <sub>[bio.tools](https://bio.tools/homer)</sub>
 
 <sub>[+ 181 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=motif-discovery)</sub>
 
@@ -55,14 +55,14 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 
 *Scanning sequences with known matrices; motif enrichment and over-representation.*
 
+- **[homer](http://homer.ucsd.edu/homer/motif/)**: Motif discovery plus peak annotation; the pragmatic first stop for ChIP-seq
+  <sub>[bio.tools](https://bio.tools/homer) · [paper](https://doi.org/10.1016/j.molcel.2010.05.004) · `14,799 cites`</sub>
 - **[FIMO](https://meme-suite.org/meme/tools/fimo)**: Standard scanner for known motifs with calibrated p-values
   <sub>[code](https://github.com/cinquin/MEME) · [paper](https://doi.org/10.1093/bioinformatics/btr064) · `4,996 cites`</sub>
 - **[TFBSTools](http://bioconductor.org/packages/release/bioc/html/TFBSTools.html)**: R interface to motif matrices, scanning and JASPAR
   <sub>[code](https://github.com/ge11232002/TFBSTools) · [bio.tools](https://bio.tools/tfbstools) · [paper](https://pubmed.ncbi.nlm.nih.gov/26794315/) · `37 stars | 430 cites`</sub>
 - **[RSAT suite](http://rsat.eu)**: Long-running suite covering matrix scanning, comparison and enrichment
   <sub>[bio.tools](https://bio.tools/rsat) · [paper](https://pubmed.ncbi.nlm.nih.gov/10641039/) · `180 cites`</sub>
-- **[homer](http://homer.ucsd.edu/homer/motif/)**: Motif discovery plus peak annotation; the pragmatic first stop for ChIP-seq
-  <sub>[bio.tools](https://bio.tools/homer)</sub>
 - **[motifmatchr](https://bioconductor.org/packages/motifmatchr/)**: Fast motif matching over large genomic range sets
   <sub>[code](https://github.com/GreenleafLab/motifmatchr) · [paper](https://doi.org/10.18129/B9.bioc.motifmatchr)</sub>
 
@@ -127,14 +127,14 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 
 *Prediction and annotation of promoters, enhancers and other cis-regulatory elements.*
 
+- **[homer](http://homer.ucsd.edu/homer/motif/)**: Motif discovery plus peak annotation; the pragmatic first stop for ChIP-seq
+  <sub>[bio.tools](https://bio.tools/homer) · [paper](https://doi.org/10.1016/j.molcel.2010.05.004) · `14,799 cites`</sub>
 - **[Enformer](https://github.com/google-deepmind/deepmind-research/tree/master/enformer)**: Long-range sequence-to-expression model; a common baseline for regulatory prediction
   <sub>[code](https://github.com/google-deepmind/deepmind-research) · [paper](https://doi.org/10.1038/s41592-021-01252-x) · `1,344 cites`</sub>
 - **[TFBSTools](http://bioconductor.org/packages/release/bioc/html/TFBSTools.html)**: R interface to motif matrices, scanning and JASPAR
   <sub>[code](https://github.com/ge11232002/TFBSTools) · [bio.tools](https://bio.tools/tfbstools) · [paper](https://pubmed.ncbi.nlm.nih.gov/26794315/) · `37 stars | 430 cites`</sub>
 - **[RSAT suite](http://rsat.eu)**: Long-running suite covering matrix scanning, comparison and enrichment
   <sub>[bio.tools](https://bio.tools/rsat) · [paper](https://pubmed.ncbi.nlm.nih.gov/10641039/) · `180 cites`</sub>
-- **[homer](http://homer.ucsd.edu/homer/motif/)**: Motif discovery plus peak annotation; the pragmatic first stop for ChIP-seq
-  <sub>[bio.tools](https://bio.tools/homer)</sub>
 
 <sub>[+ 482 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=regulatory-elements)</sub>
 

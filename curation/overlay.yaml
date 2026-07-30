@@ -128,6 +128,20 @@ publications:
   poxo: pmid:16845065            # the primary was POCO's paper, a separate catalogued tool
   webmotifs: pmid:17584794       # the primary was a method paper, not the tool's
 
+  # Recovered by pipeline/discover_pubs.py from the tool's own declared
+  # citation, then checked against the paper title. See
+  # docs/publication-discovery.md for the candidates that need a human.
+  dmchmm: doi:10.1111/biom.12965        # A Hidden Markov Model for Identifying Differentially Methylated Sites
+  intad: doi:10.1186/s12859-019-2655-2  # InTAD: chromosome conformation guided analysis of enhancer target genes
+  nadfinder: doi:10.1101/gr.247072.118  # Two contrasting classes of nucleolus-associated domains
+  sponge: doi:10.1093/bioinformatics/btz314  # Large-scale inference of competing endogenous RNA networks
+
+  # HOMER states its citation in prose on homer.ucsd.edu/homer/ with no DOI or
+  # PMID anywhere, and the paper's title carries no hint of the name, so nothing
+  # name-based could ever have found it. Resolved from the reference string and
+  # read before being written here.
+  homer: doi:10.1016/j.molcel.2010.05.004  # Heinz et al. 2010, Simple Combinations of Lineage-Determining TFs
+
 aliases:
   meme_suite: [meme]                 # "MEME" and "MEME Suite" are one tool
   imotifbreakr: [motifbreakr]        # two records for the Bioconductor package
@@ -391,3 +405,54 @@ verified_publications:
 #   preprint/published pairs (DeepCLIP, Chromosight, BAMscale, DAMEfinder, FINET, EAGLE, FastSK, AutoRELACS, ASHIC, bindSC, FINSURF, DriverGroup, TMELand)
 #     the two linked records are the same paper, so there is nothing to aggregate
 # ---------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------
+# no_article - the tool has no paper, and that is the final answer.
+#
+# An empty citation cell used to mean three different things at once. These
+# entries are the settled case: Bioconductor reports the package citing
+# itself (doi:10.18129/B9.bioc.<pkg>), so there is no article to find and no
+# amount of searching will produce one. Recorded so the catalog can say so
+# outright, and so pipeline/discover_pubs.py stops re-proposing them.
+#
+# The second group was examined and rejected: a candidate DOI existed but
+# described something other than the tool. Those reasons matter more than the
+# verdict, because the next run would otherwise find the same wrong paper.
+# ---------------------------------------------------------------------------
+no_article:
+  ATACseqTFEA: Bioconductor reports the package citing itself; no article exists
+  bifet: Bioconductor reports the package citing itself; no article exists
+  chipexoqual: Bioconductor reports the package citing itself; no article exists
+  DEScan2: Bioconductor reports the package citing itself; no article exists
+  dinoR: Bioconductor reports the package citing itself; no article exists
+  enhancerHomologSearch: Bioconductor reports the package citing itself; no article exists
+  epigraHMM: Bioconductor reports the package citing itself; no article exists
+  extraChIPs: Bioconductor reports the package citing itself; no article exists
+  flowtime: Bioconductor reports the package citing itself; no article exists
+  GARFIELD: Bioconductor reports the package citing itself; no article exists
+  heatmaps: Bioconductor reports the package citing itself; no article exists
+  magrene: Bioconductor reports the package citing itself; no article exists
+  MatrixRider: Bioconductor reports the package citing itself; no article exists
+  MetaGxBreast: Bioconductor reports the package citing itself; no article exists
+  Motif2Site: Bioconductor reports the package citing itself; no article exists
+  motifcounter: Bioconductor reports the package citing itself; no article exists
+  MotifDb: Bioconductor reports the package citing itself; no article exists
+  motifTestR: Bioconductor reports the package citing itself; no article exists
+  nuCpos: Bioconductor reports the package citing itself; no article exists
+  pageRank: Bioconductor reports the package citing itself; no article exists
+  planttfhunter: Bioconductor reports the package citing itself; no article exists
+  profileplyr: Bioconductor reports the package citing itself; no article exists
+  segmenter: Bioconductor reports the package citing itself; no article exists
+  SEMPLR: Bioconductor reports the package citing itself; no article exists
+  seqsetvis: Bioconductor reports the package citing itself; no article exists
+  target: Bioconductor reports the package citing itself; no article exists
+  tcseq: Bioconductor reports the package citing itself; no article exists
+  TFARM: Bioconductor reports the package citing itself; no article exists
+  tfutils: Bioconductor reports the package citing itself; no article exists
+  VplotR: Bioconductor reports the package citing itself; no article exists
+  vtpnet: Bioconductor reports the package citing itself; no article exists
+  xcore: Bioconductor reports the package citing itself; no article exists
+  gcmodeller: Candidate rejected - a Xanthomonas plasmid genome paper, found in a README with no citation context
+  methyldackel: Candidate rejected - an unrelated Hi-Culfite preprint; MethylDackel has no paper of its own
+  consensusSeekeR: Candidate rejected - a t-mixture statistics paper, not this package
+  rmspc: Candidate rejected - the MSPC method paper that rmspc wraps, not the R package

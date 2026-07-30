@@ -2,7 +2,7 @@ PY ?= python3
 PORT ?= 8000        # override if 8000 is taken: make serve PORT=8420
 PIPELINE := $(PY) pipeline
 
-.PHONY: all harvest select enrich links build render audit curate refresh clean check test serve llm bench verify-additions repos repos-revalidate discover discover-refresh discover-lit check-links fill-metadata installs
+.PHONY: all harvest select enrich links build render audit curate refresh clean check test serve llm bench verify-additions repos repos-revalidate discover discover-refresh discover-lit discover-pubs check-links fill-metadata installs
 
 ## build everything from the existing sweep (no network beyond enrichment)
 all: select enrich repos links build render audit
@@ -77,6 +77,14 @@ discover-refresh:
 ## docs/literature-discovery.md for review. Every row carries a DOI and a year.
 discover-lit:
 	$(PIPELINE)/discover_literature.py
+
+## find the paper for a tool bio.tools records none for, by reading the tool's
+## OWN declared citation (Bioconductor citation page, CITATION.cff, codemeta,
+## README) rather than searching the literature by name. Writes
+## docs/publication-discovery.md for review; promote rows into overlay.yaml
+## (bio.tools records) or seeds.yaml (curated entries).
+discover-pubs:
+	$(PIPELINE)/discover_pubs.py
 
 ## OPTIONAL: LLM proposals for categories, descriptions and the reject pile.
 ## Needs DEEPINFRA_API_KEY. Writes curation/llm_proposals.yaml for review;
