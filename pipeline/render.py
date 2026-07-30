@@ -930,6 +930,13 @@ function renderStats(rows) {
   });
 }
 
+// Where the tool name links to: its own page, else its repository, else its
+// bio.tools record. Shared with the download so the exported column is the same
+// URL the reader clicked, rather than a second guess at the same rule.
+function toolHref(t) {
+  return t.homepage || t.repo_url || t.biotools_url || '';
+}
+
 function render(){
   const rows = TOOLS.filter(matches).sort(cmp);
   visible = rows;                     // what Download exports, exactly as shown
@@ -937,7 +944,7 @@ function render(){
   $('count').textContent = rows.length + ' of ' + TOOLS.length + ' tools' +
     (state.cats.size ? ' · ' + [...state.cats].map(c=>catLabel[c]).join(', ') : '');
   $('rows').innerHTML = rows.map(t => {
-    const href = t.homepage || t.repo_url || t.biotools_url;
+    const href = toolHref(t);
     const dash = '<span class="no">-</span>';
     // The tool's own page, only where that is not just its repository. The
     // hostname goes in the tooltip: it is the fastest way to see whether a
@@ -1065,6 +1072,11 @@ addEventListener('resize', () => {
 // quoted, so the file stays one record per line for awk, cut and pandas alike.
 const DL_COLS = [
   ['name',        t => t.name],
+  // The URL behind the tool name. Kept distinct from the homepage, repository
+  // and biotools columns below: those record what each field holds, while this
+  // records which of them the name actually resolved to, so a row can be
+  // followed without re-applying the fallback by hand.
+  ['tool_url',    t => toolHref(t)],
   ['categories',  t => t.categories.map(c => catLabel[c] || c).join('; ')],
   ['description', t => t.description],
   ['tool_type',   t => (t.tool_type || []).join('; ')],
