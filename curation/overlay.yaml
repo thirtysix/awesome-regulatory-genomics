@@ -203,6 +203,11 @@ aliases:
 # from memory, and do not machine-generate one.
 # ---------------------------------------------------------------------------
 verified_publications:
+  ceas:
+    why: "both CEAS papers carry the tool's name in the title; bio.tools links only the 2006 one, so the catalog showed 210 while the 2009 paper has 494. Surfaced by a same-title sweep looking for duplicate OpenAlex records: these are not duplicates but two genuine papers for one tool"
+    papers:
+      - pmid:16845068                      #    210  CEAS: cis-regulatory element annotation system (NAR 2006)
+      - pmid:19689956                      #    494  CEAS: cis-regulatory element annotation system (Bioinformatics 2009)
   meme_suite:
     why: "seven MEME papers including the 1994 EM founding paper, whose title does not carry the name; Meta-MEME is a separately catalogued tool"
     papers:

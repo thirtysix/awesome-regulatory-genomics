@@ -191,10 +191,16 @@ progeny's `pmid:29295995` and `doi:10.1038/s41467-017-02391-6` are one work, and
 
 **Even a work id is not the last word: OpenAlex holds duplicates, and a PMID can
 resolve to the wrong copy.** `pmid:22426492` lands on a record carrying an ACM
-conference DOI with 290 citations, while the Nature Methods record of the same
-Segway paper has 663. The identifier was correct and the count still understated
-by 373; linking the DOI sidesteps it. How widespread this is remains unmeasured,
-because the sweep that would answer it was rate-limited (below).
+conference DOI and no journal source, with 290 citations, while the Nature
+Methods record of the same Segway paper has 663 (a third copy has 474). The
+identifier was correct and the count still understated by 373; linking the DOI
+sidesteps it. **This is rare, not systematic**: a same-title sweep over the 300
+most-cited entries, with Segway as a control that had to reproduce, found no
+other confirmed case. Its one hit was a false positive worth knowing about, since
+two genuinely different papers can share a title - CEAS published "CEAS:
+cis-regulatory element annotation system" in NAR 2006 and again in Bioinformatics
+2009, different PMIDs, 210 and 494 citations. Check the year and venue before
+calling two records duplicates.
 
 **A sweep whose control case fails measures nothing.** A first pass reported
 "0 of 120 tools have a higher-cited duplicate", which was OpenAlex returning 429

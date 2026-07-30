@@ -5541,6 +5541,72 @@
    "registries": ""
   },
   {
+   "id": "ceas",
+   "name": "CEAS",
+   "description": "Retrieves repeat-masked genomic sequences and identifies enriched transcription factor binding motifs for ChIP-chip analyses",
+   "categories": [
+    "motif-discovery",
+    "motif-scanning",
+    "peak-annotation"
+   ],
+   "tier": "core",
+   "homepage": "http://ceas.cbi.pku.edu.cn",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Web application"
+   ],
+   "topics": [
+    "Transcription factors and regulatory sites",
+    "ChIP-on-chip",
+    "Mapping",
+    "Gene expression",
+    "Gene transcripts"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 494,
+   "citation_note": "",
+   "citations_total": 704,
+   "citations_papers": 2,
+   "year": "",
+   "publication": "pmid:19689956",
+   "publication_is_preprint": false,
+   "biotools_id": "ceas",
+   "biotools_url": "https://bio.tools/ceas",
+   "last_update": "2024-11-25",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Data retrieval",
+    "Gene-set enrichment analysis",
+    "Transcription factor binding site prediction",
+    "Transcriptional regulatory element prediction"
+   ],
+   "_select_reason": "text:\\btranscription[- ]factor",
+   "_identifiers": [
+    "pmid:16845068"
+   ],
+   "_registries": {},
+   "_llm_applied": [
+    "categories",
+    "description"
+   ],
+   "featured": "",
+   "primary_category": "motif-discovery",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "",
+   "registries": ""
+  },
+  {
    "id": "stamp",
    "name": "STAMP",
    "description": "Explores DNA-binding motif similarities through motif alignment, similarity, and database matching",
@@ -12163,72 +12229,6 @@
    "_registries": {},
    "featured": "",
    "primary_category": "motif-scanning",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "",
-   "registries": ""
-  },
-  {
-   "id": "ceas",
-   "name": "CEAS",
-   "description": "Retrieves repeat-masked genomic sequences and identifies enriched transcription factor binding motifs for ChIP-chip analyses",
-   "categories": [
-    "motif-discovery",
-    "motif-scanning",
-    "peak-annotation"
-   ],
-   "tier": "core",
-   "homepage": "http://ceas.cbi.pku.edu.cn",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Web application"
-   ],
-   "topics": [
-    "Transcription factors and regulatory sites",
-    "ChIP-on-chip",
-    "Mapping",
-    "Gene expression",
-    "Gene transcripts"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 210,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2006",
-   "publication": "pmid:16845068",
-   "publication_is_preprint": false,
-   "biotools_id": "ceas",
-   "biotools_url": "https://bio.tools/ceas",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Data retrieval",
-    "Gene-set enrichment analysis",
-    "Transcription factor binding site prediction",
-    "Transcriptional regulatory element prediction"
-   ],
-   "_select_reason": "text:\\btranscription[- ]factor",
-   "_identifiers": [
-    "pmid:16845068"
-   ],
-   "_registries": {},
-   "_llm_applied": [
-    "categories",
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "motif-discovery",
    "homepage_status": "",
    "repo_status": "",
    "license_source": "",
