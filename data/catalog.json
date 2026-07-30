@@ -869,6 +869,68 @@
    "registries": ""
   },
   {
+   "id": "diffbind",
+   "name": "DiffBind",
+   "description": "Computes differentially bound sites from multiple ChIP-seq experiments using affinity data",
+   "categories": [
+    "peak-calling",
+    "peak-annotation"
+   ],
+   "tier": "core",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/DiffBind.html",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Command-line tool",
+    "Library"
+   ],
+   "topics": [
+    "ChIP-seq"
+   ],
+   "languages": [
+    "R"
+   ],
+   "license": "Artistic-2.0",
+   "maturity": "",
+   "cost": "",
+   "citations": 2408,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2014",
+   "publication": "doi:10.1038/nature10730",
+   "publication_is_preprint": false,
+   "biotools_id": "diffbind",
+   "biotools_url": "https://bio.tools/diffbind",
+   "last_update": "2021-06-30",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Differential binding analysis"
+   ],
+   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
+   "_identifiers": [
+    "pmid:24886537"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/DiffBind/"
+   },
+   "_llm_applied": [
+    "description"
+   ],
+   "featured": "",
+   "primary_category": "peak-calling",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "declared",
+   "registries": "bioconductor"
+  },
+  {
    "id": "HaploReg",
    "name": "HaploReg",
    "description": "Explores annotations of the noncoding genome at variants on haplotype blocks",
@@ -1599,6 +1661,71 @@
    "registries": ""
   },
   {
+   "id": "chippeakanno",
+   "name": "ChIPpeakAnno",
+   "description": "Retrieves sequences around peaks and finds enriched GO terms, nearest genes, exons, miRNAs, or custom features",
+   "categories": [
+    "tfbs-prediction",
+    "peak-calling",
+    "peak-annotation"
+   ],
+   "tier": "core",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/ChIPpeakAnno.html",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Command-line tool",
+    "Library"
+   ],
+   "topics": [
+    "ChIP-seq",
+    "ChIP-on-chip"
+   ],
+   "languages": [
+    "R"
+   ],
+   "license": "GPL-2.0",
+   "maturity": "",
+   "cost": "",
+   "citations": 1291,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2013",
+   "publication": "doi:10.1186/1471-2105-11-237",
+   "publication_is_preprint": false,
+   "biotools_id": "chippeakanno",
+   "biotools_url": "https://bio.tools/chippeakanno",
+   "last_update": "2019-01-10",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Gene-set enrichment analysis",
+    "Sequence annotation"
+   ],
+   "_select_reason": "text:\\bTFBS\\b|\\bTF binding\\b",
+   "_identifiers": [
+    "pmid:23975789"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/ChIPpeakAnno/"
+   },
+   "_llm_applied": [
+    "description"
+   ],
+   "featured": "",
+   "primary_category": "tfbs-prediction",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "declared",
+   "registries": "bioconductor"
+  },
+  {
    "id": "dnabert",
    "name": "DNABERT",
    "description": "Pre-trained bidirectional encoder for genomic DNA sequences to capture contextual nucleotide understanding",
@@ -2325,70 +2452,6 @@
    "homepage_status": "",
    "repo_status": "",
    "license_source": "",
-   "registries": "bioconductor"
-  },
-  {
-   "id": "vulcan",
-   "name": "vulcan",
-   "description": "Interrogates gene regulatory networks to infer cofactors enriched in differential ChIP-Seq binding signatures",
-   "categories": [
-    "peak-calling",
-    "peak-annotation",
-    "grn-inference"
-   ],
-   "tier": "core",
-   "homepage": "http://bioconductor.org/packages/release/bioc/html/vulcan.html",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Library"
-   ],
-   "topics": [
-    "ChIP-seq",
-    "Gene expression",
-    "Systems biology"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "LGPL-3.0",
-   "maturity": "",
-   "cost": "Free of charge",
-   "citations": 1079,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2016",
-   "publication": "pmid:27322546",
-   "publication_is_preprint": false,
-   "biotools_id": "vulcan",
-   "biotools_url": "https://bio.tools/vulcan",
-   "last_update": "2019-01-13",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Enrichment analysis"
-   ],
-   "_select_reason": "text:\\bgene regulatory network|\\bregulato",
-   "_identifiers": [
-    "pmid:27322546"
-   ],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/vulcan/"
-   },
-   "_llm_applied": [
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "peak-calling",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "declared",
    "registries": "bioconductor"
   },
   {
@@ -5220,72 +5283,6 @@
    "repo_status": "",
    "license_source": "",
    "registries": ""
-  },
-  {
-   "id": "gothic",
-   "name": "GOTHiC",
-   "description": "Detects interactions between distal genomic loci in Hi-C data using a cumulative binomial test",
-   "categories": [
-    "regulatory-elements"
-   ],
-   "tier": "core",
-   "homepage": "http://bioconductor.org/packages/release/bioc/html/GOTHiC.html",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Command-line tool",
-    "Library"
-   ],
-   "topics": [
-    "Mapping",
-    "Molecular interactions, pathways and networks",
-    "Epigenetics",
-    "Transcription factors and regulatory sites"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "GPL-3.0",
-   "maturity": "",
-   "cost": "",
-   "citations": 512,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2015",
-   "publication": "pmid:25752748",
-   "publication_is_preprint": false,
-   "biotools_id": "gothic",
-   "biotools_url": "https://bio.tools/gothic",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Transcriptional regulatory element prediction",
-    "cis-regulatory element prediction"
-   ],
-   "_select_reason": "operation:Transcriptional regulatory element prediction",
-   "_identifiers": [
-    "pmid:25752748"
-   ],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/GOTHiC/"
-   },
-   "_llm_applied": [
-    "categories",
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "regulatory-elements",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "declared",
-   "registries": "bioconductor"
   },
   {
    "id": "ipro54-pseknc",
@@ -12483,128 +12480,6 @@
    "registries": "bioconductor"
   },
   {
-   "id": "rtnduals",
-   "name": "RTNduals",
-   "description": "Searches for co-regulatory loops between regulon pairs generated by the RTN package",
-   "categories": [
-    "grn-inference"
-   ],
-   "tier": "core",
-   "homepage": "http://bioconductor.org/packages/release/bioc/html/RTNduals.html",
-   "repo_url": "https://git.bioconductor.org/packages/RTNduals",
-   "repo_origin": "recorded",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Library"
-   ],
-   "topics": [
-    "Gene expression",
-    "Gene regulation"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "Artistic-2.0",
-   "maturity": "",
-   "cost": "",
-   "citations": 207,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2015",
-   "publication": "pmid:26618344",
-   "publication_is_preprint": false,
-   "biotools_id": "rtnduals",
-   "biotools_url": "https://bio.tools/rtnduals",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Pathway or network analysis"
-   ],
-   "_select_reason": "text:\\bgene regulatory network|\\bregulato",
-   "_identifiers": [
-    "pmid:26618344"
-   ],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/RTNduals/"
-   },
-   "_llm_applied": [
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "grn-inference",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "declared",
-   "registries": "bioconductor"
-  },
-  {
-   "id": "rtnsurvival",
-   "name": "RTNsurvival",
-   "description": "Integrates regulons from the RTN package with survival data for analysis",
-   "categories": [
-    "grn-inference"
-   ],
-   "tier": "core",
-   "homepage": "http://bioconductor.org/packages/release/bioc/html/RTNsurvival.html",
-   "repo_url": "https://git.bioconductor.org/packages/RTNsurvival",
-   "repo_origin": "recorded",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Library"
-   ],
-   "topics": [
-    "Gene regulation"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "Artistic-2.0",
-   "maturity": "",
-   "cost": "",
-   "citations": 207,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2015",
-   "publication": "pmid:26618344",
-   "publication_is_preprint": false,
-   "biotools_id": "rtnsurvival",
-   "biotools_url": "https://bio.tools/rtnsurvival",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Gene-set enrichment analysis",
-    "Pathway or network analysis"
-   ],
-   "_select_reason": "text:\\bgene regulatory network|\\bregulato",
-   "_identifiers": [
-    "pmid:26618344"
-   ],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/RTNsurvival/"
-   },
-   "_llm_applied": [
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "grn-inference",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "declared",
-   "registries": "bioconductor"
-  },
-  {
    "id": "p-match",
    "name": "P-Match",
    "description": "Combines weight matrix and pattern matching to identify transcription factor binding sites",
@@ -18126,67 +18001,6 @@
    "registries": ""
   },
   {
-   "id": "moonlightr",
-   "name": "MoonlightR",
-   "description": "The understanding of cancer mechanism requires the identification of genes playing a role in the development of the pathology and the characterization of their role",
-   "categories": [
-    "grn-inference"
-   ],
-   "tier": "core",
-   "homepage": "http://bioconductor.org/packages/release/bioc/html/MoonlightR.html",
-   "repo_url": "https://github.com/torongs82/Moonlight",
-   "repo_origin": "recorded",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Command-line tool",
-    "Library"
-   ],
-   "topics": [
-    "Oncology",
-    "Gene expression",
-    "Gene regulation"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "GPL-3.0",
-   "maturity": "",
-   "cost": "",
-   "citations": 139,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2017",
-   "publication": "pmid:28456671",
-   "publication_is_preprint": false,
-   "biotools_id": "moonlightr",
-   "biotools_url": "https://bio.tools/moonlightr",
-   "last_update": "2019-01-15",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Gene expression analysis",
-    "Gene-set enrichment analysis"
-   ],
-   "_select_reason": "text:\\bgene regulatory network|\\bregulato",
-   "_identifiers": [
-    "pmid:28456671"
-   ],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/MoonlightR/"
-   },
-   "featured": "",
-   "primary_category": "grn-inference",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "declared",
-   "registries": "bioconductor"
-  },
-  {
    "id": "promh",
    "name": "PromH",
    "description": "Predicts TSS, TATA boxes, and TFBS in promoter regions using orthologous sequence pairs",
@@ -21275,135 +21089,6 @@
    "registries": "bioconductor"
   },
   {
-   "id": "tigre",
-   "name": "tigre",
-   "description": "Analyses gene expression time series from single input motif networks using Gaussian process differential equation models",
-   "categories": [
-    "grn-inference"
-   ],
-   "tier": "core",
-   "homepage": "http://bioconductor.org/packages/release/bioc/html/tigre.html",
-   "repo_url": "https://github.com/ahonkela/tigre",
-   "repo_origin": "recorded",
-   "repo_stars": 0,
-   "repo_pushed": "2021-08-04",
-   "repo_archived": false,
-   "repo_language": "R",
-   "repo_license": "",
-   "tool_type": [
-    "Command-line tool",
-    "Library"
-   ],
-   "topics": [
-    "Gene expression",
-    "Microarray experiment",
-    "Transcription factors and regulatory sites"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "GPL-3.0",
-   "maturity": "",
-   "cost": "",
-   "citations": 114,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2008",
-   "publication": "pmid:18689843",
-   "publication_is_preprint": false,
-   "biotools_id": "tigre",
-   "biotools_url": "https://bio.tools/tigre",
-   "last_update": "2018-12-24",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "RNA-seq time series data analysis"
-   ],
-   "_select_reason": "text:\\btranscription[- ]factor",
-   "_identifiers": [
-    "pmid:18689843"
-   ],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/tigre/"
-   },
-   "_llm_applied": [
-    "categories",
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "grn-inference",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "declared",
-   "registries": "bioconductor"
-  },
-  {
-   "id": "chippeakanno",
-   "name": "ChIPpeakAnno",
-   "description": "Retrieves sequences around peaks and finds enriched GO terms, nearest genes, exons, miRNAs, or custom features",
-   "categories": [
-    "tfbs-prediction",
-    "peak-calling",
-    "peak-annotation"
-   ],
-   "tier": "core",
-   "homepage": "http://bioconductor.org/packages/release/bioc/html/ChIPpeakAnno.html",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Command-line tool",
-    "Library"
-   ],
-   "topics": [
-    "ChIP-seq",
-    "ChIP-on-chip"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "GPL-2.0",
-   "maturity": "",
-   "cost": "",
-   "citations": 113,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2013",
-   "publication": "pmid:23975789",
-   "publication_is_preprint": false,
-   "biotools_id": "chippeakanno",
-   "biotools_url": "https://bio.tools/chippeakanno",
-   "last_update": "2019-01-10",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Gene-set enrichment analysis",
-    "Sequence annotation"
-   ],
-   "_select_reason": "text:\\bTFBS\\b|\\bTF binding\\b",
-   "_identifiers": [
-    "pmid:23975789"
-   ],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/ChIPpeakAnno/"
-   },
-   "_llm_applied": [
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "tfbs-prediction",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "declared",
-   "registries": "bioconductor"
-  },
-  {
    "id": "Cistrome-GO",
    "name": "Cistrome-GO",
    "description": "Web server for functional enrichment analysis of transcription factor ChIP-seq peaks",
@@ -23054,6 +22739,72 @@
    "repo_status": "",
    "license_source": "",
    "registries": ""
+  },
+  {
+   "id": "gothic",
+   "name": "GOTHiC",
+   "description": "Detects interactions between distal genomic loci in Hi-C data using a cumulative binomial test",
+   "categories": [
+    "regulatory-elements"
+   ],
+   "tier": "core",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/GOTHiC.html",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Command-line tool",
+    "Library"
+   ],
+   "topics": [
+    "Mapping",
+    "Molecular interactions, pathways and networks",
+    "Epigenetics",
+    "Transcription factors and regulatory sites"
+   ],
+   "languages": [
+    "R"
+   ],
+   "license": "GPL-3.0",
+   "maturity": "",
+   "cost": "",
+   "citations": 102,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1371/journal.pone.0174744",
+   "publication_is_preprint": false,
+   "biotools_id": "gothic",
+   "biotools_url": "https://bio.tools/gothic",
+   "last_update": "2024-11-25",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Transcriptional regulatory element prediction",
+    "cis-regulatory element prediction"
+   ],
+   "_select_reason": "operation:Transcriptional regulatory element prediction",
+   "_identifiers": [
+    "pmid:25752748"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/GOTHiC/"
+   },
+   "_llm_applied": [
+    "categories",
+    "description"
+   ],
+   "featured": "",
+   "primary_category": "regulatory-elements",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "declared",
+   "registries": "bioconductor"
   },
   {
    "id": "p-scan",
@@ -36414,6 +36165,67 @@
    "registries": ""
   },
   {
+   "id": "rtnsurvival",
+   "name": "RTNsurvival",
+   "description": "Integrates regulons from the RTN package with survival data for analysis",
+   "categories": [
+    "grn-inference"
+   ],
+   "tier": "core",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/RTNsurvival.html",
+   "repo_url": "https://git.bioconductor.org/packages/RTNsurvival",
+   "repo_origin": "recorded",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Library"
+   ],
+   "topics": [
+    "Gene regulation"
+   ],
+   "languages": [
+    "R"
+   ],
+   "license": "Artistic-2.0",
+   "maturity": "",
+   "cost": "",
+   "citations": 54,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2015",
+   "publication": "doi:10.1093/bioinformatics/btz229",
+   "publication_is_preprint": false,
+   "biotools_id": "rtnsurvival",
+   "biotools_url": "https://bio.tools/rtnsurvival",
+   "last_update": "2024-11-25",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Gene-set enrichment analysis",
+    "Pathway or network analysis"
+   ],
+   "_select_reason": "text:\\bgene regulatory network|\\bregulato",
+   "_identifiers": [
+    "pmid:26618344"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/RTNsurvival/"
+   },
+   "_llm_applied": [
+    "description"
+   ],
+   "featured": "",
+   "primary_category": "grn-inference",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "declared",
+   "registries": "bioconductor"
+  },
+  {
    "id": "sitecon",
    "name": "SITECON",
    "description": "Detects conformational and physicochemical properties in transcription factor binding sites via a web server",
@@ -38530,68 +38342,6 @@
    "registries": ""
   },
   {
-   "id": "diffbind",
-   "name": "DiffBind",
-   "description": "Computes differentially bound sites from multiple ChIP-seq experiments using affinity data",
-   "categories": [
-    "peak-calling",
-    "peak-annotation"
-   ],
-   "tier": "core",
-   "homepage": "http://bioconductor.org/packages/release/bioc/html/DiffBind.html",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Command-line tool",
-    "Library"
-   ],
-   "topics": [
-    "ChIP-seq"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "Artistic-2.0",
-   "maturity": "",
-   "cost": "",
-   "citations": 49,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2014",
-   "publication": "pmid:24886537",
-   "publication_is_preprint": false,
-   "biotools_id": "diffbind",
-   "biotools_url": "https://bio.tools/diffbind",
-   "last_update": "2021-06-30",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Differential binding analysis"
-   ],
-   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
-   "_identifiers": [
-    "pmid:24886537"
-   ],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/DiffBind/"
-   },
-   "_llm_applied": [
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "peak-calling",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "declared",
-   "registries": "bioconductor"
-  },
-  {
    "id": "EXTREME",
    "name": "EXTREME",
    "description": "Online expectation-maximisation algorithm for motif discovery",
@@ -39947,6 +39697,70 @@
    "repo_status": "",
    "license_source": "",
    "registries": ""
+  },
+  {
+   "id": "vulcan",
+   "name": "vulcan",
+   "description": "Interrogates gene regulatory networks to infer cofactors enriched in differential ChIP-Seq binding signatures",
+   "categories": [
+    "peak-calling",
+    "peak-annotation",
+    "grn-inference"
+   ],
+   "tier": "core",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/vulcan.html",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Library"
+   ],
+   "topics": [
+    "ChIP-seq",
+    "Gene expression",
+    "Systems biology"
+   ],
+   "languages": [
+    "R"
+   ],
+   "license": "LGPL-3.0",
+   "maturity": "",
+   "cost": "Free of charge",
+   "citations": 47,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2016",
+   "publication": "doi:10.1186/s13059-019-1698-z",
+   "publication_is_preprint": false,
+   "biotools_id": "vulcan",
+   "biotools_url": "https://bio.tools/vulcan",
+   "last_update": "2019-01-13",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Enrichment analysis"
+   ],
+   "_select_reason": "text:\\bgene regulatory network|\\bregulato",
+   "_identifiers": [
+    "pmid:27322546"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/vulcan/"
+   },
+   "_llm_applied": [
+    "description"
+   ],
+   "featured": "",
+   "primary_category": "peak-calling",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "declared",
+   "registries": "bioconductor"
   },
   {
    "id": "cnn-peaks",
@@ -59913,6 +59727,67 @@
    "registries": ""
   },
   {
+   "id": "rtnduals",
+   "name": "RTNduals",
+   "description": "Searches for co-regulatory loops between regulon pairs generated by the RTN package",
+   "categories": [
+    "grn-inference"
+   ],
+   "tier": "core",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/RTNduals.html",
+   "repo_url": "https://git.bioconductor.org/packages/RTNduals",
+   "repo_origin": "recorded",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Library"
+   ],
+   "topics": [
+    "Gene expression",
+    "Gene regulation"
+   ],
+   "languages": [
+    "R"
+   ],
+   "license": "Artistic-2.0",
+   "maturity": "",
+   "cost": "",
+   "citations": 20,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2015",
+   "publication": "doi:10.1093/bioinformatics/btz534",
+   "publication_is_preprint": false,
+   "biotools_id": "rtnduals",
+   "biotools_url": "https://bio.tools/rtnduals",
+   "last_update": "2024-11-25",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Pathway or network analysis"
+   ],
+   "_select_reason": "text:\\bgene regulatory network|\\bregulato",
+   "_identifiers": [
+    "pmid:26618344"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/RTNduals/"
+   },
+   "_llm_applied": [
+    "description"
+   ],
+   "featured": "",
+   "primary_category": "grn-inference",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "declared",
+   "registries": "bioconductor"
+  },
+  {
    "id": "snowprint",
    "name": "Snowprint-UI",
    "description": "Predicts DNA-binding sequences of transcription factors to discover ligand-inducible transcriptional regulators",
@@ -79347,6 +79222,67 @@
    "registries": ""
   },
   {
+   "id": "moonlightr",
+   "name": "MoonlightR",
+   "description": "The understanding of cancer mechanism requires the identification of genes playing a role in the development of the pathology and the characterization of their role",
+   "categories": [
+    "grn-inference"
+   ],
+   "tier": "core",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/MoonlightR.html",
+   "repo_url": "https://github.com/torongs82/Moonlight",
+   "repo_origin": "recorded",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Command-line tool",
+    "Library"
+   ],
+   "topics": [
+    "Oncology",
+    "Gene expression",
+    "Gene regulation"
+   ],
+   "languages": [
+    "R"
+   ],
+   "license": "GPL-3.0",
+   "maturity": "",
+   "cost": "",
+   "citations": 9,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2017",
+   "publication": "doi:10.7490/f1000research.1118074.1",
+   "publication_is_preprint": false,
+   "biotools_id": "moonlightr",
+   "biotools_url": "https://bio.tools/moonlightr",
+   "last_update": "2019-01-15",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Gene expression analysis",
+    "Gene-set enrichment analysis"
+   ],
+   "_select_reason": "text:\\bgene regulatory network|\\bregulato",
+   "_identifiers": [
+    "pmid:28456671"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/MoonlightR/"
+   },
+   "featured": "",
+   "primary_category": "grn-inference",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "declared",
+   "registries": "bioconductor"
+  },
+  {
    "id": "MPRAnator",
    "name": "MPRAnator",
    "description": "Designs massively parallel reporter assay experiments via a web interface",
@@ -82401,6 +82337,70 @@
    "repo_status": "",
    "license_source": "declared",
    "registries": ""
+  },
+  {
+   "id": "tigre",
+   "name": "tigre",
+   "description": "Analyses gene expression time series from single input motif networks using Gaussian process differential equation models",
+   "categories": [
+    "grn-inference"
+   ],
+   "tier": "core",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/tigre.html",
+   "repo_url": "https://github.com/ahonkela/tigre",
+   "repo_origin": "recorded",
+   "repo_stars": 0,
+   "repo_pushed": "2021-08-04",
+   "repo_archived": false,
+   "repo_language": "R",
+   "repo_license": "",
+   "tool_type": [
+    "Command-line tool",
+    "Library"
+   ],
+   "topics": [
+    "Gene expression",
+    "Microarray experiment",
+    "Transcription factors and regulatory sites"
+   ],
+   "languages": [
+    "R"
+   ],
+   "license": "GPL-3.0",
+   "maturity": "",
+   "cost": "",
+   "citations": 8,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2008",
+   "publication": "doi:10.1093/bioinformatics/btr057",
+   "publication_is_preprint": false,
+   "biotools_id": "tigre",
+   "biotools_url": "https://bio.tools/tigre",
+   "last_update": "2018-12-24",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "RNA-seq time series data analysis"
+   ],
+   "_select_reason": "text:\\btranscription[- ]factor",
+   "_identifiers": [
+    "pmid:18689843"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/tigre/"
+   },
+   "_llm_applied": [
+    "categories",
+    "description"
+   ],
+   "featured": "",
+   "primary_category": "grn-inference",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "declared",
+   "registries": "bioconductor"
   },
   {
    "id": "transynergy",

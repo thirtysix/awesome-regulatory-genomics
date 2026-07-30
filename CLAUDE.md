@@ -158,6 +158,24 @@ than by excluding a list of journal abbreviations, because that list cannot be
 known to be complete. The same audit found `10.48550/` (arXiv) missing from
 build.py's list while present in resolve_pubs.py's; both now share one function.
 
+**A recorded publication is not a verified one, and nothing was checking.** The
+same cross-check that finds a missing paper also finds a wrong one, by deriving
+the paper independently from the tool's own declared citation and comparing.
+Applied to records that already HAD a publication it corrected eight, moving
+counts in both directions: MoonlightR was carrying "Lateral lumbar interbody
+fusion: a systematic review of complications", a spine-surgery review; vulcan
+was carrying VIPER's paper and 1,079 citations that were not its own; RTNduals
+and RTNsurvival were carrying RTN's; GOTHiC the Hi-C biology paper rather than
+its method paper. Two were badly *under* counted, ChIPpeakAnno by 1,178 and
+DiffBind by 2,359, because the record pointed at a protocol chapter or an
+application paper instead of the tool's own.
+
+When comparing a recorded identifier with a derived one, **compare works, not
+strings.** A PMID and a DOI for the same paper look like a disagreement:
+progeny's `pmid:29295995` and `doi:10.1038/s41467-017-02391-6` are one work, and
+roughly half of the apparent conflicts in the first pass were this. Resolve both
+sides through OpenAlex before believing a mismatch.
+
 **To find a missing paper, ask the tool, never the literature.**
 `discover_pubs.py` (`make discover-pubs`) reads each tool's own declared citation:
 the Bioconductor citation page, `CITATION.cff`, `codemeta.json`, the README, then

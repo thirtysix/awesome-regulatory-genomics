@@ -142,6 +142,24 @@ publications:
   # read before being written here.
   homer: doi:10.1016/j.molcel.2010.05.004  # Heinz et al. 2010, Simple Combinations of Lineage-Determining TFs
 
+  # Found by cross-checking records that already HAD a publication against what
+  # each tool declares for itself. Nothing had flagged these, because nothing
+  # ever compared the recorded paper to the tool. Counts move in both
+  # directions; three of these tools were carrying another work's citations.
+  moonlightr: doi:10.7490/f1000research.1118074.1  # was a spine-surgery review, "Lateral lumbar interbody fusion"
+  vulcan: doi:10.1186/s13059-019-1698-z    # was VIPER's paper, crediting VULCAN with 1,079 citations
+  rtnduals: doi:10.1093/bioinformatics/btz534   # was RTN's paper rather than this package's
+  rtnsurvival: doi:10.1093/bioinformatics/btz229  # was RTN's paper rather than this package's
+  gothic: doi:10.1371/journal.pone.0174744  # was the Hi-C biology paper, not the GOTHiC method paper
+  tigre: doi:10.1093/bioinformatics/btr057  # was the Gaussian-process method, not the package
+  chippeakanno: doi:10.1186/1471-2105-11-237  # was a protocol chapter; the package paper has 1,291
+  # DiffBind carried "VAV3 mediates resistance to breast cancer endocrine
+  # therapy", an application paper. Bioconductor declares Ross-Innes et al. 2012
+  # instead, which is a biology paper the software was written for rather than a
+  # software paper; that is the maintainer's stated citation, and it is the same
+  # judgement already applied to RTN. Nature version, not the RECOMB chapter.
+  diffbind: doi:10.1038/nature10730
+
 aliases:
   meme_suite: [meme]                 # "MEME" and "MEME Suite" are one tool
   imotifbreakr: [motifbreakr]        # two records for the Bioconductor package
