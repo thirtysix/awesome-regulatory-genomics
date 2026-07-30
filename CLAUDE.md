@@ -173,8 +173,24 @@ application paper instead of the tool's own.
 When comparing a recorded identifier with a derived one, **compare works, not
 strings.** A PMID and a DOI for the same paper look like a disagreement:
 progeny's `pmid:29295995` and `doi:10.1038/s41467-017-02391-6` are one work, and
-roughly half of the apparent conflicts in the first pass were this. Resolve both
-sides through OpenAlex before believing a mismatch.
+14 of 50 apparent conflicts were exactly this.
+
+**Even a work id is not the last word: OpenAlex holds duplicates, and a PMID can
+resolve to the wrong copy.** `pmid:22426492` lands on a record carrying an ACM
+conference DOI with 290 citations, while the Nature Methods record of the same
+Segway paper has 663. The identifier was correct and the count still understated
+by 373; linking the DOI sidesteps it. How widespread this is remains unmeasured,
+because the sweep that would answer it was rate-limited (below).
+
+**A sweep whose control case fails measures nothing.** A first pass reported
+"0 of 120 tools have a higher-cited duplicate", which was OpenAlex returning 429
+to every request while the helper swallowed the error as an empty result. The
+same shape as the link checker that once reported 152 broken DOIs, 151 of which
+were rate limiting. Put a known-positive control in any sweep like this and
+abort rather than report a rate when it does not reproduce. Note also that this
+is where the "never cache a failure as 0" rule earns itself: six DOIs came back
+empty under throttling and were left absent, so a later retry filled them in
+rather than freezing six wrong zeros into the catalog.
 
 **To find a missing paper, ask the tool, never the literature.**
 `discover_pubs.py` (`make discover-pubs`) reads each tool's own declared citation:

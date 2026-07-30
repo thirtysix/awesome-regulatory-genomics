@@ -311,7 +311,7 @@ Two design decisions are worth stating, because they are where most tool tables 
 - **1266 (65%) have a website of their own**, meaning a project page, web server or database front end that is not just their source repository. The rest live on a code host alone. The catalog site shows this as a sortable *Site* column, so "web-only resource" and "code, no documentation site" are both answerable questions.
 - **412 can be installed from a package registry** (Bioconductor, CRAN, PyPI, conda or Docker), shown as a sortable *Install* column. "Can I install this today?" is a more useful maintenance signal than a star count, and it is not a question bio.tools answers. A package is only linked when its description agrees with the tool's, never on a matching name: bioconda's `medusa` is a genome scaffolder, and this catalog's MEDUSA is a motif model.
 - **130 links are known to be dead** and are struck through on the catalog site rather than quietly left to disappoint. Every homepage is checked (`make check-links`), which matters because nearly half this catalog has no repository, only a homepage, and academic URLs rot. Only a 404 or 410 counts: a timeout is as often a slow institutional host as a departed one, and 429 means the server is up and busy. The full grading is in [`docs/homepage-check.md`](docs/homepage-check.md).
-- **1810 have a publication year**, recovered from OpenAlex where the registry did not record one.
+- **1804 have a publication year**, recovered from OpenAlex where the registry did not record one.
 - **19 tools are featured** in the curated sections above; the rest are in the [full catalog](https://thirtysix.github.io/awesome-regulatory-genomics/).
 
 Honest limitations:

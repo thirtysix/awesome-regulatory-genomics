@@ -92,9 +92,15 @@ def dois_in(text: str) -> list[str]:
     """
     out, seen = [], set()
     for raw in DOI_RE.findall(text or ""):
-        d = raw.rstrip('.,;:)]}"\'>').rstrip(")")
-        # cut at a character that cannot occur mid-DOI in this corpus
-        d = re.split(r"[<>|\\]", d)[0]
+        # Cut at characters that cannot occur inside a DOI. Markdown is why:
+        # `[10.1002/ijc.34666](https://doi.org/10.1002/ijc.34666)` otherwise
+        # yields the whole link as one "DOI".
+        d = re.split(r"[<>|\\\[\]`\"'*]", raw)[0].rstrip(".,;:}")
+        # Parentheses cannot simply be cut: legacy Elsevier DOIs contain them
+        # (10.1016/S0168-1702(00)00210-0), and mangling one is what produced a
+        # cache key that could never resolve. Drop only unbalanced trailing ones.
+        while d.endswith(")") and d.count("(") < d.count(")"):
+            d = d[:-1].rstrip(".,;:}")
         if not d or len(d) > 60 or d.lower() in seen:
             continue
         seen.add(d.lower())

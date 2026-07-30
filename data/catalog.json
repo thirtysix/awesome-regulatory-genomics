@@ -3658,6 +3658,69 @@
    "registries": ""
   },
   {
+   "id": "segway",
+   "name": "Segway",
+   "description": "Analyzes multiple tracks of functional genomics data at 1-bp resolution using a dynamic Bayesian network",
+   "categories": [
+    "nucleosome-chromatin"
+   ],
+   "tier": "core",
+   "homepage": "http://segway.hoffmanlab.org/",
+   "repo_url": "https://github.com/hoffmangroup/segway",
+   "repo_origin": "recorded",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Command-line tool"
+   ],
+   "topics": [
+    "Functional genomics",
+    "Epigenomics"
+   ],
+   "languages": [
+    "Python"
+   ],
+   "license": "GPL-2.0",
+   "maturity": "Mature",
+   "cost": "Free of charge",
+   "citations": 663,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2012",
+   "publication": "doi:10.1038/nmeth.1937",
+   "publication_is_preprint": false,
+   "biotools_id": "segway",
+   "biotools_url": "https://bio.tools/segway",
+   "last_update": "2024-11-25",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Clustering",
+    "Genome annotation"
+   ],
+   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
+   "_identifiers": [
+    "pmid:22426492",
+    "pmid:23221638"
+   ],
+   "_registries": {
+    "pypi": "https://pypi.org/project/segway/"
+   },
+   "_llm_applied": [
+    "description"
+   ],
+   "featured": "",
+   "primary_category": "nucleosome-chromatin",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "declared",
+   "registries": "pypi"
+  },
+  {
    "id": "arboreto",
    "name": "Arboreto",
    "description": "Infers gene regulatory networks from expression data efficiently and scalably",
@@ -9365,69 +9428,6 @@
    "repo_status": "",
    "license_source": "declared",
    "registries": "bioconductor"
-  },
-  {
-   "id": "segway",
-   "name": "Segway",
-   "description": "Analyzes multiple tracks of functional genomics data at 1-bp resolution using a dynamic Bayesian network",
-   "categories": [
-    "nucleosome-chromatin"
-   ],
-   "tier": "core",
-   "homepage": "http://segway.hoffmanlab.org/",
-   "repo_url": "https://github.com/hoffmangroup/segway",
-   "repo_origin": "recorded",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Command-line tool"
-   ],
-   "topics": [
-    "Functional genomics",
-    "Epigenomics"
-   ],
-   "languages": [
-    "Python"
-   ],
-   "license": "GPL-2.0",
-   "maturity": "Mature",
-   "cost": "Free of charge",
-   "citations": 290,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2012",
-   "publication": "pmid:22426492",
-   "publication_is_preprint": false,
-   "biotools_id": "segway",
-   "biotools_url": "https://bio.tools/segway",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Clustering",
-    "Genome annotation"
-   ],
-   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
-   "_identifiers": [
-    "pmid:22426492",
-    "pmid:23221638"
-   ],
-   "_registries": {
-    "pypi": "https://pypi.org/project/segway/"
-   },
-   "_llm_applied": [
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "nucleosome-chromatin",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "declared",
-   "registries": "pypi"
   },
   {
    "id": "eukaryotic_linear_motif",
@@ -28267,6 +28267,72 @@
    "registries": "pypi"
   },
   {
+   "id": "bindsc",
+   "name": "bindSC",
+   "description": "Integrates single-cell multi-omic data using bi-order analysis for transcriptomics and epigenomics",
+   "categories": [
+    "single-cell"
+   ],
+   "tier": "core",
+   "homepage": "https://github.com/KChen-lab/bindSC",
+   "repo_url": "https://github.com/KChen-lab/bindSC",
+   "repo_origin": "recorded",
+   "repo_stars": 41,
+   "repo_pushed": "2023-08-23",
+   "repo_archived": false,
+   "repo_language": "R",
+   "repo_license": "GPL-3.0",
+   "tool_type": [
+    "Library"
+   ],
+   "topics": [
+    "Transcriptomics",
+    "Cell biology",
+    "Transcription factors and regulatory sites",
+    "Epigenomics",
+    "Chromosome conformation capture"
+   ],
+   "languages": [
+    "R"
+   ],
+   "license": "GPL-3.0",
+   "maturity": "",
+   "cost": "",
+   "citations": 75,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1186/s13059-022-02679-x",
+   "publication_is_preprint": false,
+   "biotools_id": "bindsc",
+   "biotools_url": "https://bio.tools/bindsc",
+   "last_update": "2021-02-04",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Expression analysis",
+    "Neurite measurement",
+    "Standardisation and normalisation"
+   ],
+   "_select_reason": "text:\\bpromoter\\b|\\benhancer\\b|\\bsuper-?e",
+   "_identifiers": [
+    "doi:10.21203/RS.3.RS-126986/V1",
+    "doi:10.1101/2020.12.11.422014"
+   ],
+   "_registries": {},
+   "_llm_applied": [
+    "categories",
+    "description"
+   ],
+   "featured": "",
+   "primary_category": "single-cell",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "declared",
+   "registries": ""
+  },
+  {
    "id": "vannoportal",
    "name": "VannoPortal",
    "description": "Collects and integrates genome-wide variant annotations and prediction scores from multiple biological domains",
@@ -39890,6 +39956,68 @@
    ],
    "featured": "",
    "primary_category": "regulatory-elements",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "",
+   "registries": ""
+  },
+  {
+   "id": "gpsa",
+   "name": "GPSAdb 2.0",
+   "description": "Provides transcriptomic data from gene perturbations in human cell lines to explore gene function and regulatory networks",
+   "categories": [
+    "grn-inference"
+   ],
+   "tier": "core",
+   "homepage": "https://www.gpsadb.com/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [
+    "Molecular interactions, pathways and networks",
+    "Genetic variation",
+    "RNA-Seq",
+    "Transcriptomics",
+    "Endocrinology and metabolism"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 46,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1093/nar/gkac1066",
+   "publication_is_preprint": false,
+   "biotools_id": "gpsa",
+   "biotools_url": "https://bio.tools/gpsa",
+   "last_update": "2026-02-22",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Differential gene expression profiling",
+    "Gene regulatory network analysis",
+    "Gene-set enrichment analysis",
+    "Principal component visualisation",
+    "Regression analysis"
+   ],
+   "_select_reason": "text:\\bgene regulatory network|\\bregulato",
+   "_identifiers": [
+    "pmid:40104737"
+   ],
+   "_registries": {},
+   "_llm_applied": [
+    "description"
+   ],
+   "featured": "",
+   "primary_category": "grn-inference",
    "homepage_status": "",
    "repo_status": "",
    "license_source": "",
@@ -72714,6 +72842,68 @@
    "registries": ""
   },
   {
+   "id": "metaboverse",
+   "name": "Metaboverse",
+   "description": "Automated exploration and contextualization of metabolic data",
+   "categories": [
+    "grn-inference"
+   ],
+   "tier": "core",
+   "homepage": "https://github.com/Metaboverse/",
+   "repo_url": "https://github.com/Metaboverse/metaboverse",
+   "repo_origin": "recorded",
+   "repo_stars": 42,
+   "repo_pushed": "2025-03-24",
+   "repo_archived": false,
+   "repo_language": "JavaScript",
+   "repo_license": "MIT",
+   "tool_type": [
+    "Command-line tool",
+    "Desktop application"
+   ],
+   "topics": [
+    "Endocrinology and metabolism",
+    "Molecular interactions, pathways and networks",
+    "Proteomics",
+    "Metabolomics",
+    "Small molecules"
+   ],
+   "languages": [
+    "JavaScript"
+   ],
+   "license": "GPL-3.0",
+   "maturity": "",
+   "cost": "",
+   "citations": 12,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1038/s41556-023-01117-9",
+   "publication_is_preprint": false,
+   "biotools_id": "metaboverse",
+   "biotools_url": "https://bio.tools/metaboverse",
+   "last_update": "2021-02-22",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Gene regulatory network analysis",
+    "Metabolic network modelling",
+    "Network visualisation"
+   ],
+   "_select_reason": "operation:Gene regulatory network analysis",
+   "_identifiers": [
+    "doi:10.1101/2020.06.25.171850"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "grn-inference",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "declared",
+   "registries": ""
+  },
+  {
    "id": "metare",
    "name": "metaRE",
    "description": "Discovers sequence motifs by meta-analysing microarray and RNA-Seq data",
@@ -73786,6 +73976,78 @@
    "featured": "",
    "primary_category": "peak-calling",
    "homepage_status": "",
+   "repo_status": "",
+   "license_source": "declared",
+   "registries": ""
+  },
+  {
+   "id": "aimodules",
+   "name": "AIModules",
+   "description": "Finds transcription factor binding sites and modules on DNA using own matrices or JASPAR",
+   "categories": [
+    "motif-discovery",
+    "motif-scanning",
+    "tfbs-prediction",
+    "peak-calling"
+   ],
+   "tier": "core",
+   "homepage": "https://bioinfo-wuerz.de/aimodules/",
+   "repo_url": "https://github.com/muharrem-aydinli/AIModules",
+   "repo_origin": "recorded",
+   "repo_stars": 1,
+   "repo_pushed": "2024-07-25",
+   "repo_archived": false,
+   "repo_language": "C",
+   "repo_license": "",
+   "tool_type": [
+    "Web application",
+    "Desktop application"
+   ],
+   "topics": [
+    "Transcription factors and regulatory sites",
+    "Gene transcripts",
+    "Functional, regulatory and non-coding RNA",
+    "ChIP-seq",
+    "Model organisms"
+   ],
+   "languages": [
+    "Java",
+    "JavaScript",
+    "C",
+    "Python"
+   ],
+   "license": "GPL-2.0",
+   "maturity": "",
+   "cost": "Free of charge",
+   "citations": 11,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1038/s41598-022-21732-0",
+   "publication_is_preprint": false,
+   "biotools_id": "aimodules",
+   "biotools_url": "https://bio.tools/aimodules",
+   "last_update": "2022-06-08",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Sequence motif discovery",
+    "Sequence motif recognition",
+    "Transcription factor binding site prediction",
+    "Visualisation"
+   ],
+   "_select_reason": "text:\\btranscription[- ]factor",
+   "_identifiers": [
+    "doi:10.21203/RS.3.RS-1284479/V1"
+   ],
+   "_registries": {},
+   "_llm_applied": [
+    "description"
+   ],
+   "featured": "",
+   "primary_category": "motif-discovery",
+   "homepage_status": "dead",
    "repo_status": "",
    "license_source": "declared",
    "registries": ""
@@ -81628,6 +81890,80 @@
    "registries": "bioconductor"
   },
   {
+   "id": "oncoenrichr",
+   "name": "oncoEnrichR",
+   "description": "Interrogate human gene sets functionally in the context of cancer using an R package",
+   "categories": [
+    "grn-inference"
+   ],
+   "tier": "core",
+   "homepage": "https://github.com/sigven/oncoEnrichR",
+   "repo_url": "https://github.com/sigven/oncoEnrichR",
+   "repo_origin": "recorded",
+   "repo_stars": 55,
+   "repo_pushed": "2026-05-31",
+   "repo_archived": false,
+   "repo_language": "R",
+   "repo_license": "NOASSERTION",
+   "tool_type": [
+    "Web application",
+    "Command-line tool"
+   ],
+   "topics": [
+    "Functional genomics",
+    "Data identity and mapping",
+    "Bioinformatics",
+    "Data visualisation",
+    "Data integration and warehousing",
+    "Copy number variation",
+    "DNA mutation",
+    "Oncology",
+    "Pharmacogenomics"
+   ],
+   "languages": [
+    "R"
+   ],
+   "license": "MIT",
+   "maturity": "Mature",
+   "cost": "Free of charge",
+   "citations": 8,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1002/ijc.34666",
+   "publication_is_preprint": false,
+   "biotools_id": "oncoenrichr",
+   "biotools_url": "https://bio.tools/oncoenrichr",
+   "last_update": "2022-04-08",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Expression correlation analysis",
+    "Gene functional annotation",
+    "Gene regulatory network prediction",
+    "Gene-set enrichment analysis",
+    "Heat map generation",
+    "ID mapping",
+    "Network visualisation",
+    "Protein interaction network analysis"
+   ],
+   "_select_reason": "operation:Gene regulatory network prediction",
+   "_identifiers": [
+    "doi:10.48550/arXiv.2107.13247"
+   ],
+   "_registries": {},
+   "_llm_applied": [
+    "description"
+   ],
+   "featured": "",
+   "primary_category": "grn-inference",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "declared",
+   "registries": ""
+  },
+  {
    "id": "pegr",
    "name": "PEGR",
    "description": "Logs metadata for samples and sequencing experiments, manages data processing workflows, and provides reporting and visualization",
@@ -82458,6 +82794,69 @@
    "homepage_status": "",
    "repo_status": "",
    "license_source": "repository",
+   "registries": ""
+  },
+  {
+   "id": "Tulip",
+   "name": "Tulip",
+   "description": "Simulates ChIP-seq data using statistical models of experimental steps",
+   "categories": [
+    "peak-calling",
+    "nucleosome-chromatin"
+   ],
+   "tier": "core",
+   "homepage": "https://github.com/gymreklab/Tulip",
+   "repo_url": "https://github.com/gymreklab/Tulip",
+   "repo_origin": "recorded",
+   "repo_stars": 14,
+   "repo_pushed": "2023-03-13",
+   "repo_archived": false,
+   "repo_language": "Jupyter Notebook",
+   "repo_license": "GPL-3.0",
+   "tool_type": [
+    "Command-line tool"
+   ],
+   "topics": [
+    "ChIP-seq",
+    "Gene transcripts",
+    "Epigenomics"
+   ],
+   "languages": [
+    "C++"
+   ],
+   "license": "GPL-3.0",
+   "maturity": "Mature",
+   "cost": "Free of charge",
+   "citations": 8,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1186/s12859-021-04097-5",
+   "publication_is_preprint": false,
+   "biotools_id": "Tulip",
+   "biotools_url": "https://bio.tools/Tulip",
+   "last_update": "2020-06-16",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Peak calling",
+    "Quantification",
+    "Read binning"
+   ],
+   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
+   "_identifiers": [
+    "doi:10.1101/624486"
+   ],
+   "_registries": {},
+   "_llm_applied": [
+    "description"
+   ],
+   "featured": "",
+   "primary_category": "peak-calling",
+   "homepage_status": "",
+   "repo_status": "",
+   "license_source": "declared",
    "registries": ""
   },
   {
@@ -86419,72 +86818,6 @@
    "registries": ""
   },
   {
-   "id": "bindsc",
-   "name": "bindSC",
-   "description": "Integrates single-cell multi-omic data using bi-order analysis for transcriptomics and epigenomics",
-   "categories": [
-    "single-cell"
-   ],
-   "tier": "core",
-   "homepage": "https://github.com/KChen-lab/bindSC",
-   "repo_url": "https://github.com/KChen-lab/bindSC",
-   "repo_origin": "recorded",
-   "repo_stars": 41,
-   "repo_pushed": "2023-08-23",
-   "repo_archived": false,
-   "repo_language": "R",
-   "repo_license": "GPL-3.0",
-   "tool_type": [
-    "Library"
-   ],
-   "topics": [
-    "Transcriptomics",
-    "Cell biology",
-    "Transcription factors and regulatory sites",
-    "Epigenomics",
-    "Chromosome conformation capture"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "GPL-3.0",
-   "maturity": "",
-   "cost": "",
-   "citations": 6,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2020",
-   "publication": "doi:10.21203/RS.3.RS-126986/V1",
-   "publication_is_preprint": true,
-   "biotools_id": "bindsc",
-   "biotools_url": "https://bio.tools/bindsc",
-   "last_update": "2021-02-04",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Expression analysis",
-    "Neurite measurement",
-    "Standardisation and normalisation"
-   ],
-   "_select_reason": "text:\\bpromoter\\b|\\benhancer\\b|\\bsuper-?e",
-   "_identifiers": [
-    "doi:10.21203/RS.3.RS-126986/V1",
-    "doi:10.1101/2020.12.11.422014"
-   ],
-   "_registries": {},
-   "_llm_applied": [
-    "categories",
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "single-cell",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "declared",
-   "registries": ""
-  },
-  {
    "id": "bionero",
    "name": "BioNERO",
    "description": "Reconstructs and analyses biological networks from gene expression data",
@@ -87978,68 +88311,6 @@
    "homepage_status": "",
    "repo_status": "",
    "license_source": "",
-   "registries": ""
-  },
-  {
-   "id": "metaboverse",
-   "name": "Metaboverse",
-   "description": "Automated exploration and contextualization of metabolic data",
-   "categories": [
-    "grn-inference"
-   ],
-   "tier": "core",
-   "homepage": "https://github.com/Metaboverse/",
-   "repo_url": "https://github.com/Metaboverse/metaboverse",
-   "repo_origin": "recorded",
-   "repo_stars": 42,
-   "repo_pushed": "2025-03-24",
-   "repo_archived": false,
-   "repo_language": "JavaScript",
-   "repo_license": "MIT",
-   "tool_type": [
-    "Command-line tool",
-    "Desktop application"
-   ],
-   "topics": [
-    "Endocrinology and metabolism",
-    "Molecular interactions, pathways and networks",
-    "Proteomics",
-    "Metabolomics",
-    "Small molecules"
-   ],
-   "languages": [
-    "JavaScript"
-   ],
-   "license": "GPL-3.0",
-   "maturity": "",
-   "cost": "",
-   "citations": 6,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2020",
-   "publication": "doi:10.1101/2020.06.25.171850",
-   "publication_is_preprint": true,
-   "biotools_id": "metaboverse",
-   "biotools_url": "https://bio.tools/metaboverse",
-   "last_update": "2021-02-22",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Gene regulatory network analysis",
-    "Metabolic network modelling",
-    "Network visualisation"
-   ],
-   "_select_reason": "operation:Gene regulatory network analysis",
-   "_identifiers": [
-    "doi:10.1101/2020.06.25.171850"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "grn-inference",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "declared",
    "registries": ""
   },
   {
@@ -94866,68 +95137,6 @@
    "homepage_status": "",
    "repo_status": "",
    "license_source": "declared",
-   "registries": ""
-  },
-  {
-   "id": "gpsa",
-   "name": "GPSAdb 2.0",
-   "description": "Provides transcriptomic data from gene perturbations in human cell lines to explore gene function and regulatory networks",
-   "categories": [
-    "grn-inference"
-   ],
-   "tier": "core",
-   "homepage": "https://www.gpsadb.com/",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [],
-   "topics": [
-    "Molecular interactions, pathways and networks",
-    "Genetic variation",
-    "RNA-Seq",
-    "Transcriptomics",
-    "Endocrinology and metabolism"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 4,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2025",
-   "publication": "pmid:40104737",
-   "publication_is_preprint": false,
-   "biotools_id": "gpsa",
-   "biotools_url": "https://bio.tools/gpsa",
-   "last_update": "2026-02-22",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Differential gene expression profiling",
-    "Gene regulatory network analysis",
-    "Gene-set enrichment analysis",
-    "Principal component visualisation",
-    "Regression analysis"
-   ],
-   "_select_reason": "text:\\bgene regulatory network|\\bregulato",
-   "_identifiers": [
-    "pmid:40104737"
-   ],
-   "_registries": {},
-   "_llm_applied": [
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "grn-inference",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "",
    "registries": ""
   },
   {
@@ -107468,80 +107677,6 @@
    "registries": ""
   },
   {
-   "id": "oncoenrichr",
-   "name": "oncoEnrichR",
-   "description": "Interrogate human gene sets functionally in the context of cancer using an R package",
-   "categories": [
-    "grn-inference"
-   ],
-   "tier": "core",
-   "homepage": "https://github.com/sigven/oncoEnrichR",
-   "repo_url": "https://github.com/sigven/oncoEnrichR",
-   "repo_origin": "recorded",
-   "repo_stars": 55,
-   "repo_pushed": "2026-05-31",
-   "repo_archived": false,
-   "repo_language": "R",
-   "repo_license": "NOASSERTION",
-   "tool_type": [
-    "Web application",
-    "Command-line tool"
-   ],
-   "topics": [
-    "Functional genomics",
-    "Data identity and mapping",
-    "Bioinformatics",
-    "Data visualisation",
-    "Data integration and warehousing",
-    "Copy number variation",
-    "DNA mutation",
-    "Oncology",
-    "Pharmacogenomics"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "MIT",
-   "maturity": "Mature",
-   "cost": "Free of charge",
-   "citations": 1,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2021",
-   "publication": "doi:10.48550/arXiv.2107.13247",
-   "publication_is_preprint": true,
-   "biotools_id": "oncoenrichr",
-   "biotools_url": "https://bio.tools/oncoenrichr",
-   "last_update": "2022-04-08",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Expression correlation analysis",
-    "Gene functional annotation",
-    "Gene regulatory network prediction",
-    "Gene-set enrichment analysis",
-    "Heat map generation",
-    "ID mapping",
-    "Network visualisation",
-    "Protein interaction network analysis"
-   ],
-   "_select_reason": "operation:Gene regulatory network prediction",
-   "_identifiers": [
-    "doi:10.48550/arXiv.2107.13247"
-   ],
-   "_registries": {},
-   "_llm_applied": [
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "grn-inference",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "declared",
-   "registries": ""
-  },
-  {
    "id": "onesc",
    "name": "OneSC",
    "description": "Recapitulates cell state transitions using stochastic differential equations governed by a regulatory network of core transcription factors",
@@ -108869,69 +109004,6 @@
    "registries": "pypi"
   },
   {
-   "id": "Tulip",
-   "name": "Tulip",
-   "description": "Simulates ChIP-seq data using statistical models of experimental steps",
-   "categories": [
-    "peak-calling",
-    "nucleosome-chromatin"
-   ],
-   "tier": "core",
-   "homepage": "https://github.com/gymreklab/Tulip",
-   "repo_url": "https://github.com/gymreklab/Tulip",
-   "repo_origin": "recorded",
-   "repo_stars": 14,
-   "repo_pushed": "2023-03-13",
-   "repo_archived": false,
-   "repo_language": "Jupyter Notebook",
-   "repo_license": "GPL-3.0",
-   "tool_type": [
-    "Command-line tool"
-   ],
-   "topics": [
-    "ChIP-seq",
-    "Gene transcripts",
-    "Epigenomics"
-   ],
-   "languages": [
-    "C++"
-   ],
-   "license": "GPL-3.0",
-   "maturity": "Mature",
-   "cost": "Free of charge",
-   "citations": 1,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2019",
-   "publication": "doi:10.1101/624486",
-   "publication_is_preprint": true,
-   "biotools_id": "Tulip",
-   "biotools_url": "https://bio.tools/Tulip",
-   "last_update": "2020-06-16",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Peak calling",
-    "Quantification",
-    "Read binning"
-   ],
-   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
-   "_identifiers": [
-    "doi:10.1101/624486"
-   ],
-   "_registries": {},
-   "_llm_applied": [
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "peak-calling",
-   "homepage_status": "",
-   "repo_status": "",
-   "license_source": "declared",
-   "registries": ""
-  },
-  {
    "id": "turf",
    "name": "TURF",
    "description": "Prioritises regulatory variants in non-coding regions of the human genome using the RegulomeDB framework",
@@ -109235,78 +109307,6 @@
    "homepage_status": "",
    "repo_status": "",
    "license_source": "",
-   "registries": ""
-  },
-  {
-   "id": "aimodules",
-   "name": "AIModules",
-   "description": "Finds transcription factor binding sites and modules on DNA using own matrices or JASPAR",
-   "categories": [
-    "motif-discovery",
-    "motif-scanning",
-    "tfbs-prediction",
-    "peak-calling"
-   ],
-   "tier": "core",
-   "homepage": "https://bioinfo-wuerz.de/aimodules/",
-   "repo_url": "https://github.com/muharrem-aydinli/AIModules",
-   "repo_origin": "recorded",
-   "repo_stars": 1,
-   "repo_pushed": "2024-07-25",
-   "repo_archived": false,
-   "repo_language": "C",
-   "repo_license": "",
-   "tool_type": [
-    "Web application",
-    "Desktop application"
-   ],
-   "topics": [
-    "Transcription factors and regulatory sites",
-    "Gene transcripts",
-    "Functional, regulatory and non-coding RNA",
-    "ChIP-seq",
-    "Model organisms"
-   ],
-   "languages": [
-    "Java",
-    "JavaScript",
-    "C",
-    "Python"
-   ],
-   "license": "GPL-2.0",
-   "maturity": "",
-   "cost": "Free of charge",
-   "citations": 0,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2022",
-   "publication": "doi:10.21203/RS.3.RS-1284479/V1",
-   "publication_is_preprint": true,
-   "biotools_id": "aimodules",
-   "biotools_url": "https://bio.tools/aimodules",
-   "last_update": "2022-06-08",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Sequence motif discovery",
-    "Sequence motif recognition",
-    "Transcription factor binding site prediction",
-    "Visualisation"
-   ],
-   "_select_reason": "text:\\btranscription[- ]factor",
-   "_identifiers": [
-    "doi:10.21203/RS.3.RS-1284479/V1"
-   ],
-   "_registries": {},
-   "_llm_applied": [
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "motif-discovery",
-   "homepage_status": "dead",
-   "repo_status": "",
-   "license_source": "declared",
    "registries": ""
   },
   {

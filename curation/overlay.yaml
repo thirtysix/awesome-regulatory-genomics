@@ -160,6 +160,23 @@ publications:
   # judgement already applied to RTN. Nature version, not the RECOMB chapter.
   diffbind: doi:10.1038/nature10730
 
+  # Preprints whose published version resolve_pubs.py could not find, because
+  # Crossref records no `is-preprint-of` relation for them. Each published
+  # version was read against the preprint before being written here.
+  bindsc: doi:10.1186/s13059-022-02679-x   # Research Square preprint -> Genome Biology 2022
+  metaboverse: doi:10.1038/s41556-023-01117-9  # bioRxiv -> Nature Cell Biology 2023
+  oncoenrichr: doi:10.1002/ijc.34666       # arXiv -> International Journal of Cancer 2023
+  Tulip: doi:10.1186/s12859-021-04097-5    # bioRxiv -> BMC Bioinformatics 2021
+  aimodules: doi:10.1038/s41598-022-21732-0  # Research Square -> Scientific Reports 2022
+  gpsa: doi:10.1093/nar/gkac1066           # was "A prognostic model for laryngeal squamous cell carcinoma"
+
+  # OpenAlex holds two records for the Segway paper, and the PMID resolves to
+  # the wrong one: `pmid:22426492` lands on a record carrying an ACM conference
+  # DOI with 290 citations, while the Nature Methods record of the same paper
+  # has 663. Linking the DOI sidesteps the mis-merge. Worth remembering that an
+  # identifier can be correct and still reach a duplicated, undercounted record.
+  segway: doi:10.1038/nmeth.1937
+
 aliases:
   meme_suite: [meme]                 # "MEME" and "MEME Suite" are one tool
   imotifbreakr: [motifbreakr]        # two records for the Bioconductor package
