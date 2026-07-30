@@ -42,6 +42,20 @@ make serve PORT=8500   # preview the site; 8000 is often taken locally
 Optional, needs `DEEPINFRA_API_KEY` (see `.env.example`, `docs/llm-stage.md`):
 `make llm`, `make verify-additions`, `make bench`.
 
+**Set `OPENALEX_API_KEY` in `.env` before any heavy citation work.** OpenAlex
+meters free use as a daily credit budget at $0.0001 a request, resetting at
+midnight UTC: **$0.10/day (~1,000 requests) anonymous, $1/day (~10,000) with a
+free key** from openalex.org/settings/api. A full refresh touches ~3,700
+identifiers, so the anonymous tier dies partway through and every later call
+returns 429. `make enrich` prints the tier it is running on.
+
+The `mailto` polite pool does not help here and is a different mechanism: a
+request with and without one gets byte-identical rate headers. `CONTACT_EMAIL`
+still matters for Crossref, which is why `polite_params()` (mailto, safe
+anywhere) and `openalex_params()` (adds the key) are separate. Never put the key
+in `polite_params()`: that function also feeds Crossref, and a credential
+belongs only in requests to the service that issued it.
+
 ## Conventions
 
 - **No em-dashes anywhere**, generated or hand-written. A sweep enforces this.

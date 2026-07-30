@@ -28,7 +28,7 @@ import yaml
 
 from jsonio import read_json, write_json
 from config import (CACHE, CODE_HOSTS, CURATION, GITHUB_API, OPENALEX_API, RAW,
-                    REGISTRY_HOSTS, polite_params, user_agent)
+                    REGISTRY_HOSTS, openalex_params, openalex_tier, user_agent)
 
 SELECTED = RAW / "selected.json.gz"
 ENRICHED = RAW / "enriched.json.gz"
@@ -250,7 +250,20 @@ def openalex_lookup(session: requests.Session, ident: str,
         return cache[key], {}
     filt = f"ids.pmid:{value}" if kind == "pmid" else f"doi:{value}"
     try:
-        r = session.get(OPENALEX_API, params=polite_params({"filter": filt}), timeout=30)
+        r = session.get(OPENALEX_API, params=openalex_params({"filter": filt}), timeout=30)
+        # A 429 here is a spent daily budget, not a slow moment: OpenAlex meters
+        # credits and resets at midnight UTC, so Retry-After is measured in hours
+        # (21,746 seconds when this was hit). Retrying is futile and continuing
+        # is worse, because every remaining identifier would come back empty and
+        # the run would look like a catalog with no citations. Stop and say so.
+        if r.status_code == 429:
+            wait = r.headers.get("Retry-After", "?")
+            hrs = f"{int(wait)/3600:.1f}h" if str(wait).isdigit() else wait
+            raise SystemExit(
+                f"\nOpenAlex returned 429: the daily budget is spent.\n"
+                f"  retry after {wait}s ({hrs}); the allowance resets at midnight UTC\n"
+                f"  this run was {openalex_tier()}\n"
+                f"  nothing already cached is lost - rerun after the reset to continue.")
         results = r.json().get("results") or [] if r.status_code == 200 else []
     except (requests.RequestException, ValueError):
         results = []
@@ -334,6 +347,8 @@ def main() -> None:
     gh_cache: dict[str, dict] = json.loads(GH_CACHE.read_text()) if GH_CACHE.exists() else {}
     cite_cache = load_citation_cache()
     print(f"  citation cache: {len(cite_cache)} entries; github cache: {len(gh_cache)} repos")
+    if not args.no_citations:
+        print(f"  OpenAlex: {openalex_tier()}")
 
     out = []
     for i, tool in enumerate(tools, 1):

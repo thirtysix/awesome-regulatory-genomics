@@ -74,6 +74,18 @@ def _load_dotenv() -> None:
 _load_dotenv()
 CONTACT_EMAIL = os.environ.get("CONTACT_EMAIL", "").strip()
 
+# OpenAlex meters free use as a daily credit budget, not a per-second rate, and
+# a key multiplies the allowance tenfold: $0.10/day anonymous against $1/day
+# with a free key, at $0.0001 per request (1,000 vs 10,000 requests). A full
+# citation refresh alone touches ~3,700 identifiers, so the anonymous tier runs
+# out partway through a working day and everything after it returns 429.
+#
+# The `mailto` polite pool does NOT help here and is a separate thing: a request
+# with and without one gets byte-identical rate headers, because the budget is
+# keyed on the caller, not on the courtesy. Crossref still honours mailto, which
+# is why CONTACT_EMAIL stays useful and separate.
+OPENALEX_API_KEY = os.environ.get("OPENALEX_API_KEY", "").strip()
+
 
 def user_agent(tool: str = "awesome-regulatory-genomics/1.0") -> str:
     """User-Agent string, with a contact address only if one is configured."""
@@ -82,11 +94,30 @@ def user_agent(tool: str = "awesome-regulatory-genomics/1.0") -> str:
 
 
 def polite_params(params: dict | None = None) -> dict:
-    """Add OpenAlex/Crossref `mailto` when configured, and nothing when not."""
+    """Add the `mailto` courtesy address when configured, and nothing when not.
+
+    Safe to send anywhere. Deliberately does NOT carry the OpenAlex key: this is
+    used for Crossref too, and a credential belongs only in requests to the
+    service that issued it.
+    """
     out = dict(params or {})
     if CONTACT_EMAIL:
         out["mailto"] = CONTACT_EMAIL
     return out
+
+
+def openalex_params(params: dict | None = None) -> dict:
+    """Params for api.openalex.org only, including the key when one is set."""
+    out = polite_params(params)
+    if OPENALEX_API_KEY:
+        out["api_key"] = OPENALEX_API_KEY
+    return out
+
+
+def openalex_tier() -> str:
+    """One line describing the allowance this run has, for the stage banner."""
+    return ("authenticated ($1/day, ~10,000 requests)" if OPENALEX_API_KEY
+            else "anonymous ($0.10/day, ~1,000 requests) - set OPENALEX_API_KEY for 10x")
 
 # ---------------------------------------------------------------------------
 # Harvest vocabulary

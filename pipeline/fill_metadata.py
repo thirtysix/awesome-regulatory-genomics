@@ -28,7 +28,7 @@ import time
 import requests
 
 from build import cache_key
-from config import CACHE, DATA, OPENALEX_API, polite_params, user_agent
+from config import CACHE, DATA, OPENALEX_API, openalex_params, user_agent
 
 YEAR_CACHE = CACHE / "pubyear_cache.json"
 
@@ -51,7 +51,7 @@ def openalex_year(session: requests.Session, ident: str) -> str:
     kind, _, value = ident.partition(":")
     filt = f"ids.pmid:{value}" if kind == "pmid" else f"doi:{value}"
     try:
-        r = session.get(OPENALEX_API, params=polite_params(
+        r = session.get(OPENALEX_API, params=openalex_params(
             {"filter": filt, "select": "publication_year"}), timeout=30)
         results = r.json().get("results") or [] if r.status_code == 200 else []
     except (requests.RequestException, ValueError):
