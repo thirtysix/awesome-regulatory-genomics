@@ -37,7 +37,9 @@ PUBMAP = CACHE / "publication_map.json"
 REPORT = DOCS / "link-check.md"
 CROSSREF = "https://api.crossref.org/works/"
 
-PREPRINT_PREFIXES = ("10.1101/", "10.21203/", "10.31234/", "10.20944/", "10.48550/")
+# Shared with build.py: 10.1101/ is Cold Spring Harbor Laboratory Press, not a
+# preprint prefix, so bioRxiv is recognised by the shape of its suffix instead.
+from config import is_preprint  # noqa: E402
 
 
 def session() -> requests.Session:
@@ -152,7 +154,7 @@ def main() -> None:
 
     tools = read_json(ENRICHED)["list"]
     all_dois = sorted({d for t in tools for d in identifiers(t)})
-    preprints = [d for d in all_dois if d.lower().startswith(PREPRINT_PREFIXES)]
+    preprints = [d for d in all_dois if is_preprint(d)]
     todo = all_dois if args.check_all else preprints
     print(f"{len(all_dois)} distinct DOIs, {len(preprints)} of them preprints")
 

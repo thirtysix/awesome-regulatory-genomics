@@ -25,7 +25,7 @@ from collections import Counter
 from jsonio import read_json
 from config import (CATEGORY_KEYS, CURATION, DATA, DB_TOOLTYPES, MONOREPOS,
                     OP_CATEGORY, RAW, SUITE_PUBLICATIONS, TEXT_CATEGORY,
-                    TOPIC_CATEGORY)
+                    TOPIC_CATEGORY, is_preprint)
 
 ENRICHED = RAW / "enriched.json.gz"
 SEEDS = CURATION / "seeds.yaml"
@@ -263,9 +263,6 @@ def load_publication_map() -> dict[str, str]:
     return {d: e["published_doi"] for d, e in blob.items() if e.get("published_doi")}
 
 
-PREPRINT_PREFIXES = ("10.1101/", "10.21203/", "10.31234/", "10.20944/")
-
-
 def primary_identifier(tool: dict, pubmap: dict[str, str] | None = None) -> str:
     """The tool's own paper: the one bio.tools marks Primary, else the first.
 
@@ -299,7 +296,7 @@ def primary_identifier(tool: dict, pubmap: dict[str, str] | None = None) -> str:
     # linking a reader to a 2019 preprint when the Nature Communications paper
     # exists is a worse citation, not just an older one.
     for ident in candidates:
-        if not ident.removeprefix("doi:").startswith(PREPRINT_PREFIXES):
+        if not is_preprint(ident):
             return ident
     return candidates[0] if candidates else ""
 
@@ -383,7 +380,7 @@ def from_biotools(tool: dict, cites: dict[str, int], shared: dict[str, int],
         "citations_papers": None,
         "year": pub_year(tool),
         "publication": primary or (ids[0] if ids else ""),
-        "publication_is_preprint": (primary or "").removeprefix("doi:").startswith(PREPRINT_PREFIXES),
+        "publication_is_preprint": is_preprint(primary or ""),
         "biotools_id": tool["biotoolsID"],
         "biotools_url": f"https://bio.tools/{tool['biotoolsID']}",
         "last_update": (tool.get("lastUpdate") or "")[:10],
@@ -428,7 +425,7 @@ def apply_verified_publications(row: dict, papers: list[str], cites: dict[str, i
     best = max(counts, key=counts.get)
     row["citations"] = counts[best]
     row["publication"] = best
-    row["publication_is_preprint"] = best.removeprefix("doi:").startswith(PREPRINT_PREFIXES)
+    row["publication_is_preprint"] = is_preprint(best)
     row["citations_total"] = sum(counts.values())
     row["citations_papers"] = len(counts)
     missing = len(dict.fromkeys(papers)) - len(counts)
@@ -477,7 +474,7 @@ def from_seed(seed: dict, cites: dict[str, int] | None = None,
         "citations": citations, "citation_note": note, "year": seed.get("year", ""),
         "citations_total": None, "citations_papers": None,
         "publication": ident,
-        "publication_is_preprint": ident.removeprefix("doi:").startswith(PREPRINT_PREFIXES),
+        "publication_is_preprint": is_preprint(ident),
         "biotools_id": "", "biotools_url": "",
         "last_update": "",
         "source": "curated",
@@ -590,8 +587,7 @@ def main() -> None:
             row["repo_origin"] = "curated"
         if key in pub_overrides:
             row["publication"] = pub_overrides[key]
-            row["publication_is_preprint"] = (
-                pub_overrides[key].removeprefix("doi:").startswith(PREPRINT_PREFIXES))
+            row["publication_is_preprint"] = is_preprint(pub_overrides[key])
             # The count has to follow the link. Overriding only the link left the
             # citation describing the paper we just decided was the wrong one:
             # Signac pointed at its Nature Methods paper while still reporting

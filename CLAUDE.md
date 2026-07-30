@@ -146,6 +146,18 @@ picked up on the following run.
 apart.** `citation_note` now always says which, and the site renders the blank as
 a dash carrying that reason as a tooltip. No blank is unexplained.
 
+**`10.1101/` is not a preprint prefix.** It belongs to Cold Spring Harbor
+Laboratory Press, which publishes bioRxiv *and* Genome Research, Genes &
+Development, RNA and the Perspectives series. Treating the whole prefix as
+bioRxiv labelled six peer-reviewed papers as preprints, RegulomeDB's Genome
+Research paper among them at 2,878 citations, and also demoted them inside
+`primary_identifier()`, which deliberately prefers a published version over a
+preprint. `config.is_preprint()` identifies bioRxiv by the SHAPE of the suffix
+(`10.1101/2024.12.25.630221`, or the legacy all-digit `10.1101/867309`) rather
+than by excluding a list of journal abbreviations, because that list cannot be
+known to be complete. The same audit found `10.48550/` (arXiv) missing from
+build.py's list while present in resolve_pubs.py's; both now share one function.
+
 **To find a missing paper, ask the tool, never the literature.**
 `discover_pubs.py` (`make discover-pubs`) reads each tool's own declared citation:
 the Bioconductor citation page, `CITATION.cff`, `codemeta.json`, the README, then

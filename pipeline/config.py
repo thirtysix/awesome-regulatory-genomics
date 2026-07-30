@@ -3,6 +3,7 @@
 Everything that defines *what the catalog is* lives here, so the scope of the
 resource can be audited and changed in one place.
 """
+import re
 import os
 from pathlib import Path
 
@@ -16,6 +17,33 @@ DOCS = ROOT / "docs"
 BIOTOOLS_API = "https://bio.tools/api/tool/"
 OPENALEX_API = "https://api.openalex.org/works"
 GITHUB_API = "https://api.github.com"
+
+# ---------------------------------------------------------------------------
+# Preprint detection.
+#
+# `10.1101/` is NOT a preprint prefix. It belongs to Cold Spring Harbor
+# Laboratory Press, which publishes bioRxiv *and* Genome Research, Genes &
+# Development, RNA, Learning & Memory and the Perspectives series. Treating the
+# whole prefix as preprint labelled six peer-reviewed papers as preprints in the
+# catalog, RegulomeDB's Genome Research paper among them at 2,878 citations, and
+# also demoted them in primary_identifier(), which prefers a non-preprint.
+#
+# Identify bioRxiv/medRxiv by the shape of the suffix instead of by excluding a
+# list of journal abbreviations, because that list is not one we can be sure of
+# completing: `10.1101/2024.12.25.630221` (dated) and `10.1101/867309` (legacy
+# all-digit) are deposits, `10.1101/gr.137323.112` is a journal article.
+PREPRINT_PREFIXES = ("10.21203/", "10.31234/", "10.20944/", "10.48550/")
+_BIORXIV_SUFFIX = re.compile(r"^(?:\d{4}\.\d{2}\.\d{2}\.\d+|\d{6,})(?:v\d+)?$", re.I)
+
+
+def is_preprint(ident: str) -> bool:
+    """Is this identifier a preprint deposit rather than a published paper?"""
+    doi = (ident or "").removeprefix("doi:").removeprefix("https://doi.org/").lower()
+    if doi.startswith(PREPRINT_PREFIXES):
+        return True
+    if doi.startswith("10.1101/"):
+        return bool(_BIORXIV_SUFFIX.match(doi[len("10.1101/"):]))
+    return False
 
 # ---------------------------------------------------------------------------
 # Contact address for the API "polite pools"

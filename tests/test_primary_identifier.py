@@ -6,7 +6,10 @@ so summing every linked publication hands each EMBOSS command the whole suite's
 count. This function picks exactly one identifier, and prefers a peer-reviewed
 one over a preprint.
 """
-from build import PREPRINT_PREFIXES, norm_name, primary_identifier
+import pytest
+
+from build import norm_name, primary_identifier
+from config import PREPRINT_PREFIXES, is_preprint
 
 
 def pub(doi=None, pmid=None, primary=False):
@@ -84,6 +87,42 @@ def test_every_known_preprint_prefix_is_recognised():
             pub(doi="10.1093/nar/journal"),
         ]})
         assert ident == "doi:10.1093/nar/journal", f"{prefix} not treated as a preprint"
+
+
+@pytest.mark.parametrize("doi", [
+    "10.1101/2024.12.25.630221",     # dated bioRxiv
+    "10.1101/867309",                # legacy all-digit bioRxiv
+    "10.1101/2020.11.09.373613v2",   # with a version suffix
+    "10.21203/RS.2.20856/V2",        # Research Square
+    "10.48550/arXiv.2301.00001",     # arXiv
+])
+def test_deposits_are_preprints(doi):
+    assert is_preprint(doi)
+
+
+@pytest.mark.parametrize("doi", [
+    "10.1101/gr.137323.112",         # Genome Research (RegulomeDB)
+    "10.1101/gad.123456",            # Genes & Development
+    "10.1101/cshperspect.a018713",   # CSH Perspectives
+    "10.1093/nar/gkac130",
+    "10.1038/nmeth.3252",
+])
+def test_cshl_journals_are_not_preprints(doi):
+    """10.1101 is Cold Spring Harbor Laboratory Press, not a preprint prefix.
+
+    Treating the whole prefix as bioRxiv labelled six peer-reviewed papers as
+    preprints, RegulomeDB's Genome Research paper among them, and demoted them
+    in primary_identifier(), which prefers a published version.
+    """
+    assert not is_preprint(doi)
+
+
+def test_a_genome_research_paper_beats_a_real_preprint():
+    ident = primary_identifier({"publication": [
+        pub(doi="10.1101/2024.12.25.630221"),
+        pub(doi="10.1101/gr.137323.112"),
+    ]})
+    assert ident == "doi:10.1101/gr.137323.112"
 
 
 # ---------------------------------------------------------------------------
