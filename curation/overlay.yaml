@@ -98,6 +98,14 @@ exclude:
   meme_fimo: Duplicate of the MEME Suite / FIMO entries
   ROADMAP_epigenomics: Reference data repository rather than a tool; kept out to avoid inflating the ranking
 
+  # Surfaced when the citation cache was refreshed: each had a lookup failure
+  # stored as 0, which hid it, and each landed in the top 15 once the real count
+  # arrived. All three are RNA-seq quantification or generic differential
+  # expression that a ChIP-seq text match let in, the same shape as cuffdiff.
+  erange: RNA-seq and ChIP-seq package whose paper is the 2008 RNA-seq transcriptome method; 14,401 citations for work out of scope
+  edger: Generic differential expression for RNA-seq; admitted by a ChIP-seq text match
+  express: Transcript-level RNA-seq abundance quantification; admitted by a transcription-factor text match
+
 # ---------------------------------------------------------------------------
 # aliases - collapse duplicate bio.tools records for the same tool.
 # The key is kept; the listed IDs are dropped and recorded as alternates.
@@ -111,9 +119,275 @@ publications:
   signac: pmid:34725479          # Nature Methods 2021, 10.1038/s41592-021-01282-5
   archr: doi:10.1038/s41588-021-00790-6    # Nature Genetics 2021
 
+  # bio.tools points these records at a paper that is not the tool's own, so the
+  # catalog was reporting another work's citation count. Each replacement title
+  # was read before being written here.
+  carrie: pmid:15215383          # the primary was "Questions and answers about AIDS" (1992)
+  mdscan: pmid:12101404          # the primary was a suite paper shared across several tools
+  microfootprinter: pmid:16845027  # the primary was FootPrinter's paper, the parent tool
+  poxo: pmid:16845065            # the primary was POCO's paper, a separate catalogued tool
+  webmotifs: pmid:17584794       # the primary was a method paper, not the tool's
+
 aliases:
   meme_suite: [meme]                 # "MEME" and "MEME Suite" are one tool
   imotifbreakr: [motifbreakr]        # two records for the Bioconductor package
   remm_score: [remm]
   washu_epigenome_browser: [epigenome]
   jaspar: [jaspar2018]               # versioned data package, not a separate tool
+
+# ---------------------------------------------------------------------------
+# verified_publications - the papers that genuinely belong to one tool.
+#
+# Why this is hand-written and not derived: bio.tools' publication list mixes
+# a tool's own papers with the method it implements, the guidelines it follows,
+# the platform that hosts it and, for suites, its members' papers. Summing the
+# list blindly gives phantompeakqualtools the ENCODE ChIP-seq guidelines paper
+# and hands every Galaxy wrapper the Galaxy platform's citations. Nor can the
+# `type: Primary` flag carry it: 75% of entries are untyped, including all
+# eight of the MEME Suite's.
+#
+# `citations` shows the most-cited paper in this list; `citations_total` sums
+# the list and is displayed as "across N papers", never ranked on. A tool
+# absent from this block gets no aggregate, which is the honest fallback.
+#
+# Each list was checked paper by paper against its title. Do not add an entry
+# from memory, and do not machine-generate one.
+# ---------------------------------------------------------------------------
+verified_publications:
+  meme_suite:
+    why: "seven MEME papers including the 1994 EM founding paper, whose title does not carry the name; Meta-MEME is a separately catalogued tool"
+    papers:
+      - pmid:7584402                       #   5116  Fitting a mixture model by expectation maximization to discover mo
+      - pmid:7584439                       #    681  The value of prior knowledge in discovering motifs with MEME.
+      - pmid:8877500                       #     26  The megaprior heuristic for discovering protein sequence patterns.
+      - pmid:8902357                       #     83  Parameme: A parallel implementation and a web interface for a dna 
+      - pmid:9366496                       #     70  An artificial intelligence approach to motif discovery in protein 
+      - pmid:16845028                      #   2799  MEME: Discovering and analyzing DNA and protein sequence motifs
+      - pmid:19458158                      #  11588  MEME Suite: Tools for motif discovery and searching
+  jaspar:
+    why: "nine JASPAR release papers; the RESTful API paper is catalogued separately as JASPAR RESTful API"
+    papers:
+      - pmid:34850907                      #   2171  JASPAR 2022: The 9th release of the open-access database of transc
+      - pmid:31701148                      #   1934  JASPAR 2020: Update of the open-Access database of transcription f
+      - pmid:29140473                      #   1615  Erratum: JASPAR 2018: Update of the open-access database of transc
+      - pmid:26531826                      #   1069  JASPAR 2016: A major expansion and update of the open-access datab
+      - pmid:24194598                      #   1037  JASPAR 2014: An extensively expanded and updated open-access datab
+      - pmid:19906716                      #    587  JASPAR 2010: The greatly expanded open-access database of transcri
+      - pmid:18006571                      #    692  JASPAR, the open access database of transcription factor-binding p
+      - pmid:16381983                      #    231  A new generation of JASPAR, the open-access repository for transcr
+      - pmid:14681366                      #   1841  JASPAR: an open-access database for eukaryotic transcription facto
+  plantcare:
+    why: "the 1999 database paper and the 2002 database-plus-portal paper"
+    papers:
+      - pmid:9847207                       #    748  PlantCARE, a plant cis-acting regulatory element database
+      - pmid:11752327                      #   8504  PlantCARE, a database of plant cis-acting regulatory elements and 
+  transfac:
+    why: "seven TRANSFAC and TRANSCompel papers, all describing the same database"
+    papers:
+      - pmid:12520026                      #   2025  TRANSFAC(R): transcriptional regulation, from patterns to profiles
+      - pmid:10592259                      #   1269  TRANSFAC: an integrated system for gene expression regulation
+      - pmid:11125113                      #    663  The TRANSFAC system on gene expression regulation
+      - pmid:16381825                      #   2241  TRANSFAC(R) and its module TRANSCompel(R): transcriptional gene re
+      - pmid:18436575                      #    454  The TRANSFAC project as an example of framework technology that su
+      - pmid:8594589                       #   1084  TRANSFAC: a database on transcription factors and their DNA bindin
+      - pmid:9847216                       #    312  Expanding the TRANSFAC database towards an expert system of regula
+  encode_dcc:
+    why: "two UCSC-browser ENCODE data papers and the ENCODE data-portal paper"
+    papers:
+      - pmid:21037257                      #    178  ENCODE whole-genome data in the UCSC genome browser (2011 update)
+      - pmid:19920125                      #    353  ENCODE whole-genome data in the UCSC Genome Browser
+      - pmid:31713622                      #   1120  New developments on the Encyclopedia of DNA Elements (ENCODE) data
+  pipmaker:
+    why: "PipMaker and MultiPipMaker, one server line"
+    papers:
+      - pmid:10779500                      #   1197  PipMaker - A Web Server for Aligning Two Genomic DNA Sequences
+      - pmid:12824357                      #    237  MultiPipMaker and supporting tools: alignments and analysis of mul
+  elm:
+    why: "three releases of the eukaryotic linear motif resource"
+    papers:
+      - pmid:19920119                      #    239  ELM: the status of the 2010 eukaryotic linear motif resource
+      - pmid:22110040                      #    449  ELM--the database of eukaryotic linear motifs
+      - pmid:12824381                      #    610  ELM server: a new resource for investigating short functional site
+  inserm-remap:
+    why: "the 2014 founding paper plus ReMap 2018, 2020 and 2022"
+    papers:
+      - pmid:25477382                      #    138  Integrative analysis of public ChIP-seq experiments reveals a comp
+      - pmid:34751401                      #    505  ReMap 2022: A database of Human, Mouse, Drosophila and Arabidopsis
+      - pmid:31665499                      #    143  ReMap 2020: A database of regulatory regions from an integrative a
+      - pmid:29126285                      #    284  ReMap 2018: An updated atlas of regulatory regions from an integra
+  consensuspathdb:
+    why: "the 2013 and 2022 updates"
+    papers:
+      - pmid:23143270                      #    868  The ConsensusPathDB interaction database: 2013 Update
+      - pmid:34850110                      #    134  ConsensusPathDB 2022: Molecular interactions update as a resource 
+  cellnetanalyzer:
+    why: "the tool paper, its API paper and its applications paper"
+    papers:
+      - pmid:17408509                      #    550  Structural and functional analysis of cellular networks with CellN
+      - pmid:21315797                      #     69  An application programming interface for CellNetAnalyzer
+      - pmid:28499817                      #     97  Use of CellNetAnalyzer in biotechnology and metabolic engineering
+  ginsim:
+    why: "GINsim 1.0 through 3.0 release papers"
+    papers:
+      - pmid:29971008                      #    116  Logical modeling and analysis of cellular regulatory networks with
+      - pmid:22144167                      #    168  Logical modelling of gene regulatory networks with GINsim
+      - pmid:19426782                      #    209  Logical modelling of regulatory networks with GINsim 2.3
+      - pmid:16434137                      #    190  GINsim: A software suite for the qualitative modelling, simulation
+  opossum:
+    why: "the 2005 and 2007 oPOSSUM papers"
+    papers:
+      - pmid:15933209                      #    379  oPOSSUM: identification of over-represented transcription factor b
+      - pmid:17576675                      #    163  oPOSSUM: integrated tools for analysis of regulatory motif over-re
+  diana-mirgen:
+    why: "miRGen, miRGen 2.0 and DIANA-miRGen v3.0 are one resource line"
+    papers:
+      - pmid:26586797                      #     61  DIANA-miRGen v3.0: Accurate characterization of microRNA promoters
+      - pmid:19850714                      #    136  miRGen 2.0: A database of microRNA genomic information and regulat
+      - pmid:17108354                      #    303  miRGen: A database for the study of animal microRNA genomic organi
+  epd:
+    why: "the 30th-year paper and the 2020 update"
+    papers:
+      - pmid:27899657                      #    312  The eukaryotic promoter database in its 30th year: Focus on non-ve
+      - pmid:31680159                      #    106  EPD in 2020: Enhanced data visualization and extension to ncRNA pr
+  gibbs_motif_sampler:
+    why: "only the two sampler papers; the 1993 Gibbs-sampling method paper and the phylogenetic-footprinting applications are not this tool"
+    papers:
+      - pmid:12824370                      #    317  Gibbs Recursive Sampler: Finding transcription factor binding site
+      - pmid:17483517                      #     65  The gibbs centroid sampler
+  redfly:
+    why: "REDfly 1.0, 2.0 and 3.0 release papers"
+    papers:
+      - pmid:20965965                      #    190  REDfly v3.0: Toward a comprehensive database of transcriptional re
+      - pmid:18039705                      #    101  REDfly 2.0: An integrated database of cis -regulatory modules and 
+      - pmid:16303794                      #     83  REDfly: A Regulatory Element Database for Drosophila
+  oreganno:
+    why: "the 2006 and 2008 ORegAnno papers"
+    papers:
+      - pmid:16397004                      #    123  ORegAnno: an open access database and curation system for literatu
+      - pmid:18006570                      #    241  ORegAnno: an open-access community-driven resource for regulatory 
+  toucan_2:
+    why: "Toucan and TOUCAN 2"
+    papers:
+      - pmid:12626717                      #    196  Toucan: deciphering the cis-regulatory logic of coregulated genes
+      - pmid:15980497                      #    161  TOUCAN 2: the all-inclusive open source workbench for regulatory s
+  athamap:
+    why: "five AthaMap papers from the same group"
+    papers:
+      - pmid:14681436                      #    128  AthaMap: an online resource for in silico transcription factor bin
+      - pmid:15980498                      #     49  AthaMap web tools for database-assisted identification of combinat
+      - pmid:17148485                      #     52  AthaMap web tools for the analysis and identification of co-regula
+      - pmid:18842622                      #     55  AthaMap, integrating transcriptional and post-transcriptional data
+      - pmid:21177332                      #     32  AthaMap-assisted transcription factor target gene identification i
+  moods:
+    why: "the MOODS paper plus the two algorithm papers by the same authors for the same tool"
+    papers:
+      - pmid:21071798                      #     37  Finding significant matches of position weight matrices in linear 
+      - pmid:28011774                      #     47  Fast motif matching revisited: High-order PWMs, SNPs and indels
+      - pmid:19773334                      #    217  MOODS: Fast search for position weight matrix matches in DNA seque
+  magia2:
+    why: "MAGIA and MAGIA2 are one resource line"
+    papers:
+      - pmid:20484379                      #    159  MAGIA, a web-based tool for miRNA and Genes Integrated Analysis
+      - pmid:22618880                      #    129  MAGIA2: from miRNA and genes expression data integrative analysis 
+  dbtss:
+    why: "the 2009 and 2012 DBTSS papers"
+    papers:
+      - pmid:19910371                      #     65  DBTSS provides a tissue specific dynamic view of transcription sta
+      - pmid:22086958                      #    182  DBTSS: DataBase of Transcriptional Start Sites progress report in 
+  mapperdb:
+    why: "the two database papers; the MAPPER search-engine paper is another catalogued tool's primary"
+    papers:
+      - pmid:22121218                      #    127  The MAPPER2 Database: a multi-genome catalog of putative transcrip
+      - pmid:15608292                      #    111  The MAPPER database: a multi-genome catalog of putative transcript
+  regprecise:
+    why: "the database paper and its web-services paper"
+    papers:
+      - pmid:19884135                      #    180  RegPrecise: A database of curated genomic inferences of transcript
+      - pmid:22700702                      #     28  RegPrecise web services interface: Programmatic access to the tran
+  conreal:
+    why: "the algorithm paper and the web-server paper"
+    papers:
+      - pmid:15980509                      #    104  CONREAL web server: identification and visualization of conserved 
+      - pmid:14672977                      #     98  CONREAL: Conserved Regulatory Elements Anchored Alignment Algorith
+  vombat:
+    why: "both VOMBAT papers"
+    papers:
+      - pmid:15797905                      #    173  Identification of transcription factor binding sites with variable
+      - pmid:16845064                      #     16  VOMBAT: prediction of transcription factor binding sites using var
+  probis:
+    why: "ProBiS and ProBiS-2012"
+    papers:
+      - pmid:20504855                      #     86  ProBiS: a web server for detection of structurally similar protein
+      - pmid:22600737                      #     86  ProBiS-2012: web server and web services for detection of structur
+  xxmotif:
+    why: "the web-server paper and the method paper for the same tool"
+    papers:
+      - pmid:22693218                      #     54  The XXmotif web server for eXhaustive, weight matriX-based motif d
+      - pmid:22990209                      #     69  P-value-based regulatory motif discovery using positional weight m
+  genepath:
+    why: "four GenePath papers describing one system"
+    papers:
+      - pmid:12957783                      #     27  GenePath: a system for inference of genetic networks and proposal 
+      - pmid:12584124                      #     62  GenePath: a system for automated construction of genetic networks 
+      - pmid:11604873                      #      4  GenePath: a computer program for genetic pathway discovery from mu
+      - pmid:15980576                      #     16  GenePath: from mutations to genetic networks and back
+  promoser:
+    why: "the original and the improvements paper"
+    papers:
+      - pmid:15215378                      #     23  PromoSer: improvements to the algorithm, visualization and accessi
+      - pmid:12824364                      #     85  PromoSer: A large-scale mammalian promoter and transcription start
+  scope:
+    why: "only the two SCOPE papers; BEAM, SPACER and the ensemble-learning papers are the component algorithms, not SCOPE itself"
+    papers:
+      - pmid:17485471                      #    105  SCOPE: a web server for practical de novo motif discovery
+      - pmid:21673638                      #      3  Using SCOPE to Identify Potential Regulatory Motifs in Coregulated
+  responsenet:
+    why: "ResponseNet and ResponseNet2.0"
+    papers:
+      - pmid:23761447                      #     24  ResponseNet2.0: Revealing signaling and regulatory pathways connec
+      - pmid:21576238                      #     82  ResponseNet: Revealing signaling and regulatory networks linking g
+  dminda:
+    why: "DMINDA and DMINDA 2.0"
+    papers:
+      - pmid:24753419                      #     47  DMINDA: an integrated web server for DNA motif identification and 
+      - pmid:28419194                      #     54  DMINDA 2.0: integrated and systematic views of regulatory DNA moti
+  phyloscan:
+    why: "both PhyloScan papers"
+    papers:
+      - pmid:20435683                      #      9  Phyloscan: locating transcription-regulating binding sites in mixe
+      - pmid:17244358                      #     38  PhyloScan: identification of transcription factor binding sites us
+  asian:
+    why: "only the two ASIAN papers; the cluster-analysis and graphical-modelling papers are methods"
+    papers:
+      - pmid:15980557                      #     25  ASIAN: a web server for inferring a regulatory network framework f
+      - pmid:15130931                      #     13  ASIAN: a website for network inference
+  tfbscluster:
+    why: "both TFBScluster papers"
+    papers:
+      - pmid:16845063                      #      9  TFBScluster web server for the identification of mammalian composi
+      - pmid:15855248                      #     27  TFBScluster: a resource for the characterization of transcriptiona
+  ibm_pattern_discovery:
+    why: "only the two web-server papers; TEIRESIAS and the dictionary-driven papers are separate algorithms from the same group"
+    papers:
+      - pmid:12824385                      #      4  The web server of IBM's Bioinformatics and Pattern Discovery group
+      - pmid:15215340                      #     12  The web server of IBM's Bioinformatics and Pattern Discovery group
+
+# ---------------------------------------------------------------------------
+# Deliberately absent from verified_publications, so they show no aggregate:
+#   EMBOSS members (jaspscan, tfscan, tfextract)
+#     each links the EMBOSS suite paper (9,906 citations) and the EMBOSS guides; no per-command count exists
+#   Galaxy wrappers (~13 records)
+#     each links the Galaxy platform paper (1,965) and 'A public Galaxy platform at Pasteur' (34); neither is the wrapped tool's own paper
+#   RSAT family (rsat, oligo-analysis, RSAT_-_Retrieve_Sequence, others)
+#     suite and member papers are cross-linked in both directions, so no split is defensible from the record
+#   fugu-sg (IMCB Fugu Genome Project)
+#     all four linked papers are Fugu genome announcements, which this catalog puts out of scope
+#   snogps
+#     its most-cited linked paper is the joint tRNAscan-SE / snoscan / snoGPS server paper; the other two tools are out of scope so the shared-primary guard cannot see the collision
+#   alggen
+#     ALGGEN is a server hosting PROMO and MALGEN; the server paper is not the indexed tool's
+#   predictprotein_open, edger, express, tact
+#     protein structure prediction, generic differential expression and genome annotation; scope questions that aggregation would amplify rather than fix
+#   preprint/published pairs (DeepCLIP, Chromosight, BAMscale, DAMEfinder, FINET, EAGLE, FastSK, AutoRELACS, ASHIC, bindSC, FINSURF, DriverGroup, TMELand)
+#     the two linked records are the same paper, so there is nothing to aggregate
+# ---------------------------------------------------------------------------

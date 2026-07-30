@@ -1,10 +1,10 @@
 # Coverage audit
 
-Generated 2026-07-28 by `make audit`, against [`curation/benchmark.yaml`](../curation/benchmark.yaml).
+Generated 2026-07-30 by `make audit`, against [`curation/benchmark.yaml`](../curation/benchmark.yaml).
 
 The benchmark is a hand-written list of resources the field treats as standard. It is not a ranking and not exhaustive. It exists so that "did the pipeline find the obvious things?" is a measurement rather than an impression.
 
-**153 of 221 benchmark tools present (69%).** Catalog size: 1951 tools.
+**153 of 221 benchmark tools present (69%).** Catalog size: 1948 tools.
 
 ## Misses
 
@@ -12,74 +12,74 @@ Each of these is a bug, and the diagnosis says which kind. *Never harvested* mea
 
 | Group | Tool | Diagnosis |
 | --- | --- | --- |
-| motif comparison and visualisation | Tomtom | absent from bio.tools; add to `seeds.yaml` |
-| motif comparison and visualisation | MoSBAT | absent from bio.tools; add to `seeds.yaml` |
-| motif comparison and visualisation | universalmotif | absent from bio.tools; add to `seeds.yaml` |
-| motif comparison and visualisation | ggseqlogo | a bio.tools record is *named* `ggseqlogo` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| motif comparison and visualisation | Logolas | a bio.tools record is *named* `logolas` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| nucleosome and chromatin state | DANPOS | a bio.tools record is *named* `danpos` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| nucleosome and chromatin state | iNPS | a bio.tools record is *named* `inps` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| nucleosome and chromatin state | NucTools | absent from bio.tools; add to `seeds.yaml` |
-| single-cell regulatory genomics | MAESTRO | a bio.tools record is *named* `maestro` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| harder motif discovery | MEME-ChIP | absent from bio.tools; add to `seeds.yaml` |
-| harder motif discovery | Improbizer | absent from bio.tools; add to `seeds.yaml` |
-| harder motif discovery | Amadeus | absent from bio.tools; add to `seeds.yaml` |
-| harder motif discovery | CisFinder | absent from bio.tools; add to `seeds.yaml` |
-| harder peak calling | HMMRATAC | absent from bio.tools; add to `seeds.yaml` |
-| harder peak calling | THOR | a bio.tools record is *named* `Thor` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| harder peak calling | Ritornello | absent from bio.tools; add to `seeds.yaml` |
-| harder peak calling | BCP | absent from bio.tools; add to `seeds.yaml` |
-| harder footprinting | BaGFoot | absent from bio.tools; add to `seeds.yaml` |
-| harder footprinting | DNase2TF | absent from bio.tools; add to `seeds.yaml` |
-| harder footprinting | seqOutBias | absent from bio.tools; add to `seeds.yaml` |
-| harder footprinting | Romulus | absent from bio.tools; add to `seeds.yaml` |
-| harder gene regulatory networks | CLR | absent from bio.tools; add to `seeds.yaml` |
-| harder gene regulatory networks | SCODE | absent from bio.tools; add to `seeds.yaml` |
-| harder gene regulatory networks | PIDC | absent from bio.tools; add to `seeds.yaml` |
-| harder gene regulatory networks | CellOracle | absent from bio.tools; add to `seeds.yaml` |
-| harder gene regulatory networks | Pando | absent from bio.tools; add to `seeds.yaml` |
-| harder gene regulatory networks | FigR | absent from bio.tools; add to `seeds.yaml` |
-| harder regulatory variants | deltaSVM | absent from bio.tools; add to `seeds.yaml` |
-| harder peak annotation | rGREAT | a bio.tools record is *named* `rgreat` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| harder peak annotation | PAVIS | absent from bio.tools; add to `seeds.yaml` |
-| harder ChIP and ATAC resources | dbSUPER | a bio.tools record is *named* `dbsuper` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| DNA methylation | methylKit | a bio.tools record is *named* `methylkit` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| DNA methylation | DSS | a bio.tools record is *named* `dss` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| DNA methylation | MOABS | absent from bio.tools; add to `seeds.yaml` |
-| DNA methylation | metilene | absent from bio.tools; add to `seeds.yaml` |
-| DNA methylation | DMRcate | a bio.tools record is *named* `dmrcate` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| DNA methylation | minfi | a bio.tools record is *named* `minfi` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| DNA methylation | ChAMP | harvested as `champ` but not selected; check `select_domain.py` |
-| DNA methylation | SeSAMe | a bio.tools record is *named* `mliftover` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| DNA methylation | methylpy | absent from bio.tools; add to `seeds.yaml` |
-| 3D genome and chromatin interactions | Juicer | a bio.tools record is *named* `juicer` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| 3D genome and chromatin interactions | HiC-Pro | a bio.tools record is *named* `hic-pro` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| 3D genome and chromatin interactions | cooler | absent from bio.tools; add to `seeds.yaml` |
-| 3D genome and chromatin interactions | FAN-C | a bio.tools record is *named* `fan-c` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| 3D genome and chromatin interactions | HiCExplorer | harvested as `hicexplorer` but not selected; check `select_domain.py` |
-| 3D genome and chromatin interactions | TADbit | harvested as `tadbit`, then rejected (no-match); selection rule too strict |
-| 3D genome and chromatin interactions | HiCCUPS | absent from bio.tools; add to `seeds.yaml` |
-| 3D genome and chromatin interactions | Arrowhead | absent from bio.tools; add to `seeds.yaml` |
-| 3D genome and chromatin interactions | FitHiC | a bio.tools record is *named* `fithic` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| 3D genome and chromatin interactions | HiCRep | a bio.tools record is *named* `hicrep` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| 3D genome and chromatin interactions | CHESS | absent from bio.tools; add to `seeds.yaml` |
-| 3D genome and chromatin interactions | coolpup.py | harvested as `coolpuppy` but not selected; check `select_domain.py` |
-| histone modifications | ROSE | absent from bio.tools; add to `seeds.yaml` |
-| histone modifications | dbSUPER | a bio.tools record is *named* `dbsuper` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| histone modifications | epilogos | absent from bio.tools; add to `seeds.yaml` |
-| histone modifications | chromswitch | a bio.tools record is *named* `chromswitch` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| histone modifications | EpiCSeq | absent from bio.tools; add to `seeds.yaml` |
-| reporter assays | mpralm | absent from bio.tools; add to `seeds.yaml` |
-| reporter assays | MPRAflow | absent from bio.tools; add to `seeds.yaml` |
-| reporter assays | CRADLE | absent from bio.tools; add to `seeds.yaml` |
-| molecular QTL | Matrix eQTL | a bio.tools record is *named* `matrix_eqtl` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| molecular QTL | FastQTL | absent from bio.tools; add to `seeds.yaml` |
-| molecular QTL | QTLtools | a bio.tools record is *named* `qtltools` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| molecular QTL | tensorQTL | absent from bio.tools; add to `seeds.yaml` |
-| molecular QTL | RASQUAL | a bio.tools record is *named* `rasqual` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| molecular QTL | mashr | absent from bio.tools; add to `seeds.yaml` |
-| molecular QTL | coloc | absent from bio.tools; add to `seeds.yaml` |
-| molecular QTL | SuSiE | absent from bio.tools; add to `seeds.yaml` |
+| motif comparison and visualisation | Tomtom | not found |
+| motif comparison and visualisation | MoSBAT | not found |
+| motif comparison and visualisation | universalmotif | not found |
+| motif comparison and visualisation | ggseqlogo | not found |
+| motif comparison and visualisation | Logolas | not found |
+| nucleosome and chromatin state | DANPOS | not found |
+| nucleosome and chromatin state | iNPS | not found |
+| nucleosome and chromatin state | NucTools | not found |
+| single-cell regulatory genomics | MAESTRO | not found |
+| harder motif discovery | MEME-ChIP | not found |
+| harder motif discovery | Improbizer | not found |
+| harder motif discovery | Amadeus | not found |
+| harder motif discovery | CisFinder | not found |
+| harder peak calling | HMMRATAC | not found |
+| harder peak calling | THOR | not found |
+| harder peak calling | Ritornello | not found |
+| harder peak calling | BCP | not found |
+| harder footprinting | BaGFoot | not found |
+| harder footprinting | DNase2TF | not found |
+| harder footprinting | seqOutBias | not found |
+| harder footprinting | Romulus | not found |
+| harder gene regulatory networks | CLR | not found |
+| harder gene regulatory networks | SCODE | not found |
+| harder gene regulatory networks | PIDC | not found |
+| harder gene regulatory networks | CellOracle | not found |
+| harder gene regulatory networks | Pando | not found |
+| harder gene regulatory networks | FigR | not found |
+| harder regulatory variants | deltaSVM | not found |
+| harder peak annotation | rGREAT | not found |
+| harder peak annotation | PAVIS | not found |
+| harder ChIP and ATAC resources | dbSUPER | not found |
+| DNA methylation | methylKit | not found |
+| DNA methylation | DSS | not found |
+| DNA methylation | MOABS | not found |
+| DNA methylation | metilene | not found |
+| DNA methylation | DMRcate | not found |
+| DNA methylation | minfi | not found |
+| DNA methylation | ChAMP | not found |
+| DNA methylation | SeSAMe | not found |
+| DNA methylation | methylpy | not found |
+| 3D genome and chromatin interactions | Juicer | not found |
+| 3D genome and chromatin interactions | HiC-Pro | not found |
+| 3D genome and chromatin interactions | cooler | not found |
+| 3D genome and chromatin interactions | FAN-C | not found |
+| 3D genome and chromatin interactions | HiCExplorer | not found |
+| 3D genome and chromatin interactions | TADbit | not found |
+| 3D genome and chromatin interactions | HiCCUPS | not found |
+| 3D genome and chromatin interactions | Arrowhead | not found |
+| 3D genome and chromatin interactions | FitHiC | not found |
+| 3D genome and chromatin interactions | HiCRep | not found |
+| 3D genome and chromatin interactions | CHESS | not found |
+| 3D genome and chromatin interactions | coolpup.py | not found |
+| histone modifications | ROSE | not found |
+| histone modifications | dbSUPER | not found |
+| histone modifications | epilogos | not found |
+| histone modifications | chromswitch | not found |
+| histone modifications | EpiCSeq | not found |
+| reporter assays | mpralm | not found |
+| reporter assays | MPRAflow | not found |
+| reporter assays | CRADLE | not found |
+| molecular QTL | Matrix eQTL | not found |
+| molecular QTL | FastQTL | not found |
+| molecular QTL | QTLtools | not found |
+| molecular QTL | tensorQTL | not found |
+| molecular QTL | RASQUAL | not found |
+| molecular QTL | mashr | not found |
+| molecular QTL | coloc | not found |
+| molecular QTL | SuSiE | not found |
 
 ## Full results
 
@@ -221,13 +221,13 @@ Each of these is a bug, and the diagnosis says which kind. *Never harvested* mea
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
-| Tomtom | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| Tomtom | ❌ |  | not found |
 | STAMP | ✅ | STAMP | bio.tools |
-| MoSBAT | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| MoSBAT | ❌ |  | not found |
 | matrix-clustering | ✅ | matrix-clustering | bio.tools |
-| universalmotif | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
-| ggseqlogo | ❌ |  | a bio.tools record is *named* `ggseqlogo` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| Logolas | ❌ |  | a bio.tools record is *named* `logolas` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
+| universalmotif | ❌ |  | not found |
+| ggseqlogo | ❌ |  | not found |
+| Logolas | ❌ |  | not found |
 | seqLogo | ✅ | seqLogo | bio.tools |
 
 ### nucleosome and chromatin state: 5/8
@@ -237,9 +237,9 @@ Each of these is a bug, and the diagnosis says which kind. *Never harvested* mea
 | ChromHMM | ✅ | ChromHMM | bio.tools |
 | Segway | ✅ | Segway | bio.tools |
 | NucleoATAC | ✅ | NucleoATAC | bio.tools |
-| DANPOS | ❌ |  | a bio.tools record is *named* `danpos` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| iNPS | ❌ |  | a bio.tools record is *named* `inps` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| NucTools | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| DANPOS | ❌ |  | not found |
+| iNPS | ❌ |  | not found |
+| NucTools | ❌ |  | not found |
 | nucleR | ✅ | nucleR | curated seed |
 | NuPoP | ✅ | NuPoP | bio.tools |
 
@@ -252,7 +252,7 @@ Each of these is a bug, and the diagnosis says which kind. *Never harvested* mea
 | SnapATAC | ✅ | SnapATAC | bio.tools |
 | cisTopic | ✅ | cisTopic | bio.tools |
 | scBasset | ✅ | scBasset | bio.tools |
-| MAESTRO | ❌ |  | a bio.tools record is *named* `maestro` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
+| MAESTRO | ❌ |  | not found |
 | Cicero | ✅ | Cicero | curated seed |
 | chromVAR | ✅ | chromVAR | bio.tools |
 | scATAC-pro | ✅ | scATAC-pro | bio.tools |
@@ -262,11 +262,11 @@ Each of these is a bug, and the diagnosis says which kind. *Never harvested* mea
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
-| MEME-ChIP | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| MEME-ChIP | ❌ |  | not found |
 | Weeder | ✅ | Weeder | bio.tools |
-| Improbizer | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
-| Amadeus | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
-| CisFinder | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| Improbizer | ❌ |  | not found |
+| Amadeus | ❌ |  | not found |
+| CisFinder | ❌ |  | not found |
 | ProSampler | ✅ | ProSampler | bio.tools |
 | GADEM | ✅ | GADEM | bio.tools |
 | XXmotif | ✅ | XXmotif | bio.tools |
@@ -277,26 +277,26 @@ Each of these is a bug, and the diagnosis says which kind. *Never harvested* mea
 | --- | :---: | --- | --- |
 | MACS | ✅ | MACS | bio.tools |
 | SICER | ✅ | SICER | bio.tools |
-| HMMRATAC | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| HMMRATAC | ❌ |  | not found |
 | SEACR | ✅ | SEACR | bio.tools |
 | LanceOtron | ✅ | LanceOtron | bio.tools |
-| THOR | ❌ |  | a bio.tools record is *named* `Thor` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
+| THOR | ❌ |  | not found |
 | PePr | ✅ | PePr | bio.tools |
 | csaw | ✅ | csaw | bio.tools |
 | MSPC | ✅ | MSPC | bio.tools |
 | JAMM | ✅ | JAMM | bio.tools |
-| Ritornello | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
-| BCP | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| Ritornello | ❌ |  | not found |
+| BCP | ❌ |  | not found |
 
 ### harder footprinting: 2/6
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
 | Wellington | ✅ | Wellington-bootstrap | curated seed |
-| BaGFoot | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
-| DNase2TF | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
-| seqOutBias | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
-| Romulus | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| BaGFoot | ❌ |  | not found |
+| DNase2TF | ❌ |  | not found |
+| seqOutBias | ❌ |  | not found |
+| Romulus | ❌ |  | not found |
 | msCentipede | ✅ | msCentipede | bio.tools |
 
 ### harder gene regulatory networks: 2/8
@@ -304,19 +304,19 @@ Each of these is a bug, and the diagnosis says which kind. *Never harvested* mea
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
 | GRNBoost2 | ✅ | Arboreto | bio.tools |
-| CLR | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
-| SCODE | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
-| PIDC | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
-| CellOracle | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
-| Pando | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
-| FigR | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| CLR | ❌ |  | not found |
+| SCODE | ❌ |  | not found |
+| PIDC | ❌ |  | not found |
+| CellOracle | ❌ |  | not found |
+| Pando | ❌ |  | not found |
+| FigR | ❌ |  | not found |
 | Dictys | ✅ | Dictys | curated seed |
 
 ### harder regulatory variants: 7/8
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
-| deltaSVM | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| deltaSVM | ❌ |  | not found |
 | motifbreakR | ✅ | motifbreakR | bio.tools |
 | SNP2TFBS | ✅ | SNP2TFBS | bio.tools |
 | GWAVA | ✅ | GWAVA | curated seed |
@@ -329,9 +329,9 @@ Each of these is a bug, and the diagnosis says which kind. *Never harvested* mea
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
-| rGREAT | ❌ |  | a bio.tools record is *named* `rgreat` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
+| rGREAT | ❌ |  | not found |
 | annotatr | ✅ | annotatr | bio.tools |
-| PAVIS | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| PAVIS | ❌ |  | not found |
 | LOLA | ✅ | LOLA | curated seed |
 | DiffBind | ✅ | DiffBind | bio.tools |
 
@@ -341,7 +341,7 @@ Each of these is a bug, and the diagnosis says which kind. *Never harvested* mea
 | --- | :---: | --- | --- |
 | Cistrome DB | ✅ | Cistrome | bio.tools |
 | SEdb | ✅ | SEdb 2.0 | bio.tools |
-| dbSUPER | ❌ |  | a bio.tools record is *named* `dbsuper` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
+| dbSUPER | ❌ |  | not found |
 | ChIPBase | ✅ | ChIPBase | bio.tools |
 | CistromeMap | ✅ | CistromeMap | curated seed |
 | hmChIP | ✅ | hmChIP | curated seed |
@@ -351,39 +351,39 @@ Each of these is a bug, and the diagnosis says which kind. *Never harvested* mea
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
 | Bismark | ✅ | Bismark | bio.tools |
-| methylKit | ❌ |  | a bio.tools record is *named* `methylkit` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| DSS | ❌ |  | a bio.tools record is *named* `dss` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
+| methylKit | ❌ |  | not found |
+| DSS | ❌ |  | not found |
 | BS-Seeker2 | ✅ | BS Seeker | bio.tools |
-| MOABS | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
-| metilene | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
-| DMRcate | ❌ |  | a bio.tools record is *named* `dmrcate` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| minfi | ❌ |  | a bio.tools record is *named* `minfi` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| ChAMP | ❌ |  | harvested as `champ` but not selected; check `select_domain.py` |
+| MOABS | ❌ |  | not found |
+| metilene | ❌ |  | not found |
+| DMRcate | ❌ |  | not found |
+| minfi | ❌ |  | not found |
+| ChAMP | ❌ |  | not found |
 | MethylDackel | ✅ | MethylDackel | bio.tools |
 | RnBeads | ✅ | RnBeads | bio.tools |
-| SeSAMe | ❌ |  | a bio.tools record is *named* `mliftover` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
+| SeSAMe | ❌ |  | not found |
 | MethylSeekR | ✅ | MethylSeekR | bio.tools |
-| methylpy | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| methylpy | ❌ |  | not found |
 
 ### 3D genome and chromatin interactions: 4/16
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
-| Juicer | ❌ |  | a bio.tools record is *named* `juicer` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| HiC-Pro | ❌ |  | a bio.tools record is *named* `hic-pro` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| cooler | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| Juicer | ❌ |  | not found |
+| HiC-Pro | ❌ |  | not found |
+| cooler | ❌ |  | not found |
 | cooltools | ✅ | cooltools | bio.tools |
-| FAN-C | ❌ |  | a bio.tools record is *named* `fan-c` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| HiCExplorer | ❌ |  | harvested as `hicexplorer` but not selected; check `select_domain.py` |
-| TADbit | ❌ |  | harvested as `tadbit`, then rejected (no-match); selection rule too strict |
-| HiCCUPS | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
-| Arrowhead | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| FAN-C | ❌ |  | not found |
+| HiCExplorer | ❌ |  | not found |
+| TADbit | ❌ |  | not found |
+| HiCCUPS | ❌ |  | not found |
+| Arrowhead | ❌ |  | not found |
 | mustache | ✅ | Mustache | bio.tools |
 | Peakachu | ✅ | Peakachu | bio.tools |
-| FitHiC | ❌ |  | a bio.tools record is *named* `fithic` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| HiCRep | ❌ |  | a bio.tools record is *named* `hicrep` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| CHESS | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
-| coolpup.py | ❌ |  | harvested as `coolpuppy` but not selected; check `select_domain.py` |
+| FitHiC | ❌ |  | not found |
+| HiCRep | ❌ |  | not found |
+| CHESS | ❌ |  | not found |
+| coolpup.py | ❌ |  | not found |
 | MoDLE | ✅ | MoDLE | bio.tools |
 
 ### histone modifications: 3/8
@@ -392,34 +392,34 @@ Each of these is a bug, and the diagnosis says which kind. *Never harvested* mea
 | --- | :---: | --- | --- |
 | ChromHMM | ✅ | ChromHMM | bio.tools |
 | Segway | ✅ | Segway | bio.tools |
-| ROSE | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
-| dbSUPER | ❌ |  | a bio.tools record is *named* `dbsuper` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
+| ROSE | ❌ |  | not found |
+| dbSUPER | ❌ |  | not found |
 | SEdb | ✅ | SEdb 2.0 | bio.tools |
-| epilogos | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
-| chromswitch | ❌ |  | a bio.tools record is *named* `chromswitch` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| EpiCSeq | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| epilogos | ❌ |  | not found |
+| chromswitch | ❌ |  | not found |
+| EpiCSeq | ❌ |  | not found |
 
 ### reporter assays: 3/6
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
 | MPRAnalyze | ✅ | MPRAnalyze | bio.tools |
-| mpralm | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
-| MPRAflow | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| mpralm | ❌ |  | not found |
+| MPRAflow | ❌ |  | not found |
 | starrpeaker | ✅ | STARRPeaker | bio.tools |
-| CRADLE | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| CRADLE | ❌ |  | not found |
 | BasicStarrSeq | ✅ | BasicSTARRseq | bio.tools |
 
 ### molecular QTL: 1/9
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
-| Matrix eQTL | ❌ |  | a bio.tools record is *named* `matrix_eqtl` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| FastQTL | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
-| QTLtools | ❌ |  | a bio.tools record is *named* `qtltools` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| tensorQTL | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
-| RASQUAL | ❌ |  | a bio.tools record is *named* `rasqual` but was never harvested. **Open it before acting**: the match is on name alone, and roughly a third of these are a different tool. If it is the right one, add it to `SEED_BIOTOOLS_IDS`; if not, it belongs in `seeds.yaml` |
-| mashr | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
-| coloc | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
-| SuSiE | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| Matrix eQTL | ❌ |  | not found |
+| FastQTL | ❌ |  | not found |
+| QTLtools | ❌ |  | not found |
+| tensorQTL | ❌ |  | not found |
+| RASQUAL | ❌ |  | not found |
+| mashr | ❌ |  | not found |
+| coloc | ❌ |  | not found |
+| SuSiE | ❌ |  | not found |
 | QTLbase | ✅ | QTLbase | bio.tools |

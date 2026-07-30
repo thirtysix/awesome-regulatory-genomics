@@ -19,6 +19,7 @@ These are overwritten on every build. Edits are lost without warning.
 | `docs/homepage-check.md` | `pipeline/check_homepages.py` |
 | `docs/install-review.md` | `pipeline/resolve_installs.py`; promote rows into `overlay.yaml` |
 | `curation/llm_proposals.yaml` | it is model output; promote things into `overlay.yaml` |
+| `data/cache/citation_cache.csv` | refreshed from OpenAlex; see the citation gotchas below |
 
 `curation/overlay.yaml`, `curation/seeds.yaml` and `curation/benchmark.yaml` are
 the hand-written layer and are never overwritten.
@@ -91,6 +92,42 @@ verifies hand-written identifiers by comparing the title to the tool name.
 publication hands each member of a suite the suite's total: the EMBOSS paper is
 linked to dozens of commands, the Bioconductor paper to 23 packages. Where a
 primary publication is shared by three or more tools, no count is shown.
+
+**A tool with several of its own papers gets a hand-checked list, never a rule.**
+`curation/overlay.yaml: verified_publications` names the papers that genuinely
+belong to one tool; `citations` shows the most-cited of them and
+`citations_total` the sum, displayed as "across N papers" and never sorted on.
+Every rule tried for deriving that list failed on real records. Summing the
+linked list gave phantompeakqualtools the ENCODE ChIP-seq guidelines paper
+(+2,244) and every Galaxy wrapper the platform's 1,965. `type: Primary` cannot
+separate them because 75% of publication entries are untyped, including all
+eight of the MEME Suite's. Name-in-title matching fails both ways at once: it
+admits Meta-MEME and ParaMEME by substring while rejecting MEME's own 1994
+paper, titled "Fitting a mixture model by expectation maximization". Two records
+(ATACseqQC, COUGER) list one paper twice, and a dozen list a preprint and its
+published version as separate entries, so anything that sums must dedupe.
+
+**The suite-paper guard counts identifiers, not works.** The same paper is
+reachable as both a PMID and a DOI, so its tally splits: Bioconductor is
+`pmid:25633503` for 23 records and `doi:10.1038/nmeth.3252` for TransView, and
+the DOI copy tallied 1, slid under the `>= 3` threshold, and made TransView the
+12th most-cited entry on the Bioconductor paper's 4,023 citations. Galaxy splits
+the same way. `SUITE_PUBLICATIONS` in `config.py` lists every identifier each
+platform paper is reachable by; it is the publication analogue of `MONOREPOS`.
+
+**Overriding a publication link must also move the citation count.** Setting
+`publications:` in the overlay changed `row["publication"]` and left `citations`
+describing the paper just rejected. Signac linked its Nature Methods paper while
+reporting the bioRxiv preprint's 164 instead of 1,889; ArchR showed 74 for 1,486.
+
+**A failed citation lookup is unknown, not zero.** The original sweep cached
+lookup failures as `0`, which is indistinguishable from an uncited paper. 410 of
+them were hiding real counts, including JASPAR 2018 at 0 against a true 1,615,
+and they masked contamination: three out-of-scope records (`erange`, `edger`,
+`express`) only became visible in the top 15 once the real numbers arrived. The
+cache also held 1,126 fewer identifiers than the harvest actually uses. Refresh
+with the identifiers from `enriched.json.gz` plus the overlay's overrides, and
+write an unresolved count as empty rather than 0.
 
 **bio.tools `operation=` and `q=` are fuzzy text search, not ontology lookup.**
 Always quote the value. `q="cis-regulatory"` returns 107 records; unquoted it

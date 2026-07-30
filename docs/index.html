@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Awesome Regulatory Genomics: catalog</title>
-<meta name="description" content="Searchable catalog of 1951 tools for transcription-factor binding, sequence motifs, regulatory elements, chromatin and gene-regulatory networks.">
+<meta name="description" content="Searchable catalog of 1948 tools for transcription-factor binding, sequence motifs, regulatory elements, chromatin and gene-regulatory networks.">
 <style>
 :root{
   --bg:#ffffff; --fg:#1a1d21; --muted:#5c6570; --line:#e3e6ea; --accent:#1b6ac9;
@@ -63,6 +63,10 @@ tbody tr:hover{background:var(--chip)}
 td.name{font-weight:600;min-width:150px}
 td.desc{color:var(--muted);max-width:520px}
 td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+/* the verified multi-paper total, sat under the single-paper count it does not
+   replace: muted and smaller so the sortable value stays the dominant one */
+.agg{display:block;font-size:11px;color:var(--muted);cursor:help;
+  border-bottom:1px dotted currentColor;width:fit-content;margin-left:auto}
 th.lnk,td.lnk{text-align:center;white-space:nowrap}
 tr.filters th{position:sticky;top:34px;background:var(--bg);padding:4px 6px;cursor:default;
   text-transform:none;letter-spacing:0;font-weight:400}
@@ -116,8 +120,8 @@ a.theme:hover{border-color:var(--accent);color:var(--accent);text-decoration:non
 <header>
   <div class="wrap">
     <h1><a href="https://github.com/thirtysix/awesome-regulatory-genomics">Awesome Regulatory Genomics</a></h1>
-    <div class="sub">1951 tools for transcription-factor binding, motifs, regulatory
-      elements, chromatin and gene-regulatory networks · updated 2026-07-28</div>
+    <div class="sub">1948 tools for transcription-factor binding, motifs, regulatory
+      elements, chromatin and gene-regulatory networks · updated 2026-07-30</div>
     <div class="controls">
       <input type="search" id="q" placeholder="Search name, description, category, language…" autocomplete="off">
       <select id="type"><option value="">Any tool type</option></select>
@@ -569,6 +573,15 @@ function render(){
       ? t.reg_names.map(r => '<a href="'+esc(t.registries[r])+'" title="'+esc(r)+'">'
           + esc(REG[r] || r.slice(0,2)) + '</a>').join(' ')
       : dash;
+    // The column sorts and filters on one paper, so the total sits beneath it as
+    // a labelled second line rather than replacing the value.
+    let citesCell = t.citations ? t.citations.toLocaleString() : '';
+    if (t.citations && t.cites_total && t.cites_papers) {
+      citesCell += '<span class="agg" title="Total across the '
+        + t.cites_papers + ' publications verified as this tool own work. '
+        + 'Not used for sorting, because the rest of the catalog carries single-paper counts.">'
+        + t.cites_total.toLocaleString() + ' / ' + t.cites_papers + 'p</span>';
+    }
     const cats = t.categories.map(c=>'<span class="cat">'+esc(catLabel[c]||c)+'</span>').join('') +
       (t.source === 'curated' ? '<span class="cat seed">curated</span>' : '');
     return '<tr><td class="name">' + (href ? '<a href="'+esc(href)+'">'+esc(t.name)+'</a>' : esc(t.name)) +
@@ -581,7 +594,7 @@ function render(){
       '<td class="lnk">' + paperCell + '</td>' +
       '<td class="lnk">' + installCell + '</td>' +
       '<td class="num">' + (t.repo_stars ?? '') + '</td>' +
-      '<td class="num">' + (t.citations ? t.citations.toLocaleString() : '') + '</td>' +
+      '<td class="num">' + citesCell + '</td>' +
       '<td class="num">' + esc(t.year) + '</td></tr>';
   }).join('');
 }

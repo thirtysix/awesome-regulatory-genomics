@@ -24,7 +24,8 @@ from collections import Counter
 
 from jsonio import read_json
 from config import (CATEGORY_KEYS, CURATION, DATA, DB_TOOLTYPES, MONOREPOS,
-                    OP_CATEGORY, RAW, TEXT_CATEGORY, TOPIC_CATEGORY)
+                    OP_CATEGORY, RAW, SUITE_PUBLICATIONS, TEXT_CATEGORY,
+                    TOPIC_CATEGORY)
 
 ENRICHED = RAW / "enriched.json.gz"
 SEEDS = CURATION / "seeds.yaml"
@@ -40,6 +41,7 @@ COLUMNS = [
     "homepage", "homepage_status", "repo_url", "repo_status", "repo_origin", "repo_stars", "repo_pushed", "repo_archived",
     "repo_language", "repo_license", "tool_type", "topics", "languages",
     "license", "license_source", "maturity", "cost", "registries", "citations", "citation_note", "year", "publication",
+    "citations_total", "citations_papers",
     "publication_is_preprint",
     "biotools_id", "biotools_url", "last_update", "source", "tags", "featured",
 ]
@@ -272,6 +274,10 @@ def primary_identifier(tool: dict, pubmap: dict[str, str] | None = None) -> str:
     member tools. The EMBOSS paper is linked to dozens of EMBOSS commands and
     the Bioconductor paper to 23 packages here, so summing hands each member
     the whole suite's citation count and the ranking becomes meaningless.
+
+    Where a tool genuinely has several of its own papers, the fix is a
+    hand-checked list in `verified_publications`, not a rule: see
+    apply_verified_publications() for why no rule works.
     """
     pubmap = pubmap or {}
     pubs = tool.get("publication") or []
@@ -342,10 +348,15 @@ def from_biotools(tool: dict, cites: dict[str, int], shared: dict[str, int],
     # A publication linked by several tools is a suite paper, not this tool's
     # own. We genuinely do not know the member's individual impact, so record
     # nothing rather than something misleading.
-    if primary and n_sharing >= 3:
+    if primary in SUITE_PUBLICATIONS:
+        citations, note = None, "publication is a platform or suite paper"
+    elif primary and n_sharing >= 3:
         citations, note = None, f"primary publication shared by {n_sharing} tools"
     else:
-        citations, note = cites.get(cache_key(primary), 0) if primary else 0, ""
+        # An identifier we failed to look up is unknown, not zero. Defaulting to
+        # 0 made a failed lookup indistinguishable from an uncited paper, and the
+        # cache held 410 such failures stored as real zeros.
+        citations, note = (cites.get(cache_key(primary)) if primary else None), ""
     return {
         "id": tool["biotoolsID"],
         "name": tool["name"],
@@ -368,6 +379,8 @@ def from_biotools(tool: dict, cites: dict[str, int], shared: dict[str, int],
         "cost": tool.get("cost") or "",
         "citations": citations,
         "citation_note": note,
+        "citations_total": None,
+        "citations_papers": None,
         "year": pub_year(tool),
         "publication": primary or (ids[0] if ids else ""),
         "publication_is_preprint": (primary or "").removeprefix("doi:").startswith(PREPRINT_PREFIXES),
@@ -381,6 +394,45 @@ def from_biotools(tool: dict, cites: dict[str, int], shared: dict[str, int],
         "_identifiers": ids,
         "_registries": tool.get("_registries") or {},
     }
+
+
+def apply_verified_publications(row: dict, papers: list[str], cites: dict[str, int]) -> str:
+    """Aggregate a hand-checked list of one tool's own papers.
+
+    `citations` becomes the most-cited paper in the list, so the ranked number
+    still points at a single work a reader can open. The sum lands in
+    `citations_total` and is only ever displayed as "across N papers"; nothing
+    sorts on it, because a total is not comparable with the single-paper counts
+    the rest of the catalog carries.
+
+    Why the list is hand-written and cannot be derived: bio.tools' publication
+    field mixes a tool's own papers with the method it implements, the community
+    guidelines it follows and the platform hosting it. Summing it gave
+    phantompeakqualtools the ENCODE ChIP-seq guidelines paper (+2,244) and every
+    Galaxy wrapper the Galaxy platform's 1,965. `type: Primary` cannot separate
+    them either: 75% of entries are untyped, including all eight of the MEME
+    Suite's. Matching the tool name against the title fails in both directions -
+    it admits Meta-MEME and ParaMEME by substring while rejecting MEME's own 1994
+    paper, whose title is "Fitting a mixture model by expectation maximization".
+
+    Returns a note describing what was left out, for the audit trail.
+    """
+    counts = {}
+    for ident in dict.fromkeys(papers):        # dedupe: two records list one paper twice
+        c = cites.get(cache_key(ident))
+        if c is not None:
+            counts[ident] = c
+    if len(counts) < 2:
+        # Not enough resolvable counts to total honestly; leave the row alone.
+        return f"verified list has {len(counts)} resolvable count(s); no total shown"
+    best = max(counts, key=counts.get)
+    row["citations"] = counts[best]
+    row["publication"] = best
+    row["publication_is_preprint"] = best.removeprefix("doi:").startswith(PREPRINT_PREFIXES)
+    row["citations_total"] = sum(counts.values())
+    row["citations_papers"] = len(counts)
+    missing = len(dict.fromkeys(papers)) - len(counts)
+    return f"{missing} verified paper(s) had no citation count" if missing else ""
 
 
 def from_seed(seed: dict, cites: dict[str, int] | None = None,
@@ -402,7 +454,9 @@ def from_seed(seed: dict, cites: dict[str, int] | None = None,
 
     citations, note = None, ""
     n_sharing = (shared or {}).get(ident, 0)
-    if ident and n_sharing >= 3:
+    if ident in SUITE_PUBLICATIONS:
+        note = "publication is a platform or suite paper"
+    elif ident and n_sharing >= 3:
         note = f"primary publication shared by {n_sharing} tools"
     elif ident:
         # The cache is keyed by cache_key(), not by the raw identifier.
@@ -421,6 +475,7 @@ def from_seed(seed: dict, cites: dict[str, int] | None = None,
         "tool_type": [], "topics": [], "languages": [],
         "license": "", "maturity": "", "cost": "",
         "citations": citations, "citation_note": note, "year": seed.get("year", ""),
+        "citations_total": None, "citations_papers": None,
         "publication": ident,
         "publication_is_preprint": ident.removeprefix("doi:").startswith(PREPRINT_PREFIXES),
         "biotools_id": "", "biotools_url": "",
@@ -463,6 +518,8 @@ def main() -> None:
     excluded = overlay.get("exclude") or {}
     aliases = overlay.get("aliases") or {}
     pub_overrides = overlay.get("publications") or {}
+    verified_pubs = {k: v["papers"] for k, v in
+                     (overlay.get("verified_publications") or {}).items()}
     alias_targets = {bid for ids in aliases.values() for bid in ids}
 
     proposed, llm_out_of_scope = {}, {}
@@ -534,6 +591,15 @@ def main() -> None:
             row["publication"] = pub_overrides[key]
             row["publication_is_preprint"] = (
                 pub_overrides[key].removeprefix("doi:").startswith(PREPRINT_PREFIXES))
+            # The count has to follow the link. Overriding only the link left the
+            # citation describing the paper we just decided was the wrong one:
+            # Signac pointed at its Nature Methods paper while still reporting
+            # the bioRxiv preprint's 164 rather than 1,889.
+            row["citations"] = cites.get(cache_key(pub_overrides[key]))
+        if key in verified_pubs:
+            note = apply_verified_publications(row, verified_pubs[key], cites)
+            if note:
+                row["citation_note"] = note
         if key in featured:
             row["featured"] = featured[key]
         else:

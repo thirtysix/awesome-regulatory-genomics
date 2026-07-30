@@ -763,6 +763,33 @@ MONOREPOS = {
     "ncbi/sra-tools",
 }
 
+# The publication equivalent of MONOREPOS: platform and suite papers that are
+# never one tool's own, however few catalog members happen to link them.
+#
+# build.py already blanks a publication claimed as primary by three or more
+# tools, but that counter keys on the IDENTIFIER, and the same paper is reachable
+# as both a PMID and a DOI. Bioconductor is `pmid:25633503` for 23 records and
+# `doi:10.1038/nmeth.3252` for TransView, so the DOI-flavoured copy tallied 1,
+# slid under the threshold, and gave TransView the Bioconductor paper's 4,023
+# citations and 12th place in the catalog. Galaxy splits the same way
+# (`pmid:27137889` for 13 records, `doi:10.1093/nar/gkw343` for two), which put
+# two Galaxy wrappers at 2,343 apiece.
+#
+# List every identifier a paper is reachable by, not just the common one.
+SUITE_PUBLICATIONS = {
+    # Bioconductor
+    "pmid:25633503", "doi:10.1038/nmeth.3252",
+    # Galaxy
+    "pmid:27137889", "doi:10.1093/nar/gkw343",
+    # a Galaxy/workflow F1000Research poster carried by 16 records
+    "doi:10.7490/f1000research.1114334.1",
+    # EMBOSS, plus its administrator and developer guides
+    "doi:10.1016/S0168-9525(00)02024-2",
+    "doi:10.1017/CBO9781139151399", "doi:10.1017/CBO9781139151405",
+    # nf-core
+    "pmid:32055031",
+}
+
 REGISTRY_HOSTS = {
     "bioconductor.org": "bioconductor",
     "pypi.org": "pypi",

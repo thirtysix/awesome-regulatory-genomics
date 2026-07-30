@@ -99,7 +99,14 @@ def tool_line(t: dict) -> list[str]:
     if t.get("repo_stars"):
         signals.append(f"{fmt_int(t['repo_stars'])} stars")
     if t.get("citations"):
-        signals.append(f"{fmt_int(t['citations'])} cites")
+        cites = f"{fmt_int(t['citations'])} cites"
+        # The headline number is one paper. Where a hand-checked list of the
+        # tool's own papers exists, name the total separately rather than
+        # silently swapping one meaning for the other.
+        if t.get("citations_total") and t.get("citations_papers"):
+            cites += (f", {fmt_int(t['citations_total'])} across "
+                      f"{t['citations_papers']} papers")
+        signals.append(cites)
     if t.get("repo_archived"):
         signals.append("archived")
 
@@ -457,6 +464,10 @@ tbody tr:hover{background:var(--chip)}
 td.name{font-weight:600;min-width:150px}
 td.desc{color:var(--muted);max-width:520px}
 td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+/* the verified multi-paper total, sat under the single-paper count it does not
+   replace: muted and smaller so the sortable value stays the dominant one */
+.agg{display:block;font-size:11px;color:var(--muted);cursor:help;
+  border-bottom:1px dotted currentColor;width:fit-content;margin-left:auto}
 th.lnk,td.lnk{text-align:center;white-space:nowrap}
 tr.filters th{position:sticky;top:34px;background:var(--bg);padding:4px 6px;cursor:default;
   text-transform:none;letter-spacing:0;font-weight:400}
@@ -963,6 +974,15 @@ function render(){
       ? t.reg_names.map(r => '<a href="'+esc(t.registries[r])+'" title="'+esc(r)+'">'
           + esc(REG[r] || r.slice(0,2)) + '</a>').join(' ')
       : dash;
+    // The column sorts and filters on one paper, so the total sits beneath it as
+    // a labelled second line rather than replacing the value.
+    let citesCell = t.citations ? t.citations.toLocaleString() : '';
+    if (t.citations && t.cites_total && t.cites_papers) {
+      citesCell += '<span class="agg" title="Total across the '
+        + t.cites_papers + ' publications verified as this tool own work. '
+        + 'Not used for sorting, because the rest of the catalog carries single-paper counts.">'
+        + t.cites_total.toLocaleString() + ' / ' + t.cites_papers + 'p</span>';
+    }
     const cats = t.categories.map(c=>'<span class="cat">'+esc(catLabel[c]||c)+'</span>').join('') +
       (t.source === 'curated' ? '<span class="cat seed">curated</span>' : '');
     return '<tr><td class="name">' + (href ? '<a href="'+esc(href)+'">'+esc(t.name)+'</a>' : esc(t.name)) +
@@ -975,7 +995,7 @@ function render(){
       '<td class="lnk">' + paperCell + '</td>' +
       '<td class="lnk">' + installCell + '</td>' +
       '<td class="num">' + (t.repo_stars ?? '') + '</td>' +
-      '<td class="num">' + (t.citations ? t.citations.toLocaleString() : '') + '</td>' +
+      '<td class="num">' + citesCell + '</td>' +
       '<td class="num">' + esc(t.year) + '</td></tr>';
   }).join('');
 }
@@ -1051,6 +1071,10 @@ def render_site(catalog: dict) -> None:
         "registries": t.get("_registries") or {},
         "tool_type": t["tool_type"], "languages": t["languages"],
         "citations": t["citations"], "year": t["year"], "publication": t["publication"],
+        # Only 37 of ~1,950 tools have a verified total. Emitting the pair as
+        # null for the rest cost 74 KB in a payload every visitor downloads.
+        **({"cites_total": t["citations_total"], "cites_papers": t["citations_papers"]}
+           if t.get("citations_total") else {}),
         "preprint": bool(t.get("publication_is_preprint")),
         "source": t["source"], "tags": t["tags"],
     } for t in tools]
