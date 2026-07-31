@@ -194,6 +194,68 @@ paths) is deliberately deferred until after it.
       rejected. The licences are mostly genuinely unstated upstream rather than
       derivable, so this needs contributions, not code.
 
+## Citation correctness, 2026-07-31
+
+Unplanned. Started as "MEME Suite shows 4,897 but has several papers" and turned
+into an audit of the whole citation column. Nine commits, `956fe12..62f7e08`.
+
+- [x] **Verified multi-paper totals.** `verified_publications` in `overlay.yaml`:
+      38 tools, 106 hand-checked papers. `citations` shows the most-cited of the
+      list, `citations_total` the sum, displayed as "across N papers" and never
+      sorted on. Deliberately hand-written: every derivation rule failed on real
+      records, and `CLAUDE.md` records which and why.
+
+- [x] **Citations fetched for what the catalog DISPLAYS.** `enrich.py` iterated
+      the bio.tools sweep only, so seed publications and preprints upgraded by
+      `resolve_pubs.py` were never looked up: 148 blank cells, TOBIAS and Sierra
+      among them. `enrich.displayed_identifiers()` now covers all three sources.
+
+- [x] **A failed lookup is no longer stored as 0.** 410 such zeros were masking
+      real counts and, worse, hiding three out-of-scope records that surfaced in
+      the top 15 the moment real numbers arrived (`erange`, `edger`, `express`,
+      now excluded).
+
+- [x] **`pipeline/discover_pubs.py`** (`make discover-pubs`). Finds a missing
+      paper from the tool's OWN declared citation - Bioconductor citation page,
+      `CITATION.cff`, `codemeta.json`, README, homepage - never a name search.
+      24 papers recovered including HOMER (14,799 citations, previously blank);
+      32 tools confirmed to have no article at all, recorded in `no_article`.
+
+- [x] **15 wrong publications corrected**, found by deriving each paper
+      independently and comparing. Both directions: MoonlightR was carrying a
+      spine-surgery review, vulcan was carrying VIPER's 1,079 citations, while
+      ChIPpeakAnno was undercounted by 1,178 and DiffBind by 2,359.
+
+- [x] **`config.is_preprint()`.** `10.1101/` is Cold Spring Harbor Laboratory
+      Press, not a bioRxiv prefix, so six peer-reviewed papers were labelled
+      preprints - RegulomeDB's Genome Research paper among them - and demoted
+      inside `primary_identifier()`. bioRxiv is now matched by suffix shape.
+
+- [x] **`SUITE_PUBLICATIONS`** in `config.py`, the publication analogue of
+      `MONOREPOS`. The old guard counted identifiers rather than works, so the
+      DOI-flavoured copy of the Bioconductor paper slid under the threshold and
+      gave TransView its 4,023 citations.
+
+- [x] **`OPENALEX_API_KEY`.** OpenAlex meters a daily credit budget: $0.10/day
+      anonymous, $1/day with a free key. `make enrich` reports the tier and stops
+      with the reset time rather than filling the catalog with blanks.
+
+- [x] **Table and download.** A Download button exporting the visible, filtered,
+      sorted rows as TSV (34 columns); publication title, venue, URL, pmid and
+      doi as their own columns; a paper-title tooltip on the site; and
+      `citations_last_full_year`, `citations_per_year`, `categories_n`.
+
+- [ ] **Follow-up: the 30 tools still without a publication.** Down from 90.
+      `docs/publication-discovery.md` holds the candidates; Genrich and SnapATAC2
+      are the two worth a hand lookup. Most of the rest are web services and
+      MATLAB File Exchange entries that genuinely have no paper.
+
+- [ ] **Follow-up: description provenance.** 80% of descriptions are LLM
+      rewrites of the bio.tools text (DeepInfra, DeepSeek-V4-Flash, escalating to
+      V3.1-Terminus). Per-row in `_llm_applied`; every original is recoverable
+      from `was:` in `llm_proposals.yaml`. Worth deciding whether the catalog
+      should ship the originals for citation contexts.
+
 ## Also outstanding
 
 - [ ] **Work through the unsearched records.** ~940 of the repo-less records were

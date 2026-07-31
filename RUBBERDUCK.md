@@ -30,6 +30,15 @@ whether you can install it, when it was last touched, and how often its paper is
 cited. Plus a set of honesty documents recording what the catalog is unsure
 about.
 
+Counting citations turned out to be harder than it sounds, and the catalog is
+careful about it. A tool can have several papers of its own, so a single number
+undercounts it. A tool can also be credited with someone else's paper, because
+registries sometimes attach a whole software suite's publication to each of its
+parts, which massively overcounts it. And a blank can mean several different
+things: no paper was ever written, or one exists and nobody has indexed it, or
+the count belongs to a shared paper and cannot honestly be split. The catalog
+distinguishes those cases rather than printing a zero.
+
 ## The objective
 
 Not "as many tools as possible". Two things matter more:
