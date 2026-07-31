@@ -25,6 +25,36 @@ of something that reads the sentence.
 | `describe` | bio.tools descriptions are wildly inconsistent: some are one clean sentence, many open with "XYZ is a tool that…", some run to a paragraph with embedded citations. `first_sentence()` is a blunt instrument. |
 | `adjudicate` | Roughly 1,500 records are rejected as out of scope. The boundary has been spot-checked, not read. This re-reads every rejection and flags likely false negatives. |
 
+## What `describe` is given, and why
+
+The inputs were audited on 2026-07-31 after the descriptions were queried for
+dissertation use. Two defects were found and fixed; both are written up in
+`CLAUDE.md` with the evidence.
+
+**Input is the harvest, never the built catalog.** Reading `data/catalog.json`
+fed the model its own previous output, because `build.py` had already merged it
+there. `source_descriptions()` reads `data/raw/enriched.json.gz`, so `was:` is a
+true original and a re-run is an *independent* derivation rather than an echo.
+
+**The tool's own paper is a second source.** 1,775 of 1,819 records resolve to a
+publication and 90% carry its abstract, read from the OpenAlex responses stored
+by `enrich.py --backfill-works`. This exists because a registry description is
+often a fragment: 223 records had under 80 characters of prose, and a model given
+only that filled the gap from EDAM tags. `paper_context()` tries the displayed
+`publication` first and `_identifiers` second, since a paper recovered by
+`discover_pubs.py` appears only in the former.
+
+**EDAM operations are labelled unreliable in the prompt.** They are a weak hint,
+never the sole basis for a claim, because this catalog's own notes show them
+wrong often enough to matter. Before that instruction, 23% of descriptions
+asserted something traceable only to a tag.
+
+**The model may decline.** `{"description": null}` leaves the harvested text in
+place. Guessing from a name is worse than a plain registry sentence: TFutils,
+whose entire source is "Package to work with TF data.", had been given the
+invented "Retrieves and analyses transcription factor binding site data from
+public repositories".
+
 ## The three properties that are preserved
 
 **Proposals, not decisions.** Output goes to `curation/llm_proposals.yaml`.

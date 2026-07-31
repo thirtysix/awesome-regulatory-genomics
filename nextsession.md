@@ -84,11 +84,11 @@ None committed; ask the user.
 - **30 tools still have no publication** (was 90). `docs/publication-discovery.md` holds the
   candidates. Genrich and SnapATAC2 are the two worth a hand lookup; most of the rest are web
   services and MATLAB File Exchange entries that genuinely have no paper.
-- **Descriptions are 80% LLM-rewritten** - DeepInfra, `DeepSeek-V4-Flash` with
-  `DeepSeek-V3.1-Terminus` escalation, from the bio.tools text *plus EDAM terms*. Provenance
-  is per-row in `_llm_applied`, and every original is recoverable from `was:` in
-  `llm_proposals.yaml`. Raised because a reviewer may question them for the dissertation; a
-  revert to bio.tools originals is a mechanical join if ever wanted.
+- **Descriptions were audited and regenerated on 2026-07-31.** See the session notes above;
+  the claim previously recorded here, that "every original is recoverable from `was:`", was
+  **wrong** - `was:` held the previous LLM rewrite for 1,407 of 1,563 rows. Originals live in
+  `data/raw/enriched.json.gz`, which is now what the stage reads. A revert to bio.tools
+  originals remains a mechanical join if ever wanted.
 - Older follow-ups still open below in `ROADMAP.md`: 2b (registry candidates), 4b (benchmark
   misses), 7b (preprints and licences), the deferred curation block, and the ~940 unsearched
   repo-less records.

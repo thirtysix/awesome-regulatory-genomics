@@ -242,6 +242,76 @@ The declared citation can also be the wrong thing to record: `rmspc` declares th
 MSPC paper it wraps, and `consensusSeekeR` a t-mixture statistics paper. Read the
 title before promoting a row.
 
+**The describe stage must read the HARVEST, not the built catalog.** The
+convergence trap again, in the stage the `verify_additions.py` note did not
+cover. `llm_assist.py` read `data/catalog.json` for its input text, and
+`build.py` had already merged the previous run's rewrite into that file, so the
+second `make llm` rewrote a rewrite. For 1,407 of 1,563 records the `was:` field
+in `llm_proposals.yaml` therefore held generation 1's output, not the bio.tools
+original: MACS's true source is "Model-based Analysis of ChIP-seq data.", while
+`was:` claimed "Calls peaks from ChIP-seq data using a model-based approach",
+which is what run 1 produced. Nothing was lost, because the originals live in
+`enriched.json.gz`, but the audit trail said otherwise and the handoff notes
+repeated the claim. `source_descriptions()` now reads the harvest. Cost of the
+extra generation, measured: 492 records changed, 75 gained a claim the source
+does not make, and 45 of those were cases where run 1 had correctly returned the
+source verbatim. ePIANNO went from the accurate "ePIgenomics ANNOtation tool." to
+the invented "Analyses and classifies genetic variants from ChIP-seq and GWAS
+data".
+
+**Never let a model fill a thin description from EDAM terms.** The describe
+prompt was handed each record's EDAM operations, which this repository documents
+at length as unreliable. When the prose source was a fragment - 223 of them were
+under 80 characters - the model padded the sentence out of those tags, and the
+result reads as authoritative. h4HiChIP-Peaks was described as calling peaks
+"using an essential dynamics algorithm", a protein molecular-dynamics technique
+present only as a wrong EDAM operation. COMAN, a metatranscriptomics web server
+whose entire bio.tools text is "Comprehensive metatranscriptomics analysis.", was
+described as predicting transcriptional regulatory elements, that being its one
+(wrong) EDAM operation. HOT and ePIANNO were invented the same way, and ReMap got
+a full description built on a source reading "THIS PAGE IS DEPRECATED, GO TO ...".
+365 descriptions (23%) carried at least one claim traceable only to an EDAM term.
+The prompt now names EDAM as unreliable, forbids a capability resting on a tag
+alone, and permits `{"description": null}` instead of a guess.
+
+**To describe a tool whose registry text is too thin, ask its paper.** The same
+move as `discover_pubs.py`: go to the source that knows. 98% of catalogued tools
+have a publication and 90% now have its abstract stored, including 218 of the 223
+whose bio.tools text was a fragment, which is almost exactly the failing set.
+Feeding title and abstract to the describe stage fixed every confirmed error:
+ARACNE moved from "using network deconvolution" - a phrase the source uses only
+for the general problem class - to "using an information theoretic approach to
+eliminate indirect interactions", which is the actual method; cLoops2 recovered
+the word "loops" a tag-derived rewrite had dropped. Two traps while doing it.
+**An abstract's findings are not the tool's features**: TOBIAS was described as
+predicting "transcription factor binding kinetics" because its paper title says
+footprinting unravels binding kinetics; the tool does footprinting. And
+**`_identifiers` is not the tool's publication list** - it holds what the harvest
+mentioned, so a paper recovered by `discover_pubs.py` or set in the overlay is
+absent from it. HOMER, featured and second most-cited, carries its DOI in
+`publication` with an empty `_identifiers` and drew on no paper at all until
+`paper_context()` learned to try both.
+
+**Store the whole OpenAlex response, not the fields you need today.**
+`openalex_lookup()` was already fetching the complete work object and keeping
+four fields, so abstracts arrived and were discarded on every run. Recovering
+them meant a second pass over 2,231 identifiers against a metered daily budget,
+for data already paid for. `save_openalex_work()` now writes the full response
+gzipped to `data/cache/openalex/` (6.6x, 41 MB for the full set, gitignored), and
+`abstract_text()` rebuilds prose from OpenAlex's inverted index. Keep
+`enrich.py --backfill-works` an explicit flag rather than folding it into
+`make enrich`: a citation count already in the cache short-circuits before the
+network, so a silent re-fetch would be a surprise 2,000-request sweep spending
+most of a day's allowance.
+
+**A stated length rule is not the rule that binds.** The describe prompt said
+"8-22 words" and the validator allowed 4-40. Actual output: median 11, maximum
+19, and 96 descriptions below the stated floor. Nothing ever approached the
+ceiling, so raising it alone changes nothing; what governs length is "one
+sentence" plus the terseness instruction. Meanwhile 461 tools had a source of 40+
+words (median 35 content words) compressed into 11, which is where detail was
+lost. Check the distribution before tuning a limit.
+
 **bio.tools `operation=` and `q=` are fuzzy text search, not ontology lookup.**
 Always quote the value. `q="cis-regulatory"` returns 107 records; unquoted it
 returns about 3,500, matching "cis" OR "regulatory".
