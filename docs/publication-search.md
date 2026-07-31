@@ -46,55 +46,71 @@ promote one of those without reading both.
 
 ## Still unresolved
 
-Neither the tool's own sources nor a search produced anything. The flag
-stands; these need a human or should be recorded in `overlay.yaml:
-no_article`.
+Neither the tool's own sources nor a search produced a candidate. Most of
+these are not failures to find a paper: they are tools that have none.
+A Bioconductor package whose citation page declares only
+`10.18129/B9.bioc.<pkg>` is saying "cite the package", which is a
+permanent answer; a Galaxy wrapper and an EMBOSS command are parts of
+something larger. Those belong in `overlay.yaml: no_article`.
 
-| tool | verdict | note |
-| --- | --- | --- |
-| `annotategenes` annotategenes | none-matched | None of the candidate abstracts describe a tool named 'annotategenes' that annot |
-| `annotatepeaks` annotatepeaks | none-matched | None of the candidate abstracts describe a tool named 'annotatepeaks' for annota |
-| `asseq` asSeq | none-matched | None of the abstracts describe a tool named asSeq for analyzing allele-specific  |
-| `causaldag` CausalDAG | none-matched | None of the candidate abstracts describe a tool named CausalDAG that creates, ma |
-| `chipsim` ChIPsim | none-matched | None of the candidate abstracts describe a tool named ChIPsim that simulates ChI |
-| `chipuana` ChIPuana | no-candidates |  |
-| `cobindr` cobindR | none-matched | Neither candidate abstract describes a bioinformatics tool for finding co-occurr |
-| `coverageview` CoverageView | none-matched | None of the candidate abstracts describe a tool named CoverageView for visualizi |
-| `createcontrolsubset` createcontrolsubset | no-candidates |  |
-| `dnaser` DNaseR | none-matched | None of the candidates describe a DNase I footprinting tool for DNase-seq data i |
-| `ep3` EP3 | none-matched | All candidates describe the prostaglandin E receptor EP3, not a bioinformatics t |
-| `ePOSSUM` ePOSSUM | none-matched | None of the candidate abstracts describe a tool named ePOSSUM that analyses DNA  |
-| `extractcentralregions` extractcentralregions | no-candidates |  |
-| `filtercontrol` filtercontrol | none-matched | None of the candidate abstracts describe a bioinformatics tool for filtering ChI |
-| `findpromoter` findpromoter | none-matched | No candidate abstract describes a tool named 'findpromoter' that searches for a  |
-| `greylistchip` GreyListChIP | none-matched | None of the candidate abstracts describe a tool named GreyListChIP that removes  |
-| `iseq` iSeq | none-matched | None of the candidates describe a ChIP-seq peak caller using Bayesian hidden Isi |
-| `les` les | none-matched | None of the candidate papers describe a bioinformatics tool for identifying regu |
-| `lrmotifs` LRMotifs | no-candidates |  |
-| `makestatschipseq` makestatschipseq | no-candidates |  |
-| `maketssdist` maketssdist | no-candidates |  |
-| `mmdiff2` MMDiff2 | none-matched | Neither candidate describes MMDiff2; one is a benchmark of ChIP-seq tools and th |
-| `narrowpeaks` NarrowPeaks | none-matched | None of the candidate abstracts describe a tool that applies functional principa |
-| `netview` Netview | none-matched | None of the candidate abstracts describe a tool for exploring human and mouse ge |
-| `NRL` NRL | none-matched | None of the candidates describe a tool for calculating nucleosome repeat length  |
-| `nucleosim` nucleoSim | none-matched | The abstract describes a biological study of nuclear positioning, not a tool for |
-| `odin` ODIN | none-matched | None of the candidate abstracts describe a bioinformatics tool for detecting dif |
-| `pyPINTS` PINTS | none-matched | None of the candidates describe a tool for identifying nascent transcript starts |
-| `possum-cis` Possum | none-matched | All candidates describe surgical scoring systems or biological possums, not a to |
-| `profilescoredist` profileScoreDist | no-candidates |  |
-| `rcistarget` RcisTarget | none-matched | None of the candidate abstracts describe the RcisTarget tool; candidate 4 mentio |
-| `rgadem` rGADEM | none-matched | None of the abstracts describe an R implementation of GADEM for de novo motif di |
-| `rtrmui` rTRMui | no-candidates |  |
-| `sclc` SCLC | none-matched | None of the candidates describe a tool that integrates pharmacogenomic data from |
-| `selex` SELEX | none-matched | None of the abstracts describe a computational tool that quantifies DNA binding  |
-| `seqpattern` seqPattern | none-matched | None of the candidate abstracts describe a tool named seqPattern that visualises |
-| `setuppromoter` setuppromoter | no-candidates |  |
-| `simbindprofiles` SimBindProfiles | none-matched | The abstract describes a biological study using genome-wide binding analysis, no |
-| `soggi` soGGi | none-matched | None of the candidates describe a bioinformatics tool for aggregate plots from B |
-| `svm2crm` SVM2CRM | none-matched | The abstract is in Italian and describes a computational approach for identifyin |
-| `ternarynet` ternarynet | none-matched | None of the candidates describe a tool for estimating ternary gene regulatory ne |
-| `tfextract` tfextract | none-matched | The abstract describes a test function recommendation approach, not a tool for p |
-| `transcriptr` transcriptR | none-matched | None of the candidate abstracts describe a tool named 'transcriptR' for identify |
-| `transview` TransView | none-matched | None of the candidate abstracts describe a bioinformatics tool for generating, a |
-| `trigger` trigger | none-matched | None of the candidate abstracts describe a tool for constructing genetic linkage |
-| `vgo` VGO | none-matched | All candidates are about vacuum gas oil (VGO) in petrochemical processing, not a |
+**21 are worth reading by hand** and carry 1,044 citations between them, currently
+attributed to the wrong paper. **25 can be settled by rule.**
+
+### Worth a human
+
+| tool | cites | kind | links now | homepage |
+| --- | ---: | --- | --- | --- |
+| `narrowpeaks` NarrowPeaks | 238 | Bioconductor package | pmid:25853185 | http://bioconductor.org/packages/release/bioc/html/NarrowP |
+| `asseq` asSeq | 144 | standalone tool | pmid:21838806 | http://www.bios.unc.edu/~weisun/software/asSeq.htm |
+| `pyPINTS` PINTS | 97 | standalone tool | pmid:35177836 | https://github.com/hyulab/PINTS |
+| `ep3` EP3 | 92 | standalone tool | pmid:19478005 | http://bioinformatics.psb.ugent.be/software/details/EP3 |
+| `NRL` NRL | 74 | standalone tool | pmid:31665434 | https://github.com/chrisclarkson/NRLcalc |
+| `odin` ODIN | 69 | standalone tool | pmid:19002165 | http://costalab.org/publications-2/odin/ |
+| `vgo` VGO | 57 | standalone tool | pmid:15608205 | http://athena.bioc.uvic.ca/virology-ca-tools/vgo/ |
+| `possum-cis` Possum | 50 | standalone tool | pmid:15215422 | http://zlab.bu.edu/~mfrith/possum/ |
+| `rgadem` rGADEM | 48 | Bioconductor package | pmid:21358819 | http://bioconductor.org/packages/release/bioc/html/rGADEM. |
+| `dnaser` DNaseR | 39 | Bioconductor package | pmid:23118738 | http://bioconductor.riken.jp/packages/2.14/bioc/html/DNase |
+| `lrmotifs` LRMotifs | 29 | standalone tool | pmid:23144830 | http://code.google.com/p/likelihood-ratio-motifs/ |
+| `sclc` SCLC | 23 | standalone tool | pmid:36325065 | https://discover.nci.nih.gov/SclcCellMinerCDB/ |
+| `ePOSSUM` ePOSSUM | 21 | standalone tool | pmid:27209209 | https://www.mutationdistiller.org/ePOSSUM2/index.html |
+| `iseq` iSeq | 13 | Bioconductor package | pmid:20128774 | http://bioconductor.org/packages/release/bioc/html/iSeq.ht |
+| `nucleosim` nucleoSim | 12 | Bioconductor package | pmid:26656614 | http://bioconductor.org/packages/release/bioc/html/nucleoS |
+| `profilescoredist` profileScoreDist | 11 | Bioconductor package | pmid:27504829 | http://bioconductor.org/packages/release/bioc/html/profile |
+| `ternarynet` ternarynet | 11 | Bioconductor package | pmid:23089817 | http://bioconductor.org/packages/release/bioc/html/ternary |
+| `causaldag` CausalDAG | 7 | standalone tool | doi:10.1101/2020.05.13.093765 | http://uhlerlab.github.io/causaldag |
+| `les` les | 6 | Bioconductor package | pmid:19580524 | http://bioconductor.org/packages/release/bioc/html/les.htm |
+| `netview` Netview | 3 | standalone tool | pmid:24233783 | http://netview.tigem.it/netview_project/netview_tools.html |
+| `chipuana` ChIPuana | 0 | standalone tool | doi:10.1101/2021.02.02.429342 | https://gitlab.pasteur.fr/hub/chipuana |
+
+### Settle with `no_article`
+
+Nothing to find. Where `links now` names a suite paper, the record is not
+merely unresolved, it is showing another project's paper as its own.
+
+| tool | kind | links now | why |
+| --- | --- | --- | --- |
+| `chipsim` ChIPsim | Bioconductor package | pmid:25633503 | currently shows a SUITE paper as its own |
+| `cobindr` cobindR | Bioconductor package | pmid:25633503 | currently shows a SUITE paper as its own |
+| `coverageview` CoverageView | Bioconductor package | pmid:25633503 | currently shows a SUITE paper as its own |
+| `greylistchip` GreyListChIP | Bioconductor package | pmid:25633503 | currently shows a SUITE paper as its own |
+| `mmdiff2` MMDiff2 | Bioconductor package | pmid:25633503 | currently shows a SUITE paper as its own |
+| `rcistarget` RcisTarget | Bioconductor package | pmid:28991892 | cite the package/suite, no paper of its own |
+| `rtrmui` rTRMui | Bioconductor package | pmid:25633503 | currently shows a SUITE paper as its own |
+| `selex` SELEX | Bioconductor package | pmid:25633503 | currently shows a SUITE paper as its own |
+| `seqpattern` seqPattern | Bioconductor package | pmid:25633503 | currently shows a SUITE paper as its own |
+| `simbindprofiles` SimBindProfiles | Bioconductor package | pmid:25633503 | currently shows a SUITE paper as its own |
+| `soggi` soGGi | Bioconductor package | pmid:25633503 | currently shows a SUITE paper as its own |
+| `svm2crm` SVM2CRM | Bioconductor package | pmid:25633503 | currently shows a SUITE paper as its own |
+| `transcriptr` transcriptR | Bioconductor package | pmid:25633503 | currently shows a SUITE paper as its own |
+| `transview` TransView | Bioconductor package | doi:10.1038/nmeth.3252 | currently shows a SUITE paper as its own |
+| `trigger` trigger | Bioconductor package | pmid:25633503 | currently shows a SUITE paper as its own |
+| `tfextract` tfextract | EMBOSS command | doi:10.1016/S0168-9525(00)02024-2 | currently shows a SUITE paper as its own |
+| `annotategenes` annotategenes | Galaxy wrapper | pmid:27137889 | currently shows a SUITE paper as its own |
+| `annotatepeaks` annotatepeaks | Galaxy wrapper | pmid:27137889 | currently shows a SUITE paper as its own |
+| `extractcentralregions` extractcentralregions | Galaxy wrapper | pmid:27137889 | currently shows a SUITE paper as its own |
+| `filtercontrol` filtercontrol | Galaxy wrapper | doi:10.1093/nar/gkw343 | currently shows a SUITE paper as its own |
+| `findpromoter` findpromoter | Galaxy wrapper | pmid:27137889 | currently shows a SUITE paper as its own |
+| `makestatschipseq` makestatschipseq | Galaxy wrapper | pmid:27137889 | currently shows a SUITE paper as its own |
+| `maketssdist` maketssdist | Galaxy wrapper | pmid:27137889 | currently shows a SUITE paper as its own |
+| `setuppromoter` setuppromoter | Galaxy wrapper | pmid:27137889 | currently shows a SUITE paper as its own |
+| `createcontrolsubset` createcontrolsubset | htslib utility | doi:10.1093/nar/gkw343 | currently shows a SUITE paper as its own |

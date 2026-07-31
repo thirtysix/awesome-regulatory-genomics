@@ -41,8 +41,11 @@ import requests
 import yaml
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from config import (CURATION, DATA, OPENALEX_API, is_preprint, openalex_params,
-                    user_agent)
+from config import (CURATION, DATA, OPENALEX_API, SUITE_PUBLICATIONS, is_preprint,
+                    openalex_params, user_agent)
+
+SUITE = {i for ids in SUITE_PUBLICATIONS.values() for i in ids} \
+    if isinstance(SUITE_PUBLICATIONS, dict) else set(SUITE_PUBLICATIONS)
 import enrich
 import llm_assist as L
 
@@ -259,14 +262,67 @@ def main() -> None:
                    f"{r.get('year') or '?'} | {r.get('cited_by') or 0} | "
                    f"{r.get('confidence')} | {why} |")
     unresolved = [r for r in rows if r["verdict"] != "candidate"]
+
+    def kind(t):
+        h = (t.get("homepage") or "").lower()
+        if "bioconductor" in h:
+            return "Bioconductor package"
+        if "galaxy" in h or "toolshed" in h:
+            return "Galaxy wrapper"
+        if "emboss" in h:
+            return "EMBOSS command"
+        if "htslib" in h or "samtools" in h:
+            return "htslib utility"
+        return "standalone tool"
+
     if unresolved:
+        # Most of these do not have a paper to find, and saying so is the answer
+        # rather than searching harder. A Bioconductor package declaring only
+        # 10.18129/B9.bioc.<pkg> means "cite the package", which is permanent;
+        # a Galaxy wrapper and an EMBOSS command are parts of something larger.
+        # Sorting by that distinction separates the ones a human should read
+        # from the ones a rule can settle.
+        for r in unresolved:
+            t = tools.get(r["id"], {})
+            r["kind"] = kind(t)
+            r["cites"] = t.get("citations") or 0
+            r["home"] = t.get("homepage") or ""
+            if r["kind"] == "standalone tool":
+                r["action"] = "**read the homepage** - a paper probably exists"
+            elif r["cites"]:
+                # cited despite being a package: it likely does have its own paper
+                r["action"] = "**read the homepage** - cited, so probably has its own paper"
+            elif (t.get("publication") or "") in SUITE:
+                r["action"] = "`no_article` - currently shows a SUITE paper as its own"
+            else:
+                r["action"] = "`no_article` - cite the package/suite, no paper of its own"
+        settle = [r for r in unresolved if r["action"].startswith("`no_article`")]
+        read = [r for r in unresolved if not r["action"].startswith("`no_article`")]
         out += ["", "## Still unresolved", "",
-                "Neither the tool's own sources nor a search produced anything. The flag",
-                "stands; these need a human or should be recorded in `overlay.yaml:",
-                "no_article`.", "",
-                "| tool | verdict | note |", "| --- | --- | --- |"]
-        for r in sorted(unresolved, key=lambda r: r["name"].lower()):
-            out.append(f"| `{r['id']}` {r['name']} | {r['verdict']} | {r.get('reason', '')[:80]} |")
+                "Neither the tool's own sources nor a search produced a candidate. Most of",
+                "these are not failures to find a paper: they are tools that have none.",
+                "A Bioconductor package whose citation page declares only",
+                "`10.18129/B9.bioc.<pkg>` is saying \"cite the package\", which is a",
+                "permanent answer; a Galaxy wrapper and an EMBOSS command are parts of",
+                "something larger. Those belong in `overlay.yaml: no_article`.", "",
+                f"**{len(read)} are worth reading by hand** and carry "
+                f"{sum(r['cites'] for r in read):,} citations between them, currently",
+                f"attributed to the wrong paper. **{len(settle)} can be settled by rule.**", "",
+                "### Worth a human", "",
+                "| tool | cites | kind | links now | homepage |",
+                "| --- | ---: | --- | --- | --- |"]
+        for r in sorted(read, key=lambda r: -r["cites"]):
+            t = tools.get(r["id"], {})
+            out.append(f"| `{r['id']}` {r['name']} | {r['cites']} | {r['kind']} | "
+                       f"{t.get('publication') or '-'} | {r['home'][:58]} |")
+        out += ["", "### Settle with `no_article`", "",
+                "Nothing to find. Where `links now` names a suite paper, the record is not",
+                "merely unresolved, it is showing another project's paper as its own.", "",
+                "| tool | kind | links now | why |", "| --- | --- | --- | --- |"]
+        for r in sorted(settle, key=lambda r: (r["kind"], r["name"].lower())):
+            t = tools.get(r["id"], {})
+            out.append(f"| `{r['id']}` {r['name']} | {r['kind']} | "
+                       f"{t.get('publication') or '-'} | {r['action'].split('- ')[-1]} |")
     DOCS.mkdir(parents=True, exist_ok=True)
     REPORT.write_text("\n".join(out) + "\n")
     regress = [r for r in found if r.get("regression")]
