@@ -1,0 +1,485 @@
+{
+ "NRL": {
+  "n_candidates": 8,
+  "name": "NRL",
+  "reason": "None of the candidates describe a tool for calculating nucleosome repeat length from phasograms; all are about a transcription factor or unrelated topics.",
+  "verdict": "none-matched"
+ },
+ "RSAT-position-analysis": {
+  "cited_by": 231,
+  "confidence": "high",
+  "doi": "10.1093/nar/gkr377",
+  "n_candidates": 8,
+  "name": "RSAT position-analysis",
+  "pmid": "21715389",
+  "reason": "Abstract of candidate 1 explicitly mentions 'oligo-diff' as a novel motif discovery algorithm for detecting oligomers with positional distribution deviations, matching the tool's function.",
+  "recorded": "pmid:10648794",
+  "title": "RSAT 2011: regulatory sequence analysis tools",
+  "venue": "Nucleic Acids Research",
+  "verdict": "candidate",
+  "via": "search",
+  "year": 2011
+ },
+ "alggen": {
+  "cited_by": 1058,
+  "confidence": "high",
+  "doi": "10.1093/nar/gkg605",
+  "n_candidates": 8,
+  "name": "ALGGEN",
+  "pmid": "12824386",
+  "reason": "The abstract explicitly describes ALGGEN as a server providing multiple sequence alignment, EST assembly, and detection of transcription factor binding sites, repeats, and transposons, matching the tool's description.",
+  "recorded": "pmid:14668235",
+  "title": "Identification of patterns in biological sequences at the ALGGEN server: PROMO and MALGEN",
+  "venue": "Nucleic Acids Research",
+  "verdict": "candidate",
+  "via": "search",
+  "year": 2003
+ },
+ "annotategenes": {
+  "n_candidates": 5,
+  "name": "annotategenes",
+  "reason": "None of the candidate abstracts describe a tool named 'annotategenes' that annotates peaks with genomic features and creates a distribution PNG.",
+  "verdict": "none-matched"
+ },
+ "annotatepeaks": {
+  "n_candidates": 8,
+  "name": "annotatepeaks",
+  "reason": "None of the candidate abstracts describe a tool named 'annotatepeaks' for annotating peaks with genomic features and generating distribution plots.",
+  "verdict": "none-matched"
+ },
+ "asseq": {
+  "n_candidates": 8,
+  "name": "asSeq",
+  "reason": "None of the abstracts describe a tool named asSeq for analyzing allele-specific expression from RNA-seq and ChIP-seq data to distinguish cis- and trans-eQTL.",
+  "verdict": "none-matched"
+ },
+ "bta7": {
+  "cited_by": 507,
+  "confidence": "high",
+  "doi": "10.1093/nar/gks1150",
+  "n_candidates": 8,
+  "name": "Cattle QTLdb",
+  "pmid": "23180796",
+  "reason": "Abstract describes the Animal QTLdb, which includes cattle QTL data curation and dissemination, matching the tool's function.",
+  "recorded": "doi:10.1101/2025.10.13.680102",
+  "title": "Animal QTLdb: an improved database tool for livestock animal QTL/association data dissemination in the post-genome era",
+  "venue": "Nucleic Acids Research",
+  "verdict": "candidate",
+  "via": "search",
+  "year": 2012
+ },
+ "causaldag": {
+  "n_candidates": 8,
+  "name": "CausalDAG",
+  "reason": "None of the candidate abstracts describe a tool named CausalDAG that creates, manipulates, and learns causal DAGs for gene regulatory network analysis; the closest candidates (DCI) are about learning differences between networks, not the specified tool.",
+  "verdict": "none-matched"
+ },
+ "causalr": {
+  "cited_by": 41,
+  "confidence": "high",
+  "doi": "10.1093/bioinformatics/btx425",
+  "n_candidates": 8,
+  "name": "CausalR",
+  "pmid": "28666369",
+  "reason": "Abstract explicitly introduces CausalR as the first open source causal network analysis platform for regulator prediction and network reconstruction.",
+  "recorded": "pmid:25633503",
+  "title": "CausalR: extracting mechanistic sense from genome scale data",
+  "venue": "Bioinformatics",
+  "verdict": "candidate",
+  "via": "search",
+  "year": 2017
+ },
+ "chipsim": {
+  "n_candidates": 8,
+  "name": "ChIPsim",
+  "reason": "None of the candidate abstracts describe a tool named ChIPsim that simulates ChIP-seq data for nucleosome positioning; candidate 7 simulates ChIP-seq but is named Tulip, and the others are unrelated.",
+  "verdict": "none-matched"
+ },
+ "chipuana": {
+  "name": "ChIPuana",
+  "verdict": "no-candidates"
+ },
+ "cobindr": {
+  "n_candidates": 2,
+  "name": "cobindR",
+  "reason": "Neither candidate abstract describes a bioinformatics tool for finding co-occurring transcription factor binding sites; both are about biological experiments unrelated to cobindR.",
+  "verdict": "none-matched"
+ },
+ "coverageview": {
+  "n_candidates": 8,
+  "name": "CoverageView",
+  "reason": "None of the candidate abstracts describe a tool named CoverageView for visualizing genome coverage profiles; candidate 6 describes recoup, a different tool.",
+  "verdict": "none-matched"
+ },
+ "createcontrolsubset": {
+  "name": "createcontrolsubset",
+  "verdict": "no-candidates"
+ },
+ "diana-mirgen": {
+  "cited_by": 61,
+  "confidence": "high",
+  "doi": "10.1093/nar/gkv1254",
+  "n_candidates": 8,
+  "name": "DIANA-miRGen",
+  "pmid": "26586797",
+  "reason": "Abstract explicitly describes DIANA-miRGen v3.0 providing cell-line-specific miRNA TSSs and TF binding maps, matching the tool's function.",
+  "recorded": "pmid:17108354",
+  "title": "DIANA-miRGen v3.0: accurate characterization of microRNA promoters and their regulators",
+  "venue": "Nucleic Acids Research",
+  "verdict": "candidate",
+  "via": "search",
+  "year": 2015
+ },
+ "dnaser": {
+  "n_candidates": 8,
+  "name": "DNaseR",
+  "reason": "None of the candidates describe a DNase I footprinting tool for DNase-seq data in R; all refer to a hardware microarray scanner named DNASER.",
+  "verdict": "none-matched"
+ },
+ "dreg-pathway": {
+  "cited_by": 140,
+  "confidence": "high",
+  "doi": "10.1101/gr.238279.118",
+  "n_candidates": 8,
+  "name": "dREG",
+  "pmid": "30573452",
+  "reason": "Abstract explicitly describes dREG as a tool for identifying transcription initiation regions from PRO-seq data, matching the tool's function.",
+  "recorded": "pmid:31598610",
+  "title": "Identification of regulatory elements from nascent transcription using dREG",
+  "venue": "Genome Research",
+  "verdict": "candidate",
+  "via": "search",
+  "year": 2018
+ },
+ "ePOSSUM": {
+  "n_candidates": 7,
+  "name": "ePOSSUM",
+  "reason": "None of the candidate abstracts describe a tool named ePOSSUM that analyses DNA variant effects on TFBS using a Bayes classifier.",
+  "verdict": "none-matched"
+ },
+ "ep3": {
+  "n_candidates": 8,
+  "name": "EP3",
+  "reason": "All candidates describe the prostaglandin E receptor EP3, not a bioinformatics tool for identifying eukaryotic promoter core regions.",
+  "verdict": "none-matched"
+ },
+ "extractcentralregions": {
+  "name": "extractcentralregions",
+  "verdict": "no-candidates"
+ },
+ "filtercontrol": {
+  "n_candidates": 8,
+  "name": "filtercontrol",
+  "reason": "None of the candidate abstracts describe a bioinformatics tool for filtering ChIP peaks against control data.",
+  "verdict": "none-matched"
+ },
+ "findpromoter": {
+  "n_candidates": 1,
+  "name": "findpromoter",
+  "reason": "No candidate abstract describes a tool named 'findpromoter' that searches for a promoter motif and adapter sequence across species.",
+  "verdict": "none-matched"
+ },
+ "grenits": {
+  "cited_by": 18,
+  "confidence": "low",
+  "doi": "",
+  "n_candidates": 8,
+  "name": "GRENITS",
+  "pmid": "",
+  "reason": "Title matches tool name and function but no abstract available to confirm",
+  "recorded": "pmid:25633503",
+  "title": "GRENITS: Gene Regulatory Network Inference Using Time Series",
+  "venue": null,
+  "verdict": "candidate",
+  "via": "search",
+  "year": 2011
+ },
+ "greylistchip": {
+  "n_candidates": 8,
+  "name": "GreyListChIP",
+  "reason": "None of the candidate abstracts describe a tool named GreyListChIP that removes reads from high-signal regions in ChIP-seq input data.",
+  "verdict": "none-matched"
+ },
+ "iseq": {
+  "n_candidates": 8,
+  "name": "iSeq",
+  "reason": "None of the candidates describe a ChIP-seq peak caller using Bayesian hidden Ising models; they refer to a stock index, yeast interaction screening, or Illumina sequencing platforms.",
+  "verdict": "none-matched"
+ },
+ "lemone": {
+  "cited_by": 33,
+  "confidence": "high",
+  "doi": "10.1186/1471-2105-8-s2-s5",
+  "n_candidates": 8,
+  "name": "LeMoNe",
+  "pmid": "17493254",
+  "reason": "Abstract explicitly introduces LeMoNe as a software package for learning module networks from gene expression data.",
+  "recorded": "pmid:20823333",
+  "title": "Validating module network learning algorithms using simulated data",
+  "venue": "BMC Bioinformatics",
+  "verdict": "candidate",
+  "via": "search",
+  "year": 2007
+ },
+ "les": {
+  "n_candidates": 8,
+  "name": "les",
+  "reason": "None of the candidate papers describe a bioinformatics tool for identifying regulation regions from tiling microarray data; they are unrelated to bioinformatics.",
+  "verdict": "none-matched"
+ },
+ "linnorm": {
+  "cited_by": 135,
+  "confidence": "high",
+  "doi": "10.1093/nar/gkx828",
+  "n_candidates": 8,
+  "name": "Linnorm",
+  "pmid": "28981748",
+  "reason": "Abstract explicitly describes Linnorm as a normalization and transformation method for scRNA-seq data, matching the tool's function.",
+  "recorded": "pmid:25633503",
+  "title": "Linnorm: improved statistical analysis for single cell RNA-seq expression data",
+  "venue": "Nucleic Acids Research",
+  "verdict": "candidate",
+  "via": "search",
+  "year": 2017
+ },
+ "lrmotifs": {
+  "name": "LRMotifs",
+  "verdict": "no-candidates"
+ },
+ "makestatschipseq": {
+  "name": "makestatschipseq",
+  "verdict": "no-candidates"
+ },
+ "maketssdist": {
+  "name": "maketssdist",
+  "verdict": "no-candidates"
+ },
+ "mixNBHMM": {
+  "cited_by": 0,
+  "confidence": "high",
+  "doi": "",
+  "n_candidates": 2,
+  "name": "mixNBHMM",
+  "pmid": "",
+  "reason": "The abstract title explicitly matches the tool name and describes a hidden Markov model with mixture of negative binomial distributions for differential peak calling.",
+  "recorded": "doi:10.1111/biom.13477",
+  "title": "mixNBHMM",
+  "venue": "Open MIND",
+  "verdict": "candidate",
+  "via": "search",
+  "year": 2019
+ },
+ "mmdiff2": {
+  "n_candidates": 2,
+  "name": "MMDiff2",
+  "reason": "Neither candidate describes MMDiff2; one is a benchmark of ChIP-seq tools and the other introduces GenoGAM, a different method.",
+  "verdict": "none-matched"
+ },
+ "narrowpeaks": {
+  "n_candidates": 8,
+  "name": "NarrowPeaks",
+  "reason": "None of the candidate abstracts describe a tool that applies functional principal component analysis to ChIP-seq peak regions.",
+  "verdict": "none-matched"
+ },
+ "netview": {
+  "n_candidates": 8,
+  "name": "Netview",
+  "reason": "None of the candidate abstracts describe a tool for exploring human and mouse gene regulatory networks by querying with a gene identifier; they all describe network visualization for population genetics, computer networks, or database access.",
+  "verdict": "none-matched"
+ },
+ "nucleosim": {
+  "n_candidates": 1,
+  "name": "nucleoSim",
+  "reason": "The abstract describes a biological study of nuclear positioning, not a tool for generating synthetic nucleosome maps.",
+  "verdict": "none-matched"
+ },
+ "odin": {
+  "n_candidates": 8,
+  "name": "ODIN",
+  "reason": "None of the candidate abstracts describe a bioinformatics tool for detecting differential peaks in ChIP-seq data using an HMM.",
+  "verdict": "none-matched"
+ },
+ "onco.io": {
+  "cited_by": 2,
+  "confidence": "low",
+  "doi": "10.32604/biocell.2021.013973",
+  "n_candidates": 8,
+  "name": "ONCO.IO",
+  "pmid": "",
+  "reason": "Abstract mentions ONCO.IO as an integration tool used in the study, but does not describe the tool itself.",
+  "recorded": "pmid:28651018",
+  "title": "PathVisio Analysis: An Application Targeting the miRNA Network Associated with the p53 Signaling Pathway in Osteosarcoma",
+  "venue": "Biocell",
+  "verdict": "candidate",
+  "via": "search",
+  "year": 2021
+ },
+ "possum-cis": {
+  "n_candidates": 8,
+  "name": "Possum",
+  "reason": "All candidates describe surgical scoring systems or biological possums, not a tool for predicting cis-elements in DNA sequences.",
+  "verdict": "none-matched"
+ },
+ "profilescoredist": {
+  "name": "profileScoreDist",
+  "verdict": "no-candidates"
+ },
+ "pyPINTS": {
+  "n_candidates": 8,
+  "name": "PINTS",
+  "reason": "None of the candidates describe a tool for identifying nascent transcript starts from sequencing data using peak calling; candidate 4 is a pulsar timing package, and others are unrelated.",
+  "verdict": "none-matched"
+ },
+ "rcade": {
+  "cited_by": 35,
+  "confidence": "high",
+  "doi": "10.1093/bioinformatics/btv284",
+  "n_candidates": 8,
+  "name": "Rcade",
+  "pmid": "25953800",
+  "reason": "Abstract describes RCADE as a tool for motif discovery from C2H2-ZF ChIP-seq data, matching the tool's function of integrating ChIP-seq peaks with expression data via a Bayesian framework.",
+  "recorded": "pmid:25633503",
+  "title": "Identification of C2H2-ZF binding preferences from ChIP-seq data using RCADE",
+  "venue": "Bioinformatics",
+  "verdict": "candidate",
+  "via": "search",
+  "year": 2015
+ },
+ "rcistarget": {
+  "n_candidates": 8,
+  "name": "RcisTarget",
+  "reason": "None of the candidate abstracts describe the RcisTarget tool; candidate 4 mentions using RcisTarget but does not introduce or describe it.",
+  "verdict": "none-matched"
+ },
+ "rgadem": {
+  "n_candidates": 8,
+  "name": "rGADEM",
+  "reason": "None of the abstracts describe an R implementation of GADEM for de novo motif discovery; candidate 7 is a general ChIP-Seq pipeline, not specifically rGADEM.",
+  "verdict": "none-matched"
+ },
+ "rtrmui": {
+  "name": "rTRMui",
+  "verdict": "no-candidates"
+ },
+ "sclc": {
+  "n_candidates": 8,
+  "name": "SCLC",
+  "reason": "None of the candidates describe a tool that integrates pharmacogenomic data from NCI, Sanger GDSC, and Broad CCLE/CTRP for SCLC cell line analysis; they are all biological or clinical studies about SCLC.",
+  "verdict": "none-matched"
+ },
+ "selex": {
+  "n_candidates": 8,
+  "name": "SELEX",
+  "reason": "None of the abstracts describe a computational tool that quantifies DNA binding specificities from SELEX-seq data; they all discuss aptamer selection methods.",
+  "verdict": "none-matched"
+ },
+ "seqpattern": {
+  "n_candidates": 8,
+  "name": "seqPattern",
+  "reason": "None of the candidate abstracts describe a tool named seqPattern that visualises oligonucleotide patterns across sequences centred at a reference point.",
+  "verdict": "none-matched"
+ },
+ "setuppromoter": {
+  "name": "setuppromoter",
+  "verdict": "no-candidates"
+ },
+ "signac": {
+  "cited_by": 164,
+  "confidence": "high",
+  "doi": "10.1101/2020.11.09.373613",
+  "n_candidates": 8,
+  "name": "Signac",
+  "pmid": "",
+  "reason": "Abstract explicitly describes Signac as a framework for single-cell chromatin analysis extending Seurat.",
+  "recorded": "pmid:34725479",
+  "title": "Multimodal single-cell chromatin analysis with Signac",
+  "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+  "verdict": "candidate",
+  "via": "search",
+  "year": 2020
+ },
+ "simbindprofiles": {
+  "n_candidates": 1,
+  "name": "SimBindProfiles",
+  "reason": "The abstract describes a biological study using genome-wide binding analysis, not the introduction of a tool for comparing binding profiles from tiling array data.",
+  "verdict": "none-matched"
+ },
+ "soggi": {
+  "n_candidates": 8,
+  "name": "soGGi",
+  "reason": "None of the candidates describe a bioinformatics tool for aggregate plots from BAM/bigWig/PWM data; they are about an Italian Renaissance artist or unrelated biology.",
+  "verdict": "none-matched"
+ },
+ "ssvqc": {
+  "cited_by": 17,
+  "confidence": "high",
+  "doi": "10.1186/s13104-021-05781-8",
+  "n_candidates": 8,
+  "name": "ssvQC",
+  "pmid": "34544495",
+  "reason": "The abstract explicitly describes ssvQC as an integrated CUT&RUN quality control workflow for histone modifications and transcription factors.",
+  "recorded": "doi:10.21203/RS.3.RS-646006/V1",
+  "title": "ssvQC: an integrated CUT&amp;RUN quality control workflow for histone modifications and transcription factors",
+  "venue": "BMC Research Notes",
+  "verdict": "candidate",
+  "via": "search",
+  "year": 2021
+ },
+ "svm2crm": {
+  "n_candidates": 1,
+  "name": "SVM2CRM",
+  "reason": "The abstract is in Italian and describes a computational approach for identifying cis-regulatory elements from ChIP-seq data, but does not mention SVM2CRM or the use of SVM implemented in LiblineaR.",
+  "verdict": "none-matched"
+ },
+ "ternarynet": {
+  "n_candidates": 8,
+  "name": "ternarynet",
+  "reason": "None of the candidates describe a tool for estimating ternary gene regulatory networks; they all focus on medical image segmentation or classification.",
+  "verdict": "none-matched"
+ },
+ "tfextract": {
+  "n_candidates": 1,
+  "name": "tfextract",
+  "reason": "The abstract describes a test function recommendation approach, not a tool for processing TRANSFAC database entries.",
+  "verdict": "none-matched"
+ },
+ "tfscan": {
+  "cited_by": 0,
+  "confidence": "high",
+  "doi": "",
+  "n_candidates": 8,
+  "name": "tfscan",
+  "pmid": "",
+  "reason": "The abstract explicitly describes developing TFSCAN to search for transcription factor binding site signals in DNA sequences, matching the tool's function.",
+  "recorded": "doi:10.1016/S0168-9525(00)02024-2",
+  "title": "Development of TFSCAN as a program to search for DNA signals of TFSCAN",
+  "venue": "KRIBB Repository",
+  "verdict": "candidate",
+  "via": "search",
+  "year": 1996
+ },
+ "transcriptr": {
+  "n_candidates": 8,
+  "name": "transcriptR",
+  "reason": "None of the candidate abstracts describe a tool named 'transcriptR' for identifying transcription regions from ChIP-seq data.",
+  "verdict": "none-matched"
+ },
+ "transview": {
+  "n_candidates": 8,
+  "name": "TransView",
+  "reason": "None of the candidate abstracts describe a bioinformatics tool for generating, accessing, and displaying read densities from RNA-Seq and ChIP-Seq data.",
+  "verdict": "none-matched"
+ },
+ "trigger": {
+  "n_candidates": 8,
+  "name": "trigger",
+  "reason": "None of the candidate abstracts describe a tool for constructing genetic linkage maps or eQTL analysis; all are about unrelated event-triggered control, inflammation, or other topics.",
+  "verdict": "none-matched"
+ },
+ "vgo": {
+  "n_candidates": 8,
+  "name": "VGO",
+  "reason": "All candidates are about vacuum gas oil (VGO) in petrochemical processing, not a bioinformatics tool for viral genome analysis.",
+  "verdict": "none-matched"
+ }
+}

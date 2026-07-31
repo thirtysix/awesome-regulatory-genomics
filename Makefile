@@ -2,7 +2,7 @@ PY ?= python3
 PORT ?= 8000        # override if 8000 is taken: make serve PORT=8420
 PIPELINE := $(PY) pipeline
 
-.PHONY: all harvest select enrich links build render audit curate refresh clean check test serve llm bench verify-additions repos repos-revalidate discover discover-refresh discover-lit discover-pubs check-links fill-metadata installs audit-scope
+.PHONY: all harvest select enrich links build render audit curate refresh clean check test serve llm bench verify-additions repos repos-revalidate discover discover-refresh discover-lit discover-pubs check-links fill-metadata installs audit-scope recheck-pubs search-pubs
 
 ## build everything from the existing sweep (no network beyond enrichment)
 all: select enrich repos links build render audit
@@ -97,6 +97,16 @@ llm:
 ## Writes docs/scope-audit.md; promote rows into overlay.yaml: exclude.
 audit-scope:
 	$(PIPELINE)/llm_assist.py --jobs audit-scope
+
+## OPTIONAL: re-derive the paper for records flagged as carrying the wrong one,
+## by asking each tool what to cite. Deterministic, no API key.
+recheck-pubs:
+	$(PIPELINE)/discover_pubs.py --recheck-flagged
+
+## OPTIONAL, LAST RESORT: search for the paper when the tool itself names none,
+## and have a model adjudicate the candidates. Needs DEEPINFRA_API_KEY.
+search-pubs:
+	$(PIPELINE)/search_pubs.py
 
 ## OPTIONAL: third-model check on records added by hand or by a text rule
 verify-additions:

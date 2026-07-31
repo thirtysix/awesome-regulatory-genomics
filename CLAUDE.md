@@ -21,6 +21,9 @@ These are overwritten on every build. Edits are lost without warning.
 | `docs/homepage-check.md` | `pipeline/check_homepages.py` |
 | `docs/install-review.md` | `pipeline/resolve_installs.py`; promote rows into `overlay.yaml` |
 | `docs/publication-discovery.md` | `pipeline/discover_pubs.py`; promote rows into `overlay.yaml` or `seeds.yaml` |
+| `docs/publication-recheck.md` | `pipeline/discover_pubs.py --recheck-flagged` |
+| `docs/publication-search.md` | `pipeline/search_pubs.py`; weakest evidence in the pipeline, read before promoting |
+| `docs/identifier-check.md` | `pipeline/enrich.py --check-identifiers` |
 | `curation/llm_proposals.yaml` | it is model output; promote things into `overlay.yaml` |
 | `data/cache/citation_cache.csv` | refreshed from OpenAlex; see the citation gotchas below |
 
@@ -213,6 +216,24 @@ abort rather than report a rate when it does not reproduce. Note also that this
 is where the "never cache a failure as 0" rule earns itself: six DOIs came back
 empty under throttling and were left absent, so a later retry filled them in
 rather than freezing six wrong zeros into the catalog.
+
+**Searching by name is the LAST stop, never the first, and never unadjudicated.**
+The rule below stands: ask the tool first. But when that runs out it leaves most
+of a set unresolved - of 61 records flagged as carrying an unrelated paper, the
+authoritative route resolved 8 and 53 declared nothing, mostly older tools whose
+pages are gone. `search_pubs.py` (`make search-pubs`) then title-searches
+OpenAlex and has a model judge each candidate against the tool's own description,
+which is the check the `Match` failure lacked: a name match with nothing to
+verify it against. It refuses correctly - asked about EP3 it answered "all
+candidates describe the prostaglandin E receptor EP3, not a bioinformatics tool"
+- and it recovered four records that were carrying the Bioconductor suite paper
+rather than their own. Two guards matter. Controls: MACS must be found and a
+fabricated tool given a plausible description must return NOTHING, or the run
+aborts. And **a candidate can be worse than what is recorded**: the search offers
+Signac its bioRxiv preprint at 164 citations over the Nature Methods paper at
+1,889, which is the swap this catalog has already made once, so any candidate
+that is a preprint against a published record, or carries far fewer citations, is
+marked REGRESSION rather than proposed.
 
 **To find a missing paper, ask the tool, never the literature.**
 `discover_pubs.py` (`make discover-pubs`) reads each tool's own declared citation:
