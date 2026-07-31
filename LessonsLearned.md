@@ -191,6 +191,31 @@ positives and report the rate. Say "a review queue of 61 with an unmeasured fals
 positive rate", never "61 errors". And when a check fires on a pattern, ask whether
 that pattern is normal in the domain before treating it as a signal.
 
+## Measure a retrieval step against known answers before trusting its output
+
+**Believed:** `search_pubs.py` worked. It produced 15 candidates with reasons,
+passed its controls, and correctly refused the cases it could not resolve.
+
+**Happened:** once four answers were known by hand, the retrieval could be scored,
+and it found the right paper **1 time in 4** - that one ranked 10th, below the
+window being adjudicated. The adjudicator was doing its job; it was simply never
+shown the right paper. A refusal caused by bad retrieval is indistinguishable from
+a correct "nothing to find", so the failure presented as clean output.
+
+The cause: **searching by tool name cannot work when the tool is not named in its
+own paper's abstract**, which is the norm in genomics. Confirmed against a local
+21.9M-article corpus - of four known answers, only one abstract named its tool,
+and a second matched only by coincidence (NRL, the abbreviation for nucleosome
+repeat length, not the tool NRLcalc). Searching by what the tool DOES works
+instead: two terms from one tool's description narrowed 21.9M articles to four
+candidates with the right paper among them.
+
+**Do differently:** any retrieval step needs a small labelled set scored before its
+output is reported, and the score belongs next to the results. Controls prove the
+*judge* works, not the *search*. And when choosing a search key, ask what the
+target document actually contains - a tool's paper is about the science, so the
+description is a far better key than the name.
+
 ## Ask the thing itself, never search for its name
 
 **Standing rule, re-confirmed:** to find or verify a tool's paper, read what the

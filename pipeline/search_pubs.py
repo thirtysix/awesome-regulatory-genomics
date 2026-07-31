@@ -80,13 +80,14 @@ Reply with JSON only:
 {"index": 1, "confidence": "high|medium|low", "reason": "one short clause"}"""
 
 
-def search_openalex(session, name: str, per_page: int = 8) -> list[dict]:
-    """Title-search OpenAlex for a tool name. Candidates, not answers."""
+SELECT = ("id,title,publication_year,cited_by_count,doi,ids,"
+          "abstract_inverted_index,primary_location")
+
+
+def _query(session, term: str, per_page: int) -> list[dict]:
     try:
         r = session.get(OPENALEX_API, params=openalex_params({
-            "search": name, "per-page": per_page,
-            "select": "id,title,publication_year,cited_by_count,doi,ids,"
-                      "abstract_inverted_index,primary_location"}), timeout=30)
+            "search": term, "per-page": per_page, "select": SELECT}), timeout=30)
         if r.status_code == 429:
             raise SystemExit("OpenAlex daily budget spent; rerun after midnight UTC")
         if r.status_code != 200:
@@ -94,6 +95,33 @@ def search_openalex(session, name: str, per_page: int = 8) -> list[dict]:
         return r.json().get("results") or []
     except (requests.RequestException, ValueError):
         return []
+
+
+def search_openalex(session, name: str, description: str = "",
+                    per_page: int = 8) -> list[dict]:
+    """Candidates from the tool's NAME and, more usefully, from what it DOES.
+
+    Name search alone is what collides: `Match` is also a text-matching library,
+    `SEA` an RPC framework, and searching `EP3` returns the prostaglandin E
+    receptor. The description has no such problem - "nucleosome repeat length
+    from phasograms" names one thing - and it reaches the papers a name never
+    will, because a genomics tool usually ships inside a biology paper whose
+    title never mentions it. NRLcalc is introduced in "CTCF-dependent chromatin
+    boundaries formed by asymmetric nucleosome arrays"; no name search finds
+    that, and a description search does.
+
+    Both pools are merged and de-duplicated, and every candidate is still
+    adjudicated: a topical match is a candidate, not an answer.
+    """
+    seen, out = set(), []
+    for term in (name, description):
+        if not term or not term.strip():
+            continue
+        for w in _query(session, term.strip()[:350], per_page):
+            if w.get("id") and w["id"] not in seen:
+                seen.add(w["id"])
+                out.append(w)
+    return out
 
 
 def adjudicate(tool: dict, cands: list[dict], api_key: str, model: str) -> dict | None:
@@ -139,19 +167,19 @@ def main() -> None:
     ctl_ok = True
     macs = tools.get("macs")
     if macs:
-        got = adjudicate(macs, search_openalex(session, "MACS"), api_key, args.model)
+        macs_c = search_openalex(session, "MACS", macs.get("description") or "")
+        got = adjudicate(macs, macs_c, api_key, args.model)
         pick = (got or {}).get("index")
         title = ""
-        if pick:
-            cands = search_openalex(session, "MACS")
-            if 1 <= pick <= len(cands):
-                title = (cands[pick - 1].get("title") or "").lower()
+        if pick and 1 <= pick <= len(macs_c):
+            title = (macs_c[pick - 1].get("title") or "").lower()
         ok = "chip" in title and "macs" in title
         print(f"  MACS -> {'ok' if ok else 'FAILED'}: {title[:70] or 'no pick'}")
         ctl_ok &= ok
     fake = {"name": "Zyzzyx", "description": "Predicts transcription factor binding sites "
                                              "from DNA sequence using a hidden Markov model"}
-    got = adjudicate(fake, search_openalex(session, "Zyzzyx"), api_key, args.model)
+    got = adjudicate(fake, search_openalex(session, "Zyzzyx", fake["description"]),
+                     api_key, args.model)
     ok = not (got or {}).get("index")
     print(f"  nonexistent tool -> {'ok' if ok else 'FAILED'}: picked {(got or {}).get('index')}")
     ctl_ok &= ok
@@ -166,7 +194,7 @@ def main() -> None:
     for i, t in enumerate(targets, 1):
         if t["id"] in cache:
             continue
-        cands = search_openalex(session, t["name"])
+        cands = search_openalex(session, t["name"], t.get("description") or "")
         if not cands:
             cache[t["id"]] = {"name": t["name"], "verdict": "no-candidates"}
             continue
