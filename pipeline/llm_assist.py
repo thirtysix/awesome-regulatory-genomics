@@ -197,8 +197,15 @@ operation that the description or abstract does not support.
 from the name or from EDAM terms is worse than leaving it.
 - British or American spelling as given; do not "correct" the tool's own name.
 
+Also judge whether the paper is plausibly THIS tool's paper. Set paper_matches to false only \
+when the subject matter is unrelated to the tool - a physics paper against a genomics tool, a \
+clinical review against a software package. A paper whose title never names the tool is normal \
+and is NOT a mismatch: method papers routinely have descriptive titles. When paper_matches is \
+false, ignore the paper and describe the tool from the registry text alone.
+
 Reply with JSON only:
-{"description": "..."} or {"description": null}"""
+{"description": "...", "paper_matches": true, "mismatch_reason": ""}
+or {"description": null, "paper_matches": true, "mismatch_reason": ""}"""
 
 SCOPE_AUDIT_SYSTEM = """You review tools that an automated filter ADMITTED into a catalog of \
 regulatory-genomics tools, and identify the ones admitted wrongly.
@@ -456,6 +463,7 @@ def main() -> None:
                  if t["source"] == "bio.tools" and sources.get(t.get("biotools_id"))]
         tools = tools[: args.limit] if args.limit else tools
         n_paper = 0
+        mismatches: dict[str, dict] = {}
         print(f"describe: {len(tools)} tools via {args.model} "
               f"({args.workers} workers)")
 
@@ -467,13 +475,28 @@ def main() -> None:
                 n_paper += 1
             res = cached_call(
                 # The cache key must carry every input, or a prompt that now
-                # includes the paper would return the pre-paper answer.
-                "describe-v2", (t["name"], source, paper.get("title", ""),
+                # includes the paper would return the pre-paper answer. Bump the
+                # version whenever DESCRIBE_SYSTEM changes: the key covers the
+                # inputs, not the instructions, so a prompt edit is invisible to
+                # it. v3 added the paper_matches check.
+                "describe-v3", (t["name"], source, paper.get("title", ""),
                                 paper.get("abstract", "")[:1800]),
                 DESCRIBE_SYSTEM, describe_prompt(t, source, paper),
                 lambda r: r.get("description") is None
                 or (isinstance(r.get("description"), str)
                     and 6 <= len(r["description"].split()) <= 30))
+            # A free second opinion on whether the paper belongs to the tool.
+            # The model is reading both anyway, and a linked paper about
+            # something else entirely is how NOBAI's transposed PMID surfaced.
+            # Recorded, never acted on: build.py does not read this key.
+            if res and res.get("paper_matches") is False and paper.get("title"):
+                with lock:
+                    mismatches[t["id"]] = {
+                        "name": t["name"],
+                        "paper": paper.get("title", ""),
+                        "publication": t.get("publication") or "",
+                        "reason": (res.get("mismatch_reason") or "").strip(),
+                    }
             # An explicit null is the model declining to guess. Keep the
             # harvested text rather than recording a rewrite that never happened.
             if not res or res.get("description") is None:
@@ -483,8 +506,12 @@ def main() -> None:
 
         out = run_batch(tools, do_describe, "describe")
         proposals["descriptions"] = out
+        proposals["paper_mismatch"] = mismatches
         print(f"  {len(out)} rewritten; {n_paper} had a paper to draw on, "
               f"{len(tools) - len(out)} left as harvested")
+        if mismatches:
+            print(f"  {len(mismatches)} linked papers look unrelated to their tool "
+                  f"(see paper_mismatch in the proposals file)")
 
     # --- adjudicate ---------------------------------------------------------
     if "adjudicate" in jobs:

@@ -28,7 +28,7 @@ import requests
 import yaml
 
 from jsonio import read_json, write_json
-from config import (CACHE, CODE_HOSTS, CURATION, GITHUB_API, OPENALEX_API, RAW,
+from config import (CACHE, CODE_HOSTS, CURATION, DATA, GITHUB_API, OPENALEX_API, RAW,
                     REGISTRY_HOSTS, openalex_params, openalex_tier, user_agent)
 
 SELECTED = RAW / "selected.json.gz"
@@ -383,6 +383,120 @@ def backfill_works(session: requests.Session, idents: list[str]) -> None:
     print(f"  stored {got} full responses")
 
 
+def check_identifiers(session: requests.Session) -> None:
+    """Cross-check every bio.tools record that states BOTH a PMID and a DOI.
+
+    `pub_identifiers()` prefers the PMID and discards the DOI, so the DOI is an
+    unused second witness to the same paper, recorded independently upstream. If
+    the two resolve to different OpenAlex works, one of them was mistyped.
+
+    KNOWN LIMIT, stated up front: this does NOT catch the case that motivated it.
+    NOBAI carried `pmid:18449469`, one digit from its real `18448469`, resolving
+    to "Ellipsoidal particles at fluid interfaces" and taking that paper's 146
+    citations against a true 15 - and bio.tools records the matching physics DOI
+    too, so the two identifiers AGREE. They are not independent witnesses: the
+    DOI was evidently populated from the bad PMID. Only reading the paper against
+    the tool finds that class, which is what `paper_matches` in the describe job
+    is for.
+
+    What this check does catch is a genuinely mistyped identifier, where one side
+    was entered by hand and the other was not, plus OpenAlex holding two work
+    records for one paper with different citation counts.
+
+    Compare WORK IDs, never identifier strings: a PMID and a DOI for one paper
+    are not a disagreement, which is the trap the citation audit already hit.
+    """
+    enriched = read_json(ENRICHED)["list"]
+    pairs = []
+    for rec in enriched:
+        for pub in rec.get("publication") or []:
+            md = pub.get("metadata") or {}
+            pmid = pub.get("pmid") or md.get("pmid")
+            doi = (pub.get("doi") or "").strip().removeprefix("https://doi.org/")
+            if pmid and doi:
+                pairs.append((rec.get("biotoolsID"), rec.get("name"), str(pmid), doi))
+    print(f"{len(pairs)} publication entries state both a PMID and a DOI")
+
+    def work_id(ident):
+        key = ident_key(ident)
+        w = read_openalex_work(key)
+        if w:
+            return w.get("id"), (w.get("title"), w.get("cited_by_count")), False
+        kind, _, value = ident.partition(":")
+        filt = f"ids.pmid:{value}" if kind == "pmid" else f"doi:{value}"
+        try:
+            r = session.get(OPENALEX_API, params=openalex_params({"filter": filt}), timeout=30)
+            if r.status_code == 429:
+                raise SystemExit("  OpenAlex daily budget spent; rerun after midnight UTC")
+            results = r.json().get("results") or [] if r.status_code == 200 else []
+        except (requests.RequestException, ValueError):
+            return None, None, True
+        if not results:
+            return None, None, True
+        save_openalex_work(key, r.json())
+        return (results[0].get("id"),
+                (results[0].get("title"), results[0].get("cited_by_count")), True)
+
+    rows, unresolved, fetched = [], 0, 0
+    for n, (bid, name, pmid, doi) in enumerate(pairs, 1):
+        pw, pt, f1 = work_id(f"pmid:{pmid}")
+        dw, dt, f2 = work_id(f"doi:{doi}")
+        fetched += f1 + f2
+        if not pw or not dw:
+            unresolved += 1
+            continue
+        if pw != dw:
+            # Same title on both sides is OpenAlex holding two work records for
+            # one paper, not a mistyped identifier - a different problem with a
+            # different fix, and the counts usually differ. Segway is the known
+            # case: the PMID copy has 290 citations, the Nature Methods DOI 663.
+            ptitle, pcites = pt or ("?", None)
+            dtitle, dcites = dt or ("?", None)
+            same = (ptitle or "").strip().lower() == (dtitle or "").strip().lower()
+            rows.append((bid, name, pmid, ptitle, pcites, doi, dtitle, dcites,
+                         "duplicate record" if same else "DIFFERENT PAPER"))
+        if n % 200 == 0:
+            print(f"  {n}/{len(pairs)}  mismatches {len(rows)}  network calls {fetched}",
+                  flush=True)
+
+    dupes = sum(1 for r in rows if r[-1] == "duplicate record")
+    print(f"\n  {len(rows)} records where the PMID and the DOI are different works")
+    print(f"    {dupes} are one paper held twice by OpenAlex (same title)")
+    print(f"    {len(rows) - dupes} resolve to genuinely different papers")
+    print(f"  {unresolved} could not be resolved on one side or the other")
+    doc = DATA.parent / "docs" / "identifier-check.md"
+    out = ["# PMID and DOI disagreement check", "",
+           "GENERATED by `pipeline/enrich.py --check-identifiers`. Proposals, not",
+           "decisions: promote a correction into `curation/overlay.yaml: publications`.",
+           "",
+           "bio.tools states both a PMID and a DOI for many records, and the pipeline uses",
+           "only the PMID. Where the two resolve to different OpenAlex works, one of them",
+           "is mistyped. A PMID typo is silent because PMIDs are dense sequential integers,",
+           "so the wrong number is still somebody's paper; a DOI typo 404s.", "",
+           "This check has a known blind spot. NOBAI's PMID was one digit out, and",
+           "bio.tools records the matching wrong DOI alongside it, so the two agree and",
+           "nothing here fires. The identifiers are not independent: the DOI appears to",
+           "have been filled in from the bad PMID. Catching that needs the paper read",
+           "against the tool, which is `paper_matches` in the describe job.", "",
+           f"{len(pairs)} entries checked, {len(rows)} disagree, {unresolved} unresolvable.",
+           "",
+           "`duplicate record` means both identifiers name the SAME paper and OpenAlex",
+           "holds two work entries for it; the fix is to link whichever copy carries the",
+           "true citation count. `DIFFERENT PAPER` means one identifier is wrong.", ""]
+    if rows:
+        out += ["| tool | kind | PMID | resolves to | cites | DOI | resolves to | cites |",
+                "| --- | --- | --- | --- | ---: | --- | --- | ---: |"]
+        for bid, name, pmid, pt, pc, doi, dt, dc, kind in rows:
+            out.append(f"| `{bid}` {name} | {kind} | {pmid} | {(pt or '?')[:58]} | "
+                       f"{pc if pc is not None else '?'} | {doi} | {(dt or '?')[:58]} | "
+                       f"{dc if dc is not None else '?'} |")
+    else:
+        out.append("No disagreements found.")
+    doc.parent.mkdir(parents=True, exist_ok=True)
+    doc.write_text("\n".join(out) + "\n")
+    print(f"  -> {doc}")
+
+
 def displayed_identifiers() -> list[str]:
     """Publications the build will show that no harvested record mentions.
 
@@ -433,10 +547,20 @@ def main() -> None:
     ap.add_argument("--no-github", action="store_true")
     ap.add_argument("--no-citations", action="store_true")
     ap.add_argument("--limit", type=int, default=0, help="process only N records (debug)")
+    ap.add_argument("--check-identifiers", action="store_true",
+                    help="cross-check records stating both a PMID and a DOI; a "
+                         "disagreement means one was mistyped. Writes "
+                         "docs/identifier-check.md, then exits")
     ap.add_argument("--backfill-works", action="store_true",
                     help="fetch and store the full OpenAlex response for every "
                          "displayed identifier that has none yet, then exit")
     args = ap.parse_args()
+
+    if args.check_identifiers:
+        http = requests.Session()
+        http.headers.update({"User-Agent": user_agent(), "Accept": "application/json"})
+        check_identifiers(http)
+        return
 
     if args.backfill_works:
         http = requests.Session()
