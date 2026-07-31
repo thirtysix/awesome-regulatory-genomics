@@ -44,6 +44,7 @@ COLUMNS = [
     "citations_total", "citations_papers",
     "publication_title", "publication_venue", "publication_url",
     "citations_recent", "citations_recent_year",
+    "pmid", "doi",
     "publication_is_preprint",
     "biotools_id", "biotools_url", "last_update", "source", "tags", "featured",
 ]
@@ -673,6 +674,11 @@ def main() -> None:
         r["publication_title"] = meta.get("title", "")
         r["publication_venue"] = meta.get("venue", "")
         r["publication_url"] = publication_url(r.get("publication") or "")
+        # Both identifiers, whichever bio.tools happened to record. The one it
+        # did not record comes from OpenAlex's ID mapping for the same work.
+        ident = r.get("publication") or ""
+        r["pmid"] = (ident[5:] if ident.startswith("pmid:") else meta.get("pmid", ""))
+        r["doi"] = (ident[4:] if ident.startswith("doi:") else meta.get("doi", ""))
         recent, ryear = recent_citations(meta, build_year)
         r["citations_recent"] = recent
         r["citations_recent_year"] = ryear

@@ -699,6 +699,13 @@ const DL_COLS = [
   ['repository',  t => t.repo_url],
   ['biotools',    t => t.biotools_url],
   ['publication', t => t.publication],
+  // Split out so a bibliography can be built from either. `publication` holds
+  // one or the other (83% pmid, 17% doi); the missing one is filled from
+  // OpenAlex's mapping for the same work.
+  ['pmid', t => (t.publication || '').startsWith('pmid:')
+      ? t.publication.slice(5) : (t.alt_pmid || '')],
+  ['doi',  t => (t.publication || '').startsWith('doi:')
+      ? t.publication.slice(4) : (t.alt_doi || '')],
   // The identifier is not usable on its own: `pmid:18798982` cannot be clicked
   // and says nothing about what the paper is.
   ['publication_title', t => t.pub_title],

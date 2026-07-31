@@ -1100,6 +1100,13 @@ const DL_COLS = [
   ['repository',  t => t.repo_url],
   ['biotools',    t => t.biotools_url],
   ['publication', t => t.publication],
+  // Split out so a bibliography can be built from either. `publication` holds
+  // one or the other (83% pmid, 17% doi); the missing one is filled from
+  // OpenAlex's mapping for the same work.
+  ['pmid', t => (t.publication || '').startsWith('pmid:')
+      ? t.publication.slice(5) : (t.alt_pmid || '')],
+  ['doi',  t => (t.publication || '').startsWith('doi:')
+      ? t.publication.slice(4) : (t.alt_doi || '')],
   // The identifier is not usable on its own: `pmid:18798982` cannot be clicked
   // and says nothing about what the paper is.
   ['publication_title', t => t.pub_title],
@@ -1203,6 +1210,10 @@ def render_site(catalog: dict) -> None:
         **({"pub_title": t["publication_title"]} if t.get("publication_title") else {}),
         **({"pub_venue": t["publication_venue"]} if t.get("publication_venue") else {}),
         **({"cites_recent": t["citations_recent"]} if t.get("citations_recent") is not None else {}),
+        # Only the identifier bio.tools did NOT record: the other one is a
+        # slice of `publication` and would be 50 KB of duplication.
+        **({"alt_pmid": t["pmid"]} if t["pmid"] and not (t.get("publication") or "").startswith("pmid:") else {}),
+        **({"alt_doi": t["doi"]} if t["doi"] and not (t.get("publication") or "").startswith("doi:") else {}),
         # Signals a user filtering the table wants and could not previously get.
         **({"archived": 1} if t.get("repo_archived") else {}),
         **({"dead_site": 1} if t.get("homepage_status") == "dead" else {}),
