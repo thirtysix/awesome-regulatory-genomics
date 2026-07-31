@@ -1,18 +1,18 @@
 {
  "meta": {
   "generated": "2026-07-31",
-  "count": 1761,
-  "from_biotools": 1632,
+  "count": 1763,
+  "from_biotools": 1634,
   "curated_seeds": 129,
   "featured": 19,
-  "with_repo": 886,
+  "with_repo": 887,
   "repo_recovered": 48,
   "repo_by_origin": {
-   "recorded": 811,
+   "recorded": 812,
    "inferred": 44,
    "curated": 31
   },
-  "llm_assisted": 1632,
+  "llm_assisted": 1634,
   "llm_scope_dropped": 130
  },
  "tools": [
@@ -2142,6 +2142,78 @@
    "citations_recent_year": "2025",
    "license_source": "declared",
    "registries": "docker"
+  },
+  {
+   "id": "pipmaker",
+   "name": "PipMaker",
+   "description": "Aligns two long genomic DNA sequences to identify conserved segments and produces percent identity plots",
+   "categories": [
+    "tfbs-prediction",
+    "regulatory-elements"
+   ],
+   "tier": "core",
+   "homepage": "http://bio.cse.psu.edu/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Web application"
+   ],
+   "topics": [
+    "Gene transcripts",
+    "Transcription factors and regulatory sites",
+    "DNA",
+    "Gene expression",
+    "DNA binding sites"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 1197,
+   "citation_note": "",
+   "citations_total": 1434,
+   "citations_papers": 2,
+   "year": "2000",
+   "publication": "pmid:10779500",
+   "publication_is_preprint": false,
+   "biotools_id": "pipmaker",
+   "biotools_url": "https://bio.tools/pipmaker",
+   "last_update": "2024-11-25",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Multiple sequence alignment",
+    "Regulatory element prediction",
+    "Sequence alignment analysis (conservation)",
+    "Tree-based sequence alignment"
+   ],
+   "_select_reason": "operation:Regulatory element prediction",
+   "_identifiers": [
+    "pmid:10779500",
+    "pmid:12824357"
+   ],
+   "_registries": {},
+   "_llm_applied": [
+    "description"
+   ],
+   "featured": "",
+   "primary_category": "tfbs-prediction",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "PipMaker\u2014A Web Server for Aligning Two Genomic DNA Sequences",
+   "publication_venue": "Genome Research",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/10779500/",
+   "pmid": "10779500",
+   "doi": "10.1101/gr.10.4.577",
+   "citations_recent": 10,
+   "citations_recent_year": "2025",
+   "license_source": "",
+   "registries": ""
   },
   {
    "id": "Basset",
@@ -6177,6 +6249,73 @@
    "pmid": "33637727",
    "doi": "10.1038/s41467-021-21583-9",
    "citations_recent": 63,
+   "citations_recent_year": "2025",
+   "license_source": "declared",
+   "registries": ""
+  },
+  {
+   "id": "mcl",
+   "name": "MCL",
+   "description": "Clusters biological networks using the Markov Cluster algorithm",
+   "categories": [
+    "grn-inference"
+   ],
+   "tier": "core",
+   "homepage": "http://micans.org/mcl/",
+   "repo_url": "https://github.com/micans/mcl",
+   "repo_origin": "recorded",
+   "repo_stars": 114,
+   "repo_pushed": "2025-09-19",
+   "repo_archived": false,
+   "repo_language": "C",
+   "repo_license": "NOASSERTION",
+   "tool_type": [
+    "Command-line tool"
+   ],
+   "topics": [
+    "Molecular interactions, pathways and networks"
+   ],
+   "languages": [
+    "C"
+   ],
+   "license": "GPL-3.0",
+   "maturity": "Mature",
+   "cost": "Free of charge",
+   "citations": 485,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2012",
+   "publication": "pmid:22144159",
+   "publication_is_preprint": false,
+   "biotools_id": "mcl",
+   "biotools_url": "https://bio.tools/mcl",
+   "last_update": "2024-11-24",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Clustering",
+    "Gene regulatory network analysis",
+    "Network analysis"
+   ],
+   "_select_reason": "operation:Gene regulatory network analysis",
+   "_identifiers": [
+    "pmid:22144159"
+   ],
+   "_registries": {},
+   "_llm_applied": [
+    "description"
+   ],
+   "featured": "",
+   "primary_category": "grn-inference",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "Using MCL to Extract Clusters from Networks",
+   "publication_venue": "Methods in molecular biology",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/22144159/",
+   "pmid": "22144159",
+   "doi": "10.1007/978-1-61779-361-5_15",
+   "citations_recent": 27,
    "citations_recent_year": "2025",
    "license_source": "declared",
    "registries": ""

@@ -244,6 +244,23 @@ The declared citation can also be the wrong thing to record: `rmspc` declares th
 MSPC paper it wraps, and `consensusSeekeR` a t-mixture statistics paper. Read the
 title before promoting a row.
 
+**A wrong publication identifier can be a typo, not a wrong choice of paper.**
+bio.tools records NOBAI as `pmid:18449469`, which resolves cleanly to
+"Ellipsoidal particles at fluid interfaces" in European Physical Journal E and
+handed the tool that paper's 146 citations against a true 15. The correct PMID is
+`18448469`: one transposed digit, and both resolve, so nothing that checks
+"does this identifier resolve" can see it. It surfaced only because the scope
+audit read the description and the paper together and said they disagree.
+Searching for more of these: comparing the tool name against the paper title
+finds nothing useful, because bioinformatics papers routinely have descriptive
+titles that never name the tool (HOMER's is "Simple Combinations of
+Lineage-Determining Transcription Factors...", DiffBind's is about oestrogen
+receptor binding in breast cancer) - 100 records fail that test and were all
+correct. Scanning publication VENUES for fields alien to genomics found 12, all
+of them legitimate methods papers in chemistry-flavoured journals. So NOBAI looks
+isolated rather than systematic, but note that both detectors are weak and this
+is "nothing else surfaced", not "nothing else exists".
+
 **One EDAM operation is not enough to admit a record.** 599 of the catalog's
 entries were selected by a single `operation:` match with nothing corroborating
 it, and EDAM is wrong often enough that this let in a cytochrome-P450 inhibition

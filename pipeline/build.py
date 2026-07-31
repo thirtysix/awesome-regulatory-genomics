@@ -641,8 +641,13 @@ def main() -> None:
             row.update(proposed[row["id"]])
             row["_llm_applied"] = sorted(proposed[row["id"]])
 
-    # curation overlay
-    for row in rows:
+    # curation overlay. Excluded rows go through the publication and correction
+    # passes too: an archive that carries a publication the overlay has already
+    # corrected is a record that is wrong on disk, which is the failure this
+    # whole archive exists to avoid. NOBAI is the case - bio.tools records a
+    # PMID one digit off, resolving to a soft-matter physics paper and its 146
+    # citations against NOBAI's true 15.
+    for row in rows + dropped:
         key = row["id"]
         if key in corrections:
             fix = dict(corrections[key])

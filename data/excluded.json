@@ -1,6 +1,6 @@
 {
  "meta": {
-  "count": 198,
+  "count": 196,
   "note": "Records the hand-written overlay excludes, with the full row they had when dropped. Delete the id from overlay.yaml: exclude and rebuild to reinstate one."
  },
  "tools": [
@@ -69,7 +69,9 @@
     "pmid:22543367"
    ],
    "_registries": {},
-   "_excluded_reason": "General-purpose sequence analysis suite; tagged \"Sequence motif discovery\" upstream"
+   "_excluded_reason": "General-purpose sequence analysis suite; tagged \"Sequence motif discovery\" upstream",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "cuffdiff",
@@ -122,7 +124,9 @@
     "doi:10.7490/f1000research.1114334.1"
    ],
    "_registries": {},
-   "_excluded_reason": "Differential transcript expression; tagged \"Transcriptional regulatory element prediction\" upstream"
+   "_excluded_reason": "Differential transcript expression; tagged \"Transcriptional regulatory element prediction\" upstream",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "erange",
@@ -173,7 +177,9 @@
     "pmid:18516045"
    ],
    "_registries": {},
-   "_excluded_reason": "RNA-seq and ChIP-seq package whose paper is the 2008 RNA-seq transcriptome method; 14,401 citations for work out of scope"
+   "_excluded_reason": "RNA-seq and ChIP-seq package whose paper is the 2008 RNA-seq transcriptome method; 14,401 citations for work out of scope",
+   "featured": "",
+   "primary_category": "peak-calling"
   },
   {
    "id": "weblogo_3",
@@ -226,7 +232,9 @@
     "pmid:15173120"
    ],
    "_registries": {},
-   "_excluded_reason": "Duplicate bio.tools record for WebLogo"
+   "_excluded_reason": "Duplicate bio.tools record for WebLogo",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "ROADMAP_epigenomics",
@@ -277,7 +285,9 @@
     "pmid:25693563"
    ],
    "_registries": {},
-   "_excluded_reason": "Reference data repository rather than a tool; kept out to avoid inflating the ranking"
+   "_excluded_reason": "Reference data repository rather than a tool; kept out to avoid inflating the ranking",
+   "featured": "",
+   "primary_category": "nucleosome-chromatin"
   },
   {
    "id": "edger",
@@ -334,7 +344,9 @@
    "_registries": {
     "bioconductor": "http://bioconductor.org/packages/release/bioc/html/edgeR.html"
    },
-   "_excluded_reason": "Generic differential expression for RNA-seq; admitted by a ChIP-seq text match"
+   "_excluded_reason": "Generic differential expression for RNA-seq; admitted by a ChIP-seq text match",
+   "featured": "",
+   "primary_category": "peak-calling"
   },
   {
    "id": "meme_fimo",
@@ -391,7 +403,9 @@
     "doi:10.7490/f1000research.1114334.1"
    ],
    "_registries": {},
-   "_excluded_reason": "Duplicate of the MEME Suite / FIMO entries"
+   "_excluded_reason": "Duplicate of the MEME Suite / FIMO entries",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "crisprfinder",
@@ -449,7 +463,9 @@
     "pmid:17537822"
    ],
    "_registries": {},
-   "_excluded_reason": "Detects CRISPR direct repeats, not regulatory elements"
+   "_excluded_reason": "Detects CRISPR direct repeats, not regulatory elements",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "express",
@@ -503,64 +519,9 @@
     "doi:10.7490/f1000research.1114334.1"
    ],
    "_registries": {},
-   "_excluded_reason": "Transcript-level RNA-seq abundance quantification; admitted by a transcription-factor text match"
-  },
-  {
-   "id": "pipmaker",
-   "name": "PipMaker",
-   "description": "Compute alignments of similar regions in two DNA sequences",
-   "categories": [
-    "tfbs-prediction",
-    "regulatory-elements"
-   ],
-   "tier": "core",
-   "homepage": "http://bio.cse.psu.edu/",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Web application"
-   ],
-   "topics": [
-    "Gene transcripts",
-    "Transcription factors and regulatory sites",
-    "DNA",
-    "Gene expression",
-    "DNA binding sites"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 1197,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "",
-   "publication": "pmid:10779500",
-   "publication_is_preprint": false,
-   "biotools_id": "pipmaker",
-   "biotools_url": "https://bio.tools/pipmaker",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Multiple sequence alignment",
-    "Regulatory element prediction",
-    "Sequence alignment analysis (conservation)",
-    "Tree-based sequence alignment"
-   ],
-   "_select_reason": "operation:Regulatory element prediction",
-   "_identifiers": [
-    "pmid:10779500",
-    "pmid:12824357"
-   ],
-   "_registries": {},
-   "_excluded_reason": "PipMaker is a general sequence alignment and conservation visualization tool, not a dedicated regulatory-genomics tool; admitted on EDAM 'Regulatory element prediction' alone"
+   "_excluded_reason": "Transcript-level RNA-seq abundance quantification; admitted by a transcription-factor text match",
+   "featured": "",
+   "primary_category": "peak-calling"
   },
   {
    "id": "ferrdb",
@@ -613,7 +574,9 @@
     "pmid:32219413"
    ],
    "_registries": {},
-   "_excluded_reason": "Curated resource of ferroptosis regulators; a disease gene list, not a regulatory-genomics tool"
+   "_excluded_reason": "Curated resource of ferroptosis regulators; a disease gene list, not a regulatory-genomics tool",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "predictprotein_open",
@@ -700,7 +663,9 @@
     "doi:10.1093/nar/gkh377"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts protein structural and functional features, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone"
+   "_excluded_reason": "Predicts protein structural and functional features, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "defuse",
@@ -756,59 +721,9 @@
     "pmid:21625565"
    ],
    "_registries": {},
-   "_excluded_reason": "Discovers gene fusions from RNA-Seq data, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone"
-  },
-  {
-   "id": "mcl",
-   "name": "MCL",
-   "description": "MCL is a clustering algorithm widely used in bioinformatics and gaining traction in other fields.",
-   "categories": [
-    "grn-inference"
-   ],
-   "tier": "core",
-   "homepage": "http://micans.org/mcl/",
-   "repo_url": "https://github.com/micans/mcl",
-   "repo_origin": "recorded",
-   "repo_stars": 114,
-   "repo_pushed": "2025-09-19",
-   "repo_archived": false,
-   "repo_language": "C",
-   "repo_license": "NOASSERTION",
-   "tool_type": [
-    "Command-line tool"
-   ],
-   "topics": [
-    "Molecular interactions, pathways and networks"
-   ],
-   "languages": [
-    "C"
-   ],
-   "license": "GPL-3.0",
-   "maturity": "Mature",
-   "cost": "Free of charge",
-   "citations": 485,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2012",
-   "publication": "pmid:22144159",
-   "publication_is_preprint": false,
-   "biotools_id": "mcl",
-   "biotools_url": "https://bio.tools/mcl",
-   "last_update": "2024-11-24",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Clustering",
-    "Gene regulatory network analysis",
-    "Network analysis"
-   ],
-   "_select_reason": "operation:Gene regulatory network analysis",
-   "_identifiers": [
-    "pmid:22144159"
-   ],
-   "_registries": {},
-   "_excluded_reason": "MCL is a general clustering algorithm for biological networks, not specifically for gene-regulatory networks; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Discovers gene fusions from RNA-Seq data, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "hotnet",
@@ -861,7 +776,9 @@
     "pmid:21385051"
    ],
    "_registries": {},
-   "_excluded_reason": "Finds mutated subnetworks in cancer via protein interaction networks, not gene regulatory networks; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Finds mutated subnetworks in cancer via protein interaction networks, not gene regulatory networks; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "promateus",
@@ -918,7 +835,9 @@
     "pmid:17488838"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts protein-protein binding sites, not regulatory genomics; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "Predicts protein-protein binding sites, not regulatory genomics; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "VDJdb",
@@ -969,7 +888,9 @@
     "pmid:31588507"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on T-cell receptor sequences and antigens, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone"
+   "_excluded_reason": "Focuses on T-cell receptor sequences and antigens, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "toxinpred2",
@@ -1027,7 +948,9 @@
     "pmid:35595541"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts protein/peptide toxicity, not regulatory genomics"
+   "_excluded_reason": "Predicts protein/peptide toxicity, not regulatory genomics",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "tact",
@@ -1085,7 +1008,9 @@
     "pmid:16185827"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on general gene annotation and transcript characterization, not regulatory genomics"
+   "_excluded_reason": "Focuses on general gene annotation and transcript characterization, not regulatory genomics",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "eukaryotic_linear_motif",
@@ -1144,7 +1069,9 @@
     "pmid:34718738"
    ],
    "_registries": {},
-   "_excluded_reason": "Annotates and detects short linear motifs in proteins mediating protein-protein interactions, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone"
+   "_excluded_reason": "Annotates and detects short linear motifs in proteins mediating protein-protein interactions, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "iceberg",
@@ -1200,7 +1127,9 @@
     "pmid:22009673"
    ],
    "_registries": {},
-   "_excluded_reason": "Database of bacterial mobile genetic elements, not regulatory genomics; admitted on EDAM 'Promoter prediction' alone"
+   "_excluded_reason": "Database of bacterial mobile genetic elements, not regulatory genomics; admitted on EDAM 'Promoter prediction' alone",
+   "featured": "",
+   "primary_category": "motif-databases"
   },
   {
    "id": "propr",
@@ -1255,7 +1184,9 @@
    "_registries": {
     "cran": "https://cran.r-project.org/web/packages/propr/index.html"
    },
-   "_excluded_reason": "Tool is for compositional data analysis and proportionality, not regulatory genomics; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "Tool is for compositional data analysis and proportionality, not regulatory genomics; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "peak-calling"
   },
   {
    "id": "sitehound-web",
@@ -1316,7 +1247,9 @@
     "pmid:19398430"
    ],
    "_registries": {},
-   "_excluded_reason": "Identifies ligand binding sites in protein structures, not regulatory genomics; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "Identifies ligand binding sites in protein structures, not regulatory genomics; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "ireceptor",
@@ -1369,7 +1302,9 @@
     "pmid:29944754"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on adaptive immune receptor repertoires (B-cell/T-cell), not regulatory genomics; admitted on EDAM 'Sequence motif comparison' alone"
+   "_excluded_reason": "Focuses on adaptive immune receptor repertoires (B-cell/T-cell), not regulatory genomics; admitted on EDAM 'Sequence motif comparison' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "meta-meme",
@@ -1423,7 +1358,9 @@
     "pmid:9283754"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool models protein families and motifs, not regulatory genomics"
+   "_excluded_reason": "Tool models protein families and motifs, not regulatory genomics",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "mkt",
@@ -1477,62 +1414,9 @@
     "pmid:18515345"
    ],
    "_registries": {},
-   "_excluded_reason": "Detects natural selection via McDonald-Kreitman test, not regulatory genomics"
-  },
-  {
-   "id": "nobai",
-   "name": "NOBAI",
-   "description": "Facilitates the search for the evolutionary history embedded in the structure of functional RNA molecules.",
-   "categories": [
-    "regulatory-elements"
-   ],
-   "tier": "core",
-   "homepage": "http://www.manet.uiuc.edu/nobai/nobai.php",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Web application"
-   ],
-   "topics": [
-    "Functional, regulatory and non-coding RNA",
-    "RNA",
-    "Molecular interactions, pathways and networks",
-    "Nucleic acid structure analysis",
-    "Physics"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 146,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "",
-   "publication": "pmid:18449469",
-   "publication_is_preprint": false,
-   "biotools_id": "nobai",
-   "biotools_url": "https://bio.tools/nobai",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "RNA structure prediction",
-    "Single particle alignment and classification",
-    "Single particle analysis",
-    "Transcriptional regulatory element prediction"
-   ],
-   "_select_reason": "operation:Transcriptional regulatory element prediction",
-   "_identifiers": [
-    "pmid:18449469"
-   ],
-   "_registries": {},
-   "_excluded_reason": "Paper is about colloid physics, not regulatory genomics; admitted on EDAM 'Transcriptional regulatory element prediction' alone"
+   "_excluded_reason": "Detects natural selection via McDonald-Kreitman test, not regulatory genomics",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "fugu-sg",
@@ -1591,7 +1475,9 @@
     "pmid:12142439"
    ],
    "_registries": {},
-   "_excluded_reason": "This is a genome project and database, not a regulatory-genomics tool; admitted on EDAM 'Transcriptional regulatory element prediction' alone"
+   "_excluded_reason": "This is a genome project and database, not a regulatory-genomics tool; admitted on EDAM 'Transcriptional regulatory element prediction' alone",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "starmir",
@@ -1646,7 +1532,9 @@
     "pmid:24803672"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts microRNA binding sites on target RNA, which is RNA regulation, not regulatory genomics; admitted on EDAM 'Transcription factor binding site prediction' alone"
+   "_excluded_reason": "Predicts microRNA binding sites on target RNA, which is RNA regulation, not regulatory genomics; admitted on EDAM 'Transcription factor binding site prediction' alone",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "moma",
@@ -1700,7 +1588,9 @@
     "pmid:29335514"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool segments and tracks cells from images, not for regulatory genomics analysis; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Tool segments and tracks cells from images, not for regulatory genomics analysis; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "PyFeat",
@@ -1755,7 +1645,9 @@
     "pmid:30850831"
    ],
    "_registries": {},
-   "_excluded_reason": "General feature generation tool for DNA, RNA, and protein sequences, not specific to regulatory genomics; admitted on EDAM 'Promoter prediction' alone"
+   "_excluded_reason": "General feature generation tool for DNA, RNA, and protein sequences, not specific to regulatory genomics; admitted on EDAM 'Promoter prediction' alone",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "u-shape3D",
@@ -1808,7 +1700,9 @@
     "pmid:31501548"
    ],
    "_registries": {},
-   "_excluded_reason": "Detects subcellular morphological motifs in 3D microscopy images, not regulatory genomics motifs"
+   "_excluded_reason": "Detects subcellular morphological motifs in 3D microscopy images, not regulatory genomics motifs",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "spacer",
@@ -1868,7 +1762,9 @@
     "pmid:23737445"
    ],
    "_registries": {},
-   "_excluded_reason": "Analyzes protein structures for allosteric and effector binding sites, not regulatory genomics; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "Analyzes protein structures for allosteric and effector binding sites, not regulatory genomics; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "DeepCLIP",
@@ -1926,7 +1822,9 @@
     "pmid:32558887"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts protein-RNA binding, not cis-regulatory elements or DNA regulatory genomics; admitted on EDAM 'cis-regulatory element prediction' alone"
+   "_excluded_reason": "Predicts protein-RNA binding, not cis-regulatory elements or DNA regulatory genomics; admitted on EDAM 'cis-regulatory element prediction' alone",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "p-scan",
@@ -1977,7 +1875,9 @@
     "pmid:10820484"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool quantifies peaks from cDNA microarray data for gene expression analysis, not regulatory genomics; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "Tool quantifies peaks from cDNA microarray data for gene expression analysis, not regulatory genomics; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "peak-calling"
   },
   {
    "id": "multibind",
@@ -2032,7 +1932,9 @@
     "pmid:18467424"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool aligns protein binding sites from protein-small molecule complexes, which is out of scope as it deals with protein-ligand binding, not regulatory genomics; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "Tool aligns protein binding sites from protein-small molecule complexes, which is out of scope as it deals with protein-ligand binding, not regulatory genomics; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "peak-calling"
   },
   {
    "id": "talenoffer",
@@ -2085,7 +1987,9 @@
     "pmid:23995255"
    ],
    "_registries": {},
-   "_excluded_reason": "TALENoffer predicts off-targets of TALENs for genome editing, not regulatory elements; admitted on EDAM 'Transcriptional regulatory element prediction' alone"
+   "_excluded_reason": "TALENoffer predicts off-targets of TALENs for genome editing, not regulatory elements; admitted on EDAM 'Transcriptional regulatory element prediction' alone",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "glytoucan",
@@ -2140,7 +2044,9 @@
     "pmid:33125071"
    ],
    "_registries": {},
-   "_excluded_reason": "GlyTouCan is a glycan repository, not a regulatory genomics tool"
+   "_excluded_reason": "GlyTouCan is a glycan repository, not a regulatory genomics tool",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "ZincBind",
@@ -2197,7 +2103,9 @@
     "pmid:30722040"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool identifies zinc binding sites in proteins, not transcription factor binding sites or regulatory genomics; admitted on EDAM 'Transcription factor binding site prediction' alone"
+   "_excluded_reason": "Tool identifies zinc binding sites in proteins, not transcription factor binding sites or regulatory genomics; admitted on EDAM 'Transcription factor binding site prediction' alone",
+   "featured": "",
+   "primary_category": "motif-databases"
   },
   {
    "id": "RNATracker",
@@ -2249,7 +2157,9 @@
     "pmid:31510698"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts mRNA subcellular localization, not cis-regulatory elements in the regulatory genomics sense; admitted on EDAM 'cis-regulatory element prediction' alone"
+   "_excluded_reason": "Predicts mRNA subcellular localization, not cis-regulatory elements in the regulatory genomics sense; admitted on EDAM 'cis-regulatory element prediction' alone",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "probis",
@@ -2282,8 +2192,8 @@
    "cost": "",
    "citations": 86,
    "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
+   "citations_total": 172,
+   "citations_papers": 2,
    "year": "",
    "publication": "pmid:20504855",
    "publication_is_preprint": false,
@@ -2304,7 +2214,9 @@
     "pmid:22600737"
    ],
    "_registries": {},
-   "_excluded_reason": "Detects protein binding sites, not regulatory genomics; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "Detects protein binding sites, not regulatory genomics; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "peak-calling"
   },
   {
    "id": "mobilomefinder",
@@ -2362,7 +2274,9 @@
     "pmid:16414954"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on bacterial genomic islands and mobile elements, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone"
+   "_excluded_reason": "Focuses on bacterial genomic islands and mobile elements, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "grgmf",
@@ -2416,7 +2330,9 @@
     "pmid:32145009"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool predicts links in biomedical bipartite networks (e.g., drug-target, disease-gene) and is not specific to regulatory genomics; admitted on EDAM 'Promoter prediction' alone"
+   "_excluded_reason": "Tool predicts links in biomedical bipartite networks (e.g., drug-target, disease-gene) and is not specific to regulatory genomics; admitted on EDAM 'Promoter prediction' alone",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "bubble_gum",
@@ -2468,7 +2384,9 @@
     "pmid:26481321"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool performs gene set enrichment analysis on transcriptomic data, not regulatory genomics; admitted on EDAM 'Transcriptional regulatory element prediction' alone"
+   "_excluded_reason": "Tool performs gene set enrichment analysis on transcriptomic data, not regulatory genomics; admitted on EDAM 'Transcriptional regulatory element prediction' alone",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "hfaim",
@@ -2518,7 +2436,9 @@
     "pmid:27071037"
    ],
    "_registries": {},
-   "_excluded_reason": "Identifies Atg8-interacting motifs in proteins for autophagy, not regulatory genomics; admitted on EDAM 'Sequence motif comparison' alone"
+   "_excluded_reason": "Identifies Atg8-interacting motifs in proteins for autophagy, not regulatory genomics; admitted on EDAM 'Sequence motif comparison' alone",
+   "featured": "",
+   "primary_category": "motif-comparison"
   },
   {
    "id": "oktoberfest",
@@ -2573,7 +2493,9 @@
     "pmid:37672792"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool is for proteomics spectral library generation and rescoring, not regulatory genomics; admitted on EDAM 'Promoter prediction' alone"
+   "_excluded_reason": "Tool is for proteomics spectral library generation and rescoring, not regulatory genomics; admitted on EDAM 'Promoter prediction' alone",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "topogsa",
@@ -2630,7 +2552,9 @@
     "pmid:20335277"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on general network topological properties of gene/protein sets, not specifically on gene regulatory networks or regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Focuses on general network topological properties of gene/protein sets, not specifically on gene regulatory networks or regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "metaldetector",
@@ -2687,7 +2611,9 @@
     "pmid:21576237"
    ],
    "_registries": {},
-   "_excluded_reason": "predicts metal binding sites in proteins, not regulatory genomics; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "predicts metal binding sites in proteins, not regulatory genomics; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "probis-ligands",
@@ -2743,7 +2669,9 @@
     "pmid:24861616"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts ligands for protein binding sites, not transcription factor binding or regulatory genomics; admitted on EDAM 'Transcription factor binding site prediction' alone"
+   "_excluded_reason": "Predicts ligands for protein binding sites, not transcription factor binding or regulatory genomics; admitted on EDAM 'Transcription factor binding site prediction' alone",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "rna-targeting",
@@ -2800,7 +2728,9 @@
     "doi:10.1101/2021.09.14.460134"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool predicts guide efficiency for RNA targeting, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone"
+   "_excluded_reason": "Tool predicts guide efficiency for RNA targeting, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "VISDB",
@@ -2854,7 +2784,9 @@
     "pmid:31598702"
    ],
    "_registries": {},
-   "_excluded_reason": "Database of viral integration sites, not regulatory genomics; admitted on EDAM 'Promoter prediction' alone"
+   "_excluded_reason": "Database of viral integration sites, not regulatory genomics; admitted on EDAM 'Promoter prediction' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "trapp",
@@ -2906,7 +2838,9 @@
     "pmid:28431137"
    ],
    "_registries": {},
-   "_excluded_reason": "predicts protein binding pockets for small-molecule inhibitors, not regulatory genomics; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "predicts protein binding pockets for small-molecule inhibitors, not regulatory genomics; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "peak-calling"
   },
   {
    "id": "possum",
@@ -2965,7 +2899,9 @@
     "pmid:22135290"
    ],
    "_registries": {},
-   "_excluded_reason": "Database of protein-ligand binding sites and pockets, out of regulatory genomics scope; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "Database of protein-ligand binding sites and pockets, out of regulatory genomics scope; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "motif-databases"
   },
   {
    "id": "bedtoolsr",
@@ -3019,7 +2955,9 @@
     "pmid:31903447"
    ],
    "_registries": {},
-   "_excluded_reason": "General genomic data manipulation tool, not specific to regulatory genomics; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "General genomic data manipulation tool, not specific to regulatory genomics; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "peak-calling"
   },
   {
    "id": "key_pathway_miner",
@@ -3072,7 +3010,9 @@
     "doi:10.1080/15427951.2011.604548"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool identifies subnetworks of co-expressed genes, not gene-regulatory networks; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Tool identifies subnetworks of co-expressed genes, not gene-regulatory networks; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "LTMG",
@@ -3127,7 +3067,9 @@
     "pmid:31372654"
    ],
    "_registries": {},
-   "_excluded_reason": "Models transcriptional expression states from scRNA-seq data, not cis-regulatory element prediction; admitted on EDAM 'cis-regulatory element prediction' alone"
+   "_excluded_reason": "Models transcriptional expression states from scRNA-seq data, not cis-regulatory element prediction; admitted on EDAM 'cis-regulatory element prediction' alone",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "modsubnetbiomident",
@@ -3182,7 +3124,9 @@
     "pmid:20128910"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on aging biomarkers and longevity gene function inference, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Focuses on aging biomarkers and longevity gene function inference, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "spascer",
@@ -3238,7 +3182,9 @@
     "pmid:36243975"
    ],
    "_registries": {},
-   "_excluded_reason": "SPASCER is a spatial transcriptomics database and annotation tool, not a regulatory genomics tool; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "SPASCER is a spatial transcriptomics database and annotation tool, not a regulatory genomics tool; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "coman",
@@ -3289,7 +3235,9 @@
     "pmid:27515514"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on metatranscriptomics functional analysis, not regulatory genomics; admitted on EDAM 'Transcriptional regulatory element prediction' alone"
+   "_excluded_reason": "Focuses on metatranscriptomics functional analysis, not regulatory genomics; admitted on EDAM 'Transcriptional regulatory element prediction' alone",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "flyrnai",
@@ -3350,7 +3298,9 @@
     "pmid:22067456"
    ],
    "_registries": {},
-   "_excluded_reason": "It is a database for RNAi reagents and screens, not for regulatory genomics; admitted on EDAM 'Transcriptional regulatory element prediction' alone"
+   "_excluded_reason": "It is a database for RNAi reagents and screens, not for regulatory genomics; admitted on EDAM 'Transcriptional regulatory element prediction' alone",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "ripseeker",
@@ -3403,7 +3353,9 @@
    "_registries": {
     "bioconductor": "http://bioconductor.org/packages/release/bioc/html/RIPSeeker.html"
    },
-   "_excluded_reason": "RIPSeeker identifies RNA-protein interactions, not DNA regulatory elements; admitted on EDAM 'Transcriptional regulatory element prediction' alone"
+   "_excluded_reason": "RIPSeeker identifies RNA-protein interactions, not DNA regulatory elements; admitted on EDAM 'Transcriptional regulatory element prediction' alone",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "noisyr",
@@ -3463,7 +3415,9 @@
    "_registries": {
     "cran": "https://CRAN.R-project.org/package=noisyr"
    },
-   "_excluded_reason": "Tool is a general noise filter for sequencing data, not specific to regulatory genomics; admitted on EDAM 'Gene regulatory network prediction' alone"
+   "_excluded_reason": "Tool is a general noise filter for sequencing data, not specific to regulatory genomics; admitted on EDAM 'Gene regulatory network prediction' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "WheatCRISPR",
@@ -3514,7 +3468,9 @@
     "pmid:31694550"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool is for CRISPR guide RNA design, not regulatory genomics; admitted on EDAM 'Promoter prediction' alone"
+   "_excluded_reason": "Tool is for CRISPR guide RNA design, not regulatory genomics; admitted on EDAM 'Promoter prediction' alone",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "circlebase",
@@ -3575,7 +3531,9 @@
     "pmid:34792166"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on extrachromosomal circular DNA curation and interpretation, not regulatory genomics; admitted on EDAM 'Gene regulatory network prediction' alone"
+   "_excluded_reason": "Focuses on extrachromosomal circular DNA curation and interpretation, not regulatory genomics; admitted on EDAM 'Gene regulatory network prediction' alone",
+   "featured": "",
+   "primary_category": "peak-calling"
   },
   {
    "id": "biobike",
@@ -3629,7 +3587,9 @@
     "pmid:19433511"
    ],
    "_registries": {},
-   "_excluded_reason": "BioBIKE is a general-purpose bioinformatics programming environment, not a tool specifically for regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone"
+   "_excluded_reason": "BioBIKE is a general-purpose bioinformatics programming environment, not a tool specifically for regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "deepcyps",
@@ -3685,7 +3645,9 @@
     "pmid:37101544"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts cytochrome P450 inhibitory activity, not regulatory genomics; admitted on EDAM 'Promoter prediction' alone"
+   "_excluded_reason": "Predicts cytochrome P450 inhibitory activity, not regulatory genomics; admitted on EDAM 'Promoter prediction' alone",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "crispron_off",
@@ -3742,7 +3704,9 @@
     "pmid:36271848"
    ],
    "_registries": {},
-   "_excluded_reason": "CRISPR gRNA design is not regulatory genomics; admitted on EDAM 'Promoter prediction' alone"
+   "_excluded_reason": "CRISPR gRNA design is not regulatory genomics; admitted on EDAM 'Promoter prediction' alone",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "vamos",
@@ -3799,7 +3763,9 @@
     "pmid:37501141"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool annotates variable-number tandem repeats, not regulatory elements; admitted on EDAM 'Sequence motif discovery' alone"
+   "_excluded_reason": "Tool annotates variable-number tandem repeats, not regulatory elements; admitted on EDAM 'Sequence motif discovery' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "icyp-mfe",
@@ -3855,7 +3821,9 @@
     "pmid:34672553"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts cytochrome P450 inhibitors, which is drug metabolism, not regulatory genomics; admitted on EDAM 'Promoter prediction' alone"
+   "_excluded_reason": "Predicts cytochrome P450 inhibitors, which is drug metabolism, not regulatory genomics; admitted on EDAM 'Promoter prediction' alone",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "signalink3",
@@ -3913,7 +3881,9 @@
     "pmid:34634810"
    ],
    "_registries": {},
-   "_excluded_reason": "SignaLink3 is a signaling pathway database, not a regulatory-genomics tool; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "SignaLink3 is a signaling pathway database, not a regulatory-genomics tool; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "ligap",
@@ -3966,7 +3936,9 @@
     "pmid:23110343"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool identifies differentially regulated transcriptome signatures in T cell differentiation, not regulatory genomics tools like TF binding or cis-regulatory elements; admitted on EDAM 'trans-regulatory element prediction' alone"
+   "_excluded_reason": "Tool identifies differentially regulated transcriptome signatures in T cell differentiation, not regulatory genomics tools like TF binding or cis-regulatory elements; admitted on EDAM 'trans-regulatory element prediction' alone",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "subtiwiki",
@@ -4021,7 +3993,9 @@
     "pmid:39441067"
    ],
    "_registries": {},
-   "_excluded_reason": "SubtiWiki is a general-purpose database for Bacillus subtilis, not a tool specifically for regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "SubtiWiki is a general-purpose database for Bacillus subtilis, not a tool specifically for regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "network_of_cancer_genes",
@@ -4077,7 +4051,9 @@
     "pmid:19906700"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on cancer gene mutations and protein interaction networks, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Focuses on cancer gene mutations and protein interaction networks, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "grrann",
@@ -4128,7 +4104,9 @@
     "pmid:29258445"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool predicts phenotypes from gene expression data using network-regularized neural network, not gene regulatory network analysis; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Tool predicts phenotypes from gene expression data using network-regularized neural network, not gene regulatory network analysis; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "netvenn",
@@ -4182,7 +4160,9 @@
     "pmid:24771340"
    ],
    "_registries": {},
-   "_excluded_reason": "It compares gene lists with Venn diagrams and interactome networks, not specifically for gene-regulatory networks; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "It compares gene lists with Venn diagrams and interactome networks, not specifically for gene-regulatory networks; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "rna_analyzer",
@@ -4238,7 +4218,9 @@
     "pmid:12824342"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on RNA structural motifs and regulatory elements, not DNA regulatory genomics"
+   "_excluded_reason": "Focuses on RNA structural motifs and regulatory elements, not DNA regulatory genomics",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "bsdb",
@@ -4295,7 +4277,9 @@
     "pmid:20929872"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on protein mechanostability and stretching simulations, not regulatory genomics; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "Focuses on protein mechanostability and stretching simulations, not regulatory genomics; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "peak-calling"
   },
   {
    "id": "ReProMin",
@@ -4347,7 +4331,9 @@
     "doi:10.1101/733592"
    ],
    "_registries": {},
-   "_excluded_reason": "focuses on proteome reallocation and minimal regulatory interventions, not on regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "focuses on proteome reallocation and minimal regulatory interventions, not on regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "clarion",
@@ -4401,7 +4387,9 @@
     "pmid:36341591"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts mRNA subcellular localization, not regulatory genomics; admitted on EDAM 'Gene regulatory network prediction' alone"
+   "_excluded_reason": "Predicts mRNA subcellular localization, not regulatory genomics; admitted on EDAM 'Gene regulatory network prediction' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "gidetector",
@@ -4455,7 +4443,9 @@
     "pmid:21047376"
    ],
    "_registries": {},
-   "_excluded_reason": "Detects genomic islands in prokaryotic genomes, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone"
+   "_excluded_reason": "Detects genomic islands in prokaryotic genomes, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "AR-Pred",
@@ -4510,7 +4500,9 @@
     "pmid:31141211"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts protein active and allosteric binding sites, not regulatory genomics; admitted on EDAM 'DNA binding site prediction' alone"
+   "_excluded_reason": "Predicts protein active and allosteric binding sites, not regulatory genomics; admitted on EDAM 'DNA binding site prediction' alone",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "isma",
@@ -4561,68 +4553,9 @@
     "pmid:23620730"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool enumerates subgraph patterns in general networks, not specifically regulatory or genomic networks; admitted on EDAM 'Sequence motif discovery' alone"
-  },
-  {
-   "id": "ibm_pattern_discovery",
-   "name": "IBM Bioinformatics and Pattern Discovery Group",
-   "description": "Extensive server possessing a wide range of tools for pattern discovery in DNA and protein sequences as well as in text",
-   "categories": [
-    "motif-discovery"
-   ],
-   "tier": "core",
-   "homepage": "http://cbcsrv.watson.ibm.com/Tspd.html",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Web application"
-   ],
-   "topics": [
-    "Proteins",
-    "DNA",
-    "Gene and protein families",
-    "Protein sites, features and motifs"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 35,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "",
-   "publication": "pmid:12060689",
-   "publication_is_preprint": false,
-   "biotools_id": "ibm_pattern_discovery",
-   "biotools_url": "https://bio.tools/ibm_pattern_discovery",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Indel detection",
-    "Multiple sequence alignment",
-    "Protein sequence analysis",
-    "Sequence motif discovery",
-    "Service discovery"
-   ],
-   "_select_reason": "operation:Sequence motif discovery",
-   "_identifiers": [
-    "pmid:12060689",
-    "pmid:9520502",
-    "pmid:12824385",
-    "pmid:12202776",
-    "pmid:11056059",
-    "pmid:15215340",
-    "pmid:10786305"
-   ],
-   "_registries": {},
-   "_excluded_reason": "Tool is a general bioinformatics server for pattern discovery, alignment, and protein annotation, not specifically for regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone"
+   "_excluded_reason": "Tool enumerates subgraph patterns in general networks, not specifically regulatory or genomic networks; admitted on EDAM 'Sequence motif discovery' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "hot_scan",
@@ -4676,7 +4609,9 @@
     "pmid:24860160"
    ],
    "_registries": {},
-   "_excluded_reason": "Detects translocation breakpoint hotspots, not regulatory elements"
+   "_excluded_reason": "Detects translocation breakpoint hotspots, not regulatory elements",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "goegcn",
@@ -4732,7 +4667,9 @@
     "pmid:33178256"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on breast cancer subtype classification from RNA-Seq data using differential expression and coexpression networks, not on regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Focuses on breast cancer subtype classification from RNA-Seq data using differential expression and coexpression networks, not on regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "tcrconv",
@@ -4791,7 +4728,9 @@
     "pmid:36477794"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts T-cell receptor-epitope recognition, which is immunology, not regulatory genomics"
+   "_excluded_reason": "Predicts T-cell receptor-epitope recognition, which is immunology, not regulatory genomics",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "lasergene",
@@ -4854,7 +4793,9 @@
     "pmid:19699594"
    ],
    "_registries": {},
-   "_excluded_reason": "The tool is a general sequence analysis suite, not specifically for regulatory genomics; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "The tool is a general sequence analysis suite, not specifically for regulatory genomics; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "biotranslator",
@@ -4916,7 +4857,9 @@
     "pmid:26925206"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool performs differential expression and pathway enrichment analysis, not gene regulatory network analysis; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Tool performs differential expression and pathway enrichment analysis, not gene regulatory network analysis; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "virnatrap",
@@ -4972,7 +4915,9 @@
     "pmid:36774364"
    ],
    "_registries": {},
-   "_excluded_reason": "Identifies viral reads and assembles viral contigs, not regulatory genomics"
+   "_excluded_reason": "Identifies viral reads and assembles viral contigs, not regulatory genomics",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "paxtoolsr",
@@ -5030,7 +4975,9 @@
    "_registries": {
     "bioconductor": "http://bioconductor.org/packages/release/bioc/html/paxtoolsr.html"
    },
-   "_excluded_reason": "Tool is for pathway analysis and BioPAX data, not gene regulatory networks; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Tool is for pathway analysis and BioPAX data, not gene regulatory networks; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "expansin-engineering-db",
@@ -5085,7 +5032,9 @@
     "pmid:32862462"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on plant cell wall proteins and carbohydrate binding, not regulatory genomics"
+   "_excluded_reason": "Focuses on plant cell wall proteins and carbohydrate binding, not regulatory genomics",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "cgnaweb",
@@ -5140,7 +5089,9 @@
     "pmid:37356908"
    ],
    "_registries": {},
-   "_excluded_reason": "It models DNA shape and mechanics, not regulatory elements like promoters; admitted on EDAM 'Promoter prediction' alone"
+   "_excluded_reason": "It models DNA shape and mechanics, not regulatory elements like promoters; admitted on EDAM 'Promoter prediction' alone",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "ippd",
@@ -5194,7 +5145,9 @@
    "_registries": {
     "bioconductor": "http://bioconductor.org/packages/release/bioc/html/IPPD.html"
    },
-   "_excluded_reason": "Tool extracts isotopic peak patterns from mass spectra for proteomics, not regulatory genomics; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "Tool extracts isotopic peak patterns from mass spectra for proteomics, not regulatory genomics; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "peak-calling"
   },
   {
    "id": "rldock",
@@ -5251,7 +5204,9 @@
     "pmid:33549725"
    ],
    "_registries": {},
-   "_excluded_reason": "predicts RNA-small molecule binding, not regulatory genomics; admitted on EDAM 'Transcription factor binding site prediction' alone"
+   "_excluded_reason": "predicts RNA-small molecule binding, not regulatory genomics; admitted on EDAM 'Transcription factor binding site prediction' alone",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "nlrexpress",
@@ -5309,7 +5264,9 @@
     "pmid:36186050"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts protein motifs (CC, TIR, NBS, LRR) in plant NLR proteins, not regulatory genomics"
+   "_excluded_reason": "Predicts protein motifs (CC, TIR, NBS, LRR) in plant NLR proteins, not regulatory genomics",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "rg4-seeker",
@@ -5361,7 +5318,9 @@
     "doi:10.1101/2020.02.01.929851"
    ],
    "_registries": {},
-   "_excluded_reason": "rG4-seeker identifies RNA G-quadruplex structures, which are RNA secondary structures, not regulatory-genomics elements"
+   "_excluded_reason": "rG4-seeker identifies RNA G-quadruplex structures, which are RNA secondary structures, not regulatory-genomics elements",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "lise",
@@ -5416,7 +5375,9 @@
     "pmid:23609546"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts small molecule binding sites on proteins, not regulatory genomics; admitted on EDAM 'Transcription factor binding site prediction' alone"
+   "_excluded_reason": "Predicts small molecule binding sites on proteins, not regulatory genomics; admitted on EDAM 'Transcription factor binding site prediction' alone",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "deeprc",
@@ -5470,7 +5431,9 @@
     "doi:10.1101/2020.04.12.038158"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool classifies immune repertoires, not regulatory genomics"
+   "_excluded_reason": "Tool classifies immune repertoires, not regulatory genomics",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "peaks2utr",
@@ -5529,7 +5492,9 @@
    "_registries": {
     "pypi": "https://pypi.org/project/peaks2utr"
    },
-   "_excluded_reason": "Annotates 3' UTRs from sequencing reads, not regulatory elements or transcription factor binding; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "Annotates 3' UTRs from sequencing reads, not regulatory elements or transcription factor binding; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "NeSSie",
@@ -5582,7 +5547,9 @@
     "pmid:29522153"
    ],
    "_registries": {},
-   "_excluded_reason": "Identifies symmetrical DNA patterns for non-B DNA structures, not regulatory elements"
+   "_excluded_reason": "Identifies symmetrical DNA patterns for non-B DNA structures, not regulatory elements",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "mapanalyzer",
@@ -5633,7 +5600,9 @@
     "pmid:26568329"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool predicts microtubule-associated proteins, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone"
+   "_excluded_reason": "Tool predicts microtubule-associated proteins, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "usmpep",
@@ -5687,7 +5656,9 @@
     "pmid:32615972"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts MHC-peptide binding for immunotherapy, not transcription factor binding or any regulatory genomics task; admitted on EDAM 'Transcription factor binding site prediction' alone"
+   "_excluded_reason": "Predicts MHC-peptide binding for immunotherapy, not transcription factor binding or any regulatory genomics task; admitted on EDAM 'Transcription factor binding site prediction' alone",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "lircentral",
@@ -5743,7 +5714,9 @@
     "pmid:37530436"
    ],
    "_registries": {},
-   "_excluded_reason": "Database of LIR motifs binding Atg8 homologs, which are involved in autophagy (protein degradation), not regulatory genomics"
+   "_excluded_reason": "Database of LIR motifs binding Atg8 homologs, which are involved in autophagy (protein degradation), not regulatory genomics",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "Manhattan_Harvester",
@@ -5796,7 +5769,9 @@
     "pmid:30634901"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool detects peaks in GWAS Manhattan plots, not regulatory-genomics peaks like ChIP-seq or ATAC-seq; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "Tool detects peaks in GWAS Manhattan plots, not regulatory-genomics peaks like ChIP-seq or ATAC-seq; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "peak-calling"
   },
   {
    "id": "Cropper",
@@ -5848,7 +5823,9 @@
     "pmid:30634901"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool is for GWAS peak detection and Manhattan plot cropping, not for regulatory genomics peaks like ChIP-seq/ATAC-seq; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "Tool is for GWAS peak detection and Manhattan plot cropping, not for regulatory genomics peaks like ChIP-seq/ATAC-seq; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "peak-calling"
   },
   {
    "id": "biovnn",
@@ -5903,7 +5880,9 @@
     "pmid:34042953"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts cancer dependencies, not gene regulatory networks; admitted on EDAM 'Gene regulatory network prediction' alone"
+   "_excluded_reason": "Predicts cancer dependencies, not gene regulatory networks; admitted on EDAM 'Gene regulatory network prediction' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "auto-drrafter",
@@ -5959,7 +5938,9 @@
     "pmid:36227570"
    ],
    "_registries": {},
-   "_excluded_reason": "tool builds RNA models from cryo-EM data, not regulatory genomics; admitted on EDAM 'cis-regulatory element prediction' alone"
+   "_excluded_reason": "tool builds RNA models from cryo-EM data, not regulatory genomics; admitted on EDAM 'cis-regulatory element prediction' alone",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "topp",
@@ -6013,7 +5994,9 @@
     "pmid:35479398"
    ],
    "_registries": {},
-   "_excluded_reason": "It is a cancer prognosis platform integrating multi-omics and clinical data, not a tool for gene regulatory network analysis; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "It is a cancer prognosis platform integrating multi-omics and clinical data, not a tool for gene regulatory network analysis; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "scprisma",
@@ -6069,7 +6052,9 @@
     "pmid:36849830"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on general topological signal analysis in single-cell data, not specifically on gene-regulatory networks or other regulatory genomics topics; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Focuses on general topological signal analysis in single-cell data, not specifically on gene-regulatory networks or other regulatory genomics topics; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "mpvnn",
@@ -6124,7 +6109,9 @@
     "pmid:36124954"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts survival risk from gene expression and mutation data, not regulatory genomics; admitted on EDAM 'Gene regulatory network prediction' alone"
+   "_excluded_reason": "Predicts survival risk from gene expression and mutation data, not regulatory genomics; admitted on EDAM 'Gene regulatory network prediction' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "MotifAnalyzer-PDZ",
@@ -6180,7 +6167,9 @@
     "pmid:31599029"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on PDZ domain binding motifs and protein-peptide interactions, not regulatory genomics"
+   "_excluded_reason": "Focuses on PDZ domain binding motifs and protein-peptide interactions, not regulatory genomics",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "pocketannotate",
@@ -6234,7 +6223,9 @@
     "pmid:22618878"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool predicts ligand-binding sites in proteins, not regulatory genomics; admitted on EDAM 'Transcription factor binding site prediction' alone"
+   "_excluded_reason": "Tool predicts ligand-binding sites in proteins, not regulatory genomics; admitted on EDAM 'Transcription factor binding site prediction' alone",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "deepbound",
@@ -6287,7 +6278,9 @@
     "pmid:28881999"
    ],
    "_registries": {},
-   "_excluded_reason": "Identifies transcript boundaries for transcript assembly, not regulatory elements; admitted on EDAM 'Transcriptional regulatory element prediction' alone"
+   "_excluded_reason": "Identifies transcript boundaries for transcript assembly, not regulatory elements; admitted on EDAM 'Transcriptional regulatory element prediction' alone",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "juxtapose",
@@ -6343,7 +6336,66 @@
     "pmid:33726666"
    ],
    "_registries": {},
-   "_excluded_reason": "Compares gene co-expression networks, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Compares gene co-expression networks, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
+  },
+  {
+   "id": "nobai",
+   "name": "NOBAI",
+   "description": "Facilitates the search for the evolutionary history embedded in the structure of functional RNA molecules.",
+   "categories": [
+    "regulatory-elements"
+   ],
+   "tier": "core",
+   "homepage": "http://www.manet.uiuc.edu/nobai/nobai.php",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Web application"
+   ],
+   "topics": [
+    "Functional, regulatory and non-coding RNA",
+    "RNA",
+    "Molecular interactions, pathways and networks",
+    "Nucleic acid structure analysis",
+    "Physics"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 15,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "pmid:18448469",
+   "publication_is_preprint": false,
+   "biotools_id": "nobai",
+   "biotools_url": "https://bio.tools/nobai",
+   "last_update": "2024-11-25",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "RNA structure prediction",
+    "Single particle alignment and classification",
+    "Single particle analysis",
+    "Transcriptional regulatory element prediction"
+   ],
+   "_select_reason": "operation:Transcriptional regulatory element prediction",
+   "_identifiers": [
+    "pmid:18449469"
+   ],
+   "_registries": {},
+   "_excluded_reason": "Paper is about colloid physics, not regulatory genomics; admitted on EDAM 'Transcriptional regulatory element prediction' alone",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "COAC",
@@ -6398,7 +6450,9 @@
     "pmid:30779739"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool performs gene co-expression network analysis from scRNA-seq, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Tool performs gene co-expression network analysis from scRNA-seq, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "scanmot",
@@ -6451,7 +6505,9 @@
     "pmid:15980468"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool searches for protein sequence similarities using motifs, not regulatory genomics"
+   "_excluded_reason": "Tool searches for protein sequence similarities using motifs, not regulatory genomics",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "eltetrado",
@@ -6510,7 +6566,9 @@
     "pmid:32005130"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on quadruplex secondary structure topology in 3D structures, not on regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone"
+   "_excluded_reason": "Focuses on quadruplex secondary structure topology in 3D structures, not on regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "parseq",
@@ -6562,7 +6620,9 @@
     "pmid:24470570"
    ],
    "_registries": {},
-   "_excluded_reason": "Reconstructs microbial transcription landscapes from RNA-Seq read counts, which is transcriptome reconstruction and not regulatory genomics; admitted on EDAM 'Transcriptional regulatory element prediction' alone"
+   "_excluded_reason": "Reconstructs microbial transcription landscapes from RNA-Seq read counts, which is transcriptome reconstruction and not regulatory genomics; admitted on EDAM 'Transcriptional regulatory element prediction' alone",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "wto",
@@ -6618,7 +6678,9 @@
     "pmid:30691386"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool is for gene co-expression networks, not gene-regulatory networks; admitted on EDAM 'Gene regulatory network prediction' alone"
+   "_excluded_reason": "Tool is for gene co-expression networks, not gene-regulatory networks; admitted on EDAM 'Gene regulatory network prediction' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "LDmotif",
@@ -6673,7 +6735,9 @@
     "pmid:31584626"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts leucine-aspartic acid motifs in proteins, which are short linear interaction motifs (SLiMs) involved in protein-protein interactions, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone"
+   "_excluded_reason": "Predicts leucine-aspartic acid motifs in proteins, which are short linear interaction motifs (SLiMs) involved in protein-protein interactions, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "boxshade",
@@ -6732,7 +6796,9 @@
     "pmid:12824417"
    ],
    "_registries": {},
-   "_excluded_reason": "BoxShade creates printouts from multiple-aligned sequences, not regulatory-genomics analysis"
+   "_excluded_reason": "BoxShade creates printouts from multiple-aligned sequences, not regulatory-genomics analysis",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "trviz",
@@ -6787,7 +6853,9 @@
     "pmid:37168281"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool is for tandem repeat sequences, not regulatory genomics"
+   "_excluded_reason": "Tool is for tandem repeat sequences, not regulatory genomics",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "UPObase",
@@ -6841,7 +6909,9 @@
     "pmid:31820805"
    ],
    "_registries": {},
-   "_excluded_reason": "Database of fungal peroxygenase enzymes, not regulatory genomics"
+   "_excluded_reason": "Database of fungal peroxygenase enzymes, not regulatory genomics",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "msifinder",
@@ -6897,7 +6967,9 @@
     "pmid:33845765"
    ],
    "_registries": {},
-   "_excluded_reason": "Detects microsatellite instability status, not regulatory genomics; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "Detects microsatellite instability status, not regulatory genomics; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "peak-calling"
   },
   {
    "id": "celltics",
@@ -6954,7 +7026,9 @@
     "pmid:38061196"
    ],
    "_registries": {},
-   "_excluded_reason": "CellTICS identifies cell types from scRNA-seq data, not regulatory genomics; admitted on EDAM 'Gene regulatory network prediction' alone"
+   "_excluded_reason": "CellTICS identifies cell types from scRNA-seq data, not regulatory genomics; admitted on EDAM 'Gene regulatory network prediction' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "casilico",
@@ -7009,7 +7083,72 @@
     "pmid:36017348"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool designs CRISPR RNAs for genome editing, not regulatory genomics"
+   "_excluded_reason": "Tool designs CRISPR RNAs for genome editing, not regulatory genomics",
+   "featured": "",
+   "primary_category": "motif-scanning"
+  },
+  {
+   "id": "ibm_pattern_discovery",
+   "name": "IBM Bioinformatics and Pattern Discovery Group",
+   "description": "Extensive server possessing a wide range of tools for pattern discovery in DNA and protein sequences as well as in text",
+   "categories": [
+    "motif-discovery"
+   ],
+   "tier": "core",
+   "homepage": "http://cbcsrv.watson.ibm.com/Tspd.html",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Web application"
+   ],
+   "topics": [
+    "Proteins",
+    "DNA",
+    "Gene and protein families",
+    "Protein sites, features and motifs"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 12,
+   "citation_note": "",
+   "citations_total": 16,
+   "citations_papers": 2,
+   "year": "",
+   "publication": "pmid:15215340",
+   "publication_is_preprint": false,
+   "biotools_id": "ibm_pattern_discovery",
+   "biotools_url": "https://bio.tools/ibm_pattern_discovery",
+   "last_update": "2024-11-25",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Indel detection",
+    "Multiple sequence alignment",
+    "Protein sequence analysis",
+    "Sequence motif discovery",
+    "Service discovery"
+   ],
+   "_select_reason": "operation:Sequence motif discovery",
+   "_identifiers": [
+    "pmid:12060689",
+    "pmid:9520502",
+    "pmid:12824385",
+    "pmid:12202776",
+    "pmid:11056059",
+    "pmid:15215340",
+    "pmid:10786305"
+   ],
+   "_registries": {},
+   "_excluded_reason": "Tool is a general bioinformatics server for pattern discovery, alignment, and protein annotation, not specifically for regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "casowary",
@@ -7065,7 +7204,68 @@
     "pmid:35236300"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool predicts sgRNA efficacy for CRISPR-Cas13 transcript targeting, not regulatory genomics; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "Tool predicts sgRNA efficacy for CRISPR-Cas13 transcript targeting, not regulatory genomics; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "peak-calling"
+  },
+  {
+   "id": "metaboverse",
+   "name": "Metaboverse",
+   "description": "Automated exploration and contextualization of metabolic data",
+   "categories": [
+    "grn-inference"
+   ],
+   "tier": "core",
+   "homepage": "https://github.com/Metaboverse/",
+   "repo_url": "https://github.com/Metaboverse/metaboverse",
+   "repo_origin": "recorded",
+   "repo_stars": 42,
+   "repo_pushed": "2025-03-24",
+   "repo_archived": false,
+   "repo_language": "JavaScript",
+   "repo_license": "MIT",
+   "tool_type": [
+    "Command-line tool",
+    "Desktop application"
+   ],
+   "topics": [
+    "Endocrinology and metabolism",
+    "Molecular interactions, pathways and networks",
+    "Proteomics",
+    "Metabolomics",
+    "Small molecules"
+   ],
+   "languages": [
+    "JavaScript"
+   ],
+   "license": "GPL-3.0",
+   "maturity": "",
+   "cost": "",
+   "citations": 12,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1038/s41556-023-01117-9",
+   "publication_is_preprint": false,
+   "biotools_id": "metaboverse",
+   "biotools_url": "https://bio.tools/metaboverse",
+   "last_update": "2021-02-22",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Gene regulatory network analysis",
+    "Metabolic network modelling",
+    "Network visualisation"
+   ],
+   "_select_reason": "operation:Gene regulatory network analysis",
+   "_identifiers": [
+    "doi:10.1101/2020.06.25.171850"
+   ],
+   "_registries": {},
+   "_excluded_reason": "Focuses on metabolic networks and pathways, not gene regulatory networks; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "prismexp",
@@ -7124,7 +7324,9 @@
     "pmid:36874981"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts general gene annotations from co-expression, not regulatory genomics; admitted on EDAM 'Gene regulatory network prediction' alone"
+   "_excluded_reason": "Predicts general gene annotations from co-expression, not regulatory genomics; admitted on EDAM 'Gene regulatory network prediction' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "lap",
@@ -7179,7 +7381,9 @@
     "pmid:38442111"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on antibody chemical liability motifs, not regulatory genomics"
+   "_excluded_reason": "Focuses on antibody chemical liability motifs, not regulatory genomics",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "papaml",
@@ -7235,7 +7439,9 @@
     "pmid:35741852"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool analyzes selection pressure on protein-coding sequences, not regulatory genomics"
+   "_excluded_reason": "Tool analyzes selection pressure on protein-coding sequences, not regulatory genomics",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "clipper-fdr",
@@ -7289,7 +7495,9 @@
     "doi:10.1101/2020.11.19.390773"
    ],
    "_registries": {},
-   "_excluded_reason": "General FDR control tool not specific to regulatory genomics; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "General FDR control tool not specific to regulatory genomics; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "peak-calling"
   },
   {
    "id": "alzcode",
@@ -7344,7 +7552,9 @@
     "pmid:35040932"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on Alzheimer's disease gene association analysis, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Focuses on Alzheimer's disease gene association analysis, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "domino_web-server",
@@ -7395,7 +7605,9 @@
     "pmid:35139202"
    ],
    "_registries": {},
-   "_excluded_reason": "The tool identifies active modules from gene networks and activity profiles, which is a general network analysis method, not specifically for gene-regulatory networks or regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "The tool identifies active modules from gene networks and activity profiles, which is a general network analysis method, not specifically for gene-regulatory networks or regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "SCMVTDb",
@@ -7447,7 +7659,9 @@
     "pmid:31770586"
    ],
    "_registries": {},
-   "_excluded_reason": "The tool is a transcriptome study of plant-virus interaction, not a regulatory-genomics tool; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "The tool is a transcriptome study of plant-virus interaction, not a regulatory-genomics tool; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "pdgpcs",
@@ -7503,7 +7717,9 @@
     "pmid:35974311"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on cancer driver gene prediction via mutation and pathway integration, not gene regulatory network prediction; admitted on EDAM 'Gene regulatory network prediction' alone"
+   "_excluded_reason": "Focuses on cancer driver gene prediction via mutation and pathway integration, not gene regulatory network prediction; admitted on EDAM 'Gene regulatory network prediction' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "gcup",
@@ -7555,7 +7771,9 @@
     "pmid:25123901"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts HIV-1 coreceptor usage, not regulatory genomics; admitted on EDAM 'Transcriptional regulatory element prediction' alone"
+   "_excluded_reason": "Predicts HIV-1 coreceptor usage, not regulatory genomics; admitted on EDAM 'Transcriptional regulatory element prediction' alone",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "msisensor-pro",
@@ -7610,7 +7828,9 @@
     "doi:10.1101/2020.01.08.899633"
    ],
    "_registries": {},
-   "_excluded_reason": "Detects microsatellite instability, not regulatory genomics; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "Detects microsatellite instability, not regulatory genomics; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "peak-calling"
   },
   {
    "id": "vivarium-collective",
@@ -7664,7 +7884,9 @@
     "doi:10.1101/2021.04.27.441657"
    ],
    "_registries": {},
-   "_excluded_reason": "General multiscale simulation framework, not specific to regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "General multiscale simulation framework, not specific to regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "tca",
@@ -7718,7 +7940,9 @@
     "pmid:33367491"
    ],
    "_registries": {},
-   "_excluded_reason": "TCA integrates MRI and transcriptome data to identify age-specific gene signatures, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "TCA integrates MRI and transcriptome data to identify age-specific gene signatures, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "visgremlin",
@@ -7770,7 +7994,9 @@
     "pmid:32164574"
    ],
    "_registries": {},
-   "_excluded_reason": "Detects conserved motifs in protein-ligand interfaces, which is protein-ligand binding site prediction, not regulatory genomics"
+   "_excluded_reason": "Detects conserved motifs in protein-ligand interfaces, which is protein-ligand binding site prediction, not regulatory genomics",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "asap-sml",
@@ -7826,7 +8052,9 @@
     "pmid:32339164"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on antibody sequence features and immunoproteins, not regulatory genomics"
+   "_excluded_reason": "Focuses on antibody sequence features and immunoproteins, not regulatory genomics",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "transynergy",
@@ -7879,7 +8107,9 @@
     "doi:10.1101/2020.07.08.193904"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts synergistic drug combinations, not gene regulatory networks; admitted on EDAM 'Gene regulatory network prediction' alone"
+   "_excluded_reason": "Predicts synergistic drug combinations, not gene regulatory networks; admitted on EDAM 'Gene regulatory network prediction' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "scan_db",
@@ -7936,7 +8166,9 @@
     "pmid:37930842"
    ],
    "_registries": {},
-   "_excluded_reason": "SCAN is a database for single-cell and spatial transcriptomics of the nervous system, not a regulatory-genomics tool"
+   "_excluded_reason": "SCAN is a database for single-cell and spatial transcriptomics of the nervous system, not a regulatory-genomics tool",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "ssblazer",
@@ -7988,7 +8220,9 @@
     "pmid:38347618"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts single-strand break sites in DNA, which is DNA damage repair, not regulatory genomics; admitted on EDAM 'Transcriptional regulatory element prediction' alone"
+   "_excluded_reason": "Predicts single-strand break sites in DNA, which is DNA damage repair, not regulatory genomics; admitted on EDAM 'Transcriptional regulatory element prediction' alone",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "biomaster",
@@ -8043,7 +8277,9 @@
     "pmid:33552037"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool is a synthetic biology database for BioBrick parts, not a regulatory genomics tool; admitted on EDAM 'Promoter prediction' alone"
+   "_excluded_reason": "Tool is a synthetic biology database for BioBrick parts, not a regulatory genomics tool; admitted on EDAM 'Promoter prediction' alone",
+   "featured": "",
+   "primary_category": "motif-databases"
   },
   {
    "id": "ddapred",
@@ -8098,7 +8334,9 @@
     "pmid:32062701"
    ],
    "_registries": {},
-   "_excluded_reason": "predicts drug repositioning, not regulatory genomics; admitted on EDAM 'Promoter prediction' alone"
+   "_excluded_reason": "predicts drug repositioning, not regulatory genomics; admitted on EDAM 'Promoter prediction' alone",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "cellrouter",
@@ -8155,7 +8393,9 @@
     "pmid:31062311"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on single-cell trajectory inference for stem cell fate, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Focuses on single-cell trajectory inference for stem cell fate, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "osconet",
@@ -8213,7 +8453,9 @@
     "pmid:32838730"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on oscillatory gene networks and single-cell RNA-seq, not regulatory genomics; admitted on EDAM 'Gene regulatory network prediction' alone"
+   "_excluded_reason": "Focuses on oscillatory gene networks and single-cell RNA-seq, not regulatory genomics; admitted on EDAM 'Gene regulatory network prediction' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "panoromics",
@@ -8263,7 +8505,9 @@
     "pmid:28453651"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on cancer genomics and clinical interpretation, not gene regulatory network analysis; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Focuses on cancer genomics and clinical interpretation, not gene regulatory network analysis; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "autophagynet",
@@ -8321,64 +8565,9 @@
     "pmid:37589496"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on autophagy protein interactions, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone"
-  },
-  {
-   "id": "metaboverse",
-   "name": "Metaboverse",
-   "description": "Automated exploration and contextualization of metabolic data",
-   "categories": [
-    "grn-inference"
-   ],
-   "tier": "core",
-   "homepage": "https://github.com/Metaboverse/",
-   "repo_url": "https://github.com/Metaboverse/metaboverse",
-   "repo_origin": "recorded",
-   "repo_stars": 42,
-   "repo_pushed": "2025-03-24",
-   "repo_archived": false,
-   "repo_language": "JavaScript",
-   "repo_license": "MIT",
-   "tool_type": [
-    "Command-line tool",
-    "Desktop application"
-   ],
-   "topics": [
-    "Endocrinology and metabolism",
-    "Molecular interactions, pathways and networks",
-    "Proteomics",
-    "Metabolomics",
-    "Small molecules"
-   ],
-   "languages": [
-    "JavaScript"
-   ],
-   "license": "GPL-3.0",
-   "maturity": "",
-   "cost": "",
-   "citations": 6,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "",
-   "publication": "doi:10.1101/2020.06.25.171850",
-   "publication_is_preprint": true,
-   "biotools_id": "metaboverse",
-   "biotools_url": "https://bio.tools/metaboverse",
-   "last_update": "2021-02-22",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Gene regulatory network analysis",
-    "Metabolic network modelling",
-    "Network visualisation"
-   ],
-   "_select_reason": "operation:Gene regulatory network analysis",
-   "_identifiers": [
-    "doi:10.1101/2020.06.25.171850"
-   ],
-   "_registries": {},
-   "_excluded_reason": "Focuses on metabolic networks and pathways, not gene regulatory networks; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Focuses on autophagy protein interactions, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "raptgen",
@@ -8436,7 +8625,9 @@
     "doi:10.1101/2021.02.17.431338"
    ],
    "_registries": {},
-   "_excluded_reason": "Generates aptamer sequences for SELEX, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone"
+   "_excluded_reason": "Generates aptamer sequences for SELEX, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "kimi",
@@ -8493,7 +8684,9 @@
     "pmid:33119059"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool identifies k-mer motifs for classifying metagenomic sequences, not regulatory motifs like transcription factor binding sites; admitted on EDAM 'Sequence motif discovery' alone"
+   "_excluded_reason": "Tool identifies k-mer motifs for classifying metagenomic sequences, not regulatory motifs like transcription factor binding sites; admitted on EDAM 'Sequence motif discovery' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "4accpred",
@@ -8552,7 +8745,9 @@
     "pmid:36381577"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts N4-acetyldeoxycytosine (4acC) DNA modification, which is an RNA/DNA modification, not a regulatory-genomics tool in scope; admitted on EDAM 'Sequence motif discovery' alone"
+   "_excluded_reason": "Predicts N4-acetyldeoxycytosine (4acC) DNA modification, which is an RNA/DNA modification, not a regulatory-genomics tool in scope; admitted on EDAM 'Sequence motif discovery' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "scour",
@@ -8609,7 +8804,9 @@
     "pmid:34238207"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts metabolite-dependent regulatory interactions in metabolic networks, not gene regulatory networks; admitted on EDAM 'Gene regulatory network prediction' alone"
+   "_excluded_reason": "Predicts metabolite-dependent regulatory interactions in metabolic networks, not gene regulatory networks; admitted on EDAM 'Gene regulatory network prediction' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "ichromo",
@@ -8666,7 +8863,9 @@
     "pmid:34440781"
    ],
    "_registries": {},
-   "_excluded_reason": "Analyzes chromosome movements from live imaging, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone"
+   "_excluded_reason": "Analyzes chromosome movements from live imaging, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "deephlapred",
@@ -8720,7 +8919,9 @@
     "pmid:37993812"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts HLA peptide binders, not regulatory genomics; admitted on EDAM 'Promoter prediction' alone"
+   "_excluded_reason": "Predicts HLA peptide binders, not regulatory genomics; admitted on EDAM 'Promoter prediction' alone",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "metaron",
@@ -8778,7 +8979,9 @@
     "pmid:33468056"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts operons, not regulatory elements; admitted on EDAM 'Promoter prediction' alone"
+   "_excluded_reason": "Predicts operons, not regulatory elements; admitted on EDAM 'Promoter prediction' alone",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "pbsword",
@@ -8834,7 +9037,9 @@
     "pmid:22689645"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool searches for geometrically similar protein-protein binding sites, which is protein structure and docking, not regulatory genomics; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "Tool searches for geometrically similar protein-protein binding sites, which is protein structure and docking, not regulatory genomics; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "multipsq",
@@ -8887,7 +9092,9 @@
     "pmid:23555882"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool is for SNP-based pathogen typing via pyrosequencing, not for regulatory genomics; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "Tool is for SNP-based pathogen typing via pyrosequencing, not for regulatory genomics; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "peak-calling"
   },
   {
    "id": "cpdseqer",
@@ -8947,7 +9154,9 @@
     "pmid:33731963"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool is for cyclobutane pyrimidine dimer sequencing data, not regulatory genomics; admitted on EDAM 'Nucleosome position prediction' alone"
+   "_excluded_reason": "Tool is for cyclobutane pyrimidine dimer sequencing data, not regulatory genomics; admitted on EDAM 'Nucleosome position prediction' alone",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "deepnd",
@@ -9003,7 +9212,9 @@
     "doi:10.1101/2020.06.13.150201"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool prioritizes gene risk for neurodevelopmental disorders using coexpression networks, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Tool prioritizes gene risk for neurodevelopmental disorders using coexpression networks, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "ppnet",
@@ -9060,7 +9271,9 @@
     "pmid:36602356"
    ],
    "_registries": {},
-   "_excluded_reason": "focuses on prokaryotic functional association networks and phylogenetic profiling, not eukaryotic gene regulatory networks; admitted on EDAM 'Gene regulatory network prediction' alone"
+   "_excluded_reason": "focuses on prokaryotic functional association networks and phylogenetic profiling, not eukaryotic gene regulatory networks; admitted on EDAM 'Gene regulatory network prediction' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "evoprinter",
@@ -9112,7 +9325,9 @@
     "pmid:28622346"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool discovers conserved DNA sequences in viral genomes for evolutionary analysis, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone"
+   "_excluded_reason": "Tool discovers conserved DNA sequences in viral genomes for evolutionary analysis, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "sbbadger",
@@ -9168,7 +9383,9 @@
     "pmid:36111865"
    ],
    "_registries": {},
-   "_excluded_reason": "Generates synthetic biochemical reaction networks for benchmarking, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Generates synthetic biochemical reaction networks for benchmarking, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "tn-core",
@@ -9224,7 +9441,9 @@
     "pmid:33180303"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on metabolic network reconstruction from Tn-seq and RNA-seq, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Focuses on metabolic network reconstruction from Tn-seq and RNA-seq, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "maga",
@@ -9279,7 +9498,9 @@
     "pmid:32425492"
    ],
    "_registries": {},
-   "_excluded_reason": "Detects differentially conserved positions in multiple sequence alignments, which is a phylogenetic/comparative genomics task, not regulatory genomics"
+   "_excluded_reason": "Detects differentially conserved positions in multiple sequence alignments, which is a phylogenetic/comparative genomics task, not regulatory genomics",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "metbp",
@@ -9335,7 +9556,9 @@
     "pmid:35695777"
    ],
    "_registries": {},
-   "_excluded_reason": "Detects metal ions binding to RNA base pairs, which is RNA structure analysis, not regulatory genomics; admitted on EDAM 'DNA binding site prediction' alone"
+   "_excluded_reason": "Detects metal ions binding to RNA base pairs, which is RNA structure analysis, not regulatory genomics; admitted on EDAM 'DNA binding site prediction' alone",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "itihi",
@@ -9384,7 +9607,9 @@
     "pmid:39713663"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool is for general spectroscopic peak detection (NMR, Raman, IR, XRD, UV-vis), not for regulatory genomics; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "Tool is for general spectroscopic peak detection (NMR, Raman, IR, XRD, UV-vis), not for regulatory genomics; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "peak-calling"
   },
   {
    "id": "pathext",
@@ -9440,7 +9665,9 @@
     "doi:10.1101/2020.01.21.913418"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on general path-based mining of omics-integrated networks, not specific to regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Focuses on general path-based mining of omics-integrated networks, not specific to regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "aaakb",
@@ -9496,7 +9723,9 @@
     "pmid:38100461"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on abdominal aortic aneurysm disease genes and SNPs, not regulatory genomics; admitted on EDAM 'Gene regulatory network prediction' alone"
+   "_excluded_reason": "Focuses on abdominal aortic aneurysm disease genes and SNPs, not regulatory genomics; admitted on EDAM 'Gene regulatory network prediction' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "3d-spagnn-e",
@@ -9548,7 +9777,9 @@
     "pmid:40084126"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on subcellular gene proximity and cell-cell communication motifs from spatial transcriptomics, not regulatory genomics"
+   "_excluded_reason": "Focuses on subcellular gene proximity and cell-cell communication motifs from spatial transcriptomics, not regulatory genomics",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "vernal",
@@ -9603,7 +9834,9 @@
     "pmid:34791045"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool mines RNA 3D structural motifs, not regulatory genomics elements"
+   "_excluded_reason": "Tool mines RNA 3D structural motifs, not regulatory genomics elements",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "perfumes",
@@ -9658,7 +9891,9 @@
     "pmid:38291894"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on RNA 3D motifs and secondary structure, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone"
+   "_excluded_reason": "Focuses on RNA 3D motifs and secondary structure, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "nglyalign",
@@ -9713,7 +9948,9 @@
     "pmid:33557755"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool aligns HIV envelope sequences using glycosylation site constraints, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone"
+   "_excluded_reason": "Tool aligns HIV envelope sequences using glycosylation site constraints, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "crisprware",
@@ -9765,7 +10002,9 @@
     "pmid:40597657"
    ],
    "_registries": {},
-   "_excluded_reason": "CRISPRware designs gRNA libraries for CRISPR editing, not for regulatory genomics; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "CRISPRware designs gRNA libraries for CRISPR editing, not for regulatory genomics; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "peak-calling"
   },
   {
    "id": "netactivity",
@@ -9824,7 +10063,9 @@
     "bioconductor": "http://www.bioconductor.org/packages/NetActivity",
     "docker": "https://hub.docker.com/r/yocra3/netactivity_analysis"
    },
-   "_excluded_reason": "It computes gene set activity scores from bulk RNA-seq and microarray data, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "It computes gene set activity scores from bulk RNA-seq and microarray data, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "bimm_sc",
@@ -9881,7 +10122,9 @@
     "pmid:35998480"
    ],
    "_registries": {},
-   "_excluded_reason": "Focuses on scRNA-seq and proteomics for hub gene discovery, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Focuses on scRNA-seq and proteomics for hub gene discovery, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "necare",
@@ -9937,7 +10180,9 @@
     "doi:10.1101/2020.07.01.181776"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts protein-protein interactions, not gene regulatory networks; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Predicts protein-protein interactions, not gene regulatory networks; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "readretro_web",
@@ -9989,7 +10234,9 @@
     "pmid:40466944"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool predicts retrosynthesis pathways for plant natural products, not gene regulatory networks; admitted on EDAM 'Gene regulatory network prediction' alone"
+   "_excluded_reason": "Tool predicts retrosynthesis pathways for plant natural products, not gene regulatory networks; admitted on EDAM 'Gene regulatory network prediction' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "tetrex",
@@ -10040,7 +10287,9 @@
     "pmid:40248489"
    ],
    "_registries": {},
-   "_excluded_reason": "It is a general-purpose sequence motif search tool, not specific to regulatory genomics"
+   "_excluded_reason": "It is a general-purpose sequence motif search tool, not specific to regulatory genomics",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "getintrons",
@@ -10089,7 +10338,9 @@
     "doi:10.7490/f1000research.1114334.1"
    ],
    "_registries": {},
-   "_excluded_reason": "Extracts introns from transcripts, not regulatory genomics"
+   "_excluded_reason": "Extracts introns from transcripts, not regulatory genomics",
+   "featured": "",
+   "primary_category": "motif-scanning"
   },
   {
    "id": "hsmotifdiscover",
@@ -10147,7 +10398,9 @@
     "pmid:35771633"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool discovers motifs in glycan sequences, not regulatory genomics sequences; admitted on EDAM 'Sequence motif discovery' alone"
+   "_excluded_reason": "Tool discovers motifs in glycan sequences, not regulatory genomics sequences; admitted on EDAM 'Sequence motif discovery' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "promintools",
@@ -10202,7 +10455,9 @@
     "doi:10.1101/2020.03.05.978718"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool analyzes protein sequences for biomineralization, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone"
+   "_excluded_reason": "Tool analyzes protein sequences for biomineralization, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "sequence_in_sequence_finder",
@@ -10254,7 +10509,9 @@
     "doi:10.5281/zenodo.5510252"
    ],
    "_registries": {},
-   "_excluded_reason": "It finds nucleic subsequences, not regulatory motifs; admitted on EDAM 'Sequence motif comparison' alone"
+   "_excluded_reason": "It finds nucleic subsequences, not regulatory motifs; admitted on EDAM 'Sequence motif comparison' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "ting",
@@ -10307,7 +10564,9 @@
     "doi:10.1101/2020.05.04.069914"
    ],
    "_registries": {},
-   "_excluded_reason": "Clusters T cell receptor sequences by antigen-specificity, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone"
+   "_excluded_reason": "Clusters T cell receptor sequences by antigen-specificity, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "ctk",
@@ -10360,7 +10619,9 @@
    "_select_reason": "operation:Sequence motif discovery",
    "_identifiers": [],
    "_registries": {},
-   "_excluded_reason": "Tool discovers structural variations, not regulatory elements; admitted on EDAM 'Sequence motif discovery' alone"
+   "_excluded_reason": "Tool discovers structural variations, not regulatory elements; admitted on EDAM 'Sequence motif discovery' alone",
+   "featured": "",
+   "primary_category": "motif-discovery"
   },
   {
    "id": "varianttools",
@@ -10416,7 +10677,9 @@
    "_registries": {
     "bioconductor": "http://bioconductor.org/packages/release/bioc/html/VariantTools.html"
    },
-   "_excluded_reason": "Tool is for genomic variant calling, not regulatory genomics; admitted on EDAM 'Sequence motif comparison' alone"
+   "_excluded_reason": "Tool is for genomic variant calling, not regulatory genomics; admitted on EDAM 'Sequence motif comparison' alone",
+   "featured": "",
+   "primary_category": "motif-comparison"
   },
   {
    "id": "glassgo",
@@ -10468,7 +10731,9 @@
    "_select_reason": "operation:Transcriptional regulatory element prediction",
    "_identifiers": [],
    "_registries": {},
-   "_excluded_reason": "Finds sRNA homologs, not regulatory elements; admitted on EDAM 'Transcriptional regulatory element prediction' alone"
+   "_excluded_reason": "Finds sRNA homologs, not regulatory elements; admitted on EDAM 'Transcriptional regulatory element prediction' alone",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "MetaGxBreast",
@@ -10522,7 +10787,9 @@
    "_registries": {
     "bioconductor": "https://bioconductor.org/packages/release/data/experiment/html/MetaGxBreast.html"
    },
-   "_excluded_reason": "Provides breast cancer transcriptomic datasets for differential expression and gene-set enrichment, not regulatory genomics; admitted on EDAM 'cis-regulatory element prediction' alone"
+   "_excluded_reason": "Provides breast cancer transcriptomic datasets for differential expression and gene-set enrichment, not regulatory genomics; admitted on EDAM 'cis-regulatory element prediction' alone",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "rdb2c2",
@@ -10578,7 +10845,9 @@
     "pmid:32245403"
    ],
    "_registries": {},
-   "_excluded_reason": "Predicts residue-residue pairing in beta strands for protein structure, not regulatory genomics; admitted on EDAM 'Promoter prediction' alone"
+   "_excluded_reason": "Predicts residue-residue pairing in beta strands for protein structure, not regulatory genomics; admitted on EDAM 'Promoter prediction' alone",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
   },
   {
    "id": "cardiopy",
@@ -10633,7 +10902,9 @@
     "doi:10.1101/2020.10.06.328856"
    ],
    "_registries": {},
-   "_excluded_reason": "Detects R-peaks in EKG for heart rate variability, not regulatory genomics; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "Detects R-peaks in EKG for heart rate variability, not regulatory genomics; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "peak-calling"
   },
   {
    "id": "bddb",
@@ -10689,7 +10960,9 @@
     "doi:10.1101/2020.07.20.211391"
    ],
    "_registries": {},
-   "_excluded_reason": "Database of birth defect multi-omics data, not regulatory genomics; admitted on EDAM 'Peak calling' alone"
+   "_excluded_reason": "Database of birth defect multi-omics data, not regulatory genomics; admitted on EDAM 'Peak calling' alone",
+   "featured": "",
+   "primary_category": "peak-calling"
   },
   {
    "id": "funpart",
@@ -10741,7 +11014,9 @@
     "pmid:34404761"
    ],
    "_registries": {},
-   "_excluded_reason": "Tool focuses on single-cell functional states and immune response cataloging, not gene regulatory network analysis or regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Tool focuses on single-cell functional states and immune response cataloging, not gene regulatory network analysis or regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "ectracker",
@@ -10797,7 +11072,9 @@
     "pmid:34184038"
    ],
    "_registries": {},
-   "_excluded_reason": "Detects ectopic expression from scRNA-seq data, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone"
+   "_excluded_reason": "Detects ectopic expression from scRNA-seq data, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "myprosle",
@@ -10850,7 +11127,9 @@
    "_select_reason": "operation:Gene regulatory network prediction",
    "_identifiers": [],
    "_registries": {},
-   "_excluded_reason": "Focuses on gene modules and clinical outcomes in SLE, not on regulatory genomics; admitted on EDAM 'Gene regulatory network prediction' alone"
+   "_excluded_reason": "Focuses on gene modules and clinical outcomes in SLE, not on regulatory genomics; admitted on EDAM 'Gene regulatory network prediction' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "genetrank",
@@ -10904,7 +11183,9 @@
     "doi:10.1101/2021.02.19.431974"
    ],
    "_registries": {},
-   "_excluded_reason": "Prioritizes genes for drug pharmacodynamics via protein interaction networks, not regulatory genomics; admitted on EDAM 'Gene regulatory network prediction' alone"
+   "_excluded_reason": "Prioritizes genes for drug pharmacodynamics via protein interaction networks, not regulatory genomics; admitted on EDAM 'Gene regulatory network prediction' alone",
+   "featured": "",
+   "primary_category": "grn-inference"
   },
   {
    "id": "patmatdb",
@@ -10955,7 +11236,9 @@
     "doi:10.1017/CBO9781139151405"
    ],
    "_registries": {},
-   "_excluded_reason": "Searches PROTEIN sequences with a motif; not DNA regulatory analysis"
+   "_excluded_reason": "Searches PROTEIN sequences with a motif; not DNA regulatory analysis",
+   "featured": "",
+   "primary_category": "uncategorised"
   }
  ]
 }

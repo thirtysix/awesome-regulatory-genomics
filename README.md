@@ -1,10 +1,10 @@
 # Awesome Regulatory Genomics
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Tools](https://img.shields.io/badge/tools-1761-blue)](https://thirtysix.github.io/awesome-regulatory-genomics/) [![License: CC BY 4.0](https://img.shields.io/badge/data-CC--BY--4.0-lightgrey)](LICENSE-DATA) [![Updated](https://img.shields.io/badge/updated-2026--07--31-brightgreen)](#)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Tools](https://img.shields.io/badge/tools-1763-blue)](https://thirtysix.github.io/awesome-regulatory-genomics/) [![License: CC BY 4.0](https://img.shields.io/badge/data-CC--BY--4.0-lightgrey)](LICENSE-DATA) [![Updated](https://img.shields.io/badge/updated-2026--07--31-brightgreen)](#)
 
 A catalog of tools, databases and methods for **transcription-factor binding, sequence motifs, regulatory elements, chromatin and gene-regulatory networks**.
 
-**[Browse and search all 1761 tools →](https://thirtysix.github.io/awesome-regulatory-genomics/)**. Filter by category, tool type, language, repository activity, and per column by name, description, links, package availability, stars, citations and year. The panel above the table charts publication year, repository activity, citations and stars **for whatever is currently filtered**, so "when were the peak callers written, and are they still maintained" is one click rather than a download.
+**[Browse and search all 1763 tools →](https://thirtysix.github.io/awesome-regulatory-genomics/)**. Filter by category, tool type, language, repository activity, and per column by name, description, links, package availability, stars, citations and year. The panel above the table charts publication year, repository activity, citations and stars **for whatever is currently filtered**, so "when were the peak callers written, and are they still maintained" is one click rather than a download.
 
 This list is *generated and then curated*. A reproducible pipeline harvests [bio.tools](https://bio.tools), resolves source repositories, and pulls citation counts and repository activity; a hand-written overlay adds tools bio.tools does not index and promotes the entries below. Everything is rebuildable with `make all`; see [How this list is built](#how-this-list-is-built).
 
@@ -14,14 +14,14 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - [Motif scanning & enrichment](#motif-scanning--enrichment), 169 tools
 - [Motif comparison & visualisation](#motif-comparison--visualisation), 26 tools
 - [Motif & TF databases](#motif--tf-databases), 105 tools
-- [TFBS prediction](#tfbs-prediction), 607 tools
-- [Promoter & enhancer prediction](#promoter--enhancer-prediction), 452 tools
+- [TFBS prediction](#tfbs-prediction), 608 tools
+- [Promoter & enhancer prediction](#promoter--enhancer-prediction), 453 tools
 - [Reporter assays](#reporter-assays), 4 tools
 - [Footprinting](#footprinting), 39 tools
 - [Peak calling](#peak-calling), 487 tools
 - [Peak annotation & differential binding](#peak-annotation--differential-binding), 87 tools
 - [ChIP/ATAC data resources](#chipatac-data-resources), 109 tools
-- [Gene regulatory networks](#gene-regulatory-networks), 396 tools
+- [Gene regulatory networks](#gene-regulatory-networks), 397 tools
 - [Regulatory variant effect](#regulatory-variant-effect), 106 tools
 - [Molecular QTL](#molecular-qtl), 19 tools
 - [Nucleosome & chromatin state](#nucleosome--chromatin-state), 345 tools
@@ -121,7 +121,7 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[TFBSFootprinter](https://github.com/thirtysix/TFBS_footprinting3)**: Multi-evidence TFBS scoring combining conservation, CAGE, eQTL and chromatin data
   <sub>[code](https://github.com/thirtysix/TFBS_footprinting3) · [paper](https://pubmed.ncbi.nlm.nih.gov/40646689/)</sub>
 
-<sub>[+ 597 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=tfbs-prediction)</sub>
+<sub>[+ 598 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=tfbs-prediction)</sub>
 
 ## Promoter & enhancer prediction
 
@@ -136,7 +136,7 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[RSAT suite](http://rsat.eu)**: Long-running suite covering matrix scanning, comparison and enrichment
   <sub>[bio.tools](https://bio.tools/rsat) · [paper](https://pubmed.ncbi.nlm.nih.gov/10641039/) · `180 cites`</sub>
 
-<sub>[+ 448 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=regulatory-elements)</sub>
+<sub>[+ 449 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=regulatory-elements)</sub>
 
 ## Reporter assays
 
@@ -200,7 +200,7 @@ This list is *generated and then curated*. A reproducible pipeline harvests [bio
 - **[SCENIC](http://scenic.aertslab.org)**: Single-cell regulatory network inference; regulons rather than raw correlations
   <sub>[code](https://github.com/aertslab/SCENIC) · [bio.tools](https://bio.tools/scenic) · [paper](https://pubmed.ncbi.nlm.nih.gov/28991892/) · `491 stars`</sub>
 
-<sub>[+ 394 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=grn-inference)</sub>
+<sub>[+ 395 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=grn-inference)</sub>
 
 ## Regulatory variant effect
 
@@ -304,14 +304,14 @@ Two design decisions are worth stating, because they are where most tool tables 
 
 ## Coverage and known gaps
 
-- **1761 tools**: 1632 harvested from bio.tools, 129 added by hand because bio.tools does not index them.
-- **886 (50%) have a resolvable source repository.** bio.tools rarely records one directly, so repositories are also recovered from Bioconductor, CRAN and PyPI metadata, from bioconda recipes and from links on the tool's own homepage. Every candidate is validated against the tool's description before it is used: matching on name alone resolves MEME to a meme generator and MEDUSA to a genome scaffolder that merely shares the name. Near-misses are listed in [`docs/repo-review.md`](docs/repo-review.md) rather than applied. Publication links get the same treatment in [`docs/link-check.md`](docs/link-check.md), which records every preprint upgraded to its published version and every DOI that does not resolve.
+- **1763 tools**: 1634 harvested from bio.tools, 129 added by hand because bio.tools does not index them.
+- **887 (50%) have a resolvable source repository.** bio.tools rarely records one directly, so repositories are also recovered from Bioconductor, CRAN and PyPI metadata, from bioconda recipes and from links on the tool's own homepage. Every candidate is validated against the tool's description before it is used: matching on name alone resolves MEME to a meme generator and MEDUSA to a genome scaffolder that merely shares the name. Near-misses are listed in [`docs/repo-review.md`](docs/repo-review.md) rather than applied. Publication links get the same treatment in [`docs/link-check.md`](docs/link-check.md), which records every preprint upgraded to its published version and every DOI that does not resolve.
 
-**If you maintain a tool listed here and its link is wrong, please say so.** Of the 886 links shown, 811 are recorded upstream, 31 are hand-verified and 44 are *inferred* from a homepage or a GitHub search. Inferred links are marked with a dotted underline on the [catalog site](https://thirtysix.github.io/awesome-regulatory-genomics/) and carry a one-click report button; there are [issue templates](.github/ISSUE_TEMPLATE) for a wrong repository and for a wrong category, description or scope decision. Correcting the entry at [bio.tools](https://bio.tools) instead fixes it here on the next refresh, and for every other consumer of that registry.
-- **1148 (65%) have a website of their own**, meaning a project page, web server or database front end that is not just their source repository. The rest live on a code host alone. The catalog site shows this as a sortable *Site* column, so "web-only resource" and "code, no documentation site" are both answerable questions.
+**If you maintain a tool listed here and its link is wrong, please say so.** Of the 887 links shown, 812 are recorded upstream, 31 are hand-verified and 44 are *inferred* from a homepage or a GitHub search. Inferred links are marked with a dotted underline on the [catalog site](https://thirtysix.github.io/awesome-regulatory-genomics/) and carry a one-click report button; there are [issue templates](.github/ISSUE_TEMPLATE) for a wrong repository and for a wrong category, description or scope decision. Correcting the entry at [bio.tools](https://bio.tools) instead fixes it here on the next refresh, and for every other consumer of that registry.
+- **1150 (65%) have a website of their own**, meaning a project page, web server or database front end that is not just their source repository. The rest live on a code host alone. The catalog site shows this as a sortable *Site* column, so "web-only resource" and "code, no documentation site" are both answerable questions.
 - **391 can be installed from a package registry** (Bioconductor, CRAN, PyPI, conda or Docker), shown as a sortable *Install* column. "Can I install this today?" is a more useful maintenance signal than a star count, and it is not a question bio.tools answers. A package is only linked when its description agrees with the tool's, never on a matching name: bioconda's `medusa` is a genome scaffolder, and this catalog's MEDUSA is a motif model.
 - **119 links are known to be dead** and are struck through on the catalog site rather than quietly left to disappoint. Every homepage is checked (`make check-links`), which matters because nearly half this catalog has no repository, only a homepage, and academic URLs rot. Only a 404 or 410 counts: a timeout is as often a slow institutional host as a departed one, and 429 means the server is up and busy. The full grading is in [`docs/homepage-check.md`](docs/homepage-check.md).
-- **1694 have a publication year**, recovered from OpenAlex where the registry did not record one.
+- **1696 have a publication year**, recovered from OpenAlex where the registry did not record one.
 - **19 tools are featured** in the curated sections above; the rest are in the [full catalog](https://thirtysix.github.io/awesome-regulatory-genomics/).
 
 Honest limitations:

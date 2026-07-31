@@ -109,10 +109,8 @@ exclude:
   # --- 2026-07-31 scope audit: admitted on a single unreliable EDAM operation.
   # docs/scope-audit.md has the evidence; data/excluded.tsv keeps the full rows.
   # RNA-level regulation was deliberately NOT excluded and stays in the catalog.
-  pipmaker: "PipMaker is a general sequence alignment and conservation visualization tool, not a dedicated regulatory-genomics tool; admitted on EDAM 'Regulatory element prediction' alone"
   predictprotein_open: "Predicts protein structural and functional features, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone"
   defuse: "Discovers gene fusions from RNA-Seq data, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone"
-  mcl: "MCL is a general clustering algorithm for biological networks, not specifically for gene-regulatory networks; admitted on EDAM 'Gene regulatory network analysis' alone"
   hotnet: "Finds mutated subnetworks in cancer via protein interaction networks, not gene regulatory networks; admitted on EDAM 'Gene regulatory network analysis' alone"
   promateus: "Predicts protein-protein binding sites, not regulatory genomics; admitted on EDAM 'Peak calling' alone"
   VDJdb: "Focuses on T-cell receptor sequences and antigens, not regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone"
@@ -306,6 +304,13 @@ exclude:
 # automatically. Every entry here was looked up and the title checked against
 # the tool; do not add one from memory.
 publications:
+  # A transposed digit, not a wrong choice of paper: bio.tools records
+  # pmid:18449469, which resolves cleanly to "Ellipsoidal particles at fluid
+  # interfaces" (Eur. Phys. J. E 2008) and carried its 146 citations against
+  # NOBAI's true 15. The tool is excluded as out of scope either way; the
+  # identifier is corrected so the archived row is not carrying a lie.
+  nobai: pmid:18448469           # NOBAI, Nucleic Acids Research 2008
+
   signac: pmid:34725479          # Nature Methods 2021, 10.1038/s41592-021-01282-5
   archr: doi:10.1038/s41588-021-00790-6    # Nature Genetics 2021
 
