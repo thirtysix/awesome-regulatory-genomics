@@ -42,6 +42,7 @@ COLUMNS = [
     "repo_language", "repo_license", "tool_type", "topics", "languages",
     "license", "license_source", "maturity", "cost", "registries", "citations", "citation_note", "year", "publication",
     "citations_total", "citations_papers",
+    "publication_title", "publication_venue", "publication_url",
     "publication_is_preprint",
     "biotools_id", "biotools_url", "last_update", "source", "tags", "featured",
 ]
@@ -200,6 +201,31 @@ def load_year_map() -> dict[str, str]:
         return {k: v for k, v in json.loads(path.read_text()).items() if v}
     except ValueError:
         return {}
+
+
+def load_title_map() -> dict[str, dict]:
+    """Publication identifier key -> {title, venue}, from fill_metadata.py."""
+    path = DATA / "cache" / "pubtitle_cache.json"
+    if not path.exists():
+        return {}
+    try:
+        return {k: v for k, v in json.loads(path.read_text()).items()
+                if isinstance(v, dict) and v.get("title")}
+    except ValueError:
+        return {}
+
+
+def publication_url(ident: str) -> str:
+    """A link a reader can actually follow.
+
+    The catalog stores `pmid:18798982`, which is meaningless in a spreadsheet
+    and not clickable. Resolve it to the canonical landing page instead.
+    """
+    if ident.startswith("pmid:"):
+        return f"https://pubmed.ncbi.nlm.nih.gov/{ident[5:]}/"
+    if ident.startswith("doi:"):
+        return f"https://doi.org/{ident[4:]}"
+    return ""
 
 
 def load_homepage_status() -> dict[str, str]:
@@ -504,6 +530,7 @@ def main() -> None:
     regmap = load_registry_map()
     installmap = load_install_map()
     yearmap = load_year_map()
+    titlemap = load_title_map()
     deadpages = load_homepage_status()
     # How many catalog tools claim each publication as their primary one.
     shared = Counter(p for p in (primary_identifier(t, pubmap) for t in enriched) if p)
@@ -614,6 +641,11 @@ def main() -> None:
         r["repo_status"] = deadpages.get(canon_link(r.get("repo_url")), "")
         if not r.get("year") and r.get("publication"):
             r["year"] = yearmap.get(cache_key(r["publication"]), "")
+        # What the linked paper actually IS, rather than an opaque identifier.
+        meta = titlemap.get(cache_key(r.get("publication") or ""), {})
+        r["publication_title"] = meta.get("title", "")
+        r["publication_venue"] = meta.get("venue", "")
+        r["publication_url"] = publication_url(r.get("publication") or "")
         # An empty citation cell has three quite different causes, and a reader
         # cannot tell them apart. Sierra showed blank because its published DOI
         # was never fetched, which looked identical to a tool with no paper at

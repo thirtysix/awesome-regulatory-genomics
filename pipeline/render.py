@@ -937,6 +937,15 @@ function toolHref(t) {
   return t.homepage || t.repo_url || t.biotools_url || '';
 }
 
+// Derived, not shipped: sending a resolved URL for every tool cost 97 KB in a
+// payload every visitor downloads, and it is a pure function of `publication`.
+function pubUrl(t) {
+  const p = t.publication || '';
+  if (p.startsWith('pmid:')) return 'https://pubmed.ncbi.nlm.nih.gov/' + p.slice(5) + '/';
+  if (p.startsWith('doi:'))  return 'https://doi.org/' + p.slice(4);
+  return '';
+}
+
 function render(){
   const rows = TOOLS.filter(matches).sort(cmp);
   visible = rows;                     // what Download exports, exactly as shown
@@ -1085,6 +1094,11 @@ const DL_COLS = [
   ['repository',  t => t.repo_url],
   ['biotools',    t => t.biotools_url],
   ['publication', t => t.publication],
+  // The identifier is not usable on its own: `pmid:18798982` cannot be clicked
+  // and says nothing about what the paper is.
+  ['publication_title', t => t.pub_title],
+  ['publication_venue', t => t.pub_venue],
+  ['publication_url',   t => pubUrl(t)],
   ['is_preprint', t => t.publication ? (t.preprint ? 'yes' : 'no') : ''],
   ['stars',       t => t.repo_stars],
   ['last_push',   t => t.repo_pushed],
@@ -1096,6 +1110,13 @@ const DL_COLS = [
   ['citations_verified_papers', t => t.cites_papers],
   ['citations_note', t => t.cite_note],
   ['year',        t => t.year],
+  // Maintenance and scope signals that were visible in the table but not
+  // exported, so a downloaded copy could not be filtered on them.
+  ['archived',    t => t.archived ? 'yes' : ''],
+  ['site_dead',   t => t.dead_site ? 'yes' : ''],
+  ['repo_dead',   t => t.dead_repo ? 'yes' : ''],
+  ['tier',        t => t.tier],
+  ['source',      t => t.source],
 ];
 
 function tsvCell(v) {
@@ -1160,6 +1181,15 @@ def render_site(catalog: dict) -> None:
         "registries": t.get("_registries") or {},
         "tool_type": t["tool_type"], "languages": t["languages"],
         "citations": t["citations"], "year": t["year"], "publication": t["publication"],
+        # What the paper actually is. `publication` alone is "pmid:18798982",
+        # which is unusable in a downloaded spreadsheet.
+        **({"pub_title": t["publication_title"]} if t.get("publication_title") else {}),
+        **({"pub_venue": t["publication_venue"]} if t.get("publication_venue") else {}),
+        # Signals a user filtering the table wants and could not previously get.
+        **({"archived": 1} if t.get("repo_archived") else {}),
+        **({"dead_site": 1} if t.get("homepage_status") == "dead" else {}),
+        **({"dead_repo": 1} if t.get("repo_status") == "dead" else {}),
+        "tier": t.get("tier", ""),
         **({"cite_note": t["citation_note"]} if not t["citations"] and t["citation_note"] else {}),
         # Only 37 of ~1,950 tools have a verified total. Emitting the pair as
         # null for the rest cost 74 KB in a payload every visitor downloads.

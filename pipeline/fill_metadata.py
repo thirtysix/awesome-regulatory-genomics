@@ -22,7 +22,9 @@ network pass does not have to run on every build.
 from __future__ import annotations
 
 import argparse
+import html
 import json
+import re
 import time
 
 import requests
@@ -31,6 +33,9 @@ from build import cache_key
 from config import CACHE, DATA, OPENALEX_API, openalex_params, user_agent
 
 YEAR_CACHE = CACHE / "pubyear_cache.json"
+# Title and venue, kept in their own cache so the year cache's simple
+# key -> "YYYY" shape (which build.py reads directly) stays unchanged.
+TITLE_CACHE = CACHE / "pubtitle_cache.json"
 
 
 def load_year_cache() -> dict[str, str]:
@@ -47,19 +52,52 @@ def save_year_cache(cache: dict[str, str]) -> None:
     YEAR_CACHE.write_text(json.dumps(cache, indent=1, sort_keys=True))
 
 
-def openalex_year(session: requests.Session, ident: str) -> str:
+def load_title_cache() -> dict[str, dict]:
+    if TITLE_CACHE.exists():
+        try:
+            return json.loads(TITLE_CACHE.read_text())
+        except ValueError:
+            return {}
+    return {}
+
+
+def save_title_cache(cache: dict[str, dict]) -> None:
+    TITLE_CACHE.parent.mkdir(parents=True, exist_ok=True)
+    TITLE_CACHE.write_text(json.dumps(cache, indent=1, sort_keys=True))
+
+
+def clean_title(text: str) -> str:
+    """Strip the markup OpenAlex leaves in titles.
+
+    Titles arrive with HTML in them - "SArKS: <i>de novo</i> discovery ..." -
+    which would be rendered literally in a spreadsheet cell.
+    """
+    text = re.sub(r"<[^>]+>", "", text or "")
+    return re.sub(r"\s+", " ", html.unescape(text)).strip()
+
+
+def openalex_work(session: requests.Session, ident: str) -> dict:
+    """Year, title and venue for one identifier, in a single request."""
     kind, _, value = ident.partition(":")
     filt = f"ids.pmid:{value}" if kind == "pmid" else f"doi:{value}"
     try:
         r = session.get(OPENALEX_API, params=openalex_params(
-            {"filter": filt, "select": "publication_year"}), timeout=30)
+            {"filter": filt,
+             "select": "publication_year,title,primary_location"}), timeout=30)
         results = r.json().get("results") or [] if r.status_code == 200 else []
     except (requests.RequestException, ValueError):
-        return ""
+        return {}
     if not results:
-        return ""
-    year = results[0].get("publication_year")
-    return str(year) if year else ""
+        return {}
+    w = results[0]
+    venue = ((w.get("primary_location") or {}).get("source") or {}).get("display_name") or ""
+    return {"year": str(w.get("publication_year") or ""),
+            "title": clean_title(w.get("title") or ""),
+            "venue": clean_title(venue)}
+
+
+def openalex_year(session: requests.Session, ident: str) -> str:
+    return openalex_work(session, ident).get("year", "")
 
 
 def main() -> None:
@@ -111,6 +149,42 @@ def main() -> None:
             time.sleep(0.11)           # OpenAlex asks for ~10/s at most
         save_year_cache(cache)
         print(f"year: resolved {found}/{len(todo)}")
+
+    # --- title and venue, from OpenAlex ----------------------------------
+    # The catalog links a paper as `pmid:18798982`, which tells a reader
+    # nothing and is not clickable in a spreadsheet. Caching the title and
+    # venue lets build.py carry both, plus a resolvable URL.
+    titles = load_title_cache()
+    pubs, seen2 = [], set()
+    for tool in tools:
+        ident = tool.get("publication")
+        if not ident:
+            continue
+        key = cache_key(ident)
+        if key in titles or key in seen2:
+            continue
+        seen2.add(key)
+        pubs.append((key, ident))
+    if args.limit:
+        pubs = pubs[:args.limit]
+    print(f"title: {len(pubs)} publications to look up "
+          f"({len(titles)} already cached)")
+    if pubs:
+        session = requests.Session()
+        session.headers.update({"User-Agent": user_agent()})
+        got = 0
+        for i, (key, ident) in enumerate(pubs, 1):
+            rec = openalex_work(session, ident)
+            # Cache the miss too, as an empty record, so a paper OpenAlex does
+            # not index is not re-queried on every run.
+            titles[key] = {"title": rec.get("title", ""), "venue": rec.get("venue", "")}
+            got += bool(rec.get("title"))
+            if i % 100 == 0:
+                print(f"  {i}/{len(pubs)} (resolved {got})")
+                save_title_cache(titles)
+            time.sleep(0.11)
+        save_title_cache(titles)
+        print(f"title: resolved {got}/{len(pubs)}")
 
 
 if __name__ == "__main__":

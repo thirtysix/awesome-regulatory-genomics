@@ -1,6 +1,6 @@
 # Coverage audit
 
-Generated 2026-07-30 by `make audit`, against [`curation/benchmark.yaml`](../curation/benchmark.yaml).
+Generated 2026-07-31 by `make audit`, against [`curation/benchmark.yaml`](../curation/benchmark.yaml).
 
 The benchmark is a hand-written list of resources the field treats as standard. It is not a ranking and not exhaustive. It exists so that "did the pipeline find the obvious things?" is a measurement rather than an impression.
 
