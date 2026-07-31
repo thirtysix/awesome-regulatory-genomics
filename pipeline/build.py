@@ -43,6 +43,7 @@ COLUMNS = [
     "license", "license_source", "maturity", "cost", "registries", "citations", "citation_note", "year", "publication",
     "citations_total", "citations_papers",
     "publication_title", "publication_venue", "publication_url",
+    "citations_recent", "citations_recent_year",
     "publication_is_preprint",
     "biotools_id", "biotools_url", "last_update", "source", "tags", "featured",
 ]
@@ -213,6 +214,31 @@ def load_title_map() -> dict[str, dict]:
                 if isinstance(v, dict) and v.get("title")}
     except ValueError:
         return {}
+
+
+def recent_citations(meta: dict, build_year: int) -> tuple[int | None, str]:
+    """Citations received in the last COMPLETE calendar year.
+
+    Not the current year: OpenAlex reports it partially. On 2026-07-31 the MACS
+    paper showed 1,045 for 2026 against 2,189 for 2025, so using the running year
+    would understate every tool by roughly half and would do it unevenly, since
+    indexing lag differs by venue.
+
+    This is the honest answer to "is anyone still using this?", which a lifetime
+    total cannot give. It reads low for a genuinely new tool, whose first full
+    year has not happened yet - that is a real limitation, not a bug, and the
+    reason the column is reported beside the total rather than replacing it.
+    """
+    by_year = (meta or {}).get("by_year") or {}
+    if not by_year:
+        return None, ""
+    year = str(build_year - 1)
+    # OpenAlex OMITS a year with no citations rather than recording a zero. A
+    # missing year in a populated series therefore means zero, not unknown, and
+    # the difference matters: it is exactly the "nobody cites this any more"
+    # signal the column exists to surface. Treating absence as unknown blanked
+    # 513 tools, including FirstEF and AlignACE, which are the clearest cases.
+    return by_year.get(year, 0), year
 
 
 def publication_url(ident: str) -> str:
@@ -531,6 +557,7 @@ def main() -> None:
     installmap = load_install_map()
     yearmap = load_year_map()
     titlemap = load_title_map()
+    build_year = date.today().year
     deadpages = load_homepage_status()
     # How many catalog tools claim each publication as their primary one.
     shared = Counter(p for p in (primary_identifier(t, pubmap) for t in enriched) if p)
@@ -646,6 +673,9 @@ def main() -> None:
         r["publication_title"] = meta.get("title", "")
         r["publication_venue"] = meta.get("venue", "")
         r["publication_url"] = publication_url(r.get("publication") or "")
+        recent, ryear = recent_citations(meta, build_year)
+        r["citations_recent"] = recent
+        r["citations_recent_year"] = ryear
         # An empty citation cell has three quite different causes, and a reader
         # cannot tell them apart. Sierra showed blank because its published DOI
         # was never fetched, which looked identical to a tool with no paper at

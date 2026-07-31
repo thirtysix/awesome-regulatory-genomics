@@ -77,13 +77,20 @@ def clean_title(text: str) -> str:
 
 
 def openalex_work(session: requests.Session, ident: str) -> dict:
-    """Year, title and venue for one identifier, in a single request."""
+    """Year, title, venue and per-year citation counts, in a single request.
+
+    `counts_by_year` costs nothing extra here and answers the question a total
+    cannot: whether a tool is still being used. A 2004 paper with 13,000
+    citations and one with 400 look very different once you ask how many arrived
+    last year.
+    """
     kind, _, value = ident.partition(":")
     filt = f"ids.pmid:{value}" if kind == "pmid" else f"doi:{value}"
     try:
         r = session.get(OPENALEX_API, params=openalex_params(
             {"filter": filt,
-             "select": "publication_year,title,primary_location"}), timeout=30)
+             "select": "publication_year,title,primary_location,counts_by_year"}),
+            timeout=30)
         results = r.json().get("results") or [] if r.status_code == 200 else []
     except (requests.RequestException, ValueError):
         return {}
@@ -91,9 +98,12 @@ def openalex_work(session: requests.Session, ident: str) -> dict:
         return {}
     w = results[0]
     venue = ((w.get("primary_location") or {}).get("source") or {}).get("display_name") or ""
+    by_year = {str(c["year"]): c.get("cited_by_count") or 0
+               for c in (w.get("counts_by_year") or []) if c.get("year")}
     return {"year": str(w.get("publication_year") or ""),
             "title": clean_title(w.get("title") or ""),
-            "venue": clean_title(venue)}
+            "venue": clean_title(venue),
+            "by_year": by_year}
 
 
 def openalex_year(session: requests.Session, ident: str) -> str:
@@ -161,7 +171,8 @@ def main() -> None:
         if not ident:
             continue
         key = cache_key(ident)
-        if key in titles or key in seen2:
+        # An entry cached before by_year existed is refetched once.
+        if (key in titles and "by_year" in titles[key]) or key in seen2:
             continue
         seen2.add(key)
         pubs.append((key, ident))
@@ -177,7 +188,9 @@ def main() -> None:
             rec = openalex_work(session, ident)
             # Cache the miss too, as an empty record, so a paper OpenAlex does
             # not index is not re-queried on every run.
-            titles[key] = {"title": rec.get("title", ""), "venue": rec.get("venue", "")}
+            titles[key] = {"title": rec.get("title", ""),
+                           "venue": rec.get("venue", ""),
+                           "by_year": rec.get("by_year", {})}
             got += bool(rec.get("title"))
             if i % 100 == 0:
                 print(f"  {i}/{len(pubs)} (resolved {got})")

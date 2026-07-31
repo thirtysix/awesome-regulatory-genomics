@@ -1127,6 +1127,7 @@ const DL_COLS = [
   // on the raw count: the table as sorted rewards age. This is the crude
   // correction, and crude is the honest word for it - citations accrue on a
   // curve, not a line, so treat it as a tie-breaker rather than a ranking.
+  ['citations_last_full_year', t => t.cites_recent],
   ['citations_per_year', t => {
       const y = parseInt(t.year, 10);
       if (!t.citations || !y || y < 1970 || y > BUILD_YEAR) return '';
@@ -1201,6 +1202,7 @@ def render_site(catalog: dict) -> None:
         # which is unusable in a downloaded spreadsheet.
         **({"pub_title": t["publication_title"]} if t.get("publication_title") else {}),
         **({"pub_venue": t["publication_venue"]} if t.get("publication_venue") else {}),
+        **({"cites_recent": t["citations_recent"]} if t.get("citations_recent") is not None else {}),
         # Signals a user filtering the table wants and could not previously get.
         **({"archived": 1} if t.get("repo_archived") else {}),
         **({"dead_site": 1} if t.get("homepage_status") == "dead" else {}),

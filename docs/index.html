@@ -726,6 +726,7 @@ const DL_COLS = [
   // on the raw count: the table as sorted rewards age. This is the crude
   // correction, and crude is the honest word for it - citations accrue on a
   // curve, not a line, so treat it as a tie-breaker rather than a ranking.
+  ['citations_last_full_year', t => t.cites_recent],
   ['citations_per_year', t => {
       const y = parseInt(t.year, 10);
       if (!t.citations || !y || y < 1970 || y > BUILD_YEAR) return '';
