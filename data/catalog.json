@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-07-31",
+  "generated": "2026-08-01",
   "count": 1763,
   "from_biotools": 1634,
   "curated_seeds": 129,
@@ -11467,6 +11467,72 @@
    "citations_recent_year": "2025",
    "license_source": "declared",
    "registries": "pypi"
+  },
+  {
+   "id": "ep3",
+   "name": "EP3",
+   "description": "Identifies the core region of a eukaryotic gene promoter",
+   "categories": [
+    "regulatory-elements"
+   ],
+   "tier": "core",
+   "homepage": "http://bioinformatics.psb.ugent.be/software/details/EP3",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Command-line tool",
+    "Desktop application"
+   ],
+   "topics": [
+    "Nucleic acid sites, features and motifs"
+   ],
+   "languages": [
+    "Java"
+   ],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 243,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "pmid:18096745",
+   "publication_is_preprint": false,
+   "biotools_id": "ep3",
+   "biotools_url": "https://bio.tools/ep3",
+   "last_update": "2024-11-25",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Promoter prediction"
+   ],
+   "_select_reason": "text:\\bpromoter\\b|\\benhancer\\b|\\bsuper-?e",
+   "_identifiers": [
+    "pmid:19478005"
+   ],
+   "_registries": {},
+   "_llm_applied": [
+    "description"
+   ],
+   "featured": "",
+   "primary_category": "regulatory-elements",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/18096745/",
+   "pmid": "18096745",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "",
+   "registries": ""
   },
   {
    "id": "flyfactorsurvey",
@@ -25900,72 +25966,6 @@
    "citations_recent": 7,
    "citations_recent_year": "2025",
    "license_source": "declared",
-   "registries": ""
-  },
-  {
-   "id": "ep3",
-   "name": "EP3",
-   "description": "Identifies the core region of a eukaryotic gene promoter",
-   "categories": [
-    "regulatory-elements"
-   ],
-   "tier": "core",
-   "homepage": "http://bioinformatics.psb.ugent.be/software/details/EP3",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Command-line tool",
-    "Desktop application"
-   ],
-   "topics": [
-    "Nucleic acid sites, features and motifs"
-   ],
-   "languages": [
-    "Java"
-   ],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 92,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2009",
-   "publication": "pmid:19478005",
-   "publication_is_preprint": false,
-   "biotools_id": "ep3",
-   "biotools_url": "https://bio.tools/ep3",
-   "last_update": "2024-11-25",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Promoter prediction"
-   ],
-   "_select_reason": "text:\\bpromoter\\b|\\benhancer\\b|\\bsuper-?e",
-   "_identifiers": [
-    "pmid:19478005"
-   ],
-   "_registries": {},
-   "_llm_applied": [
-    "description"
-   ],
-   "featured": "",
-   "primary_category": "regulatory-elements",
-   "homepage_status": "",
-   "repo_status": "",
-   "publication_title": "Toward a gold standard for promoter prediction evaluation",
-   "publication_venue": "Bioinformatics",
-   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/19478005/",
-   "pmid": "19478005",
-   "doi": "10.1093/bioinformatics/btp191",
-   "citations_recent": 0,
-   "citations_recent_year": "2025",
-   "license_source": "",
    "registries": ""
   },
   {

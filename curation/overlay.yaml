@@ -304,6 +304,24 @@ exclude:
 # automatically. Every entry here was looked up and the title checked against
 # the tool; do not add one from memory.
 publications:
+  # Hand-checked 2026-08-01 against the paper itself, after the describe stage's
+  # paper_matches flag put them up for review.
+  #
+  # EP3 was the only real error of the four: it pointed at "Toward a gold
+  # standard for promoter prediction evaluation", a benchmark of promoter
+  # predictors, rather than its own Genome Research paper. Note the 10.1101
+  # prefix here is Cold Spring Harbor's Genome Research, NOT bioRxiv;
+  # config.is_preprint() reads the suffix shape and returns False, as it must.
+  ep3: pmid:18096745             # Generic eukaryotic core promoter prediction, Genome Research 2008
+
+  # The other three were already correct and are pinned so the flag does not
+  # keep resurfacing them. Each is the pattern that makes this hard: in genomics
+  # the tool ships inside its biology or method paper, so the title is about the
+  # science and never names the software.
+  pyPINTS: pmid:35177836         # Nat Biotech 2022 comparison paper; it introduces PINTS
+  NRL: pmid:31665434             # NAR 2019 CTCF paper; introduces NRLcalc in its methods
+  asseq: pmid:21838806           # Wei Sun, Biometrics 2012; the TReC+ASE method asSeq implements
+
   # A transposed digit, not a wrong choice of paper: bio.tools records
   # pmid:18449469, which resolves cleanly to "Ellipsoidal particles at fluid
   # interfaces" (Eur. Phys. J. E 2008) and carried its 146 citations against

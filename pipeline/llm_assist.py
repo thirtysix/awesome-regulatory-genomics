@@ -197,11 +197,23 @@ operation that the description or abstract does not support.
 from the name or from EDAM terms is worse than leaving it.
 - British or American spelling as given; do not "correct" the tool's own name.
 
-Also judge whether the paper is plausibly THIS tool's paper. Set paper_matches to false only \
-when the subject matter is unrelated to the tool - a physics paper against a genomics tool, a \
-clinical review against a software package. A paper whose title never names the tool is normal \
-and is NOT a mismatch: method papers routinely have descriptive titles. When paper_matches is \
-false, ignore the paper and describe the tool from the registry text alone.
+Also judge whether the paper is plausibly THIS tool's paper. Set paper_matches to false ONLY \
+when the subject matter is unrelated - a physics paper against a genomics tool, a clinical \
+review against a software package. Default to true; this flag is for gross mismatch, not doubt.
+
+In genomics a tool almost always ships inside its biology or method paper, so ALL of these are \
+normal and are NOT mismatches:
+- the title never names the tool, and describes the science instead ("CTCF-dependent chromatin \
+boundaries formed by asymmetric nucleosome arrays" introduces NRLcalc in its methods);
+- the paper compares or benchmarks many methods and introduces this one among them ("A \
+comparison of experimental assays and analytical methods for genome-wide identification of \
+active enhancers" is the paper for PINTS);
+- the paper presents a statistical method that the software implements, naming neither ("A \
+statistical framework for eQTL mapping using RNA-seq data" is the paper for asSeq);
+- the paper is about one organism or dataset and the tool was built for it.
+
+Ask only: could this paper reasonably be where this tool came from? If yes, paper_matches is \
+true. When it is false, ignore the paper and describe the tool from the registry text alone.
 
 Reply with JSON only:
 {"description": "...", "paper_matches": true, "mismatch_reason": ""}
@@ -479,7 +491,7 @@ def main() -> None:
                 # version whenever DESCRIBE_SYSTEM changes: the key covers the
                 # inputs, not the instructions, so a prompt edit is invisible to
                 # it. v3 added the paper_matches check.
-                "describe-v3", (t["name"], source, paper.get("title", ""),
+                "describe-v4", (t["name"], source, paper.get("title", ""),
                                 paper.get("abstract", "")[:1800]),
                 DESCRIBE_SYSTEM, describe_prompt(t, source, paper),
                 lambda r: r.get("description") is None

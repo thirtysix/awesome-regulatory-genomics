@@ -164,6 +164,33 @@ direction of quality - published over preprint, higher citation count, real venu
 - and mark anything moving the wrong way rather than trusting the judgement that
 produced the candidate.
 
+## Count the false positives before reporting a detector's yield
+
+**Believed:** the `paper_matches` check, validated on NOBAI as a control pair and
+producing plausible reasons, had found 61 records carrying the wrong paper. That
+is how it was reported.
+
+**Happened:** the user hand-checked four of the top hits. **Three were wrong.**
+PINTS, NRL and asSeq all had the correct paper already; only EP3 was a real error,
+pointing at a benchmark of promoter predictors instead of its own Genome Research
+paper. A 75% false-positive rate on the sample, against a headline that implied 61
+errors.
+
+The cause is domain-specific and worth naming: **in genomics a tool usually ships
+inside its biology or method paper.** NRLcalc is introduced in the methods of
+"CTCF-dependent chromatin boundaries formed by asymmetric nucleosome arrays";
+asSeq implements the method in "A statistical framework for eQTL mapping using
+RNA-seq data", which names no software at all. A detector asking "is this abstract
+about the tool" reads the normal case as a mismatch. One instruction made it
+worse: telling the model that a benchmark comparing many tools is not the tool's
+own paper is what sank PINTS, whose paper is a comparison that introduces it.
+
+**Do differently:** a control pair proves a detector *can* fire correctly, not that
+its hits *are* correct. Before reporting a count, hand-check a sample of the
+positives and report the rate. Say "a review queue of 61 with an unmeasured false-
+positive rate", never "61 errors". And when a check fires on a pattern, ask whether
+that pattern is normal in the domain before treating it as a signal.
+
 ## Ask the thing itself, never search for its name
 
 **Standing rule, re-confirmed:** to find or verify a tool's paper, read what the
