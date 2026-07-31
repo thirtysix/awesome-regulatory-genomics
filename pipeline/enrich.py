@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import gzip
 import json
 import os
 import re
@@ -184,6 +185,70 @@ def fetch_github(session: requests.Session, slug: str) -> dict | None:
 # ---------------------------------------------------------------------------
 # Citations (OpenAlex)
 # ---------------------------------------------------------------------------
+def oa_paths(key: str) -> tuple:
+    """Both spellings of a stored work: legacy plain .json and current .json.gz."""
+    return OA_DIR / f"{key}.json.gz", OA_DIR / f"{key}.json"
+
+
+def read_openalex_work(key: str) -> dict:
+    """The stored OpenAlex work for one identifier key, or {} if absent.
+
+    Reads either spelling, so the 823 plain-JSON files from the original harvest
+    keep working alongside anything written since.
+    """
+    gz, plain = oa_paths(key)
+    for path, opener in ((gz, gzip.open), (plain, open)):
+        if not path.exists():
+            continue
+        try:
+            with opener(path, "rt", encoding="utf-8") as fh:
+                results = json.load(fh).get("results") or []
+        except (ValueError, OSError):
+            return {}
+        return results[0] if results else {}
+    return {}
+
+
+def save_openalex_work(key: str, payload: dict) -> None:
+    """Persist the FULL response for one identifier, gzipped.
+
+    The whole object is kept rather than the four fields the citation column
+    happens to need. Re-deriving anything else later - abstract, venue, open
+    access, concepts - is otherwise a second pass over ~3,700 identifiers
+    against a metered daily budget, for data that was already in the response
+    we threw away. Gzip costs nothing and buys 6.6x: ~20 MB rather than ~130 MB
+    for a full sweep. The directory is gitignored; citation_cache.csv stays the
+    small tracked product.
+    """
+    OA_DIR.mkdir(parents=True, exist_ok=True)
+    gz, plain = oa_paths(key)
+    tmp = gz.with_suffix(".gz.tmp")
+    try:
+        with gzip.open(tmp, "wt", encoding="utf-8") as fh:
+            json.dump(payload, fh)
+        tmp.replace(gz)
+        # Drop a legacy uncompressed copy so the two cannot drift apart.
+        if plain.exists():
+            plain.unlink()
+    except OSError:
+        tmp.unlink(missing_ok=True)
+
+
+def abstract_text(work: dict) -> str:
+    """Rebuild an abstract from OpenAlex's inverted index, or "" if absent.
+
+    OpenAlex ships abstracts as {word: [positions]} rather than as prose, so it
+    has to be reassembled. Coverage measured on a 60-paper sample of this
+    catalog: 97% of resolvable works.
+    """
+    inv = work.get("abstract_inverted_index")
+    if not isinstance(inv, dict):
+        return ""
+    words = sorted((pos, word) for word, poss in inv.items()
+                   for pos in poss if isinstance(pos, int))
+    return " ".join(word for _, word in words)
+
+
 def load_citation_cache() -> dict[str, int]:
     cache: dict[str, int] = {}
     if CITE_CACHE.exists():
@@ -194,18 +259,15 @@ def load_citation_cache() -> dict[str, int]:
                         cache[row[0]] = int(row[1])
                     except ValueError:
                         continue
-    # Seed from any per-work OpenAlex JSON already on disk.
+    # Seed from any per-work OpenAlex response already on disk.
     if OA_DIR.exists():
-        for path in OA_DIR.glob("*.json"):
-            key = path.stem
+        for path in list(OA_DIR.glob("*.json")) + list(OA_DIR.glob("*.json.gz")):
+            key = path.name.removesuffix(".gz").removesuffix(".json").rstrip(".")
             if key in cache:
                 continue
-            try:
-                results = json.loads(path.read_text()).get("results") or []
-            except (ValueError, OSError):
-                continue
-            if results:
-                cache[key] = results[0].get("cited_by_count", 0)
+            work = read_openalex_work(key)
+            if work:
+                cache[key] = work.get("cited_by_count", 0)
     return cache
 
 
@@ -270,9 +332,55 @@ def openalex_lookup(session: requests.Session, ident: str,
     if not results:
         return None, {}
     w = results[0]
+    # Keep the whole response, not just the fields this stage reads. It cost a
+    # request either way, and the daily budget makes a second pass expensive.
+    save_openalex_work(key, r.json())
     cache[key] = w.get("cited_by_count") or 0
     return cache[key], {"title": w.get("title"), "year": w.get("publication_year"),
                         "venue": ((w.get("primary_location") or {}).get("source") or {}).get("display_name")}
+
+
+def ident_key(ident: str) -> str:
+    kind, _, value = ident.partition(":")
+    return f"{kind}_{value}".replace("/", "_").replace(":", "_")
+
+
+def backfill_works(session: requests.Session, idents: list[str]) -> None:
+    """Fetch the full OpenAlex response for identifiers that have none stored.
+
+    A citation count already in citation_cache.csv makes openalex_lookup() return
+    without touching the network, so the full response is never seen again. That
+    is right for the citation column and wrong for anything that needs the rest
+    of the record, so the backfill is its own explicit pass rather than a silent
+    re-fetch inside a normal `make enrich` - the daily budget is metered and a
+    surprise 3,700-request sweep would spend most of it.
+    """
+    todo = [i for i in dict.fromkeys(idents) if not read_openalex_work(ident_key(i))]
+    if not todo:
+        print("  every identifier already has its full OpenAlex response stored")
+        return
+    print(f"  {len(todo)} identifiers have no stored response ({openalex_tier()})")
+    got = 0
+    for n, ident in enumerate(todo, 1):
+        kind, _, value = ident.partition(":")
+        filt = f"ids.pmid:{value}" if kind == "pmid" else f"doi:{value}"
+        try:
+            r = session.get(OPENALEX_API, params=openalex_params({"filter": filt}),
+                            timeout=30)
+            if r.status_code == 429:
+                wait = r.headers.get("Retry-After", "?")
+                print(f"    stopped at {n}/{len(todo)}: daily budget spent, "
+                      f"retry after {wait}s; {got} stored so far", file=sys.stderr)
+                return
+            if r.status_code != 200 or not (r.json().get("results") or []):
+                continue
+            save_openalex_work(ident_key(ident), r.json())
+            got += 1
+        except (requests.RequestException, ValueError):
+            continue
+        if n % 100 == 0:
+            print(f"    {n}/{len(todo)}  stored {got}", flush=True)
+    print(f"  stored {got} full responses")
 
 
 def displayed_identifiers() -> list[str]:
@@ -325,7 +433,20 @@ def main() -> None:
     ap.add_argument("--no-github", action="store_true")
     ap.add_argument("--no-citations", action="store_true")
     ap.add_argument("--limit", type=int, default=0, help="process only N records (debug)")
+    ap.add_argument("--backfill-works", action="store_true",
+                    help="fetch and store the full OpenAlex response for every "
+                         "displayed identifier that has none yet, then exit")
     args = ap.parse_args()
+
+    if args.backfill_works:
+        http = requests.Session()
+        http.headers.update({"User-Agent": user_agent(), "Accept": "application/json"})
+        sweep = read_json(SELECTED)
+        idents = [i for t in sweep["list"] for i in pub_identifiers(t)]
+        idents += displayed_identifiers()
+        print(f"Backfilling full OpenAlex responses for {len(set(idents))} identifiers")
+        backfill_works(http, idents)
+        return
 
     sweep = read_json(SELECTED)
     tools = sweep["list"][: args.limit] if args.limit else sweep["list"]

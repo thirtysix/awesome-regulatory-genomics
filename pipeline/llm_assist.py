@@ -40,9 +40,12 @@ import requests
 import yaml
 
 from config import CATEGORIES, CATEGORY_DESC, CATEGORY_KEYS, CURATION, DATA, RAW
+from enrich import abstract_text, ident_key, read_openalex_work
+from jsonio import read_json
 
 ENDPOINT = "https://api.deepinfra.com/v1/openai/chat/completions"
 CATALOG = DATA / "catalog.json"
+ENRICHED = RAW / "enriched.json.gz"
 REJECTED = RAW / "rejected.json"
 PROPOSALS = CURATION / "llm_proposals.yaml"
 CACHE = DATA / "cache" / "llm.json"
@@ -170,17 +173,32 @@ Reply with JSON only:
 DESCRIBE_SYSTEM = """You rewrite bioinformatics tool descriptions into one uniform line for a \
 catalog.
 
+You are given the registry description and, usually, the tool's own paper (title and abstract). \
+The registry description is the primary source; the paper is there to supply the function when \
+the registry text is too thin to state it.
+
 Rules:
-- One sentence, 8-22 words, no trailing full stop.
+- One sentence, 10-25 words, no trailing full stop.
 - Start with a verb or a noun phrase. Never start with the tool's own name, and never write \
 "A tool that" or "This package".
 - State what it does and on what data. Keep the distinguishing detail; drop marketing, version \
 numbers, funding and citations.
+- Prefer the specific over the generic. "Calls peaks" is weaker than "Calls peaks from ChIP-seq \
+data using a model-based background"; spend the words on what separates this tool from the next \
+one doing the same job. Do not pad to length with generic wording.
 - Use only information present in the input. Never invent capabilities.
+- Describe the TOOL, not the biology. An abstract's findings, organisms studied and results are \
+context, not features. "Footprinting unravels binding kinetics" is a result; the tool does \
+footprinting.
+- EDAM operations are automated registry annotations and are often WRONG. Treat them as a weak \
+hint only. Never state a capability that rests on an EDAM term alone, and never name an EDAM \
+operation that the description or abstract does not support.
+- If the inputs do not actually say what the tool does, reply {"description": null}. Guessing \
+from the name or from EDAM terms is worse than leaving it.
 - British or American spelling as given; do not "correct" the tool's own name.
 
 Reply with JSON only:
-{"description": "..."}"""
+{"description": "..."} or {"description": null}"""
 
 ADJUDICATE_SYSTEM = """You review bioinformatics tools that an automated filter EXCLUDED from a \
 catalog of regulatory-genomics tools, and identify the ones excluded wrongly.
@@ -210,6 +228,69 @@ def tool_prompt(t: dict) -> str:
     types = ", ".join(t.get("tool_type") or []) or "unknown"
     return (f"Name: {t['name']}\nDescription: {t.get('description') or '(none)'}\n"
             f"EDAM operations: {ops}\nEDAM topics: {topics}\nTool type: {types}")
+
+
+def source_descriptions() -> dict[str, str]:
+    """bio.tools description as HARVESTED, keyed by biotools id.
+
+    The describe stage must not read data/catalog.json for this. build.py has
+    already merged the previous run's rewrite into that file, so reading it back
+    feeds the model its own output: the run of 2026-07-27 rewrote a rewrite for
+    1,407 of 1,563 records, and `was:` recorded the first rewrite rather than the
+    original. It is the same shape as the verify_additions.py convergence trap.
+    """
+    out: dict[str, str] = {}
+    for rec in read_json(ENRICHED).get("list") or []:
+        key = rec.get("biotoolsID")
+        if key and rec.get("description"):
+            out[key] = rec["description"].strip()
+    return out
+
+
+def describe_prompt(t: dict, source: str, paper: dict) -> str:
+    """The describe input: registry text first, the tool's own paper as backup."""
+    ops = ", ".join(t.get("_operations") or []) or "none"
+    topics = ", ".join((t.get("topics") or [])[:6]) or "none"
+    types = ", ".join(t.get("tool_type") or []) or "unknown"
+    lines = [f"Name: {t['name']}",
+             f"Registry description: {source or '(none)'}",
+             f"EDAM operations (unreliable): {ops}",
+             f"EDAM topics: {topics}",
+             f"Tool type: {types}"]
+    if paper.get("title"):
+        lines.append(f"Paper title: {paper['title']}")
+    if paper.get("abstract"):
+        lines.append(f"Paper abstract: {paper['abstract'][:1800]}")
+    return "\n".join(lines)
+
+
+def paper_context(t: dict) -> dict:
+    """Title and abstract of the tool's primary publication, from the OpenAlex cache.
+
+    Read-only: whatever `enrich.py --backfill-works` has stored. A tool with no
+    stored response simply gets no paper, which is the pre-existing behaviour.
+
+    `_identifiers` alone is not enough. It holds what the HARVEST mentioned, so a
+    publication recovered by discover_pubs.py or set in the overlay is missing
+    from it: HOMER, featured and the second most-cited entry, carries
+    `doi:10.1016/j.molcel.2010.05.004` in `publication` and an empty
+    `_identifiers`, so it drew on no paper at all. Try the displayed publication
+    too, and prefer it, since that is the paper the catalog actually claims.
+    """
+    idents = []
+    pub = t.get("publication")
+    if isinstance(pub, str) and pub.strip():
+        idents.append(pub.strip())
+    idents += t.get("_identifiers") or []
+    for ident in dict.fromkeys(idents):
+        work = read_openalex_work(ident_key(ident))
+        if not work:
+            continue
+        title = work.get("title") or work.get("display_name") or ""
+        abstract = abstract_text(work)
+        if title or abstract:
+            return {"title": title, "abstract": abstract}
+    return {}
 
 
 # ---------------------------------------------------------------------------
@@ -343,25 +424,40 @@ def main() -> None:
 
     # --- describe -----------------------------------------------------------
     if "describe" in jobs:
-        tools = [t for t in catalog if t["source"] == "bio.tools" and t.get("description")]
+        sources = source_descriptions()
+        tools = [t for t in catalog
+                 if t["source"] == "bio.tools" and sources.get(t.get("biotools_id"))]
         tools = tools[: args.limit] if args.limit else tools
+        n_paper = 0
         print(f"describe: {len(tools)} tools via {args.model} "
               f"({args.workers} workers)")
 
         def do_describe(t):
+            nonlocal n_paper
+            source = sources[t["biotools_id"]]
+            paper = paper_context(t)
+            if paper:
+                n_paper += 1
             res = cached_call(
-                "describe", (t["name"], t["description"]),
-                DESCRIBE_SYSTEM, tool_prompt(t),
-                lambda r: isinstance(r.get("description"), str)
-                and 4 <= len(r["description"].split()) <= 40)
-            if not res:
+                # The cache key must carry every input, or a prompt that now
+                # includes the paper would return the pre-paper answer.
+                "describe-v2", (t["name"], source, paper.get("title", ""),
+                                paper.get("abstract", "")[:1800]),
+                DESCRIBE_SYSTEM, describe_prompt(t, source, paper),
+                lambda r: r.get("description") is None
+                or (isinstance(r.get("description"), str)
+                    and 6 <= len(r["description"].split()) <= 30))
+            # An explicit null is the model declining to guess. Keep the
+            # harvested text rather than recording a rewrite that never happened.
+            if not res or res.get("description") is None:
                 return None
             return {t["id"]: {"description": res["description"].rstrip("."),
-                              "was": t["description"]}}
+                              "was": source}}
 
         out = run_batch(tools, do_describe, "describe")
         proposals["descriptions"] = out
-        print(f"  {len(out)} rewritten")
+        print(f"  {len(out)} rewritten; {n_paper} had a paper to draw on, "
+              f"{len(tools) - len(out)} left as harvested")
 
     # --- adjudicate ---------------------------------------------------------
     if "adjudicate" in jobs:
