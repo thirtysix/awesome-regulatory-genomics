@@ -722,6 +722,10 @@ const REPORT = 'https://github.com/__REPO__/issues/new';
 const reportUrl = t => REPORT + '?template=wrong-repository.yml&title='
   + encodeURIComponent('repo: ' + t.name);
 
+// The catalog's own build year, substituted at render time, so a rate computed
+// from it matches the citation counts as of that build rather than the viewer's
+// clock.
+const BUILD_YEAR = parseInt('__DATE__'.slice(0, 4), 10);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const catLabel = Object.fromEntries(CATS);
 
@@ -979,13 +983,15 @@ function render(){
       if (inferred) codeCell += ' <a class="rep" title="Report a wrong repository link" href="'+reportUrl(t)+'">?</a>';
     }
     const btCell = t.biotools_url ? '<a href="'+esc(t.biotools_url)+'">bio.tools</a>' : dash;
+    // A bare "paper" link makes the reader open a tab to find out whether it is
+    // even the right paper. The title is already in the payload, so say it.
     let paperCell = dash;
     if (t.publication) {
-      const p = t.publication;
-      if (p.startsWith('pmid:'))
-        paperCell = '<a href="https://pubmed.ncbi.nlm.nih.gov/'+esc(p.slice(5))+'/">paper</a>';
-      else if (p.startsWith('doi:'))
-        paperCell = '<a href="https://doi.org/'+esc(p.slice(4))+'">'+(t.preprint?'preprint':'paper')+'</a>';
+      const tip = [t.pub_title, t.pub_venue, t.year].filter(Boolean).join(' \\u00b7 ');
+      const ta = tip ? ' title="'+esc(tip)+'"' : '';
+      const href = pubUrl(t);
+      if (href)
+        paperCell = '<a href="'+esc(href)+'"'+ta+'>'+(t.preprint?'preprint':'paper')+'</a>';
     }
     // Where the tool can actually be installed from. Two letters keeps the
     // column narrow; the tooltip and the link carry the detail.
@@ -1117,6 +1123,16 @@ const DL_COLS = [
   ['repo_dead',   t => t.dead_repo ? 'yes' : ''],
   ['tier',        t => t.tier],
   ['source',      t => t.source],
+  // A 2004 tool with 400 citations and a 2024 tool with 200 are not comparable
+  // on the raw count: the table as sorted rewards age. This is the crude
+  // correction, and crude is the honest word for it - citations accrue on a
+  // curve, not a line, so treat it as a tie-breaker rather than a ranking.
+  ['citations_per_year', t => {
+      const y = parseInt(t.year, 10);
+      if (!t.citations || !y || y < 1970 || y > BUILD_YEAR) return '';
+      return (t.citations / (BUILD_YEAR - y + 1)).toFixed(1);
+  }],
+  ['categories_n', t => (t.categories || []).length],
 ];
 
 function tsvCell(v) {
