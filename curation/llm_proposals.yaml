@@ -2,8 +2,2801 @@
 # build.py merges this BELOW curation/overlay.yaml, so any hand-written
 # correction always wins. Review before trusting; promote what you agree
 # with into overlay.yaml, which is never overwritten.
-# model: deepseek-ai/DeepSeek-V4-Flash  jobs: describe
+# model: deepseek-ai/DeepSeek-V4-Flash  jobs: audit-scope
 
+admitted_out_of_scope:
+  3d-spagnn-e:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 1
+    confidence: high
+    description: Identifies subcellular gene proximity relationships and key motifs in cell-cell communication
+      from 3D imaging-based spatial transcriptomics data using graph-based deep learning
+    name: 3D-spaGNN-E
+    reason: Focuses on subcellular gene proximity and cell-cell communication motifs from spatial transcriptomics,
+      not regulatory genomics
+  4accpred:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 5
+    confidence: high
+    description: Predicts N4-acetyldeoxycytosine-carrying regions from Arabidopsis genomic DNA sequences
+      using a weakly supervised deep neural network
+    name: 4acCPred
+    reason: Predicts N4-acetyldeoxycytosine (4acC) DNA modification, which is an RNA/DNA modification,
+      not a regulatory-genomics tool in scope.
+  AR-Pred:
+    admitted_by: operation:DNA binding site prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 37
+    confidence: high
+    description: Predicts protein active and allosteric binding sites using geometry, evolutionary, physicochemical,
+      and dynamics features
+    name: AR-Pred
+    reason: Predicts protein active and allosteric binding sites, not regulatory genomics.
+  COAC:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 15
+    confidence: high
+    description: Performs localized gene co-expression network analysis from single-cell RNA sequencing
+      profiles using matrix decomposition
+    name: COAC
+    reason: Tool performs gene co-expression network analysis from scRNA-seq, not regulatory genomics.
+  Cropper:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 19
+    confidence: high
+    description: GUI for viewing, zooming, selecting, and cropping Manhattan Plots from GWAS data, with
+      graphical and numerical output
+    name: Cropper
+    reason: Tool is for GWAS peak detection and Manhattan plot cropping, not for regulatory genomics peaks
+      like ChIP-seq/ATAC-seq.
+  DeepCLIP:
+    admitted_by: operation:cis-regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 102
+    confidence: high
+    description: Predicts the effect of mutations on protein-RNA binding using a context-aware neural
+      network with only sequence input
+    name: DeepCLIP
+    reason: Predicts protein-RNA binding, not cis-regulatory elements or DNA regulatory genomics
+  DeepPromise:
+    admitted_by: operation:trans-regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 152
+    confidence: high
+    description: Reviews and assesses computational methods for predicting RNA post-transcriptional modification
+      sites from RNA sequences
+    name: DeepPromise
+    reason: Tool reviews methods for predicting RNA post-transcriptional modification sites, which is
+      explicitly out of scope.
+  LDmotif:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 13
+    confidence: high
+    description: Predicts leucine-aspartic acid motifs from protein sequences using an active learning
+      framework
+    name: LDmotif
+    reason: Predicts leucine-aspartic acid motifs in proteins, which are short linear interaction motifs
+      (SLiMs) involved in protein-protein interactions, not regulatory genomics.
+  LTMG:
+    admitted_by: operation:cis-regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 54
+    confidence: high
+    description: Models transcriptional expression states from single-cell RNA-seq data using a left truncated
+      mixture Gaussian distribution
+    name: LTMG
+    reason: Models transcriptional expression states from scRNA-seq data, not cis-regulatory element prediction
+  Manhattan_Harvester:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 19
+    confidence: high
+    description: Detects and characterizes peaks from GWAS Manhattan Plot output files
+    name: Manhattan Harvester
+    reason: Tool detects peaks in GWAS Manhattan plots, not regulatory-genomics peaks like ChIP-seq or
+      ATAC-seq.
+  MetaGxBreast:
+    admitted_by: operation:cis-regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 0
+    confidence: high
+    description: Provides a collection of breast cancer transcriptomic datasets for analysis
+    name: MetaGxBreast
+    reason: Provides breast cancer transcriptomic datasets for differential expression and gene-set enrichment,
+      not regulatory genomics.
+  MotifAnalyzer-PDZ:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 16
+    confidence: high
+    description: Identifies enrichment trends for specific amino acids in PDZ-binding motif-satisfying
+      sequences across multiple organisms
+    name: MotifAnalyzer-PDZ
+    reason: Focuses on PDZ domain binding motifs and protein-peptide interactions, not regulatory genomics.
+  NeSSie:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 21
+    confidence: high
+    description: Identifies exact and degenerate DNA palindromes, mirrors, and triplex-forming patterns
+      using dynamic programming
+    name: NeSSie
+    reason: Identifies symmetrical DNA patterns for non-B DNA structures, not regulatory elements
+  PRAS:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 10
+    confidence: high
+    description: Predicts functional mRNA targets of RNA binding proteins by integrating intensities and
+      positions of CLIP-seq peaks
+    name: PRAS
+    reason: Predicts functional mRNA targets of RNA binding proteins, focusing on post-transcriptional
+      regulation, not regulatory genomics.
+  PyFeat:
+    admitted_by: operation:Promoter prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 121
+    confidence: high
+    description: Generates features from DNA, RNA and protein sequences using 13 different techniques
+      and AdaBoost-based feature selection
+    name: PyFeat
+    reason: General feature generation tool for DNA, RNA, and protein sequences, not specific to regulatory
+      genomics.
+  RNATracker:
+    admitted_by: operation:cis-regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 88
+    confidence: high
+    description: Predicts mRNA subcellular localization from cDNA sequence using deep recurrent neural
+      networks
+    name: RNATracker
+    reason: Predicts mRNA subcellular localization, not cis-regulatory elements in the regulatory genomics
+      sense.
+  ReProMin:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 40
+    confidence: high
+    description: Quantifies proteome reallocation using minimal regulatory interventions
+    name: ReProMin
+    reason: focuses on proteome reallocation and minimal regulatory interventions, not on regulatory genomics
+  SCMVTDb:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 10
+    confidence: high
+    description: Plant virus interaction mechanism and associated pathways in mosaic disease of small
+      cardamom (Elettaria cardamomum Maton) by RNA-Seq approach.
+    name: SCMVTDb
+    reason: The tool is a transcriptome study of plant-virus interaction, not a regulatory-genomics tool.
+  Sierra:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 119
+    confidence: high
+    description: Detects differential transcript usage from polyA-captured single-cell RNA-seq data by
+      identifying read pileups and performing UMI counting
+    name: Sierra
+    reason: Detects differential transcript usage from scRNA-seq, not regulatory genomics.
+  UPObase:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 13
+    confidence: high
+    description: Provides a searchable database of fungal unspecific peroxygenase sequences with classification,
+      motifs, and homology search
+    name: UPObase
+    reason: Database of fungal peroxygenase enzymes, not regulatory genomics
+  VDJdb:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 437
+    confidence: high
+    description: Curates T-cell receptor sequences with cognate antigens and provides online batch annotation
+      and motif mining
+    name: VDJdb
+    reason: Focuses on T-cell receptor sequences and antigens, not regulatory genomics.
+  VISDB:
+    admitted_by: operation:Promoter prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 57
+    confidence: high
+    description: Manually curated database of viral integration sites in the human genome with annotations
+      and visualization tools
+    name: VISDB
+    reason: Database of viral integration sites, not regulatory genomics
+  WheatCRISPR:
+    admitted_by: operation:Promoter prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 49
+    confidence: high
+    description: Designs guide RNAs for CRISPR/Cas9 genome editing in wheat with on-target and off-target
+      activity prediction
+    name: WheatCRISPR
+    reason: Tool is for CRISPR guide RNA design, not regulatory genomics.
+  ZincBind:
+    admitted_by: operation:Transcription factor binding site prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 89
+    confidence: high
+    description: Identifies and clusters zinc binding sites from protein structures in the Protein Data
+      Bank
+    name: ZincBind
+    reason: Tool identifies zinc binding sites in proteins, not transcription factor binding sites or
+      regulatory genomics.
+  aaakb:
+    admitted_by: operation:Gene regulatory network prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 2
+    confidence: high
+    description: A manually curated knowledgebase of genes, SNPs, and pathways associated with abdominal
+      aortic aneurysm, with predicted genes based on protein interactions and random forest
+    name: AAAKB
+    reason: Focuses on abdominal aortic aneurysm disease genes and SNPs, not regulatory genomics.
+  alzcode:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 11
+    confidence: high
+    description: Integrates functional genomic data and statistical approaches to evaluate gene association
+      with Alzheimer's disease
+    name: AlzCode
+    reason: Focuses on Alzheimer's disease gene association analysis, not regulatory genomics.
+  asap-sml:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 8
+    confidence: high
+    description: Identifies distinguishing features in targeting antibody sequences compared to a reference
+      set using statistical testing and machine learning
+    name: ASAP-SML
+    reason: Focuses on antibody sequence features and immunoproteins, not regulatory genomics.
+  auto-drrafter:
+    admitted_by: operation:cis-regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 18
+    confidence: high
+    description: Builds RNA models into moderate-resolution cryo-EM density maps using a Rosetta-based
+      method
+    name: auto-DRRAFTER
+    reason: tool builds RNA models from cryo-EM data, not regulatory genomics
+  autophagynet:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 6
+    confidence: high
+    description: Provides over 280,000 experimentally verified interactions between core autophagy proteins
+      and their regulators, with customizable downloads and Cytoscape integration
+    name: AutophagyNet
+    reason: Focuses on autophagy protein interactions, not regulatory genomics
+  bddb:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 0
+    confidence: high
+    description: Integrates multi-omics data and biomarkers for 22 birth-defect diseases with search,
+      browse, and download functions
+    name: BDdb
+    reason: Database of birth defect multi-omics data, not regulatory genomics
+  bedtoolsr:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 55
+    confidence: high
+    description: Wraps bedtools functions for use within R, accepting file paths or R objects as input
+      and output
+    name: bedtoolsr
+    reason: General genomic data manipulation tool, not specific to regulatory genomics
+  bimm_sc:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 1
+    confidence: high
+    description: Discovers hub genes from scRNA-seq and proteomics data using multiscale modeling
+    name: BIMM
+    reason: Focuses on scRNA-seq and proteomics for hub gene discovery, not regulatory genomics
+  bindingsitefinder:
+    admitted_by: operation:Transcription factor binding site prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 23
+    confidence: high
+    description: Extracts reproducible binding sites from plant iCLIP2 data with functions for definition
+      and visualization
+    name: BindingSiteFinder
+    reason: Tool extracts RNA-binding protein sites from iCLIP2 data, not transcription factor binding
+      sites.
+  biobike:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 47
+    confidence: high
+    description: Web-based environment that lets biologists with little programming expertise combine
+      tools, data, and knowledge via a graphical programming interface
+    name: BioBIKE
+    reason: BioBIKE is a general-purpose bioinformatics programming environment, not a tool specifically
+      for regulatory genomics.
+  biomaster:
+    admitted_by: operation:Promoter prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 7
+    confidence: high
+    description: Integrates and provides comprehensive information about BioBrick parts from multiple
+      databases
+    name: BioMaster
+    reason: Tool is a synthetic biology database for BioBrick parts, not a regulatory genomics tool.
+  biotranslator:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 31
+    confidence: high
+    description: Performs semantic interpretation of genomic data via pathway analysis and gene prioritization
+    name: BioTranslator
+    reason: Tool performs differential expression and pathway enrichment analysis, not gene regulatory
+      network analysis.
+  biovnn:
+    admitted_by: operation:Gene regulatory network prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 19
+    confidence: high
+    description: Predicts cancer dependencies using pathway knowledge with an interpretable visible neural
+      network
+    name: BioVNN
+    reason: Predicts cancer dependencies, not gene regulatory networks
+  boxshade:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 13
+    confidence: high
+    description: Creates printouts from multiple-aligned protein or DNA sequences
+    name: BoxShade
+    reason: BoxShade creates printouts from multiple-aligned sequences, not regulatory-genomics analysis.
+  brio:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 21
+    confidence: high
+    description: Searches known sequence and structure protein-binding motifs in RNA molecules using over
+      2500 motifs from human and mouse
+    name: BRIO
+    reason: Focuses on RNA-binding protein motifs, not regulatory genomics.
+  bsdb:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 40
+    confidence: high
+    description: Provides mechanostability data from simulated stretching of proteins, including force
+      peaks and mechanical clamp types
+    name: BSDB
+    reason: Focuses on protein mechanostability and stretching simulations, not regulatory genomics.
+  bubble_gum:
+    admitted_by: operation:Transcriptional regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 83
+    confidence: high
+    description: Automatically extracts phenotype molecular signatures from transcriptomic data and performs
+      multiple GSEA runs with correction
+    name: Bubble GUM
+    reason: Tool performs gene set enrichment analysis on transcriptomic data, not regulatory genomics.
+  capsnh_kcr:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 19
+    confidence: high
+    description: Predicts lysine crotonylation sites in human non-histone proteins using a capsule network-based
+      model
+    name: CapsNh-Kcr
+    reason: Predicts lysine crotonylation, a protein post-translational modification, which is explicitly
+      out of scope.
+  cardiopy:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 0
+    confidence: high
+    description: Detects R-peaks and performs heart rate variability analysis on single-lead EKG data
+      using adaptive thresholding and manual artifact removal
+    name: CardioPy
+    reason: Detects R-peaks in EKG for heart rate variability, not regulatory genomics
+  casilico:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 12
+    confidence: high
+    description: Designs CRISPR RNAs for Cas12, Cas13, and Cas14 systems with off-target analysis from
+      user-input sequences
+    name: CaSilico
+    reason: Tool designs CRISPR RNAs for genome editing, not regulatory genomics.
+  casowary:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 12
+    confidence: high
+    description: Predicts sgRNA efficacy for CRISPR Cas13 transcript targeting using a decision tree model
+      with sequence and target availability features
+    name: CASowary
+    reason: Tool predicts sgRNA efficacy for CRISPR-Cas13 transcript targeting, not regulatory genomics.
+  cellrouter:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 7
+    confidence: high
+    description: Infers stem cell fate decisions from single-cell trajectory data
+    name: CellRouter
+    reason: Focuses on single-cell trajectory inference for stem cell fate, not regulatory genomics.
+  celltics:
+    admitted_by: operation:Gene regulatory network prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 13
+    confidence: high
+    description: Identifies cell types from single-cell RNA-seq data using an explainable neural network
+      that prioritizes marker genes and biological pathways
+    name: CellTICS
+    reason: CellTICS identifies cell types from scRNA-seq data, not regulatory genomics.
+  cgnaweb:
+    admitted_by: operation:Promoter prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 28
+    confidence: high
+    description: Visualises sequence-dependent ground states of double-stranded nucleic acid fragments
+      using a statistical mechanics model
+    name: cgNA+web
+    reason: It models DNA shape and mechanics, not regulatory elements like promoters.
+  circlebase:
+    admitted_by: operation:Gene regulatory network prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 49
+    confidence: high
+    description: Curates and interprets extrachromosomal circular DNAs from human sequencing data, integrating
+      computational predictions and manual annotations
+    name: CircleBase
+    reason: Focuses on extrachromosomal circular DNA curation and interpretation, not regulatory genomics.
+  clarion:
+    admitted_by: operation:Gene regulatory network prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 38
+    confidence: high
+    description: Transforms multi-label problems to predict mRNA subcellular localizations using a weighted
+      series method
+    name: Clarion
+    reason: Predicts mRNA subcellular localization, not regulatory genomics
+  clipper-fdr:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 11
+    confidence: high
+    description: Controls false discovery rates without p-values for high-throughput data from two conditions
+    name: Clipper
+    reason: General FDR control tool not specific to regulatory genomics
+  cncrnadb:
+    admitted_by: operation:trans-regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 66
+    confidence: high
+    description: Manually curated database of experimentally supported RNAs with both protein-coding and
+      noncoding functions
+    name: cncRNAdb
+    reason: Database of dual-function coding/noncoding RNAs, not focused on regulatory genomics.
+  coman:
+    admitted_by: operation:Transcriptional regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 52
+    confidence: high
+    description: Analyses metatranscriptomic data with quality control, functional annotation, pathway
+      enrichment, and co-expression network analysis
+    name: COMAN
+    reason: Focuses on metatranscriptomics functional analysis, not regulatory genomics
+  cpdseqer:
+    admitted_by: operation:Nucleosome position prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 4
+    confidence: high
+    description: Processes, elucidates and quality controls cyclobutane pyrimidine dimer sequencing data
+    name: CPDSeqer
+    reason: Tool is for cyclobutane pyrimidine dimer sequencing data, not regulatory genomics
+  crispron_off:
+    admitted_by: operation:Promoter prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 47
+    confidence: high
+    description: Predicts CRISPR Cas9 on-target efficiency and off-target potential for gRNA design
+    name: CRISPRon_off
+    reason: CRISPR gRNA design is not regulatory genomics
+  crisprware:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 1
+    confidence: high
+    description: Designs context-specific guide RNA libraries from next-generation sequencing data with
+      allele-specific guide design
+    name: CRISPRware
+    reason: CRISPRware designs gRNA libraries for CRISPR editing, not for regulatory genomics.
+  ctk:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 0
+    confidence: high
+    description: Discovers structural variations, including larger insertions and deletions, in genomes
+      from paired-end sequencing reads
+    name: The CLEVER Toolkit
+    reason: Tool discovers structural variations, not regulatory elements
+  cwords:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 43
+    confidence: high
+    description: Identifies over-represented sequence motifs in ranked lists of genes from differential
+      expression data, typically for miRNA regulatory motif discovery
+    name: cWords
+    reason: Tool identifies miRNA regulatory motifs in mRNA expression data, which is post-transcriptional
+      regulation, not transcriptional regulation or cis-regulatory elements.
+  ddapred:
+    admitted_by: operation:Promoter prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 7
+    confidence: high
+    description: Predicts drug repositioning using regularized logistic matrix factorization
+    name: DDAPRED
+    reason: predicts drug repositioning, not regulatory genomics
+  deep-pla:
+    admitted_by: operation:Gene regulatory network prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 41
+    confidence: high
+    description: Predicts HAT/HDAC-specific lysine acetylation sites from protein sequences using deep
+      learning
+    name: Deep-PLA
+    reason: Predicts protein post-translational modification (lysine acetylation) which is out of scope.
+  deepbound:
+    admitted_by: operation:Transcriptional regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 16
+    confidence: high
+    description: Identifies transcript boundaries from RNA-seq read alignments using deep convolutional
+      neural fields
+    name: DeepBound
+    reason: Identifies transcript boundaries for transcript assembly, not regulatory elements
+  deepcyps:
+    admitted_by: operation:Promoter prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 47
+    confidence: high
+    description: Predicts inhibitory activity of molecules against five cytochrome P450 isoforms using
+      a deep learning model
+    name: DEEPCYPs
+    reason: Predicts cytochrome P450 inhibitory activity, not regulatory genomics
+  deepgengrep:
+    admitted_by: operation:Promoter prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 21
+    confidence: high
+    description: Predicts multiple genomic signals and regions from DNA sequences using hybrid neural
+      networks
+    name: DeepGenGrep
+    reason: Predicts polyadenylation signals, translation initiation sites, and splice sites, not regulatory
+      elements.
+  deephlapred:
+    admitted_by: operation:Promoter prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 4
+    confidence: high
+    description: Predicts non-classical HLA Class I binders using deep learning with sequence representations
+    name: DeepHLAPred
+    reason: Predicts HLA peptide binders, not regulatory genomics.
+  deepnd:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 4
+    confidence: high
+    description: Prioritizes gene risk for comorbid neurodevelopmental disorders using multitask learning
+      on gene coexpression networks
+    name: DeepND
+    reason: Tool prioritizes gene risk for neurodevelopmental disorders using coexpression networks, not
+      regulatory genomics.
+  deeprc:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 23
+    confidence: high
+    description: Integrates transformer-like attention into deep learning for massive multiple instance
+      learning to classify immune repertoires
+    name: DeepRC
+    reason: Tool classifies immune repertoires, not regulatory genomics.
+  defuse:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 581
+    confidence: high
+    description: Discovers gene fusions from RNA-Seq data using discordant paired-end alignments and split-read
+      analysis
+    name: DeFuse
+    reason: Discovers gene fusions from RNA-Seq data, not regulatory genomics.
+  dimpl:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 3
+    confidence: high
+    description: Discovers structured noncoding RNA motifs in bacterial intergenic regions using a computational
+      pipeline
+    name: DIMPL
+    reason: Discovers structured noncoding RNA motifs, not regulatory DNA elements
+  domino_web-server:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 10
+    confidence: high
+    description: Identifies active modules from a gene network and gene activity profile using the DOMINO
+      algorithm
+    name: DOMINO
+    reason: The tool identifies active modules from gene networks and activity profiles, which is a general
+      network analysis method, not specifically for gene-regulatory networks or regulatory genomics.
+  ectracker:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 0
+    confidence: high
+    description: Detects cell-type or tissue-specific genes and ectopic expression from scRNA-seq data
+      using CellEnrich and TissueEnrich modules
+    name: EcTracker
+    reason: Detects ectopic expression from scRNA-seq data, not regulatory genomics.
+  elm:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 610
+    confidence: high
+    description: Predicts short linear functional motifs in eukaryotic protein sequences using logical
+      filters to reduce false positives
+    name: Eukaryotic linear motif resource (ELM)
+    reason: Predicts short linear motifs in proteins for protein-protein interaction and post-translational
+      modification, not regulatory genomics.
+  eltetrado:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 14
+    confidence: high
+    description: Identifies and classifies tetrads and quadruplexes in DNA/RNA 3D structures based on
+      secondary structure topology
+    name: ElTetrado
+    reason: Focuses on quadruplex secondary structure topology in 3D structures, not on regulatory genomics.
+  eukaryotic_linear_motif:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 286
+    confidence: high
+    description: Annotates and detects eukaryotic linear motifs from protein sequences using a curated
+      repository and prediction tool
+    name: Eukaryotic Linear Motif
+    reason: Annotates and detects short linear motifs in proteins mediating protein-protein interactions,
+      not regulatory genomics.
+  evoprinter:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 3
+    confidence: high
+    description: Discovers conserved DNA sequences shared among three or more orthologous DNAs using alignment
+      algorithms
+    name: EvoPrinter
+    reason: Tool discovers conserved DNA sequences in viral genomes for evolutionary analysis, not regulatory
+      genomics.
+  expansin-engineering-db:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 28
+    confidence: high
+    description: Integrates sequence, structure and functional data on expansins and their homologues
+      from bacteria, fungi and plants
+    name: Expansin Engineering Database
+    reason: Focuses on plant cell wall proteins and carbohydrate binding, not regulatory genomics.
+  flnc:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 4
+    confidence: high
+    description: Identifies novel full-length long noncoding RNAs from RNA-seq data using machine learning
+      without requiring transcriptional initiation profiles
+    name: Flnc
+    reason: Tool identifies lncRNAs from RNA-seq data, not regulatory elements or mechanisms.
+  flyrnai:
+    admitted_by: operation:Transcriptional regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 51
+    confidence: high
+    description: Tracks production of RNAi reagents and screen results for Drosophila cells
+    name: FlyRNAi
+    reason: It is a database for RNAi reagents and screens, not for regulatory genomics.
+  fugu-sg:
+    admitted_by: operation:Transcriptional regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 146
+    confidence: high
+    description: Provides a complete draft sequence, annotations, comparative genomics, and tools for
+      the fugu genome
+    name: IMCB - Fugu Genome Project
+    reason: This is a genome project and database, not a regulatory-genomics tool.
+  funpart:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 0
+    confidence: high
+    description: Partitions heterogeneous cell populations into functionally distinct subpopulations and
+      identifies modules of functionally relevant genes for each from single-cell data
+    name: FunPart
+    reason: Tool focuses on single-cell functional states and immune response cataloging, not gene regulatory
+      network analysis or regulatory genomics.
+  gcsenet:
+    admitted_by: operation:Promoter prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 22
+    confidence: high
+    description: Predicts miRNA-disease associations using an ensemble of GCN, CNN and SENet on a heterogeneous
+      graph of diseases, genes and miRNAs
+    name: GCSENet
+    reason: Predicts miRNA-disease associations, not regulatory genomics.
+  gcup:
+    admitted_by: operation:Transcriptional regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 9
+    confidence: high
+    description: Predicts HIV-1 coreceptor usage from next-generation sequencing data using GPU acceleration
+    name: gCUP
+    reason: Predicts HIV-1 coreceptor usage, not regulatory genomics
+  genetrank:
+    admitted_by: operation:Gene regulatory network prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 0
+    confidence: high
+    description: Prioritizes genes from single-cell analyses for their role in drug pharmacodynamics using
+      random walks with restarts and absorbing states on a protein interaction network
+    name: GENetRank
+    reason: Prioritizes genes for drug pharmacodynamics via protein interaction networks, not regulatory
+      genomics.
+  getintrons:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 0
+    confidence: high
+    description: Extracts introns from a set of transcripts
+    name: getintrons
+    reason: Extracts introns from transcripts, not regulatory genomics
+  gidetector:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 37
+    confidence: high
+    description: Detects genomic islands in prokaryotic genomes using decision-tree based ensemble classifiers
+      trained on multiple genome features
+    name: GIDetector
+    reason: Detects genomic islands in prokaryotic genomes, not regulatory genomics
+  glassgo:
+    admitted_by: operation:Transcriptional regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 0
+    confidence: high
+    description: Finds sRNA homologs from scratch using iterative BLAST searches, pairwise identity filtering,
+      and structure-based clustering
+    name: GLASSgo
+    reason: Finds sRNA homologs, not regulatory elements
+  glytoucan:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 90
+    confidence: high
+    description: Assigns globally unique accession numbers to glycan structures at any resolution level
+    name: GlyTouCan
+    reason: GlyTouCan is a glycan repository, not a regulatory genomics tool.
+  goegcn:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 34
+    confidence: high
+    description: Classifies breast cancer subtypes from RNA-Seq data using weighted differentially expressed
+      genes and gene coexpression network enrichment
+    name: GOEGCN
+    reason: Focuses on breast cancer subtype classification from RNA-Seq data using differential expression
+      and coexpression networks, not on regulatory genomics.
+  grgmf:
+    admitted_by: operation:Promoter prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 84
+    confidence: high
+    description: Predicts links in biomedical bipartite networks using a graph regularized generalized
+      matrix factorization model
+    name: GRGMF
+    reason: Tool predicts links in biomedical bipartite networks (e.g., drug-target, disease-gene) and
+      is not specific to regulatory genomics.
+  grrann:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 41
+    confidence: high
+    description: Predicts phenotypes from gene expression data using a biological network-regularized
+      artificial neural network
+    name: GRRANN
+    reason: Tool predicts phenotypes from gene expression data using network-regularized neural network,
+      not gene regulatory network analysis
+  hba-deals:
+    admitted_by: operation:Promoter prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 17
+    confidence: high
+    description: Simultaneously identifies differential expression and splicing from RNA-seq data using
+      hierarchical Bayesian analysis
+    name: HBA-DEALS
+    reason: Identifies differential expression and splicing from RNA-seq, not regulatory genomics.
+  hfaim:
+    admitted_by: operation:Sequence motif comparison
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 77
+    confidence: high
+    description: Identifies Atg8-interacting motifs in protein sequences using additional sequence constraints
+      for high-fidelity genome-wide prediction
+    name: hfAIM
+    reason: Identifies Atg8-interacting motifs in proteins for autophagy, not regulatory genomics.
+  hot_scan:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 34
+    confidence: high
+    description: Detects genomic regions unusually rich in a given pattern using scan statistics
+    name: hot_scan
+    reason: Detects translocation breakpoint hotspots, not regulatory elements
+  hotnet:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 449
+    confidence: high
+    description: Finds significantly altered subnetworks in a large gene interaction network using a diffusion
+      process and multiple hypothesis testing
+    name: HotNet
+    reason: Finds mutated subnetworks in cancer via protein interaction networks, not gene regulatory
+      networks.
+  hsmotifdiscover:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 0
+    confidence: high
+    description: Identifies motifs in sequences composed of non-single-letter elements by converting them
+      to single-letter codes and using a modified Gibbs-sampling algorithm
+    name: HSMotifDiscover
+    reason: Tool discovers motifs in glycan sequences, not regulatory genomics sequences.
+  human-ires-atlas:
+    admitted_by: operation:Transcriptional regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 51
+    confidence: high
+    description: Integrates putative IRES elements and translation initiation-related features for studying
+      cap-independent translation initiation in humans
+    name: Human IRES Atlas
+    reason: Focuses on cap-independent translation initiation via IRES, not transcriptional regulation
+      or cis-regulatory elements
+  ibm_pattern_discovery:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 12
+    confidence: high
+    description: Web server offering tools for pattern discovery in DNA, protein sequences, and text,
+      plus alignment, gene discovery, and protein annotation
+    name: IBM Bioinformatics and Pattern Discovery Group
+    reason: Tool is a general bioinformatics server for pattern discovery, alignment, and protein annotation,
+      not specifically for regulatory genomics.
+  iceberg:
+    admitted_by: operation:Promoter prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 238
+    confidence: high
+    description: Database of integrative and conjugative elements found in bacteria, with search and analysis
+      tools
+    name: ICEberg
+    reason: Database of bacterial mobile genetic elements, not regulatory genomics
+  ichromo:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 4
+    confidence: high
+    description: Unsupervised analysis of chromosome movements from live imaging time-series data, including
+      segmentation, motif discovery, and causality assessment
+    name: ChroMo
+    reason: Analyzes chromosome movements from live imaging, not regulatory genomics.
+  icodon:
+    admitted_by: operation:cis-regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 1
+    confidence: high
+    description: Designs synonymous codon substitutions to customize mRNA stability and expression in
+      vertebrate coding sequences
+    name: iCodon
+    reason: Designs codon substitutions for mRNA stability, not cis-regulatory element prediction
+  icyp-mfe:
+    admitted_by: operation:Promoter prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 46
+    confidence: high
+    description: Identifies human cytochrome P450 inhibitors using multitask learning and molecular fingerprint-embedded
+      encoding
+    name: iCYP-MFE
+    reason: Predicts cytochrome P450 inhibitors, which is drug metabolism, not regulatory genomics.
+  iflnc:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 4
+    confidence: high
+    description: Identifies full-length long noncoding RNAs from RNA-seq data using machine learning models
+    name: iFlnc
+    reason: Tool identifies long noncoding RNAs from RNA-seq data, which is not a regulatory genomics
+      task but rather transcriptome annotation.
+  ippd:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 27
+    confidence: high
+    description: Extracts isotopic peak patterns from raw mass spectra by fitting template basis functions
+      using non-negative least squares or least absolute deviation regression
+    name: IPPD
+    reason: Tool extracts isotopic peak patterns from mass spectra for proteomics, not regulatory genomics.
+  ireceptor:
+    admitted_by: operation:Sequence motif comparison
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 190
+    confidence: high
+    description: Queries and analyzes antibody/B-cell and T-cell receptor repertoire data across federated
+      repositories
+    name: iReceptor
+    reason: Focuses on adaptive immune receptor repertoires (B-cell/T-cell), not regulatory genomics.
+  irespred:
+    admitted_by: operation:Transcriptional regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 65
+    confidence: high
+    description: Predicts internal ribosome entry sites in viral and cellular sequences using a support
+      vector machine
+    name: IRESPred
+    reason: Predicts internal ribosome entry sites for cap-independent translation, not transcriptional
+      regulatory elements.
+  isma:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 36
+    confidence: high
+    description: Enumerates all instances of a predefined subgraph in a large network using optimized
+      search trees
+    name: ISMA
+    reason: Tool enumerates subgraph patterns in general networks, not specifically regulatory or genomic
+      networks.
+  itihi:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 2
+    confidence: high
+    description: Detects peaks and decomposes signals from spectroscopic data using a graphical interface
+    name: Tihi Toolkit
+    reason: Tool is for general spectroscopic peak detection (NMR, Raman, IR, XRD, UV-vis), not for regulatory
+      genomics.
+  juxtapose:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 16
+    confidence: high
+    description: Compares gene co-expression networks across species, tissues, or conditions using a gene-embedding
+      approach
+    name: Juxtapose
+    reason: Compares gene co-expression networks, not regulatory genomics
+  key_pathway_miner:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 55
+    confidence: high
+    description: Extracts maximal connected subnetworks from biological networks where most genes are
+      similarly expressed in most cases, controlling outlier counts with two parameters
+    name: Key Pathway Miner
+    reason: Tool identifies subnetworks of co-expressed genes, not gene-regulatory networks
+  kimi:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 5
+    confidence: high
+    description: Identifies sequence motifs from molecular sequences with controlled false discovery rate
+      using knockoff inference
+    name: KIMI
+    reason: Tool identifies k-mer motifs for classifying metagenomic sequences, not regulatory motifs
+      like transcription factor binding sites.
+  lap:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 11
+    confidence: high
+    description: Flags chemical liability motifs in antibody sequences by germline, therapeutic, and surface
+      accessibility criteria
+    name: LAP
+    reason: Focuses on antibody chemical liability motifs, not regulatory genomics
+  lasergene:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 31
+    confidence: high
+    description: Comprehensive DNA and protein sequence analysis suite for sequence assembly, SNP detection,
+      virtual cloning, and primer design
+    name: Lasergene
+    reason: The tool is a general sequence analysis suite, not specifically for regulatory genomics.
+  ligap:
+    admitted_by: operation:trans-regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 42
+    confidence: high
+    description: Integrates and visualizes multiple lineages over whole time-course profiles to identify
+      differentially regulated dynamic transcriptome signatures
+    name: LIGAP
+    reason: Tool identifies differentially regulated transcriptome signatures in T cell differentiation,
+      not regulatory genomics tools like TF binding or cis-regulatory elements.
+  lircentral:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 19
+    confidence: high
+    description: Curated database of experimentally validated LIR motifs that bind Atg8 homologs
+    name: LIRcentral
+    reason: Database of LIR motifs binding Atg8 homologs, which are involved in autophagy (protein degradation),
+      not regulatory genomics.
+  lise:
+    admitted_by: operation:Transcription factor binding site prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 25
+    confidence: high
+    description: Predicts small molecule binding sites on proteins using geometric motifs from ligand-interacting
+      protein surface atoms
+    name: LISE
+    reason: Predicts small molecule binding sites on proteins, not regulatory genomics
+  lnclocformer:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 39
+    confidence: high
+    description: Predicts multi-label lncRNA subcellular localization from sequences using a Transformer
+      with localization-specific attention
+    name: LncLocFormer
+    reason: Predicts lncRNA subcellular localization, not regulatory genomics
+  lncrnadb:
+    admitted_by: operation:Transcriptional regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 587
+    confidence: high
+    description: Database of functionally characterized long noncoding RNAs and regulatory mRNAs with
+      sequence, expression, and functional annotations
+    name: lncRNAdb
+    reason: It is a database of long noncoding RNAs, not a regulatory-genomics tool.
+  m5upred:
+    admitted_by: operation:trans-regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 48
+    confidence: high
+    description: Predicts RNA 5-methyluridine sites from primary sequences using support vector machines
+    name: m5UPred
+    reason: Predicts RNA 5-methyluridine modification sites, which is explicitly out of scope as an RNA
+      modification tool.
+  m6ampred:
+    admitted_by: operation:trans-regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 26
+    confidence: high
+    description: Identifies RNA N6,2'-O-dimethyladenosine (m6Am) sites from sequence-derived information
+    name: m6AmPred
+    reason: Tool predicts RNA modification (m6Am) sites, which is explicitly out of scope.
+  m7ghub:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 123
+    confidence: high
+    description: A database and web server for internal mRNA m7G sites, including a predictor and mutation
+      impact assessment
+    name: m7GHub
+    reason: Tool is about RNA modification (m7G), which is explicitly out of scope.
+  maga:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 2
+    confidence: high
+    description: Detects differentially conserved positions in multiple sequence alignments from user-defined
+      groups of sequences
+    name: MAGA
+    reason: Detects differentially conserved positions in multiple sequence alignments, which is a phylogenetic/comparative
+      genomics task, not regulatory genomics.
+  mapanalyzer:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 21
+    confidence: high
+    description: Curates a database of microtubule-associated proteins and predicts novel MAPs using machine
+      learning and homology searching
+    name: MAPanalyzer
+    reason: Tool predicts microtubule-associated proteins, not regulatory genomics.
+  mcl:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 485
+    confidence: high
+    description: Clusters biological networks using the Markov Cluster algorithm
+    name: MCL
+    reason: MCL is a general clustering algorithm for biological networks, not specifically for gene-regulatory
+      networks.
+  meripseqpipe:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 10
+    confidence: high
+    description: An integrated Nextflow pipeline for analyzing MeRIP-seq data from basic processing to
+      downstream analysis with visualization reports
+    name: MeRIPseqPipe
+    reason: MeRIP-seq detects RNA methylation (m6A), which is an RNA modification and explicitly out of
+      scope.
+  meta-meme:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 177
+    confidence: high
+    description: Creates a hidden Markov model of a motif from MEME output and searches sequence databases
+      for matches
+    name: Meta-MEME
+    reason: Tool models protein families and motifs, not regulatory genomics.
+  metaboverse:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 12
+    confidence: high
+    description: Explores and contextualizes metabolic data by automatically searching metabolic networks
+      for regulatory patterns
+    name: Metaboverse
+    reason: Focuses on metabolic networks and pathways, not gene regulatory networks.
+  metaldetector:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 71
+    confidence: high
+    description: Identifies CYS and HIS involved in transition metal protein binding sites and predicts
+      binding site geometry from protein sequence
+    name: MetalDetector
+    reason: predicts metal binding sites in proteins, not regulatory genomics
+  metaron:
+    admitted_by: operation:Promoter prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 4
+    confidence: high
+    description: Predicts operons from metagenomic and whole-genome data using gene co-directionality,
+      intergenic distance, and promoters
+    name: MetaRon
+    reason: Predicts operons, not regulatory elements
+  metbp:
+    admitted_by: operation:DNA binding site prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 2
+    confidence: high
+    description: Detects metal ions binding to RNA base pairs from PDB or mmCIF files
+    name: MetBP
+    reason: Detects metal ions binding to RNA base pairs, which is RNA structure analysis, not regulatory
+      genomics.
+  miRNAmotif:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 15
+    confidence: high
+    description: Searches miRNA precursors for sequence motifs recognized by RNA-binding proteins to predict
+      pre-miRNA–protein interactions
+    name: miRNAmotif
+    reason: predicts RNA-binding protein motifs on miRNA precursors, which is RNA-related and not regulatory
+      genomics
+  microinspector:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 265
+    confidence: high
+    description: Detects miRNA binding sites in a user-defined RNA sequence by searching against known
+      miRNA databases
+    name: MicroInspector
+    reason: Detects miRNA binding sites in RNA sequences, which is RNA modification and post-transcriptional
+      regulation, not regulatory genomics.
+  mirfold:
+    admitted_by: operation:Transcriptional regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 42
+    confidence: high
+    description: Searches for miRNA-like folding in sequences surrounding putative miRNAs, optimized on
+      plant miRNAs
+    name: MiRfold
+    reason: Tool predicts miRNA-like folding, which is RNA secondary structure and non-coding RNA, not
+      regulatory genomics.
+  mirsynergy:
+    admitted_by: operation:Transcriptional regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 84
+    confidence: high
+    description: Detects synergistic miRNA regulatory modules by overlapping neighbourhood expansion from
+      miRNA target and expression data
+    name: Mirsynergy
+    reason: Tool detects miRNA regulatory modules, not transcription-factor binding, promoters, or other
+      regulatory genomics elements in scope.
+  mkt:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 152
+    confidence: high
+    description: Detects signatures of natural selection by comparing different classes of DNA sites using
+      standard and generalized McDonald-Kreitman tests
+    name: MKT
+    reason: Detects natural selection via McDonald-Kreitman test, not regulatory genomics.
+  mobilomefinder:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 84
+    confidence: high
+    description: Discovers bacterial genomic islands by integrating microarray comparative genomic hybridization
+      data and tRNA site analysis
+    name: MobilomeFINDER
+    reason: Focuses on bacterial genomic islands and mobile elements, not regulatory genomics
+  modsubnetbiomident:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 54
+    confidence: high
+    description: Infers functions of longevity genes from modular subnetwork biomarkers of Caenorhabditis
+      elegans aging
+    name: Modular Subnetwork Biomarker Identification
+    reason: Focuses on aging biomarkers and longevity gene function inference, not regulatory genomics.
+  moma:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 133
+    confidence: high
+    description: Segments and tracks cells from phase-contrast images using device geometry, with a leveraged-editing
+      curation interface for single-click error correction
+    name: MoMA
+    reason: Tool segments and tracks cells from images, not for regulatory genomics analysis.
+  motifeR:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 35
+    confidence: high
+    description: Identifies and visualizes statistically significant protein post-translational modification
+      motifs from large datasets
+    name: motifeR
+    reason: Tool identifies protein post-translational modification motifs, which is out of scope
+  mpvnn:
+    admitted_by: operation:Gene regulatory network prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 17
+    confidence: high
+    description: Predicts cancer-specific survival risk from gene expression data using a visible neural
+      network that incorporates pathway knowledge and gene mutation data to model disrupted signal flow
+    name: MPVNN
+    reason: Predicts survival risk from gene expression and mutation data, not regulatory genomics.
+  msifinder:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 13
+    confidence: high
+    description: Detects microsatellite instability status from genome sequencing data using a random
+      forest classifier
+    name: MSIFinder
+    reason: Detects microsatellite instability status, not regulatory genomics
+  msisensor-pro:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 9
+    confidence: high
+    description: Detects microsatellite instability from tumor-only WGS, WES, or panel sequencing data
+      using a multinomial distribution model
+    name: MSIsensor-pro
+    reason: Detects microsatellite instability, not regulatory genomics
+  multibind:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 100
+    confidence: high
+    description: Performs multiple alignment of protein binding sites from protein-small molecule complexes
+      to recognize common physico-chemical binding patterns
+    name: MultiBind
+    reason: Tool aligns protein binding sites from protein-small molecule complexes, which is out of scope
+      as it deals with protein-ligand binding, not regulatory genomics.
+  multipsq:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 4
+    confidence: high
+    description: Analyses multiplex-pyrograms from pyrosequencing reactions for SNP-based pathogen typing
+    name: MultiPSQ
+    reason: Tool is for SNP-based pathogen typing via pyrosequencing, not for regulatory genomics.
+  mustard:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 25
+    confidence: high
+    description: Identifies small non-coding RNA genomic loci using a multi-branch convolutional neural
+      network trained on user-defined genomic regions
+    name: MuStARD
+    reason: Tool identifies small non-coding RNA loci (miRNA, snoRNA), not regulatory elements like promoters
+      or enhancers.
+  myprosle:
+    admitted_by: operation:Gene regulatory network prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 0
+    confidence: high
+    description: Summarizes individual patient transcriptomes into gene modules to predict clinical outcomes
+      in SLE
+    name: MyPROSLE
+    reason: Focuses on gene modules and clinical outcomes in SLE, not on regulatory genomics.
+  ncrna:
+    admitted_by: operation:Transcriptional regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 55
+    confidence: high
+    description: A database of non-translatable RNA transcripts that lack protein-coding capacity, excluding
+      housekeeping RNAs, microRNAs and snoRNAs
+    name: Non-Coding RNA database
+    reason: Database of non-coding RNA sequences, not a tool for regulatory genomics.
+  necare:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 1
+    confidence: high
+    description: Predicts cancer-specific protein-protein interactions using a relational graph convolutional
+      network with knowledge-based features
+    name: NECARE
+    reason: Predicts protein-protein interactions, not gene regulatory networks
+  netactivity:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 1
+    confidence: high
+    description: Computes gene set activity scores from bulk RNA-seq and microarray data using sparsely-connected
+      autoencoders
+    name: NetActivity
+    reason: It computes gene set activity scores from bulk RNA-seq and microarray data, not regulatory
+      genomics.
+  netvenn:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 41
+    confidence: high
+    description: Compares and analyzes gene lists by combining Venn diagrams with interactome network
+      data and functional enrichment
+    name: NetVenn
+    reason: It compares gene lists with Venn diagrams and interactome networks, not specifically for gene-regulatory
+      networks.
+  network_of_cancer_genes:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 41
+    confidence: high
+    description: Collects and integrates data on human genes mutated in cancer, providing information
+      on duplicability, orthology, evolutionary appearance and network properties
+    name: Network of Cancer Genes
+    reason: Focuses on cancer gene mutations and protein interaction networks, not regulatory genomics.
+  nglyalign:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 1
+    confidence: high
+    description: Aligns highly divergent HIV envelope sequences using N-linked glycosylation site constraints
+    name: NGlyAlign
+    reason: Tool aligns HIV envelope sequences using glycosylation site constraints, not regulatory genomics.
+  nlrexpress:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 25
+    confidence: high
+    description: Predicts CC, TIR, NBS, and LRR motifs in plant Nod-like receptor sequences using machine
+      learning
+    name: NLRexpress
+    reason: Predicts protein motifs (CC, TIR, NBS, LRR) in plant NLR proteins, not regulatory genomics.
+  nobai:
+    admitted_by: operation:Transcriptional regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 146
+    confidence: high
+    description: Searches for evolutionary history embedded in the structure of functional RNA molecules
+    name: NOBAI
+    reason: Paper is about colloid physics, not regulatory genomics
+  noisyr:
+    admitted_by: operation:Gene regulatory network prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 50
+    confidence: high
+    description: Quantifies and removes technical noise from high-throughput sequencing count matrices
+      or BAM files using sample-specific signal/noise thresholds
+    name: noisyR
+    reason: Tool is a general noise filter for sequencing data, not specific to regulatory genomics.
+  oktoberfest:
+    admitted_by: operation:Promoter prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 76
+    confidence: high
+    description: Generates and rescores spectral libraries using Prosit-based peptide property predictions
+    name: Oktoberfest
+    reason: Tool is for proteomics spectral library generation and rescoring, not regulatory genomics
+  osconet:
+    admitted_by: operation:Gene regulatory network prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 7
+    confidence: high
+    description: Infers oscillatory gene networks from snapshot single-cell RNA-seq data using a bootstrap-based
+      method
+    name: OscoNet
+    reason: Focuses on oscillatory gene networks and single-cell RNA-seq, not regulatory genomics.
+  p-scan:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 102
+    confidence: high
+    description: Quantifies peaks from cDNA microarray data using statistical comparative analysis
+    name: P-SCAN
+    reason: Tool quantifies peaks from cDNA microarray data for gene expression analysis, not regulatory
+      genomics.
+  panoromics:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 6
+    confidence: high
+    description: Contextualizes genomic variations in personal cancer genomes using clinical evidence
+      and interactome mapping for 26 tumor types
+    name: PanorOmics
+    reason: Focuses on cancer genomics and clinical interpretation, not gene regulatory network analysis.
+  papaml:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 11
+    confidence: high
+    description: Explores selection pressure on protein-coding sequences by parallelizing PAML analyses
+      and detecting negatively selected sites
+    name: paPAML
+    reason: Tool analyzes selection pressure on protein-coding sequences, not regulatory genomics
+  parseq:
+    admitted_by: operation:Transcriptional regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 14
+    confidence: high
+    description: Reconstructs microbial transcription landscapes from RNA-Seq read counts using a state-space
+      model
+    name: Parseq
+    reason: Reconstructs microbial transcription landscapes from RNA-Seq read counts, which is transcriptome
+      reconstruction and not regulatory genomics.
+  pathext:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 2
+    confidence: high
+    description: Identifies differentially active paths from omics-integrated biological networks, even
+      with a single sample or no control
+    name: PathExt
+    reason: Focuses on general path-based mining of omics-integrated networks, not specific to regulatory
+      genomics.
+  paxtoolsr:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 30
+    confidence: high
+    description: Provides R functions to access, query, and manipulate BioPAX pathway data from Pathway
+      Commons
+    name: paxtoolsr
+    reason: Tool is for pathway analysis and BioPAX data, not gene regulatory networks.
+  pbsword:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 4
+    confidence: high
+    description: Searches for geometrically similar protein-protein binding sites from a large-scale database
+      using visual word representations
+    name: PBSword
+    reason: Tool searches for geometrically similar protein-protein binding sites, which is protein structure
+      and docking, not regulatory genomics.
+  pdgpcs:
+    admitted_by: operation:Gene regulatory network prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 10
+    confidence: high
+    description: Predicts personalized cancer driver genes by integrating gene expression, mutation, and
+      pathway data with a prize-collecting Steiner tree model
+    name: PDGPCS
+    reason: Focuses on cancer driver gene prediction via mutation and pathway integration, not gene regulatory
+      network prediction.
+  pdriver:
+    admitted_by: operation:Gene regulatory network prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 0
+    confidence: high
+    description: Discovers personalised coding and miRNA cancer drivers by constructing patient-specific
+      gene networks
+    name: pDriver
+    reason: Focuses on cancer driver discovery via gene networks, not regulatory genomics.
+  peakhood:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 3
+    confidence: high
+    description: Extracts the most likely site context (transcript or genomic) for each CLIP-seq peak
+      region using read information and genomic annotations
+    name: Peakhood
+    reason: CLIP-seq for RNA-binding proteins is out of scope.
+  peaks2utr:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 22
+    confidence: high
+    description: Annotates 3' untranslated regions from aligned sequencing reads and canonical annotation
+      using UTR enrichment of single-cell technologies
+    name: peaks2utr
+    reason: Annotates 3' UTRs from sequencing reads, not regulatory elements or transcription factor binding
+  perfumes:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 1
+    confidence: high
+    description: Identifies over-represented RNA 3D motifs from sequences with binary experimental measurements
+      using BayesPairing2
+    name: PERFUMES
+    reason: Focuses on RNA 3D motifs and secondary structure, not regulatory genomics.
+  phasetank:
+    admitted_by: operation:Regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 97
+    confidence: high
+    description: Systematically characterizes phasiRNAs and their regulatory cascades from plant genomic
+      sequences
+    name: PhaseTank
+    reason: Tool focuses on plant phasiRNAs and their regulatory cascades, which are small RNA-mediated
+      gene regulation mechanisms, not on regulatory genomics of transcription factors, chromatin, or DNA
+      regulatory elements.
+  pipmaker:
+    admitted_by: operation:Regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 1197
+    confidence: high
+    description: Aligns two long genomic DNA sequences to identify conserved segments and produces percent
+      identity plots
+    name: PipMaker
+    reason: PipMaker is a general sequence alignment and conservation visualization tool, not a dedicated
+      regulatory-genomics tool.
+  plantnatsdb:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 116
+    confidence: high
+    description: Annotates and discovers natural antisense transcripts across 69 plant species by integrating
+      genomic and small RNA sequencing data
+    name: PlantNATsDB
+    reason: The tool is a database of natural antisense transcripts, which are regulatory RNAs, not a
+      tool for gene regulatory network analysis or transcriptional regulatory element prediction as claimed
+      by the unreliable EDAM operation.
+  pocketannotate:
+    admitted_by: operation:Transcription factor binding site prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 16
+    confidence: high
+    description: Annotates query proteins at the binding site level by identifying putative ligand-binding
+      sites and matching them against a database of known binding sites
+    name: PocketAnnotate
+    reason: Tool predicts ligand-binding sites in proteins, not regulatory genomics.
+  possum:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 55
+    confidence: high
+    description: A database of similar protein-ligand binding and putative pockets discovered by all-pairs
+      similarity search of known and potential binding sites in the PDB
+    name: PoSSuM
+    reason: Database of protein-ligand binding sites and pockets, out of regulatory genomics scope
+  ppnet:
+    admitted_by: operation:Gene regulatory network prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 4
+    confidence: high
+    description: Identifies functional association networks from phylogenetic profiling of prokaryotic
+      genomes
+    name: PPNet
+    reason: focuses on prokaryotic functional association networks and phylogenetic profiling, not eukaryotic
+      gene regulatory networks
+  predictprotein_open:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 630
+    confidence: high
+    description: Predicts protein structural and functional features from sequence, including secondary
+      structure, solvent accessibility, transmembrane helices, and subcellular localization
+    name: PredictProtein Open
+    reason: Predicts protein structural and functional features, not regulatory genomics
+  prismexp:
+    admitted_by: operation:Gene regulatory network prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 12
+    confidence: high
+    description: Predicts gene annotations from stratified gene-gene co-expression matrices using RNA-seq
+      data
+    name: PrismEXP
+    reason: Predicts general gene annotations from co-expression, not regulatory genomics.
+  prmd:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 11
+    confidence: high
+    description: Integrates plant RNA modification data from 20 species with visualization and functional
+      analysis tools
+    name: PRMD
+    reason: Tool is a database of RNA modifications, which is explicitly out of scope.
+  probis:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 86
+    confidence: high
+    description: Detects protein binding sites based on local structural alignments against the PDB
+    name: ProBiS
+    reason: Detects protein binding sites, not regulatory genomics.
+  probis-ligands:
+    admitted_by: operation:Transcription factor binding site prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 71
+    confidence: high
+    description: Predicts ligands for a protein structure by transposing ligands from similar binding
+      sites in the Protein Data Bank
+    name: ProBiS-ligands
+    reason: Predicts ligands for protein binding sites, not transcription factor binding or regulatory
+      genomics.
+  promateus:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 447
+    confidence: high
+    description: Extends ProMate to predict protein binding sites with user-suggested features
+    name: ProMateus
+    reason: Predicts protein-protein binding sites, not regulatory genomics.
+  promintools:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 0
+    confidence: high
+    description: Compares two sets of protein sequences for global properties and motif content, with
+      application to biomineralization proteins
+    name: ProminTools
+    reason: Tool analyzes protein sequences for biomineralization, not regulatory genomics
+  propr:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 238
+    confidence: high
+    description: Identifies proportionally abundant features from compositional data using three measures
+      of proportionality
+    name: propr
+    reason: Tool is for compositional data analysis and proportionality, not regulatory genomics
+  psrobot:
+    admitted_by: operation:Transcriptional regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 623
+    confidence: high
+    description: Predicts stem-loop small RNA precursors and their targets from plant small RNA sequences
+      using a modified Smith-Waterman algorithm
+    name: psRobot
+    reason: It predicts small RNA precursors and targets, not transcriptional regulatory elements.
+  racoon_clip:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 3
+    confidence: high
+    description: Analyzes iCLIP and eCLIP data to extract RNA binding signal at single-nucleotide resolution
+    name: racoon_clip
+    reason: Tool analyzes RNA-binding protein CLIP data, which is RNA-protein interaction, not regulatory
+      genomics.
+  raptgen:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 5
+    confidence: high
+    description: Generates aptamer sequences using a variational autoencoder with a profile hidden Markov
+      model decoder
+    name: RaptGen
+    reason: Generates aptamer sequences for SELEX, not regulatory genomics.
+  rdb2c2:
+    admitted_by: operation:Promoter prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 0
+    confidence: high
+    description: Predicts residue-residue pairing in β strands from protein sequences using a residual
+      neural network
+    name: RDb2C2
+    reason: Predicts residue-residue pairing in beta strands for protein structure, not regulatory genomics
+  readretro_web:
+    admitted_by: operation:Gene regulatory network prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 1
+    confidence: high
+    description: Predicts plant natural product retrosynthesis pathways using a machine learning model
+      integrated into a web platform
+    name: READRetro
+    reason: Tool predicts retrosynthesis pathways for plant natural products, not gene regulatory networks.
+  rg4-seeker:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 25
+    confidence: high
+    description: Identifies novel and non-canonical rG4 motifs from rG4-seq experiments using tailored
+      noise models
+    name: rG4-seeker
+    reason: rG4-seeker identifies RNA G-quadruplex structures, which are RNA secondary structures, not
+      regulatory-genomics elements.
+  riborex:
+    admitted_by: operation:Transcriptional regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 104
+    confidence: high
+    description: Identifies genes with differential translation efficiency from Ribo-seq and matched RNA-seq
+      data
+    name: Riborex
+    reason: Riborex identifies differential translation efficiency from Ribo-seq data, which is not a
+      regulatory-genomics tool.
+  ripseeker:
+    admitted_by: operation:Transcriptional regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 50
+    confidence: high
+    description: Infers and discriminates RIP peaks from RIP-seq alignments using a two-state HMM with
+      negative binomial emission probability
+    name: RIPSeeker
+    reason: RIPSeeker identifies RNA-protein interactions, not DNA regulatory elements.
+  rldock:
+    admitted_by: operation:Transcription factor binding site prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 26
+    confidence: high
+    description: Predicts binding sites and poses for ligand-RNA interactions
+    name: RLDOCK
+    reason: predicts RNA-small molecule binding, not regulatory genomics
+  rm2target:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 140
+    confidence: high
+    description: Hosts regulatory relationships between writers, erasers and readers of RNA modifications
+      and their target genes for nine RNA modifications in human and mouse
+    name: RM2Target
+    reason: Focuses on RNA modifications (m6A, m5C, pseudouridine, etc.) which are explicitly out of scope
+  rna-targeting:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 65
+    confidence: high
+    description: Predicts CasRx guide efficiency for human and mouse RefSeq genes and enables custom sequence
+      input for guide design
+    name: RNA-targeting
+    reason: Tool predicts guide efficiency for RNA targeting, not regulatory genomics
+  rna_analyzer:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 40
+    confidence: high
+    description: Screens RNA sequences for known structural motifs and functional elements using consensus
+      templates and folding analysis
+    name: RNA Analyzer
+    reason: Focuses on RNA structural motifs and regulatory elements, not DNA regulatory genomics.
+  rnabindr:
+    admitted_by: operation:Transcription factor binding site prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 189
+    confidence: high
+    description: Identifies and displays RNA-binding residues in known complexes and predicts them in
+      proteins of unknown structure using a Naive Bayes classifier
+    name: RNABindR
+    reason: Predicts RNA-binding residues in proteins, not transcription factor binding or regulatory
+      genomics.
+  sanpolya:
+    admitted_by: operation:Promoter prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 27
+    confidence: high
+    description: Identifies polyadenylation signals in human and mouse genomes using a deep neural network
+    name: SANPolyA
+    reason: Polyadenylation signal detection is not a regulatory-genomics task; it is about mRNA 3' end
+      processing, which is out of scope.
+  sbbadger:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 3
+    confidence: high
+    description: Generates synthetic biochemical reaction networks with user-defined degree distributions
+      and kinetic formalisms for benchmarking
+    name: SBbadger
+    reason: Generates synthetic biochemical reaction networks for benchmarking, not regulatory genomics.
+  scan_db:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 7
+    confidence: high
+    description: Integrates and presents single-cell and spatial transcriptome data from the nervous system
+      for interactive exploration
+    name: SCAN
+    reason: SCAN is a database for single-cell and spatial transcriptomics of the nervous system, not
+      a regulatory-genomics tool.
+  scanmot:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 14
+    confidence: high
+    description: Searches for similar sequences by simultaneous matching of multiple motifs with inter-motif
+      spacing constraints
+    name: SCANMOT
+    reason: Tool searches for protein sequence similarities using motifs, not regulatory genomics.
+  scapa:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 106
+    confidence: high
+    description: Analyzes alternative polyadenylation patterns from 10x 3' tag single-cell RNA-seq BAM
+      files and cell clustering results
+    name: scAPA
+    reason: Focuses on alternative polyadenylation, not on regulatory genomics topics like transcription
+      factor binding, chromatin, or gene regulation.
+  scapatrap:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 58
+    confidence: high
+    description: Identifies and quantifies alternative polyadenylation sites from 3' tag single-cell RNA-seq
+      data without requiring prior genome annotation
+    name: scAPAtrap
+    reason: Focuses on alternative polyadenylation sites from 3' tag scRNA-seq, which is RNA processing
+      and not regulatory genomics.
+  scapture:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 42
+    confidence: high
+    description: Identifies, evaluates, and quantifies cleavage and polyadenylation sites from 3' tag-based
+      single-cell RNA-seq using deep learning
+    name: SCAPTURE
+    reason: Focuses on cleavage and polyadenylation sites from RNA-seq, not regulatory genomics.
+  scour:
+    admitted_by: operation:Gene regulatory network prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 5
+    confidence: high
+    description: Predicts metabolite-dependent regulatory interactions from metabolic data using a stepwise
+      machine learning framework
+    name: SCOUR
+    reason: Predicts metabolite-dependent regulatory interactions in metabolic networks, not gene regulatory
+      networks
+  scprisma:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 18
+    confidence: high
+    description: Infers, filters and enhances periodic and linear topological signals from single-cell
+      data using spectral template matching
+    name: scPrisma
+    reason: Focuses on general topological signal analysis in single-cell data, not specifically on gene-regulatory
+      networks or other regulatory genomics topics.
+  scpsrm:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 88
+    confidence: high
+    description: Searches for clusters of CDK consensus motifs in protein sequences
+    name: SCPSRM
+    reason: Tool predicts CDK phosphorylation targets, which is post-translational modification, not regulatory
+      genomics.
+  sctail:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 0
+    confidence: high
+    description: Detects polyadenylation sites from first-strand reads in 3' scRNA-seq data and quantifies
+      alternative PAS usage
+    name: scTail
+    reason: Detects polyadenylation sites from 3' scRNA-seq data, which is RNA processing and not regulatory
+      genomics.
+  sequence_in_sequence_finder:
+    admitted_by: operation:Sequence motif comparison
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 0
+    confidence: high
+    description: Finds accurate nucleic subsequences within a sequence at whole-chromosome or genome scale
+      in seconds
+    name: sequence_in_sequence_finder
+    reason: It finds nucleic subsequences, not regulatory motifs.
+  sfmap:
+    admitted_by: operation:Transcription factor binding site prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 106
+    confidence: high
+    description: Predicts putative splicing factor binding sites in human genomic sequences using the
+      COS(WR) algorithm
+    name: SFmap
+    reason: Predicts splicing factor binding sites on RNA, not DNA regulatory elements
+  signalink3:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 46
+    confidence: high
+    description: Integrates manually curated signaling pathways with interaction, regulation, and expression
+      data for tissue-specific network analysis in humans and model organisms
+    name: SignaLink3
+    reason: SignaLink3 is a signaling pathway database, not a regulatory-genomics tool.
+  sires:
+    admitted_by: operation:Transcriptional regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 113
+    confidence: high
+    description: Predicts iron-responsive elements from RNA sequence and structure data using a web server
+    name: SIREs
+    reason: Predicts iron-responsive elements in RNA, which are post-transcriptional regulatory motifs,
+      not cis-regulatory DNA elements like promoters or enhancers.
+  sitehound-web:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 232
+    confidence: high
+    description: Identifies ligand binding sites in protein structures using carbon and phosphate probes
+    name: SITEHOUND-web
+    reason: Identifies ligand binding sites in protein structures, not regulatory genomics.
+  skipper:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 43
+    confidence: high
+    description: End-to-end workflow converting unprocessed CLIP-seq reads into annotated binding sites
+      using an improved statistical framework
+    name: Skipper
+    reason: Tool is for RNA-binding protein CLIP-seq analysis, not regulatory genomics.
+  slncky:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 189
+    confidence: high
+    description: Filters high-quality lncRNAs from reconstructed RNA-seq data and identifies conserved
+      lncRNAs using a sensitive noncoding alignment method
+    name: slncky
+    reason: Tool filters lncRNAs and studies their evolution, not regulatory genomics.
+  snoglobe:
+    admitted_by: operation:trans-regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 27
+    confidence: high
+    description: Predicts C/D snoRNA RNA targets using a gradient boosting classifier on human transcriptome
+      data
+    name: snoGloBe
+    reason: Predicts C/D snoRNA RNA targets, which is RNA modification-related and out of scope
+  snogps:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 160
+    confidence: high
+    description: Searches for H/ACA snoRNA genes in genomic sequences using a deterministic screening
+      algorithm combined with a probabilistic model
+    name: snoGPS
+    reason: Tool predicts H/ACA snoRNA genes guiding pseudouridylation, which is an RNA modification,
+      not a regulatory genomics function.
+  spacer:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 103
+    confidence: high
+    description: Analyzes protein structures to find functional and effector binding sites and shows allosteric
+      communication between them
+    name: SPACER
+    reason: Analyzes protein structures for allosteric and effector binding sites, not regulatory genomics.
+  spascer:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 53
+    confidence: high
+    description: Annotates spatial transcriptomics data at single-cell resolution by integrating scRNA-seq
+      for cell type deconvolution, spatial cell-cell interactions, and gene pattern analysis
+    name: SPASCER
+    reason: SPASCER is a spatial transcriptomics database and annotation tool, not a regulatory genomics
+      tool.
+  sponge:
+    admitted_by: operation:Transcription factor binding site prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 59
+    confidence: high
+    description: Detects competitive endogenous RNA interactions from paired miRNA and gene expression
+      data using multiple sensitivity correlation
+    name: SPONGE
+    reason: Detects ceRNA interactions from miRNA and gene expression, not transcription factor binding
+      or cis-regulatory elements.
+  srna_workflow:
+    admitted_by: operation:Transcriptional regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 10
+    confidence: high
+    description: Analyzes plant sRNA sequencing data from raw reads to annotated conserved and novel sequences
+    name: sRNA workflow
+    reason: Tool is for small RNA (sRNA) sequencing analysis, not for transcriptional regulatory elements.
+  ssblazer:
+    admitted_by: operation:Transcriptional regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 7
+    confidence: high
+    description: Predicts single-strand break sites at nucleotide resolution from genome-wide sequencing
+      data using a deep learning framework
+    name: SSBlazer
+    reason: Predicts single-strand break sites in DNA, which is DNA damage repair, not regulatory genomics.
+  starmir:
+    admitted_by: operation:Transcription factor binding site prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 138
+    confidence: high
+    description: Predicts microRNA binding sites on target RNA using logistic models from CLIP data
+    name: STarMir
+    reason: Predicts microRNA binding sites on target RNA, which is RNA regulation, not regulatory genomics.
+  subtiwiki:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 41
+    confidence: high
+    description: Compiles and integrates genomic, mutant fitness, protein structure, and metabolite data
+      for Bacillus subtilis
+    name: SubtiWiki
+    reason: SubtiWiki is a general-purpose database for Bacillus subtilis, not a tool specifically for
+      regulatory genomics.
+  tact:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 334
+    confidence: high
+    description: Integrates sequence similarity searches and functional motif predictions to annotate
+      transcripts
+    name: TACT
+    reason: Focuses on general gene annotation and transcript characterization, not regulatory genomics.
+  talenoffer:
+    admitted_by: operation:Transcriptional regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 98
+    confidence: high
+    description: Predicts off-targets of TALENs genome-wide using a novel algorithm
+    name: TALENoffer
+    reason: TALENoffer predicts off-targets of TALENs for genome editing, not regulatory elements.
+  tarpid:
+    admitted_by: operation:trans-regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 5
+    confidence: high
+    description: Curates piRNA-target interactions from published literature with expression, methodology,
+      and disease information
+    name: TarpiD
+    reason: piRNA-target interactions are not regulatory genomics; piRNAs are small non-coding RNAs involved
+      in post-transcriptional gene silencing, not transcription-factor binding, chromatin, or cis-regulatory
+      elements.
+  tca:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 9
+    confidence: high
+    description: Identifies age-specific gene signatures by jointly analyzing brain transcriptomes and
+      functional connectomes from MRI data
+    name: TCA
+    reason: TCA integrates MRI and transcriptome data to identify age-specific gene signatures, not regulatory
+      genomics.
+  tcrconv:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 31
+    confidence: high
+    description: Predicts recognition between T cell receptors and epitopes using a deep learning model
+      with contextualized motifs
+    name: TCRconv
+    reason: Predicts T-cell receptor-epitope recognition, which is immunology, not regulatory genomics.
+  teiser:
+    admitted_by: operation:Transcriptional regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 210
+    confidence: high
+    description: Discovers post-transcriptional regulatory elements governing mRNA stability from sequence
+      data
+    name: TEISER
+    reason: Focuses on post-transcriptional mRNA stability elements, not transcriptional regulation
+  tetrex:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 0
+    confidence: high
+    description: Searches for highly conserved motif regex matches in large biological sequence databases
+      using a hierarchical interleaved bloom filter
+    name: TetRex
+    reason: It is a general-purpose sequence motif search tool, not specific to regulatory genomics.
+  ting:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 0
+    confidence: high
+    description: Clusters large-scale T cell receptor repertoires by antigen-specificity using CDR3 β
+      sequences
+    name: ting
+    reason: Clusters T cell receptor sequences by antigen-specificity, not regulatory genomics.
+  tn-core:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 3
+    confidence: high
+    description: Integrates Tn-seq and RNA-seq data to generate gene-centric, context-specific core metabolic
+      network reconstructions
+    name: Tn-Core
+    reason: Focuses on metabolic network reconstruction from Tn-seq and RNA-seq, not regulatory genomics
+  topogsa:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 72
+    confidence: high
+    description: Computes and visualizes network topological properties for gene and protein sets in molecular
+      interaction networks
+    name: TopoGSA
+    reason: Focuses on general network topological properties of gene/protein sets, not specifically on
+      gene regulatory networks or regulatory genomics.
+  topp:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 18
+    confidence: high
+    description: Integrates multi-omics features and clinical data from 68 cancer projects for customized
+      prognostic analysis and model construction
+    name: ToPP
+    reason: It is a cancer prognosis platform integrating multi-omics and clinical data, not a tool for
+      gene regulatory network analysis.
+  toxinpred2:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 354
+    confidence: high
+    description: Designs and predicts toxic and non-toxic proteins using similarity, motif, and machine-learning
+      approaches
+    name: ToxinPred2
+    reason: Predicts protein/peptide toxicity, not regulatory genomics
+  transynergy:
+    admitted_by: operation:Gene regulatory network prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 8
+    confidence: high
+    description: Predicts synergistic drug combinations and deconvolutes contributing biological pathways
+      using a deep neural network with gene dependency and drug-target interaction data
+    name: TranSynergy
+    reason: Predicts synergistic drug combinations, not gene regulatory networks.
+  trapp:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 56
+    confidence: high
+    description: Explores protein binding site dynamics and detects transient pockets or sub-pockets from
+      user-uploaded structures or trajectories
+    name: TRAPP
+    reason: predicts protein binding pockets for small-molecule inhibitors, not regulatory genomics
+  trviz:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 13
+    confidence: high
+    description: Decomposes, encodes, aligns and visualizes tandem repeat sequences from alleles and motifs
+    name: TRviz
+    reason: Tool is for tandem repeat sequences, not regulatory genomics.
+  u-shape3D:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 103
+    confidence: high
+    description: Detects subcellular morphological motifs like blebs, filopodia, and lamellipodia from
+      3D microscopy images of cell surfaces
+    name: u-shape3D
+    reason: Detects subcellular morphological motifs in 3D microscopy images, not regulatory genomics
+      motifs
+  usmpep:
+    admitted_by: operation:Transcription factor binding site prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 21
+    confidence: high
+    description: Predicts MHC class I and II binding affinity from peptide sequences using a simple recurrent
+      neural network
+    name: USMPep
+    reason: Predicts MHC-peptide binding for immunotherapy, not transcription factor binding or any regulatory
+      genomics task
+  vamos:
+    admitted_by: operation:Sequence motif discovery
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 46
+    confidence: high
+    description: Annotates variable-number tandem repeats using repeat composition under different levels
+      of motif diversity
+    name: vamos
+    reason: Tool annotates variable-number tandem repeats, not regulatory elements
+  varianttools:
+    admitted_by: operation:Sequence motif comparison
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 0
+    confidence: high
+    description: Detects, filters, calls, compares and plots genomic variants
+    name: VariantTools
+    reason: Tool is for genomic variant calling, not regulatory genomics.
+  vernal:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 1
+    confidence: high
+    description: Mines fuzzy network motifs from RNA 3D structures using graph representation learning
+      and clustering
+    name: Vernal
+    reason: Tool mines RNA 3D structural motifs, not regulatory genomics elements
+  virhostlncr:
+    admitted_by: operation:trans-regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 8
+    confidence: high
+    description: Explores lncRNAs and their targets in viral infections
+    name: VirhostlncR
+    reason: Focuses on lncRNAs and viral infections, not regulatory genomics.
+  virnatrap:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 30
+    confidence: high
+    description: Identifies viral reads and assembles viral contigs from tumor RNA-seq data using a deep
+      learning model
+    name: viRNAtrap
+    reason: Identifies viral reads and assembles viral contigs, not regulatory genomics
+  visgremlin:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 8
+    confidence: high
+    description: Detects and visualizes conserved motifs at the atomic level in 3D protein-ligand interfaces
+      using graph mining
+    name: visGReMLIN
+    reason: Detects conserved motifs in protein-ligand interfaces, which is protein-ligand binding site
+      prediction, not regulatory genomics.
+  vivarium-collective:
+    admitted_by: operation:Gene regulatory network analysis
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 9
+    confidence: high
+    description: A registry of open-source simulation modules that can be wired together to generate multi-scale
+      biological simulations
+    name: Vivarium Collective
+    reason: General multiscale simulation framework, not specific to regulatory genomics
+  vsrnafinder:
+    admitted_by: operation:Peak calling
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 6
+    confidence: high
+    description: Identifies high-confidence viral small RNAs from small RNA-Seq data using peak calling
+      and Poisson distribution
+    name: vsRNAfinder
+    reason: Identifies viral small RNAs from small RNA-Seq data, not regulatory genomics.
+  webgmap:
+    admitted_by: weak-operation+topic
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 7
+    confidence: high
+    description: Aligns cDNA sequences to genomes with integrated visualization and mining tools
+    name: WebGMAP
+    reason: Tool aligns cDNA sequences to genomes for gene annotation and splicing analysis, not regulatory
+      genomics.
+  wto:
+    admitted_by: operation:Gene regulatory network prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 14
+    confidence: high
+    description: Assesses weighted topological overlap to improve fidelity of gene co-expression networks
+    name: wTO
+    reason: Tool is for gene co-expression networks, not gene-regulatory networks
+  xg-m7g:
+    admitted_by: operation:Promoter prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 174
+    confidence: high
+    description: Predicts N7-methylguanosine sites in transcriptomes using XGBoost and SHAP
+    name: XG-m7G
+    reason: Predicts N7-methylguanosine sites, an RNA modification, which is explicitly out of scope.
+  xlnc1dcnn:
+    admitted_by: operation:trans-regulatory element prediction
+    agreed_by:
+    - deepseek-ai/DeepSeek-V4-Flash
+    - deepseek-ai/DeepSeek-V3.1-Terminus
+    citations: 3
+    confidence: high
+    description: Distinguishes long non-coding RNAs from protein-coding transcripts using a one-dimensional
+      convolutional neural network with prediction explanations
+    name: Xlnc1DCNN
+    reason: Tool distinguishes lncRNAs from protein-coding transcripts, not regulatory genomics.
 categories:
   3DGV:
     categories: []

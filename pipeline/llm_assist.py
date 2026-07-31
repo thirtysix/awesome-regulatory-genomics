@@ -200,6 +200,33 @@ from the name or from EDAM terms is worse than leaving it.
 Reply with JSON only:
 {"description": "..."} or {"description": null}"""
 
+SCOPE_AUDIT_SYSTEM = """You review tools that an automated filter ADMITTED into a catalog of \
+regulatory-genomics tools, and identify the ones admitted wrongly.
+
+Each of these was admitted on a single EDAM operation annotation with nothing corroborating it. \
+Those annotations are frequently wrong: a cytochrome-P450 inhibition predictor was admitted as \
+"Promoter prediction", a protein beta-strand predictor likewise. So judge the tool by what its \
+description and paper say it DOES, and treat the EDAM operation as unreliable.
+
+IN scope: transcription-factor binding and motifs; promoters, enhancers and cis-regulatory \
+elements; DNase/ATAC footprinting; ChIP-seq/ATAC-seq peak calling and annotation; chromatin \
+accessibility and nucleosomes; gene-regulatory networks; regulatory variant effect; DNA \
+methylation; the 3D genome (Hi-C, HiChIP, loops, TADs); histone modifications; reporter assays \
+(MPRA/STARR-seq); molecular QTL (eQTL, caQTL); and databases serving any of those.
+
+OUT of scope: general alignment and assembly; RNA secondary structure; protein structure, \
+folding, docking and ligand or small-molecule binding sites; mass spectrometry; proteomics; \
+metabolomics; phylogenetics; generic differential-expression tooling; RNA modification \
+(m6A, m5C, m6Am, pseudouridine); protein post-translational modification including protein \
+methylation and acetylation; and genome-announcement papers. This holds even when the tool \
+shares vocabulary like "motif", "peak", "binding" or "regulatory".
+
+A DNA-binding protein predictor IS in scope. A protein-ligand binding site predictor is NOT. \
+A tool for RNA modification sites is NOT, even though it says "modification site prediction".
+
+Reply with JSON only:
+{"in_scope": true, "confidence": "high|medium|low", "reason": "one short clause"}"""
+
 ADJUDICATE_SYSTEM = """You review bioinformatics tools that an automated filter EXCLUDED from a \
 catalog of regulatory-genomics tools, and identify the ones excluded wrongly.
 
@@ -297,7 +324,7 @@ def paper_context(t: dict) -> dict:
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--jobs", default="categorise",
-                    help="comma-separated: categorise,describe,adjudicate,verify-scope")
+                    help="comma-separated: categorise,describe,adjudicate,audit-scope,verify-scope")
     ap.add_argument("--model", default=BULK_MODEL)
     ap.add_argument("--escalate-model", default=QUALITY_MODEL,
                     help="retry model for invalid or low-confidence bulk output")
@@ -315,7 +342,7 @@ def main() -> None:
                  "the pipeline runs without it.")
 
     jobs = {j.strip() for j in args.jobs.split(",") if j.strip()}
-    unknown = jobs - {"categorise", "describe", "adjudicate", "verify-scope"}
+    unknown = jobs - {"categorise", "describe", "adjudicate", "audit-scope", "verify-scope"}
     if unknown:
         sys.exit(f"unknown job(s): {', '.join(sorted(unknown))}")
 
@@ -483,6 +510,124 @@ def main() -> None:
         out = run_batch(rejects, do_adjudicate, "adjudicate")
         proposals["false_negatives"] = out
         print(f"  {len(out)} flagged as wrongly excluded")
+
+    # --- audit-scope --------------------------------------------------------
+    # The inverse of adjudicate: that one re-reads REJECTIONS, this one re-reads
+    # ADMISSIONS. Records admitted on a single EDAM operation have nothing
+    # corroborating them, and EDAM is wrong often enough that this admitted a
+    # cytochrome-P450 predictor on "Promoter prediction". Two models must agree
+    # before anything is proposed for removal, and the verdict is a proposal in
+    # a review file, never an edit to the catalog.
+    if "audit-scope" in jobs:
+        thin = [t for t in catalog
+                if str(t.get("_select_reason") or "").startswith(("operation:", "weak-"))]
+        thin = thin[: args.limit] if args.limit else thin
+        second = args.escalate_model
+
+        def scope_prompt(t):
+            paper = paper_context(t)
+            lines = [f"Name: {t['name']}",
+                     f"Catalog description: {t.get('description') or '(none)'}",
+                     f"EDAM operations (unreliable): "
+                     f"{', '.join(t.get('_operations') or []) or 'none'}",
+                     f"EDAM topics: {', '.join((t.get('topics') or [])[:6]) or 'none'}",
+                     f"Admitted by rule: {t.get('_select_reason')}"]
+            if paper.get("title"):
+                lines.append(f"Paper title: {paper['title']}")
+            if paper.get("abstract"):
+                lines.append(f"Paper abstract: {paper['abstract'][:1500]}")
+            return "\n".join(lines)
+
+        def ask(model, t):
+            key = f"audit-scope:{model}:{digest(t['name'], t.get('description') or '')}"
+            with lock:
+                if key in cache and not args.refresh:
+                    return cache[key]
+            try:
+                text, cost, _ = call(model, SCOPE_AUDIT_SYSTEM, scope_prompt(t), api_key)
+            except Exception:                               # noqa: BLE001
+                return None
+            with lock:
+                stats["spend"] += cost
+            res = parse_json(text)
+            if not (res and isinstance(res.get("in_scope"), bool)):
+                return None
+            with lock:
+                cache[key] = res
+            return res
+
+        # A sweep whose control case fails measures nothing. Two records that
+        # must come back in scope and two that must come back out; if any of the
+        # four is wrong the prompt or the model is not fit and the run aborts
+        # rather than reporting a rate.
+        by_id = {t["id"]: t for t in catalog}
+        controls = [("macs", True), ("jaspar", True),
+                    ("sitehound-web", False), ("m6ampred", False)]
+        print("audit-scope: checking controls")
+        for cid, want in controls:
+            if cid not in by_id:
+                sys.exit(f"  control {cid} is not in the catalog; cannot validate the sweep")
+            got = ask(args.model, by_id[cid])
+            if not got or got["in_scope"] is not want:
+                sys.exit(f"  control {cid} expected in_scope={want}, got "
+                         f"{got and got['in_scope']}. Aborting rather than reporting a rate.")
+            print(f"  ok {cid}: in_scope={want}")
+
+        print(f"audit-scope: {len(thin)} thinly-admitted records via {args.model}, "
+              f"confirmed with {second} ({args.workers} workers)")
+
+        def do_audit(t):
+            first = ask(args.model, t)
+            if not first or first["in_scope"]:
+                return None
+            confirm = ask(second, t)
+            if not confirm or confirm["in_scope"]:
+                return None                    # disagreement: keep it, the safe direction
+            return {t["id"]: {"name": t["name"],
+                              "description": t.get("description", ""),
+                              "admitted_by": t.get("_select_reason"),
+                              "citations": t.get("citations") or 0,
+                              "reason": first.get("reason", ""),
+                              "confidence": first.get("confidence", "medium"),
+                              "agreed_by": [args.model, second]}}
+
+        out = run_batch(thin, do_audit, "audit-scope")
+        proposals["admitted_out_of_scope"] = out
+        print(f"  {len(out)}/{len(thin)} flagged out of scope by BOTH models")
+
+        # A reviewable file, in the shape overlay.yaml: exclude expects, so a
+        # promotion is a copy-paste rather than a transcription.
+        doc = DATA.parent / "docs" / "scope-audit.md"
+        ranked = sorted(out.items(), key=lambda kv: -(kv[1].get("citations") or 0))
+        lines = [
+            "# Scope audit: records admitted on thin evidence",
+            "",
+            "GENERATED by `pipeline/llm_assist.py --jobs audit-scope`. Proposals, not",
+            "decisions: nothing here is applied. Promote rows into",
+            "`curation/overlay.yaml: exclude`, which is the hand-written layer.",
+            "",
+            f"{len(thin)} of the catalog's records were admitted by a single EDAM operation",
+            "or a weak operation-plus-topic rule, with nothing corroborating them. Those",
+            "annotations are unreliable often enough to matter: a cytochrome-P450 inhibition",
+            "predictor was admitted as `Promoter prediction`. Each was re-read by two models",
+            f"given its description and paper; **{len(out)} were called out of scope by both**.",
+            "Disagreements are kept, which is the conservative direction.",
+            "",
+            "| tool | citations | admitted by | why it does not belong |",
+            "| --- | ---: | --- | --- |",
+        ]
+        for tid, v in ranked:
+            why = v.get("reason", "").replace("|", "/")
+            lines.append(f"| `{tid}` {v['name']} | {v.get('citations') or 0} | "
+                         f"`{v.get('admitted_by')}` | {why} |")
+        lines += ["", "## Ready to paste into `overlay.yaml: exclude`", "", "```yaml"]
+        for tid, v in ranked:
+            why = v.get("reason", "").rstrip(".").replace(":", ";")
+            lines.append(f"  {tid}: {why}")
+        lines += ["```", ""]
+        doc.parent.mkdir(parents=True, exist_ok=True)
+        doc.write_text("\n".join(lines))
+        print(f"  -> {doc}")
 
     # --- verify-scope -------------------------------------------------------
     # Dropping a record from the catalog is destructive, so one model's opinion

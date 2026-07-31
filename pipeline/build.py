@@ -33,6 +33,8 @@ OVERLAY = CURATION / "overlay.yaml"
 PROPOSALS = CURATION / "llm_proposals.yaml"
 CATALOG_JSON = DATA / "catalog.json"
 CATALOG_TSV = DATA / "catalog.tsv"
+EXCLUDED_JSON = DATA / "excluded.json"
+EXCLUDED_TSV = DATA / "excluded.tsv"
 
 TEXT_CATEGORY_RE = {k: [re.compile(p, re.I) for p in v] for k, v in TEXT_CATEGORY.items()}
 
@@ -603,9 +605,20 @@ def main() -> None:
         if t.get("_select_reason", "").startswith("curated")
     }
 
+    # Everything the overlay drops is archived with its full built row, not just
+    # its id. An exclusion is a judgement that may be revisited, and revisiting
+    # it should not need a re-harvest: the row here carries the description,
+    # links, categories and citation count the record had when it was dropped.
+    dropped: list[dict] = []
+
     for tool in enriched:
         bid = tool["biotoolsID"]
-        if bid in excluded or bid in alias_targets:
+        if bid in alias_targets:
+            continue
+        if bid in excluded:
+            row = from_biotools(tool, cites, shared, pubmap, repomap)
+            row["_excluded_reason"] = excluded[bid]
+            dropped.append(row)
             continue
         if bid in llm_out_of_scope and bid not in protected:
             continue
@@ -741,8 +754,27 @@ def main() -> None:
                 for c in COLUMNS
             ])
 
+    dropped.sort(key=lambda r: -(r.get("citations") or 0))
+    EXCLUDED_JSON.write_text(json.dumps(
+        {"meta": {"count": len(dropped),
+                  "note": "Records the hand-written overlay excludes, with the full row "
+                          "they had when dropped. Delete the id from overlay.yaml: exclude "
+                          "and rebuild to reinstate one."},
+         "tools": dropped}, indent=1))
+    with EXCLUDED_TSV.open("w", newline="") as fh:
+        w = csv.writer(fh, delimiter="\t")
+        w.writerow(["excluded_reason"] + COLUMNS)
+        for r in dropped:
+            w.writerow([r.get("_excluded_reason") or ""] + [
+                "|".join(r.get(c) or []) if isinstance(r.get(c), list) else
+                ("" if r.get(c) is None else r.get(c))
+                for c in COLUMNS
+            ])
+
     print(f"catalog: {meta['count']} tools "
           f"({meta['from_biotools']} bio.tools + {meta['curated_seeds']} curated seeds)")
+    if dropped:
+        print(f"  excluded by the overlay: {len(dropped)} archived to {EXCLUDED_TSV.name}")
     print(f"  featured: {meta['featured']}   with repository: {meta['with_repo']} "
           f"({meta['with_repo']/max(meta['count'],1):.0%})"
           + (f"   llm-assisted: {meta['llm_assisted']}" if meta["llm_assisted"] else ""))

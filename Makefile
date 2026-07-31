@@ -2,7 +2,7 @@ PY ?= python3
 PORT ?= 8000        # override if 8000 is taken: make serve PORT=8420
 PIPELINE := $(PY) pipeline
 
-.PHONY: all harvest select enrich links build render audit curate refresh clean check test serve llm bench verify-additions repos repos-revalidate discover discover-refresh discover-lit discover-pubs check-links fill-metadata installs
+.PHONY: all harvest select enrich links build render audit curate refresh clean check test serve llm bench verify-additions repos repos-revalidate discover discover-refresh discover-lit discover-pubs check-links fill-metadata installs audit-scope
 
 ## build everything from the existing sweep (no network beyond enrichment)
 all: select enrich repos links build render audit
@@ -92,6 +92,11 @@ discover-pubs:
 ## hash, so re-runs are free and CI never needs a key.
 llm:
 	$(PIPELINE)/llm_assist.py --jobs categorise,describe,adjudicate,verify-scope
+
+## OPTIONAL: re-read records admitted on one unreliable EDAM operation.
+## Writes docs/scope-audit.md; promote rows into overlay.yaml: exclude.
+audit-scope:
+	$(PIPELINE)/llm_assist.py --jobs audit-scope
 
 ## OPTIONAL: third-model check on records added by hand or by a text rule
 verify-additions:

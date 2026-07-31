@@ -12,6 +12,8 @@ These are overwritten on every build. Edits are lost without warning.
 | `README.md` | `pipeline/render.py` |
 | `docs/index.html`, `docs/catalog.js` | `pipeline/render.py` |
 | `data/catalog.json`, `data/catalog.tsv` | `curation/*.yaml`, then `make curate` |
+| `data/excluded.json`, `data/excluded.tsv` | `curation/overlay.yaml: exclude` |
+| `docs/scope-audit.md` | `pipeline/llm_assist.py --jobs audit-scope`; promote rows into `overlay.yaml: exclude` |
 | `docs/coverage.md` | `curation/benchmark.yaml` |
 | `docs/link-check.md`, `docs/repo-review.md`, `docs/addition-review.md` | their pipeline stage |
 | `docs/registry-discovery.md` | `pipeline/discover_registries.py`; promote rows into `seeds.yaml` |
@@ -241,6 +243,33 @@ were recovered, 32 have no article at all, and the rest are in
 The declared citation can also be the wrong thing to record: `rmspc` declares the
 MSPC paper it wraps, and `consensusSeekeR` a t-mixture statistics paper. Read the
 title before promoting a row.
+
+**One EDAM operation is not enough to admit a record.** 599 of the catalog's
+entries were selected by a single `operation:` match with nothing corroborating
+it, and EDAM is wrong often enough that this let in a cytochrome-P450 inhibition
+predictor on `Promoter prediction`, a protein beta-strand predictor on the same
+tag, a small-molecule docking tool on `Transcription factor binding site
+prediction`, and a microtubule-associated-protein database on `Sequence motif
+discovery`. Re-read by two models on 2026-07-31 against their descriptions and
+papers, **250 were called out of scope by both**: T-cell receptor databases,
+peptide toxicity predictors, cell-image segmentation, and one record whose linked
+paper is colloid physics. 187 non-RNA ones were excluded; the RNA-level group
+(63) was deliberately kept, since whether post-transcriptional regulation belongs
+here is a scope decision rather than an error. This is the same lesson as "a
+matching name is necessary but never sufficient", applied to selection: the
+existing hand-written exclusions were already this exact class of finding
+("General-purpose sequence analysis suite; tagged Sequence motif discovery
+upstream"), just found one at a time. `make audit-scope` writes
+`docs/scope-audit.md`; the sweep aborts unless four control records classify
+correctly first, and only proposes a drop where two different models agree.
+
+**An exclusion must archive the record, not just the id.** Dropping a tool is a
+judgement that gets revisited, and revisiting it should not need a re-harvest.
+`build.py` writes every overlay-excluded record to `data/excluded.json` and
+`data/excluded.tsv` with the full row it had when dropped - description, links,
+categories, citation count. Reinstating one is deleting its id from
+`overlay.yaml: exclude` and rebuilding. Note `exclude` is keyed by **biotoolsID**,
+not by catalog id; they differ often enough to matter.
 
 **The describe stage must read the HARVEST, not the built catalog.** The
 convergence trap again, in the stage the `verify_additions.py` note did not
