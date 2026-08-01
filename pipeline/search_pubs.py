@@ -128,7 +128,7 @@ def adjudicate(tool: dict, cands: list[dict], api_key: str, model: str) -> dict 
     lines = [f"Tool name: {tool['name']}",
              f"What it does: {tool.get('description') or '(unknown)'}", "", "Candidates:"]
     for i, c in enumerate(cands, 1):
-        abstract = enrich.abstract_text(c)
+        abstract = c.get("_abstract") or enrich.abstract_text(c)
         venue = ((c.get("primary_location") or {}).get("source") or {}).get("display_name") or "?"
         lines.append(f"\n[{i}] {c.get('title')}\n    {venue}, {c.get('publication_year')}"
                      f"\n    {abstract[:700] or '(no abstract)'}")

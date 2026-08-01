@@ -216,6 +216,30 @@ output is reported, and the score belongs next to the results. Controls prove th
 target document actually contains - a tool's paper is about the science, so the
 description is a far better key than the name.
 
+## When four variants score the same, the corpus is the ceiling
+
+**Happened:** four retrieval variants were tried for finding a tool's paper -
+OpenAlex by name, OpenAlex by name plus description, a local 21.9M-article PubMed
+corpus by name, and the same corpus by weighted description terms. **All four
+scored 1/4** against papers established by hand. The instinct after each failure
+was to improve the query; the identical score was the signal that the query was
+never the problem.
+
+The diagnosis: for the hardest case the retrieved pool was correct, and no ranking
+could order it, because the description's distinguishing terms (`phasograms`,
+`NucTools`) appear in no abstract while its shared term is common to hundreds of
+papers. A manual web search of the same descriptions scored 4/4 - not a better
+query, a richer corpus. Google indexes tool homepages, third-party tool
+directories and full text, which is where "this page describes tool X and cites
+paper Y" is actually written. Titles and abstracts do not contain it.
+
+**Do differently:** when successive variants of a method score identically, stop
+tuning and ask whether the source contains the signal at all. Check what the
+target evidence physically looks like and where it is written down, before
+building retrieval over a corpus that cannot hold it. And keep the negative
+result in the repository with its ceiling stated, so the next attempt starts from
+the finding rather than the instinct.
+
 ## Ask the thing itself, never search for its name
 
 **Standing rule, re-confirmed:** to find or verify a tool's paper, read what the
