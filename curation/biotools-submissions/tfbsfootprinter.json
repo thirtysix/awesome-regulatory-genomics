@@ -1,0 +1,126 @@
+{
+  "biotoolsID": "tfbsfootprinter",
+  "name": "TFBSFootprinter",
+  "description": "Predicts transcription factor binding sites in up to 316 vertebrate species by scoring JASPAR matrices against Ensembl promoter sequences and combining the match with seven contextual experimental datapoints, including evolutionary conservation, CAGE-defined transcription start sites, eQTLs, ChIP-seq peaks, ATAC-seq accessibility, DNase footprints and gene expression correlation, into a single score per site.",
+  "homepage": "https://github.com/thirtysix/TFBS_footprinting3",
+  "toolType": [
+    "Command-line tool"
+  ],
+  "topic": [
+    {
+      "uri": "http://edamontology.org/topic_0749",
+      "term": "Transcription factors and regulatory sites"
+    },
+    {
+      "uri": "http://edamontology.org/topic_0204",
+      "term": "Gene regulation"
+    },
+    {
+      "uri": "http://edamontology.org/topic_0797",
+      "term": "Comparative genomics"
+    }
+  ],
+  "function": [
+    {
+      "operation": [
+        {
+          "uri": "http://edamontology.org/operation_0445",
+          "term": "Transcription factor binding site prediction"
+        },
+        {
+          "uri": "http://edamontology.org/operation_0441",
+          "term": "cis-regulatory element prediction"
+        },
+        {
+          "uri": "http://edamontology.org/operation_0239",
+          "term": "Sequence motif recognition"
+        },
+        {
+          "uri": "http://edamontology.org/operation_0327",
+          "term": "Phylogenetic footprinting"
+        }
+      ],
+      "note": "Takes Ensembl transcript IDs, scores JASPAR CORE vertebrates non-redundant PWMs against the promoter region, then weights each hit by supporting experimental evidence."
+    }
+  ],
+  "operatingSystem": [
+    "Linux",
+    "Mac",
+    "Windows"
+  ],
+  "language": [
+    "Python"
+  ],
+  "license": "MIT",
+  "cost": "Free of charge",
+  "accessibility": "Open access",
+  "maturity": "Mature",
+  "documentation": [
+    {
+      "url": "https://tfbs-footprinting.readthedocs.io",
+      "type": [
+        "General"
+      ]
+    },
+    {
+      "url": "https://github.com/thirtysix/TFBS_footprinting3#readme",
+      "type": [
+        "Installation instructions"
+      ]
+    }
+  ],
+  "download": [
+    {
+      "url": "https://pypi.org/project/TFBS-footprinting3/",
+      "type": "Software package",
+      "note": "pip install TFBS-footprinting3"
+    },
+    {
+      "url": "https://anaconda.org/thirtysix/tfbs-footprinting3",
+      "type": "Software package",
+      "note": "conda install -c thirtysix -c conda-forge tfbs-footprinting3"
+    },
+    {
+      "url": "https://hub.docker.com/r/thirtysix/tfbs_footprinting",
+      "type": "Container file",
+      "note": "docker pull thirtysix/tfbs_footprinting"
+    }
+  ],
+  "link": [
+    {
+      "url": "https://github.com/thirtysix/TFBS_footprinting3",
+      "type": [
+        "Repository"
+      ]
+    },
+    {
+      "url": "https://github.com/thirtysix/TFBS_footprinting3/issues",
+      "type": [
+        "Issue tracker"
+      ]
+    }
+  ],
+  "publication": [
+    {
+      "doi": "10.1080/21541264.2025.2521764",
+      "pmid": "40646689",
+      "type": [
+        "Primary"
+      ],
+      "note": "Barker HR, Parkkila S, Tolvanen MEE. Transcription 16(2-3):204-223 (2025). Open access, CC BY 4.0."
+    }
+  ],
+  "credit": [
+    {
+      "name": "Harlan R. Barker",
+      "typeRole": [
+        "Developer",
+        "Primary contact"
+      ],
+      "orcidid": "https://orcid.org/0000-0003-4125-2522"
+    }
+  ],
+  "editPermission": {
+    "type": "public"
+  }
+}

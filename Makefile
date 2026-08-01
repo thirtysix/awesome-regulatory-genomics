@@ -2,7 +2,7 @@ PY ?= python3
 PORT ?= 8000        # override if 8000 is taken: make serve PORT=8420
 PIPELINE := $(PY) pipeline
 
-.PHONY: all harvest select enrich links build render audit curate refresh clean check test serve llm bench verify-additions repos repos-revalidate discover discover-refresh discover-lit discover-pubs check-links fill-metadata installs audit-scope recheck-pubs search-pubs
+.PHONY: all harvest select enrich links build render audit curate refresh clean check test serve llm bench verify-additions repos repos-revalidate discover discover-refresh discover-lit discover-pubs check-links fill-metadata installs audit-scope recheck-pubs search-pubs verify-upstream
 
 ## build everything from the existing sweep (no network beyond enrichment)
 all: select enrich repos links build render audit
@@ -102,6 +102,12 @@ audit-scope:
 ## by asking each tool what to cite. Deterministic, no API key.
 recheck-pubs:
 	$(PIPELINE)/discover_pubs.py --recheck-flagged
+
+## Re-check that changes contributed upstream are still in place. Read-only,
+## no token needed. bio.tools keeps no contribution history, so
+## curation/upstream-log.yaml is the only record that a change was ever made.
+verify-upstream:
+	$(PIPELINE)/verify_upstream.py
 
 ## OPTIONAL, LAST RESORT: search for the paper when the tool itself names none,
 ## and have a model adjudicate the candidates. Needs DEEPINFRA_API_KEY.

@@ -27,8 +27,8 @@ These are overwritten on every build. Edits are lost without warning.
 | `curation/llm_proposals.yaml` | it is model output; promote things into `overlay.yaml` |
 | `data/cache/citation_cache.csv` | refreshed from OpenAlex; see the citation gotchas below |
 
-`curation/overlay.yaml`, `curation/seeds.yaml` and `curation/benchmark.yaml` are
-the hand-written layer and are never overwritten.
+`curation/overlay.yaml`, `curation/seeds.yaml`, `curation/benchmark.yaml` and
+`curation/upstream-log.yaml` are the hand-written layer and are never overwritten.
 
 ## Commands
 
@@ -378,6 +378,45 @@ ceiling, so raising it alone changes nothing; what governs length is "one
 sentence" plus the terseness instruction. Meanwhile 461 tools had a source of 40+
 words (median 35 content words) compressed into 11, which is where detail was
 lost. Check the distribution before tuning a limit.
+
+**Writing to bio.tools: four behaviours that will bite automation.** Verified by
+a staged pilot on 2026-08-01, one change at a time.
+
+- **A write can return HTTP 500 and still succeed.** Three of four writes did:
+  the POST that registered TFBSFootprinter, and the PUTs to deepcyps and
+  enhanceratlas. The data landed correctly every time and only the response
+  rendering failed. Never branch on the status code; GET the record back and
+  read the field. Retrying on 500 would double-write, and a retry that varied
+  the `biotoolsID` would have created a duplicate entry.
+- **Read shape is not write shape.** A GET returns `null` for empty fields and
+  the validator rejects nulls, so a record cannot be round-tripped without
+  recursively stripping nulls and empty values first. Also strip the
+  server-managed fields: `additionDate`, `lastUpdate`, `owner`, `validated`,
+  `homepage_status`, `confidence_flag`.
+- **`/api/tool/validate/` is create-only**, so on an existing record the only
+  error it can return is a spurious "ID already exists". There is no dry run for
+  an update. It also renders HTML unless you pass `?format=json`, which reads
+  like a missing endpoint.
+- **`/api/request/` is read-only.** It lists sent and received edit requests but
+  `POST` returns 405, so edit rights can only be requested through the button on
+  the tool card. `collectionID` must be omitted rather than sent empty, and
+  `biotoolsID` must be supplied rather than derived from the name.
+
+**bio.tools records no contribution history.** An edit to a record you do not own
+appears nowhere in your profile: the account lists only `resources` you own, and
+the record itself stores `lastUpdate` with no editor and no diff. The correction
+to deepcyps is invisible everywhere except `curation/upstream-log.yaml`, which is
+why that file is hand-written and tracked. `make verify-upstream` reads it back
+against the live registry and reports anything that has been reverted.
+
+**`homepage_status` is bio.tools' own dead-link flag, and it is not writable.**
+Setting it on a record you own returns 200 and changes nothing, so it is computed
+by their monitor. It is also barely populated: 13 records across the harvest carry
+a non-zero value, while a link check found 130 homepages returning 404 or 410. So
+the useful contribution is to report dead links into that mechanism rather than to
+edit records. Do not simply delete a dead URL either: it still carries the
+institution and path that let a reader find where a resource moved. EnhancerAtlas
+was repointed from a 404 page to its live root, which is the shape to prefer.
 
 **bio.tools `operation=` and `q=` are fuzzy text search, not ontology lookup.**
 Always quote the value. `q="cis-regulatory"` returns 107 records; unquoted it

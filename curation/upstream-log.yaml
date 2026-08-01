@@ -1,0 +1,131 @@
+# Changes contributed back to upstream registries.
+#
+# HAND-WRITTEN. Never generated, never overwritten.
+#
+# bio.tools records no contribution history: an edit to a record you do not own
+# appears nowhere in your profile, and the record itself stores only a
+# `lastUpdate` timestamp with no editor and no diff. So a correction made here
+# leaves no trace anywhere except this file. It is the only durable record that
+# exists, which is why it is hand-written rather than derived from anything.
+#
+# `verify` is re-checked by `pipeline/verify_upstream.py` (`make verify-upstream`),
+# which reads the live record and reports whether the change is still in place.
+# A reverted change is not a failure to hide: upstream may disagree, and knowing
+# that is the point.
+#
+# route:  api-post | api-put | issue | email | ui-request
+# state:  applied | pending | reverted | rejected | superseded
+
+contributions:
+
+  - date: 2026-08-01
+    registry: bio.tools
+    record: tfbsfootprinter
+    name: TFBSFootprinter
+    route: api-post
+    state: applied
+    what: Registered the tool, which had no bio.tools entry at all.
+    field: "(whole record)"
+    before: "(absent)"
+    after: https://bio.tools/tfbsfootprinter
+    evidence: >-
+      Verified absent first: q="TFBSFootprinter" returned 0, and the single
+      fuzzy hit for "TFBS footprinter" was MEME Suite. Own tool, so registration
+      rather than correction.
+    verify:
+      kind: exists
+      expect: true
+
+  - date: 2026-08-01
+    registry: bio.tools
+    record: tfbsfootprinter
+    name: TFBSFootprinter
+    route: api-put
+    state: applied
+    what: Set edit permission to private at the owner's request.
+    field: editPermission.type
+    before: public
+    after: private
+    evidence: Owner's decision; the tool is actively maintained by its author.
+    verify:
+      kind: json-path
+      path: editPermission.type
+      expect: private
+
+  - date: 2026-08-01
+    registry: bio.tools
+    record: deepcyps
+    name: DEEPCYPs
+    route: api-put
+    state: applied
+    what: >-
+      Removed the EDAM operation "Promoter prediction". The tool predicts
+      small-molecule inhibition of cytochrome P450 isoforms; its own topics are
+      drug discovery and drug metabolism, and its declared input and output are
+      "Small molecule structure" and "Protein interaction data". Nothing about it
+      concerns promoters. Molecular docking and Protein modelling were left in
+      place. This single tag is what pulled the record into a regulatory-genomics
+      catalog.
+    field: function[0].operation
+    before: [Molecular docking, Promoter prediction, Protein modelling]
+    after: [Molecular docking, Protein modelling]
+    evidence: >-
+      Record owned by Pub2Tools, an automated pipeline that generates entries
+      from publications, so no human author asserted the annotation.
+      editPermission was public, so the edit needed no request.
+    verify:
+      kind: operation-absent
+      operation: Promoter prediction
+
+  - date: 2026-08-01
+    registry: bio.tools
+    record: nobai
+    name: NOBAI
+    route: issue
+    state: pending
+    what: >-
+      Reported that the recorded PMID is one transposed digit from the tool's
+      own paper, so it resolves to "Ellipsoidal particles at fluid interfaces"
+      (Eur. Phys. J. E) and carries that paper's 146 citations against NOBAI's
+      true 15. The DOI appears to have been populated from the bad PMID, so the
+      two agree and no cross-check between them can catch it.
+    field: publication
+    before: "pmid:18449469 / doi:10.1140/epje/i2007-10314-1"
+    after: "pmid:18448469 / doi:10.1093/nar/gkn220 (proposed)"
+    evidence: https://github.com/bio-tools/biotoolsRegistry/issues/737
+    note: >-
+      Record is editPermission private and owned by ELIXIR-EE, so it cannot be
+      corrected directly. /api/request/ is read-only, so an edit-rights request
+      can only be raised through the button on the tool card.
+    verify:
+      kind: publication-is
+      expect: pmid:18448469
+
+  - date: 2026-08-01
+    registry: bio.tools
+    record: enhanceratlas
+    name: EnhancerAtlas
+    route: api-put
+    state: applied
+    what: >-
+      Repointed the homepage from a page that 404s to the site root, which is
+      alive and serves the resource. The site did not move; only that path went.
+    field: homepage
+    before: http://www.enhanceratlas.org/indexv2.php
+    after: http://www.enhanceratlas.org/
+    evidence: >-
+      indexv2.php returns 404; the root returns 200 and serves a 227 KB page
+      titled "EnhancerAtlas 2.0: an updated resource with typical enhancer
+      annotation in 600 tissue/cell types". Verified it is the tool and not a
+      parked domain before editing. editPermission public, owner Kigaard.
+    note: >-
+      Deliberately a repoint, not a removal. A dead URL still carries the
+      institution and path structure that lets a reader find where something
+      moved, so removing it loses information. This was only editable because
+      the replacement could be verified; the other 5 public dead homepages had
+      no confirmable replacement and were left alone.
+    verify:
+      kind: json-path
+      path: homepage
+      expect: http://www.enhanceratlas.org/
+
