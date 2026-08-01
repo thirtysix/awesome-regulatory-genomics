@@ -2,7 +2,7 @@ PY ?= python3
 PORT ?= 8000        # override if 8000 is taken: make serve PORT=8420
 PIPELINE := $(PY) pipeline
 
-.PHONY: all harvest select enrich links build render audit curate refresh clean check test serve llm bench verify-additions repos repos-revalidate discover discover-refresh discover-lit discover-pubs check-links fill-metadata installs audit-scope recheck-pubs search-pubs verify-upstream
+.PHONY: all harvest select enrich links build render audit curate refresh clean check test serve llm bench verify-additions repos repos-revalidate discover discover-refresh discover-lit discover-pubs check-links fill-metadata installs audit-scope recheck-pubs search-pubs verify-upstream biotools-edit
 
 ## build everything from the existing sweep (no network beyond enrichment)
 all: select enrich repos links build render audit
@@ -108,6 +108,13 @@ recheck-pubs:
 ## curation/upstream-log.yaml is the only record that a change was ever made.
 verify-upstream:
 	$(PIPELINE)/verify_upstream.py
+
+## Edit one bio.tools record safely: snapshots the original first and refuses
+## to proceed without it, then verifies by GET because a write can return 500
+## and still succeed. Needs BIOTOOLS_TOKEN. Use --dry-run first.
+biotools-edit:
+	@echo 'Usage: $(PIPELINE)/biotools_edit.py --record ID --set field=value [--dry-run]'
+	@echo '       $(PIPELINE)/biotools_edit.py --record ID --restore'
 
 ## OPTIONAL, LAST RESORT: search for the paper when the tool itself names none,
 ## and have a model adjudicate the candidates. Needs DEEPINFRA_API_KEY.

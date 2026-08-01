@@ -402,6 +402,16 @@ a staged pilot on 2026-08-01, one change at a time.
   the tool card. `collectionID` must be omitted rather than sent empty, and
   `biotoolsID` must be supplied rather than derived from the name.
 
+**Keep the whole original, not just the field you changed.** bio.tools has no
+version history and no undo, so if an edit turns out wrong the only way back is a
+copy kept beforehand. `curation/upstream-snapshots/` holds the complete record as
+it stood immediately before each edit; the ledger's `before:` says what changed,
+the snapshot holds everything that did not, which is what a restore needs.
+`pipeline/biotools_edit.py` writes the snapshot before it will submit anything
+and `--restore` puts it back. `make verify-upstream` marks any logged edit whose
+snapshot is missing as NO SNAPSHOT, because an edit that cannot be undone is a
+different risk from one that can.
+
 **bio.tools records no contribution history.** An edit to a record you do not own
 appears nowhere in your profile: the account lists only `resources` you own, and
 the record itself stores `lastUpdate` with no editor and no diff. The correction

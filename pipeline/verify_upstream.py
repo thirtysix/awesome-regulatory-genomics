@@ -97,6 +97,12 @@ def main() -> None:
         live = fetch(e["record"]) if e.get("registry") == "bio.tools" else None
         verdict, detail = check(e, live)
         counts[verdict] = counts.get(verdict, 0) + 1
+        snap = str(e.get("snapshot") or "")
+        has_snap = (snap.startswith("(") or
+                    (CURATION.parent / snap).exists() if snap else False)
+        if not has_snap and e.get("route", "").startswith("api-put"):
+            verdict = "NO SNAPSHOT" if verdict == "holds" else verdict
+            detail = "original was not kept; this edit cannot be undone. " + detail
         out.append(dict(date=str(e["date"]), record=e["record"], route=e.get("route"),
                         field=e.get("field"), state=e.get("state"),
                         verdict=verdict, detail=detail))
