@@ -10,7 +10,6 @@ Memory notes: `[[awesome-regulatory-genomics]]`, `[[biotools-edam-annotations-un
 
 - **Public** at https://github.com/thirtysix/awesome-regulatory-genomics
 - **Site live** at https://thirtysix.github.io/awesome-regulatory-genomics/
-- Local: `~/Dropbox/manuscripts/0.datasets_visualizations/002.AI_projects/awesome-regulatory-genomics`
 - **Working tree clean, `main` level with `origin/main` at `62f7e08`.** Nine commits this
   session, all pushed. 131 tests pass; three consecutive builds byte-identical.
 - Credentials: none in the repo. **`OPENALEX_API_KEY` is now read** alongside the optional
@@ -95,10 +94,10 @@ None committed; ask the user.
 
 ## Outstanding, needs the user
 
-- **Rotate the DeepInfra key** used in an earlier session. It never entered the repository but
-  is in that conversation transcript. Still outstanding.
-- The `jobscout` repo has three commits from a stop-hook sweep that were deliberately **not
-  pushed**. Unrelated to this project.
-- Machine-level work from this session (the AppArmor/LibreOffice save bug, the process-churn
-  audit, the redis healthcheck credential) is recorded in `~/system-health/SYSTEM-LOG.md`, not
-  here. The Debian bug report drafted for it was filed by the user on 2026-07-31.
+- Credential rotation for the optional model stages is tracked outside this repository.
+- Machine-level and cross-project items are tracked outside this repository.
+
+<!-- This file is a working handoff, not documentation. Keep it to THIS project.
+     Anything about the machine, other repositories, or credentials belongs in a
+     private note: the repository is public, and git history is not scrubbed by
+     editing a file later. -->

@@ -64,6 +64,15 @@ belongs only in requests to the service that issued it.
 
 ## Conventions
 
+- **This repository is public. `nextsession.md` is the file that forgets that.**
+  It is a working handoff, so it attracts whatever was on the desk at the time,
+  and on 2026-08-01 it was publicly carrying the name of an unrelated private
+  repository, a pointer to the machine's system-health log, an AppArmor bug, the
+  phrase "the redis healthcheck credential", the local Dropbox path, and a note
+  that a credential rotation was still outstanding. None of that has any value to
+  a reader here. Keep the handoff to THIS project; machine-level and
+  cross-project items belong in a private note. Editing the file later does not
+  remove it from git history, so the discipline has to be at write time.
 - **No em-dashes anywhere**, generated or hand-written. A sweep enforces this.
 - Commits use `Harlan Barker <9118487+thirtysix@users.noreply.github.com>`.
   The personal address was scrubbed from history; do not reintroduce it.
