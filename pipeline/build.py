@@ -487,8 +487,20 @@ def apply_verified_publications(row: dict, papers: list[str], cites: dict[str, i
     return f"{missing} verified paper(s) had no citation count" if missing else ""
 
 
+def load_github_cache() -> dict[str, dict]:
+    """Repository metadata keyed by slug, written by enrich.py."""
+    path = DATA / "cache" / "github.json"
+    if not path.exists():
+        return {}
+    try:
+        return json.loads(path.read_text())
+    except ValueError:
+        return {}
+
+
 def from_seed(seed: dict, cites: dict[str, int] | None = None,
-              shared: dict[str, int] | None = None) -> dict:
+              shared: dict[str, int] | None = None,
+              gh: dict[str, dict] | None = None) -> dict:
     """A hand-written entry, given the same citation treatment as a harvested one.
 
     Seeds used to be built with `citations: None` unconditionally, which meant a
@@ -497,6 +509,13 @@ def from_seed(seed: dict, cites: dict[str, int] | None = None,
     displayed blank, purely because it is carried as a seed rather than by
     bio.tools. The suite-paper suppression applies here too, so a seed sharing
     its primary publication with two or more other tools is still left blank.
+
+    Repository metadata had exactly the same hole for exactly the same reason.
+    enrich.py walks the bio.tools sweep, so a seed's repo was never queried and
+    all 25 seeds carrying one showed no stars, no last-push date, no licence and
+    no language - Enformer, BPNet, DeepSEA, pySCENIC and FIMO among them, which
+    are the entries a reader is most likely to check. The slug is stated in
+    seeds.yaml, so the only thing missing was asking.
     """
     ident = ""
     if seed.get("pmid"):
@@ -513,6 +532,9 @@ def from_seed(seed: dict, cites: dict[str, int] | None = None,
     elif ident:
         # The cache is keyed by cache_key(), not by the raw identifier.
         citations = (cites or {}).get(cache_key(ident))
+    info = ((gh or {}).get(seed.get("repo") or "") or {})
+    if info.get("status") != "ok":
+        info = {}
     return {
         "id": seed["name"],
         "name": seed["name"],
@@ -522,8 +544,10 @@ def from_seed(seed: dict, cites: dict[str, int] | None = None,
         "homepage": seed.get("url", ""),
         "repo_url": f"https://github.com/{seed['repo']}" if seed.get("repo") else "",
         "repo_origin": "curated" if seed.get("repo") else "",
-        "repo_stars": None, "repo_pushed": "", "repo_archived": None,
-        "repo_language": "", "repo_license": "",
+        "repo_stars": info.get("stars"), "repo_pushed": info.get("pushed_at") or "",
+        "repo_archived": info.get("archived"),
+        "repo_language": info.get("language") or "",
+        "repo_license": info.get("license") or "",
         "tool_type": [], "topics": [], "languages": [],
         "license": "", "maturity": "", "cost": "",
         "citations": citations, "citation_note": note, "year": seed.get("year", ""),
@@ -556,6 +580,7 @@ def main() -> None:
     cites = load_citation_counts()
     pubmap = load_publication_map()
     repomap = load_repo_map()
+    ghcache = load_github_cache()
     regmap = load_registry_map()
     installmap = load_install_map()
     yearmap = load_year_map()
@@ -629,7 +654,7 @@ def main() -> None:
     for seed in seeds.get("tools") or []:
         if norm_name(seed["name"]) in seen_names:
             continue          # bio.tools already has it; the harvested record wins
-        rows.append(from_seed(seed, cites, shared))
+        rows.append(from_seed(seed, cites, shared, ghcache))
         seeded += 1
 
     # LLM proposals, applied BELOW the hand-written overlay so a human

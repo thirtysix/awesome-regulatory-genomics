@@ -649,6 +649,27 @@ def main() -> None:
             GH_CACHE.write_text(json.dumps(gh_cache, indent=1))
             save_citation_cache(cite_cache)
 
+    # Repositories named in seeds.yaml. enrich.py walks the bio.tools sweep, so a
+    # curated entry's repo was never queried and every seed showed no stars, no
+    # activity, no licence and no language - Enformer, BPNet, DeepSEA, pySCENIC
+    # and FIMO among them. Same shape as the citation gap: fetch for what the
+    # catalog DISPLAYS, not for what the harvest happens to contain.
+    if not args.no_github:
+        seeds_path = CURATION / "seeds.yaml"
+        slugs = []
+        if seeds_path.exists():
+            for seed in (yaml.safe_load(seeds_path.read_text()) or {}).get("tools") or []:
+                slug = (seed.get("repo") or "").strip().strip("/")
+                if slug and slug.count("/") == 1 and slug not in gh_cache:
+                    slugs.append(slug)
+        if slugs:
+            print(f"  {len(slugs)} seed repositories not yet queried")
+            for n, slug in enumerate(dict.fromkeys(slugs), 1):
+                gh_cache[slug] = fetch_github(gh, slug) or {"status": "error"}
+                if n % 20 == 0:
+                    print(f"    {n}/{len(slugs)}", flush=True)
+                    GH_CACHE.write_text(json.dumps(gh_cache, indent=1))
+
     GH_CACHE.write_text(json.dumps(gh_cache, indent=1))
 
     # Papers the catalog displays that the harvest never mentions: seed entries
