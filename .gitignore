@@ -17,3 +17,19 @@ data/cache/literature/
 .env
 *.key
 secrets.*
+
+# Working notes and review output. Kept locally, not published: the default is
+# that a non-code file stays out of the repository unless it earns its place.
+CLAUDE.md
+ROADMAP.md
+RUBBERDUCK.md
+LessonsLearned.md
+nextsession.md
+docs/identifier-check.md
+docs/install-review.md
+docs/literature-discovery.md
+docs/model-benchmark.md
+docs/publication-discovery.md
+docs/publication-recheck.md
+docs/publication-search.md
+docs/zenodo-release.md

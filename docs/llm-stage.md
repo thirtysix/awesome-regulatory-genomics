@@ -28,8 +28,7 @@ of something that reads the sentence.
 ## What `describe` is given, and why
 
 The inputs were audited on 2026-07-31 after the descriptions were queried for
-dissertation use. Two defects were found and fixed; both are written up in
-`CLAUDE.md` with the evidence.
+dissertation use. Two defects were found and fixed.
 
 **Input is the harvest, never the built catalog.** Reading `data/catalog.json`
 fed the model its own previous output, because `build.py` had already merged it
