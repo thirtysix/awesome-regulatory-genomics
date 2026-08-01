@@ -5,6 +5,7 @@ type: dataset
 authors:
   - family-names: Barker
     given-names: Harlan
+    orcid: "https://orcid.org/0000-0003-4125-2522"
 repository-code: "https://github.com/thirtysix/awesome-regulatory-genomics"
 url: "https://thirtysix.github.io/awesome-regulatory-genomics/"
 abstract: >-
@@ -29,6 +30,9 @@ keywords:
   - gene regulatory network
   - bioinformatics software
 license: CC-BY-4.0
+version: "1.0.0"
+date-released: "2026-08-01"
+# doi: add the Zenodo concept DOI here after the first release is archived.
 references:
   - type: database
     title: "bio.tools"

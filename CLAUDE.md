@@ -24,6 +24,7 @@ These are overwritten on every build. Edits are lost without warning.
 | `docs/publication-recheck.md` | `pipeline/discover_pubs.py --recheck-flagged` |
 | `docs/publication-search.md` | `pipeline/search_pubs.py`; weakest evidence in the pipeline, read before promoting |
 | `docs/identifier-check.md` | `pipeline/enrich.py --check-identifiers` |
+| `docs/zenodo-release.md`, `.zenodo.json`, `CITATION.cff` | hand-written; keep `version` in step with the git tag |
 | `curation/llm_proposals.yaml` | it is model output; promote things into `overlay.yaml` |
 | `data/cache/citation_cache.csv` | refreshed from OpenAlex; see the citation gotchas below |
 
