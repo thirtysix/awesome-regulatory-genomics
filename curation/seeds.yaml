@@ -948,3 +948,427 @@ tools:
     categories: [tfbs-prediction]
     tags: [literature]
     pmid: 23522376
+
+  # Added 2026-08-02 from pipeline/discover_registries.py, adjudicated by
+  # pipeline/adjudicate_candidates.py and hand-read. Bioconductor packages that
+  # bio.tools does not index. Publications are deliberately absent: discover_pubs.py
+  # reads each package's own Bioconductor citation page, which is authoritative.
+
+  - name: AMARETTO
+    url: https://bioconductor.org/packages/AMARETTO/
+    description: "Integrates copy number, DNA methylation, and gene expression data to identify driver genes and connect them to co-expressed gene modules"
+    categories:
+    - regulatory-elements
+    - grn-inference
+    - dna-methylation
+    tags:
+    - bioconductor
+
+  - name: annoLinker
+    url: https://bioconductor.org/packages/annoLinker/
+    description: "Annotates genomic peaks by constructing chromatin interaction networks and assigning all genes in connected subgraphs"
+    categories:
+    - peak-annotation
+    - chromatin-3d
+    tags:
+    - bioconductor
+
+  - name: Chicago
+    url: https://bioconductor.org/packages/Chicago/
+    description: "Analyzes Capture Hi-C data to study genomic organization and chromatin interactions"
+    categories:
+    - chromatin-3d
+    tags:
+    - bioconductor
+
+  - name: coMethDMR
+    url: https://bioconductor.org/packages/coMethDMR/
+    description: "Identifies co-methylated and differentially methylated genomic regions associated with continuous phenotypes in epigenome-wide association studies"
+    categories:
+    - dna-methylation
+    tags:
+    - bioconductor
+
+  - name: damidBind
+    url: https://bioconductor.org/packages/damidBind/
+    description: "Analyzes differential binding, gene transcription, and chromatin accessibility from DamID-seq data between two conditions"
+    categories:
+    - regulatory-elements
+    - peak-calling
+    - peak-annotation
+    tags:
+    - bioconductor
+
+  - name: Damsel
+    url: https://bioconductor.org/packages/Damsel/
+    description: "Analyzes DamID data from bam files to identify enriched GATC regions, call peaks, and associate them with nearby genes"
+    categories:
+    - peak-calling
+    - peak-annotation
+    - dna-methylation
+    tags:
+    - bioconductor
+
+  - name: dmGsea
+    url: https://bioconductor.org/packages/dmGsea/
+    description: "Performs efficient gene set enrichment analysis for DNA methylation data, addressing probe dependency and varying probe numbers per gene"
+    categories:
+    - dna-methylation
+    tags:
+    - bioconductor
+
+  - name: EpiDISH
+    url: https://bioconductor.org/packages/EpiDISH/
+    description: "Infers cell-type proportions in mixed samples using DNA methylation data, and identifies differentially methylated cell-types in Epigenome-Wide Association Studies"
+    categories:
+    - dna-methylation
+    tags:
+    - bioconductor
+
+  - name: EpiMix
+    url: https://bioconductor.org/packages/EpiMix/
+    description: "Integrates DNA methylation and gene expression data to identify differentially methylated CpG sites across conditions"
+    categories:
+    - dna-methylation
+    tags:
+    - bioconductor
+
+  - name: EpipwR
+    url: https://bioconductor.org/packages/EpipwR/
+    description: "Performs power analysis for epigenome-wide association studies using quasi-simulation on empirical datasets with continuous or binary outcomes"
+    categories:
+    - dna-methylation
+    tags:
+    - bioconductor
+
+  - name: epiregulon.extra
+    url: https://bioconductor.org/packages/epiregulon.extra/
+    description: "Provides additional plotting, differential, and graph functions for gene regulatory network inference from single-cell data"
+    categories:
+    - regulatory-elements
+    - grn-inference
+    - single-cell
+    tags:
+    - bioconductor
+
+  - name: epiSeeker
+    url: https://bioconductor.org/packages/epiSeeker/
+    description: "Annotates, compares, and visualizes multi-omics epigenetic data, including peak annotation, motif analysis, and overlap significance estimation"
+    categories:
+    - motif-discovery
+    - peak-annotation
+    - comparative
+    tags:
+    - bioconductor
+
+  - name: epistack
+    url: https://bioconductor.org/packages/epistack/
+    description: "Visualizes stacks of genomic tracks centered at regions of interest, sorted by a score"
+    categories:
+    - peak-annotation
+    - chip-resources
+    - histone-marks
+    tags:
+    - bioconductor
+
+  - name: GenomicDistributions
+    url: https://bioconductor.org/packages/GenomicDistributions/
+    description: "Analyzes and visualizes genomic interval distributions across chromosomes, features, and genomic partitions for comparison of range sets"
+    categories:
+    - peak-annotation
+    - comparative
+    tags:
+    - bioconductor
+
+  - name: GenomicInteractionNodes
+    url: https://bioconductor.org/packages/GenomicInteractionNodes/
+    description: "Detects interaction nodes from HiC, HiChIP, and HiCAR data, defining genomic sites with multiple interaction loops"
+    categories:
+    - peak-calling
+    - peak-annotation
+    - chromatin-3d
+    tags:
+    - bioconductor
+
+  - name: GenomicInteractions
+    url: https://bioconductor.org/packages/GenomicInteractions/
+    description: "Handles genomic interaction data like ChIA-PET or Hi-C, annotates features, and produces plots and summary statistics"
+    categories:
+    - chromatin-3d
+    tags:
+    - bioconductor
+
+  - name: geomeTriD
+    url: https://bioconductor.org/packages/geomeTriD/
+    description: "Provides interactive 3D visualization of chromatin structures to identify spatial patterns within genomic regions"
+    categories:
+    - chromatin-3d
+    tags:
+    - bioconductor
+
+  - name: gVenn
+    url: https://bioconductor.org/packages/gVenn/
+    description: "Computes and visualizes overlaps between gene sets or genomic regions with proportional Venn diagrams and UpSet plots"
+    categories:
+    - regulatory-elements
+    - peak-annotation
+    tags:
+    - bioconductor
+
+  - name: HicAggR
+    url: https://bioconductor.org/packages/HicAggR/
+    description: "Analyzes 3D genomic interactions by importing HiC data, normalizing, and aggregating contacts with 1D genomic features like ATAC-Seq and ChIP-Seq peaks"
+    categories:
+    - peak-annotation
+    - chromatin-3d
+    tags:
+    - bioconductor
+
+  - name: HiCaptuRe
+    url: https://bioconductor.org/packages/HiCaptuRe/
+    description: "Provides tools to import, annotate, manipulate, and export Capture Hi-C data for genomic interaction analysis"
+    categories:
+    - chromatin-3d
+    tags:
+    - bioconductor
+
+  - name: HiCcompare
+    url: https://bioconductor.org/packages/HiCcompare/
+    description: "Jointly normalizes and compares multiple Hi-C datasets to detect differences in 3D chromatin structure"
+    categories:
+    - chromatin-3d
+    tags:
+    - bioconductor
+
+  - name: HiCDCPlus
+    url: https://bioconductor.org/packages/HiCDCPlus/
+    description: "Calls significant 3D interactions and performs differential analysis on Hi-C and HiChIP contact matrices"
+    categories:
+    - chromatin-3d
+    tags:
+    - bioconductor
+
+  - name: HiCPotts
+    url: https://bioconductor.org/packages/HiCPotts/
+    description: "Provides a Bayesian framework using the Potts model to identify and correct genomic biases in Hi-C interaction data"
+    categories:
+    - regulatory-elements
+    - peak-calling
+    - chromatin-3d
+    tags:
+    - bioconductor
+
+  - name: hicVennDiagram
+    url: https://bioconductor.org/packages/hicVennDiagram/
+    description: "Generates high-resolution Venn and Upset plots for genomic interaction data from HiC, ChIA-PET, and similar assays"
+    categories:
+    - chromatin-3d
+    tags:
+    - bioconductor
+
+  - name: HIREewas
+    url: https://bioconductor.org/packages/HIREewas/
+    description: "Detects cell-type-specific risk-CpG sites in epigenome-wide association studies by analyzing mixed methylation profiles"
+    categories:
+    - dna-methylation
+    tags:
+    - bioconductor
+
+  - name: HiSpaR
+    url: https://bioconductor.org/packages/HiSpaR/
+    description: "Infers three-dimensional chromatin structures from Hi-C contact matrices using a hierarchical Bayesian model with MCMC sampling"
+    categories:
+    - chromatin-3d
+    tags:
+    - bioconductor
+
+  - name: InteractionSet
+    url: https://bioconductor.org/packages/InteractionSet/
+    description: "Provides base classes and methods for storing and manipulating genomic interaction data from Hi-C and ChIA-PET experiments"
+    categories:
+    - chromatin-3d
+    tags:
+    - bioconductor
+
+  - name: knowYourCG
+    url: https://bioconductor.org/packages/knowYourCG/
+    description: "Performs functional analysis of DNA methylome datasets using supervised learning on CpG dinucleotides"
+    categories:
+    - dna-methylation
+    - single-cell
+    tags:
+    - bioconductor
+
+  - name: linkSet
+    url: https://bioconductor.org/packages/linkSet/
+    description: "Provides base classes for storing, analyzing, and visualizing genomic link data, focusing on gene-enhancer relationships from Hi-C and single-cell ATAC-seq experiments"
+    categories:
+    - regulatory-elements
+    - chromatin-3d
+    - single-cell
+    tags:
+    - bioconductor
+
+  - name: MEDIPS
+    url: https://bioconductor.org/packages/MEDIPS/
+    description: "Analyzes DNA IP-seq data including MeDIP-seq, ChIP-seq, and other quantitative sequencing data for differential coverage and saturation analysis"
+    categories:
+    - peak-calling
+    - peak-annotation
+    - dna-methylation
+    tags:
+    - bioconductor
+
+  - name: metagene2
+    url: https://bioconductor.org/packages/metagene2/
+    description: "Produces metagene plots comparing sequencing coverage across selected genomic regions, with normalization and bootstrap confidence intervals"
+    categories:
+    - regulatory-elements
+    - peak-annotation
+    - chip-resources
+    tags:
+    - bioconductor
+
+  - name: multiHiCcompare
+    url: https://bioconductor.org/packages/multiHiCcompare/
+    description: "Normalizes and detects differences between Hi-C datasets with replicates, using sparse upper triangular matrices"
+    categories:
+    - chromatin-3d
+    tags:
+    - bioconductor
+
+  - name: NoRCE
+    url: https://bioconductor.org/packages/NoRCE/
+    description: "Performs cis enrichment analysis for non-coding RNA sets using functional annotations of proximal coding genes"
+    categories:
+    - regulatory-elements
+    - peak-annotation
+    tags:
+    - bioconductor
+
+  - name: normalize450K
+    url: https://bioconductor.org/packages/normalize450K/
+    description: "Preprocesses and normalizes Illumina Infinium 450K DNA methylation array data to correct for batch effects and dye bias"
+    categories:
+    - dna-methylation
+    tags:
+    - bioconductor
+
+  - name: qpgraph
+    url: https://bioconductor.org/packages/qpgraph/
+    description: "Estimates gene and eQTL networks from high-throughput expression and genotyping assays"
+    categories:
+    - regulatory-elements
+    - grn-inference
+    - molecular-qtl
+    tags:
+    - bioconductor
+
+  - name: r3Cseq
+    url: https://bioconductor.org/packages/r3Cseq/
+    description: "Analyzes long-range chromatin interactions from 3C-seq assay data"
+    categories:
+    - chromatin-3d
+    tags:
+    - bioconductor
+
+  - name: REMP
+    url: https://bioconductor.org/packages/REMP/
+    description: "Predicts DNA methylation of repetitive elements using surrounding genetic and epigenetic information for genomewide analysis"
+    categories:
+    - dna-methylation
+    tags:
+    - bioconductor
+
+  - name: RepViz
+    url: https://bioconductor.org/packages/RepViz/
+    description: "Visualizes genomic regions with replicate-oriented views of sequencing counts and peak comparisons, designed for ChIP-seq and ATAC-seq data"
+    categories:
+    - peak-annotation
+    - chip-resources
+    - nucleosome-chromatin
+    tags:
+    - bioconductor
+
+  - name: rGenomeTracks
+    url: https://bioconductor.org/packages/rGenomeTracks/
+    description: "Integrates visualization of epigenetic data files like narrowPeak, HiC matrix, TADs and arcs within R sessions"
+    categories:
+    - peak-annotation
+    - histone-marks
+    - chromatin-3d
+    tags:
+    - bioconductor
+
+  - name: scHiCcompare
+    url: https://bioconductor.org/packages/scHiCcompare/
+    description: "Performs differential chromatin interaction analysis between two groups of single-cell Hi-C data, including imputation and normalization"
+    categories:
+    - chromatin-3d
+    - single-cell
+    tags:
+    - bioconductor
+
+  - name: scMultiSim
+    url: https://bioconductor.org/packages/scMultiSim/
+    description: "Simulates paired single-cell RNA-seq, ATAC-seq, and RNA velocity data guided by gene regulatory networks and cell-cell interactions"
+    categories:
+    - regulatory-elements
+    - grn-inference
+    - single-cell
+    tags:
+    - bioconductor
+
+  - name: simPIC
+    url: https://bioconductor.org/packages/simPIC/
+    description: "Simulates paired-insertion counts from single-cell ATAC-sequencing data using estimated parameters"
+    categories:
+    - peak-calling
+    - single-cell
+    tags:
+    - bioconductor
+
+  - name: SpectralTAD
+    url: https://bioconductor.org/packages/SpectralTAD/
+    description: "Identifies topologically associated domains from Hi-C contact matrices using spectral clustering with a sliding window"
+    categories:
+    - chromatin-3d
+    tags:
+    - bioconductor
+
+  - name: SPICEY
+    url: https://bioconductor.org/packages/SPICEY/
+    description: "Calculates cell type specificity from single cell transcriptomic and epigenomic data using entropy-based indices"
+    categories:
+    - regulatory-elements
+    - peak-annotation
+    - single-cell
+    tags:
+    - bioconductor
+
+  - name: TADCompare
+    url: https://bioconductor.org/packages/TADCompare/
+    description: "Identifies and characterizes differential Topologically Associated Domains between multiple Hi-C contact matrices"
+    categories:
+    - chromatin-3d
+    tags:
+    - bioconductor
+
+  - name: trackViewer
+    url: https://bioconductor.org/packages/trackViewer/
+    description: "Visualizes mapped reads as interactive track layers for NGS datasets including ChIP-seq, RNA-seq, and methylation data"
+    categories:
+    - peak-annotation
+    - chip-resources
+    - dna-methylation
+    tags:
+    - bioconductor
+
+  - name: UMI4Cats
+    url: https://bioconductor.org/packages/UMI4Cats/
+    description: "Processes, analyzes, and visualizes UMI-4C chromatin contact data from FastQ files to detect differential 3D interactions"
+    categories:
+    - chromatin-3d
+    tags:
+    - bioconductor
+
