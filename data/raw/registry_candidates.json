@@ -3514,7 +3514,7 @@
   {
    "name": "epiRomics",
    "title": "Epigenomic Analysis Package Built for R (epiRomics)",
-   "description": "Epigenomic Analysis Package Built for R (epiRomics) Integrates various levels of epigenomic information, including ChIP-seq, histone modification, ATAC-seq, and RNA-seq data. Regulatory network analysis uses combinatory approaches to infer regions of significance, such as enhancers. Downstream analysis identifies co-occurrence of epigenomic data at regions of interest. Visualization functions display multi-track genomic views with signal overlays. Please contact <ammawla@ucdavis.edu> for suggestions, feedback, or bug reporting.",
+   "description": "Epigenomic Analysis Package Built for R (epiRomics) Integrates various levels of epigenomic information, including ChIP-seq, histone modification, ATAC-seq, and RNA-seq data. Regulatory network analysis uses combinatory approaches to infer regions of significance, such as enhancers. Downstream analysis identifies co-occurrence of epigenomic data at regions of interest. Visualization functions display multi-track genomic views with signal overlays. Please contact <<redacted>> for suggestions, feedback, or bug reporting.",
    "homepage": "https://bioconductor.org/packages/epiRomics/",
    "source": "bioconductor",
    "taxonomy": [

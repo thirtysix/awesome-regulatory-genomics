@@ -5576,7 +5576,7 @@
   "created_at": "2010-10-20",
   "pushed_at": "2025-08-18",
   "topics": [],
-  "description": "Peakzilla is a self-learning algorithm to identify transcription factor binding sites from ChIP-seq data. I would be very happy if you try it and provide me with feedback, so I can improve peakzilla and make you a happier user. Please feel free to send an e-mail to: steinmann.jonas@gmail.com"
+  "description": "Peakzilla is a self-learning algorithm to identify transcription factor binding sites from ChIP-seq data. I would be very happy if you try it and provide me with feedback, so I can improve peakzilla and make you a happier user. Please feel free to send an e-mail to: <redacted>"
  },
  "FunctionLab/DeepArk": {
   "status": "ok",

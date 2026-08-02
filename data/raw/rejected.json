@@ -16050,7 +16050,7 @@
    "biotoolsID": "CGR",
    "name": "CGR",
    "reason": "no-match",
-   "description": "Splice sites detection using chaos game representation and neural network.\n\nEmail: hoangthanhtungvn@gmail.com.\n\nProject description: We propose to use chaos game representation and neural network for ",
+   "description": "Splice sites detection using chaos game representation and neural network.\n\nEmail: <redacted>.\n\nProject description: We propose to use chaos game representation and neural network for ",
    "operations": [
     "Exonic splicing enhancer prediction",
     "Sequence merging",

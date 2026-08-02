@@ -15260,7 +15260,7 @@ descriptions:
 
       Mustache (Multi-scale Detection of Chromatin Loops from Hi-C and Micro-C Maps using Scale-Space
       Representation) is a tool by Abbas Roayaei Ardakany, Halil Tuvan Gezer, Stefano Lonardi and Ferhat
-      Ay (ferhatay@lji.org).'
+      Ay (<redacted>).'
   mustard:
     description: Identifies small non-coding RNA genomic loci using a multi-branch convolutional neural
       network trained on user-defined genomic regions

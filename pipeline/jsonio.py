@@ -9,8 +9,33 @@ from __future__ import annotations
 
 import gzip
 import json
+import re
 from pathlib import Path
 from typing import Any
+
+EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+
+
+def redact_emails(obj: Any) -> Any:
+    """Replace third-party contact addresses in harvested data.
+
+    bio.tools records carry maintainer contact addresses in `credit[].email`,
+    and a few more appear in free text. The harvest held roughly 1,800 distinct
+    addresses and this repository is public, so committing them republishes
+    other people's contact details in bulk. The licence permits it and nobody
+    here uses the field, which makes redaction free.
+
+    Applied at the write boundary rather than as a cleanup pass, because a
+    cleanup pass is undone by the next `make refresh`.
+    """
+    if isinstance(obj, dict):
+        return {k: ("<redacted>" if k == "email" and isinstance(v, str) and v
+                    else redact_emails(v)) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [redact_emails(v) for v in obj]
+    if isinstance(obj, str):
+        return EMAIL_RE.sub("<redacted>", obj)
+    return obj
 
 
 def read_json(path: Path) -> Any:
@@ -22,6 +47,7 @@ def read_json(path: Path) -> Any:
 
 def write_json(path: Path, obj: Any, indent: int | None = 1) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
+    obj = redact_emails(obj)
     if str(path).endswith(".gz"):
         # mtime=0 keeps the output byte-identical across runs, so an unchanged
         # catalog produces an empty git diff instead of a spurious one.

@@ -66,10 +66,18 @@ def req(url, method="GET", payload=None, token=None):
 
 
 def strip(x):
-    """Remove nulls and empties, which the write schema rejects."""
+    """Remove nulls, empties, and redaction placeholders.
+
+    Third-party contact addresses are redacted out of anything committed here,
+    snapshots included. That makes a snapshot safe to publish but unsafe to
+    replay verbatim: restoring one would write the literal string "<redacted>"
+    into someone else's live record. Dropping the placeholder leaves the field
+    untouched upstream instead, which is the correct no-op.
+    """
     if isinstance(x, dict):
         return {k: strip(v) for k, v in x.items()
-                if v is not None and v != [] and v != "" and k not in SERVER_MANAGED}
+                if v is not None and v != [] and v != "" and v != "<redacted>"
+                and k not in SERVER_MANAGED}
     if isinstance(x, list):
         return [strip(v) for v in x if v is not None]
     return x
