@@ -1,0 +1,126 @@
+{
+ "accessibility": null,
+ "additionDate": "2017-03-24T11:59:22Z",
+ "biotoolsCURIE": "biotools:nobai",
+ "biotoolsID": "nobai",
+ "collectionID": [],
+ "confidence_flag": null,
+ "cost": null,
+ "credit": [
+  {
+   "email": "evolutionary-manet@uiuc.edu",
+   "fundrefid": null,
+   "gridid": null,
+   "name": "Support",
+   "note": null,
+   "orcidid": null,
+   "rorid": null,
+   "typeEntity": "Person",
+   "typeRole": [
+    "Primary contact"
+   ],
+   "url": null
+  }
+ ],
+ "description": "Facilitates the search for the evolutionary history embedded in the structure of functional RNA molecules.",
+ "documentation": [
+  {
+   "note": null,
+   "type": [
+    "General"
+   ],
+   "url": "http://www.manet.uiuc.edu/nobai/nobai.php"
+  }
+ ],
+ "download": [],
+ "editPermission": {
+  "authors": [
+   "harlan"
+  ],
+  "type": "group"
+ },
+ "elixirCommunity": [],
+ "elixirNode": [],
+ "elixirPlatform": [],
+ "elixir_badge": 0,
+ "function": [
+  {
+   "cmd": null,
+   "input": [],
+   "note": null,
+   "operation": [
+    {
+     "term": "Single particle alignment and classification",
+     "uri": "http://edamontology.org/operation_3458"
+    },
+    {
+     "term": "Transcriptional regulatory element prediction",
+     "uri": "http://edamontology.org/operation_0438"
+    },
+    {
+     "term": "Single particle analysis",
+     "uri": "http://edamontology.org/operation_3457"
+    },
+    {
+     "term": "RNA structure prediction",
+     "uri": "http://edamontology.org/operation_2441"
+    }
+   ],
+   "output": []
+  }
+ ],
+ "homepage": "http://www.manet.uiuc.edu/nobai/nobai.php",
+ "homepage_status": 0,
+ "language": [],
+ "lastUpdate": "2026-08-01T19:20:20.683833Z",
+ "license": null,
+ "link": [],
+ "maturity": null,
+ "name": "NOBAI",
+ "operatingSystem": [
+  "Linux",
+  "Windows",
+  "Mac"
+ ],
+ "otherID": [],
+ "owner": "ELIXIR-EE",
+ "publication": [
+  {
+   "doi": "10.1140/epje/i2007-10314-1",
+   "metadata": null,
+   "note": null,
+   "pmcid": null,
+   "pmid": "18449469",
+   "type": [],
+   "version": null
+  }
+ ],
+ "relation": [],
+ "toolType": [
+  "Web application"
+ ],
+ "topic": [
+  {
+   "term": "Functional, regulatory and non-coding RNA",
+   "uri": "http://edamontology.org/topic_0659"
+  },
+  {
+   "term": "RNA",
+   "uri": "http://edamontology.org/topic_0099"
+  },
+  {
+   "term": "Molecular interactions, pathways and networks",
+   "uri": "http://edamontology.org/topic_0602"
+  },
+  {
+   "term": "Nucleic acid structure analysis",
+   "uri": "http://edamontology.org/topic_0097"
+  },
+  {
+   "term": "Physics",
+   "uri": "http://edamontology.org/topic_3318"
+  }
+ ],
+ "validated": 1,
+ "version": []
+}

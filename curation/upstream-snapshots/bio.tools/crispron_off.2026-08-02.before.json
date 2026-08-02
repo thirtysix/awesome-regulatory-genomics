@@ -1,0 +1,122 @@
+{
+ "accessibility": null,
+ "additionDate": "2023-01-09T08:43:09.554581Z",
+ "biotoolsCURIE": "biotools:crispron_off",
+ "biotoolsID": "crispron_off",
+ "collectionID": [],
+ "confidence_flag": "tool",
+ "cost": "Free of charge",
+ "credit": [
+  {
+   "email": "gorodkin@rth.dk",
+   "fundrefid": null,
+   "gridid": null,
+   "name": "Jan Gorodkin",
+   "note": null,
+   "orcidid": null,
+   "rorid": null,
+   "typeEntity": "Person",
+   "typeRole": [],
+   "url": null
+  }
+ ],
+ "description": "Webservers for CRISPR Cas9 on- and off-target predictions.",
+ "documentation": [],
+ "download": [],
+ "editPermission": {
+  "authors": [],
+  "type": "public"
+ },
+ "elixirCommunity": [],
+ "elixirNode": [],
+ "elixirPlatform": [],
+ "elixir_badge": 0,
+ "function": [
+  {
+   "cmd": null,
+   "input": [],
+   "note": null,
+   "operation": [
+    {
+     "term": "Editing",
+     "uri": "http://edamontology.org/operation_3096"
+    },
+    {
+     "term": "Promoter prediction",
+     "uri": "http://edamontology.org/operation_0440"
+    }
+   ],
+   "output": []
+  }
+ ],
+ "homepage": "https://rth.dk/resources/crispr/crispron/",
+ "homepage_status": 0,
+ "language": [
+  "JavaScript",
+  "Python",
+  "C"
+ ],
+ "lastUpdate": "2023-01-09T08:43:09.557404Z",
+ "license": "Other",
+ "link": [
+  {
+   "note": null,
+   "type": [
+    "Other"
+   ],
+   "url": "https://rth.dk/resources/crispr/crisproff/"
+  },
+  {
+   "note": null,
+   "type": [
+    "Other"
+   ],
+   "url": "https://rth.dk/resources/crispr/crispron/"
+  }
+ ],
+ "maturity": null,
+ "name": "CRISPRon_off",
+ "operatingSystem": [
+  "Mac",
+  "Linux",
+  "Windows"
+ ],
+ "otherID": [],
+ "owner": "Chan019",
+ "publication": [
+  {
+   "doi": "10.1093/BIOINFORMATICS/BTAC697",
+   "metadata": null,
+   "note": null,
+   "pmcid": null,
+   "pmid": "36271848",
+   "type": [],
+   "version": null
+  }
+ ],
+ "relation": [],
+ "toolType": [
+  "Web application",
+  "Command-line tool"
+ ],
+ "topic": [
+  {
+   "term": "Gene transcripts",
+   "uri": "http://edamontology.org/topic_3512"
+  },
+  {
+   "term": "Genetic engineering",
+   "uri": "http://edamontology.org/topic_3912"
+  },
+  {
+   "term": "Workflows",
+   "uri": "http://edamontology.org/topic_0769"
+  },
+  {
+   "term": "Probes and primers",
+   "uri": "http://edamontology.org/topic_0632"
+  }
+ ],
+ "validated": 1,
+ "version": []
+}

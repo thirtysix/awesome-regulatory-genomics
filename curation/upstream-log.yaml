@@ -85,7 +85,7 @@ contributions:
     record: nobai
     name: NOBAI
     route: issue
-    state: pending
+    state: superseded
     what: >-
       Reported that the recorded PMID is one transposed digit from the tool's
       own paper, so it resolves to "Ellipsoidal particles at fluid interfaces"
@@ -133,3 +133,128 @@ contributions:
       path: homepage
       expect: http://www.enhanceratlas.org/
 
+  - date: 2026-08-02
+    registry: bio.tools
+    record: nobai
+    name: NOBAI
+    route: api-put
+    state: applied
+    what: >-
+      Corrected the publication. The recorded PMID was one transposed digit from
+      the tool's own paper and resolved to "Ellipsoidal particles at fluid
+      interfaces" (Eur. Phys. J. E), carrying that paper's 146 citations against
+      NOBAI's true 15. The DOI had evidently been populated from the bad PMID, so
+      both fields named the physics paper and agreed with each other.
+    field: publication
+    before: "pmid:18449469 / doi:10.1140/epje/i2007-10314-1"
+    after: "pmid:18448469 / doi:10.1093/nar/gkn220"
+    snapshot: curation/upstream-snapshots/bio.tools/nobai.2026-08-02.before.json
+    evidence: >-
+      Reported as issue 737; veitveit granted edit rights on 2026-08-01 rather
+      than applying it upstream, so the correction was made directly.
+      editPermission is now group with harlan as an author.
+    verify:
+      kind: publication-is
+      expect: pmid:18448469
+
+  - date: 2026-08-02
+    registry: bio.tools
+    record: DeepCLIP
+    route: api-put
+    state: applied
+    what: Removed the EDAM operation "cis-regulatory element prediction"; the tool predicts protein-RNA binding; its own topics are RNA immunoprecipitation and protein interactions.
+    field: function[].operation
+    before: '"cis-regulatory element prediction" present'
+    after: '"cis-regulatory element prediction" removed, other operations untouched'
+    snapshot: curation/upstream-snapshots/bio.tools/DeepCLIP.2026-08-02.before.json
+    evidence: >-
+      editPermission public. Part of a batch of ten; four of the ten could not be
+      edited at all, see the note on stale EDAM term/URI pairs.
+    verify:
+      kind: operation-absent
+      operation: cis-regulatory element prediction
+
+  - date: 2026-08-02
+    registry: bio.tools
+    record: RNATracker
+    route: api-put
+    state: applied
+    what: Removed the EDAM operation "cis-regulatory element prediction"; the tool predicts mRNA subcellular localisation.
+    field: function[].operation
+    before: '"cis-regulatory element prediction" present'
+    after: '"cis-regulatory element prediction" removed, other operations untouched'
+    snapshot: curation/upstream-snapshots/bio.tools/RNATracker.2026-08-02.before.json
+    evidence: >-
+      editPermission public. Part of a batch of ten; four of the ten could not be
+      edited at all, see the note on stale EDAM term/URI pairs.
+    verify:
+      kind: operation-absent
+      operation: cis-regulatory element prediction
+
+  - date: 2026-08-02
+    registry: bio.tools
+    record: VISDB
+    route: api-put
+    state: applied
+    what: Removed the EDAM operation "Promoter prediction"; the tool a database of viral integration sites.
+    field: function[].operation
+    before: '"Promoter prediction" present'
+    after: '"Promoter prediction" removed, other operations untouched'
+    snapshot: curation/upstream-snapshots/bio.tools/VISDB.2026-08-02.before.json
+    evidence: >-
+      editPermission public. Part of a batch of ten; four of the ten could not be
+      edited at all, see the note on stale EDAM term/URI pairs.
+    verify:
+      kind: operation-absent
+      operation: Promoter prediction
+
+  - date: 2026-08-02
+    registry: bio.tools
+    record: LTMG
+    route: api-put
+    state: applied
+    what: Removed the EDAM operation "cis-regulatory element prediction"; the tool statistical modelling of expression states in single-cell RNA-seq.
+    field: function[].operation
+    before: '"cis-regulatory element prediction" present'
+    after: '"cis-regulatory element prediction" removed, other operations untouched'
+    snapshot: curation/upstream-snapshots/bio.tools/LTMG.2026-08-02.before.json
+    evidence: >-
+      editPermission public. Part of a batch of ten; four of the ten could not be
+      edited at all, see the note on stale EDAM term/URI pairs.
+    verify:
+      kind: operation-absent
+      operation: cis-regulatory element prediction
+
+  - date: 2026-08-02
+    registry: bio.tools
+    record: clarion
+    route: api-put
+    state: applied
+    what: Removed the EDAM operation "Gene regulatory network prediction"; the tool identifies mRNA subcellular localisation.
+    field: function[].operation
+    before: '"Gene regulatory network prediction" present'
+    after: '"Gene regulatory network prediction" removed, other operations untouched'
+    snapshot: curation/upstream-snapshots/bio.tools/clarion.2026-08-02.before.json
+    evidence: >-
+      editPermission public. Part of a batch of ten; four of the ten could not be
+      edited at all, see the note on stale EDAM term/URI pairs.
+    verify:
+      kind: operation-absent
+      operation: Gene regulatory network prediction
+
+  - date: 2026-08-02
+    registry: bio.tools
+    record: cgnaweb
+    route: api-put
+    state: applied
+    what: Removed the EDAM operation "Promoter prediction"; the tool a sequence-dependent statistical mechanics model of double-stranded DNA.
+    field: function[].operation
+    before: '"Promoter prediction" present'
+    after: '"Promoter prediction" removed, other operations untouched'
+    snapshot: curation/upstream-snapshots/bio.tools/cgnaweb.2026-08-02.before.json
+    evidence: >-
+      editPermission public. Part of a batch of ten; four of the ten could not be
+      edited at all, see the note on stale EDAM term/URI pairs.
+    verify:
+      kind: operation-absent
+      operation: Promoter prediction

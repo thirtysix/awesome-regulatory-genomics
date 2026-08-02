@@ -1,0 +1,135 @@
+{
+ "accessibility": null,
+ "additionDate": "2020-01-14T08:54:28Z",
+ "biotoolsCURIE": "biotools:WheatCRISPR",
+ "biotoolsID": "WheatCRISPR",
+ "collectionID": [],
+ "confidence_flag": "tool",
+ "cost": null,
+ "credit": [
+  {
+   "email": "Sateesh.Kagale@nrc-cnrc.gc.ca",
+   "fundrefid": null,
+   "gridid": null,
+   "name": "Sateesh Kagale",
+   "note": null,
+   "orcidid": "https://orcid.org/0000-0002-7213-1590",
+   "rorid": null,
+   "typeEntity": "Person",
+   "typeRole": [],
+   "url": null
+  }
+ ],
+ "description": "a web-based guide RNA design tool for CRISPR/Cas9-mediated genome editing in wheat.\n\nBACKGROUND:CRISPR Cas9 gene editing has become a revolutionary technique for crop improvement as it can facilitate fast and efficient genetic changes without the retention of transgene components in the final plant line. Lack of robust bioinformatics tools to facilitate the design of highly specific functional guide RNAs (gRNAs) and prediction of off-target sites in wheat is currently an obstacle to effective application of CRISPR technology to wheat improvement. DESCRIPTION:We have developed a web-based bioinformatics tool to design specific gRNAs for genome editing and transcriptional regulation of gene expression in wheat",
+ "documentation": [],
+ "download": [],
+ "editPermission": {
+  "authors": [],
+  "type": "public"
+ },
+ "elixirCommunity": [],
+ "elixirNode": [],
+ "elixirPlatform": [],
+ "elixir_badge": 0,
+ "function": [
+  {
+   "cmd": null,
+   "input": [],
+   "note": null,
+   "operation": [
+    {
+     "term": "Editing",
+     "uri": "http://edamontology.org/operation_3096"
+    },
+    {
+     "term": "Promoter prediction",
+     "uri": "http://edamontology.org/operation_0440"
+    }
+   ],
+   "output": []
+  }
+ ],
+ "homepage": "https://crispr.bioinfo.nrc.ca/WheatCrispr/",
+ "homepage_status": 0,
+ "language": [],
+ "lastUpdate": "2021-01-03T16:29:07Z",
+ "license": null,
+ "link": [],
+ "maturity": null,
+ "name": "WheatCRISPR",
+ "operatingSystem": [],
+ "otherID": [],
+ "owner": "Pub2Tools",
+ "publication": [
+  {
+   "doi": "10.1186/S12870-019-2097-Z",
+   "metadata": {
+    "abstract": "\u00a9 2019 The Author(s).Background: CRISPR/Cas9 gene editing has become a revolutionary technique for crop improvement as it can facilitate fast and efficient genetic changes without the retention of transgene components in the final plant line. Lack of robust bioinformatics tools to facilitate the design of highly specific functional guide RNAs (gRNAs) and prediction of off-target sites in wheat is currently an obstacle to effective application of CRISPR technology to wheat improvement. Description: We have developed a web-based bioinformatics tool to design specific gRNAs for genome editing and transcriptional regulation of gene expression in wheat. A collaborative study between the Broad Institute and Microsoft Research used large-scale empirical evidence to devise algorithms (Doech et al., 2016, Nature Biotechnology 34, 184-191) for predicting the on-target activity and off-target potential of CRISPR/SpCas9 (Streptococcus pyogenes Cas9). We applied these prediction models to determine on-target specificity and potential off-target activity for individual gRNAs targeting specific loci in the wheat genome. The genome-wide gRNA mappings and the corresponding Doench scores predictive of the on-target and off-target activities were used to create a gRNA database which was used as a data source for the web application termed WheatCRISPR. Conclusion: The WheatCRISPR tool allows researchers to browse all possible gRNAs targeting a gene or sequence of interest and select effective gRNAs based on their predicted high on-target and low off-target activity scores, as well as other characteristics such as position within the targeted gene. It is publicly available at https://crispr.bioinfo.nrc.ca/WheatCrispr/.",
+    "authors": [
+     {
+      "name": "Cram D."
+     },
+     {
+      "name": "Kulkarni M."
+     },
+     {
+      "name": "Buchwaldt M."
+     },
+     {
+      "name": "Rajagopalan N."
+     },
+     {
+      "name": "Bhowmik P."
+     },
+     {
+      "name": "Rozwadowski K."
+     },
+     {
+      "name": "Parkin I.A.P."
+     },
+     {
+      "name": "Sharpe A.G."
+     },
+     {
+      "name": "Kagale S."
+     }
+    ],
+    "citationCount": 5,
+    "date": "2019-11-06T00:00:00Z",
+    "journal": "BMC Plant Biology",
+    "title": "WheatCRISPR: A web-based guide RNA design tool for CRISPR/Cas9-mediated genome editing in wheat"
+   },
+   "note": null,
+   "pmcid": "PMC6836449",
+   "pmid": "31694550",
+   "type": [],
+   "version": null
+  }
+ ],
+ "relation": [],
+ "toolType": [],
+ "topic": [
+  {
+   "term": "Genetic engineering",
+   "uri": "http://edamontology.org/topic_3912"
+  },
+  {
+   "term": "Gene expression",
+   "uri": "http://edamontology.org/topic_0203"
+  },
+  {
+   "term": "Plant biology",
+   "uri": "http://edamontology.org/topic_0780"
+  },
+  {
+   "term": "Gene transcripts",
+   "uri": "http://edamontology.org/topic_3512"
+  },
+  {
+   "term": "Agricultural science",
+   "uri": "http://edamontology.org/topic_3810"
+  }
+ ],
+ "validated": 1,
+ "version": []
+}
