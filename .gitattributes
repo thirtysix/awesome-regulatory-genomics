@@ -1,0 +1,10 @@
+# Kept out of release archives (`git archive`, and so the GitHub/Zenodo tarball)
+# but still tracked, because a clone needs them.
+#
+# Only caches that no OFFLINE build reads. build.py and render.py read nine of
+# the twelve files in data/cache, so excluding the directory wholesale would
+# break `make curate` from the archive, which is the reason the archive is worth
+# publishing at all. These three are inputs to the optional API-backed stages.
+data/cache/llm.json           export-ignore
+data/cache/pub_discovery.json export-ignore
+data/cache/search_pubs.json   export-ignore
