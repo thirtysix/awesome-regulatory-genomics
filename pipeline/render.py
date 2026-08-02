@@ -148,6 +148,7 @@ def render_readme(catalog: dict) -> str:
     A("[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) "
       f"[![Tools](https://img.shields.io/badge/tools-{total}-blue)]({SITE}) "
       "[![License: CC BY 4.0](https://img.shields.io/badge/data-CC--BY--4.0-lightgrey)](LICENSE-DATA) "
+      "[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21755613.svg)](https://doi.org/10.5281/zenodo.21755613) "
       f"[![Updated](https://img.shields.io/badge/updated-"
       f"{meta['generated'].replace('-', '--')}-brightgreen)](#)")
     A("")

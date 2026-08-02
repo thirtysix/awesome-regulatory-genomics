@@ -32,7 +32,7 @@ keywords:
 license: CC-BY-4.0
 version: "1.0.0"
 date-released: "2026-08-01"
-# doi: add the Zenodo concept DOI here after the first release is archived.
+doi: "10.5281/zenodo.21755613"   # concept DOI: always resolves to the newest version
 references:
   - type: database
     title: "bio.tools"
