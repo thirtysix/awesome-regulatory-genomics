@@ -49,7 +49,7 @@ ENRICHED = RAW / "enriched.json.gz"
 REJECTED = RAW / "rejected.json"
 PROPOSALS = CURATION / "llm_proposals.yaml"
 CACHE = DATA / "cache" / "llm.json"
-REGISTRY = "~/.claude/skills/deepinfra-models/models.yaml"
+REGISTRY = os.environ.get("DEEPINFRA_MODELS_YAML", "")
 
 # Verified call settings, mirroring the deepinfra-models registry. Sending
 # enable_thinking:false to a forced-thinking model breaks it, and letting a
@@ -74,8 +74,8 @@ QUALITY_MODEL = "deepseek-ai/DeepSeek-V3.1-Terminus"
 
 def load_params(model: str) -> dict:
     """Prefer the shared registry if it is installed; fall back to the table above."""
-    path = os.path.expanduser(REGISTRY)
-    if os.path.exists(path):
+    path = os.path.expanduser(REGISTRY) if REGISTRY else ""
+    if path and os.path.exists(path):
         try:
             reg = yaml.safe_load(open(path))
             for entry in reg.get("models") or []:
