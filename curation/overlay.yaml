@@ -673,6 +673,32 @@ verified_publications:
 # verdict, because the next run would otherwise find the same wrong paper.
 # ---------------------------------------------------------------------------
 no_article:
+  # 2026-08-02: Bioconductor packages whose citation page declares only their
+  # own 10.18129/B9.bioc.* deposit. That means "cite the package", which is a
+  # permanent answer, not a lookup that failed. Recorded so discover_pubs.py
+  # stops re-proposing them every run.
+  AMARETTO: Bioconductor package with no paper of its own; cite the package
+  Damsel: Bioconductor package with no paper of its own; cite the package
+  EpiMix: Bioconductor package with no paper of its own; cite the package
+  GenomicInteractionNodes: Bioconductor package with no paper of its own; cite the package
+  HiCPotts: Bioconductor package with no paper of its own; cite the package
+  HiCaptuRe: Bioconductor package with no paper of its own; cite the package
+  HiSpaR: Bioconductor package with no paper of its own; cite the package
+  HicAggR: Bioconductor package with no paper of its own; cite the package
+  RepViz: Bioconductor package with no paper of its own; cite the package
+  SPICEY: Bioconductor package with no paper of its own; cite the package
+  annoLinker: Bioconductor package with no paper of its own; cite the package
+  coMethDMR: Bioconductor package with no paper of its own; cite the package
+  damidBind: Bioconductor package with no paper of its own; cite the package
+  epiregulon.extra: Bioconductor package with no paper of its own; cite the package
+  gVenn: Bioconductor package with no paper of its own; cite the package
+  hicVennDiagram: Bioconductor package with no paper of its own; cite the package
+  metagene2: Bioconductor package with no paper of its own; cite the package
+  r3Cseq: Bioconductor package with no paper of its own; cite the package
+  rGenomeTracks: Bioconductor package with no paper of its own; cite the package
+  scMultiSim: Bioconductor package with no paper of its own; cite the package
+  simPIC: Bioconductor package with no paper of its own; cite the package
+
   ATACseqTFEA: Bioconductor reports the package citing itself; no article exists
   bifet: Bioconductor reports the package citing itself; no article exists
   chipexoqual: Bioconductor reports the package citing itself; no article exists

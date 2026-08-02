@@ -980,6 +980,7 @@ tools:
     - chromatin-3d
     tags:
     - bioconductor
+    doi: 10.1186/s13059-016-0992-2
 
   - name: coMethDMR
     url: https://bioconductor.org/packages/coMethDMR/
@@ -1040,6 +1041,7 @@ tools:
     - dna-methylation
     tags:
     - bioconductor
+    doi: 10.1093/bioadv/vbaf150
 
   - name: epiregulon.extra
     url: https://bioconductor.org/packages/epiregulon.extra/
@@ -1079,6 +1081,7 @@ tools:
     - comparative
     tags:
     - bioconductor
+    doi: 10.1186/S12864-022-08467-Y
 
   - name: GenomicInteractionNodes
     url: https://bioconductor.org/packages/GenomicInteractionNodes/
@@ -1097,6 +1100,7 @@ tools:
     - chromatin-3d
     tags:
     - bioconductor
+    doi: 10.1186/s12864-015-2140-x
 
   - name: geomeTriD
     url: https://bioconductor.org/packages/geomeTriD/
@@ -1139,6 +1143,7 @@ tools:
     - chromatin-3d
     tags:
     - bioconductor
+    doi: 10.1186/s12859-018-2288-x
 
   - name: HiCDCPlus
     url: https://bioconductor.org/packages/HiCDCPlus/
@@ -1198,6 +1203,7 @@ tools:
     - single-cell
     tags:
     - bioconductor
+    doi: 10.1126/sciadv.adw3027
 
   - name: linkSet
     url: https://bioconductor.org/packages/linkSet/
@@ -1218,6 +1224,7 @@ tools:
     - dna-methylation
     tags:
     - bioconductor
+    doi: 10.1093/bioinformatics/btt650
 
   - name: metagene2
     url: https://bioconductor.org/packages/metagene2/
@@ -1236,6 +1243,7 @@ tools:
     - chromatin-3d
     tags:
     - bioconductor
+    doi: 10.1093/bioinformatics/btz048
 
   - name: NoRCE
     url: https://bioconductor.org/packages/NoRCE/
@@ -1245,6 +1253,7 @@ tools:
     - peak-annotation
     tags:
     - bioconductor
+    doi: 10.1186/s12859-021-04112-9
 
   - name: normalize450K
     url: https://bioconductor.org/packages/normalize450K/
@@ -1263,6 +1272,7 @@ tools:
     - molecular-qtl
     tags:
     - bioconductor
+    doi: 10.1089/cmb.2008.08tt
 
   - name: r3Cseq
     url: https://bioconductor.org/packages/r3Cseq/
@@ -1308,6 +1318,7 @@ tools:
     - single-cell
     tags:
     - bioconductor
+    doi: 10.1016/j.jmb.2025.169155
 
   - name: scMultiSim
     url: https://bioconductor.org/packages/scMultiSim/
@@ -1335,6 +1346,7 @@ tools:
     - chromatin-3d
     tags:
     - bioconductor
+    doi: 10.1186/s12859-020-03652-w
 
   - name: SPICEY
     url: https://bioconductor.org/packages/SPICEY/
@@ -1353,6 +1365,7 @@ tools:
     - chromatin-3d
     tags:
     - bioconductor
+    doi: 10.3389/fgene.2020.00158
 
   - name: trackViewer
     url: https://bioconductor.org/packages/trackViewer/
@@ -1363,6 +1376,7 @@ tools:
     - dna-methylation
     tags:
     - bioconductor
+    doi: 10.1038/s41592-019-0430-y
 
   - name: UMI4Cats
     url: https://bioconductor.org/packages/UMI4Cats/
@@ -1371,4 +1385,5 @@ tools:
     - chromatin-3d
     tags:
     - bioconductor
+    doi: 10.1093/bioinformatics/btab392
 
