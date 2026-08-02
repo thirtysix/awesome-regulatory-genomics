@@ -774,21 +774,12 @@ def main() -> None:
         "llm_assisted": sum(1 for r in rows if r.get("_llm_applied")),
         "llm_scope_dropped": len(llm_out_of_scope),
     }
-    CATALOG_JSON.write_text(json.dumps({"meta": meta, "tools": rows}, indent=1))
-
-    with CATALOG_TSV.open("w", newline="") as fh:
-        w = csv.writer(fh, delimiter="\t")
-        w.writerow(COLUMNS)
-        for r in rows:
-            w.writerow([
-                "|".join(r.get(c) or []) if isinstance(r.get(c), list) else
-                ("" if r.get(c) is None else r.get(c))
-                for c in COLUMNS
-            ])
-
-    # Second floor, independent of harvest.py's. A catalog that loses a quarter
-    # of its tools in one build is a failure somewhere upstream, not a curation
-    # decision: overlay exclusions are deliberate and gradual, an outage is not.
+    # Second floor, independent of harvest.py's, and it must run BEFORE the
+    # write: reading the count back afterwards compares the new file with
+    # itself and always passes, which is how the first version of this check
+    # shipped broken. A catalog that loses a quarter of its tools in one build
+    # is a failure upstream, not a curation decision: overlay exclusions are
+    # deliberate and gradual, an outage is not.
     if CATALOG_JSON.exists():
         try:
             was = json.loads(CATALOG_JSON.read_text())["meta"]["count"]
@@ -800,6 +791,18 @@ def main() -> None:
                 f"  Nothing was written. Check data/raw/selected.json.gz first:\n"
                 f"  a failed harvest produces a small, plausible-looking catalog.\n"
                 f"  Override with --allow-shrink once you know why it shrank.")
+
+    CATALOG_JSON.write_text(json.dumps({"meta": meta, "tools": rows}, indent=1))
+
+    with CATALOG_TSV.open("w", newline="") as fh:
+        w = csv.writer(fh, delimiter="\t")
+        w.writerow(COLUMNS)
+        for r in rows:
+            w.writerow([
+                "|".join(r.get(c) or []) if isinstance(r.get(c), list) else
+                ("" if r.get(c) is None else r.get(c))
+                for c in COLUMNS
+            ])
 
     dropped.sort(key=lambda r: -(r.get("citations") or 0))
     EXCLUDED_JSON.write_text(json.dumps(
