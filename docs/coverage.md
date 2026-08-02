@@ -1,10 +1,10 @@
 # Coverage audit
 
-Generated 2026-07-31 by `make audit`, against [`curation/benchmark.yaml`](../curation/benchmark.yaml).
+Generated 2026-08-02 by `make audit`, against [`curation/benchmark.yaml`](../curation/benchmark.yaml).
 
 The benchmark is a hand-written list of resources the field treats as standard. It is not a ranking and not exhaustive. It exists so that "did the pipeline find the obvious things?" is a measurement rather than an impression.
 
-**153 of 221 benchmark tools present (69%).** Catalog size: 1948 tools.
+**79 of 221 benchmark tools present (36%).** Catalog size: 204 tools.
 
 ## Misses
 
@@ -12,95 +12,169 @@ Each of these is a bug, and the diagnosis says which kind. *Never harvested* mea
 
 | Group | Tool | Diagnosis |
 | --- | --- | --- |
-| motif comparison and visualisation | Tomtom | not found |
-| motif comparison and visualisation | MoSBAT | not found |
-| motif comparison and visualisation | universalmotif | not found |
-| motif comparison and visualisation | ggseqlogo | not found |
-| motif comparison and visualisation | Logolas | not found |
-| nucleosome and chromatin state | DANPOS | not found |
-| nucleosome and chromatin state | iNPS | not found |
-| nucleosome and chromatin state | NucTools | not found |
-| single-cell regulatory genomics | MAESTRO | not found |
-| harder motif discovery | MEME-ChIP | not found |
-| harder motif discovery | Improbizer | not found |
-| harder motif discovery | Amadeus | not found |
-| harder motif discovery | CisFinder | not found |
-| harder peak calling | HMMRATAC | not found |
-| harder peak calling | THOR | not found |
-| harder peak calling | Ritornello | not found |
-| harder peak calling | BCP | not found |
-| harder footprinting | BaGFoot | not found |
-| harder footprinting | DNase2TF | not found |
-| harder footprinting | seqOutBias | not found |
-| harder footprinting | Romulus | not found |
-| harder gene regulatory networks | CLR | not found |
-| harder gene regulatory networks | SCODE | not found |
-| harder gene regulatory networks | PIDC | not found |
-| harder gene regulatory networks | CellOracle | not found |
-| harder gene regulatory networks | Pando | not found |
-| harder gene regulatory networks | FigR | not found |
-| harder regulatory variants | deltaSVM | not found |
-| harder peak annotation | rGREAT | not found |
-| harder peak annotation | PAVIS | not found |
-| harder ChIP and ATAC resources | dbSUPER | not found |
-| DNA methylation | methylKit | not found |
-| DNA methylation | DSS | not found |
-| DNA methylation | MOABS | not found |
-| DNA methylation | metilene | not found |
-| DNA methylation | DMRcate | not found |
-| DNA methylation | minfi | not found |
-| DNA methylation | ChAMP | not found |
-| DNA methylation | SeSAMe | not found |
-| DNA methylation | methylpy | not found |
-| 3D genome and chromatin interactions | Juicer | not found |
-| 3D genome and chromatin interactions | HiC-Pro | not found |
-| 3D genome and chromatin interactions | cooler | not found |
-| 3D genome and chromatin interactions | FAN-C | not found |
-| 3D genome and chromatin interactions | HiCExplorer | not found |
-| 3D genome and chromatin interactions | TADbit | not found |
-| 3D genome and chromatin interactions | HiCCUPS | not found |
-| 3D genome and chromatin interactions | Arrowhead | not found |
-| 3D genome and chromatin interactions | FitHiC | not found |
-| 3D genome and chromatin interactions | HiCRep | not found |
-| 3D genome and chromatin interactions | CHESS | not found |
-| 3D genome and chromatin interactions | coolpup.py | not found |
-| histone modifications | ROSE | not found |
-| histone modifications | dbSUPER | not found |
-| histone modifications | epilogos | not found |
-| histone modifications | chromswitch | not found |
-| histone modifications | EpiCSeq | not found |
-| reporter assays | mpralm | not found |
-| reporter assays | MPRAflow | not found |
-| reporter assays | CRADLE | not found |
-| molecular QTL | Matrix eQTL | not found |
-| molecular QTL | FastQTL | not found |
-| molecular QTL | QTLtools | not found |
-| molecular QTL | tensorQTL | not found |
-| molecular QTL | RASQUAL | not found |
-| molecular QTL | mashr | not found |
-| molecular QTL | coloc | not found |
-| molecular QTL | SuSiE | not found |
+| motif discovery | MEME | absent from bio.tools; add to `seeds.yaml` |
+| motif discovery | STREME | absent from bio.tools; add to `seeds.yaml` |
+| motif discovery | HOMER | absent from bio.tools; add to `seeds.yaml` |
+| motif discovery | Weeder | absent from bio.tools; add to `seeds.yaml` |
+| motif discovery | AlignACE | absent from bio.tools; add to `seeds.yaml` |
+| motif discovery | MDscan | absent from bio.tools; add to `seeds.yaml` |
+| motif discovery | ChIPMunk | absent from bio.tools; add to `seeds.yaml` |
+| motif discovery | RSAT | absent from bio.tools; add to `seeds.yaml` |
+| motif discovery | BaMMmotif | absent from bio.tools; add to `seeds.yaml` |
+| motif scanning and enrichment | MOODS | absent from bio.tools; add to `seeds.yaml` |
+| motif scanning and enrichment | PWMScan | absent from bio.tools; add to `seeds.yaml` |
+| motif scanning and enrichment | TFBSTools | absent from bio.tools; add to `seeds.yaml` |
+| motif scanning and enrichment | PWMEnrich | absent from bio.tools; add to `seeds.yaml` |
+| motif and TF databases | JASPAR | absent from bio.tools; add to `seeds.yaml` |
+| motif and TF databases | HOCOMOCO | absent from bio.tools; add to `seeds.yaml` |
+| motif and TF databases | TRANSFAC | absent from bio.tools; add to `seeds.yaml` |
+| motif and TF databases | UniBind | absent from bio.tools; add to `seeds.yaml` |
+| motif and TF databases | RegulonDB | absent from bio.tools; add to `seeds.yaml` |
+| motif and TF databases | AnimalTFDB | absent from bio.tools; add to `seeds.yaml` |
+| motif and TF databases | hTFtarget | absent from bio.tools; add to `seeds.yaml` |
+| motif and TF databases | TFLink | absent from bio.tools; add to `seeds.yaml` |
+| peak calling and annotation | MACS | absent from bio.tools; add to `seeds.yaml` |
+| peak calling and annotation | SEACR | absent from bio.tools; add to `seeds.yaml` |
+| peak calling and annotation | SICER | absent from bio.tools; add to `seeds.yaml` |
+| peak calling and annotation | ChIPseeker | absent from bio.tools; add to `seeds.yaml` |
+| peak calling and annotation | GREAT | absent from bio.tools; add to `seeds.yaml` |
+| peak calling and annotation | BART | absent from bio.tools; add to `seeds.yaml` |
+| ChIP and ATAC resources | GTRD | absent from bio.tools; add to `seeds.yaml` |
+| ChIP and ATAC resources | ReMap | absent from bio.tools; add to `seeds.yaml` |
+| ChIP and ATAC resources | ChIP-Atlas | absent from bio.tools; add to `seeds.yaml` |
+| ChIP and ATAC resources | ENCODE | absent from bio.tools; add to `seeds.yaml` |
+| gene regulatory networks | RcisTarget | absent from bio.tools; add to `seeds.yaml` |
+| gene regulatory networks | GENIE3 | absent from bio.tools; add to `seeds.yaml` |
+| gene regulatory networks | chromVAR | absent from bio.tools; add to `seeds.yaml` |
+| regulatory variants | SNP2TFBS | absent from bio.tools; add to `seeds.yaml` |
+| regulatory variants | FABIAN-variant | absent from bio.tools; add to `seeds.yaml` |
+| motif comparison and visualisation | Tomtom | absent from bio.tools; add to `seeds.yaml` |
+| motif comparison and visualisation | STAMP | absent from bio.tools; add to `seeds.yaml` |
+| motif comparison and visualisation | MoSBAT | absent from bio.tools; add to `seeds.yaml` |
+| motif comparison and visualisation | matrix-clustering | absent from bio.tools; add to `seeds.yaml` |
+| motif comparison and visualisation | universalmotif | absent from bio.tools; add to `seeds.yaml` |
+| motif comparison and visualisation | seqLogo | absent from bio.tools; add to `seeds.yaml` |
+| nucleosome and chromatin state | ChromHMM | absent from bio.tools; add to `seeds.yaml` |
+| nucleosome and chromatin state | Segway | absent from bio.tools; add to `seeds.yaml` |
+| nucleosome and chromatin state | NucleoATAC | absent from bio.tools; add to `seeds.yaml` |
+| nucleosome and chromatin state | iNPS | absent from bio.tools; add to `seeds.yaml` |
+| nucleosome and chromatin state | NucTools | absent from bio.tools; add to `seeds.yaml` |
+| nucleosome and chromatin state | NuPoP | absent from bio.tools; add to `seeds.yaml` |
+| single-cell regulatory genomics | Signac | absent from bio.tools; add to `seeds.yaml` |
+| single-cell regulatory genomics | ArchR | absent from bio.tools; add to `seeds.yaml` |
+| single-cell regulatory genomics | cisTopic | absent from bio.tools; add to `seeds.yaml` |
+| single-cell regulatory genomics | MAESTRO | absent from bio.tools; add to `seeds.yaml` |
+| single-cell regulatory genomics | chromVAR | absent from bio.tools; add to `seeds.yaml` |
+| single-cell regulatory genomics | scATAC-pro | absent from bio.tools; add to `seeds.yaml` |
+| harder motif discovery | MEME-ChIP | absent from bio.tools; add to `seeds.yaml` |
+| harder motif discovery | Weeder | absent from bio.tools; add to `seeds.yaml` |
+| harder motif discovery | Improbizer | absent from bio.tools; add to `seeds.yaml` |
+| harder motif discovery | Amadeus | absent from bio.tools; add to `seeds.yaml` |
+| harder motif discovery | CisFinder | absent from bio.tools; add to `seeds.yaml` |
+| harder motif discovery | ProSampler | absent from bio.tools; add to `seeds.yaml` |
+| harder motif discovery | GADEM | absent from bio.tools; add to `seeds.yaml` |
+| harder motif discovery | XXmotif | absent from bio.tools; add to `seeds.yaml` |
+| harder peak calling | MACS | absent from bio.tools; add to `seeds.yaml` |
+| harder peak calling | HMMRATAC | absent from bio.tools; add to `seeds.yaml` |
+| harder peak calling | SEACR | absent from bio.tools; add to `seeds.yaml` |
+| harder peak calling | LanceOtron | absent from bio.tools; add to `seeds.yaml` |
+| harder peak calling | THOR | absent from bio.tools; add to `seeds.yaml` |
+| harder peak calling | PePr | absent from bio.tools; add to `seeds.yaml` |
+| harder peak calling | csaw | absent from bio.tools; add to `seeds.yaml` |
+| harder peak calling | JAMM | absent from bio.tools; add to `seeds.yaml` |
+| harder peak calling | Ritornello | absent from bio.tools; add to `seeds.yaml` |
+| harder peak calling | BCP | absent from bio.tools; add to `seeds.yaml` |
+| harder footprinting | BaGFoot | absent from bio.tools; add to `seeds.yaml` |
+| harder footprinting | DNase2TF | absent from bio.tools; add to `seeds.yaml` |
+| harder footprinting | seqOutBias | absent from bio.tools; add to `seeds.yaml` |
+| harder footprinting | Romulus | absent from bio.tools; add to `seeds.yaml` |
+| harder gene regulatory networks | GRNBoost2 | absent from bio.tools; add to `seeds.yaml` |
+| harder gene regulatory networks | CLR | absent from bio.tools; add to `seeds.yaml` |
+| harder gene regulatory networks | SCODE | absent from bio.tools; add to `seeds.yaml` |
+| harder gene regulatory networks | PIDC | absent from bio.tools; add to `seeds.yaml` |
+| harder gene regulatory networks | CellOracle | absent from bio.tools; add to `seeds.yaml` |
+| harder gene regulatory networks | Pando | absent from bio.tools; add to `seeds.yaml` |
+| harder gene regulatory networks | FigR | absent from bio.tools; add to `seeds.yaml` |
+| harder regulatory variants | deltaSVM | absent from bio.tools; add to `seeds.yaml` |
+| harder regulatory variants | SNP2TFBS | absent from bio.tools; add to `seeds.yaml` |
+| harder peak annotation | annotatr | absent from bio.tools; add to `seeds.yaml` |
+| harder peak annotation | PAVIS | absent from bio.tools; add to `seeds.yaml` |
+| harder peak annotation | DiffBind | absent from bio.tools; add to `seeds.yaml` |
+| harder ChIP and ATAC resources | SEdb | absent from bio.tools; add to `seeds.yaml` |
+| harder ChIP and ATAC resources | ChIPBase | absent from bio.tools; add to `seeds.yaml` |
+| DNA methylation | Bismark | absent from bio.tools; add to `seeds.yaml` |
+| DNA methylation | methylKit | absent from bio.tools; add to `seeds.yaml` |
+| DNA methylation | DSS | absent from bio.tools; add to `seeds.yaml` |
+| DNA methylation | BS-Seeker2 | absent from bio.tools; add to `seeds.yaml` |
+| DNA methylation | MOABS | absent from bio.tools; add to `seeds.yaml` |
+| DNA methylation | metilene | absent from bio.tools; add to `seeds.yaml` |
+| DNA methylation | DMRcate | absent from bio.tools; add to `seeds.yaml` |
+| DNA methylation | minfi | absent from bio.tools; add to `seeds.yaml` |
+| DNA methylation | ChAMP | absent from bio.tools; add to `seeds.yaml` |
+| DNA methylation | MethylDackel | absent from bio.tools; add to `seeds.yaml` |
+| DNA methylation | RnBeads | absent from bio.tools; add to `seeds.yaml` |
+| DNA methylation | SeSAMe | absent from bio.tools; add to `seeds.yaml` |
+| DNA methylation | MethylSeekR | absent from bio.tools; add to `seeds.yaml` |
+| DNA methylation | methylpy | absent from bio.tools; add to `seeds.yaml` |
+| 3D genome and chromatin interactions | Juicer | absent from bio.tools; add to `seeds.yaml` |
+| 3D genome and chromatin interactions | HiC-Pro | absent from bio.tools; add to `seeds.yaml` |
+| 3D genome and chromatin interactions | cooler | absent from bio.tools; add to `seeds.yaml` |
+| 3D genome and chromatin interactions | cooltools | absent from bio.tools; add to `seeds.yaml` |
+| 3D genome and chromatin interactions | FAN-C | absent from bio.tools; add to `seeds.yaml` |
+| 3D genome and chromatin interactions | HiCExplorer | absent from bio.tools; add to `seeds.yaml` |
+| 3D genome and chromatin interactions | TADbit | absent from bio.tools; add to `seeds.yaml` |
+| 3D genome and chromatin interactions | HiCCUPS | absent from bio.tools; add to `seeds.yaml` |
+| 3D genome and chromatin interactions | Arrowhead | absent from bio.tools; add to `seeds.yaml` |
+| 3D genome and chromatin interactions | mustache | absent from bio.tools; add to `seeds.yaml` |
+| 3D genome and chromatin interactions | Peakachu | absent from bio.tools; add to `seeds.yaml` |
+| 3D genome and chromatin interactions | FitHiC | absent from bio.tools; add to `seeds.yaml` |
+| 3D genome and chromatin interactions | HiCRep | absent from bio.tools; add to `seeds.yaml` |
+| 3D genome and chromatin interactions | CHESS | absent from bio.tools; add to `seeds.yaml` |
+| 3D genome and chromatin interactions | coolpup.py | absent from bio.tools; add to `seeds.yaml` |
+| 3D genome and chromatin interactions | MoDLE | absent from bio.tools; add to `seeds.yaml` |
+| histone modifications | ChromHMM | absent from bio.tools; add to `seeds.yaml` |
+| histone modifications | Segway | absent from bio.tools; add to `seeds.yaml` |
+| histone modifications | ROSE | absent from bio.tools; add to `seeds.yaml` |
+| histone modifications | SEdb | absent from bio.tools; add to `seeds.yaml` |
+| histone modifications | epilogos | absent from bio.tools; add to `seeds.yaml` |
+| histone modifications | chromswitch | absent from bio.tools; add to `seeds.yaml` |
+| histone modifications | EpiCSeq | absent from bio.tools; add to `seeds.yaml` |
+| reporter assays | MPRAnalyze | absent from bio.tools; add to `seeds.yaml` |
+| reporter assays | mpralm | absent from bio.tools; add to `seeds.yaml` |
+| reporter assays | MPRAflow | absent from bio.tools; add to `seeds.yaml` |
+| reporter assays | starrpeaker | absent from bio.tools; add to `seeds.yaml` |
+| reporter assays | CRADLE | absent from bio.tools; add to `seeds.yaml` |
+| reporter assays | BasicStarrSeq | absent from bio.tools; add to `seeds.yaml` |
+| molecular QTL | Matrix eQTL | absent from bio.tools; add to `seeds.yaml` |
+| molecular QTL | FastQTL | absent from bio.tools; add to `seeds.yaml` |
+| molecular QTL | QTLtools | absent from bio.tools; add to `seeds.yaml` |
+| molecular QTL | tensorQTL | absent from bio.tools; add to `seeds.yaml` |
+| molecular QTL | RASQUAL | absent from bio.tools; add to `seeds.yaml` |
+| molecular QTL | mashr | absent from bio.tools; add to `seeds.yaml` |
+| molecular QTL | coloc | absent from bio.tools; add to `seeds.yaml` |
+| molecular QTL | SuSiE | absent from bio.tools; add to `seeds.yaml` |
+| molecular QTL | QTLbase | absent from bio.tools; add to `seeds.yaml` |
 
 ## Full results
 
-### motif discovery: 12/12
+### motif discovery: 3/12
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
-| MEME | ✅ | MEME Suite | bio.tools |
-| STREME | ✅ | STREME | bio.tools |
+| MEME | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| STREME | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 | DREME | ✅ | DREME | curated seed |
-| HOMER | ✅ | homer | bio.tools |
-| Weeder | ✅ | Weeder | bio.tools |
-| AlignACE | ✅ | AlignACE | bio.tools |
-| MDscan | ✅ | MDscan | bio.tools |
-| ChIPMunk | ✅ | ChIPMunk | bio.tools |
-| RSAT | ✅ | RSAT suite | bio.tools |
-| BaMMmotif | ✅ | BaMM | bio.tools |
+| HOMER | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| Weeder | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| AlignACE | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| MDscan | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| ChIPMunk | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| RSAT | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| BaMMmotif | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 | TF-MoDISco | ✅ | TF-MoDISco | curated seed |
 | gkm-SVM | ✅ | gkm-SVM / LS-GKM | curated seed |
 
-### motif scanning and enrichment: 11/11
+### motif scanning and enrichment: 7/11
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
@@ -108,33 +182,33 @@ Each of these is a bug, and the diagnosis says which kind. *Never harvested* mea
 | CentriMo | ✅ | CentriMo | curated seed |
 | AME | ✅ | AME | curated seed |
 | MAST | ✅ | MAST | curated seed |
-| MOODS | ✅ | MOODS | bio.tools |
-| PWMScan | ✅ | PWMScan | bio.tools |
-| Cluster-Buster | ✅ | Cluster Buster | bio.tools |
-| TFBSTools | ✅ | TFBSTools | bio.tools |
+| MOODS | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| PWMScan | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| Cluster-Buster | ✅ | Cluster-Buster | curated seed |
+| TFBSTools | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 | motifmatchr | ✅ | motifmatchr | curated seed |
-| PWMEnrich | ✅ | PWMEnrich | bio.tools |
+| PWMEnrich | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 | monaLisa | ✅ | monaLisa | curated seed |
 
-### motif and TF databases: 15/15
+### motif and TF databases: 7/15
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
-| JASPAR | ✅ | JASPAR | bio.tools |
-| HOCOMOCO | ✅ | HOCOMOCO | bio.tools |
+| JASPAR | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| HOCOMOCO | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 | CIS-BP | ✅ | CIS-BP | curated seed |
-| TRANSFAC | ✅ | TRANSFAC | bio.tools |
+| TRANSFAC | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 | SwissRegulon | ✅ | SwissRegulon | bio.tools |
 | UniPROBE | ✅ | UniPROBE | bio.tools |
-| Factorbook | ✅ | Factorbook | bio.tools |
-| UniBind | ✅ | UniBind | bio.tools |
+| Factorbook | ✅ | Factorbook.org | curated seed |
+| UniBind | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 | CollecTF | ✅ | CollecTF | curated seed |
-| RegulonDB | ✅ | RegulonDB | bio.tools |
+| RegulonDB | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 | footprintDB | ✅ | footprintDB | curated seed |
-| AnimalTFDB | ✅ | Animal Transcription Factor Database | bio.tools |
-| hTFtarget | ✅ | hTFtarget | bio.tools |
+| AnimalTFDB | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| hTFtarget | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 | TRRUST | ✅ | TRRUST | curated seed |
-| TFLink | ✅ | TFLink | bio.tools |
+| TFLink | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 
 ### sequence-to-function models: 13/13
 
@@ -148,278 +222,278 @@ Each of these is a bug, and the diagnosis says which kind. *Never harvested* mea
 | Borzoi | ✅ | Borzoi | curated seed |
 | DanQ | ✅ | DanQ | curated seed |
 | BPNet | ✅ | BPNet | curated seed |
-| ChromBPNet | ✅ | ChromBPNet | bio.tools |
+| ChromBPNet | ✅ | ChromBPNet | curated seed |
 | Sei | ✅ | Sei | curated seed |
 | DeepSTARR | ✅ | DeepSTARR | curated seed |
-| scBasset | ✅ | scBasset | bio.tools |
-| gReLU | ✅ | gReLU | bio.tools |
+| scBasset | ✅ | scBasset | curated seed |
+| gReLU | ✅ | gReLU | curated seed |
 
 ### footprinting: 7/7
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
-| TOBIAS | ✅ | TOBIAS | bio.tools |
+| TOBIAS | ✅ | TOBIAS | curated seed |
 | HINT-ATAC | ✅ | HINT-ATAC | curated seed |
 | PIQ | ✅ | PIQ | curated seed |
 | Wellington | ✅ | Wellington / pyDNase | curated seed |
 | CENTIPEDE | ✅ | CENTIPEDE | curated seed |
-| msCentipede | ✅ | msCentipede | bio.tools |
+| msCentipede | ✅ | msCentipede | curated seed |
 | TFBSFootprinter | ✅ | TFBSFootprinter | curated seed |
 
-### peak calling and annotation: 9/9
+### peak calling and annotation: 3/9
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
-| MACS | ✅ | MACS | bio.tools |
-| SEACR | ✅ | SEACR | bio.tools |
+| MACS | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| SEACR | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 | Genrich | ✅ | Genrich | curated seed |
-| GoPeaks | ✅ | GoPeaks | bio.tools |
-| SICER | ✅ | SICER | bio.tools |
-| ChIPseeker | ✅ | ChIPseeker | bio.tools |
-| GREAT | ✅ | GREAT | bio.tools |
+| GoPeaks | ✅ | GoPeaks | curated seed |
+| SICER | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| ChIPseeker | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| GREAT | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 | LOLA | ✅ | LOLA | curated seed |
-| BART | ✅ | BART | bio.tools |
+| BART | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 
-### ChIP and ATAC resources: 5/5
-
-| Benchmark tool | Present | Catalog entry | Source / diagnosis |
-| --- | :---: | --- | --- |
-| GTRD | ✅ | GTRD | bio.tools |
-| ReMap | ✅ | ReMap | bio.tools |
-| ChIP-Atlas | ✅ | ChIP-Atlas | bio.tools |
-| Cistrome | ✅ | Cistrome | bio.tools |
-| ENCODE | ✅ | ENCODE DCC | bio.tools |
-
-### gene regulatory networks: 9/9
+### ChIP and ATAC resources: 1/5
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
-| SCENIC | ✅ | SCENIC | bio.tools |
+| GTRD | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| ReMap | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| ChIP-Atlas | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| Cistrome | ✅ | CistromeMap | curated seed |
+| ENCODE | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+
+### gene regulatory networks: 6/9
+
+| Benchmark tool | Present | Catalog entry | Source / diagnosis |
+| --- | :---: | --- | --- |
+| SCENIC | ✅ | SCENIC+ | curated seed |
 | pySCENIC | ✅ | pySCENIC | curated seed |
-| SCENIC+ | ✅ | SCENIC | bio.tools |
-| RcisTarget | ✅ | RcisTarget | bio.tools |
-| GENIE3 | ✅ | GENIE3 | bio.tools |
+| SCENIC+ | ✅ | SCENIC+ | curated seed |
+| RcisTarget | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| GENIE3 | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 | ARACNe | ✅ | ARACNE | bio.tools |
-| chromVAR | ✅ | chromVAR | bio.tools |
+| chromVAR | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 | iRegulon | ✅ | iRegulon | curated seed |
 | i-cisTarget | ✅ | i-cisTarget | curated seed |
 
-### regulatory variants: 8/8
+### regulatory variants: 6/8
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
-| motifbreakR | ✅ | motifbreakR | bio.tools |
-| SNP2TFBS | ✅ | SNP2TFBS | bio.tools |
+| motifbreakR | ✅ | motifbreakR | curated seed |
+| SNP2TFBS | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 | atSNP | ✅ | atSNP | bio.tools |
 | RegulomeDB | ✅ | RegulomeDB | curated seed |
 | HaploReg | ✅ | HaploReg | bio.tools |
 | GWAVA | ✅ | GWAVA | curated seed |
 | FunSeq2 | ✅ | FunSeq2 | curated seed |
-| FABIAN-variant | ✅ | FABIAN-variant | bio.tools |
+| FABIAN-variant | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 
-### motif comparison and visualisation: 3/8
-
-| Benchmark tool | Present | Catalog entry | Source / diagnosis |
-| --- | :---: | --- | --- |
-| Tomtom | ❌ |  | not found |
-| STAMP | ✅ | STAMP | bio.tools |
-| MoSBAT | ❌ |  | not found |
-| matrix-clustering | ✅ | matrix-clustering | bio.tools |
-| universalmotif | ❌ |  | not found |
-| ggseqlogo | ❌ |  | not found |
-| Logolas | ❌ |  | not found |
-| seqLogo | ✅ | seqLogo | bio.tools |
-
-### nucleosome and chromatin state: 5/8
+### motif comparison and visualisation: 2/8
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
-| ChromHMM | ✅ | ChromHMM | bio.tools |
-| Segway | ✅ | Segway | bio.tools |
-| NucleoATAC | ✅ | NucleoATAC | bio.tools |
-| DANPOS | ❌ |  | not found |
-| iNPS | ❌ |  | not found |
-| NucTools | ❌ |  | not found |
+| Tomtom | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| STAMP | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| MoSBAT | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| matrix-clustering | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| universalmotif | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| ggseqlogo | ✅ | ggseqlogo | bio.tools |
+| Logolas | ✅ | Logolas | bio.tools |
+| seqLogo | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+
+### nucleosome and chromatin state: 2/8
+
+| Benchmark tool | Present | Catalog entry | Source / diagnosis |
+| --- | :---: | --- | --- |
+| ChromHMM | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| Segway | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| NucleoATAC | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| DANPOS | ✅ | DANPOS | bio.tools |
+| iNPS | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| NucTools | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 | nucleR | ✅ | nucleR | curated seed |
-| NuPoP | ✅ | NuPoP | bio.tools |
+| NuPoP | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 
-### single-cell regulatory genomics: 9/10
+### single-cell regulatory genomics: 4/10
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
-| Signac | ✅ | Signac | bio.tools |
-| ArchR | ✅ | ArchR | bio.tools |
-| SnapATAC | ✅ | SnapATAC | bio.tools |
-| cisTopic | ✅ | cisTopic | bio.tools |
-| scBasset | ✅ | scBasset | bio.tools |
-| MAESTRO | ❌ |  | not found |
+| Signac | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| ArchR | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| SnapATAC | ✅ | SnapATAC2 | curated seed |
+| cisTopic | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| scBasset | ✅ | scBasset | curated seed |
+| MAESTRO | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 | Cicero | ✅ | Cicero | curated seed |
-| chromVAR | ✅ | chromVAR | bio.tools |
-| scATAC-pro | ✅ | scATAC-pro | bio.tools |
+| chromVAR | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| scATAC-pro | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 | PeakVI | ✅ | PeakVI | curated seed |
 
-### harder motif discovery: 4/8
+### harder motif discovery: 0/8
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
-| MEME-ChIP | ❌ |  | not found |
-| Weeder | ✅ | Weeder | bio.tools |
-| Improbizer | ❌ |  | not found |
-| Amadeus | ❌ |  | not found |
-| CisFinder | ❌ |  | not found |
-| ProSampler | ✅ | ProSampler | bio.tools |
-| GADEM | ✅ | GADEM | bio.tools |
-| XXmotif | ✅ | XXmotif | bio.tools |
+| MEME-ChIP | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| Weeder | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| Improbizer | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| Amadeus | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| CisFinder | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| ProSampler | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| GADEM | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| XXmotif | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 
-### harder peak calling: 8/12
+### harder peak calling: 2/12
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
-| MACS | ✅ | MACS | bio.tools |
-| SICER | ✅ | SICER | bio.tools |
-| HMMRATAC | ❌ |  | not found |
-| SEACR | ✅ | SEACR | bio.tools |
-| LanceOtron | ✅ | LanceOtron | bio.tools |
-| THOR | ❌ |  | not found |
-| PePr | ✅ | PePr | bio.tools |
-| csaw | ✅ | csaw | bio.tools |
-| MSPC | ✅ | MSPC | bio.tools |
-| JAMM | ✅ | JAMM | bio.tools |
-| Ritornello | ❌ |  | not found |
-| BCP | ❌ |  | not found |
+| MACS | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| SICER | ✅ | epic2 | curated seed |
+| HMMRATAC | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| SEACR | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| LanceOtron | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| THOR | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| PePr | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| csaw | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| MSPC | ✅ | rmspc | curated seed |
+| JAMM | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| Ritornello | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| BCP | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 
 ### harder footprinting: 2/6
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
 | Wellington | ✅ | Wellington-bootstrap | curated seed |
-| BaGFoot | ❌ |  | not found |
-| DNase2TF | ❌ |  | not found |
-| seqOutBias | ❌ |  | not found |
-| Romulus | ❌ |  | not found |
-| msCentipede | ✅ | msCentipede | bio.tools |
+| BaGFoot | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| DNase2TF | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| seqOutBias | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| Romulus | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| msCentipede | ✅ | msCentipede | curated seed |
 
-### harder gene regulatory networks: 2/8
+### harder gene regulatory networks: 1/8
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
-| GRNBoost2 | ✅ | Arboreto | bio.tools |
-| CLR | ❌ |  | not found |
-| SCODE | ❌ |  | not found |
-| PIDC | ❌ |  | not found |
-| CellOracle | ❌ |  | not found |
-| Pando | ❌ |  | not found |
-| FigR | ❌ |  | not found |
+| GRNBoost2 | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| CLR | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| SCODE | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| PIDC | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| CellOracle | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| Pando | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| FigR | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 | Dictys | ✅ | Dictys | curated seed |
 
-### harder regulatory variants: 7/8
+### harder regulatory variants: 6/8
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
-| deltaSVM | ❌ |  | not found |
-| motifbreakR | ✅ | motifbreakR | bio.tools |
-| SNP2TFBS | ✅ | SNP2TFBS | bio.tools |
+| deltaSVM | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| motifbreakR | ✅ | motifbreakR | curated seed |
+| SNP2TFBS | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 | GWAVA | ✅ | GWAVA | curated seed |
 | FunSeq2 | ✅ | FunSeq2 | curated seed |
 | RegulomeDB | ✅ | RegulomeDB | curated seed |
 | Sasquatch | ✅ | Sasquatch | curated seed |
 | GERV | ✅ | GERV | curated seed |
 
-### harder peak annotation: 3/5
+### harder peak annotation: 2/5
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
-| rGREAT | ❌ |  | not found |
-| annotatr | ✅ | annotatr | bio.tools |
-| PAVIS | ❌ |  | not found |
+| rGREAT | ✅ | rGREAT | bio.tools |
+| annotatr | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| PAVIS | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 | LOLA | ✅ | LOLA | curated seed |
-| DiffBind | ✅ | DiffBind | bio.tools |
+| DiffBind | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 
-### harder ChIP and ATAC resources: 5/6
+### harder ChIP and ATAC resources: 4/6
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
-| Cistrome DB | ✅ | Cistrome | bio.tools |
-| SEdb | ✅ | SEdb 2.0 | bio.tools |
-| dbSUPER | ❌ |  | not found |
-| ChIPBase | ✅ | ChIPBase | bio.tools |
+| Cistrome DB | ✅ | CistromeMap | curated seed |
+| SEdb | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| dbSUPER | ✅ | dbSUPER | bio.tools |
+| ChIPBase | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 | CistromeMap | ✅ | CistromeMap | curated seed |
 | hmChIP | ✅ | hmChIP | curated seed |
 
-### DNA methylation: 5/14
+### DNA methylation: 0/14
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
-| Bismark | ✅ | Bismark | bio.tools |
-| methylKit | ❌ |  | not found |
-| DSS | ❌ |  | not found |
-| BS-Seeker2 | ✅ | BS Seeker | bio.tools |
-| MOABS | ❌ |  | not found |
-| metilene | ❌ |  | not found |
-| DMRcate | ❌ |  | not found |
-| minfi | ❌ |  | not found |
-| ChAMP | ❌ |  | not found |
-| MethylDackel | ✅ | MethylDackel | bio.tools |
-| RnBeads | ✅ | RnBeads | bio.tools |
-| SeSAMe | ❌ |  | not found |
-| MethylSeekR | ✅ | MethylSeekR | bio.tools |
-| methylpy | ❌ |  | not found |
+| Bismark | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| methylKit | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| DSS | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| BS-Seeker2 | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| MOABS | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| metilene | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| DMRcate | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| minfi | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| ChAMP | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| MethylDackel | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| RnBeads | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| SeSAMe | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| MethylSeekR | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| methylpy | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 
-### 3D genome and chromatin interactions: 4/16
-
-| Benchmark tool | Present | Catalog entry | Source / diagnosis |
-| --- | :---: | --- | --- |
-| Juicer | ❌ |  | not found |
-| HiC-Pro | ❌ |  | not found |
-| cooler | ❌ |  | not found |
-| cooltools | ✅ | cooltools | bio.tools |
-| FAN-C | ❌ |  | not found |
-| HiCExplorer | ❌ |  | not found |
-| TADbit | ❌ |  | not found |
-| HiCCUPS | ❌ |  | not found |
-| Arrowhead | ❌ |  | not found |
-| mustache | ✅ | Mustache | bio.tools |
-| Peakachu | ✅ | Peakachu | bio.tools |
-| FitHiC | ❌ |  | not found |
-| HiCRep | ❌ |  | not found |
-| CHESS | ❌ |  | not found |
-| coolpup.py | ❌ |  | not found |
-| MoDLE | ✅ | MoDLE | bio.tools |
-
-### histone modifications: 3/8
+### 3D genome and chromatin interactions: 0/16
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
-| ChromHMM | ✅ | ChromHMM | bio.tools |
-| Segway | ✅ | Segway | bio.tools |
-| ROSE | ❌ |  | not found |
-| dbSUPER | ❌ |  | not found |
-| SEdb | ✅ | SEdb 2.0 | bio.tools |
-| epilogos | ❌ |  | not found |
-| chromswitch | ❌ |  | not found |
-| EpiCSeq | ❌ |  | not found |
+| Juicer | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| HiC-Pro | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| cooler | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| cooltools | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| FAN-C | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| HiCExplorer | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| TADbit | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| HiCCUPS | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| Arrowhead | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| mustache | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| Peakachu | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| FitHiC | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| HiCRep | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| CHESS | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| coolpup.py | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| MoDLE | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
 
-### reporter assays: 3/6
-
-| Benchmark tool | Present | Catalog entry | Source / diagnosis |
-| --- | :---: | --- | --- |
-| MPRAnalyze | ✅ | MPRAnalyze | bio.tools |
-| mpralm | ❌ |  | not found |
-| MPRAflow | ❌ |  | not found |
-| starrpeaker | ✅ | STARRPeaker | bio.tools |
-| CRADLE | ❌ |  | not found |
-| BasicStarrSeq | ✅ | BasicSTARRseq | bio.tools |
-
-### molecular QTL: 1/9
+### histone modifications: 1/8
 
 | Benchmark tool | Present | Catalog entry | Source / diagnosis |
 | --- | :---: | --- | --- |
-| Matrix eQTL | ❌ |  | not found |
-| FastQTL | ❌ |  | not found |
-| QTLtools | ❌ |  | not found |
-| tensorQTL | ❌ |  | not found |
-| RASQUAL | ❌ |  | not found |
-| mashr | ❌ |  | not found |
-| coloc | ❌ |  | not found |
-| SuSiE | ❌ |  | not found |
-| QTLbase | ✅ | QTLbase | bio.tools |
+| ChromHMM | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| Segway | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| ROSE | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| dbSUPER | ✅ | dbSUPER | bio.tools |
+| SEdb | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| epilogos | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| chromswitch | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| EpiCSeq | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+
+### reporter assays: 0/6
+
+| Benchmark tool | Present | Catalog entry | Source / diagnosis |
+| --- | :---: | --- | --- |
+| MPRAnalyze | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| mpralm | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| MPRAflow | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| starrpeaker | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| CRADLE | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| BasicStarrSeq | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+
+### molecular QTL: 0/9
+
+| Benchmark tool | Present | Catalog entry | Source / diagnosis |
+| --- | :---: | --- | --- |
+| Matrix eQTL | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| FastQTL | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| QTLtools | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| tensorQTL | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| RASQUAL | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| mashr | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| coloc | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| SuSiE | ❌ |  | absent from bio.tools; add to `seeds.yaml` |
+| QTLbase | ❌ |  | absent from bio.tools; add to `seeds.yaml` |

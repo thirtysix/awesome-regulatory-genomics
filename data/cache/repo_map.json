@@ -1,4 +1,14 @@
 {
+ "4d-nucleome-data-portal": {
+  "accepted": false,
+  "name": "4D Nucleome Data Portal",
+  "reason": "no candidate from any source",
+  "repo_desc": "",
+  "slug": "",
+  "source": "",
+  "stars": null,
+  "tool_desc": "4D Nucleome Data Portal is a resource for searching and visualizing curated nucleomics data. The 4D Nucleome program aims to understand the "
+ },
  "BindSpace": {
   "accepted": false,
   "name": "BindSpace",
@@ -59,6 +69,16 @@
   "stars": 280,
   "tool_desc": "A manually curated database of experimentally supported enhancers for human and mouse. Enhancers are a class of cis-regulatory elements that"
  },
+ "HaploReg": {
+  "accepted": false,
+  "name": "HaploReg",
+  "reason": "no candidate from any source",
+  "repo_desc": "",
+  "slug": "",
+  "source": "",
+  "stars": null,
+  "tool_desc": "Association between DIO2 polymorphism and the risk of Kashin-Beck disease in the Tibetan population | HaploReg is a tool for exploring annot"
+ },
  "LiPLike": {
   "accepted": false,
   "name": "LiPLike",
@@ -118,6 +138,16 @@
   "source": "bioconda",
   "stars": 7,
   "tool_desc": "A database for exploring N6-methyladenosine methylome.\n\nREPIC (RNA Epitranscriptome Collection) is a database dedicated to provide a new res"
+ },
+ "RSAT_-_Retrieve_Sequence": {
+  "accepted": false,
+  "name": "RSAT - Retrieve Sequence",
+  "reason": "no candidate from any source",
+  "repo_desc": "",
+  "slug": "",
+  "source": "",
+  "stars": null,
+  "tool_desc": "Starting from a list of genes, returns upstream or downstream sequences."
  },
  "ReMap2020": {
   "accepted": false,
@@ -199,6 +229,16 @@
   "stars": 1,
   "tool_desc": "Identification of a novel long non-coding RNA within RUNX1 intron 5 | This site uses cookies. By continuing to browse the site you are agree"
  },
+ "abs": {
+  "accepted": false,
+  "name": "ABS",
+  "reason": "no candidate from any source",
+  "repo_desc": "",
+  "slug": "",
+  "source": "",
+  "stars": null,
+  "tool_desc": "Annotated regulatory binding sites from orthologous promoters."
+ },
  "action": {
   "accepted": false,
   "name": "ACTION",
@@ -258,6 +298,16 @@
   "source": "github-search",
   "stars": 0,
   "tool_desc": "A method for optimized de novo motif discovery of RNA aptamers via HTS-SELEX."
+ },
+ "aracne": {
+  "accepted": true,
+  "name": "ARACNE",
+  "reason": "4 shared terms (algorithm, aracne, networks, regulatory)",
+  "repo_desc": "aracne.networks, a data package containing gene regulatory networks assembled from TCGA data by the ARACNe algorithm",
+  "slug": "federicogiorgi/aracne.networks",
+  "source": "github-search",
+  "stars": 7,
+  "tool_desc": "ARACNE (Algorithm for the Reconstruction of Accurate Cellular Networks), a novel algorithm, using microarray expression profiles, specifical"
  },
  "argo": {
   "accepted": false,
@@ -388,6 +438,16 @@
   "source": "homepage",
   "stars": 128,
   "tool_desc": "Powerful biological sequence editor operating in the most convenient of places: inside your usual word-processor (Microsoft Word 2007 and 20"
+ },
+ "bisa": {
+  "accepted": false,
+  "name": "BiSA",
+  "reason": "no name match and only 0 shared terms ()",
+  "repo_desc": "Factorio init script",
+  "slug": "Bisa/factorio-init",
+  "source": "github-search",
+  "stars": 424,
+  "tool_desc": "Binding sites analyser is a database driven software and stores all of its data in a relational database management system (RDBMS) such as S"
  },
  "blsspeller": {
   "accepted": false,
@@ -599,6 +659,16 @@
   "stars": 256,
   "tool_desc": "R package for ChIP peak Annotation, Comparison, and Visualization."
  },
+ "chrogps": {
+  "accepted": false,
+  "name": "chroGPS",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "",
+  "slug": "bioconductor-source/chroGPS",
+  "source": "github-search",
+  "stars": 0,
+  "tool_desc": "We provide intuitive maps to visualize the association between genetic elements, with emphasis on epigenetics. The approach is based on Mult"
+ },
  "chromasig": {
   "accepted": false,
   "name": "ChromaSig",
@@ -688,6 +758,16 @@
   "source": "pypi",
   "stars": 22,
   "tool_desc": "Co-Methylation with genomic CpG Background (CoMeBack) estimates DNA co-methylation, defined as proximal CpG probes with correlated DNAm acro"
+ },
+ "couger": {
+  "accepted": false,
+  "name": "COUGER",
+  "reason": "no name match and only 0 shared terms ()",
+  "repo_desc": "zkCREAM is zk-SNARK based anonymized voting application using a token mixer",
+  "slug": "couger-inc/cream",
+  "source": "github-search",
+  "stars": 39,
+  "tool_desc": "Framework for identifying co-factors associated with uniquely-bound genomic regions."
  },
  "createcontrolsubset": {
   "accepted": false,
@@ -849,6 +929,16 @@
   "stars": 5076,
   "tool_desc": "DamMapper is a Snakemake workflow for analyzing DamID-seq data. It provides a comprehensive pipeline for processing multiple biological repl"
  },
+ "danpos": {
+  "accepted": false,
+  "name": "DANPOS",
+  "reason": "no name match and only 0 shared terms ()",
+  "repo_desc": "",
+  "slug": "google/safevalues",
+  "source": "homepage",
+  "stars": 148,
+  "tool_desc": "Designed for genome-wide comparative analysis of nucleosome maps. It detect single-nucleotide-resolution change in positions(location), enri"
+ },
  "dbchip": {
   "accepted": false,
   "name": "DBChIP",
@@ -868,6 +958,16 @@
   "source": "pypi",
   "stars": 0,
   "tool_desc": "The Database of Genotypes and Phenotypes (dbGAP) is a National Institutes of Health-sponsored repository charged to archive and distribute t"
+ },
+ "dbsuper": {
+  "accepted": false,
+  "name": "dbSUPER",
+  "reason": "no candidate from any source",
+  "repo_desc": "",
+  "slug": "",
+  "source": "",
+  "stars": null,
+  "tool_desc": "A database of super-enhancers in mouse and human genome."
  },
  "dbtss": {
   "accepted": false,
@@ -979,6 +1079,16 @@
   "stars": 41,
   "tool_desc": "A web application and R package for the detection of regulatory DNA sequences using GRO-seq data."
  },
+ "enhort": {
+  "accepted": false,
+  "name": "Enhort",
+  "reason": "no candidate from any source",
+  "repo_desc": "",
+  "slug": "",
+  "source": "",
+  "stars": null,
+  "tool_desc": "Enhort is a platform for deep analysis of genomic positions."
+ },
  "ep3": {
   "accepted": false,
   "name": "EP3",
@@ -1029,6 +1139,16 @@
   "stars": 14,
   "tool_desc": "A web server for prediction, analysis and visualization of enhancer-promoter interactions."
  },
+ "es-arcnn": {
+  "accepted": false,
+  "name": "ES-ARCNN",
+  "reason": "no candidate from any source",
+  "repo_desc": "",
+  "slug": "",
+  "source": "",
+  "stars": null,
+  "tool_desc": "ES-ARCNN is a tool for identifying enhancers' strength by using data augmentation and residual convolutional neural network"
+ },
  "figeno": {
   "accepted": false,
   "name": "figeno",
@@ -1038,6 +1158,16 @@
   "source": "pypi",
   "stars": 350,
   "tool_desc": "Figeno is a tool for generating publication-quality figures for genomics, focusing on multi-region views, long reads, and epigenomic data. I"
+ },
+ "filtercontrol": {
+  "accepted": false,
+  "name": "filtercontrol",
+  "reason": "no candidate from any source",
+  "repo_desc": "",
+  "slug": "",
+  "source": "",
+  "stars": null,
+  "tool_desc": "Filter out peaks present both in ChIP and Control dataset."
  },
  "fire": {
   "accepted": false,
@@ -1098,6 +1228,26 @@
   "source": "homepage",
   "stars": 4,
   "tool_desc": "Combining metabolic flux and regulatory network analyses."
+ },
+ "funcisnp": {
+  "accepted": false,
+  "name": "FunciSNP",
+  "reason": "repo has no description; cannot verify beyond the name",
+  "repo_desc": "",
+  "slug": "michellerjones/FunciSNP",
+  "source": "github-search",
+  "stars": 0,
+  "tool_desc": "It integrates information from GWAS, 1000genomes and chromatin feature to identify functional SNP in coding or non-coding regions."
+ },
+ "funsip": {
+  "accepted": false,
+  "name": "FunSiP",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "SIP proxy in go with JS routing logic",
+  "slug": "intuitivelabs/funsip",
+  "source": "github-search",
+  "stars": 0,
+  "tool_desc": "A modular and extensible classifier for the prediction of functional sites in DNA."
  },
  "fxr": {
   "accepted": false,
@@ -1279,6 +1429,16 @@
   "stars": 2245,
   "tool_desc": "A Data-Driven Python Library to Infer Gene Regulatory Networks from Gene Expression Data."
  },
+ "grenits": {
+  "accepted": false,
+  "name": "GRENITS",
+  "reason": "repo has no description; cannot verify beyond the name",
+  "repo_desc": "",
+  "slug": "ElEd2/GRENITS",
+  "source": "github-search",
+  "stars": 0,
+  "tool_desc": "The package offers four network inference statistical models using Dynamic Bayesian Networks and Gibbs Variable Selection: a linear interact"
+ },
  "grins": {
   "accepted": true,
   "name": "GRiNS",
@@ -1439,6 +1599,16 @@
   "stars": 0,
   "tool_desc": "Set of tools for the analysis of gene expression data and the discovery of cis-regulatory sequence elements."
  },
+ "infima": {
+  "accepted": false,
+  "name": "INFIMA",
+  "reason": "no candidate from any source",
+  "repo_desc": "",
+  "slug": "",
+  "source": "",
+  "stars": null,
+  "tool_desc": "INFIMA leverages multi-omics model organism data to identify effector genes of human GWAS variants."
+ },
  "insect": {
   "accepted": false,
   "name": "INSECT",
@@ -1499,6 +1669,16 @@
   "stars": 138,
   "tool_desc": "Index-based Subgraph Matching Algorithm. Fast subgraph enumeration in large networks using optimized search trees."
  },
+ "jaspar2018": {
+  "accepted": false,
+  "name": "JASPAR2018",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "This is a read-only mirror of the git repos at https://bioconductor.org",
+  "slug": "bioc/JASPAR2018",
+  "source": "github-search",
+  "stars": 0,
+  "tool_desc": "Data package for JASPAR 2018. To search this databases, please use the package TFBSTools (>= 1.15.6)."
+ },
  "lap": {
   "accepted": false,
   "name": "LAP",
@@ -1529,6 +1709,26 @@
   "stars": 10,
   "tool_desc": "Detection of epigenetic signatures in liquid biopsies based on whole-genome sequencing data."
  },
+ "lolaweb": {
+  "accepted": false,
+  "name": "LOLAweb",
+  "reason": "no candidate from any source",
+  "repo_desc": "",
+  "slug": "",
+  "source": "",
+  "stars": null,
+  "tool_desc": "Interactive genomic locus overlap enrichment analysis."
+ },
+ "lpnet": {
+  "accepted": false,
+  "name": "lpNet",
+  "reason": "name matches but only 0 shared terms ()",
+  "repo_desc": "",
+  "slug": "xiaoneil/LPNet",
+  "source": "github-search",
+  "stars": 13,
+  "tool_desc": "This tool aims at infering biological networks, in particular signaling and gene networks. For that it takes perturbation data, either stead"
+ },
  "maga": {
   "accepted": false,
   "name": "MAGA",
@@ -1548,6 +1748,16 @@
   "source": "github-search",
   "stars": 1936,
   "tool_desc": "Fast, sensitive tool for whole regulome motif-finding in eukaryotic genomes"
+ },
+ "makestatschipseq": {
+  "accepted": false,
+  "name": "makestatschipseq",
+  "reason": "no candidate from any source",
+  "repo_desc": "",
+  "slug": "",
+  "source": "",
+  "stars": null,
+  "tool_desc": "Create a .png file with distribution of peaks heights for ChIP and Control sample."
  },
  "manorm": {
   "accepted": true,
@@ -1869,6 +2079,16 @@
   "stars": 13,
   "tool_desc": "It is a non-canonical (non-B) structure database database integrating annotations and analysis of non-B DNA-forming sequence motifs. The dat"
  },
+ "ntw": {
+  "accepted": false,
+  "name": "NTW",
+  "reason": "no candidate from any source",
+  "repo_desc": "",
+  "slug": "",
+  "source": "",
+  "stars": null,
+  "tool_desc": "This package predicts the gene-gene interaction network and identifies the direct transcriptional targets of the perturbation using an ODE ("
+ },
  "nucposdb": {
   "accepted": false,
   "name": "NucPosDB",
@@ -1938,6 +2158,16 @@
   "source": "pypi",
   "stars": 1,
   "tool_desc": "Software of Peak quantification using Statistical Comparative ANalysis."
+ },
+ "p53mutagene": {
+  "accepted": false,
+  "name": "p53MutaGene",
+  "reason": "no candidate from any source",
+  "repo_desc": "",
+  "slug": "",
+  "source": "",
+  "stars": null,
+  "tool_desc": "First online tool for statistical validation of hypotheses regarding the effect of p53 mutational status on gene regulation in cancer."
  },
  "panda": {
   "accepted": false,
@@ -2659,6 +2889,16 @@
   "stars": 0,
   "tool_desc": "SpaGTL is a Python package for spatial transcriptomics analysis, utilizing graph transfer learning to infer context-specific spatial gene re"
  },
+ "sparkinferno": {
+  "accepted": false,
+  "name": "SparkINFERNO",
+  "reason": "no candidate from any source",
+  "repo_desc": "",
+  "slug": "",
+  "source": "",
+  "stars": null,
+  "tool_desc": "A scalable high-throughput pipeline for inferring molecular mechanisms of non-coding genetic variants."
+ },
  "sponge": {
   "accepted": false,
   "name": "SPONGE",
@@ -2729,6 +2969,16 @@
   "stars": 2,
   "tool_desc": "STREME is accurate and versatile sequence motif discovery tool. The MEME Suite allows you to discover novel motifs in collections of unalign"
  },
+ "suldex": {
+  "accepted": false,
+  "name": "SULDEX",
+  "reason": "no candidate from any source",
+  "repo_desc": "",
+  "slug": "",
+  "source": "",
+  "stars": null,
+  "tool_desc": "The packages is designed to use high throughput sequencing to simultaneously analyze binding dissociation constants for large repertoires of"
+ },
  "swan": {
   "accepted": false,
   "name": "Swan",
@@ -2768,6 +3018,16 @@
   "source": "pypi",
   "stars": 7,
   "tool_desc": "Automated tool for conducting functional annotation of transcripts that integrates sequence similarity searches and functional motif predict"
+ },
+ "targetgene": {
+  "accepted": false,
+  "name": "TargetGene",
+  "reason": "no candidate from any source",
+  "repo_desc": "",
+  "slug": "",
+  "source": "",
+  "stars": null,
+  "tool_desc": "Comprehensive database of cell-type-specific target genes for genetic variants."
  },
  "tfbind": {
   "accepted": true,
@@ -2859,6 +3119,16 @@
   "stars": 8,
   "tool_desc": "TSSFinder (ab initio prediction of the core promoter in eukaryotes) is a fast and accurate ab initio prediction of the core promoter in euka"
  },
+ "uniprobe": {
+  "accepted": false,
+  "name": "UniPROBE",
+  "reason": "no candidate from any source",
+  "repo_desc": "",
+  "slug": "",
+  "source": "",
+  "stars": null,
+  "tool_desc": "The Universal PBM Resource for Oligonucleotide-Binding Evaluation database is a centralized repository of information on the DNA-binding pre"
+ },
  "uropa": {
   "accepted": false,
   "name": "UROPA",
@@ -2868,6 +3138,16 @@
   "source": "bioconda",
   "stars": 16,
   "tool_desc": "Intended for universal genomic range (e.g. peaks) annotation. Based on a configuration file, different target features can be prioritized wi"
+ },
+ "varadb": {
+  "accepted": false,
+  "name": "VARAdb",
+  "reason": "no name match and only 0 shared terms ()",
+  "repo_desc": "My Portfolio - Personal Website",
+  "slug": "varadbhogayata/varadbhogayata.github.io",
+  "source": "github-search",
+  "stars": 1525,
+  "tool_desc": "A comprehensive variation annotation database for human."
  },
  "varianttools": {
   "accepted": false,
@@ -2888,6 +3168,16 @@
   "source": "pypi",
   "stars": 29,
   "tool_desc": "Causal gene regulatory analysis with RNA velocity reveals an interplay between slow and fast transcription factors."
+ },
+ "w-chipeaks": {
+  "accepted": false,
+  "name": "W-ChIPeaks",
+  "reason": "no candidate from any source",
+  "repo_desc": "",
+  "slug": "",
+  "source": "",
+  "stars": null,
+  "tool_desc": "This employs a probe-based or bin-based enrichment threshold to define peaks and applies statistical methods to control the false discovery "
  },
  "waveseqr": {
   "accepted": false,
@@ -2928,6 +3218,16 @@
   "source": "pypi",
   "stars": 0,
   "tool_desc": "De novo motif (transcription factor binding sites) discovery in sequences from coregulated genes of a single species. This is a new release "
+ },
+ "x2k": {
+  "accepted": false,
+  "name": "X2K",
+  "reason": "no candidate from any source",
+  "repo_desc": "",
+  "slug": "",
+  "source": "",
+  "stars": null,
+  "tool_desc": "Method to identify upstream regulators likely responsible for observed patterns in genome-wide gene expression. By integrating ChIP-seq/chip"
  },
  "x2k_web": {
   "accepted": false,
