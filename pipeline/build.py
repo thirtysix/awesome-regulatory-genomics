@@ -567,6 +567,8 @@ def from_seed(seed: dict, cites: dict[str, int] | None = None,
 # ---------------------------------------------------------------------------
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--allow-shrink", action="store_true",
+                    help="build even if the catalog shrinks by more than a quarter")
     ap.add_argument("--no-llm", action="store_true",
                     help="ignore curation/llm_proposals.yaml (pure deterministic build)")
     ap.add_argument("--apply-scope", action="store_true",
@@ -783,6 +785,21 @@ def main() -> None:
                 ("" if r.get(c) is None else r.get(c))
                 for c in COLUMNS
             ])
+
+    # Second floor, independent of harvest.py's. A catalog that loses a quarter
+    # of its tools in one build is a failure somewhere upstream, not a curation
+    # decision: overlay exclusions are deliberate and gradual, an outage is not.
+    if CATALOG_JSON.exists():
+        try:
+            was = json.loads(CATALOG_JSON.read_text())["meta"]["count"]
+        except (ValueError, KeyError):
+            was = 0
+        if was and len(rows) < int(was * 0.75) and not args.allow_shrink:
+            raise SystemExit(
+                f"\nBuild would drop the catalog from {was} tools to {len(rows)}.\n"
+                f"  Nothing was written. Check data/raw/selected.json.gz first:\n"
+                f"  a failed harvest produces a small, plausible-looking catalog.\n"
+                f"  Override with --allow-shrink once you know why it shrank.")
 
     dropped.sort(key=lambda r: -(r.get("citations") or 0))
     EXCLUDED_JSON.write_text(json.dumps(

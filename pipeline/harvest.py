@@ -17,7 +17,7 @@ import time
 
 import requests
 
-from jsonio import write_json
+from jsonio import read_json, write_json
 from config import (BIOTOOLS_API, user_agent, QUERY_FREETEXT, QUERY_OPERATIONS,
                     QUERY_TOPICS, RAW, SEED_BIOTOOLS_IDS)
 
@@ -125,6 +125,8 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--max-pages", type=int, default=60,
                     help="page cap per query (bio.tools returns 10/page)")
+    ap.add_argument("--allow-shrink", action="store_true",
+                    help="write the sweep even if it is far smaller than last time")
     ap.add_argument("--refresh", action="store_true",
                     help="re-run even if a sweep already exists")
     args = ap.parse_args()
@@ -137,6 +139,28 @@ def main() -> None:
     print(f"Sweeping bio.tools: {len(QUERY_OPERATIONS)} operation, "
           f"{len(QUERY_TOPICS)} topic, {len(QUERY_FREETEXT)} free-text queries")
     result = harvest(args.max_pages)
+    # A harvest that collapses must not be written. On 2026-08-02 bio.tools
+    # search returned count=0 for every query, including a bare unfiltered one,
+    # while direct fetches by ID still worked. 70 records got through, the
+    # pipeline built a 204-tool catalog from them without complaint, and the
+    # monthly job opened a pull request proposing it: 1,763 tools down to 204.
+    # The outage was upstream and brief. Accepting its output silently was ours.
+    previous = 0
+    if SWEEP.exists():
+        try:
+            previous = read_json(SWEEP).get("count", 0)
+        except Exception:                                    # noqa: BLE001
+            previous = 0
+    floor = int(previous * 0.75)
+    if previous and result["count"] < floor and not args.allow_shrink:
+        sys.exit(
+            f"\nHarvest collapsed: {result['count']} records against {previous} "
+            f"last time (floor {floor}).\n"
+            f"  Nothing was written; the previous sweep is intact.\n"
+            f"  Check the upstream API before re-running: a bare\n"
+            f"  https://bio.tools/api/tool/?format=json should report a non-zero count.\n"
+            f"  Override with --allow-shrink once you know why it shrank.")
+
     write_json(SWEEP, result)
     print(f"\n{result['count']} unique records -> {SWEEP}")
 
