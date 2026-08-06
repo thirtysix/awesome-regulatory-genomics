@@ -1387,3 +1387,573 @@ tools:
     - bioconductor
     doi: 10.1093/bioinformatics/btab392
 
+  # Added 2026-08-06 from pipeline/discover_literature.py (Europe PMC), adjudicated
+  # by pipeline/adjudicate_candidates.py. Only candidates whose paper states a
+  # software URL that still resolves: of 336 accepted, 106 stated one and 60 of
+  # those were live. An entry whose homepage is a DOI is a citation, not a tool.
+
+  - name: GMFGRN
+    url: https://github.com/Lishuoyy/GMFGRN
+    description: "Infers gene regulatory networks using matrix factorization and graph neural networks on expression data"
+    categories:
+    - grn-inference
+    doi: 10.1093/bib/bbad529
+    tags:
+    - literature
+
+  - name: AutoGERN
+    url: https://github.com/JChander/AutoGERN
+    description: "Infers gene regulatory networks from single-cell RNA-seq data using explicit link modeling and adaptive architectures"
+    categories:
+    - grn-inference
+    - single-cell
+    doi: 10.1093/bioinformatics/btag143
+    tags:
+    - literature
+
+  - name: TFinder
+    url: https://github.com/Jumitti/TFinder
+    description: "Predicts transcription factor binding sites in DNA sequences using a web-based Python tool"
+    categories:
+    - tfbs-prediction
+    doi: 10.1016/j.jmb.2024.168921
+    tags:
+    - literature
+
+  - name: REUNION
+    url: https://github.com/yangymargaret/REUNION
+    description: "Predicts transcription factor binding and infers regulatory associations from single-cell multi-omics data"
+    categories:
+    - tfbs-prediction
+    - grn-inference
+    - single-cell
+    doi: 10.1093/bioinformatics/btae234
+    tags:
+    - literature
+
+  - name: DiCARN-DNase
+    url: https://github.com/OluwadareLab/DiCARN
+    description: "Enhances cell-to-cell Hi-C resolution by integrating dilated cascading ResNet with self-attention and DNase-seq chromatin accessibility data"
+    categories:
+    - chromatin-3d
+    - single-cell
+    doi: 10.1093/bioinformatics/btaf452
+    tags:
+    - literature
+
+  - name: DeepCE
+    url: https://github.com/sxiaodai/DeepCE
+    description: "Infers gene regulatory networks from single-cell RNA sequencing data using a deep learning framework with enhanced correlation modeling"
+    categories:
+    - grn-inference
+    - single-cell
+    doi: 10.1093/bioadv/vbag033
+    tags:
+    - literature
+
+  - name: AttnW2V-Enhancer
+    url: https://github.com/Rehman1995/AttnW2V-Enhancer
+    description: "Predicts enhancer regions in DNA sequences using attention mechanisms and Word2Vec embeddings"
+    categories:
+    - regulatory-elements
+    doi: 10.1016/j.csbj.2025.07.008
+    tags:
+    - literature
+
+  - name: Diff-SE
+    url: https://github.com/15831959673/Diff-SE
+    description: "Predicts super-enhancers using a diffusion-augmented contrastive learning framework on genomic sequence data"
+    categories:
+    - regulatory-elements
+    doi: 10.1021/acs.jcim.5c01005
+    tags:
+    - literature
+
+  - name: PeakXus
+    url: https://github.com/hartonen/PeakXus
+    description: "Discovers transcription factor binding sites from ChIP-Nexus and ChIP-Exo experimental data"
+    categories:
+    - motif-discovery
+    - tfbs-prediction
+    - peak-calling
+    doi: 10.1093/bioinformatics/btw448
+    tags:
+    - literature
+
+  - name: BiGSM
+    url: https://github.com/SachLab/BiGSM
+    description: "Infers gene regulatory networks from expression data using Bayesian inference with sparse modelling"
+    categories:
+    - grn-inference
+    doi: 10.1093/bioinformatics/btaf318
+    tags:
+    - literature
+
+  - name: LiMeNEx
+    url: https://limenex.raylab.iiitd.edu.in/
+    description: "Interactive webserver for exploring lipid biochemical gene-regulatory networks"
+    categories:
+    - regulatory-elements
+    - grn-inference
+    doi: 10.1093/nar/gkag384
+    tags:
+    - literature
+
+  - name: CompleteMOTIFs
+    url: http://cmotifs.tchlab.org
+    description: "A platform for discovering DNA motifs from transcription factor binding experiments"
+    categories:
+    - motif-discovery
+    doi: 10.1093/bioinformatics/btq707
+    tags:
+    - literature
+
+  - name: Ritornello
+    url: https://github.com/KlugerLab/Ritornello
+    description: "Performs high fidelity chromatin immunoprecipitation peak calling without requiring control samples"
+    categories:
+    - peak-calling
+    doi: 10.1093/nar/gkx799
+    tags:
+    - literature
+
+  - name: Dispom
+    url: http://www.jstacs.de/index.php/Dispom
+    description: "A discriminative de-novo motif discovery tool based on the Jstacs library for identifying regulatory motifs in DNA sequences"
+    categories:
+    - motif-discovery
+    doi: 10.1142/s0219720013400064
+    tags:
+    - literature
+
+  - name: Sequence2Vec
+    url: https://github.com/ramzan1990/sequence2vec
+    description: "Embeds DNA sequences into vector representations to model transcription factor binding affinity landscapes"
+    categories:
+    - motif-discovery
+    - tfbs-prediction
+    doi: 10.1093/bioinformatics/btx480
+    tags:
+    - literature
+
+  - name: simCAS
+    url: https://github.com/Chen-Li-17/simCAS
+    description: "Simulates single-cell chromatin accessibility sequencing data using an embedding-based approach"
+    categories:
+    - nucleosome-chromatin
+    - single-cell
+    doi: 10.1093/bioinformatics/btad453
+    tags:
+    - literature
+
+  - name: LogBTF
+    url: https://github.com/zpliulab/LogBTF
+    description: "Infers gene regulatory networks from single-cell gene expression data using a Boolean threshold network model"
+    categories:
+    - grn-inference
+    - single-cell
+    doi: 10.1093/bioinformatics/btad256
+    tags:
+    - literature
+
+  - name: TRAFICA
+    url: https://github.com/ericcombiolab/TRAFICA
+    description: "Predicts transcription factor binding affinities using an open chromatin language model trained on chromatin accessibility data"
+    categories:
+    - motif-scanning
+    - tfbs-prediction
+    - regulatory-elements
+    doi: 10.1093/bioinformatics/btaf469
+    tags:
+    - literature
+
+  - name: PlantCADB
+    url: https://bioinfor.nefu.edu.cn/PlantCADB/
+    description: "Provides a comprehensive database of chromatin accessibility data across multiple plant species"
+    categories:
+    - regulatory-elements
+    - nucleosome-chromatin
+    doi: 10.1016/j.gpb.2022.10.005
+    tags:
+    - literature
+
+  - name: OpenAnnotateApi
+    url: https://github.com/ZjGaothu/OpenAnnotateR
+    description: "Python and R packages to efficiently annotate and analyze chromatin accessibility of genomic regions"
+    categories:
+    - regulatory-elements
+    - peak-annotation
+    - nucleosome-chromatin
+    doi: 10.1093/bioadv/vbae055
+    tags:
+    - literature
+
+  - name: CaHoT-GRN
+    url: https://github.com/ydkvictory/CaHoT-GRN
+    description: "Infers gene regulatory networks from single-cell data using context-aware high-order topology learning"
+    categories:
+    - grn-inference
+    - single-cell
+    doi: 10.1093/bib/bbag202
+    tags:
+    - literature
+
+  - name: Seqinspector
+    url: http://seqinspector.cremag.org
+    description: "Navigates ChIP-seq data by genomic position to identify potential gene expression regulators"
+    categories:
+    - regulatory-elements
+    - peak-annotation
+    doi: 10.1186/s12859-016-0938-4
+    tags:
+    - literature
+
+  - name: RTFBSDB
+    url: https://github.com/Danko-Lab/rtfbs_db
+    description: "Integrates transcription factor binding site analysis by combining motif discovery, scanning, and comparison tools"
+    categories:
+    - motif-discovery
+    - motif-scanning
+    - motif-comparison
+    doi: 10.1093/bioinformatics/btw338
+    tags:
+    - literature
+
+  - name: NORMAL
+    url: http://www.cs.ucr.edu/~polishka
+    description: "Predicts nucleosome positions from genomic sequence data using a modified Gaussian mixture model for improved accuracy"
+    categories:
+    - nucleosome-chromatin
+    doi: 10.1093/bioinformatics/bts206
+    tags:
+    - literature
+
+  - name: SCAFE
+    url: https://github.com/chung-lab/SCAFE
+    description: "Analyzes transcribed cis-regulatory elements from single-cell data using a software suite"
+    categories:
+    - regulatory-elements
+    - single-cell
+    doi: 10.1093/bioinformatics/btac644
+    tags:
+    - literature
+
+  - name: GCLink
+    url: https://github.com/Yoyiming/GCLink
+    description: "Infers gene regulatory networks using graph contrastive link prediction on gene expression data"
+    categories:
+    - grn-inference
+    doi: 10.1093/bioinformatics/btaf074
+    tags:
+    - literature
+
+  - name: YAMDA
+    url: https://github.com/daquang/YAMDA
+    description: "Accelerates EM-based motif discovery using deep learning libraries and GPU for thousandfold speedup"
+    categories:
+    - motif-discovery
+    doi: 10.1093/bioinformatics/bty396
+    tags:
+    - literature
+
+  - name: GRNFormer
+    url: https://github.com/BioinfoMachineLearning/GRNformer
+    description: "Infers gene regulatory networks from expression data using a graph transformer architecture"
+    categories:
+    - grn-inference
+    doi: 10.1093/bioinformatics/btag144
+    tags:
+    - literature
+
+  - name: Arpeggio
+    url: http://sourceforge.net/p/arpeggio/wiki/Home/
+    description: "Harmonically compresses ChIP-seq data to reveal protein-chromatin interaction signatures"
+    categories:
+    - peak-calling
+    - chip-resources
+    - nucleosome-chromatin
+    doi: 10.1093/nar/gkt627
+    tags:
+    - literature
+
+  - name: PairMotifChIP
+    url: http://www.w3.org/1998/Math/MathML
+    description: "Discovers conserved sequence patterns in large ChIP-seq datasets using a fast algorithm"
+    categories:
+    - motif-discovery
+    - peak-annotation
+    - chip-resources
+    doi: 10.1155/2016/4986707
+    tags:
+    - literature
+
+  - name: scVMAP
+    url: https://bio.liclab.net/scvmap/
+    description: "Integrates single-cell chromatin accessibility regions with causal variants for comprehensive analysis"
+    categories:
+    - regulatory-variants
+    - chromatin-3d
+    - single-cell
+    doi: 10.1093/nar/gkaf1112
+    tags:
+    - literature
+
+  - name: CistromeMeta
+    url: https://github.com/nickpiccaro/CistromeMetaX
+    description: "Automates extraction of ChIP-seq metadata using a large language model from experimental records"
+    categories:
+    - chip-resources
+    doi: 10.1093/bioinformatics/btag380
+    tags:
+    - literature
+
+  - name: BERT-TFBS
+    url: https://github.com/ZX1998-12/BERT-TFBS
+    description: "Predicts transcription factor binding sites using a BERT-based model with transfer learning on genomic sequences"
+    categories:
+    - motif-discovery
+    - tfbs-prediction
+    doi: 10.1093/bib/bbae195
+    tags:
+    - literature
+
+  - name: DIME
+    url: http://www.stat.osu.edu/~statgen/SOFTWARE/DIME
+    description: "Identifies differential ChIP-seq signals using an ensemble of mixture models"
+    categories:
+    - peak-calling
+    - histone-marks
+    doi: 10.1093/bioinformatics/btr165
+    tags:
+    - literature
+
+  - name: IGN
+    url: https://github.com/zang-lab/IGN
+    description: "Normalizes chromatin accessibility profile data using an invariable gene set for cross-sample comparison"
+    categories:
+    - nucleosome-chromatin
+    doi: 10.1016/j.csbj.2025.01.018
+    tags:
+    - literature
+
+  - name: Tmod
+    url: http://www.fas.harvard.edu/~junliu/Tmod/
+    description: "Provides a collection of tools for discovering sequence motifs in biological data"
+    categories:
+    - motif-discovery
+    doi: 10.1093/bioinformatics/btp681
+    tags:
+    - literature
+
+  - name: ATAC-pipe
+    url: https://github.com/QuKunLab/ATAC-pipe
+    description: "Performs general analysis of genome-wide chromatin accessibility data from ATAC-seq experiments"
+    categories:
+    - footprinting
+    - peak-calling
+    - nucleosome-chromatin
+    doi: 10.1093/bib/bby056
+    tags:
+    - literature
+
+  - name: ChIPnorm
+    url: http://lcbb.epfl.ch/software.html
+    description: "Normalizes and identifies differential regions in histone modification ChIP-seq libraries using a statistical method"
+    categories:
+    - peak-calling
+    - histone-marks
+    doi: 10.1371/journal.pone.0039573
+    tags:
+    - literature
+
+  - name: CLARIFY
+    url: https://github.com/MihirBafna/CLARIFY
+    description: "Refines cell-cell interactions and gene regulatory networks using spatially resolved transcriptomics data"
+    categories:
+    - grn-inference
+    - single-cell
+    doi: 10.1093/bioinformatics/btad269
+    tags:
+    - literature
+
+  - name: ALTRE
+    url: https://github.com/Mathelab/ALTRE
+    description: "Workflow for defining altered regulatory elements using chromatin accessibility data"
+    categories:
+    - regulatory-elements
+    - peak-calling
+    doi: 10.1093/bioinformatics/btw688
+    tags:
+    - literature
+
+  - name: SFINN
+    url: https://github.com/JGuan-lab/SFINN
+    description: "Infers gene regulatory networks from single-cell and spatial transcriptomic data using shared factor neighborhood and integrated neural network"
+    categories:
+    - grn-inference
+    - single-cell
+    doi: 10.1093/bioinformatics/btae433
+    tags:
+    - literature
+
+  - name: scAVENGERS
+    url: https://github.com/kaistcbfg/scAVENGERS
+    description: "Deconvolves individual identities from multiplexed single-cell ATAC-seq data using genotype information without requiring reference genotypes"
+    categories:
+    - single-cell
+    doi: 10.1093/nargab/lqac095
+    tags:
+    - literature
+
+  - name: BertSNR
+    url: https://github.com/lhy0322/BertSNR
+    description: "An interpretable deep learning framework for identifying transcription factor binding sites at single-nucleotide resolution using a DNA language model"
+    categories:
+    - motif-discovery
+    - tfbs-prediction
+    doi: 10.1093/bioinformatics/btae461
+    tags:
+    - literature
+
+  - name: PCRMS
+    url: https://cci-bioinfo.uncc.edu
+    description: "Provides a database of predicted cis-regulatory modules and transcription factor binding sites across genomes"
+    categories:
+    - motif-databases
+    - tfbs-prediction
+    - regulatory-elements
+    doi: 10.1093/database/baac024
+    tags:
+    - literature
+
+  - name: AGRN
+    url: https://github.com/DuaaAlawad/AGRN
+    description: "Infers gene regulatory networks from expression data using ensemble machine learning methods"
+    categories:
+    - grn-inference
+    doi: 10.1093/bioadv/vbad032
+    tags:
+    - literature
+
+  - name: CRM-TI
+    url: https://github.com/cobisLab/CRM-TI
+    description: "Assigns target genes to cis-regulatory modules by modeling long-range regulation mechanisms"
+    categories:
+    - regulatory-elements
+    - peak-annotation
+    doi: 10.1186/s13040-026-00555-z
+    tags:
+    - literature
+
+  - name: MicroScope
+    url: http://microscopebioinformatics.org/
+    description: "Analyzes ChIP-seq and RNA-seq data to generate gene expression heatmaps"
+    categories:
+    - regulatory-elements
+    - peak-annotation
+    doi: 10.1186/s12859-016-1260-x
+    tags:
+    - literature
+
+  - name: OncoCis
+    url: https://powcs.med.unsw.edu.au/OncoCis/
+    description: "Annotates cis-regulatory mutations in cancer genomes using genomic data"
+    categories:
+    - regulatory-elements
+    - peak-annotation
+    - regulatory-variants
+    doi: 10.1186/s13059-014-0485-0
+    tags:
+    - literature
+
+  - name: T3E
+    url: https://github.com/michelleapaz/T3E
+    description: "Characterises the epigenetic profile of transposable elements using ChIP-seq data"
+    categories:
+    - regulatory-elements
+    - peak-annotation
+    - histone-marks
+    doi: 10.1186/s13100-022-00285-z
+    tags:
+    - literature
+
+  - name: TRENDY
+    url: https://github.com/YueWangMathbio/TRENDY
+    description: "Infers gene regulatory networks from expression data using a transformer-based model"
+    categories:
+    - grn-inference
+    doi: 10.1093/bioinformatics/btaf314
+    tags:
+    - literature
+
+  - name: MLSNet
+    url: https://github.com/minghaidea/MLSNet
+    description: "Predicts transcription factor binding sites using a deep learning model on DNA sequence data"
+    categories:
+    - motif-discovery
+    - tfbs-prediction
+    doi: 10.1093/bib/bbae489
+    tags:
+    - literature
+
+  - name: deepTFBS
+    url: https://github.com/cma2015/deepTFBS
+    description: "Predicts transcription factor binding sites within and across species using deep multi-task and transfer learning on sequence data"
+    categories:
+    - motif-discovery
+    - tfbs-prediction
+    doi: 10.1002/advs.202503135
+    tags:
+    - literature
+
+  - name: SPREd
+    url: https://github.com/iiiime/SPREd
+    description: "Reconstructs gene regulatory networks using a simulation-supervised neural network approach"
+    categories:
+    - grn-inference
+    doi: 10.1093/bioadv/vbae011
+    tags:
+    - literature
+
+  - name: GraphChIAr
+    url: https://github.com/don194/GraphChIAr
+    description: "Reconstructs genome-wide super-resolution protein-mediated remote chromatin interactions by augmenting Hi-C maps with multiple ChIP-seq profiles"
+    categories:
+    - regulatory-elements
+    - peak-annotation
+    - chromatin-3d
+    doi: 10.1093/bib/bbag305
+    tags:
+    - literature
+
+  - name: DeepSTF
+    url: https://github.com/YuBinLab-QUST/DeepSTF/
+    description: "Predicts transcription factor binding sites using interpretable deep neural networks that integrate DNA sequence and shape features"
+    categories:
+    - motif-discovery
+    - tfbs-prediction
+    doi: 10.1093/bib/bbad231
+    tags:
+    - literature
+
+  - name: CAME
+    url: http://sourceforge.net/projects/came/
+    description: "Identifies chromatin accessibility by analyzing nucleosome occupancy and methylome sequencing data"
+    categories:
+    - regulatory-elements
+    - nucleosome-chromatin
+    - dna-methylation
+    doi: 10.1093/bioinformatics/btw785
+    tags:
+    - literature
+
+  - name: Romulus
+    url: http://github.com/ajank/Romulus
+    description: "Identifies transcription factor binding sites from DNase-seq data using a robust multi-state approach"
+    categories:
+    - tfbs-prediction
+    - footprinting
+    doi: 10.1093/bioinformatics/btw209
+    tags:
+    - literature
+
