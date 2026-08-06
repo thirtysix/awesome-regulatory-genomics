@@ -1,0 +1,2438 @@
+[
+ {
+  "name": "EP3",
+  "description": "Identification of the core region of a eukaryotic gene promoter.",
+  "homepage": "http://bioinformatics.psb.ugent.be/software/details/EP3",
+  "biotoolsID": "ep3",
+  "version": [
+   "1"
+  ],
+  "function": [
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_0440",
+      "term": "Promoter prediction"
+     }
+    ],
+    "input": [
+     {
+      "data": {
+       "uri": "http://edamontology.org/data_2749",
+       "term": "Genome identifier"
+      },
+      "format": [
+       {
+        "uri": "http://edamontology.org/format_1929",
+        "term": "FASTA"
+       }
+      ]
+     }
+    ],
+    "output": [
+     {
+      "data": {
+       "uri": "http://edamontology.org/data_2070",
+       "term": "Sequence motif (nucleic acid)"
+      }
+     }
+    ]
+   }
+  ],
+  "toolType": [
+   "Command-line tool",
+   "Desktop application"
+  ],
+  "topic": [
+   {
+    "uri": "http://edamontology.org/topic_3511",
+    "term": "Nucleic acid sites, features and motifs"
+   }
+  ],
+  "operatingSystem": [
+   "Linux",
+   "Windows",
+   "Mac"
+  ],
+  "language": [
+   "Java"
+  ],
+  "collectionID": [
+   "BIG N2N",
+   "UGent"
+  ],
+  "documentation": [
+   {
+    "url": "http://bioinformatics.psb.ugent.be/webtools/ep3/",
+    "type": [
+     "General"
+    ]
+   }
+  ],
+  "publication": [
+   {
+    "pmid": "18096745",
+    "type": [
+     "Primary"
+    ]
+   }
+  ],
+  "credit": [
+   {
+    "name": "ugent.be",
+    "typeEntity": "Institute",
+    "typeRole": [
+     "Provider"
+    ]
+   }
+  ],
+  "editPermission": {
+   "type": "private"
+  },
+  "_correction": "publication ['doi:10.1093/bioinformatics/btp191', 'pmid:19478005'] -> pmid:18096745"
+ },
+ {
+  "name": "NOBAI",
+  "description": "Facilitates the search for the evolutionary history embedded in the structure of functional RNA molecules.",
+  "homepage": "http://www.manet.uiuc.edu/nobai/nobai.php",
+  "biotoolsID": "nobai",
+  "function": [
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_3458",
+      "term": "Single particle alignment and classification"
+     },
+     {
+      "uri": "http://edamontology.org/operation_0438",
+      "term": "Transcriptional regulatory element prediction"
+     },
+     {
+      "uri": "http://edamontology.org/operation_3457",
+      "term": "Single particle analysis"
+     },
+     {
+      "uri": "http://edamontology.org/operation_2441",
+      "term": "RNA structure prediction"
+     }
+    ]
+   }
+  ],
+  "toolType": [
+   "Web application"
+  ],
+  "topic": [
+   {
+    "uri": "http://edamontology.org/topic_0659",
+    "term": "Functional, regulatory and non-coding RNA"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0099",
+    "term": "RNA"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0602",
+    "term": "Molecular interactions, pathways and networks"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0097",
+    "term": "Nucleic acid structure analysis"
+   },
+   {
+    "uri": "http://edamontology.org/topic_3318",
+    "term": "Physics"
+   }
+  ],
+  "operatingSystem": [
+   "Linux",
+   "Windows",
+   "Mac"
+  ],
+  "documentation": [
+   {
+    "url": "http://www.manet.uiuc.edu/nobai/nobai.php",
+    "type": [
+     "General"
+    ]
+   }
+  ],
+  "publication": [
+   {
+    "pmid": "18448469",
+    "type": [
+     "Primary"
+    ]
+   }
+  ],
+  "credit": [
+   {
+    "name": "Support",
+    "typeEntity": "Person",
+    "typeRole": [
+     "Primary contact"
+    ]
+   }
+  ],
+  "editPermission": {
+   "type": "private"
+  },
+  "_correction": "publication ['doi:10.1140/epje/i2007-10314-1', 'pmid:18449469'] -> pmid:18448469"
+ },
+ {
+  "name": "Signac",
+  "description": "Multimodal single-cell chromatin analysis with Signac.\n\nA New Algorithm for Finding Marker Genes in Single-Cell Transcriptomic Data.\n\nSignac - A versatile package for Single-cell RNA-Seq analysis.\n\nWe introduce Signac, a versatile R package to facilitate the analysis workflow for single-cell data. It helps to find marker genes faster and more accurate, search for cells with similar expression profiles, integrate multiple datasets in the BioTuring Browser database (know more about BioTuring Browser), etc. For users with a limited computational resource, we provide the helper functions to exercise all analyses for the large-scale datasets from disk. Because of its speed and flexibility, it can be adapted to any existing R analysis pipeline to help explore single-cell data more efficient.\n\nSignac is an extension of Seurat for the analysis of single-cell chromatin data.",
+  "homepage": "https://satijalab.org/signac/",
+  "biotoolsID": "signac",
+  "function": [
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_3222",
+      "term": "Peak calling"
+     },
+     {
+      "uri": "http://edamontology.org/operation_2495",
+      "term": "Expression analysis"
+     },
+     {
+      "uri": "http://edamontology.org/operation_3935",
+      "term": "Dimensionality reduction"
+     },
+     {
+      "uri": "http://edamontology.org/operation_3196",
+      "term": "Genotyping"
+     },
+     {
+      "uri": "http://edamontology.org/operation_3891",
+      "term": "Essential dynamics"
+     }
+    ]
+   }
+  ],
+  "topic": [
+   {
+    "uri": "http://edamontology.org/topic_0203",
+    "term": "Gene expression"
+   },
+   {
+    "uri": "http://edamontology.org/topic_3170",
+    "term": "RNA-Seq"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0625",
+    "term": "Genotype and phenotype"
+   },
+   {
+    "uri": "http://edamontology.org/topic_2229",
+    "term": "Cell biology"
+   },
+   {
+    "uri": "http://edamontology.org/topic_3512",
+    "term": "Gene transcripts"
+   }
+  ],
+  "language": [
+   "C++",
+   "R",
+   "Python"
+  ],
+  "link": [
+   {
+    "url": "https://github.com/bioturing/signac",
+    "type": [
+     "Repository"
+    ]
+   },
+   {
+    "url": "https://cloud.r-project.org/package=Signac",
+    "type": [
+     "Other"
+    ]
+   },
+   {
+    "url": "https://github.com/timoast/signac",
+    "type": [
+     "Repository"
+    ]
+   },
+   {
+    "url": "https://github.com/timoast/signac-paper",
+    "type": [
+     "Repository"
+    ]
+   }
+  ],
+  "publication": [
+   {
+    "pmid": "34725479",
+    "type": [
+     "Primary"
+    ]
+   }
+  ],
+  "credit": [
+   {
+    "name": "Tim Stuart",
+    "typeEntity": "Person"
+   },
+   {
+    "name": "Rahul Satija",
+    "typeEntity": "Person"
+   },
+   {
+    "name": "Son Pham",
+    "typeEntity": "Person"
+   }
+  ],
+  "editPermission": {
+   "type": "private"
+  },
+  "_correction": "publication ['doi:10.1101/2020.11.09.373613', 'doi:10.1101/2020.11.16.384479'] -> pmid:34725479"
+ },
+ {
+  "name": "ArchR",
+  "description": "ArchR is a full-featured R package for processing and analyzing single-cell ATAC-seq data. ArchR provides the most extensive suite of scATAC-seq analysis tools of any software available. Maybe licensed under GPL>=2.",
+  "homepage": "http://www.ArchRProject.com",
+  "biotoolsID": "archr",
+  "function": [
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_3891",
+      "term": "Essential dynamics"
+     },
+     {
+      "uri": "http://edamontology.org/operation_3436",
+      "term": "Aggregation"
+     },
+     {
+      "uri": "http://edamontology.org/operation_3222",
+      "term": "Peak calling"
+     },
+     {
+      "uri": "http://edamontology.org/operation_3196",
+      "term": "Genotyping"
+     }
+    ]
+   }
+  ],
+  "toolType": [
+   "Library"
+  ],
+  "topic": [
+   {
+    "uri": "http://edamontology.org/topic_3940",
+    "term": "Chromosome conformation capture"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0102",
+    "term": "Mapping"
+   },
+   {
+    "uri": "http://edamontology.org/topic_3512",
+    "term": "Gene transcripts"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0749",
+    "term": "Transcription factors and regulatory sites"
+   },
+   {
+    "uri": "http://edamontology.org/topic_3308",
+    "term": "Transcriptomics"
+   }
+  ],
+  "language": [
+   "R"
+  ],
+  "license": "MIT",
+  "link": [
+   {
+    "url": "https://github.com/GreenleafLab/ArchR",
+    "type": [
+     "Repository"
+    ]
+   },
+   {
+    "url": "https://github.com/GreenleafLab/ArchR_2020",
+    "type": [
+     "Repository"
+    ]
+   }
+  ],
+  "publication": [
+   {
+    "doi": "10.1038/s41588-021-00790-6",
+    "type": [
+     "Primary"
+    ]
+   }
+  ],
+  "credit": [
+   {
+    "name": "Jeffrey M. Granja",
+    "typeEntity": "Person"
+   },
+   {
+    "name": "Howard Y. Chang",
+    "typeEntity": "Person"
+   },
+   {
+    "name": "William J. Greenleaf",
+    "typeEntity": "Person"
+   }
+  ],
+  "editPermission": {
+   "type": "public"
+  },
+  "_correction": "publication ['doi:10.1101/2020.04.28.066498'] -> doi:10.1038/s41588-021-00790-6"
+ },
+ {
+  "name": "DMCHMM",
+  "description": "It is a novel profiling tool for identifying differentially methylated CpG sites using Hidden Markov Model in bisulfite sequencing data.",
+  "homepage": "http://bioconductor.org/packages/release/bioc/html/DMCHMM.html",
+  "biotoolsID": "dmchmm",
+  "version": [
+   "1.2.0"
+  ],
+  "function": [
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_3204",
+      "term": "Methylation analysis"
+     }
+    ]
+   }
+  ],
+  "toolType": [
+   "Library"
+  ],
+  "topic": [
+   {
+    "uri": "http://edamontology.org/topic_3168",
+    "term": "Sequencing"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0749",
+    "term": "Transcription factors and regulatory sites"
+   }
+  ],
+  "operatingSystem": [
+   "Linux",
+   "Windows",
+   "Mac"
+  ],
+  "language": [
+   "R"
+  ],
+  "license": "GPL-3.0",
+  "collectionID": [
+   "BioConductor"
+  ],
+  "link": [
+   {
+    "url": "http://bioconductor.org/packages/DMCHMM/",
+    "type": [
+     "Mirror"
+    ]
+   },
+   {
+    "url": "https://git.bioconductor.org/packages/DMCHMM",
+    "type": [
+     "Repository"
+    ]
+   }
+  ],
+  "download": [
+   {
+    "url": "http://bioconductor.org/packages/release/bioc/src/contrib/DMCHMM_1.2.0.tar.gz",
+    "type": "Software package"
+   }
+  ],
+  "documentation": [
+   {
+    "url": "http://bioconductor.org/packages/release/bioc/manuals/DMCHMM/man/DMCHMM.pdf",
+    "type": [
+     "User manual"
+    ]
+   }
+  ],
+  "publication": [
+   {
+    "doi": "10.1111/biom.12965",
+    "type": [
+     "Primary"
+    ]
+   }
+  ],
+  "credit": [
+   {
+    "name": "Farhad Shokoohi",
+    "typeEntity": "Person",
+    "typeRole": [
+     "Primary contact"
+    ]
+   }
+  ],
+  "editPermission": {
+   "type": "private"
+  },
+  "_correction": "publication [] -> doi:10.1111/biom.12965"
+ },
+ {
+  "name": "InTAD",
+  "description": "The package is focused on the detection of correlation between expressed genes and selected epigenomic signals i.e. enhancers obtained from ChIP-seq data within topologically associated domains (TADs). Various parameters can be controlled to investigate the influence of external factors and visualization plots are available for each analysis step.",
+  "homepage": "http://bioconductor.org/packages/release/bioc/html/InTAD.html",
+  "biotoolsID": "intad",
+  "version": [
+   "1.0.0"
+  ],
+  "function": [
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_0337",
+      "term": "Visualisation"
+     }
+    ]
+   },
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_2423",
+      "term": "Prediction and recognition"
+     }
+    ]
+   }
+  ],
+  "toolType": [
+   "Library"
+  ],
+  "topic": [
+   {
+    "uri": "http://edamontology.org/topic_3169",
+    "term": "ChIP-seq"
+   },
+   {
+    "uri": "http://edamontology.org/topic_3295",
+    "term": "Epigenetics"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0203",
+    "term": "Gene expression"
+   },
+   {
+    "uri": "http://edamontology.org/topic_3170",
+    "term": "RNA-seq"
+   },
+   {
+    "uri": "http://edamontology.org/topic_3168",
+    "term": "Sequencing"
+   }
+  ],
+  "operatingSystem": [
+   "Linux",
+   "Windows",
+   "Mac"
+  ],
+  "language": [
+   "R"
+  ],
+  "license": "GPL-2.0",
+  "collectionID": [
+   "BioConductor"
+  ],
+  "link": [
+   {
+    "url": "http://bioconductor.org/packages/InTAD/",
+    "type": [
+     "Mirror"
+    ]
+   },
+   {
+    "url": "https://git.bioconductor.org/packages/InTAD",
+    "type": [
+     "Repository"
+    ]
+   }
+  ],
+  "download": [
+   {
+    "url": "http://bioconductor.org/packages/release/bioc/src/contrib/InTAD_1.0.0.tar.gz",
+    "type": "Software package"
+   },
+   {
+    "url": "http://bioconductor.org/packages/release/bioc/vignettes/InTAD/inst/doc/InTAD.R",
+    "type": "Source code"
+   }
+  ],
+  "documentation": [
+   {
+    "url": "http://bioconductor.org/packages/release/bioc/manuals/InTAD/man/InTAD.pdf",
+    "type": [
+     "User manual"
+    ]
+   }
+  ],
+  "publication": [
+   {
+    "doi": "10.1186/s12859-019-2655-2",
+    "type": [
+     "Primary"
+    ]
+   }
+  ],
+  "credit": [
+   {
+    "name": "Konstantin Okonechnikov",
+    "typeEntity": "Person",
+    "typeRole": [
+     "Primary contact"
+    ]
+   }
+  ],
+  "editPermission": {
+   "type": "private"
+  },
+  "_correction": "publication [] -> doi:10.1186/s12859-019-2655-2"
+ },
+ {
+  "name": "NADfinder",
+  "description": "This Bioconductor package has been developed for bioinformatic analysis of the NAD-seq data, including normalization, smoothing, peak calling, peak trimming and annotation.",
+  "homepage": "http://bioconductor.org/packages/release/bioc/html/NADfinder.html",
+  "biotoolsID": "nadfinder",
+  "version": [
+   "1.4.0"
+  ],
+  "function": [
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_3215",
+      "term": "Peak detection"
+     }
+    ]
+   },
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_3435",
+      "term": "Standardisation and normalisation"
+     }
+    ]
+   },
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_0226",
+      "term": "Annotation"
+     }
+    ]
+   }
+  ],
+  "toolType": [
+   "Library"
+  ],
+  "topic": [
+   {
+    "uri": "http://edamontology.org/topic_3168",
+    "term": "Sequencing"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0204",
+    "term": "Gene regulation"
+   }
+  ],
+  "operatingSystem": [
+   "Linux",
+   "Windows",
+   "Mac"
+  ],
+  "language": [
+   "R"
+  ],
+  "license": "GPL-2.0",
+  "collectionID": [
+   "BioConductor"
+  ],
+  "link": [
+   {
+    "url": "http://bioconductor.org/packages/NADfinder/",
+    "type": [
+     "Mirror"
+    ]
+   },
+   {
+    "url": "https://git.bioconductor.org/packages/NADfinder",
+    "type": [
+     "Repository"
+    ]
+   }
+  ],
+  "download": [
+   {
+    "url": "http://bioconductor.org/packages/release/bioc/src/contrib/NADfinder_1.4.0.tar.gz",
+    "type": "Software package"
+   }
+  ],
+  "documentation": [
+   {
+    "url": "http://bioconductor.org/packages/release/bioc/manuals/NADfinder/man/NADfinder.pdf",
+    "type": [
+     "User manual"
+    ]
+   }
+  ],
+  "publication": [
+   {
+    "doi": "10.1101/gr.247072.118",
+    "type": [
+     "Primary"
+    ]
+   }
+  ],
+  "credit": [
+   {
+    "name": "Jianhong Ou",
+    "typeEntity": "Person",
+    "typeRole": [
+     "Primary contact"
+    ]
+   },
+   {
+    "name": "Lihua Julie Zhu",
+    "typeEntity": "Person",
+    "typeRole": [
+     "Primary contact"
+    ]
+   }
+  ],
+  "editPermission": {
+   "type": "private"
+  },
+  "_correction": "publication [] -> doi:10.1101/gr.247072.118"
+ },
+ {
+  "name": "SPONGE",
+  "description": "This package provides methods to efficiently detect competitive endogeneous RNA interactions between two genes. Such interactions are mediated by one or several miRNAs such that both gene and miRNA expression data for a larger number of samples is needed as input.",
+  "homepage": "http://bioconductor.org/packages/release/bioc/html/SPONGE.html",
+  "biotoolsID": "sponge",
+  "version": [
+   "1.2.0"
+  ],
+  "function": [
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_3659",
+      "term": "Regression analysis"
+     }
+    ]
+   },
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_0445",
+      "term": "Transcription factor binding site prediction"
+     }
+    ]
+   }
+  ],
+  "toolType": [
+   "Library"
+  ],
+  "topic": [
+   {
+    "uri": "http://edamontology.org/topic_0203",
+    "term": "Gene expression"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0204",
+    "term": "Gene regulation"
+   },
+   {
+    "uri": "http://edamontology.org/topic_2259",
+    "term": "Systems biology"
+   },
+   {
+    "uri": "http://edamontology.org/topic_3308",
+    "term": "Transcriptomics"
+   }
+  ],
+  "operatingSystem": [
+   "Linux",
+   "Windows",
+   "Mac"
+  ],
+  "language": [
+   "R"
+  ],
+  "license": "GPL-3.0",
+  "collectionID": [
+   "BioConductor"
+  ],
+  "link": [
+   {
+    "url": "http://bioconductor.org/packages/SPONGE/",
+    "type": [
+     "Mirror"
+    ]
+   },
+   {
+    "url": "https://git.bioconductor.org/packages/SPONGE",
+    "type": [
+     "Repository"
+    ]
+   }
+  ],
+  "download": [
+   {
+    "url": "http://bioconductor.org/packages/release/bioc/src/contrib/SPONGE_1.2.0.tar.gz",
+    "type": "Software package"
+   }
+  ],
+  "documentation": [
+   {
+    "url": "http://bioconductor.org/packages/release/bioc/manuals/SPONGE/man/SPONGE.pdf",
+    "type": [
+     "User manual"
+    ]
+   }
+  ],
+  "publication": [
+   {
+    "doi": "10.1093/bioinformatics/btz314",
+    "type": [
+     "Primary"
+    ]
+   }
+  ],
+  "credit": [
+   {
+    "name": "Markus List",
+    "typeEntity": "Person",
+    "typeRole": [
+     "Primary contact"
+    ]
+   }
+  ],
+  "editPermission": {
+   "type": "private"
+  },
+  "_correction": "publication [] -> doi:10.1093/bioinformatics/btz314"
+ },
+ {
+  "name": "homer",
+  "description": "HOMER contains a novel motif discovery algorithm that was designed for regulatory element analysis in genomics applications (DNA only, no protein).  It is a differential motif discovery algorithm, which means that it takes two sets of sequences and tries to identify the regulatory elements that are specifically enriched in on set relative to the other.  It uses ZOOPS scoring (zero or one occurrence per sequence) coupled with the hypergeometric enrichment calculations (or binomial) to determine motif enrichment.  HOMER also tries its best to account for sequenced bias in the dataset.  It was designed with ChIP-Seq and promoter analysis in mind, but can be applied to pretty much any nucleic acids motif finding problem.",
+  "homepage": "http://homer.ucsd.edu/homer/motif/",
+  "biotoolsID": "homer",
+  "version": [
+   "4.9.1"
+  ],
+  "function": [
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_0238",
+      "term": "Sequence motif discovery"
+     }
+    ]
+   }
+  ],
+  "publication": [
+   {
+    "doi": "10.1016/j.molcel.2010.05.004",
+    "type": [
+     "Primary"
+    ]
+   }
+  ],
+  "editPermission": {
+   "type": "private"
+  },
+  "_correction": "publication [] -> doi:10.1016/j.molcel.2010.05.004"
+ },
+ {
+  "name": "MoonlightR",
+  "description": "The understanding of cancer mechanism requires the identification of genes playing a role in the development of the pathology and the characterization of their role. We present an R/bioconductor package which returns a list of candidate driver genes for specific cancer types based on TCGA expression data. First infers gene regulatory networks and then carries out a functional enrichment analysis to score the importance of well-known biological processes with respect to the studied cancer type.",
+  "homepage": "http://bioconductor.org/packages/release/bioc/html/MoonlightR.html",
+  "biotoolsID": "moonlightr",
+  "version": [
+   "1.0.0"
+  ],
+  "function": [
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_2436",
+      "term": "Gene-set enrichment analysis"
+     },
+     {
+      "uri": "http://edamontology.org/operation_2495",
+      "term": "Gene expression analysis"
+     }
+    ]
+   }
+  ],
+  "toolType": [
+   "Command-line tool",
+   "Library"
+  ],
+  "topic": [
+   {
+    "uri": "http://edamontology.org/topic_2640",
+    "term": "Oncology"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0203",
+    "term": "Gene expression"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0204",
+    "term": "Gene regulation"
+   }
+  ],
+  "operatingSystem": [
+   "Linux",
+   "Windows",
+   "Mac"
+  ],
+  "language": [
+   "R"
+  ],
+  "license": "GPL-3.0",
+  "collectionID": [
+   "BioConductor"
+  ],
+  "link": [
+   {
+    "url": "https://github.com/torongs82/Moonlight",
+    "type": [
+     "Mirror"
+    ]
+   }
+  ],
+  "download": [
+   {
+    "url": "http://bioconductor/packages/release/bioc/src/contrib/MoonlightR_1.0.0.tar.gz",
+    "type": "Source code"
+   }
+  ],
+  "documentation": [
+   {
+    "url": "http://bioconductor.org/packages/release/bioc/html/MoonlightR.html",
+    "type": [
+     "User manual"
+    ]
+   }
+  ],
+  "publication": [
+   {
+    "doi": "10.7490/f1000research.1118074.1",
+    "type": [
+     "Primary"
+    ]
+   }
+  ],
+  "credit": [
+   {
+    "name": "Antonio Colaprico",
+    "typeEntity": "Person",
+    "typeRole": [
+     "Primary contact"
+    ]
+   },
+   {
+    "name": "Catharina Olsen",
+    "typeEntity": "Person",
+    "typeRole": [
+     "Primary contact"
+    ]
+   }
+  ],
+  "editPermission": {
+   "type": "private"
+  },
+  "_correction": "publication ['doi:10.1016/j.spinee.2017.04.022', 'pmid:28456671'] -> doi:10.7490/f1000research.1118074.1"
+ },
+ {
+  "name": "vulcan",
+  "description": "VirtUaL ChIP-Seq Analysis through Networks is a package that interrogates gene regulatory networks to infer cofactors significantly enriched in a differential binding signature coming from ChIP-Seq data.",
+  "homepage": "http://bioconductor.org/packages/release/bioc/html/vulcan.html",
+  "biotoolsID": "vulcan",
+  "version": [
+   "1.2.0"
+  ],
+  "function": [
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_3501",
+      "term": "Enrichment analysis"
+     }
+    ]
+   }
+  ],
+  "toolType": [
+   "Library"
+  ],
+  "topic": [
+   {
+    "uri": "http://edamontology.org/topic_3169",
+    "term": "ChIP-seq"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0203",
+    "term": "Gene expression"
+   },
+   {
+    "uri": "http://edamontology.org/topic_2259",
+    "term": "Systems biology"
+   }
+  ],
+  "operatingSystem": [
+   "Linux",
+   "Windows",
+   "Mac"
+  ],
+  "language": [
+   "R"
+  ],
+  "license": "LGPL-3.0",
+  "collectionID": [
+   "BioConductor"
+  ],
+  "cost": "Free of charge",
+  "link": [
+   {
+    "url": "http://bioconductor.org/packages/vulcan/",
+    "type": [
+     "Mirror"
+    ]
+   }
+  ],
+  "download": [
+   {
+    "url": "http://bioconductor.org/packages/release/bioc/src/contrib/vulcan_1.2.0.tar.gz",
+    "type": "Software package"
+   }
+  ],
+  "documentation": [
+   {
+    "url": "http://bioconductor.org/packages/release/bioc/manuals/vulcan/man/vulcan.pdf",
+    "type": [
+     "User manual"
+    ]
+   },
+   {
+    "url": "http://bioconductor.org/packages/release/bioc/vignettes/vulcan/inst/doc/vulcan.pdf",
+    "type": [
+     "General"
+    ]
+   }
+  ],
+  "publication": [
+   {
+    "doi": "10.1186/s13059-019-1698-z",
+    "type": [
+     "Primary"
+    ]
+   }
+  ],
+  "credit": [
+   {
+    "name": "Federico M. Giorgi",
+    "orcidid": "http://orcid.org/0000-0002-7325-9908",
+    "typeEntity": "Person",
+    "typeRole": [
+     "Primary contact"
+    ]
+   }
+  ],
+  "editPermission": {
+   "type": "private"
+  },
+  "_correction": "publication ['doi:10.1038/ng.3593', 'pmid:27322546'] -> doi:10.1186/s13059-019-1698-z"
+ },
+ {
+  "name": "RTNduals",
+  "description": "RTNduals is a tool that searches for possible co-regulatory loops between regulon pairs generated by the RTN package. It compares the shared targets in order to infer 'dual regulons', a new concept that tests whether regulon pairs agree on the predicted downstream effects.",
+  "homepage": "http://bioconductor.org/packages/release/bioc/html/RTNduals.html",
+  "biotoolsID": "rtnduals",
+  "version": [
+   "1.4.0"
+  ],
+  "function": [
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_2497",
+      "term": "Pathway or network analysis"
+     }
+    ]
+   }
+  ],
+  "toolType": [
+   "Library"
+  ],
+  "topic": [
+   {
+    "uri": "http://edamontology.org/topic_0203",
+    "term": "Gene expression"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0204",
+    "term": "Gene regulation"
+   }
+  ],
+  "operatingSystem": [
+   "Linux",
+   "Windows",
+   "Mac"
+  ],
+  "language": [
+   "R"
+  ],
+  "license": "Artistic-2.0",
+  "collectionID": [
+   "BioConductor"
+  ],
+  "link": [
+   {
+    "url": "http://bioconductor.org/packages/RTNduals/",
+    "type": [
+     "Mirror"
+    ]
+   },
+   {
+    "url": "https://git.bioconductor.org/packages/RTNduals",
+    "type": [
+     "Repository"
+    ]
+   }
+  ],
+  "download": [
+   {
+    "url": "http://bioconductor.org/packages/release/bioc/src/contrib/RTNduals_1.4.0.tar.gz",
+    "type": "Software package"
+   }
+  ],
+  "documentation": [
+   {
+    "url": "http://bioconductor.org/packages/release/bioc/manuals/RTNduals/man/RTNduals.pdf",
+    "type": [
+     "User manual"
+    ]
+   }
+  ],
+  "publication": [
+   {
+    "doi": "10.1093/bioinformatics/btz534",
+    "type": [
+     "Primary"
+    ]
+   }
+  ],
+  "credit": [
+   {
+    "name": "Mauro Castro",
+    "typeEntity": "Person",
+    "typeRole": [
+     "Primary contact"
+    ]
+   },
+   {
+    "name": "Clarice Groeneveld",
+    "typeEntity": "Person",
+    "typeRole": [
+     "Primary contact"
+    ]
+   }
+  ],
+  "editPermission": {
+   "type": "private"
+  },
+  "_correction": "publication ['doi:10.1038/ng.3458', 'pmid:26618344'] -> doi:10.1093/bioinformatics/btz534"
+ },
+ {
+  "name": "RTNsurvival",
+  "description": "It is a tool for integrating regulons generated by the RTN package with survival information. For a given regulon, the 2-tailed GSEA approach computes a differential Enrichment Score (dES) for each individual sample, and the dES distribution of all samples is then used to assess the survival statistics for the cohort.",
+  "homepage": "http://bioconductor.org/packages/release/bioc/html/RTNsurvival.html",
+  "biotoolsID": "rtnsurvival",
+  "version": [
+   "1.4.0"
+  ],
+  "function": [
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_2436",
+      "term": "Gene-set enrichment analysis"
+     }
+    ]
+   },
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_2497",
+      "term": "Pathway or network analysis"
+     }
+    ]
+   }
+  ],
+  "toolType": [
+   "Library"
+  ],
+  "topic": [
+   {
+    "uri": "http://edamontology.org/topic_0204",
+    "term": "Gene regulation"
+   }
+  ],
+  "operatingSystem": [
+   "Linux",
+   "Windows",
+   "Mac"
+  ],
+  "language": [
+   "R"
+  ],
+  "license": "Artistic-2.0",
+  "collectionID": [
+   "BioConductor"
+  ],
+  "link": [
+   {
+    "url": "http://bioconductor.org/packages/RTNsurvival/",
+    "type": [
+     "Mirror"
+    ]
+   },
+   {
+    "url": "https://git.bioconductor.org/packages/RTNsurvival",
+    "type": [
+     "Repository"
+    ]
+   }
+  ],
+  "download": [
+   {
+    "url": "http://bioconductor.org/packages/release/bioc/src/contrib/RTNsurvival_1.4.0.tar.gz",
+    "type": "Software package"
+   }
+  ],
+  "documentation": [
+   {
+    "url": "http://bioconductor.org/packages/release/bioc/manuals/RTNsurvival/man/RTNsurvival.pdf",
+    "type": [
+     "User manual"
+    ]
+   }
+  ],
+  "publication": [
+   {
+    "doi": "10.1093/bioinformatics/btz229",
+    "type": [
+     "Primary"
+    ]
+   }
+  ],
+  "credit": [
+   {
+    "name": "Clarice Groeneveld",
+    "typeEntity": "Person",
+    "typeRole": [
+     "Primary contact"
+    ]
+   },
+   {
+    "name": "Mauro A. A. Castro",
+    "typeEntity": "Person",
+    "typeRole": [
+     "Primary contact"
+    ]
+   }
+  ],
+  "editPermission": {
+   "type": "private"
+  },
+  "_correction": "publication ['doi:10.1038/ng.3458', 'pmid:26618344'] -> doi:10.1093/bioinformatics/btz229"
+ },
+ {
+  "name": "GOTHiC",
+  "description": "This is a Hi-C analysis package using a cumulative binomial test to detect interactions between distal genomic loci that have significantly more reads than expected by chance in Hi-C experiments. It takes mapped paired NGS reads as input and gives back the list of significant interactions for a given bin size in the genome.",
+  "homepage": "http://bioconductor.org/packages/release/bioc/html/GOTHiC.html",
+  "biotoolsID": "gothic",
+  "version": [
+   "1.10.0"
+  ],
+  "function": [
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_0438",
+      "term": "Transcriptional regulatory element prediction"
+     },
+     {
+      "uri": "http://edamontology.org/operation_0441",
+      "term": "cis-regulatory element prediction"
+     }
+    ]
+   }
+  ],
+  "toolType": [
+   "Command-line tool",
+   "Library"
+  ],
+  "topic": [
+   {
+    "uri": "http://edamontology.org/topic_0102",
+    "term": "Mapping"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0602",
+    "term": "Molecular interactions, pathways and networks"
+   },
+   {
+    "uri": "http://edamontology.org/topic_3295",
+    "term": "Epigenetics"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0749",
+    "term": "Transcription factors and regulatory sites"
+   }
+  ],
+  "operatingSystem": [
+   "Windows",
+   "Mac"
+  ],
+  "language": [
+   "R"
+  ],
+  "license": "GPL-3.0",
+  "collectionID": [
+   "BioConductor"
+  ],
+  "download": [
+   {
+    "url": "http://bioconductor/packages/release/bioc/src/contrib/GOTHiC_1.10.0.tar.gz",
+    "type": "Source code"
+   }
+  ],
+  "documentation": [
+   {
+    "url": "http://bioconductor.org/packages/release/bioc/html/GOTHiC.html",
+    "type": [
+     "User manual"
+    ]
+   }
+  ],
+  "publication": [
+   {
+    "doi": "10.1371/journal.pone.0174744",
+    "type": [
+     "Primary"
+    ]
+   }
+  ],
+  "credit": [
+   {
+    "name": "Borbala Mifsud",
+    "typeEntity": "Person",
+    "typeRole": [
+     "Primary contact"
+    ]
+   }
+  ],
+  "editPermission": {
+   "type": "private"
+  },
+  "_correction": "publication ['doi:10.1101/gr.185272.114', 'pmid:25752748'] -> doi:10.1371/journal.pone.0174744"
+ },
+ {
+  "name": "tigre",
+  "description": "This package implements our methodology of Gaussian process differential equation models for analysis of gene expression time series from single input motif networks. The package can be used for inferring unobserved transcription factor (TF) protein concentrations from expression measurements of known target genes, or for ranking candidate targets of a TF.",
+  "homepage": "http://bioconductor.org/packages/release/bioc/html/tigre.html",
+  "biotoolsID": "tigre",
+  "version": [
+   "1.28.0"
+  ],
+  "function": [
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_3565",
+      "term": "RNA-seq time series data analysis"
+     }
+    ],
+    "input": [
+     {
+      "data": {
+       "uri": "http://edamontology.org/data_2603",
+       "term": "Gene expression data"
+      },
+      "format": [
+       {
+        "uri": "http://edamontology.org/format_1638",
+        "term": "cel"
+       }
+      ]
+     }
+    ],
+    "output": [
+     {
+      "data": {
+       "uri": "http://edamontology.org/data_2884",
+       "term": "Plot"
+      },
+      "format": [
+       {
+        "uri": "http://edamontology.org/format_3475",
+        "term": "TSV"
+       },
+       {
+        "uri": "http://edamontology.org/format_3547",
+        "term": "Image format"
+       }
+      ]
+     },
+     {
+      "data": {
+       "uri": "http://edamontology.org/data_3111",
+       "term": "Processed microarray data"
+      },
+      "format": [
+       {
+        "uri": "http://edamontology.org/format_3475",
+        "term": "TSV"
+       },
+       {
+        "uri": "http://edamontology.org/format_3547",
+        "term": "Image format"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "toolType": [
+   "Command-line tool",
+   "Library"
+  ],
+  "topic": [
+   {
+    "uri": "http://edamontology.org/topic_0203",
+    "term": "Gene expression"
+   },
+   {
+    "uri": "http://edamontology.org/topic_3518",
+    "term": "Microarray experiment"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0749",
+    "term": "Transcription factors and regulatory sites"
+   }
+  ],
+  "operatingSystem": [
+   "Linux",
+   "Windows",
+   "Mac"
+  ],
+  "language": [
+   "R"
+  ],
+  "license": "GPL-3.0",
+  "collectionID": [
+   "BioConductor"
+  ],
+  "link": [
+   {
+    "url": "https://github.com/ahonkela/tigre",
+    "type": [
+     "Mirror"
+    ]
+   }
+  ],
+  "download": [
+   {
+    "url": "http://bioconductor/packages/release/bioc/src/contrib/tigre_1.28.0.tar.gz",
+    "type": "Source code"
+   }
+  ],
+  "documentation": [
+   {
+    "url": "http://bioconductor.org/packages/release/bioc/html/tigre.html",
+    "type": [
+     "User manual"
+    ]
+   }
+  ],
+  "publication": [
+   {
+    "doi": "10.1093/bioinformatics/btr057",
+    "type": [
+     "Primary"
+    ]
+   }
+  ],
+  "credit": [
+   {
+    "name": "Antti Honkela",
+    "typeEntity": "Person",
+    "typeRole": [
+     "Primary contact"
+    ]
+   },
+   {
+    "name": "Pei Gao",
+    "orcidid": "http://orcid.org/0000-0001-8649-1290",
+    "typeEntity": "Person",
+    "typeRole": [
+     "Contributor"
+    ]
+   }
+  ],
+  "editPermission": {
+   "type": "private"
+  },
+  "_correction": "publication ['doi:10.1093/bioinformatics/btn278', 'pmid:18689843'] -> doi:10.1093/bioinformatics/btr057"
+ },
+ {
+  "name": "ChIPpeakAnno",
+  "description": "The package includes functions to retrieve the sequences around the peak, obtain enriched GO terms, find the nearest gene, exon, miRNA or custom features such as most conserved elements and other TF binding sites supplied by users. New functions have been added for finding the peaks with bi-directional promoters with summary statistics, for summarizing the occurrence of motifs in peaks and for adding other IDs to annotated peaks or enrichedGO.",
+  "homepage": "http://bioconductor.org/packages/release/bioc/html/ChIPpeakAnno.html",
+  "biotoolsID": "chippeakanno",
+  "version": [
+   "3.8.7"
+  ],
+  "function": [
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_0361",
+      "term": "Sequence annotation"
+     },
+     {
+      "uri": "http://edamontology.org/operation_2436",
+      "term": "Gene-set enrichment analysis"
+     }
+    ],
+    "input": [
+     {
+      "data": {
+       "uri": "http://edamontology.org/data_2012",
+       "term": "Sequence coordinates"
+      },
+      "format": [
+       {
+        "uri": "http://edamontology.org/format_3003",
+        "term": "BED"
+       },
+       {
+        "uri": "http://edamontology.org/format_2078",
+        "term": "Sequence range format"
+       },
+       {
+        "uri": "http://edamontology.org/format_2305",
+        "term": "GFF"
+       }
+      ]
+     }
+    ],
+    "output": [
+     {
+      "data": {
+       "uri": "http://edamontology.org/data_2884",
+       "term": "Plot"
+      },
+      "format": [
+       {
+        "uri": "http://edamontology.org/format_2330",
+        "term": "Textual format"
+       }
+      ]
+     },
+     {
+      "data": {
+       "uri": "http://edamontology.org/data_1276",
+       "term": "Nucleic acid features"
+      },
+      "format": [
+       {
+        "uri": "http://edamontology.org/format_2330",
+        "term": "Textual format"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "toolType": [
+   "Command-line tool",
+   "Library"
+  ],
+  "topic": [
+   {
+    "uri": "http://edamontology.org/topic_3169",
+    "term": "ChIP-seq"
+   },
+   {
+    "uri": "http://edamontology.org/topic_3179",
+    "term": "ChIP-on-chip"
+   }
+  ],
+  "operatingSystem": [
+   "Linux",
+   "Windows",
+   "Mac"
+  ],
+  "language": [
+   "R"
+  ],
+  "license": "GPL-2.0",
+  "collectionID": [
+   "BioConductor"
+  ],
+  "download": [
+   {
+    "url": "http://bioconductor/packages/release/bioc/src/contrib/ChIPpeakAnno_3.8.7.tar.gz",
+    "type": "Source code"
+   }
+  ],
+  "documentation": [
+   {
+    "url": "http://bioconductor.org/packages/release/bioc/html/ChIPpeakAnno.html",
+    "type": [
+     "User manual"
+    ]
+   }
+  ],
+  "publication": [
+   {
+    "doi": "10.1186/1471-2105-11-237",
+    "type": [
+     "Primary"
+    ]
+   }
+  ],
+  "credit": [
+   {
+    "name": "Lihua Julie Zhu",
+    "typeEntity": "Person",
+    "typeRole": [
+     "Primary contact"
+    ]
+   },
+   {
+    "name": "Jianhong Ou",
+    "typeEntity": "Person",
+    "typeRole": [
+     "Primary contact"
+    ]
+   }
+  ],
+  "editPermission": {
+   "type": "private"
+  },
+  "_correction": "publication ['doi:10.1007/978-1-62703-607-8_8', 'pmid:23975789'] -> doi:10.1186/1471-2105-11-237"
+ },
+ {
+  "name": "DiffBind",
+  "description": "Compute differentially bound sites from multiple ChIP-seq experiments using affinity (quantitative) data. Also enables occupancy (overlap) analysis and plotting functions.",
+  "homepage": "http://bioconductor.org/packages/release/bioc/html/DiffBind.html",
+  "biotoolsID": "diffbind",
+  "version": [
+   "2.2.6"
+  ],
+  "otherID": [
+   {
+    "value": "RRID:SCR_012918",
+    "type": "rrid"
+   }
+  ],
+  "function": [
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_3677",
+      "term": "Differential binding analysis"
+     }
+    ]
+   }
+  ],
+  "toolType": [
+   "Command-line tool",
+   "Library"
+  ],
+  "topic": [
+   {
+    "uri": "http://edamontology.org/topic_3169",
+    "term": "ChIP-seq"
+   }
+  ],
+  "operatingSystem": [
+   "Linux",
+   "Windows",
+   "Mac"
+  ],
+  "language": [
+   "R"
+  ],
+  "license": "Artistic-2.0",
+  "collectionID": [
+   "BioConductor"
+  ],
+  "download": [
+   {
+    "url": "http://bioconductor/packages/release/bioc/src/contrib/DiffBind_2.2.6.tar.gz",
+    "type": "Source code"
+   }
+  ],
+  "documentation": [
+   {
+    "url": "http://bioconductor.org/packages/release/bioc/html/DiffBind.html",
+    "type": [
+     "User manual"
+    ]
+   }
+  ],
+  "publication": [
+   {
+    "doi": "10.1038/nature10730",
+    "type": [
+     "Primary"
+    ]
+   }
+  ],
+  "credit": [
+   {
+    "name": "Rory Stark",
+    "typeEntity": "Person",
+    "typeRole": [
+     "Primary contact"
+    ]
+   }
+  ],
+  "editPermission": {
+   "type": "private"
+  },
+  "_correction": "publication ['doi:10.1186/bcr3664', 'pmid:24886537'] -> doi:10.1038/nature10730"
+ },
+ {
+  "name": "bindSC",
+  "description": "bindSC (Bi-order INtegration of multi-omics Data from Single Cell sequencing technologies) is an R package for single cell multi-omic integration analysis. bindSC is developed to address the challenge of single-cell multi-omic data integration that consists of unpaired cells measured with unmatched features across modalities. Previous methods such as Seurat, Liger, Harmony did not work on this case unless match feature empricallcy. For example, integration of scRNA-seq and scATAC-seq data requires to calculate the gene/promoter activity by counting peaks in gene body, which always loses information. This strategy also did not work on integrating scRNA-seq and cytof data becasue gene expression and protein abundance level is not always correlated due to sparsity of scRNA-seq data or post translational modification.",
+  "homepage": "https://github.com/KChen-lab/bindSC",
+  "biotoolsID": "bindsc",
+  "function": [
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_2495",
+      "term": "Expression analysis"
+     },
+     {
+      "uri": "http://edamontology.org/operation_3435",
+      "term": "Standardisation and normalisation"
+     },
+     {
+      "uri": "http://edamontology.org/operation_3450",
+      "term": "Neurite measurement"
+     }
+    ]
+   }
+  ],
+  "toolType": [
+   "Library"
+  ],
+  "topic": [
+   {
+    "uri": "http://edamontology.org/topic_3308",
+    "term": "Transcriptomics"
+   },
+   {
+    "uri": "http://edamontology.org/topic_2229",
+    "term": "Cell biology"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0749",
+    "term": "Transcription factors and regulatory sites"
+   },
+   {
+    "uri": "http://edamontology.org/topic_3173",
+    "term": "Epigenomics"
+   },
+   {
+    "uri": "http://edamontology.org/topic_3940",
+    "term": "Chromosome conformation capture"
+   }
+  ],
+  "language": [
+   "R"
+  ],
+  "license": "GPL-3.0",
+  "publication": [
+   {
+    "doi": "10.1186/s13059-022-02679-x",
+    "type": [
+     "Primary"
+    ]
+   }
+  ],
+  "credit": [
+   {
+    "name": "Ken Chen",
+    "typeEntity": "Person"
+   }
+  ],
+  "editPermission": {
+   "type": "private"
+  },
+  "_correction": "publication ['doi:10.1101/2020.12.11.422014', 'doi:10.21203/rs.3.rs-126986/v1'] -> doi:10.1186/s13059-022-02679-x"
+ },
+ {
+  "name": "Metaboverse",
+  "description": "Automated exploration and contextualization of metabolic data.\n\nVisualizing and Analyzing Metabolic Networks.\n\nIntegrating multi- or single-omic metabolic data upon the metabolic network can be challenging for a variety of reasons. Metaboverse seeks to simplify this task for users by providing a simple, user-friendly interface for layering their data on a dynamic representation of the metabolic network and automatically searching the network for interesting regulatory or other patterns. Additionally, Metaboverse provides several tools to enable the contextualization of metabolic data:.",
+  "homepage": "https://github.com/Metaboverse/",
+  "biotoolsID": "metaboverse",
+  "function": [
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_3660",
+      "term": "Metabolic network modelling"
+     },
+     {
+      "uri": "http://edamontology.org/operation_3925",
+      "term": "Network visualisation"
+     },
+     {
+      "uri": "http://edamontology.org/operation_1781",
+      "term": "Gene regulatory network analysis"
+     }
+    ]
+   }
+  ],
+  "toolType": [
+   "Command-line tool",
+   "Desktop application"
+  ],
+  "topic": [
+   {
+    "uri": "http://edamontology.org/topic_3407",
+    "term": "Endocrinology and metabolism"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0602",
+    "term": "Molecular interactions, pathways and networks"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0121",
+    "term": "Proteomics"
+   },
+   {
+    "uri": "http://edamontology.org/topic_3172",
+    "term": "Metabolomics"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0154",
+    "term": "Small molecules"
+   }
+  ],
+  "language": [
+   "JavaScript"
+  ],
+  "license": "GPL-3.0",
+  "link": [
+   {
+    "url": "https://github.com/Metaboverse/metaboverse",
+    "type": [
+     "Repository"
+    ]
+   },
+   {
+    "url": "https://github.com/Metaboverse/Metaboverse",
+    "type": [
+     "Repository"
+    ]
+   }
+  ],
+  "download": [
+   {
+    "url": "https://github.com/Metaboverse/Metaboverse/releases/latest",
+    "type": "Software package"
+   }
+  ],
+  "documentation": [
+   {
+    "url": "https://metaboverse.readthedocs.io",
+    "type": [
+     "User manual"
+    ]
+   }
+  ],
+  "publication": [
+   {
+    "doi": "10.1038/s41556-023-01117-9",
+    "type": [
+     "Primary"
+    ]
+   }
+  ],
+  "credit": [
+   {
+    "name": "Jordan A. Berg",
+    "typeEntity": "Person"
+   },
+   {
+    "name": "Jared Rutter",
+    "typeEntity": "Person"
+   }
+  ],
+  "editPermission": {
+   "type": "private"
+  },
+  "_correction": "publication ['doi:10.1101/2020.06.25.171850'] -> doi:10.1038/s41556-023-01117-9"
+ },
+ {
+  "name": "oncoEnrichR",
+  "description": "oncoEnrichR is an R package for functional interrogation of human genesets in the context of cancer. The package leverages an extensive amount of prior molecular knowledge for geneset interpretation along multiple dimensions.\n\noncoEnrichR is primarily intended for exploratory analysis and prioritization of a gene list from high-throughput cancer biology experiments, e.g. genetic screens (siRNA/CRISPR), protein proximity labeling, or transcriptomics (differential expression). The tool queries a number of high-quality data resources in order to assemble useful gene annotations and analyses in an interactive report.",
+  "homepage": "https://github.com/sigven/oncoEnrichR",
+  "biotoolsID": "oncoenrichr",
+  "version": [
+   "1.0.9"
+  ],
+  "function": [
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_2436",
+      "term": "Gene-set enrichment analysis"
+     },
+     {
+      "uri": "http://edamontology.org/operation_0276",
+      "term": "Protein interaction network analysis"
+     },
+     {
+      "uri": "http://edamontology.org/operation_3672",
+      "term": "Gene functional annotation"
+     },
+     {
+      "uri": "http://edamontology.org/operation_3282",
+      "term": "ID mapping"
+     },
+     {
+      "uri": "http://edamontology.org/operation_2437",
+      "term": "Gene regulatory network prediction"
+     },
+     {
+      "uri": "http://edamontology.org/operation_3925",
+      "term": "Network visualisation"
+     },
+     {
+      "uri": "http://edamontology.org/operation_0531",
+      "term": "Heat map generation"
+     },
+     {
+      "uri": "http://edamontology.org/operation_3463",
+      "term": "Expression correlation analysis"
+     }
+    ],
+    "input": [
+     {
+      "data": {
+       "uri": "http://edamontology.org/data_2610",
+       "term": "Ensembl ID"
+      },
+      "format": [
+       {
+        "uri": "http://edamontology.org/format_2330",
+        "term": "Textual format"
+       }
+      ]
+     },
+     {
+      "data": {
+       "uri": "http://edamontology.org/data_1098",
+       "term": "RefSeq accession"
+      },
+      "format": [
+       {
+        "uri": "http://edamontology.org/format_2330",
+        "term": "Textual format"
+       }
+      ]
+     },
+     {
+      "data": {
+       "uri": "http://edamontology.org/data_2725",
+       "term": "Ensembl transcript ID"
+      },
+      "format": [
+       {
+        "uri": "http://edamontology.org/format_2330",
+        "term": "Textual format"
+       }
+      ]
+     },
+     {
+      "data": {
+       "uri": "http://edamontology.org/data_1027",
+       "term": "Gene ID (NCBI)"
+      },
+      "format": [
+       {
+        "uri": "http://edamontology.org/format_2330",
+        "term": "Textual format"
+       }
+      ]
+     },
+     {
+      "data": {
+       "uri": "http://edamontology.org/data_3021",
+       "term": "UniProt accession"
+      },
+      "format": [
+       {
+        "uri": "http://edamontology.org/format_2330",
+        "term": "Textual format"
+       }
+      ]
+     }
+    ],
+    "output": [
+     {
+      "data": {
+       "uri": "http://edamontology.org/data_2048",
+       "term": "Report"
+      },
+      "format": [
+       {
+        "uri": "http://edamontology.org/format_2331",
+        "term": "HTML"
+       },
+       {
+        "uri": "http://edamontology.org/format_3620",
+        "term": "xlsx"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "toolType": [
+   "Web application",
+   "Command-line tool"
+  ],
+  "topic": [
+   {
+    "uri": "http://edamontology.org/topic_0085",
+    "term": "Functional genomics"
+   },
+   {
+    "uri": "http://edamontology.org/topic_3345",
+    "term": "Data identity and mapping"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0091",
+    "term": "Bioinformatics"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0092",
+    "term": "Data visualisation"
+   },
+   {
+    "uri": "http://edamontology.org/topic_3366",
+    "term": "Data integration and warehousing"
+   },
+   {
+    "uri": "http://edamontology.org/topic_3958",
+    "term": "Copy number variation"
+   },
+   {
+    "uri": "http://edamontology.org/topic_2533",
+    "term": "DNA mutation"
+   },
+   {
+    "uri": "http://edamontology.org/topic_2640",
+    "term": "Oncology"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0208",
+    "term": "Pharmacogenomics"
+   }
+  ],
+  "operatingSystem": [
+   "Mac",
+   "Linux",
+   "Windows"
+  ],
+  "language": [
+   "R"
+  ],
+  "license": "MIT",
+  "maturity": "Mature",
+  "cost": "Free of charge",
+  "accessibility": "Open access",
+  "elixirPlatform": [
+   "Tools"
+  ],
+  "elixirNode": [
+   "Norway"
+  ],
+  "link": [
+   {
+    "url": "https://github.com/sigven/oncoEnrichR/issues",
+    "type": [
+     "Issue tracker"
+    ]
+   },
+   {
+    "url": "https://github.com/sigven/oncoEnrichR",
+    "type": [
+     "Repository"
+    ]
+   },
+   {
+    "url": "https://oncotools.elixir.no",
+    "type": [
+     "Galaxy service"
+    ]
+   }
+  ],
+  "download": [
+   {
+    "url": "https://github.com/sigven/oncoEnrichR/releases",
+    "type": "Source code",
+    "version": "1.0.9"
+   },
+   {
+    "url": "https://github.com/sigven/oncoEnrichR/tree/master/docker",
+    "type": "Container file"
+   }
+  ],
+  "documentation": [
+   {
+    "url": "https://sigven.github.io/oncoEnrichR",
+    "type": [
+     "General"
+    ]
+   },
+   {
+    "url": "https://sigven.github.io/oncoEnrichR/authors.html#citation",
+    "type": [
+     "Citation instructions"
+    ]
+   },
+   {
+    "url": "https://sigven.github.io/oncoEnrichR/reference/index.html",
+    "type": [
+     "Command-line options"
+    ]
+   },
+   {
+    "url": "https://sigven.github.io/oncoEnrichR/articles/CHANGELOG.html",
+    "type": [
+     "Release notes"
+    ]
+   }
+  ],
+  "publication": [
+   {
+    "doi": "10.1002/ijc.34666",
+    "type": [
+     "Primary"
+    ]
+   }
+  ],
+  "credit": [
+   {
+    "name": "Sigve Nakken",
+    "url": "https://github.com/sigven",
+    "orcidid": "https://orcid.org/0000-0001-8468-2050",
+    "typeEntity": "Person",
+    "typeRole": [
+     "Primary contact",
+     "Developer",
+     "Maintainer"
+    ]
+   }
+  ],
+  "editPermission": {
+   "type": "private"
+  },
+  "_correction": "publication ['doi:10.48550/arxiv.2107.13247'] -> doi:10.1002/ijc.34666"
+ },
+ {
+  "name": "Tulip",
+  "description": "Toolkit for rapidly simulating ChIP-seq data using statistical models of the experimental steps.",
+  "homepage": "https://github.com/gymreklab/Tulip",
+  "biotoolsID": "Tulip",
+  "function": [
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_3799",
+      "term": "Quantification"
+     },
+     {
+      "uri": "http://edamontology.org/operation_3222",
+      "term": "Peak calling"
+     },
+     {
+      "uri": "http://edamontology.org/operation_3798",
+      "term": "Read binning"
+     }
+    ]
+   }
+  ],
+  "toolType": [
+   "Command-line tool"
+  ],
+  "topic": [
+   {
+    "uri": "http://edamontology.org/topic_3169",
+    "term": "ChIP-seq"
+   },
+   {
+    "uri": "http://edamontology.org/topic_3512",
+    "term": "Gene transcripts"
+   },
+   {
+    "uri": "http://edamontology.org/topic_3173",
+    "term": "Epigenomics"
+   }
+  ],
+  "operatingSystem": [
+   "Linux",
+   "Windows",
+   "Mac"
+  ],
+  "language": [
+   "C++"
+  ],
+  "license": "GPL-3.0",
+  "maturity": "Mature",
+  "cost": "Free of charge",
+  "accessibility": "Open access",
+  "link": [
+   {
+    "url": "https://github.com/gymreklab/Tulip/issues",
+    "type": [
+     "Issue tracker"
+    ]
+   }
+  ],
+  "download": [
+   {
+    "url": "https://github.com/gymreklab/tulip/releases",
+    "type": "Source code"
+   }
+  ],
+  "documentation": [
+   {
+    "url": "https://github.com/gymreklab/tulip/blob/master/README.md",
+    "type": [
+     "General"
+    ]
+   }
+  ],
+  "publication": [
+   {
+    "doi": "10.1186/s12859-021-04097-5",
+    "type": [
+     "Primary"
+    ]
+   }
+  ],
+  "credit": [
+   {
+    "name": "An Zheng",
+    "typeEntity": "Person",
+    "typeRole": [
+     "Primary contact"
+    ]
+   }
+  ],
+  "editPermission": {
+   "type": "private"
+  },
+  "_correction": "publication ['doi:10.1101/624486'] -> doi:10.1186/s12859-021-04097-5"
+ },
+ {
+  "name": "AIModules",
+  "description": "AIModules enables you to find transcription factor binding sites (TFBSs) and modules on DNA using own matrices or the JASPAR 2022 database.",
+  "homepage": "https://bioinfo-wuerz.de/aimodules/",
+  "biotoolsID": "aimodules",
+  "function": [
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_0238",
+      "term": "Sequence motif discovery"
+     },
+     {
+      "uri": "http://edamontology.org/operation_0445",
+      "term": "Transcription factor binding site prediction"
+     },
+     {
+      "uri": "http://edamontology.org/operation_0239",
+      "term": "Sequence motif recognition"
+     },
+     {
+      "uri": "http://edamontology.org/operation_0337",
+      "term": "Visualisation"
+     }
+    ]
+   }
+  ],
+  "toolType": [
+   "Web application",
+   "Desktop application"
+  ],
+  "topic": [
+   {
+    "uri": "http://edamontology.org/topic_0749",
+    "term": "Transcription factors and regulatory sites"
+   },
+   {
+    "uri": "http://edamontology.org/topic_3512",
+    "term": "Gene transcripts"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0659",
+    "term": "Functional, regulatory and non-coding RNA"
+   },
+   {
+    "uri": "http://edamontology.org/topic_3169",
+    "term": "ChIP-seq"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0621",
+    "term": "Model organisms"
+   }
+  ],
+  "operatingSystem": [
+   "Mac",
+   "Linux",
+   "Windows"
+  ],
+  "language": [
+   "Java",
+   "JavaScript",
+   "C",
+   "Python"
+  ],
+  "license": "GPL-2.0",
+  "cost": "Free of charge",
+  "accessibility": "Open access",
+  "link": [
+   {
+    "url": "https://github.com/muharrem-aydinli/AIModules",
+    "type": [
+     "Repository"
+    ]
+   },
+   {
+    "url": "https://zenodo.org/record/4733075",
+    "type": [
+     "Repository"
+    ]
+   }
+  ],
+  "publication": [
+   {
+    "doi": "10.1038/s41598-022-21732-0",
+    "type": [
+     "Primary"
+    ]
+   }
+  ],
+  "credit": [
+   {
+    "name": "Muharrem Aydinli"
+   },
+   {
+    "name": "Chunguang Liang"
+   },
+   {
+    "name": "Thomas Dandekar"
+   }
+  ],
+  "editPermission": {
+   "type": "public"
+  },
+  "_correction": "publication ['doi:10.21203/rs.3.rs-1284479/v1'] -> doi:10.1038/s41598-022-21732-0"
+ },
+ {
+  "name": "GPSAdb 2.0",
+  "description": "GPSAdb 2.0 is a comprehensive database providing transcriptomic data from gene perturbations in human cell lines, enabling exploration of gene function and regulatory networks.",
+  "homepage": "https://www.gpsadb.com/",
+  "biotoolsID": "gpsa",
+  "function": [
+   {
+    "operation": [
+     {
+      "uri": "http://edamontology.org/operation_3659",
+      "term": "Regression analysis"
+     },
+     {
+      "uri": "http://edamontology.org/operation_1781",
+      "term": "Gene regulatory network analysis"
+     },
+     {
+      "uri": "http://edamontology.org/operation_3223",
+      "term": "Differential gene expression profiling"
+     },
+     {
+      "uri": "http://edamontology.org/operation_2939",
+      "term": "Principal component visualisation"
+     },
+     {
+      "uri": "http://edamontology.org/operation_2436",
+      "term": "Gene-set enrichment analysis"
+     }
+    ]
+   }
+  ],
+  "topic": [
+   {
+    "uri": "http://edamontology.org/topic_0602",
+    "term": "Molecular interactions, pathways and networks"
+   },
+   {
+    "uri": "http://edamontology.org/topic_0199",
+    "term": "Genetic variation"
+   },
+   {
+    "uri": "http://edamontology.org/topic_3170",
+    "term": "RNA-Seq"
+   },
+   {
+    "uri": "http://edamontology.org/topic_3308",
+    "term": "Transcriptomics"
+   },
+   {
+    "uri": "http://edamontology.org/topic_3407",
+    "term": "Endocrinology and metabolism"
+   }
+  ],
+  "publication": [
+   {
+    "doi": "10.1093/nar/gkac1066",
+    "type": [
+     "Primary"
+    ]
+   }
+  ],
+  "credit": [
+   {
+    "name": "Wen-Jing Jiang",
+    "typeEntity": "Person"
+   }
+  ],
+  "editPermission": {
+   "type": "private"
+  },
+  "_correction": "publication ['doi:10.21037/tcr-24-1436', 'pmid:40104737'] -> doi:10.1093/nar/gkac1066"
+ }
+]

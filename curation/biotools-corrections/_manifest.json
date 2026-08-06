@@ -1,0 +1,170 @@
+{
+ "edam-operations.json": {
+  "records": 122,
+  "held_back": [
+   {
+    "biotoolsID": "predictprotein_open",
+    "removed": "Sequence motif discovery",
+    "why": "bio.tools rejects the record as it stands: {\"function\": [{\"operation\": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {\"general_errors\": [\"The term does not match the URI: Protein-protein interaction prediction, http://edamontolo"
+   },
+   {
+    "biotoolsID": "hotnet",
+    "removed": "Gene regulatory network analysis",
+    "why": "would leave the record with no operation"
+   },
+   {
+    "biotoolsID": "VDJdb",
+    "removed": "Sequence motif discovery",
+    "why": "bio.tools rejects the record as it stands: {\"topic\": [{}, {}, {\"general_errors\": [\"The term does not match the URI: Data submission, annotation and curation, http://edamontology.org/topic_0219.\"]}, {}]}"
+   },
+   {
+    "biotoolsID": "multibind",
+    "removed": "Peak calling",
+    "why": "bio.tools rejects the record as it stands: {\"function\": [{\"operation\": [{}, {}, {\"general_errors\": [\"The term does not match the URI: Protein-protein interaction prediction, http://edamontology.org/operation_2464.\"]}]}]}"
+   },
+   {
+    "biotoolsID": "talenoffer",
+    "removed": "Transcriptional regulatory element prediction",
+    "why": "would leave the record with no operation"
+   },
+   {
+    "biotoolsID": "bubble_gum",
+    "removed": "Transcriptional regulatory element prediction",
+    "why": "would leave the record with no operation"
+   },
+   {
+    "biotoolsID": "bedtoolsr",
+    "removed": "Peak calling",
+    "why": "would leave the record with no operation"
+   },
+   {
+    "biotoolsID": "coman",
+    "removed": "Transcriptional regulatory element prediction",
+    "why": "would leave the record with no operation"
+   },
+   {
+    "biotoolsID": "flyrnai",
+    "removed": "Transcriptional regulatory element prediction",
+    "why": "bio.tools rejects the record as it stands: {\"function\": [{\"operation\": [{\"general_errors\": [\"The term does not match the URI: Deposition, http://edamontology.org/operation_3431.\"]}, {}, {}, {}]}]}"
+   },
+   {
+    "biotoolsID": "ripseeker",
+    "removed": "Transcriptional regulatory element prediction",
+    "why": "would leave the record with no operation"
+   },
+   {
+    "biotoolsID": "WheatCRISPR",
+    "removed": "Promoter prediction",
+    "why": "bio.tools rejects the record as it stands: {\"function\": [{\"operation\": [{\"general_errors\": [\"The term does not match the URI: Editing, http://edamontology.org/operation_3096.\"]}]}]}"
+   },
+   {
+    "biotoolsID": "crispron_off",
+    "removed": "Promoter prediction",
+    "why": "bio.tools rejects the record as it stands: {\"function\": [{\"operation\": [{\"general_errors\": [\"The term does not match the URI: Editing, http://edamontology.org/operation_3096.\"]}]}]}"
+   },
+   {
+    "biotoolsID": "ligap",
+    "removed": "trans-regulatory element prediction",
+    "why": "would leave the record with no operation"
+   },
+   {
+    "biotoolsID": "grrann",
+    "removed": "Gene regulatory network analysis",
+    "why": "would leave the record with no operation"
+   },
+   {
+    "biotoolsID": "gidetector",
+    "removed": "Sequence motif discovery",
+    "why": "would leave the record with no operation"
+   },
+   {
+    "biotoolsID": "isma",
+    "removed": "Sequence motif discovery",
+    "why": "bio.tools rejects the record as it stands: {\"function\": [{\"operation\": [{\"general_errors\": [\"The term does not match the URI: Protein-protein interaction prediction, http://edamontology.org/operation_2464.\"]}]}, {}]}"
+   },
+   {
+    "biotoolsID": "paxtoolsr",
+    "removed": "Gene regulatory network analysis",
+    "why": "bio.tools rejects the record as it stands: {\"function\": [{\"operation\": [{}, {}, {\"general_errors\": [\"The term does not match the URI: Formatting, http://edamontology.org/operation_0335.\"]}, {}]}]}"
+   },
+   {
+    "biotoolsID": "ippd",
+    "removed": "Peak calling",
+    "why": "would leave the record with no operation"
+   },
+   {
+    "biotoolsID": "mapanalyzer",
+    "removed": "Sequence motif discovery",
+    "why": "bio.tools rejects the record as it stands: {\"topic\": [{}, {}, {\"general_errors\": [\"The term does not match the URI: Data submission, annotation and curation, http://edamontology.org/topic_0219.\"]}]}"
+   },
+   {
+    "biotoolsID": "auto-drrafter",
+    "removed": "cis-regulatory element prediction",
+    "why": "would leave the record with no operation"
+   },
+   {
+    "biotoolsID": "scprisma",
+    "removed": "Gene regulatory network analysis",
+    "why": "bio.tools rejects the record as it stands: {\"function\": [{\"operation\": [{\"general_errors\": [\"The term does not match the URI: Filtering, http://edamontology.org/operation_3695.\"]}, {}]}]}"
+   },
+   {
+    "biotoolsID": "deepbound",
+    "removed": "Transcriptional regulatory element prediction",
+    "why": "would leave the record with no operation"
+   },
+   {
+    "biotoolsID": "parseq",
+    "removed": "Transcriptional regulatory element prediction",
+    "why": "would leave the record with no operation"
+   },
+   {
+    "biotoolsID": "casowary",
+    "removed": "Peak calling",
+    "why": "bio.tools rejects the record as it stands: {\"function\": [{\"operation\": [{\"general_errors\": [\"The term does not match the URI: Editing, http://edamontology.org/operation_3096.\"]}, {}]}]}"
+   },
+   {
+    "biotoolsID": "gcup",
+    "removed": "Transcriptional regulatory element prediction",
+    "why": "would leave the record with no operation"
+   },
+   {
+    "biotoolsID": "biomaster",
+    "removed": "Promoter prediction",
+    "why": "bio.tools rejects the record as it stands: {\"topic\": [{}, {}, {\"general_errors\": [\"The term does not match the URI: Biological databases, http://edamontology.org/topic_3071.\"]}, {}]}"
+   },
+   {
+    "biotoolsID": "panoromics",
+    "removed": "Gene regulatory network analysis",
+    "why": "would leave the record with no operation"
+   },
+   {
+    "biotoolsID": "cpdseqer",
+    "removed": "Nucleosome position prediction",
+    "why": "bio.tools rejects the record as it stands: {\"function\": [{\"operation\": [{}, {}, {\"general_errors\": [\"The term does not match the URI: Sorting, http://edamontology.org/operation_3802.\"]}]}]}"
+   },
+   {
+    "biotoolsID": "sbbadger",
+    "removed": "Gene regulatory network analysis",
+    "why": "bio.tools rejects the record as it stands: {\"function\": [{\"operation\": [{}, {\"general_errors\": [\"The term does not match the URI: Deposition, http://edamontology.org/operation_3431.\"]}]}]}"
+   },
+   {
+    "biotoolsID": "perfumes",
+    "removed": "Sequence motif discovery",
+    "why": "bio.tools rejects the record as it stands: {\"function\": [{\"operation\": [{\"general_errors\": [\"The term does not match the URI: Editing, http://edamontology.org/operation_3096.\"]}, {}]}]}"
+   },
+   {
+    "biotoolsID": "varianttools",
+    "removed": "Sequence motif comparison",
+    "why": "bio.tools rejects the record as it stands: {\"function\": [{\"operation\": [{\"general_errors\": [\"The term does not match the URI: Filtering, http://edamontology.org/operation_3695.\"]}, {}]}]}"
+   }
+  ]
+ },
+ "publications.json": {
+  "records": 23,
+  "held_back": []
+ },
+ "homepages.json": {
+  "records": 129,
+  "held_back": []
+ }
+}

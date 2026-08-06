@@ -1,0 +1,910 @@
+{
+ "note": "A report, not records to upload. Each URL returned 404 or 410 on two checks nine days apart, so these are not transient. No replacement URL was found for any of them, and homepage_status is server-managed, so there is nothing here to apply directly.",
+ "checked": "2026-08-06",
+ "count": 129,
+ "entries": [
+  {
+   "biotoolsID": "sitar",
+   "homepage": "https://sbi.hki-jena.de/sitar/index.php",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "cobindr",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/cobindR.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "rgadem",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/rGADEM.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "scanmot",
+   "homepage": "http://caps.ncbs.res.in/scanmot/scanmot.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "webmotifs",
+   "homepage": "http://fraenkel.mit.edu/webmotifs/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "rsat_peak-motifs",
+   "homepage": "http://floresta.eead.csic.es/rsat/peak-motifs_form.cgi",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "findpromoter",
+   "homepage": "https://galaxy.pasteur.fr/tool_runner?tool_id=toolshed.pasteur.fr/repos/fmareuil/promoteur_tools/findpromoter/1.0",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "aimodules",
+   "homepage": "https://bioinfo-wuerz.de/aimodules/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "RsHSF",
+   "homepage": "http://www.cibiv.at/services/hsf/info",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "MatrixMotif",
+   "homepage": "https://peterslab.org/downloads.php",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "webgmap",
+   "homepage": "http://www.bioinfolab.org/software/webgmap",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "rpmcmc",
+   "homepage": "http://daweb.ism.ac.jp/yoshidalab/motif/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "motifrg",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/motifRG.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "cistrome",
+   "homepage": "http://www.cistrome.org/Cistrome/Cistrome_Project.html#",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "DESSO",
+   "homepage": "https://bmbl.bmi.osumc.edu/DESSO",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "motiv",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/MotIV.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "mochiview",
+   "homepage": "http://johnsonlab.ucsf.edu/sj/mochiview-start/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "predictregulon",
+   "homepage": "http://www.cdfd.org.in/predictregulon/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "mapperdb",
+   "homepage": "http://genome.ufl.edu/mapperdb",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "medusa_motif",
+   "homepage": "http://cbio.mskcc.org/leslielab/software/medusa",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "dbchip",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/DBChIP.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "trafac",
+   "homepage": "http://trafac.cchmc.org/trafac/index.jsp",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "rnabindr",
+   "homepage": "http://ailab1.ist.psu.edu/RNABindR/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "opossum",
+   "homepage": "http://www.cisreg.ca/oPOSSUM/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "mybs",
+   "homepage": "http://bits.iis.sinica.edu.tw/~mybs/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "tfbscluster",
+   "homepage": "http://hscl.cimr.cam.ac.uk/TFBScluster_genome_portal.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "chip-array",
+   "homepage": "http://jjwanglab.org/chip-array/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "metaldetector",
+   "homepage": "http://metaldetector.dsi.unifi.it/v2.0/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "genome_surveyor",
+   "homepage": "http://veda.cs.uiuc.edu/gs",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "flytf",
+   "homepage": "http://www.mrc-lmb.cam.ac.uk/genomes/FlyTF/old_index.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "probc",
+   "homepage": "http://www.github.com/seferlab/probc",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "triform",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/triform.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "expresso",
+   "homepage": "http://bioinformatics.cs.vt.edu/expresso/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "sepira",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/SEPIRA.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "pupasview",
+   "homepage": "http://pupasuite.bioinfo.cipf.es/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "gcup",
+   "homepage": "https://www.uni-due.de/~hy0546/gCUP/",
+   "status": 410,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "svm2crm",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/SVM2CRM.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "great",
+   "homepage": "http://bejerano.stanford.edu/great/public/html/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "genometrafac",
+   "homepage": "http://genometrafac.cchmc.org/genome-trafac/index.jsp",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "reganalyst",
+   "homepage": "http://www.nii.ac.in/~deepak/RegAnalyst/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "web-thermodyn",
+   "homepage": "http://www.gsa.buffalo.edu/dna/dk/WEBTHERMODYN/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "bubble_gum",
+   "homepage": "http://www.ciml.univ-mrs.fr/applications/BubbleGUM/index.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "renato",
+   "homepage": "http://renato.bioinfo.cipf.es",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "enhanceratlas",
+   "homepage": "http://www.enhanceratlas.org/indexv2.php",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "rSeqTU-A",
+   "homepage": "https://s18692001.github.io/rSeqTU/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "coregnet",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/CoRegNet.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "mirsynergy",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/Mirsynergy.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "repitools",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/Repitools.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "ripseeker",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/RIPSeeker.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "pobo",
+   "homepage": "http://ekhidna.biocenter.helsinki.fi/poxo/pobo/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "seqsim",
+   "homepage": "https://sites.ualberta.ca/~joyramie/SEQSIM.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "trlnc",
+   "homepage": "http://bio.licpathway.net/TRlnc",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "mcpromoter",
+   "homepage": "http://genes.mit.edu/McPromoter.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "poco",
+   "homepage": "http://ekhidna.biocenter.helsinki.fi/poxo/poco/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "scenhancer",
+   "homepage": "http://enhanceratlas.net/scenhancer/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "rdb2c2",
+   "homepage": "http://structpred.life.tsinghua.edu.cn/rdb2c2.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "sampdi-3d",
+   "homepage": "http://compbio.clemson.edu/SAMPDI-3D/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "pepr",
+   "homepage": "http://sartorlab.ccmb.med.umich.edu/node/6",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "bsdb",
+   "homepage": "http://www.ifpan.edu.pl/BSDB/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "mqtl.nmr",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/mQTL.NMR.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "funchip",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/FunChIP.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "polyapeak",
+   "homepage": "http://web1.sph.emory.edu/users/hwu30/software/polyaPeak.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "lasergene",
+   "homepage": "http://www.dnastar.com/t-products-dnastar-lasergene-core.aspx",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "hmrfbayeshic",
+   "homepage": "http://www.unc.edu/~yunmli/HMRFBayesHiC/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "dnaser",
+   "homepage": "http://bioconductor.riken.jp/packages/2.14/bioc/html/DNaseR.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "ippd",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/IPPD.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "marge",
+   "homepage": "http://cistrome.org/MARGE/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "extractcentralregions",
+   "homepage": "https://galaxy.pasteur.fr/tool_runner?tool_id=toolshed.pasteur.fr/repos/fmareuil/extractcentralregions/extractCentralRegions/1.0",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "annotategenes",
+   "homepage": "https://galaxy.pasteur.fr/tool_runner?tool_id=toolshed.pasteur.fr/repos/fmareuil/annotategenes/annotateGenes/1.0",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "maketssdist",
+   "homepage": "https://galaxy.pasteur.fr/tool_runner?tool_id=toolshed.pasteur.fr/repos/fmareuil/maketssdist/makeTSSdist/1.0",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "cata",
+   "homepage": "http://bio.licpathway.net/cata/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "mixNBHMM",
+   "homepage": "https://github.com/plbaldoni/mixNBHMM",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "cutruntools",
+   "homepage": "https://bitbucket.org/qzhudfci/cutruntools/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "exomepeak",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/exomePeak.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "bayespeak",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/BayesPeak.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "ringo",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/Ringo.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "spidermir",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/SpidermiR.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "trigger",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/trigger.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "hotnet",
+   "homepage": "http://compbio.cs.brown.edu/projects/hotnet/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "iris3",
+   "homepage": "https://bmbl.bmi.osumc.edu/iris3/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "bioswitch-grn",
+   "homepage": "https://github.com/CBigOxf/BioSWITCH",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "imaging-amaretto",
+   "homepage": "http://portals.broadinstitute.org/pochetlab/amaretto.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "PanoromiX",
+   "homepage": "https://bioinfo-abcc.ncifcrf.gov/panoromics/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "vista_enhancer_browser",
+   "homepage": "https://enhancer.lbl.gov/frnt_page_n.shtml",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "paxtoolsr",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/paxtoolsr.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "joda",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/joda.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "lolaweb",
+   "homepage": "http://lolaweb.databio.org",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "gwas3d",
+   "homepage": "http://jjwanglab.org/gwas3d",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "escdb",
+   "homepage": "http://biit.cs.ut.ee/escd",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "setuppromoter",
+   "homepage": "https://galaxy.pasteur.fr/tool_runner?tool_id=toolshed.pasteur.fr/repos/fmareuil/promoteur_tools/setuppromoter/1.0",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "methylscaper",
+   "homepage": "https://github.com/rhondabacher/acmethylscaper",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "BayesPI-BAR2",
+   "homepage": "http://folk.uio.no/junbaiw/BayesPI-BAR2/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "narrowpeaks",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/NarrowPeaks.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "simbindprofiles",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/SimBindProfiles.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "bac",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/BAC.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "ping",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/PING.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "pcagopromoter",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/pcaGoPromoter.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "pics",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/PICS.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "macpet",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/MACPET.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "p53mutagene",
+   "homepage": "http://www.chemoprofiling.org/cgi-bin/GEO/tp53/web_run_tp53.V1.pl",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "pines",
+   "homepage": "http://genetics.bwh.harvard.edu/pines/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "trena",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/trena.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "cssp",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/CSSP.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "funcisnp",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/FunciSNP.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "genogam",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/GenoGAM.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "rcade",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/Rcade.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "rmat",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/rMAT.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "htseqtools",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/htSeqTools.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "cassys",
+   "homepage": "http://www.zbh.uni-hamburg.de/en/research/application-oriented-bioinformatics/researchprojects/cassys.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "annotatepeaks",
+   "homepage": "https://galaxy.pasteur.fr/tool_runner?tool_id=toolshed.pasteur.fr/repos/fmareuil/annotatepeaks/annotatePeaks/1.0",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "makestatschipseq",
+   "homepage": "https://galaxy.pasteur.fr/tool_runner?tool_id=toolshed.pasteur.fr/repos/fmareuil/makestatschipseq/makeStatsChIPSeq/1.0",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "filtercontrol",
+   "homepage": "https://galaxy.pasteur.fr/tool_runner?tool_id=toolshed.pasteur.fr/repos/fmareuil/filtercontrolpeaks/filterControl/1.0",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "dchiprep",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/DChIPRep.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "stan",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/STAN.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "chic",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/ChIC.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "chipseqspike",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/ChIPSeqSpike.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "impulsede2",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/ImpulseDE2.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "bidchips",
+   "homepage": "https://www.perkinslab.ca/software",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "transview",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/TransView.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "chromstar",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/chromstaR.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "ncbi_epigenomics",
+   "homepage": "http://www.ncbi.nlm.nih.gov/epigenomics",
+   "status": 410,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "chrogps",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/chroGPS.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "navise",
+   "homepage": "https://sourceforge.net/projects/navise-superenhancer/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "tfbsfinder",
+   "homepage": "http://bits.iis.sinica.edu.tw/~TFBSfinder/",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "transmodis",
+   "homepage": "http://wanglab.ucsd.edu/star/download.php",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "seqplots",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/seqplots.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "underiicrms",
+   "homepage": "http://www.dei.unipd.it/~ciompin/main/UnderIICRMS.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "tdaracne",
+   "homepage": "http://bioconductor.org/packages/release/bioc/html/TDARACNE.html",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  },
+  {
+   "biotoolsID": "coryneregnet",
+   "homepage": "http://www.coryneregnet.de",
+   "status": 404,
+   "first_seen": "2026-07-28",
+   "reconfirmed": "2026-08-06"
+  }
+ ]
+}
