@@ -43,19 +43,20 @@ that one operation is removed; everything else is untouched.
 - **15** would have been left with no operation at all. A record with a wrong
   operation is better than one with none, so those need a replacement term
   rather than a deletion, and that is your judgement rather than ours.
-- **13** carry a term your validator rejects, so they cannot be
+- **16** carry a term your validator rejects, so they cannot be
   updated by anyone until the term migration reaches them. An unmodified
   GET-then-PUT of these returns 400. The pairs we hit:
 
   | term served | URI |
   | --- | --- |
-  | `Editing` | `edamontology` |
-  | `Protein-protein interaction prediction` | `edamontology` |
-  | `Deposition` | `edamontology` |
-  | `Filtering` | `edamontology` |
-  | `Formatting` | `edamontology` |
-  | `Biological databases` | `edamontology` |
-  | `Sorting` | `edamontology` |
+  | `Editing` | `http://edamontology.org/operation_3096` |
+  | `Data submission, annotation and curation` | `http://edamontology.org/topic_0219` |
+  | `Protein-protein interaction prediction` | `http://edamontology.org/operation_2464` |
+  | `Deposition` | `http://edamontology.org/operation_3431` |
+  | `Filtering` | `http://edamontology.org/operation_3695` |
+  | `Formatting` | `http://edamontology.org/operation_0335` |
+  | `Biological databases` | `http://edamontology.org/topic_3071` |
+  | `Sorting` | `http://edamontology.org/operation_3802` |
 
   This is worth knowing independently of our corrections: it blocks the record's
   own owner too, and the error names an operation the caller never touched.
