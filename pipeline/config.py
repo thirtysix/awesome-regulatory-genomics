@@ -300,6 +300,59 @@ SEED_BIOTOOLS_IDS = [
                       # kinase enrichment, which the hard exclusions catch.
                       # Its sibling record x2k_web is admitted on text, so
                       # excluding this one made the catalog self-inconsistent.
+
+    # 3D genome, restored 2026-08-29. The scope pass dropped 34 Hi-C tools via
+    # CATEGORISE_SYSTEM, whose in_scope rule is defined by exclusion and does not
+    # name the 3D genome, even though `chromatin-3d` is in CATEGORIES and
+    # SCOPE_AUDIT_SYSTEM lists it as in scope. Three were benchmark tools
+    # (fithic-py, coolpuppy, hicexplorer). Listed here because SEED_BIOTOOLS_IDS
+    # feeds `protected` in build.py, which is what beats a model verdict.
+    # SALSA and yahs are deliberately NOT here: they scaffold genome assemblies
+    # with Hi-C data, and assembly is out of scope.
+    "3DGV",
+    "ACCOST",
+    "bhi-cect",
+    "coolpuppy",
+    "covnorm",
+    "dchic",
+    "diffgr",
+    "DLO_Hi-C",
+    "enhic",
+    "esshi-c",
+    "firecaller",
+    "fithic-py",
+    "FreeHi-C",
+    "giloop",
+    "hi-c_aggregate",
+    "HiCeekR",
+    "hicenterprise",
+    "hicexplorer",
+    "hicGAN",
+    "hichap",
+    "HiCNAtra",
+    "HiCNN",
+    "hicrayon",
+    "hicube",
+    "hicup",
+    "hifi",
+    "hisif",
+    "pareidolia",
+    "scdec-hi-c",
+    "snapfish",
+    "spectraltad",
+    "tcbf",
+
+    # Added 2026-08-29. RASQUAL maps allele-specific molecular QTLs and is a
+    # benchmark tool, but its description says only "Map QTLs", and the QTL text
+    # rule requires a molecular prefix (\b[a-z]{1,3}QTLs?\b) on purpose, to keep
+    # agricultural trait mapping out. Relaxing it to a bare \bQTLs?\b was measured
+    # against the reject pile: it recovers this one record and admits Cucume, an
+    # RNA-methylation database that test_rna_modification_is_excluded pins as out
+    # of scope. Listing the id is the cheaper trade. NOT a case for
+    # STRONG_OPERATIONS: "Gene expression QTL analysis" was tried there and in
+    # WEAK, and withdrawn from both, because bio.tools hangs it on expression
+    # atlases (see tests/test_scope_2026_07.py).
+    "rasqual",
 ]
 
 # Free-text queries, for tools whose EDAM annotation is wrong or absent.

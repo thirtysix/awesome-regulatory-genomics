@@ -1,5 +1,5 @@
 {
- "count": 1487,
+ "count": 1640,
  "list": [
   {
    "biotoolsID": "imimic_iint",
@@ -1884,6 +1884,17 @@
    ]
   },
   {
+   "biotoolsID": "CyTargetLinker",
+   "name": "CyTargetLinker",
+   "reason": "excluded:\\bmiRNA[- ]target|\\bmicroRNA tar",
+   "description": "A flexible solution for network extension in Cytoscape | The CyTargetLinker app extends biological networks with regulatory interactions, for example miRNA-target, TF-target or drug-target interaction",
+   "operations": [
+    "Gene regulatory network analysis",
+    "Pathway or network comparison",
+    "Pathway or network prediction"
+   ]
+  },
+  {
    "biotoolsID": "kegg",
    "name": "Kyoto encyclopedia of genes and genomes (KEGG)",
    "reason": "excluded:\\bpathway (map|enrichment) datab",
@@ -1933,17 +1944,6 @@
    ]
   },
   {
-   "biotoolsID": "CyTargetLinker",
-   "name": "CyTargetLinker",
-   "reason": "excluded:\\bmiRNA[- ]target|\\bmicroRNA tar",
-   "description": "A flexible solution for network extension in Cytoscape | The CyTargetLinker app extends biological networks with regulatory interactions, for example miRNA-target, TF-target or drug-target interaction",
-   "operations": [
-    "Gene regulatory network analysis",
-    "Pathway or network comparison",
-    "Pathway or network prediction"
-   ]
-  },
-  {
    "biotoolsID": "BioGRID_Open_Repository_of_CRISPR_Screens_ORCS",
    "name": "BioGRID Open Repository of CRISPR Screens (ORCS)",
    "reason": "excluded:\\bCRISPR (screen|guide|repeat|ar",
@@ -1964,6 +1964,1584 @@
     "Database search",
     "Gene regulatory network prediction",
     "Small molecule design"
+   ]
+  },
+  {
+   "biotoolsID": "irna-methyl",
+   "name": "iRNA-Methyl",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
+   "description": "This web-server was developed to identify the N6-methyladenosine (m6A). It was observed by the rigorous cross-validation test on the benchmark dataset that the accuracy achieved by the predictor in id",
+   "operations": [
+    "Methylation analysis"
+   ]
+  },
+  {
+   "biotoolsID": "sramp",
+   "name": "SRAMP",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
+   "description": "A useful tool to predict m6A modification sites on the RNA sequences",
+   "operations": [
+    "Methylation analysis"
+   ]
+  },
+  {
+   "biotoolsID": "mam-pipeline",
+   "name": "MAM-pipeline",
+   "reason": "weak-operation, no corroboration",
+   "description": "Monoallelic DNA-methylation pipeline for enrichment-based sequencing technologies.",
+   "operations": [
+    "Methylation analysis"
+   ]
+  },
+  {
+   "biotoolsID": "glint",
+   "name": "GLINT",
+   "reason": "no-match",
+   "description": "User-friendly toolset for the analysis of high-throughput DNA-methylation array data.",
+   "operations": [
+    "Whole genome methylation analysis"
+   ]
+  },
+  {
+   "biotoolsID": "nanopolish",
+   "name": "nanopolish",
+   "reason": "weak-operation, no corroboration",
+   "description": "A package for detecting cytosine methylations and genetic variations from nanopore MinION sequencing data.",
+   "operations": [
+    "Genetic variation analysis",
+    "Mapping",
+    "Methylation analysis",
+    "Sequence assembly",
+    "Statistical calculation"
+   ]
+  },
+  {
+   "biotoolsID": "cnnarginineme",
+   "name": "CNNArginineMe",
+   "reason": "hard-excluded:\\bpeptides?\\b",
+   "description": "A CNN structure for training models for predicting arginine methylation sites based on the One-Hot encoding of peptide sequence.",
+   "operations": [
+    "Gene methylation analysis",
+    "PCR primer design",
+    "PTM site prediction"
+   ]
+  },
+  {
+   "biotoolsID": "parradmeth",
+   "name": "ParRADMeth",
+   "reason": "no-match",
+   "description": "Identification of diferentially methylated regions on multicore clusters.",
+   "operations": [
+    "DMR identification",
+    "Regression analysis",
+    "Whole genome methylation analysis"
+   ]
+  },
+  {
+   "biotoolsID": "nanopolishcomp",
+   "name": "NanopolishComp",
+   "reason": "weak-operation, no corroboration",
+   "description": "NanopolishComp is a Python3 package for downstream analyses of Nanopolish output files.\nIt is a companion package for Nanopolish.",
+   "operations": [
+    "Collapsing methods",
+    "Methylation analysis"
+   ]
+  },
+  {
+   "biotoolsID": "nextclade",
+   "name": "Nextclade",
+   "reason": "weak-operation, no corroboration",
+   "description": "Nextclade is an open-source project for viral genome alignment, mutation calling, clade assignment, quality checks and phylogenetic placement.",
+   "operations": [
+    "Methylation analysis",
+    "Variant calling"
+   ]
+  },
+  {
+   "biotoolsID": "m6adecom",
+   "name": "m6Adecom",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
+   "description": "Analysis of m6A profile matrix based on graph regularized non-negative matrix factorization.",
+   "operations": [
+    "Gene expression profiling",
+    "Gene-set enrichment analysis",
+    "Methylation analysis"
+   ]
+  },
+  {
+   "biotoolsID": "rims-seq",
+   "name": "RIMS-seq",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
+   "description": "Set of programs to analyze data derived from (Rapid Identification of Methylase Specificity) to simultaneously sequence bacterial genomes and determine m5C methylase specificities.",
+   "operations": [
+    "Bisulfite mapping",
+    "Gene methylation analysis",
+    "Sequence trimming"
+   ]
+  },
+  {
+   "biotoolsID": "pnb-designer",
+   "name": "PnB Designer",
+   "reason": "weak-operation, no corroboration",
+   "description": "PnB Designer is a web application to design prime and base editor guide RNAs for animals and plants.",
+   "operations": [
+    "Editing",
+    "Genotyping",
+    "Methylation analysis"
+   ]
+  },
+  {
+   "biotoolsID": "funm6aviewer",
+   "name": "Funm6AViewer",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
+   "description": "Funm6AViewer is a web server and R package for functional analysis of context-specific m6A RNA methylation.",
+   "operations": [
+    "DMR identification",
+    "Differential gene expression profiling",
+    "Gene methylation analysis"
+   ]
+  },
+  {
+   "biotoolsID": "FunDMDeep-m6A",
+   "name": "FunDMDeep-m6A",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
+   "description": "identification and prioritization of functional differential m6A methylation genes | A R package used to identify single base resolution m6A and differential m6A methylation site from MeRIP-seq data v",
+   "operations": [
+    "Enrichment analysis",
+    "Gene methylation analysis"
+   ]
+  },
+  {
+   "biotoolsID": "m6Acomet",
+   "name": "m6Acomet",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
+   "description": "Large-scale functional prediction of individual m6A RNA methylation sites from an RNA co-methylation network.",
+   "operations": [
+    "Gene methylation analysis",
+    "Post-translation modification site prediction",
+    "Weighted correlation network analysis"
+   ]
+  },
+  {
+   "biotoolsID": "methinheritsim",
+   "name": "methInheritSim",
+   "reason": "no-match",
+   "description": "Simulate a multigeneration methylation case versus control experiment with inheritance relation using a real control dataset.",
+   "operations": [
+    "Differentially-methylated region identification",
+    "Whole genome methylation analysis"
+   ]
+  },
+  {
+   "biotoolsID": "electronic_pcr",
+   "name": "Electronic PCR",
+   "reason": "no-match",
+   "description": "Find sequence-based markers (STSs) and therefore, map location in a DNA sequence of interest, useful for detecting mis-priming events.",
+   "operations": [
+    "Bisulfite mapping",
+    "DNA mapping",
+    "Mapping",
+    "Sequence tagged site (STS) mapping"
+   ]
+  },
+  {
+   "biotoolsID": "sequence_harmony",
+   "name": "Sequence Harmony",
+   "reason": "no-match",
+   "description": "Detects subfamily specific functional sites from a multiple sequence alignment by scoring compositional differences between given subfamily groupings.",
+   "operations": [
+    "Bisulfite mapping",
+    "Multiple sequence alignment",
+    "Sequence alignment",
+    "Tree-based sequence alignment"
+   ]
+  },
+  {
+   "biotoolsID": "prifi",
+   "name": "PriFi",
+   "reason": "no-match",
+   "description": "PriFi is a tool for designing and evaluating primer pairs based on the input of a DNA sequence alignment, useful for the PCR amplification of homologs.",
+   "operations": [
+    "Bisulfite mapping",
+    "PCR primer design",
+    "Sequence alignment"
+   ]
+  },
+  {
+   "biotoolsID": "sim4",
+   "name": "SIM4",
+   "reason": "no-match",
+   "description": "Align cDNA with genomic DNA, allowing for introns and small number of sequencing errors.",
+   "operations": [
+    "Bisulfite mapping",
+    "Genome alignment",
+    "Sequence alignment",
+    "Sequencing error detection"
+   ]
+  },
+  {
+   "biotoolsID": "clcbio_genomics_workbench",
+   "name": "CLC Main Workbench",
+   "reason": "no-match",
+   "description": "De novo and reference assembly SNP and small indel detection and annotation.",
+   "operations": [
+    "Ab-initio gene prediction",
+    "Bisulfite mapping",
+    "De-novo assembly",
+    "Heat map generation",
+    "Primer removal",
+    "Read mapping",
+    "SNP detection",
+    "Sequence alignment",
+    "Sequence assembly",
+    "Sequence assembly validation"
+   ]
+  },
+  {
+   "biotoolsID": "goblet",
+   "name": "GOblet",
+   "reason": "no-match",
+   "description": "BLAST one or more protein or nucleotide sequences against databases that have sequences mapped to Gene Ontology (GO) terms.  Results can be viewed for individual sequences, or as survey statistics for",
+   "operations": [
+    "Bisulfite mapping",
+    "Mapping",
+    "Sequence tag mapping",
+    "Sequence tagged site (STS) mapping"
+   ]
+  },
+  {
+   "biotoolsID": "accel-align",
+   "name": "Accel-Align",
+   "reason": "no-match",
+   "description": "A Fast Sequence Mapper and Aligner based on the Seed\u2013Embed\u2013Extend Method.\nAccel-Align does base-to-base alignment by default.",
+   "operations": [
+    "Bisulfite mapping",
+    "Editing",
+    "Genome indexing",
+    "Read mapping",
+    "Sequence alignment"
+   ]
+  },
+  {
+   "biotoolsID": "rmap",
+   "name": "RMAP",
+   "reason": "no-match",
+   "description": "Assembles 20 - 64 bp Solexa reads to a FASTA reference genome. By Andrew D. Smith and Zhenyu Xuan at CSHL. (published in BMC Bioinformatics). POSIX OS required.",
+   "operations": [
+    "Bisulfite mapping",
+    "Read mapping"
+   ]
+  },
+  {
+   "biotoolsID": "genedata_expressionist",
+   "name": "Genedata Expressionist",
+   "reason": "no-match",
+   "description": "Genedata Expressionist performs efficient and quality compliant analysis of next generation sequencing (NGS) and other genomic profiling data",
+   "operations": [
+    "Bisulfite mapping",
+    "Clustering",
+    "Gene expression analysis",
+    "Genome visualisation",
+    "RNA-Seq analysis",
+    "Read mapping",
+    "Sequence alignment",
+    "Sequence analysis",
+    "Sequencing quality control",
+    "Statistical calculation"
+   ]
+  },
+  {
+   "biotoolsID": "alphalasso",
+   "name": "AlphaLasso",
+   "reason": "no-match",
+   "description": "AlphaLasso is a web server for identifying and analyzing lasso motifs in protein structures, particularly those solved by AlphaFold. It provides visualization tools, metadata annotation, and precomput",
+   "operations": [
+    "Cysteine bridge detection",
+    "Free cysteine detection",
+    "Loop modelling",
+    "Visualisation"
+   ]
+  },
+  {
+   "biotoolsID": "mmmx",
+   "name": "MMMx",
+   "reason": "no-match",
+   "description": "MMMx is a toolbox for protein ensemble modeling and analysis, supporting the design of experiments to characterize the distributed structure of proteins with disordered domains. It leverages AlphaFold",
+   "operations": [
+    "Fold recognition",
+    "Loop modelling",
+    "Protein disorder prediction"
+   ]
+  },
+  {
+   "biotoolsID": "DaReUS-Loop",
+   "name": "DaReUS-Loop",
+   "reason": "no-match",
+   "description": "Web server for the (re-)modeling of loops in homology models. It follows a data-based approach, identifying loop candidates by mining the complete set of experimental structures available in the Prote",
+   "operations": [
+    "Loop modelling"
+   ]
+  },
+  {
+   "biotoolsID": "ErrorTracer",
+   "name": "ErrorTracer",
+   "reason": "no-match",
+   "description": "ModelExplorer is a metabolic model visualization package that can assist the user in finding blocked parts of the metabolic network as well as finding out why they are blocked.",
+   "operations": [
+    "Loop modelling",
+    "Metabolic network modelling"
+   ]
+  },
+  {
+   "biotoolsID": "alphafold_2",
+   "name": "AlphaFold 2",
+   "reason": "no-match",
+   "description": "AI-guided 3D structure prediction of novel proteins. AlphaFold uses neural networks to predict the tertiary (3D) structure of proteins. AlphaFold accepts an amino acid sequence as an input, which it w",
+   "operations": [
+    "Backbone modelling",
+    "Loop modelling",
+    "Protein folding analysis",
+    "Side chain modelling"
+   ]
+  },
+  {
+   "biotoolsID": "dsdbase",
+   "name": "DSDBASE",
+   "reason": "no-match",
+   "description": "DSDBASE is a database on disulphide bonds in proteins that provides information on native disulphides and those which are stereochemically possible between pairs of residues in a protein.",
+   "operations": [
+    "Backbone modelling",
+    "Loop modelling",
+    "Protein cysteine and disulfide bond assignment",
+    "Query and retrieval"
+   ]
+  },
+  {
+   "biotoolsID": "emdna",
+   "name": "emDNA",
+   "reason": "no-match",
+   "description": "emDNA is a C++ software for minimizing the energy of DNA or DNA+proteins complexes. It can handle various geometrical constraints (e.g. fixed end-to-end distance and/or rotation) and can be used to si",
+   "operations": [
+    "Loop modelling",
+    "Molecular dynamics"
+   ]
+  },
+  {
+   "biotoolsID": "loopgrafter",
+   "name": "LoopGrafter",
+   "reason": "no-match",
+   "description": "A web tool for transplanting dynamical loops for protein engineering.",
+   "operations": [
+    "Backbone modelling",
+    "Loop modelling",
+    "Protein design",
+    "Protein geometry calculation",
+    "Simulation analysis"
+   ]
+  },
+  {
+   "biotoolsID": "nanonet",
+   "name": "NanoNet",
+   "reason": "no-match",
+   "description": "Rapid and accurate end-to-end nanobody modeling by deep learning.",
+   "operations": [
+    "Backbone modelling",
+    "Epitope mapping",
+    "Loop modelling",
+    "Side chain modelling"
+   ]
+  },
+  {
+   "biotoolsID": "crisprtracrrna",
+   "name": "CRISPRtracrRNA",
+   "reason": "no-match",
+   "description": "CRISPRtracrRNA: an end-to-end standalone bioinformatic tool for tracrRNA predictions. In order to robustly predict the new tracrRNA candidates, CRISPRtracrRNA combines different sources of evidence.",
+   "operations": [
+    "Loop modelling",
+    "Protein threading",
+    "Sequence alignment"
+   ]
+  },
+  {
+   "biotoolsID": "refhic",
+   "name": "RefHiC",
+   "reason": "text match, no domain topic",
+   "description": "Reference panel guided topological structure annotation of Hi-C data.",
+   "operations": [
+    "Genotyping",
+    "Loop modelling",
+    "Mapping"
+   ]
+  },
+  {
+   "biotoolsID": "nettcr-2.1",
+   "name": "NetTCR-2.1",
+   "reason": "hard-excluded:\\bpeptides?\\b",
+   "description": "NetTCR-2.1 predicts binding probability between a T-cell receptor (TCR) CDR loops and MHC-I peptides.",
+   "operations": [
+    "Epitope mapping",
+    "Loop modelling",
+    "Peptide immunogenicity prediction",
+    "Visualisation"
+   ]
+  },
+  {
+   "biotoolsID": "immunebuilder",
+   "name": "ImmuneBuilder",
+   "reason": "no-match",
+   "description": "Deep-learning models for predicting the structures of immune proteins.",
+   "operations": [
+    "Loop modelling",
+    "Peptide immunogenicity prediction",
+    "Sequence trimming",
+    "Side chain modelling"
+   ]
+  },
+  {
+   "biotoolsID": "mmodel",
+   "name": "mmodel",
+   "reason": "no-match",
+   "description": "A workflow framework to accelerate the development of experimental simulations.",
+   "operations": [
+    "Essential dynamics",
+    "Loop modelling",
+    "Visualisation"
+   ]
+  },
+  {
+   "biotoolsID": "msmpred",
+   "name": "MSMpred",
+   "reason": "no-match",
+   "description": "Interactive modeling and prediction of individual evolution via multistate models.",
+   "operations": [
+    "Incident curve plotting",
+    "Loop modelling",
+    "Protein structure validation"
+   ]
+  },
+  {
+   "biotoolsID": "refhic-sr",
+   "name": "RefHiC-SR",
+   "reason": "text match, no domain topic",
+   "description": "Reference panel-guided super-resolution inference of Hi-C data.",
+   "operations": [
+    "Loop modelling",
+    "Mapping",
+    "Residue contact prediction",
+    "Sequence trimming"
+   ]
+  },
+  {
+   "biotoolsID": "cudammc",
+   "name": "cudaMMC",
+   "reason": "no-match",
+   "description": "GPU-enhanced multiscale Monte Carlo chromatin 3d modelling.",
+   "operations": [
+    "Clustering",
+    "Heat map generation",
+    "Loop modelling"
+   ]
+  },
+  {
+   "biotoolsID": "rascore2",
+   "name": "Rascore",
+   "reason": "no-match",
+   "description": "Defining An Expanded RAS Conformational Landscape Based on Over 700 Experimentally Determined Structures of KRAS, NRAS, and HRAS.\n\n||| HOMEPAGE BROKEN!\n\n||| NAME (Rascore) SIMILAR TO (PUB. DIFFERENT) ",
+   "operations": [
+    "Backbone modelling",
+    "Loop modelling",
+    "Small molecule design",
+    "Structure classification"
+   ]
+  },
+  {
+   "biotoolsID": "pandora_peptide",
+   "name": "PANDORA",
+   "reason": "hard-excluded:\\bpeptides?\\b",
+   "description": "A Fast, Anchor-Restrained Modelling Protocol for Peptide.",
+   "operations": [
+    "Loop modelling",
+    "Molecular docking",
+    "Parsing",
+    "Query and retrieval"
+   ]
+  },
+  {
+   "biotoolsID": "moma-loopsampler",
+   "name": "MoMA-LoopSampler",
+   "reason": "no-match",
+   "description": "MoMA-LoopSampler is a method to exhaustively sample the conformational space of protein loops. It exploits structural information encoded in a large library of three-residue fragments, and enforces lo",
+   "operations": [
+    "Anonymisation",
+    "Loop modelling",
+    "Side chain modelling"
+   ]
+  },
+  {
+   "biotoolsID": "iptdfold",
+   "name": "IPTDFold",
+   "reason": "hard-excluded:\\bprotein (crystall|folding|st",
+   "description": "IPTDFold is a de novo protein structure prediction by iterative partition sampling, topology adjustment, and residue-level distance deviation optimization.",
+   "operations": [
+    "Ab initio structure prediction",
+    "Loop modelling",
+    "Residue contact prediction",
+    "Residue distance calculation"
+   ]
+  },
+  {
+   "biotoolsID": "transphire",
+   "name": "TranSPHIRE",
+   "reason": "no-match",
+   "description": "Automated and feedback-optimized on-the-fly processing for cryo-EM.",
+   "operations": [
+    "Loop modelling",
+    "Sequence trimming",
+    "Single particle alignment and classification"
+   ]
+  },
+  {
+   "biotoolsID": "deeph3",
+   "name": "DeepH3",
+   "reason": "no-match",
+   "description": "DeepH3 is a deep residual network architecture to predict probability distributions of inter-residue distances and angles for CDR H3 loops in antibodies. This work is protected by https://creativecomm",
+   "operations": [
+    "Ab initio structure prediction",
+    "Loop modelling",
+    "Protein secondary structure prediction"
+   ]
+  },
+  {
+   "biotoolsID": "specs",
+   "name": "SPECS",
+   "reason": "no-match",
+   "description": "a non-parametric method to identify tissue-specific molecular features for unbalanced sample groups.\n\nIntegration of side-chain orientation and global distance-based measures for improved evaluation o",
+   "operations": [
+    "Backbone modelling",
+    "Loop modelling",
+    "Side chain modelling"
+   ]
+  },
+  {
+   "biotoolsID": "loopdetect",
+   "name": "LoopDetect",
+   "reason": "no-match",
+   "description": "Comprehensive feedback loop detection in ordinary differential equation models.\n\nComprehensive Feedback Loop Detection in ODE Models.\n\nDetect feedback loops (cycles, circuits) between species (nodes) ",
+   "operations": [
+    "Loop modelling",
+    "Visualisation"
+   ]
+  },
+  {
+   "biotoolsID": "korp-pl",
+   "name": "KORP-PL",
+   "reason": "excluded:\\bdocking\\b|\\bmolecular dynamics",
+   "description": "A coarse-grained knowledge-based scoring function for protein-ligand interactions.\n\nKORP-PL is a novel sidechain-free coarse-grained knowledge-based scoring function for protein-ligand interactions de",
+   "operations": [
+    "Loop modelling",
+    "Protein-ligand docking",
+    "Protein-protein docking"
+   ]
+  },
+  {
+   "biotoolsID": "qfit_3",
+   "name": "qFit 3",
+   "reason": "no-match",
+   "description": "Protein and ligand multiconformer modeling for X-ray crystallographic and single-particle cryo-EM density maps.\n\nqFit is a collection of programs for modeling multi-conformer protein structures.\n\nElec",
+   "operations": [
+    "Backbone modelling",
+    "Loop modelling",
+    "Protein structure validation",
+    "Side chain modelling"
+   ]
+  },
+  {
+   "biotoolsID": "PlaSMo",
+   "name": "PlaSMo",
+   "reason": "no-match",
+   "description": "PlaSMo stands for Plant Systems-biology Modelling and the mission of the project was ensuring the achievements of yesterday's Mathematical Modellers will be available for the Systems Biologists of tom",
+   "operations": [
+    "Data retrieval",
+    "Deposition",
+    "Loop modelling"
+   ]
+  },
+  {
+   "biotoolsID": "CGLFold",
+   "name": "CGLFold",
+   "reason": "hard-excluded:\\bprotein (crystall|folding|st",
+   "description": "A contact-assisted de novo protein structure prediction using global exploration and loop perturbation sampling algorithm.",
+   "operations": [
+    "Ab initio structure prediction",
+    "Loop modelling",
+    "Phasing"
+   ]
+  },
+  {
+   "biotoolsID": "LinearFold",
+   "name": "LinearFold",
+   "reason": "excluded:\\bRNA (secondary |tertiary )?str",
+   "description": "linear-time approximate RNA folding by 5'-to-3' dynamic programming and beam search | The new source code of the LinearFold, linear-time prediction for RNA secondary structures | This codebase replace",
+   "operations": [
+    "Loop modelling",
+    "Parsing",
+    "RNA secondary structure prediction"
+   ]
+  },
+  {
+   "biotoolsID": "soyod",
+   "name": "SoyOD",
+   "reason": "no-match",
+   "description": "SoyOD is an integrated multi-omics database for soybean research, providing extensive data coverage and comprehensive data analysis tools. It facilitates mining candidate genes and aids in molecular b",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genome assembly",
+    "Genome indexing",
+    "Genotyping",
+    "Transcriptome assembly"
+   ]
+  },
+  {
+   "biotoolsID": "sctwas_atlas",
+   "name": "scTWAS Atlas",
+   "reason": "no-match",
+   "description": "scTWAS Atlas is a database and tool for integrative knowledgebase of single-cell transcriptome-wide association studies. It catalogs scTWAS information, provides visualization tools, and facilitates c",
+   "operations": [
+    "Database search",
+    "Gene expression QTL analysis",
+    "Visualisation"
+   ]
+  },
+  {
+   "biotoolsID": "grabseeds",
+   "name": "GRABSEEDS",
+   "reason": "no-match",
+   "description": "GRABSEEDS is a command-line tool for extracting plant organ traits from digital images, employing computer vision and deep learning methods to accurately measure length, color, and other characteristi",
+   "operations": [
+    "Essential dynamics",
+    "Gene expression QTL analysis",
+    "Genetic mapping",
+    "Image analysis"
+   ]
+  },
+  {
+   "biotoolsID": "easyomics",
+   "name": "EasyOmics",
+   "reason": "no-match",
+   "description": "EasyOmics is an R Shiny application designed for population-scale omics data association, integration, and visualization, accessible via Docker containers. It provides a user-friendly interface for we",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genetic mapping",
+    "Visualisation"
+   ]
+  },
+  {
+   "biotoolsID": "expression_profiler",
+   "name": "Expression Profiler",
+   "reason": "no-match",
+   "description": "Web based platform for microarray data analysis developed at the EBI. This resource is integrated with the ArrayExpress database, a public repository for microarray data.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Gene expression analysis",
+    "Gene expression profile clustering",
+    "Gene expression profile comparison",
+    "Gene expression profiling"
+   ]
+  },
+  {
+   "biotoolsID": "biforce_toolbox",
+   "name": "BiForce Toolbox",
+   "reason": "no-match",
+   "description": "Webserver for high throughput analysis of pair-wise epistasis in GWAS of quantitative and disease traits.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genotyping",
+    "Over-representation analysis"
+   ]
+  },
+  {
+   "biotoolsID": "posmed",
+   "name": "PosMed",
+   "reason": "no-match",
+   "description": "To assist in prioritizing candidate genes discovered in a linkage analysis, the tool executes a full-text search of documents given a query word input and ranks the positional cloning candidate genes ",
+   "operations": [
+    "Database search",
+    "Gene expression QTL analysis",
+    "Gene expression correlation analysis",
+    "Linkage analysis",
+    "Query and retrieval"
+   ]
+  },
+  {
+   "biotoolsID": "race",
+   "name": "RACE",
+   "reason": "no-match",
+   "description": "Collection of web tools designed to assist with the analysis of DNA microarray data and results.",
+   "operations": [
+    "Differential gene expression analysis",
+    "Gene expression QTL analysis",
+    "Gene expression analysis",
+    "Gene expression correlation analysis",
+    "Gene expression profiling"
+   ]
+  },
+  {
+   "biotoolsID": "lis",
+   "name": "Legume Information System (LIS)",
+   "reason": "no-match",
+   "description": "The Legume Information System enables productive applied and basic research in the legumes by relating data from multiple crop and model species, and by helping researchers traverse among various data",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genetic mapping",
+    "Mapping",
+    "Physical mapping",
+    "Sequence tag mapping"
+   ]
+  },
+  {
+   "biotoolsID": "medminer",
+   "name": "MedMiner",
+   "reason": "no-match",
+   "description": "MedMiner can be used to select genes from a microarray set based on GeneCards information. Based on the genes selected one can then search PubMed abstracts using known gene synonyms and other user-spe",
+   "operations": [
+    "Differential gene expression analysis",
+    "Gene expression QTL analysis",
+    "Gene expression analysis",
+    "Gene expression clustering",
+    "Gene expression profiling"
+   ]
+  },
+  {
+   "biotoolsID": "geneweaver",
+   "name": "GeneWeaver",
+   "reason": "no-match",
+   "description": "Curated repository of genomic experimental results with an accompanying tool set for dynamic integration of these data sets, enabling users to interactively address questions about sets of biological ",
+   "operations": [
+    "Aggregation",
+    "Enrichment analysis",
+    "Gene expression QTL analysis",
+    "Gene set testing"
+   ]
+  },
+  {
+   "biotoolsID": "genesigdb",
+   "name": "GeneSigDB",
+   "reason": "no-match",
+   "description": "Manually curated database of gene expression signatures. It focuses on cancer, development, and stem cell gene signatures and was constructed from thousands of publications from which we manually tran",
+   "operations": [
+    "Differential gene expression analysis",
+    "Enrichment analysis",
+    "Gene expression QTL analysis",
+    "Gene expression analysis",
+    "Gene expression profiling"
+   ]
+  },
+  {
+   "biotoolsID": "patrocles",
+   "name": "Patrocles",
+   "reason": "no-match",
+   "description": "Compiles DNA sequence polymorphisms (DSPs) that are predicted to perturb miRNA-mediated gene regulation.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Gene prediction",
+    "Genotyping",
+    "Pathway or network prediction",
+    "SNP detection"
+   ]
+  },
+  {
+   "biotoolsID": "sup",
+   "name": "SUP",
+   "reason": "no-match",
+   "description": "Extension to SLINK to allow a larger number of marker loci to be simulated in pedigrees conditional on trait values and in linkage equilibrium or disequilibrium with a trait locus.",
+   "operations": [
+    "Gene expression QTL analysis"
+   ]
+  },
+  {
+   "biotoolsID": "sea",
+   "name": "SEA",
+   "reason": "no-match",
+   "description": "Serial Expression Analysis (SEA) suite of tools provides a complete resource for the analysis of serial transcriptomic data.",
+   "operations": [
+    "Differential gene expression analysis",
+    "Gene expression QTL analysis",
+    "Gene expression analysis"
+   ]
+  },
+  {
+   "biotoolsID": "sagenet",
+   "name": "SAGE Home Page",
+   "reason": "no-match",
+   "description": "Simultaneous expression and map information.",
+   "operations": [
+    "Differential gene expression analysis",
+    "Gene expression QTL analysis",
+    "Gene expression analysis"
+   ]
+  },
+  {
+   "biotoolsID": "undo",
+   "name": "UNDO",
+   "reason": "no-match",
+   "description": "R package for unsupervised deconvolution of tumor and stromal mixed expression data. It detects marker genes and deconvolutes the mixing expression data without any prior knowledge.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Gene expression clustering"
+   ]
+  },
+  {
+   "biotoolsID": "t-profiler",
+   "name": "T-profiler",
+   "reason": "no-match",
+   "description": "Tool for the analysis of gene expression data from yeast that uses the t-test to score changes in the average activity of pre-defined groups of genes.",
+   "operations": [
+    "Differential gene expression analysis",
+    "Gene expression QTL analysis",
+    "Gene expression analysis",
+    "Gene expression profiling"
+   ]
+  },
+  {
+   "biotoolsID": "t1dbase",
+   "name": "T1DBase",
+   "reason": "no-match",
+   "description": "Database for type 1 diabetes (T1D). It integrates genetic, genomic and expression data relevant to T1D research across mouse, rat and human and presents this to the user as a set of web pages and tool",
+   "operations": [
+    "Differential gene expression analysis",
+    "Gene expression QTL analysis",
+    "Gene expression analysis",
+    "Gene expression profiling",
+    "Query and retrieval"
+   ]
+  },
+  {
+   "biotoolsID": "mirgator_v2.0",
+   "name": "miRGator v2.0",
+   "reason": "excluded:\\bmiRNA[- ]target|\\bmicroRNA tar",
+   "description": "miRGator is an integrated database of microRNA (miRNA)-associated gene expression, target prediction, disease association and genomic annotation for the functional investigation of miRNA. miRGator v2.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Gene expression clustering",
+    "Gene expression comparison",
+    "Gene expression profiling",
+    "Gene to pathway mapping"
+   ]
+  },
+  {
+   "biotoolsID": "ogee",
+   "name": "OGEE",
+   "reason": "no-match",
+   "description": "Online Gene Essentiality Database. Collects experimentally tested essential and non-essential genes, and also associated gene features (eg. expression profiles, duplication status, evolutionary origin",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Gene expression clustering",
+    "Gene expression comparison",
+    "Gene expression profiling",
+    "Gene set testing"
+   ]
+  },
+  {
+   "biotoolsID": "phenom",
+   "name": "PhenoM",
+   "reason": "no-match",
+   "description": "Phenomics of yeast Mutants (PhenoM): contains quantitative measurements of 1,909,914 cells and 78,194 morphological images for 775 temperature-sensitive mutants spanning 491 different essential genes ",
+   "operations": [
+    "Data retrieval",
+    "Gene expression QTL analysis",
+    "Gene expression analysis",
+    "Gene expression profiling",
+    "Gene-set enrichment analysis"
+   ]
+  },
+  {
+   "biotoolsID": "phenohm",
+   "name": "PhenoHM",
+   "reason": "no-match",
+   "description": "PhenoHM is a human-mouse comparative phenome-genome server that facilitates cross species identification of genes associated with orthologous phenotypes.",
+   "operations": [
+    "Differential gene expression analysis",
+    "Gene expression QTL analysis",
+    "Gene prediction",
+    "Mapping",
+    "Named-entity and concept recognition"
+   ]
+  },
+  {
+   "biotoolsID": "vampire",
+   "name": "VAMPIRE",
+   "reason": "no-match",
+   "description": "Collection of Java tools designed to perform Bayesian statistical analysis of gene expression array data.",
+   "operations": [
+    "Differential gene expression analysis",
+    "Gene expression QTL analysis",
+    "Gene expression analysis",
+    "Gene expression profiling",
+    "Statistical calculation"
+   ]
+  },
+  {
+   "biotoolsID": "btw",
+   "name": "BTW",
+   "reason": "no-match",
+   "description": "Boltzmann Time Warping (BTW) computes time warping distances and Boltzmann' pair probabilities for a  given input gene expression time series.  This tool helps to identify genes that may share similar",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Gene expression analysis",
+    "Gene expression clustering",
+    "Gene expression comparison",
+    "Gene expression profiling"
+   ]
+  },
+  {
+   "biotoolsID": "soybase",
+   "name": "SoyBase",
+   "reason": "no-match",
+   "description": "Soybean genetic database, is a comprehensive repository for curated genetics, genomics and related data resources for soybean. Contains the most current genetic, physical and genomic sequence maps int",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genetic mapping",
+    "Mapping",
+    "Physical mapping",
+    "Sequence tagged site (STS) mapping"
+   ]
+  },
+  {
+   "biotoolsID": "eqtlseq",
+   "name": "eQTLseq",
+   "reason": "no-match",
+   "description": "Hierarchical probabilistic models for multiple gene/variant associations based on NGS data.",
+   "operations": [
+    "Gene expression QTL analysis"
+   ]
+  },
+  {
+   "biotoolsID": "qtm",
+   "name": "QTL TableMiner++(QTM)",
+   "reason": "no-match",
+   "description": "It is a command-line tool to retrieve and semantically annotate results obtained from QTL mapping experiments. It takes full-text articles from the Europe PMC repository as input and outputs the extra",
+   "operations": [
+    "Annotation",
+    "Gene expression QTL analysis"
+   ]
+  },
+  {
+   "biotoolsID": "mouse_proteome_project",
+   "name": "Mouse Proteome Project",
+   "reason": "no-match",
+   "description": "Global survey of organ and organelle protein expression in mouse: combined proteomic and transcriptomic profiling. This molecular compendium, fully accessible via a searchable web-browser interface, s",
+   "operations": [
+    "Differential protein expression analysis",
+    "Gene expression QTL analysis",
+    "Gene expression comparison",
+    "Gene expression profiling",
+    "Protein modelling"
+   ]
+  },
+  {
+   "biotoolsID": "PhenoScanner",
+   "name": "PhenoScanner",
+   "reason": "no-match",
+   "description": "Database of human genotype-phenotype associations.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Haplotype mapping",
+    "Linkage disequilibrium calculation"
+   ]
+  },
+  {
+   "biotoolsID": "fastJT",
+   "name": "fastJT",
+   "reason": "no-match",
+   "description": "R package for robust and efficient feature selection for machine learning and genome-wide association studies.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genotyping",
+    "Quantification"
+   ]
+  },
+  {
+   "biotoolsID": "CNVRanger",
+   "name": "CNVRanger",
+   "reason": "no-match",
+   "description": "association analysis of CNVs with gene expression and quantitative phenotypes | Summarization and expression/phenotype association of CNV ranges | The CNVRanger package implements a comprehensive tool",
+   "operations": [
+    "Gene expression QTL analysis",
+    "RNA-Seq quantification",
+    "SNP detection"
+   ]
+  },
+  {
+   "biotoolsID": "MIND",
+   "name": "MIND",
+   "reason": "no-match",
+   "description": "Using multiple measurements of tissue to estimate subject- and cell-type-specific gene expression | Using Multiple Measurements of Tissue to Estimate Subject- And Cell-Type-Specific Gene Expression vi",
+   "operations": [
+    "Deisotoping",
+    "Gene expression QTL analysis",
+    "Statistical inference"
+   ]
+  },
+  {
+   "biotoolsID": "cgap",
+   "name": "Cancer Genome Anatomy Project",
+   "reason": "no-match",
+   "description": "Goal is to determine the gene expression profiles of normal, precancer, and cancer cells; resources for human and mouse include ESTs, gene expression patterns, SNPs, cluster assemblies, cytogenetic in",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Gene expression analysis",
+    "Gene expression clustering",
+    "Gene expression profiling"
+   ]
+  },
+  {
+   "biotoolsID": "polymirts",
+   "name": "PolymiRTS",
+   "reason": "excluded:\\bmiRNA[- ]target|\\bmicroRNA tar",
+   "description": "Polymorphism in microRNA Target Site (PolymiRTS) is a database of naturally occurring DNA variations in predicted and experimentally identified microRNA (miRNA) target sites. PolymiRTS aims to identif",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genetic mapping",
+    "Genetic variation analysis",
+    "SNP detection",
+    "microRNA detection"
+   ]
+  },
+  {
+   "biotoolsID": "profcom",
+   "name": "ProfCom",
+   "reason": "no-match",
+   "description": "Web based tool for the interpretation of genes that were identified to be functionally linked. Combinations of annotation terms are used to profile complex functions.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Gene expression profile clustering",
+    "Gene expression profiling",
+    "Gene functional annotation"
+   ]
+  },
+  {
+   "biotoolsID": "pubgene",
+   "name": "PubGene",
+   "reason": "no-match",
+   "description": "Searchable literature network of human genes with tools for gene expression analysis. Choose from the free public service, or purchase the commercial package.",
+   "operations": [
+    "Differential gene expression analysis",
+    "Gene expression QTL analysis",
+    "Gene expression analysis"
+   ]
+  },
+  {
+   "biotoolsID": "mpd",
+   "name": "MPD",
+   "reason": "no-match",
+   "description": "Mouse Phenome Database: houses a wealth of strain characteristics data to facilitate the use of the laboratory mouse in translational research for human health and disease. Data sets are voluntarily c",
+   "operations": [
+    "Data retrieval",
+    "Gene expression QTL analysis",
+    "Gene expression analysis",
+    "Gene expression profiling",
+    "Genotyping"
+   ]
+  },
+  {
+   "biotoolsID": "zfin",
+   "name": "ZFIN",
+   "reason": "no-match",
+   "description": "Central repository and web-based resource for zebrafish genetic, genomic, phenotypic and developmental data. It manually curates comprehensive data for zebrafish genes, phenotypes, genotypes, gene exp",
+   "operations": [
+    "Differential gene expression analysis",
+    "Gene expression QTL analysis",
+    "Gene expression analysis",
+    "Gene expression profiling",
+    "Genotyping"
+   ]
+  },
+  {
+   "biotoolsID": "markerpen",
+   "name": "markerpen",
+   "reason": "no-match",
+   "description": "markerpen is an R library for the identification of cell-type-specific marker genes from co-expression patterns in tissue samples.",
+   "operations": [
+    "Deisotoping",
+    "Expression correlation analysis",
+    "Gene expression QTL analysis"
+   ]
+  },
+  {
+   "biotoolsID": "compile",
+   "name": "COMPILE",
+   "reason": "no-match",
+   "description": "A computational pipeline \"COMPILE\" to accelerate identification and annotation of candidate genes in Genome-Wide Association Studies.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Gene expression profiling",
+    "Genetic mapping",
+    "Genotyping"
+   ]
+  },
+  {
+   "biotoolsID": "decaf",
+   "name": "DeCAF",
+   "reason": "no-match",
+   "description": "DeCAF (DEconvoluted cell type Allele specific Function): Identify cell-type specific QTL effects in tumors by leveraging both allelic and total expression information",
+   "operations": [
+    "Deisotoping",
+    "Gene expression QTL analysis",
+    "Quantification"
+   ]
+  },
+  {
+   "biotoolsID": "qtlviewer",
+   "name": "QTLViewer",
+   "reason": "no-match",
+   "description": "An interactive webtool for genetic analysis in the Collaborative Cross and Diversity Outbred mouse populations.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genetic mapping",
+    "Genotyping",
+    "Visualisation"
+   ]
+  },
+  {
+   "biotoolsID": "TAGOOS",
+   "name": "TAGOOS",
+   "reason": "no-match",
+   "description": "Genome-wide supervised learning of non-coding loci associated to complex phenotypes.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Linkage disequilibrium calculation",
+    "SNP annotation"
+   ]
+  },
+  {
+   "biotoolsID": "tedd",
+   "name": "TEDD",
+   "reason": "no-match",
+   "description": "A database of temporal gene expression patterns during multiple developmental periods in human and model organisms.",
+   "operations": [
+    "Expression correlation analysis",
+    "Expression profile clustering",
+    "Gene expression QTL analysis",
+    "Gene expression profiling"
+   ]
+  },
+  {
+   "biotoolsID": "megabayesc",
+   "name": "MegaBayesC",
+   "reason": "no-match",
+   "description": "Mega-scale Bayesian Regression methods for genome-wide prediction and association studies with thousands of traits.",
+   "operations": [
+    "Collapsing methods",
+    "Gene expression QTL analysis",
+    "Genotyping",
+    "Regression analysis"
+   ]
+  },
+  {
+   "biotoolsID": "ldrgdb",
+   "name": "LDRGDb",
+   "reason": "no-match",
+   "description": "Legumes disease resistance genes database.",
+   "operations": [
+    "Database search",
+    "Gene expression QTL analysis",
+    "Genetic mapping"
+   ]
+  },
+  {
+   "biotoolsID": "cottonmd",
+   "name": "CottonMD",
+   "reason": "hard-excluded:\\bmass spectrometr|\\bLC-MS\\b|\\",
+   "description": "CottonMD is a curated and integrated multi-omics resource for cotton. In this database, we integrated and analyzed datasets from genomics, epigenomics, transcriptomics, metabolomics and phenomics, and",
+   "operations": [
+    "Database search",
+    "Gene expression QTL analysis",
+    "Gene expression profiling"
+   ]
+  },
+  {
+   "biotoolsID": "cafeh",
+   "name": "CAFEH",
+   "reason": "no-match",
+   "description": "CAFEH is a method that performs finemapping and colocalization jointly over multiple phenotypes. CAFEH can be run with 10s of phenotypes and 1000s of variants in a few minutes.",
+   "operations": [
+    "Collapsing methods",
+    "Gene expression QTL analysis",
+    "Gene expression profiling",
+    "Genetic mapping",
+    "Variant prioritisation"
+   ]
+  },
+  {
+   "biotoolsID": "flimma",
+   "name": "Flimma",
+   "reason": "no-match",
+   "description": "Flimma is a federated privacy-aware version of state-of-the art differential expression analysis method limma voom.",
+   "operations": [
+    "Aggregation",
+    "Differential gene expression profiling",
+    "Essential dynamics",
+    "Gene expression QTL analysis"
+   ]
+  },
+  {
+   "biotoolsID": "fantastic-databases",
+   "name": "Fantastic databases and where find them",
+   "reason": "no-match",
+   "description": "\"Fantastic databases and where find them\" is a collection of databases for omics data.",
+   "operations": [
+    "Database search",
+    "Gene expression QTL analysis",
+    "Gene expression profiling"
+   ]
+  },
+  {
+   "biotoolsID": "mendeliht.jl",
+   "name": "MendelIHT.jl",
+   "reason": "no-match",
+   "description": "Implements iterative hard thresholding as a multiple regression model for GWAS. Built-in support for handling PLINK and VCF files, parallel computing, fits a variety of GLM models, and handles group/w",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genetic variation analysis"
+   ]
+  },
+  {
+   "biotoolsID": "MaizeDIG",
+   "name": "MaizeDIG",
+   "reason": "no-match",
+   "description": "Maize Database of Images and Genomes | MaizeDIG - Maize Database of Images and Genomes. This tool allows users to tag phenotypes in images and link them to specific genes | MaizeDIG the Maize Database",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genetic mapping",
+    "Image annotation"
+   ]
+  },
+  {
+   "biotoolsID": "mostwas",
+   "name": "MOSTWAS",
+   "reason": "no-match",
+   "description": "Multi-Omic Strategies for Transcriptome-Wide Association Studies.",
+   "operations": [
+    "Collapsing methods",
+    "Gene expression QTL analysis",
+    "Genotyping",
+    "Imputation",
+    "Variant prioritisation"
+   ]
+  },
+  {
+   "biotoolsID": "deepwas",
+   "name": "DeepWAS",
+   "reason": "no-match",
+   "description": "DeepWAS is a tool for directly integrating regulatory information into GWAS using machine learning. Multivariate genotype-phenotype associations by directly integrating regulatory information using de",
+   "operations": [
+    "Collapsing methods",
+    "Gene expression QTL analysis",
+    "Genotyping",
+    "SNP detection",
+    "Variant effect prediction"
+   ]
+  },
+  {
+   "biotoolsID": "spa",
+   "name": "SPA",
+   "reason": "no-match",
+   "description": "A global overview of single-cell type selectivity and pleiotropy in complex diseases and traits.",
+   "operations": [
+    "Expression profile clustering",
+    "Gene expression QTL analysis",
+    "Query and retrieval"
+   ]
+  },
+  {
+   "biotoolsID": "lncrnakb",
+   "name": "lncRNAKB",
+   "reason": "no-match",
+   "description": "Knowledgebase of tissue-specific functional annotation and trait association of long noncoding RNA.\n\nScripts for analyzing data displayed and deposited on the long non-coding RNA knowledgebase (lncRNA",
+   "operations": [
+    "Deposition",
+    "Expression correlation analysis",
+    "Gene expression QTL analysis",
+    "Genotyping",
+    "Weighted correlation network analysis"
+   ]
+  },
+  {
+   "biotoolsID": "braingenie",
+   "name": "BrainGENIE",
+   "reason": "no-match",
+   "description": "Brain Gene Expression and Network Imputation Engine (BrainGENIE) imputes brain-region-specific gene expression levels from peripheral blood gene expression.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genotyping",
+    "Imputation",
+    "Standardisation and normalisation"
+   ]
+  },
+  {
+   "biotoolsID": "QTL-BSA",
+   "name": "QTL-BSA",
+   "reason": "no-match",
+   "description": "A Bulked Segregant Analysis and Visualization Pipeline for QTL-seq | In recent years, the application of Whole Genome Sequencing (WGS) on plants has generated sufficient data for the identification of",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genetic mapping",
+    "SNP detection"
+   ]
+  },
+  {
+   "biotoolsID": "TSEA-DB",
+   "name": "TSEA-DB",
+   "reason": "no-match",
+   "description": "a trait-tissue association map for human complex traits and diseases.\n\ndeTSDB, deTS, TSEA, tissue-specificity.\n\nTSEA-DB provides a comprehensive reference for trait-associated tissues. A systematic ti",
+   "operations": [
+    "Deposition",
+    "Gene expression QTL analysis",
+    "Gene-set enrichment analysis",
+    "Genotyping",
+    "Validation"
+   ]
+  },
+  {
+   "biotoolsID": "KnowPulse",
+   "name": "KnowPulse",
+   "reason": "no-match",
+   "description": "A Web-Resource Focused on Diversity Data for Pulse Crop Improvement | Welcome to the Public Portal for the University of Saskatchewan Pulse Crop Research Group | \u25fc View other species of interest | \u25fc V",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genetic mapping",
+    "Genotyping"
+   ]
+  },
+  {
+   "biotoolsID": "PTWAS",
+   "name": "PTWAS",
+   "reason": "no-match",
+   "description": "Investigating tissue-relevant causal molecular mechanisms of complex traits using probabilistic TWAS analysis.\n\nProbabilistic Transcriptome-wide Association Analysis (PTWAS).\n\nThis repository contains",
+   "operations": [
+    "Essential dynamics",
+    "Gene expression QTL analysis",
+    "Genotyping",
+    "Regression analysis",
+    "Statistical modelling"
+   ]
+  },
+  {
+   "biotoolsID": "PyBSASeq",
+   "name": "PyBSASeq",
+   "reason": "no-match",
+   "description": "Algorithm for BSA-Seq data analysis.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genome indexing",
+    "SNP detection"
+   ]
+  },
+  {
+   "biotoolsID": "qtl2pleio",
+   "name": "qtl2pleio",
+   "reason": "no-match",
+   "description": "Testing Pleiotropy vs. Separate QTL in Multiparental Populations.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genetic mapping",
+    "Statistical calculation"
+   ]
+  },
+  {
+   "biotoolsID": "Rice_Galaxy",
+   "name": "Rice Galaxy",
+   "reason": "no-match",
+   "description": "Open resource for plant science.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genotyping",
+    "PCR primer design"
+   ]
+  },
+  {
+   "biotoolsID": "SBL",
+   "name": "SBL",
+   "reason": "no-match",
+   "description": "Coordinate Descent Approach for Sparse Bayesian Learning in High Dimensional QTL Mapping and Genome-wide Association Studies.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genetic mapping",
+    "Genotyping"
+   ]
+  },
+  {
+   "biotoolsID": "CoMM-S",
+   "name": "CoMM-S",
+   "reason": "no-match",
+   "description": "Collaborative mixed model to dissecting genetic contributions to complex traits by leveraging regulatory information.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genotyping",
+    "Imputation"
+   ]
+  },
+  {
+   "biotoolsID": "OSCA",
+   "name": "OSCA",
+   "reason": "no-match",
+   "description": "OSCA (OmicS-data-based Complex trait Analysis) is a software tool for the analysis of complex traits using multi-omics data.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genotyping",
+    "Regression analysis"
+   ]
+  },
+  {
+   "biotoolsID": "iMEGES",
+   "name": "iMEGES",
+   "reason": "no-match",
+   "description": "Integrated mental-disorder GEnome score by deep neural network for prioritizing the susceptibility genes for mental disorders in personal genomes.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genotyping",
+    "Variant calling"
+   ]
+  },
+  {
+   "biotoolsID": "MultiXcan",
+   "name": "MultiXcan",
+   "reason": "no-match",
+   "description": "Set of tools to perform integrative gene mapping studies.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genotyping"
+   ]
+  },
+  {
+   "biotoolsID": "Funmap2",
+   "name": "Funmap2",
+   "reason": "no-match",
+   "description": "R package for QTL mapping using longitudinal phenotypes.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genetic mapping",
+    "Genotyping"
+   ]
+  },
+  {
+   "biotoolsID": "LncVar",
+   "name": "LncVar",
+   "reason": "no-match",
+   "description": "Database of genetic variations associated with long noncoding genes.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genotyping",
+    "SNP detection"
+   ]
+  },
+  {
+   "biotoolsID": "QHOT",
+   "name": "QHOT",
+   "reason": "no-match",
+   "description": "Statistical procedure for genome-wide detection of QTL hotspots using public databases.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genetic mapping",
+    "Genotyping"
+   ]
+  },
+  {
+   "biotoolsID": "plexdb",
+   "name": "PLEXdb",
+   "reason": "no-match",
+   "description": "Unified gene expression resource for plants and plant pathogens. It is a genotype to phenotype, hypothesis building information warehouse, leveraging highly parallel expression data with seamless port",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Gene expression analysis",
+    "Gene expression clustering",
+    "Gene expression profiling",
+    "Genotyping"
+   ]
+  },
+  {
+   "biotoolsID": "gem",
+   "name": "GEM",
+   "reason": "no-match",
+   "description": "Tools for analyzing EWAS, methQTL and GxE genome widely.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genotyping"
+   ]
+  },
+  {
+   "biotoolsID": "haplor",
+   "name": "haploR",
+   "reason": "no-match",
+   "description": "Query web based genome annotation tools HaploReg and RegulomeDB. It gathers information in a data frame which is suitable for downstream bioinformatic analyses. This will facilitate post-genome wide a",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Query and retrieval",
+    "Text mining"
+   ]
+  },
+  {
+   "biotoolsID": "mvqtlcim",
+   "name": "MVQTLCIM",
+   "reason": "no-match",
+   "description": "CIM QTL mapping via multivariate statistical method in an outbred full-sib family.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genetic mapping"
+   ]
+  },
+  {
+   "biotoolsID": "lme4qtl",
+   "name": "lme4qtl",
+   "reason": "no-match",
+   "description": "Linear mixed models with flexible covariance structure for genetic studies of related individuals.",
+   "operations": [
+    "Gene expression QTL analysis"
+   ]
+  },
+  {
+   "biotoolsID": "rvpedigree",
+   "name": "RVPedigree",
+   "reason": "no-match",
+   "description": "Family-based rare variant association tests for normally and non-normally distributed quantitative traits. Calculation of kinship matrices, various options for coping with non-normality, three differe",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genotyping",
+    "Quantification"
+   ]
+  },
+  {
+   "biotoolsID": "discoveryspace",
+   "name": "DiscoverySpace",
+   "reason": "no-match",
+   "description": "DiscoverySpace is a tool for gene expression analyses and biological discovery.",
+   "operations": [
+    "Differential gene expression analysis",
+    "Gene expression QTL analysis",
+    "Gene expression analysis",
+    "Gene expression correlation",
+    "Gene expression profiling"
+   ]
+  },
+  {
+   "biotoolsID": "mouse_atlas",
+   "name": "Mouse Atlas of Gene Expression",
+   "reason": "no-match",
+   "description": "A quantitative and comprehensive atlas of gene expression in mouse development. The project has a goal of producing 150 publically available SAGE libraries.",
+   "operations": [
+    "Differential gene expression analysis",
+    "Gene expression QTL analysis",
+    "Gene expression analysis",
+    "Gene expression profiling"
+   ]
+  },
+  {
+   "biotoolsID": "cgnaweb",
+   "name": "cgNA+web",
+   "reason": "no-match",
+   "description": "A visual interface to the cgNA+ sequence-dependent statistical mechanics model of double-stranded nucleic acids.",
+   "operations": [
+    "Visualisation"
    ]
   },
   {
@@ -2666,17 +4244,6 @@
     "Expression profile clustering",
     "Standardisation and normalisation",
     "Variant calling"
-   ]
-  },
-  {
-   "biotoolsID": "sctwas_atlas",
-   "name": "scTWAS Atlas",
-   "reason": "no-match",
-   "description": "scTWAS Atlas is a database and tool for integrative knowledgebase of single-cell transcriptome-wide association studies. It catalogs scTWAS information, provides visualization tools, and facilitates c",
-   "operations": [
-    "Database search",
-    "Gene expression QTL analysis",
-    "Visualisation"
    ]
   },
   {
@@ -4215,19 +5782,6 @@
    ]
   },
   {
-   "biotoolsID": "zfin",
-   "name": "ZFIN",
-   "reason": "no-match",
-   "description": "Central repository and web-based resource for zebrafish genetic, genomic, phenotypic and developmental data. It manually curates comprehensive data for zebrafish genes, phenotypes, genotypes, gene exp",
-   "operations": [
-    "Differential gene expression analysis",
-    "Gene expression QTL analysis",
-    "Gene expression analysis",
-    "Gene expression profiling",
-    "Genotyping"
-   ]
-  },
-  {
    "biotoolsID": "necklace",
    "name": "Necklace",
    "reason": "no-match",
@@ -4999,17 +6553,6 @@
     "Gene-set enrichment analysis",
     "Quantification",
     "miRNA target prediction"
-   ]
-  },
-  {
-   "biotoolsID": "crisprtracrrna",
-   "name": "CRISPRtracrRNA",
-   "reason": "no-match",
-   "description": "CRISPRtracrRNA: an end-to-end standalone bioinformatic tool for tracrRNA predictions. In order to robustly predict the new tracrRNA candidates, CRISPRtracrRNA combines different sources of evidence.",
-   "operations": [
-    "Loop modelling",
-    "Protein threading",
-    "Sequence alignment"
    ]
   },
   {
@@ -6059,18 +7602,6 @@
     "Database search",
     "Gene functional annotation",
     "Ontology visualisation"
-   ]
-  },
-  {
-   "biotoolsID": "rascore2",
-   "name": "Rascore",
-   "reason": "no-match",
-   "description": "Defining An Expanded RAS Conformational Landscape Based on Over 700 Experimentally Determined Structures of KRAS, NRAS, and HRAS.\n\n||| HOMEPAGE BROKEN!\n\n||| NAME (Rascore) SIMILAR TO (PUB. DIFFERENT) ",
-   "operations": [
-    "Backbone modelling",
-    "Loop modelling",
-    "Small molecule design",
-    "Structure classification"
    ]
   },
   {
@@ -11324,17 +12855,6 @@
    "operations": []
   },
   {
-   "biotoolsID": "LncVar",
-   "name": "LncVar",
-   "reason": "no-match",
-   "description": "Database of genetic variations associated with long noncoding genes.",
-   "operations": [
-    "Gene expression QTL analysis",
-    "Genotyping",
-    "SNP detection"
-   ]
-  },
-  {
    "biotoolsID": "iTerm-PseKNC",
    "name": "iTerm-PseKNC",
    "reason": "no-match",
@@ -11532,17 +13052,6 @@
    "description": "Geometrical approach to identify differentially expressed genes.",
    "operations": [
     "Differential gene expression analysis"
-   ]
-  },
-  {
-   "biotoolsID": "rvpedigree",
-   "name": "RVPedigree",
-   "reason": "no-match",
-   "description": "Family-based rare variant association tests for normally and non-normally distributed quantitative traits. Calculation of kinship matrices, various options for coping with non-normality, three differe",
-   "operations": [
-    "Gene expression QTL analysis",
-    "Genotyping",
-    "Quantification"
    ]
   },
   {
@@ -12431,19 +13940,6 @@
    ]
   },
   {
-   "biotoolsID": "patrocles",
-   "name": "Patrocles",
-   "reason": "no-match",
-   "description": "Compiles DNA sequence polymorphisms (DSPs) that are predicted to perturb miRNA-mediated gene regulation.",
-   "operations": [
-    "Gene expression QTL analysis",
-    "Gene prediction",
-    "Genotyping",
-    "Pathway or network prediction",
-    "SNP detection"
-   ]
-  },
-  {
    "biotoolsID": "macorrplot",
    "name": "maCorrPlot",
    "reason": "no-match",
@@ -12474,17 +13970,6 @@
     "Protein function prediction",
     "Protein structure prediction",
     "SNP detection"
-   ]
-  },
-  {
-   "biotoolsID": "sagenet",
-   "name": "SAGE Home Page",
-   "reason": "no-match",
-   "description": "Simultaneous expression and map information.",
-   "operations": [
-    "Differential gene expression analysis",
-    "Gene expression QTL analysis",
-    "Gene expression analysis"
    ]
   },
   {
@@ -13295,18 +14780,6 @@
    ]
   },
   {
-   "biotoolsID": "mouse_atlas",
-   "name": "Mouse Atlas of Gene Expression",
-   "reason": "no-match",
-   "description": "A quantitative and comprehensive atlas of gene expression in mouse development. The project has a goal of producing 150 publically available SAGE libraries.",
-   "operations": [
-    "Differential gene expression analysis",
-    "Gene expression QTL analysis",
-    "Gene expression analysis",
-    "Gene expression profiling"
-   ]
-  },
-  {
    "biotoolsID": "aplot",
    "name": "aplot",
    "reason": "no-match",
@@ -13444,24 +14917,6 @@
    "description": "A scalable and efficient implementation that is 2 to 3 orders of magnitude faster than the previous version. This is achieved by exploiting the sparsity of the model using the SuperLU direct solver fo",
    "operations": [
     "Nucleic acid sequence analysis"
-   ]
-  },
-  {
-   "biotoolsID": "clcbio_genomics_workbench",
-   "name": "CLC Main Workbench",
-   "reason": "no-match",
-   "description": "De novo and reference assembly SNP and small indel detection and annotation.",
-   "operations": [
-    "Ab-initio gene prediction",
-    "Bisulfite mapping",
-    "De-novo assembly",
-    "Heat map generation",
-    "Primer removal",
-    "Read mapping",
-    "SNP detection",
-    "Sequence alignment",
-    "Sequence assembly",
-    "Sequence assembly validation"
    ]
   },
   {
@@ -14003,24 +15458,6 @@
    ]
   },
   {
-   "biotoolsID": "genedata_expressionist",
-   "name": "Genedata Expressionist",
-   "reason": "no-match",
-   "description": "Genedata Expressionist performs efficient and quality compliant analysis of next generation sequencing (NGS) and other genomic profiling data",
-   "operations": [
-    "Bisulfite mapping",
-    "Clustering",
-    "Gene expression analysis",
-    "Genome visualisation",
-    "RNA-Seq analysis",
-    "Read mapping",
-    "Sequence alignment",
-    "Sequence analysis",
-    "Sequencing quality control",
-    "Statistical calculation"
-   ]
-  },
-  {
    "biotoolsID": "iconvert",
    "name": "iConvert",
    "reason": "no-match",
@@ -14337,15 +15774,6 @@
    "description": "Toolbox for single cell heterogeneity analysis in cancer.",
    "operations": [
     "Genome comparison"
-   ]
-  },
-  {
-   "biotoolsID": "glint",
-   "name": "GLINT",
-   "reason": "no-match",
-   "description": "User-friendly toolset for the analysis of high-throughput DNA-methylation array data.",
-   "operations": [
-    "Whole genome methylation analysis"
    ]
   },
   {
@@ -14812,17 +16240,6 @@
    "reason": "no-match",
    "description": "OpenGDC is an open-source Java tool for the automatic extraction, extension, and conversion in BED, GTF, CSV, JSON, and XML format of the genomic experiments and clinical information from the Genomic ",
    "operations": []
-  },
-  {
-   "biotoolsID": "cottonmd",
-   "name": "CottonMD",
-   "reason": "hard-excluded:\\bmass spectrometr|\\bLC-MS\\b|\\",
-   "description": "CottonMD is a curated and integrated multi-omics resource for cotton. In this database, we integrated and analyzed datasets from genomics, epigenomics, transcriptomics, metabolomics and phenomics, and",
-   "operations": [
-    "Database search",
-    "Gene expression QTL analysis",
-    "Gene expression profiling"
-   ]
   },
   {
    "biotoolsID": "crispr-surfaceome",
@@ -15339,6 +16756,16 @@
    ]
   },
   {
+   "biotoolsID": "ngs-pipeline",
+   "name": "Ngs-pipeline",
+   "reason": "no-match",
+   "description": "Complete solution for human re-sequencing projects.",
+   "operations": [
+    "Read mapping",
+    "Sequence annotation"
+   ]
+  },
+  {
    "biotoolsID": "DecontaMiner",
    "name": "DecontaMiner",
    "reason": "no-match",
@@ -15347,27 +16774,6 @@
     "Enrichment analysis",
     "Read pre-processing",
     "Sequence contamination filtering"
-   ]
-  },
-  {
-   "biotoolsID": "iMEGES",
-   "name": "iMEGES",
-   "reason": "no-match",
-   "description": "Integrated mental-disorder GEnome score by deep neural network for prioritizing the susceptibility genes for mental disorders in personal genomes.",
-   "operations": [
-    "Gene expression QTL analysis",
-    "Genotyping",
-    "Variant calling"
-   ]
-  },
-  {
-   "biotoolsID": "ngs-pipeline",
-   "name": "Ngs-pipeline",
-   "reason": "no-match",
-   "description": "Complete solution for human re-sequencing projects.",
-   "operations": [
-    "Read mapping",
-    "Sequence annotation"
    ]
   },
   {
@@ -15401,6 +16807,337 @@
     "Statistical calculation",
     "Variant calling",
     "Variant classification"
+   ]
+  },
+  {
+   "biotoolsID": "sccigen",
+   "name": "sCCIgen",
+   "reason": "no-match",
+   "description": "sCCIgen is a simulator for generating high-fidelity spatially resolved transcriptomics (SRT) data, specifically designed for studying cell-cell interactions. The tool preserves transcriptomic and spat",
+   "operations": [
+    "Gene expression profiling",
+    "Scatter plot plotting",
+    "Simulated gene expression data generation"
+   ]
+  },
+  {
+   "biotoolsID": "stimage",
+   "name": "stImage",
+   "reason": "no-match",
+   "description": "stImage is an open-source R package for spatial transcriptomic analysis that integrates gene expression data, histological features, and spatial coordinates. It provides 54 integrative strategies and ",
+   "operations": [
+    "Essential dynamics",
+    "Expression profile clustering",
+    "Gene expression profiling"
+   ]
+  },
+  {
+   "biotoolsID": "smopca",
+   "name": "SMOPCA",
+   "reason": "no-match",
+   "description": "SMOPCA is a spatial multi-omics principal component analysis method designed to perform joint dimension reduction on multimodal data while preserving spatial dependencies. It outperforms existing meth",
+   "operations": [
+    "Dimensionality reduction",
+    "Essential dynamics",
+    "Principal component analysis"
+   ]
+  },
+  {
+   "biotoolsID": "spado",
+   "name": "SpaDo",
+   "reason": "no-match",
+   "description": "SpaDo is a tool for multi-slice spatial domain analysis, including modules for spatial domain detection, annotation, and clustering at both single-cell and spot resolutions. It processes spatial trans",
+   "operations": [
+    "Clustering",
+    "Fold recognition",
+    "Gene expression profiling"
+   ]
+  },
+  {
+   "biotoolsID": "uniport",
+   "name": "uniPort",
+   "reason": "no-match",
+   "description": "A unified computational framework for single-cell data integration with optimal transport.",
+   "operations": [
+    "Deisotoping",
+    "Gene expression profiling"
+   ]
+  },
+  {
+   "biotoolsID": "simba_sc",
+   "name": "SIMBA",
+   "reason": "no-match",
+   "description": "Single-cell embedding along with features.",
+   "operations": [
+    "Clustering",
+    "Expression profile comparison",
+    "Gene expression profiling"
+   ]
+  },
+  {
+   "biotoolsID": "hat",
+   "name": "HAT",
+   "reason": "no-match",
+   "description": "Hypergraph analysis toolbox.",
+   "operations": [
+    "Nucleic acid thermodynamic property calculation",
+    "Protein property calculation",
+    "Visualisation"
+   ]
+  },
+  {
+   "biotoolsID": "scala",
+   "name": "SCALA",
+   "reason": "no-match",
+   "description": "A complete solution for multimodal analysis of single-cell Next Generation Sequencing data.",
+   "operations": [
+    "Essential dynamics",
+    "Gene-set enrichment analysis",
+    "Principal component visualisation"
+   ]
+  },
+  {
+   "biotoolsID": "pyhim",
+   "name": "pyHiM",
+   "reason": "no-match",
+   "description": "A new open-source, multi-platform software package for spatial genomics based on multiplexed DNA-FISH imaging.",
+   "operations": [
+    "Image analysis"
+   ]
+  },
+  {
+   "biotoolsID": "scnovel",
+   "name": "scNovel",
+   "reason": "no-match",
+   "description": "A scalable deep learning-based network for novel rare cell discovery in single-cell transcriptomics.",
+   "operations": [
+    "Differential gene expression profiling",
+    "Dot plot plotting"
+   ]
+  },
+  {
+   "biotoolsID": "kronos_scrt",
+   "name": "Kronos scRT",
+   "reason": "no-match",
+   "description": "A uniform framework for single-cell replication timing analysis.",
+   "operations": [
+    "Phasing",
+    "Sorting"
+   ]
+  },
+  {
+   "biotoolsID": "multivi",
+   "name": "MultiVI",
+   "reason": "no-match",
+   "description": "MultiiVI is a part of the scvi-tools framework and carries out integration of paired/unpaired multiome data, missing modality imputation, normalization of other cell- and sample-level confounding fact",
+   "operations": [
+    "Gene expression profiling",
+    "Imputation",
+    "Visualisation"
+   ]
+  },
+  {
+   "biotoolsID": "scot-sc",
+   "name": "SCOT",
+   "reason": "no-match",
+   "description": "Gromov-Wasserstein optimal transport to align single-cell multi-omics data.\n\nSingle-Cell alignment using Optimal Transport (SCOT).\n\nSCOT is a python tool for performing unsupervised alignment of singl",
+   "operations": [
+    "Fold recognition",
+    "Global alignment",
+    "Standardisation and normalisation"
+   ]
+  },
+  {
+   "biotoolsID": "lamps",
+   "name": "LAMPS",
+   "reason": "no-match",
+   "description": "An analysis pipeline for sequence-specific ligation-mediated amplification reads.\n\nSequence analysis pipeline for 2C-ChIP and 5C products.\n\nThe 'Ligation-mediated Amplified, Multiplexed Primer-pair Se",
+   "operations": [
+    "Demultiplexing",
+    "PCR primer design",
+    "Read mapping",
+    "Sequencing quality control"
+   ]
+  },
+  {
+   "biotoolsID": "cell-id",
+   "name": "Cell-ID",
+   "reason": "no-match",
+   "description": "Cell-ID is a R package for gene signature extraction and cell-identity recognition at individual cell level from single-cell RNA-seq.",
+   "operations": [
+    "Dimensionality reduction",
+    "Essential dynamics",
+    "Gene-set enrichment analysis"
+   ]
+  },
+  {
+   "biotoolsID": "capturecompendium",
+   "name": "CaptureCompendium",
+   "reason": "no-match",
+   "description": "CaptureCompendium is a comprehensive toolkit for 3C analysis.",
+   "operations": [
+    "Read mapping",
+    "Restriction digest",
+    "Visualisation"
+   ]
+  },
+  {
+   "biotoolsID": "pamona",
+   "name": "Pamona",
+   "reason": "no-match",
+   "description": "Manifold alignment for heterogeneous single-cell multi-omics data integration using Pamona.",
+   "operations": [
+    "Essential dynamics",
+    "Global alignment",
+    "Standardisation and normalisation"
+   ]
+  },
+  {
+   "biotoolsID": "minimod",
+   "name": "minimod",
+   "reason": "no-match",
+   "description": "A bioinformatics tool for viewing and calculating base modification frequencies from BAM files",
+   "operations": [
+    "Genome annotation"
+   ]
+  },
+  {
+   "biotoolsID": "medme",
+   "name": "MEDME",
+   "reason": "no-match",
+   "description": "A tool allows the prediction of absolute and relative methylation levels based on measures obtained by MeDIP-microarray experiments.",
+   "operations": [
+    "Differentially-methylated region identification"
+   ]
+  },
+  {
+   "biotoolsID": "mirmmr",
+   "name": "MIRMMR",
+   "reason": "no-match",
+   "description": "Binary classification of microsatellite instability using methylation and mutations.",
+   "operations": [
+    "Variant classification"
+   ]
+  },
+  {
+   "biotoolsID": "cola",
+   "name": "cola",
+   "reason": "no-match",
+   "description": "cola is an R package that provides a general framework for consensus partitioning through a general framework.",
+   "operations": [
+    "Clustering",
+    "Enrichment analysis",
+    "Essential dynamics",
+    "Expression analysis"
+   ]
+  },
+  {
+   "biotoolsID": "emdlp",
+   "name": "EMDLP",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
+   "description": "An ensemble multiscale deep learning predictor (EMDLP) to identify RNA methylation sites in NLP and DL way.",
+   "operations": [
+    "Feature extraction",
+    "Network analysis",
+    "PTM site prediction",
+    "RNA structure prediction"
+   ]
+  },
+  {
+   "biotoolsID": "medipipe",
+   "name": "MEDIPIPE",
+   "reason": "no-match",
+   "description": "Automated and comprehensive pipeline for cfMeDIP-seq data quality control and analysis.",
+   "operations": [
+    "Aggregation",
+    "Quantification",
+    "Sequencing quality control"
+   ]
+  },
+  {
+   "biotoolsID": "m5c-atlas",
+   "name": "m5C-Atlas",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
+   "description": "A database for decoding and annotating the 5-methylcytosine (m5C) epitranscriptome.",
+   "operations": [
+    "Gene expression profiling",
+    "RNA secondary structure alignment",
+    "RNA secondary structure prediction",
+    "miRNA target prediction"
+   ]
+  },
+  {
+   "biotoolsID": "dl-ml-hybrid",
+   "name": "DL-ML-Hybrid",
+   "reason": "no-match",
+   "description": "A hybrid DL-ML approach that uses a deep neural network for extracting features and a non-DL classifier for classification tasks.",
+   "operations": [
+    "DMR identification",
+    "Feature extraction",
+    "PTM site prediction"
+   ]
+  },
+  {
+   "biotoolsID": "dna6ma-mint",
+   "name": "DNA6mA-MINT",
+   "reason": "no-match",
+   "description": "DNA6mA-MINT is a web DNA-6mA Modification Identification Neural Tool",
+   "operations": [
+    "DNA transcription",
+    "Feature extraction",
+    "PTM site prediction"
+   ]
+  },
+  {
+   "biotoolsID": "reseq",
+   "name": "ReSeq",
+   "reason": "no-match",
+   "description": "ReSeq simulates realistic Illumina high-throughput sequencing data.\n\nMore realistic simulator for genomic DNA sequences from Illumina machines that achieves a similar k-mer spectrum as the original se",
+   "operations": [
+    "Reverse complement",
+    "Scaffolding",
+    "Sequence trimming",
+    "Splitting",
+    "Standardisation and normalisation"
+   ]
+  },
+  {
+   "biotoolsID": "6mapred-fo",
+   "name": "6mAPred-FO",
+   "reason": "no-match",
+   "description": "A Bioinformatics Tool for the Prediction of DNA N6-Methyladenine Modifications Based on Feature Fusion and Optimization Protocol.",
+   "operations": [
+    "Feature selection",
+    "Network analysis",
+    "Phasing"
+   ]
+  },
+  {
+   "biotoolsID": "csDMA",
+   "name": "csDMA",
+   "reason": "no-match",
+   "description": "Aan improved bioinformatics tool for identifying DNA 6 mA modifications via Chou's 5-step rule | An improved machine-learning based prediction tool for identifying DNA 6mA modifications | csDMA was im",
+   "operations": []
+  },
+  {
+   "biotoolsID": "NanoMod",
+   "name": "NanoMod",
+   "reason": "no-match",
+   "description": "Computational tool to detect DNA modifications using Nanopore long-read sequencing data.",
+   "operations": [
+    "Base-calling",
+    "Indel detection",
+    "Post-translation modification site prediction"
+   ]
+  },
+  {
+   "biotoolsID": "methyvim",
+   "name": "methyvim",
+   "reason": "no-match",
+   "description": "This package provides facilities for differential methylation analysis based on variable importance measures (VIMs), a class of statistical target parameters that arise in causal inference. The estima",
+   "operations": [
+    "Clustering",
+    "Differentially-methylated region identification"
    ]
   },
   {
@@ -16050,7 +17787,7 @@
    "biotoolsID": "CGR",
    "name": "CGR",
    "reason": "no-match",
-   "description": "Splice sites detection using chaos game representation and neural network.\n\nEmail: <redacted>.\n\nProject description: We propose to use chaos game representation and neural network for ",
+   "description": "Splice sites detection using chaos game representation and neural network.\n\nEmail: <redacted>.\n\nProject description: We propose to use chaos game representation and neural network for splice sites det",
    "operations": [
     "Exonic splicing enhancer prediction",
     "Sequence merging",
@@ -16110,15 +17847,6 @@
     "Pathway or network visualisation",
     "miRNA expression analysis",
     "miRNA target prediction"
-   ]
-  },
-  {
-   "biotoolsID": "mast",
-   "name": "MAST",
-   "reason": "no-match",
-   "description": "Methods and models for handling zero-inflated single cell assay data.",
-   "operations": [
-    "Sequence analysis"
    ]
   }
  ]

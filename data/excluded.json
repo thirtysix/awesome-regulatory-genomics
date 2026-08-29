@@ -1,6 +1,6 @@
 {
  "meta": {
-  "count": 196,
+  "count": 191,
   "note": "Records the hand-written overlay excludes, with the full row they had when dropped. Delete the id from overlay.yaml: exclude and rebuild to reinstate one."
  },
  "tools": [
@@ -1140,12 +1140,12 @@
    ],
    "tier": "core",
    "homepage": "https://cran.r-project.org/web/packages/propr/index.html",
-   "repo_url": "https://github.com/tpq/propr",
-   "repo_origin": "recorded",
-   "repo_stars": 81,
-   "repo_pushed": "2026-05-19",
-   "repo_archived": false,
-   "repo_language": "R",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
    "repo_license": "",
    "tool_type": [
     "Library"
@@ -1767,66 +1767,6 @@
    "primary_category": "tfbs-prediction"
   },
   {
-   "id": "DeepCLIP",
-   "name": "DeepCLIP",
-   "description": "Predicting the effect of mutations on protein-RNA binding with Deep Learning | This repository contains all DeepCLIP Python code | A context-aware neural network for modeling and predicting protein binding to nucleic acids using only sequence input | DeepCLIP is a neural network with shallow convolutional layers connected to a bidirectional LSTM layer",
-   "categories": [
-    "regulatory-elements",
-    "regulatory-variants"
-   ],
-   "tier": "core",
-   "homepage": "https://deepclip.compbio.sdu.dk",
-   "repo_url": "https://github.com/deepclip/deepclip",
-   "repo_origin": "recorded",
-   "repo_stars": 11,
-   "repo_pushed": "2024-05-30",
-   "repo_archived": false,
-   "repo_language": "Python",
-   "repo_license": "MIT",
-   "tool_type": [
-    "Command-line tool",
-    "Web service"
-   ],
-   "topics": [
-    "Machine learning",
-    "RNA immunoprecipitation",
-    "Protein interactions"
-   ],
-   "languages": [
-    "R",
-    "Python"
-   ],
-   "license": "MIT",
-   "maturity": "Emerging",
-   "cost": "Free of charge",
-   "citations": 102,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2020",
-   "publication": "doi:10.1093/nar/gkaa530",
-   "publication_is_preprint": false,
-   "biotools_id": "DeepCLIP",
-   "biotools_url": "https://bio.tools/DeepCLIP",
-   "last_update": "2024-11-24",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "RNA binding site prediction",
-    "RNA-binding protein prediction",
-    "cis-regulatory element prediction"
-   ],
-   "_select_reason": "operation:cis-regulatory element prediction",
-   "_identifiers": [
-    "doi:10.1101/757062",
-    "pmid:32558887"
-   ],
-   "_registries": {},
-   "_excluded_reason": "Predicts protein-RNA binding, not cis-regulatory elements or DNA regulatory genomics; admitted on EDAM 'cis-regulatory element prediction' alone",
-   "featured": "",
-   "primary_category": "regulatory-elements"
-  },
-  {
    "id": "p-scan",
    "name": "P-SCAN",
    "description": "Software of Peak quantification using Statistical Comparative ANalysis.",
@@ -2139,20 +2079,19 @@
    "citation_note": "",
    "citations_total": null,
    "citations_papers": null,
-   "year": "2019",
+   "year": "",
    "publication": "pmid:31510698",
    "publication_is_preprint": false,
    "biotools_id": "RNATracker",
    "biotools_url": "https://bio.tools/RNATracker",
-   "last_update": "2020-12-14",
+   "last_update": "2026-08-02",
    "source": "bio.tools",
    "tags": [],
    "_operations": [
     "Subcellular localisation prediction",
-    "cis-regulatory element prediction",
     "trans-regulatory element prediction"
    ],
-   "_select_reason": "operation:cis-regulatory element prediction",
+   "_select_reason": "operation:trans-regulatory element prediction",
    "_identifiers": [
     "pmid:31510698"
    ],
@@ -2738,8 +2677,7 @@
    "description": "a manually curated database of viral integration sites in the human genome",
    "categories": [
     "motif-discovery",
-    "tfbs-prediction",
-    "regulatory-elements"
+    "tfbs-prediction"
    ],
    "tier": "core",
    "homepage": "https://bioinfo.uth.edu/VISDB",
@@ -2766,20 +2704,19 @@
    "citation_note": "",
    "citations_total": null,
    "citations_papers": null,
-   "year": "2020",
+   "year": "",
    "publication": "pmid:31598702",
    "publication_is_preprint": false,
    "biotools_id": "VISDB",
    "biotools_url": "https://bio.tools/VISDB",
-   "last_update": "2024-11-24",
+   "last_update": "2026-08-02",
    "source": "bio.tools",
    "tags": [],
    "_operations": [
-    "Promoter prediction",
     "Sequence motif discovery",
     "miRNA target prediction"
    ],
-   "_select_reason": "operation:Promoter prediction",
+   "_select_reason": "operation:Sequence motif discovery",
    "_identifiers": [
     "pmid:31598702"
    ],
@@ -3013,63 +2950,6 @@
    "_excluded_reason": "Tool identifies subnetworks of co-expressed genes, not gene-regulatory networks; admitted on EDAM 'Gene regulatory network analysis' alone",
    "featured": "",
    "primary_category": "grn-inference"
-  },
-  {
-   "id": "LTMG",
-   "name": "LTMG",
-   "description": "A novel statistical modeling of transcriptional expression states in single-cell RNA-Seq data | This repository contains the R codes which could reproduce the results of \"LTMG: A statistical model of transcriptional regulatory states in single cell RNA-Seq data\" by Changlin Wan, Wennan Chang, Yu Zhang, Fenil Shah, Sha Cao, Melissa L",
-   "categories": [
-    "regulatory-elements",
-    "single-cell"
-   ],
-   "tier": "core",
-   "homepage": "https://github.com/zy26/LTMGSCA",
-   "repo_url": "https://github.com/zy26/LTMGSCA",
-   "repo_origin": "recorded",
-   "repo_stars": 10,
-   "repo_pushed": "2020-01-21",
-   "repo_archived": false,
-   "repo_language": "R",
-   "repo_license": "",
-   "tool_type": [
-    "Command-line tool"
-   ],
-   "topics": [
-    "RNA-Seq",
-    "Gene expression",
-    "Gene transcripts"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "",
-   "maturity": "",
-   "cost": "",
-   "citations": 54,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2019",
-   "publication": "pmid:31372654",
-   "publication_is_preprint": false,
-   "biotools_id": "LTMG",
-   "biotools_url": "https://bio.tools/LTMG",
-   "last_update": "2020-12-22",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Differential gene expression analysis",
-    "Expression analysis",
-    "cis-regulatory element prediction"
-   ],
-   "_select_reason": "operation:cis-regulatory element prediction",
-   "_identifiers": [
-    "pmid:31372654"
-   ],
-   "_registries": {},
-   "_excluded_reason": "Models transcriptional expression states from scRNA-seq data, not cis-regulatory element prediction; admitted on EDAM 'cis-regulatory element prediction' alone",
-   "featured": "",
-   "primary_category": "regulatory-elements"
   },
   {
    "id": "modsubnetbiomident",
@@ -3590,64 +3470,6 @@
    "_excluded_reason": "BioBIKE is a general-purpose bioinformatics programming environment, not a tool specifically for regulatory genomics; admitted on EDAM 'Sequence motif discovery' alone",
    "featured": "",
    "primary_category": "motif-discovery"
-  },
-  {
-   "id": "deepcyps",
-   "name": "DEEPCYPs",
-   "description": "A deep learning platform for enhanced cytochrome P450 activity prediction.",
-   "categories": [
-    "regulatory-elements"
-   ],
-   "tier": "core",
-   "homepage": "https://deepcyps.idruglab.cn/",
-   "repo_url": "https://github.com/idrugLab/FP-GNN_CYP",
-   "repo_origin": "recorded",
-   "repo_stars": 17,
-   "repo_pushed": "2022-05-14",
-   "repo_archived": false,
-   "repo_language": "Python",
-   "repo_license": "",
-   "tool_type": [
-    "Web application"
-   ],
-   "topics": [
-    "Drug discovery",
-    "Endocrinology and metabolism",
-    "Drug development",
-    "Machine learning",
-    "Drug metabolism"
-   ],
-   "languages": [
-    "Python"
-   ],
-   "license": "",
-   "maturity": "",
-   "cost": "Free of charge",
-   "citations": 47,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2023",
-   "publication": "pmid:37101544",
-   "publication_is_preprint": false,
-   "biotools_id": "deepcyps",
-   "biotools_url": "https://bio.tools/deepcyps",
-   "last_update": "2024-11-24",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Molecular docking",
-    "Promoter prediction",
-    "Protein modelling"
-   ],
-   "_select_reason": "operation:Promoter prediction",
-   "_identifiers": [
-    "pmid:37101544"
-   ],
-   "_registries": {},
-   "_excluded_reason": "Predicts cytochrome P450 inhibitory activity, not regulatory genomics; admitted on EDAM 'Promoter prediction' alone",
-   "featured": "",
-   "primary_category": "regulatory-elements"
   },
   {
    "id": "crispron_off",
@@ -4336,62 +4158,6 @@
    "primary_category": "grn-inference"
   },
   {
-   "id": "clarion",
-   "name": "Clarion",
-   "description": "Clarion is a multi-label problem transformation method for identifying mRNA subcellular localizations.",
-   "categories": [
-    "grn-inference"
-   ],
-   "tier": "core",
-   "homepage": "http://monash.bioweb.cloud.edu.au/Clarion/",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Web application",
-    "Desktop application"
-   ],
-   "topics": [
-    "Gene transcripts",
-    "Cell biology",
-    "Machine learning",
-    "Molecular interactions, pathways and networks"
-   ],
-   "languages": [],
-   "license": "",
-   "maturity": "",
-   "cost": "Free of charge",
-   "citations": 38,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2022",
-   "publication": "pmid:36341591",
-   "publication_is_preprint": false,
-   "biotools_id": "clarion",
-   "biotools_url": "https://bio.tools/clarion",
-   "last_update": "2024-11-24",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "DNA transcription",
-    "Gene regulatory network prediction",
-    "Subcellular localisation prediction"
-   ],
-   "_select_reason": "operation:Gene regulatory network prediction",
-   "_identifiers": [
-    "pmid:36341591"
-   ],
-   "_registries": {},
-   "_excluded_reason": "Predicts mRNA subcellular localization, not regulatory genomics; admitted on EDAM 'Gene regulatory network prediction' alone",
-   "featured": "",
-   "primary_category": "grn-inference"
-  },
-  {
    "id": "gidetector",
    "name": "GIDetector",
    "description": "Software that is used to detect genomic islands in prokaryotic genomes",
@@ -5035,63 +4801,6 @@
    "_excluded_reason": "Focuses on plant cell wall proteins and carbohydrate binding, not regulatory genomics",
    "featured": "",
    "primary_category": "motif-scanning"
-  },
-  {
-   "id": "cgnaweb",
-   "name": "cgNA+web",
-   "description": "A visual interface to the cgNA+ sequence-dependent statistical mechanics model of double-stranded nucleic acids.",
-   "categories": [
-    "tfbs-prediction",
-    "regulatory-elements",
-    "nucleosome-chromatin"
-   ],
-   "tier": "core",
-   "homepage": "http://cgDNAweb.epfl.ch",
-   "repo_url": "https://github.com/rahul2512/cgNA_plus",
-   "repo_origin": "recorded",
-   "repo_stars": 2,
-   "repo_pushed": "2022-11-24",
-   "repo_archived": false,
-   "repo_language": "Python",
-   "repo_license": "",
-   "tool_type": [
-    "Web application"
-   ],
-   "topics": [
-    "Epigenetics",
-    "Transcription factors and regulatory sites",
-    "RNA"
-   ],
-   "languages": [
-    "Python"
-   ],
-   "license": "",
-   "maturity": "",
-   "cost": "Free of charge",
-   "citations": 28,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2023",
-   "publication": "pmid:37356908",
-   "publication_is_preprint": false,
-   "biotools_id": "cgnaweb",
-   "biotools_url": "https://bio.tools/cgnaweb",
-   "last_update": "2024-11-24",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Promoter prediction",
-    "Visualisation"
-   ],
-   "_select_reason": "operation:Promoter prediction",
-   "_identifiers": [
-    "pmid:37356908"
-   ],
-   "_registries": {},
-   "_excluded_reason": "It models DNA shape and mechanics, not regulatory elements like promoters; admitted on EDAM 'Promoter prediction' alone",
-   "featured": "",
-   "primary_category": "tfbs-prediction"
   },
   {
    "id": "ippd",
@@ -6379,7 +6088,7 @@
    "publication_is_preprint": false,
    "biotools_id": "nobai",
    "biotools_url": "https://bio.tools/nobai",
-   "last_update": "2024-11-25",
+   "last_update": "2026-08-02",
    "source": "bio.tools",
    "tags": [],
    "_operations": [
@@ -6390,7 +6099,7 @@
    ],
    "_select_reason": "operation:Transcriptional regulatory element prediction",
    "_identifiers": [
-    "pmid:18449469"
+    "pmid:18448469"
    ],
    "_registries": {},
    "_excluded_reason": "Paper is about colloid physics, not regulatory genomics; admitted on EDAM 'Transcriptional regulatory element prediction' alone",
