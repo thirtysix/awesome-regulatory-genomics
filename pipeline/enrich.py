@@ -34,6 +34,8 @@ from config import (CACHE, CODE_HOSTS, CURATION, DATA, GITHUB_API, OPENALEX_API,
 SELECTED = RAW / "selected.json.gz"
 ENRICHED = RAW / "enriched.json.gz"
 GH_CACHE = CACHE / "github.json"
+REG_CACHE = CACHE / "registry_repo.json"      # package -> repo slug, per registry
+BIOC_VIEWS = CACHE / "bioconductor_views.json"  # the whole Bioconductor index, one fetch
 CITE_CACHE = CACHE / "citation_cache.csv"
 OA_DIR = CACHE / "openalex"
 
@@ -88,16 +90,82 @@ def normalise_github(url: str) -> str | None:
 # ---------------------------------------------------------------------------
 # Registry resolution (Bioconductor / CRAN / PyPI -> upstream repo)
 # ---------------------------------------------------------------------------
-def resolve_registry_repo(session: requests.Session, kind: str, url: str) -> str | None:
-    """Ask a package registry for the source repository of a package."""
+class RegistryUnavailable(Exception):
+    """The registry did not answer. Distinct from 'answered, and has no repo'.
+
+    The difference decides whether the answer may be cached. Caching a silent
+    outage as "no repo" is how a whole registry quietly drops out of the catalog
+    and stays out.
+    """
+
+
+def load_bioc_views(session: requests.Session, max_age_days: int = 7) -> dict[str, str]:
+    """Package -> the text fields that may name a repo, for every Bioconductor package.
+
+    One request for the whole index instead of one HTML page per package. The
+    per-package scrape cost 180 requests per run here, uncached, and resolved 26
+    of them; on 2026-08-29 that traffic got this host to stop answering
+    `/packages/` paths at all. VIEWS is the same data in Debian-control format,
+    served as a single file, and it carries `URL` and `BugReports` as fields
+    rather than as links to be found in rendered HTML.
+    """
+    if BIOC_VIEWS.exists():
+        try:
+            blob = json.loads(BIOC_VIEWS.read_text())
+            age = time.time() - blob.get("fetched_at", 0)
+            if age < max_age_days * 86400:
+                return blob.get("packages", {})
+        except (ValueError, OSError):
+            blob = None
+    try:
+        r = session.get("https://bioconductor.org/packages/release/bioc/VIEWS", timeout=60)
+        if r.status_code != 200:
+            raise RegistryUnavailable(f"VIEWS http {r.status_code}")
+        pkgs, cur = {}, {}
+        for line in r.text.splitlines():
+            if not line.strip():
+                if cur.get("Package"):
+                    pkgs[cur["Package"]] = " ".join(
+                        filter(None, [cur.get("URL"), cur.get("BugReports")]))
+                cur = {}
+                continue
+            m = re.match(r"^(\S+): ?(.*)", line)
+            if m:
+                cur[m.group(1)] = m.group(2)
+        if cur.get("Package"):
+            pkgs[cur["Package"]] = " ".join(
+                filter(None, [cur.get("URL"), cur.get("BugReports")]))
+        BIOC_VIEWS.write_text(json.dumps({"fetched_at": time.time(), "packages": pkgs}))
+        return pkgs
+    except (requests.RequestException, RegistryUnavailable):
+        # Serve a stale index rather than nothing: a week-old repo mapping is far
+        # better than dropping every Bioconductor repo for the run.
+        if BIOC_VIEWS.exists():
+            try:
+                return json.loads(BIOC_VIEWS.read_text()).get("packages", {})
+            except (ValueError, OSError):
+                pass
+        return {}
+
+
+def resolve_registry_repo(session: requests.Session, kind: str, url: str,
+                          bioc: dict[str, str] | None = None) -> str | None:
+    """Ask a package registry for the source repository of a package.
+
+    Returns the slug, or None when the registry answered and named no repo.
+    Raises RegistryUnavailable when it did not answer, which is not a cacheable
+    result.
+    """
     try:
         if kind == "pypi":
             m = PYPI_RE.search(url)
             if not m:
                 return None
             r = session.get(f"https://pypi.org/pypi/{m.group(1)}/json", timeout=25)
-            if r.status_code != 200:
+            if r.status_code == 404:
                 return None
+            if r.status_code != 200:
+                raise RegistryUnavailable(f"pypi http {r.status_code}")
             info = r.json().get("info", {})
             candidates = [info.get("home_page") or ""]
             candidates += list((info.get("project_urls") or {}).values())
@@ -110,10 +178,11 @@ def resolve_registry_repo(session: requests.Session, kind: str, url: str) -> str
             if not m:
                 return None
             pkg = m.group(1)
-            r = session.get(f"https://bioconductor.org/packages/release/bioc/html/{pkg}.html", timeout=25)
-            if r.status_code != 200:
-                return None
-            for c in GH_REPO_RE.finditer(r.text):
+            # Served from the bulk VIEWS index, not a per-package page fetch.
+            # The old scrape read any github.com string out of rendered HTML,
+            # which picked up prose: NuPoP resolved to "jiping/NuPoP_doc." with
+            # the sentence's full stop attached. URL and BugReports are fields.
+            for c in GH_REPO_RE.finditer((bioc or {}).get(pkg, "")):
                 slug = normalise_github(c.group(0))
                 if slug:
                     return slug
@@ -122,15 +191,19 @@ def resolve_registry_repo(session: requests.Session, kind: str, url: str) -> str
             if not m:
                 return None
             r = session.get(f"https://crandb.r-pkg.org/{m.group(1)}", timeout=25)
-            if r.status_code != 200:
+            if r.status_code == 404:
                 return None
+            if r.status_code != 200:
+                raise RegistryUnavailable(f"crandb http {r.status_code}")
             blob = json.dumps(r.json())
             for c in GH_REPO_RE.finditer(blob):
                 slug = normalise_github(c.group(0))
                 if slug:
                     return slug
-    except (requests.RequestException, ValueError):
-        return None
+    except requests.RequestException as exc:
+        raise RegistryUnavailable(str(exc)) from exc
+    except ValueError:
+        return None          # answered, but the body was not parseable
     return None
 
 
@@ -590,6 +663,11 @@ def main() -> None:
         print("  GitHub: unauthenticated (60 req/h) - set GITHUB_TOKEN or run `gh auth login`")
 
     gh_cache: dict[str, dict] = json.loads(GH_CACHE.read_text()) if GH_CACHE.exists() else {}
+    reg_cache: dict[str, str | None] = (
+        json.loads(REG_CACHE.read_text()) if REG_CACHE.exists() else {})
+    bioc_views = load_bioc_views(http)
+    print(f"  registry cache: {len(reg_cache)} packages; "
+          f"bioconductor index: {len(bioc_views)} packages")
     cite_cache = load_citation_cache()
     print(f"  citation cache: {len(cite_cache)} entries; github cache: {len(gh_cache)} repos")
     if not args.no_citations:
@@ -609,7 +687,15 @@ def main() -> None:
         repo_source = "biotools" if slug else None
         if not slug:
             for kind, url in buckets["registries"].items():
-                slug = resolve_registry_repo(http, kind, url)
+                key = f"{kind}:{url}"
+                if key in reg_cache:
+                    slug = reg_cache[key]
+                else:
+                    try:
+                        slug = resolve_registry_repo(http, kind, url, bioc_views)
+                        reg_cache[key] = slug     # including None: asked, no repo
+                    except RegistryUnavailable:
+                        slug = None               # this run only; never cached
                 if slug:
                     repo_source = kind
                     break
@@ -647,7 +733,10 @@ def main() -> None:
         if i % 100 == 0:
             print(f"  {i}/{len(tools)}", flush=True)
             GH_CACHE.write_text(json.dumps(gh_cache, indent=1))
+            REG_CACHE.write_text(json.dumps(reg_cache, indent=1, sort_keys=True))
             save_citation_cache(cite_cache)
+
+    REG_CACHE.write_text(json.dumps(reg_cache, indent=1, sort_keys=True))
 
     # Repositories named in seeds.yaml. enrich.py walks the bio.tools sweep, so a
     # curated entry's repo was never queried and every seed showed no stars, no
