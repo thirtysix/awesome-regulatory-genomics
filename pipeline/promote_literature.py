@@ -45,6 +45,8 @@ CANDIDATES = RAW / "literature_candidates.json"
 VERDICTS = RAW / "literature_promote.json"
 SCOPE_VERDICTS = RAW / "literature_scope.json"
 SCOPE_CACHE = CACHE / "literature_scope_cache.json"
+CAT_VERDICTS = RAW / "literature_categories.json"
+CAT_CACHE = CACHE / "literature_category_cache.json"
 REPOMAP = CACHE / "repo_map.json"
 
 
@@ -288,10 +290,63 @@ def layer3(rows: list[dict]) -> list[dict]:
     print(f"  {n_new} new calls, ${spend:.4f}")
     return out
 
+def layer2(rows: list[dict]) -> list[dict]:
+    """Assign taxonomy categories to the candidates that cleared layer 3.
+
+    A cheaper model than the scope check on purpose: categorisation was
+    benchmarked on this very taxonomy over ~1,700 tools with hand labels, where
+    DeepSeek-V4-Flash scored 0.83 F1 against GLM-5's 0.85 at a quarter of the
+    cost. Scope is the judgement worth paying for and wants a different family;
+    assigning a key from a fixed list of 20 does not.
+    """
+    from config import CATEGORY_KEYS
+    key = api_key()
+    if not key:
+        raise SystemExit("DEEPINFRA_API_KEY not set (env or .env)")
+    system = categorise_system()
+    model = "deepseek-ai/DeepSeek-V4-Flash"
+    prompt_sha = hashlib.sha256(system.encode()).hexdigest()[:12]
+    cache = json.loads(CAT_CACHE.read_text()) if CAT_CACHE.exists() else {}
+    ab = abstracts()
+    valid = set(CATEGORY_KEYS)
+    spend, n_new, out = 0.0, 0, []
+    for i, r in enumerate(rows, 1):
+        ck = f"{model}:{prompt_sha}:{r.get('doi') or r.get('pmid') or r['name']}"
+        if ck in cache:
+            j = cache[ck]
+        else:
+            a = ab.get(str(r.get("pmid") or "")) or ab.get(str(r.get("doi") or "")) or ""
+            user = (f"Tool name: {r['name']}\nPaper title: {r.get('description','')}\n\n"
+                    f"Abstract:\n{a[:2600]}" if a else
+                    f"Tool name: {r['name']}\nPaper title: {r.get('description','')}\n"
+                    f"(no abstract available)")
+            j, raw, cost = ask(model, system, user, key)
+            spend += cost
+            n_new += 1
+            if j is None:
+                j = {"categories": [], "confidence": "low",
+                     "note": f"unparsed: {raw[:120]}"}
+            cache[ck] = j
+            if n_new % 50 == 0:
+                CAT_CACHE.write_text(json.dumps(cache))
+                print(f"  {i}/{len(rows)}  ${spend:.4f}", flush=True)
+        cats = [c for c in (j.get("categories") or []) if c in valid]
+        out.append({**{k: r.get(k) for k in
+                       ("name", "repo", "citations", "year", "doi", "pmid", "description")},
+                    "categories": cats,
+                    "invented": [c for c in (j.get("categories") or []) if c not in valid],
+                    "cat_confidence": j.get("confidence"),
+                    "cat_model": model, "cat_prompt_sha": prompt_sha})
+    CAT_CACHE.write_text(json.dumps(cache))
+    print(f"  {n_new} new calls, ${spend:.4f}")
+    return out
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--layer1", action="store_true",
                     help="validate stated repositories (only candidates that name one)")
+    ap.add_argument("--layer2", action="store_true",
+                    help="categorise the candidates that cleared layer 3")
     ap.add_argument("--layer3", action="store_true",
                     help="scope check every candidate, repo or not")
     ap.add_argument("--only", help="a single candidate, by name")
@@ -301,16 +356,22 @@ def main() -> None:
     rows = load_candidates(args.only, args.limit, require_repo=args.layer1)
     print(f"{len(rows)} candidates"
           + (" with a stated code url" if args.layer1 else " not yet in the catalog"))
-    if args.layer3:
+    if args.layer2:
+        scoped = read_json(SCOPE_VERDICTS)["list"]
+        ok = {x["name"] for x in scoped if x.get("in_scope") and x.get("is_software")}
+        rows = [r for r in rows if r["name"] in ok]
+        print(f"  {len(rows)} cleared layer 3 (in scope and software)")
+        verdicts = layer2(rows)
+    elif args.layer3:
         verdicts = layer3(rows)
     elif args.layer1:
         verdicts = layer1(rows)
     else:
         print("nothing to do: pass --layer1 or --layer3")
         return
-    out = SCOPE_VERDICTS if args.layer3 else VERDICTS
+    out = CAT_VERDICTS if args.layer2 else (SCOPE_VERDICTS if args.layer3 else VERDICTS)
     write_json(out, {"count": len(verdicts), "list": verdicts})
-    field = "in_scope" if args.layer3 else "layer1"
+    field = "cat_confidence" if args.layer2 else ("in_scope" if args.layer3 else "layer1")
     tally = {}
     for v in verdicts:
         tally[str(v.get(field))] = tally.get(str(v.get(field)), 0) + 1
