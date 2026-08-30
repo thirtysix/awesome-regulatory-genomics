@@ -31,6 +31,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 
 import requests
 
@@ -106,6 +107,121 @@ def layer1(rows: list[dict]) -> list[dict]:
         out.append(rec)
         print(f"  {rec['layer1']:5s} {r['name'][:22]:24s} {rec.get('why','')[:64]}", flush=True)
     REPOMAP.write_text(json.dumps(cache, indent=1))
+    return out
+
+
+# ---------------------------------------------------------------------------
+# Layers 2 and 3 - the model calls
+# ---------------------------------------------------------------------------
+# Scope is defined POSITIVELY here. llm_assist.CATEGORISE_SYSTEM, which produced
+# the 130 scope drops this catalog applies, defines in_scope only by exclusion
+# and never names the 3D genome, methylation, QTL, reporter assays or histone
+# marks - all live categories. That omission is why 34 Hi-C tools were dropped
+# while chromatin-3d held 153 records. Cell-cell communication is named out
+# explicitly because CellCall is the case a rule cannot reach: classify() admits
+# it on the phrase "transcription factor" and a reader sees a signalling tool.
+SCOPE_SYSTEM = """You decide whether a software tool belongs in a catalog of REGULATORY \
+GENOMICS tools. You are given the tool's name, its paper's title, and its abstract.
+
+IN scope: transcription-factor binding and motifs; promoters, enhancers and cis-regulatory \
+elements; DNase/ATAC footprinting; ChIP-seq/ATAC-seq peak calling and annotation; chromatin \
+accessibility and nucleosomes; gene-regulatory networks; regulatory variant effect; DNA \
+methylation; the 3D genome (Hi-C, HiChIP, loops, TADs); histone modifications; reporter \
+assays (MPRA/STARR-seq); molecular QTL (eQTL, caQTL); and databases serving any of those.
+
+OUT of scope: general alignment and assembly; RNA secondary structure; protein structure, \
+folding, docking and ligand binding; mass spectrometry; proteomics; metabolomics; \
+phylogenetics; generic differential-expression tooling; RNA modification (m6A, m5C, \
+pseudouridine); protein post-translational modification; cell-cell communication and \
+ligand-receptor inference; and genome-announcement papers. This holds even when the tool \
+shares vocabulary like "motif", "peak", "binding", "regulatory" or "transcription factor".
+
+Judge what the tool DOES, not what it mentions. A tool that USES transcription-factor \
+activity as a feature for some other purpose is out of scope; a tool that STUDIES \
+transcriptional regulation is in scope.
+
+Also decide: is this software at all, or is it a wet-lab assay, a database of results, or \
+a review? Assays are out.
+
+Reply with JSON only:
+{"in_scope": true|false, "is_software": true|false, "confidence": "high|medium|low", \
+"reason": "one short clause"}"""
+
+
+def taxonomy_block() -> str:
+    from config import CATEGORIES
+    return "\n".join(f"  {k} - {label}: {desc}" for k, label, desc in CATEGORIES)
+
+
+def categorise_system() -> str:
+    return f"""Assign categories from this fixed taxonomy to a regulatory-genomics tool. \
+You are given its name, paper title, and abstract.
+
+{taxonomy_block()}
+
+Rules:
+- Assign every category that genuinely applies. Most tools take 1-3.
+- Judge what the tool DOES, not its topic area. A database of ChIP-seq experiments is
+  chip-resources, not peak-calling.
+- Use these exact keys. Never invent one.
+- confidence "high" only when the abstract states the function plainly.
+
+Reply with JSON only:
+{{"categories": ["key", ...], "confidence": "high|medium|low"}}"""
+
+
+def api_key() -> str | None:
+    key = os.environ.get("DEEPINFRA_API_KEY")
+    if key:
+        return key
+    env = DATA.parent / ".env"
+    if env.exists():
+        for line in env.read_text().splitlines():
+            if line.startswith("DEEPINFRA_API_KEY="):
+                return line.split("=", 1)[1].strip().strip("'\"")
+    return None
+
+
+def ask(model: str, system: str, user: str, key: str) -> tuple[dict | None, str, float]:
+    """One json_object call. Returns (parsed, raw, cost).
+
+    Thinking is sent off: GLM-5.3-Flash accepts it (no 400, so controllable not
+    forced) and is cheaper and tidier without the reasoning_content channel.
+    The raw text is returned alongside the parse because a harness that only
+    reports the parse turns its own assumptions into "the model failed".
+    """
+    body = {"model": model, "max_tokens": 400, "temperature": 0.3, "top_p": 0.9,
+            "response_format": {"type": "json_object"},
+            "chat_template_kwargs": {"enable_thinking": False},
+            "messages": [{"role": "system", "content": system},
+                         {"role": "user", "content": user}]}
+    r = requests.post("https://api.deepinfra.com/v1/openai/chat/completions",
+                      headers={"Authorization": f"Bearer {key}"}, json=body, timeout=90)
+    d = r.json()
+    if "error" in d:
+        return None, str(d["error"])[:200], 0.0
+    served = d.get("model")
+    if served and served != model:
+        print(f"    ALIAS: {model} -> {served}", flush=True)
+    raw = (d["choices"][0]["message"].get("content") or "")
+    cost = (d.get("usage") or {}).get("estimated_cost") or 0.0
+    try:
+        return json.loads(raw), raw, cost
+    except ValueError:
+        return None, raw, cost
+
+
+def abstracts() -> dict:
+    """pmid/doi -> abstractText, from the cached Europe PMC result sets."""
+    out = {}
+    for f in (CACHE / "literature").glob("*.json"):
+        for p in json.loads(f.read_text()):
+            a = p.get("abstractText")
+            if not a:
+                continue
+            for k in (p.get("pmid"), p.get("doi")):
+                if k:
+                    out[str(k)] = a
     return out
 
 
