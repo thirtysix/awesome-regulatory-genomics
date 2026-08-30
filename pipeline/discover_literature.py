@@ -98,6 +98,46 @@ QUERIES = [
     'TITLE:"footprinting"',
     'TITLE:"nucleosome positioning"',
     'TITLE:"single-cell ATAC"',
+
+    # Scope added 2026-07-28 (methylation, 3D genome, QTL, reporter assays,
+    # histone marks) had categories and a harvest sweep but no literature
+    # queries at all. TITLE:"DNA methylation" alone returns 21,498 papers, far
+    # too broad to review, so it is the one term paired with a software word
+    # rather than queried on its own.
+    'TITLE:"Hi-C"',
+    'TITLE:"chromatin loop"',
+    'TITLE:"topologically associating"',
+    'TITLE:"bisulfite"',
+    'TITLE:"eQTL"',
+    'TITLE:"massively parallel reporter"',
+    'TITLE:"STARR-seq"',
+    'TITLE:"histone modification"',
+    'TITLE:"CUT&RUN"',
+    'TITLE:"super-enhancer"',
+    'TITLE:"single-cell multiome"',
+    'TITLE:"DNA methylation" AND TITLE:(software OR pipeline OR toolkit OR '
+    '"web server" OR "R package" OR caller OR framework)',
+
+    # The software axis. Every query above asks what a paper is ABOUT; these ask
+    # whether it announces software, which is orthogonal and was never queried.
+    # Measured against 684 tool-paper abstracts and 9,126 non-tool abstracts from
+    # the same corpus: "web interface" 19.7x, "source code" 13.3x, "web server"
+    # 12.6x, "deep learning" 7.4x enriched in the tool set.
+    'TITLE:"web server" AND TITLE:(motif OR "transcription factor" OR regulatory OR chromatin)',
+    'TITLE:"R package" AND TITLE:(chip-seq OR atac-seq OR motif OR regulatory)',
+    'TITLE:"deep learning" AND TITLE:(regulatory OR enhancer OR "transcription factor" OR chromatin)',
+
+    # Abstract-scoped, and the only queries that do not need the colon
+    # convention: a github url in the abstract plus a domain term in the title
+    # is a tool whatever the title is punctuated like. 32% of titles have no
+    # colon and were previously unreachable. candidate_from() derives the name
+    # from the repository for these.
+    'ABSTRACT:"github.com" AND TITLE:"transcription factor"',
+    'ABSTRACT:"github.com" AND TITLE:"chromatin accessibility"',
+    'ABSTRACT:"github.com" AND TITLE:"gene regulatory network"',
+    'ABSTRACT:"github.com" AND TITLE:"chip-seq"',
+    'ABSTRACT:"github.com" AND TITLE:("enhancer" OR "promoter")',
+    'ABSTRACT:"github.com" AND TITLE:("motif" OR "cis-regulatory")',
 ]
 
 # "NAME: what it does". The name is bounded because a long left-hand side is a
@@ -157,14 +197,49 @@ def search(session, query: str, pages: int, refresh: bool) -> list[dict]:
     return results
 
 
+def name_from_repo(url: str, title: str, abstract: str) -> str | None:
+    """Tool name from a repository url, when the title does not follow the convention.
+
+    Guarded: the derived name is accepted only if it also appears in the title
+    or abstract. github.com/aertslab/cistopic gives cisTopic, which the paper
+    names; github.com/someone/paper-figures gives nothing the text confirms and
+    is dropped. Without the guard this invents a tool from every analysis repo.
+    """
+    path = re.sub(r"^https?://(www\.)?[^/]+/", "", url.rstrip("/"))
+    parts = [x for x in path.split("/") if x]
+    # A code host needs owner/repo. One segment is a user profile, and
+    # github.com/MoonLord0525 is a person, not a tool.
+    if re.search(r"(github|gitlab|bitbucket|codeberg)\.", url, re.I) and len(parts) < 2:
+        return None
+    seg = parts[-1] if parts else ""
+    seg = re.sub(r"\.(git|io|html|htm|php|jsp)$", "", seg, flags=re.I)
+    if not seg or len(seg) > 25 or seg.isdigit() or seg.lower() in NOT_A_NAME:
+        return None
+    # A repo named for a paper, a conference or a year is not a tool name.
+    if re.search(r"(19|20)\d{2}", seg) and re.search(r"[_-]", seg):
+        return None
+    flat = re.sub(r"[^a-z0-9]", "", seg.lower())
+    if len(flat) < 3:
+        return None
+    hay = re.sub(r"[^a-z0-9]", "", f"{title} {abstract}".lower())
+    return seg if flat in hay else None
+
+
 def candidate_from(paper: dict) -> dict | None:
     title = (paper.get("title") or "").strip().rstrip(".")
+    abstract = paper.get("abstractText") or ""
     m = TOOL_TITLE.match(title)
-    if not m:
-        return None
-    name, rest = m.group(1).strip(), m.group(2).strip()
-    if name.lower() in NOT_A_NAME or name.isdigit():
-        return None
+    if m:
+        name, rest = m.group(1).strip(), m.group(2).strip()
+        if name.lower() in NOT_A_NAME or name.isdigit():
+            return None
+    else:
+        # No colon. Recoverable only when a code url names the tool.
+        _, code0 = abstract_urls(abstract)
+        name = name_from_repo(code0[0], title, abstract) if code0 else None
+        if not name:
+            return None
+        rest = title
     doi = (paper.get("doi") or "").strip()
     pmid = (paper.get("pmid") or "").strip()
     urls, code = abstract_urls(paper.get("abstractText") or "")
