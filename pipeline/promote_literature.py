@@ -30,6 +30,7 @@ wrongly excluded one is invisible.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 
@@ -42,13 +43,26 @@ from enrich import github_token
 
 CANDIDATES = RAW / "literature_candidates.json"
 VERDICTS = RAW / "literature_promote.json"
+SCOPE_VERDICTS = RAW / "literature_scope.json"
+SCOPE_CACHE = CACHE / "literature_scope_cache.json"
 REPOMAP = CACHE / "repo_map.json"
 
 
-def load_candidates(only: str | None, limit: int) -> list[dict]:
+def load_candidates(only: str | None, limit: int, require_repo: bool = False) -> list[dict]:
+    """Every candidate not already in the catalog.
+
+    A code url is how a candidate gets NOTICED - it sorts the queue and hands
+    layer 1 something to validate - but it was never a condition of promotion,
+    and requiring one costs real recall. Measured 2026-08-30 on 20 candidates
+    with no stated repo: 18 were in scope, among them TRACE, DeepTACT, MCAST,
+    HiCORE and CATAD. Those are ordinary regulatory-genomics tools whose
+    abstracts simply predate or skip the convention of printing a url.
+    """
     blob = read_json(CANDIDATES)
     rows = blob["list"] if isinstance(blob, dict) and "list" in blob else blob
-    rows = [r for r in rows if not r.get("known") and r.get("repo")]
+    rows = [r for r in rows if not r.get("known")]
+    if require_repo:
+        rows = [r for r in rows if r.get("repo")]
     if only:
         rows = [r for r in rows if r["name"].lower() == only.lower()]
     rows.sort(key=lambda r: -(r.get("citations") or 0))
@@ -140,6 +154,13 @@ Judge what the tool DOES, not what it mentions. A tool that USES transcription-f
 activity as a feature for some other purpose is out of scope; a tool that STUDIES \
 transcriptional regulation is in scope.
 
+Supporting software for the assays above IS in scope, decided 2026-08-30: aligners and \
+read mappers specific to a regulatory assay (bisulfite, ATAC, ChIP), file formats and \
+compression for regulatory signal, GPU ports, simulators, and power or sample-size \
+calculators. The test is whether the software exists to serve regulatory genomics, not \
+whether it makes a biological inference itself. A GENERAL-purpose aligner or format that \
+happens to be usable on regulatory data is still out.
+
 Also decide: is this software at all, or is it a wet-lab assay, a database of results, or \
 a review? Assays are out.
 
@@ -225,25 +246,76 @@ def abstracts() -> dict:
     return out
 
 
+def layer3(rows: list[dict]) -> list[dict]:
+    """Scope check every candidate. Cached by doi/pmid so a re-run is free."""
+    key = api_key()
+    if not key:
+        raise SystemExit("DEEPINFRA_API_KEY not set (env or .env)")
+    cache = json.loads(SCOPE_CACHE.read_text()) if SCOPE_CACHE.exists() else {}
+    ab = abstracts()
+    model = "zai-org/GLM-5.3-Flash"
+    prompt_sha = hashlib.sha256(SCOPE_SYSTEM.encode()).hexdigest()[:12]
+    spend, n_new, out = 0.0, 0, []
+    for i, r in enumerate(rows, 1):
+        # The prompt is part of the question, so it is part of the key. Without it a
+        # cached verdict silently answers whichever prompt happened to be live when
+        # it was written - and this one changed twice on 2026-08-30, first to define
+        # scope positively and then to admit supporting software.
+        ck = f"{model}:{prompt_sha}:{r.get('doi') or r.get('pmid') or r['name']}"
+        if ck in cache:
+            j = cache[ck]
+        else:
+            a = ab.get(str(r.get("pmid") or "")) or ab.get(str(r.get("doi") or "")) or ""
+            user = (f"Tool name: {r['name']}\nPaper title: {r.get('description','')}\n\n"
+                    f"Abstract:\n{a[:2600]}" if a else
+                    f"Tool name: {r['name']}\nPaper title: {r.get('description','')}\n"
+                    f"(no abstract available)")
+            j, raw, cost = ask(model, SCOPE_SYSTEM, user, key)
+            spend += cost
+            n_new += 1
+            if j is None:
+                j = {"in_scope": None, "reason": f"unparsed: {raw[:120]}"}
+            cache[ck] = j
+            if n_new % 25 == 0:
+                SCOPE_CACHE.write_text(json.dumps(cache))
+                print(f"  {i}/{len(rows)}  ${spend:.4f}", flush=True)
+        out.append({**{k: r.get(k) for k in
+                       ("name", "repo", "citations", "year", "doi", "pmid", "description")},
+                    **{k: j.get(k) for k in
+                       ("in_scope", "is_software", "confidence", "reason")},
+                    "model": model, "prompt_sha": prompt_sha})
+    SCOPE_CACHE.write_text(json.dumps(cache))
+    print(f"  {n_new} new calls, ${spend:.4f}")
+    return out
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--layer1", action="store_true", help="validate repositories only")
+    ap.add_argument("--layer1", action="store_true",
+                    help="validate stated repositories (only candidates that name one)")
+    ap.add_argument("--layer3", action="store_true",
+                    help="scope check every candidate, repo or not")
     ap.add_argument("--only", help="a single candidate, by name")
     ap.add_argument("--limit", type=int, default=0)
     args = ap.parse_args()
 
-    rows = load_candidates(args.only, args.limit)
-    print(f"{len(rows)} candidates with a stated code url")
-    if not args.layer1:
-        print("nothing to do: pass --layer1 (layers 2 and 3 are not wired yet)")
+    rows = load_candidates(args.only, args.limit, require_repo=args.layer1)
+    print(f"{len(rows)} candidates"
+          + (" with a stated code url" if args.layer1 else " not yet in the catalog"))
+    if args.layer3:
+        verdicts = layer3(rows)
+    elif args.layer1:
+        verdicts = layer1(rows)
+    else:
+        print("nothing to do: pass --layer1 or --layer3")
         return
-    verdicts = layer1(rows)
-    write_json(VERDICTS, {"count": len(verdicts), "list": verdicts})
+    out = SCOPE_VERDICTS if args.layer3 else VERDICTS
+    write_json(out, {"count": len(verdicts), "list": verdicts})
+    field = "in_scope" if args.layer3 else "layer1"
     tally = {}
     for v in verdicts:
-        tally[v["layer1"]] = tally.get(v["layer1"], 0) + 1
+        tally[str(v.get(field))] = tally.get(str(v.get(field)), 0) + 1
     print("\n" + "  ".join(f"{k}={v}" for k, v in sorted(tally.items())))
-    print(f"-> {VERDICTS}")
+    print(f"-> {out}")
 
 
 if __name__ == "__main__":
