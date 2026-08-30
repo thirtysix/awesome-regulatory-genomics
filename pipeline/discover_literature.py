@@ -47,6 +47,37 @@ REPORT = DOCS / "literature-discovery.md"
 LIT_CACHE = CACHE / "literature"
 EPMC = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
 
+# Abstracts are requested with resultType=core. The default returns metadata
+# only, which threw away the single most useful signal a tool paper carries:
+# measured on this catalog's own 1,930 recoverable abstracts, 67% state a URL
+# and 26% a GitHub one. That is the "available at ..." sentence, and it is both
+# strong evidence the paper announces software and the repository itself, which
+# enrich.py otherwise has to infer.
+URL_RE = re.compile(r"https?://[^\s,;)\]<>\"']+", re.I)
+CODE_HOST_RE = re.compile(
+    r"(github\.com|gitlab\.com|bitbucket\.org|sourceforge\.net|"
+    r"bioconductor\.org|cran\.r-project\.org|pypi\.org|hub\.docker\.com|"
+    r"anaconda\.org|codeberg\.org)", re.I)
+
+
+def abstract_urls(text: str) -> tuple[list[str], list[str]]:
+    """Every url in an abstract, and the subset on a recognised code host.
+
+    Trailing punctuation is stripped because abstracts end the sentence right
+    after the link: "available at https://github.com/x/y." would otherwise
+    yield a repo whose name ends in a full stop, which is exactly the bug the
+    Bioconductor page scrape used to produce (jiping/NuPoP_doc.).
+    """
+    urls, code = [], []
+    for u in URL_RE.findall(text or ""):
+        u = u.rstrip(".,;:)]}\"'").rstrip("/")   # also the slash, so /Xyz and /Xyz/ dedupe
+        if u in urls:
+            continue
+        urls.append(u)
+        if CODE_HOST_RE.search(u):
+            code.append(u)
+    return urls, code
+
 # Title-scoped, so a hit is a paper *about* the tool rather than one using it.
 QUERIES = [
     'TITLE:"transcription factor binding"',
@@ -98,12 +129,19 @@ def search(session, query: str, pages: int, refresh: bool) -> list[dict]:
     slug = re.sub(r"[^a-z0-9]+", "-", query.lower()).strip("-")[:60]
     path = LIT_CACHE / f"{slug}.json"
     if path.exists() and not refresh:
-        return json.loads(path.read_text())
+        cached = json.loads(path.read_text())
+        # Files written before resultType=core carry no abstractText. Refetch
+        # rather than silently serving a cache that cannot answer the question
+        # this stage now asks.
+        if not cached or any("abstractText" in r for r in cached[:50]):
+            return cached
+        print(f"    {slug}: cached without abstracts, refetching", flush=True)
 
     results, cursor = [], "*"
     for _ in range(pages):
         r = session.get(EPMC, params={
             "query": f"({query}) AND SRC:MED", "format": "json",
+            "resultType": "core",          # brings abstractText; see URL_RE above
             "pageSize": 1000, "cursorMark": cursor,
         }, timeout=90)
         r.raise_for_status()
@@ -129,6 +167,7 @@ def candidate_from(paper: dict) -> dict | None:
         return None
     doi = (paper.get("doi") or "").strip()
     pmid = (paper.get("pmid") or "").strip()
+    urls, code = abstract_urls(paper.get("abstractText") or "")
     return {
         "name": name,
         "title": title,
@@ -141,6 +180,9 @@ def candidate_from(paper: dict) -> dict | None:
         "url": f"https://doi.org/{doi}" if doi
                else f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/" if pmid else "",
         "source": "europepmc",
+        "abstract_urls": urls,
+        "code_urls": code,
+        "repo": code[0] if code else "",
     }
 
 
@@ -231,15 +273,22 @@ def write_report(candidates: list[dict], stats: dict) -> None:
         "sweep, every row carries a DOI and a year, so a promoted entry gets a "
         "real publication and a citation count rather than a bare link.",
         "",
-        "Sorted by citation count, so the tools the field actually adopted come "
-        "first. A high count here is a reason to look, not evidence of quality.",
+        "Rows naming a code repository come first, then by citation count. A url "
+        "on a code host is the strongest single signal that a paper announces "
+        "software rather than an assay or a study, and it supplies the repo "
+        "directly. A high citation count is a reason to look, not evidence of "
+        "quality: the highest-cited row in an earlier run was ATAC-seq, an assay.",
         "",
-        "| Tool | Cites | Year | What the paper says it does |",
-        "| --- | ---: | ---: | --- |",
+        "| Tool | Cites | Year | Code | What the paper says it does |",
+        "| --- | ---: | ---: | --- | --- |",
     ]
+    fresh = sorted(fresh, key=lambda c: (not c.get('repo'), -(c.get('citations') or 0)))
     for c in fresh:
         link = f"[{cell(c['name'])}]({c['url']})" if c["url"] else cell(c["name"])
-        out.append(f"| {link} | {c['citations']} | {c['year']} | "
+        repo = c.get("repo") or ""
+        short = re.sub(r"^https?://(www\.)?", "", repo).rstrip("/") if repo else ""
+        code = f"[{cell(short[:40])}]({repo})" if repo else ""
+        out.append(f"| {link} | {c['citations']} | {c['year']} | {code} | "
                    f"{cell(c['description'][:150])} |")
     out.append("")
     REPORT.write_text("\n".join(out))
