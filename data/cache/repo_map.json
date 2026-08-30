@@ -2948,5 +2948,130 @@
   "source": "bioconda",
   "stars": 1,
   "tool_desc": "Web server that can discover motifs that are enriched in sets of nucleotide sequences provided by the user. It uses a new approach for findi"
+ },
+ "_gh_meta": {
+  "ShellyCoder/cellcall": {
+   "description": "inferring cell-cell communication from scRNA-seq of ligand-receptor",
+   "topics": [],
+   "stars": 89,
+   "archived": false,
+   "full_name": "ShellyCoder/cellcall",
+   "readme": ""
+  },
+  "ma-compbio/PEP": {
+   "description": null,
+   "topics": [],
+   "stars": 14,
+   "archived": false,
+   "full_name": "ma-compbio/PEP",
+   "readme": "**********************************************************************************\n# PEP (Predict Enhancer Promoter interactions)\n\nPEP is a framework for predicting long-range enhancer-promoter interactions (EPI) incorporating two strategies for extracting features directly from the DNA sequences of enhancer and promoter elements. There are three modules in PEP, which are PEP-Motif, PEP-Word and PEP-Integrate. PEP-Integrate combines selected features generated from PEP-Motif and PEP-Word. Gradient Tree Boosting is used in each of the three modules to training a predictor for EPIs based on respective feature representations of enhancer-promoter pairs. In PEP-Motif, we search for patterns of known transcription factor binding site (TFBS) motifs in the sequences involved in EPI. The normalized occurrence frequencies of these TFBS motifs are then used as features representing an enhancer or a promoter. In PEP-Word, we use the word embedding model to embed the sequences of enhancer and promoter regions into a new feature space. Each sequence is then represented by a continuous feature vector. In both PEP-Motif and PEP-Word modules, individual feature vectors of paired regions are concat"
+  },
+  "thomasvangurp/epiGBS": {
+   "description": "Code for working with epiGBS data",
+   "topics": [],
+   "stars": 11,
+   "archived": false,
+   "full_name": "thomasvangurp/epiGBS",
+   "readme": ""
+  },
+  "flatironinstitute/inferelator": {
+   "description": "Task-based gene regulatory network inference using single-cell or bulk gene expression data conditioned on a prior network.",
+   "topics": [
+    "inference",
+    "network"
+   ],
+   "stars": 56,
+   "archived": false,
+   "full_name": "flatironinstitute/inferelator",
+   "readme": ""
+  },
+  "yupenghe/REPTILE": {
+   "description": "Predicting regulatory DNA elements based on epigenomic signatures",
+   "topics": [
+    "bioinformatics",
+    "bioinformatics-algorithms",
+    "dna-methylation",
+    "enhancer-prediction",
+    "epigenomics"
+   ],
+   "stars": 31,
+   "archived": false,
+   "full_name": "yupenghe/REPTILE",
+   "readme": ""
+  },
+  "fl-yu/CUT-RUNTools-2.0": {
+   "description": "CUT&RUN and CUT&Tag data processing and analysis",
+   "topics": [
+    "bioinformatics",
+    "chromatin",
+    "cutnrun",
+    "cutntag",
+    "epigenome",
+    "genomics",
+    "single-cell",
+    "tf",
+    "tn5"
+   ],
+   "stars": 115,
+   "archived": false,
+   "full_name": "fl-yu/CUT-RUNTools-2.0",
+   "readme": ""
+  },
+  "smithlabcode/walt": {
+   "description": "WALT is a read mapping program for bisulfite sequencing DNA methylation studies.",
+   "topics": [],
+   "stars": 17,
+   "archived": true,
+   "full_name": "smithlabcode/walt",
+   "readme": ""
+  },
+  "kimmo1019/Deopen": {
+   "description": "A hybrid deep convolutional neural network for predicting chromatin accessibility",
+   "topics": [],
+   "stars": 25,
+   "archived": false,
+   "full_name": "kimmo1019/Deopen",
+   "readme": ""
+  },
+  "BDM-Lab/ClusterTAD": {
+   "description": "A clustering method for identifying topologically associated domains (TADs) from Hi-C data",
+   "topics": [],
+   "stars": 4,
+   "archived": false,
+   "full_name": "BDM-Lab/ClusterTAD",
+   "readme": ""
+  },
+  "kundajelab/coda": {
+   "description": "Coda: a convolutional denoising algorithm for genome-wide ChIP-seq data",
+   "topics": [],
+   "stars": 34,
+   "archived": false,
+   "full_name": "kundajelab/coda",
+   "readme": ""
+  },
+  "schulzlab/STARE": {
+   "description": "TF analysis from epigenetic and Hi-C data",
+   "topics": [],
+   "stars": 19,
+   "archived": false,
+   "full_name": "SchulzLab/STARE",
+   "readme": ""
+  },
+  "piquelab/QuASAR": {
+   "description": "Quantitative Allele Specific Analysis of Reads. Joint genotyping & ASE inference for RNA-seq data",
+   "topics": [],
+   "stars": 29,
+   "archived": false,
+   "full_name": "piquelab/QuASAR",
+   "readme": ""
+  },
+  "hellbelly/BS-Snper": {
+   "description": null,
+   "topics": [],
+   "stars": 42,
+   "archived": false,
+   "full_name": "hellbelly/BS-Snper",
+   "readme": "1.\tIntroduction\nBS-SNPer is an ultrafast and memory-efficient package, a program for BS-Seq variation detection from alignments in standard BAM/SAM format using approximate Bayesian modeling.\n\n2.\tSystem requirement\nBS-SNPer works on Unix (Linux, Ubuntu, Mac OS, etc) based systems. \n\nHardware requirements\n\tOne computing node equipped with at least 10 GB Memory\nSoftware requirements\n\tGCC 4.6.0 or higher\n\tPerl 5.16.3 or higher\n\tzlib 1.2.8 or higher\n\t\n3.\tGetting started\n\nInstalling\nDownload BS-SNPer from https://github.com/hellbelly/BS-Snper by clicking the button \u201cDownload ZIP\u201d. Run the commands below.\n\t1.\tunzip BS-Snper-master.zip\n\t2.\tcd BS-Snper-master\n\t3.\tsh BS-Snper.sh\nMake sure the executable file rrbsSnp is generated.\n\nUsage\nYou can run BS-SNPer in Linux or MAC OS, using the command like:\nperl BS-Snper.pl <sorted_bam_file> --fa <reference_file> --output <snp_result_file> --methcg <meth_cg_result_file> --methchg <meth_chg_result_file> --methchh <meth_chh_result_file> --minhetfreq 0.1 --minhomfreq 0.85 --minquali 15 --mincover 10 --maxcover 1000 --minread2 2 --errorate 0.02 --mapvalue 20 >SNP.out 2>ERR.log\n\nAttention\nBoth of the input and output file arguments should be passed to "
+  }
  }
 }

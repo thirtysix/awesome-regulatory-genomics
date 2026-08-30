@@ -1,0 +1,20 @@
+{
+ "count": 1,
+ "list": [
+  {
+   "name": "BS-SNPer",
+   "repo": "https://github.com/hellbelly/BS-Snper",
+   "slug": "hellbelly/BS-Snper",
+   "citations": 75,
+   "year": "2015",
+   "doi": "10.1093/bioinformatics/btv507",
+   "pmid": "26319221",
+   "description": "SNP calling in bisulfite-seq data",
+   "layer1": "pass",
+   "why": "name match + 2 shared terms (seq, snp)",
+   "stars": 42,
+   "archived": false,
+   "repo_description": null
+  }
+ ]
+}
