@@ -170,3 +170,29 @@ def test_name_comes_from_the_repository_not_the_branch():
 def test_the_appears_in_the_text_guard_still_holds():
     assert name_from_repo("https://github.com/someone/paper-figures", "Unrelated title", "") is None
     assert name_from_repo("https://github.com/MoonLord0525", "A person", "") is None
+
+
+# ---------------------------------------------------------------------------
+# folding a hand review back into the curation files
+# ---------------------------------------------------------------------------
+def test_yaml_scalars_survive_the_round_trip():
+    """seeds.yaml is appended as text, so every scalar must re-read as itself.
+
+    yaml 1.1 resolves bare "no", "yes" and "null" to non-strings, which would
+    turn a tool honestly named No into False the next time the file is loaded.
+    """
+    import yaml as _yaml
+    from ingest_review import _yaml_str
+    for s in ["Tool: a thing", "it's a 'quoted' name", "no", "yes", "null", "~",
+              "On", "TRUE", "3.14", "0755", "- leading dash", "a # hash",
+              "[bracket]", "%pct", "@handle", "ChIP-seq peak caller (v2)"]:
+        assert str(_yaml.safe_load("k: " + _yaml_str(s))["k"]) == s.rstrip("."), s
+
+
+def test_the_queue_is_the_join_of_in_scope_and_is_software():
+    """Both conditions are load-bearing and neither implies the other."""
+    from promotion_queue import absolute
+    assert absolute("owner/name") == "https://github.com/owner/name"
+    assert absolute("https://github.com/owner/name") == "https://github.com/owner/name"
+    assert absolute("http://example.org/tool") == "http://example.org/tool"
+    assert absolute("") == ""
