@@ -159,22 +159,39 @@ QUERY_OPERATIONS = [
     "Gene expression QTL analysis",
 ]
 
-# Operation terms that look in-domain but are NOT queried and never admit
-# anything, because bio.tools applies them to a different field entirely:
-#   "Peak detection"                        -> mass spectrometry / chromatography.
-#                                              Of the 204 records carrying it,
-#                                              roughly three in four are
-#                                              proteomics, metabolomics or NMR.
+# Operation terms that look in-domain but are absent from QUERY_OPERATIONS,
+# STRONG_OPERATIONS and WEAK_OPERATIONS, because bio.tools annotates them too
+# loosely for them to be evidence of anything:
+#   "Peak detection"                        -> also mass spectrometry, chromatography, NMR
 #   "DNA-binding protein prediction"        -> protein-function prediction, not TFBS
 #   "Nucleic acids-binding site prediction" -> protein structure annotation
 #   "Protein-nucleic acid binding prediction"      -> likewise
 #   "Protein-nucleic acid binding site analysis"   -> likewise
 #
+# Measured 2026-08-31, and the exclusion turns out to be free: of the harvested
+# records carrying the two commonest of these as an exact EDAM term - 36 for
+# "Peak detection", 17 for "DNA-binding protein prediction" - classify() admits
+# all 53 on other evidence. No tool is in the catalog only because of these
+# terms, and none is missing for want of them. That is also what resolves the
+# iDBP-DEP question: it carries "DNA-binding protein prediction", it is in
+# scope, and the filter reaches it regardless. Rejecting a term says the term
+# is worthless as evidence; it says nothing about the records wearing it.
+#
+# An earlier version of this note claimed "of the 204 records carrying it,
+# roughly three in four are proteomics". That number is not reproducible and
+# the framing was wrong, because the API's operation= parameter token-matches
+# instead of matching the term: it is not a count of records carrying a term.
+# "Protein-nucleic acid binding site analysis" returns 15,264 of the 33,659
+# records in the registry, and even terms we *do* query return 17-19%. The
+# exact-term count inside our own harvest is 36. Neither figure is 204, and
+# they measure different things - so breadth of the API query was never the
+# argument. Uninformative annotation is.
+#
 # This list is documentation, not control flow: nothing imports it. The
 # exclusion is enforced by these terms being absent from STRONG_OPERATIONS,
 # WEAK_OPERATIONS and QUERY_OPERATIONS. Keep it in sync with those three, since
 # it is the record of *why* they are absent - which is what keeps someone from
-# helpfully adding "Peak detection" and absorbing 200 metabolomics tools.
+# helpfully adding "Peak detection" and reasoning about it from the API count.
 REJECTED_OPERATIONS = [
     "Peak detection",
     "DNA-binding protein prediction",
