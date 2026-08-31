@@ -3072,6 +3072,1310 @@
    "archived": false,
    "full_name": "hellbelly/BS-Snper",
    "readme": "1.\tIntroduction\nBS-SNPer is an ultrafast and memory-efficient package, a program for BS-Seq variation detection from alignments in standard BAM/SAM format using approximate Bayesian modeling.\n\n2.\tSystem requirement\nBS-SNPer works on Unix (Linux, Ubuntu, Mac OS, etc) based systems. \n\nHardware requirements\n\tOne computing node equipped with at least 10 GB Memory\nSoftware requirements\n\tGCC 4.6.0 or higher\n\tPerl 5.16.3 or higher\n\tzlib 1.2.8 or higher\n\t\n3.\tGetting started\n\nInstalling\nDownload BS-SNPer from https://github.com/hellbelly/BS-Snper by clicking the button \u201cDownload ZIP\u201d. Run the commands below.\n\t1.\tunzip BS-Snper-master.zip\n\t2.\tcd BS-Snper-master\n\t3.\tsh BS-Snper.sh\nMake sure the executable file rrbsSnp is generated.\n\nUsage\nYou can run BS-SNPer in Linux or MAC OS, using the command like:\nperl BS-Snper.pl <sorted_bam_file> --fa <reference_file> --output <snp_result_file> --methcg <meth_cg_result_file> --methchg <meth_chg_result_file> --methchh <meth_chh_result_file> --minhetfreq 0.1 --minhomfreq 0.85 --minquali 15 --mincover 10 --maxcover 1000 --minread2 2 --errorate 0.02 --mapvalue 20 >SNP.out 2>ERR.log\n\nAttention\nBoth of the input and output file arguments should be passed to "
+  },
+  "SchulzLab/TEPIC": {
+   "description": "Annotation of genomic regions using transcription factor binding sites and epigenetic data",
+   "topics": [],
+   "stars": 42,
+   "archived": false,
+   "full_name": "SchulzLab/TEPIC",
+   "readme": ""
+  },
+  "tdhock/PeakError": {
+   "description": null,
+   "topics": [],
+   "stars": 4,
+   "archived": false,
+   "full_name": "tdhock/PeakError",
+   "readme": "PeakError: compute the label error rate of peak calling models\n\n[[https://travis-ci.org/tdhock/PeakError][https://travis-ci.org/tdhock/PeakError.png?branch=master]]\n\nAfter constructing [[https://rcdata.nau.edu/genomic-ml/chip-seq-chunk-db/][a database of labels that indicate specific samples\nand genomic regions with and without peaks in a ChIP-seq experiment]],\nyou can compute the label error rate of a peak calling model using this\npackage. This is useful for\n- training peak calling model parameters: choose the parameter values\n  that minimize the number of incorrect labels.\n- testing different peak calling models: compute the label error rate of two\n  or more different peak models. The one with the lowest label error rate\n  is the most accurate in your data.\n\nFor more details, please read our paper \"Optimizing ChIP-seq peak\ndetectors using visual labels and supervised machine learning\" by\nHocking et al,\nBioinformatics 2017. https://www.ncbi.nlm.nih.gov/pubmed/27797775\n\n** R installation\n\n#+BEGIN_SRC R\nif(!require(devtools))install.packages(\"devtools\")\ndevtools::install_github(\"tdhock/PeakError\")\n#+END_SRC\n\n** R usage\n\n#+BEGIN_SRC R\nlibrary(PeakError)\nexample(PeakError)\n#+END_SRC\n\n"
+  },
+  "rnakato/SSP": {
+   "description": "Sensitive and robust assessment of ChIP-seq read distribution using a strand-shift profile",
+   "topics": [],
+   "stars": 5,
+   "archived": false,
+   "full_name": "rnakato/SSP",
+   "readme": ""
+  },
+  "sirajulsalekin/DeepSNR": {
+   "description": "Base-pair resolution detection of transcription factor binding site by deep deconvolutional network",
+   "topics": [],
+   "stars": 11,
+   "archived": false,
+   "full_name": "sirajulsalekin/DeepSNR",
+   "readme": ""
+  },
+  "stormlovetao/eQTLQC": {
+   "description": null,
+   "topics": [],
+   "stars": 28,
+   "archived": false,
+   "full_name": "stormlovetao/eQTLQC",
+   "readme": "# Introduction\nAdvances in the expression quantitative trait loci (eQTL) studies have provided valuable insights into the mechanism of diseases and traits-associated genetic variants. However, it remains computationally challenging to evaluate and control the data quality required in eQTL analysis for researcher with a limited background in programming. There is an urgent need to develop a powerful and user-friendly tool to automatically process the raw dataset and perform the eQTL mapping afterwards. In this work, we present a pipeline for eQTL analysis, termed as eQTLQC, with automated data preprocessing of both genotype data and gene expression data, especially RNA-seq based. Our pipeline provides comprehensive quality control and normalization approaches. Multiple automated techniques are used to concatenate the pipeline to reduce manual interventions. And a configuration file is provided to adjust parameters and control the processing logic. The source code, demo data and instructions are freely available <a href=\"https://github.com/stormlovetao/eQTLQC\" target=\"_blank\">**here**</a>.\n\n\n# Preliminaries\n\nThis tool is written in R 3.5 and Python 3.7, please double check your compu"
+  },
+  "GreenwoodLab/funtooNorm": {
+   "description": null,
+   "topics": [],
+   "stars": 6,
+   "archived": false,
+   "full_name": "GreenwoodLab/funtooNorm",
+   "readme": "# funtooNorm \n[![Build Status](https://travis-ci.org/GreenwoodLab/funtooNorm.svg?branch=master)](https://travis-ci.org/GreenwoodLab/funtooNorm)\n\nThe R package ```funtooNorm```  provides a function for normalization of \nIllumina Infinium Human Methylation 450 BeadChip (Illumina 450K) data \nwhen there are samples from multiple tissues or cell types.\n\n## Installation options\nInstall from bioconductor  \n```shell\nsource(\"http://www.bioconductor.org/biocLite.R\")  \nbiocLite(\"funtooNorm\")\n```  \nDownload the current build <a href=\"https://github.com/GreenwoodLab/funtooNorm/releases\" ><b>here</b></a> and install it with\n``` shell\n$ R CMD INSTALL funtooNorm_1.00.1.tar.gz\n```\n\nOr, if you want to build from source, you can also install from GitHub using the [devtools](https://cran.r-project.org/package=devtools)\npackage in `R`: \n```r\nlibrary(devtools)\ninstall_github('GreenwoodLab/funtooNorm', local=TRUE, build_vignettes = TRUE)\n```\n\nIf you have difficulties with the function ```install_github``` you can download\nand install from source using the commands ```R CMD build``` and ```install```:\n``` shell\n$ git clone https://github.com/GreenwoodLab/funtooNorm.git\n$ R CMD build ./funtooNorm\n$ R CMD I"
+  },
+  "DMU-lilab/GetisDMR": {
+   "description": null,
+   "topics": [],
+   "stars": 3,
+   "archived": false,
+   "full_name": "DMU-lilab/GetisDMR",
+   "readme": "GetisDMR: DMR Detection \n========================================================\n\nGetisDMR: Detection differentially methylated region in whole genome bisulfite sequencing (WGBS) data.\n\nContact Information\n-------------------\nFushun Chen\n<redacted>\n\nInstallation\n* Before attempting to compile GetisDMR please make sure that GNU Scientific Library (http://www.gnu.org/software/gsl/), the statistical software R and boost library are installed on your system.\n* You need to install Rcpp, RInside, Armadillo.\n\nCompiling (Example)\n\ng++ GetisDMR_p_value.cpp FindFileHome.cpp FindDMR.cpp SplitString.cpp compare2Prop.cpp Getis_Ord.cpp RealDataMain.cpp one_vs_one.cpp BetaBinomialReg.cpp multi_vs_multi.cpp regression.cpp -I /usr/lib64/R/include/ -I ~/armadillo-5.100.2/include/ -I /usr/lib64/R/library/Rcpp/include/ -I /usr/lib64/R/library/RInside/include/ -I /usr/local/include/gsl/ -L /usr/local/lib/ -lgsl -lgslcblas -lm -std=c++11 -o3 -pipe -g -Wall /usr/lib64/libboost_program_options.so -lboost_system -lboost_filesystem -L /usr/lib64/R/lib -lR -lblas -llapack -L /usr/lib64/R/library/RInside/lib/ -lRInside -Wl,-rpath,/usr/lib64/R/library/RInside/lib -o GetisDMR\n\nUsage\n-----\n\nBasic"
+  },
+  "sbbi/MDS2": {
+   "description": "Motif Discovery on Short Sequences",
+   "topics": [],
+   "stars": 2,
+   "archived": false,
+   "full_name": "sbbi/MDS2",
+   "readme": ""
+  },
+  "wupengomics/scBS-map": {
+   "description": "Single-cell Bisulfite Sequencing Data Mapping",
+   "topics": [],
+   "stars": 13,
+   "archived": false,
+   "full_name": "wupengomics/scBS-map",
+   "readme": ""
+  },
+  "HaoWuLab-Bioinformatics/Inter-Chrom": {
+   "description": null,
+   "topics": [],
+   "stars": 1,
+   "archived": false,
+   "full_name": "HaoWuLab-Bioinformatics/Inter-Chrom",
+   "readme": "# Inter-Chrom\nA novel deep learning framework with DNABERT\u2019s word embedding for identifying Chromatin interactions along with motif importance investigation\n\n## The framework of Inter-Chrom\n![image](figure1.jpg)\n\n## Overview\nThe folder \"**data**\" contains the datasets of three cell lines for Inter-Chrom to train and test.  \nThe folder \"**getData**\" contains get_token.py and motif_find.py.  \nget_token.py: to divide the sequence by word, convert it into a token, which is represented by ID, and finally filter it into a subsequence composed of words with a frequency of the top 500 and a subsequence with an ID size of the top 500.  \nmotif_find.py: to match specific motifs in DNA sequences.  \nThe folder \"**model**\" contains 4 files.  \nmodel.py: main framework of Inter-Chrom  \ntrain.py: the process of training  \nget_dataset.py: to obtain the samples for training and testing with chromosome-splitting strategy\nDNABERT_embedding_matrix.npy: including the word vector corresponding to the token's ID  \nThe folder \"**motif**\" contains the position weight matrix (PWM) of motifs and the p-value threshold score from the HOCOMOCO Human v11 database.  \n\n## Dependency\nSee \"**requirements.txt\"** for al"
+  },
+  "mdozmorov/RepeatSoaker": {
+   "description": "a simple method to eliminate low-complexity short reads",
+   "topics": [],
+   "stars": 2,
+   "archived": false,
+   "full_name": "mdozmorov/RepeatSoaker",
+   "readme": ""
+  },
+  "HaoWuLab-Bioinformatics/StackTADB": {
+   "description": "A Stacking-Based Ensemble Learning Model",
+   "topics": [],
+   "stars": 1,
+   "archived": false,
+   "full_name": "HaoWuLab-Bioinformatics/StackTADB",
+   "readme": ""
+  },
+  "hahatcdg/IBPP": {
+   "description": "Image-based promoter prediction",
+   "topics": [],
+   "stars": 2,
+   "archived": false,
+   "full_name": "hahatcdg/IBPP",
+   "readme": ""
+  },
+  "bio15anu/revelio": {
+   "description": "A lightweight utility for BS-seq and MethylC-seq data which applies a double-masking procedure on bisulfite alignments, facilitating variant calling with conventional software.",
+   "topics": [],
+   "stars": 7,
+   "archived": false,
+   "full_name": "bio15anu/revelio",
+   "readme": ""
+  },
+  "csbioinfopk/enpred": null,
+  "lichen-lab/TIVAN": {
+   "description": "Tissue-specific cis-eQTL single nucleotide variant Annotation and prediction",
+   "topics": [],
+   "stars": 1,
+   "archived": false,
+   "full_name": "lichen-lab/TIVAN",
+   "readme": ""
+  },
+  "RWilton/Arioc": {
+   "description": "Arioc:  GPU-accelerated DNA short-read alignment",
+   "topics": [
+    "bioinformatics",
+    "bisulfite-sequencing",
+    "c-plusplus",
+    "cuda",
+    "dna-sequence-alignment",
+    "genomics",
+    "gpu",
+    "methylation",
+    "read-aligners",
+    "sequence-alignment",
+    "variant-analysis"
+   ],
+   "stars": 70,
+   "archived": false,
+   "full_name": "RWilton/Arioc",
+   "readme": ""
+  },
+  "chen-bioinfo/iEnhancer-ELM": {
+   "description": null,
+   "topics": [],
+   "stars": 4,
+   "archived": false,
+   "full_name": "chen-bioinfo/iEnhancer-ELM",
+   "readme": "\ud83d\udccb iEnhancer-ELM: Learning Explainable Contextual Information to Improve Enhancer Identification using Enhancer Language Models\n\n## Abstract\n&nbsp;&nbsp;&nbsp;&nbsp; In this paper, we propose an enhancer language model **(iEnhancer-ELM)** for enhancer identification by incorporating a pre-trained BERT-based DNA model. iEnhancer-ELM treats enhancer sequences as natural sentences that are composed of k-mer nucleic acids to extract informative biological features from raw enhancer sequences. Benefiting from the complementary information in various k-mer (k=3,4,5,6) tokens, we ensemble four iEnhancer-ELM models for improving enhancer identification. The experimental results show that our model achieve an accuracy of **83.00%**, outperforming competing state-of-the-art methods. Moreover, **40%** of motifs found by iEnhancer-ELM can exhibit statistical and biological significance, demonstrating our model is explainable and has a potential ability to reveal the biological mechanism. \n\n## Contribution\n&nbsp;&nbsp;&nbsp;&nbsp; Experiments on the benchmark dataset shows **iEnhancer-ELM with various k-mers achieves an accuracy of about **80%, outperforming all kind of well-known models with si"
+  },
+  "weiyangedward/IMMBoost": {
+   "description": null,
+   "topics": [],
+   "stars": 3,
+   "archived": false,
+   "full_name": "weiyangedward/IMMBoost",
+   "readme": "Introduction\n============\n\nIMMBoost is a novel strategy to improve the \nperformance in two classification tasks: 1) to \ndistinguish CRMs in a particular expression domain \nfrom non-functional sequences; 2) to discriminate \nCRMs drive expression in one expression \ndomain versus the others.\n\nInstallation\n============\n\n1. License\n-----------\n::\n\nNote that LIBSVM and LIBLINEAR are both used in \nthis code, license related issue please see \nCOPYRIGHT files. Also, source code IMM from SCRMshaw: http://veda.cs.uiuc.edu/SCRMshaw/ is used.\n\n2. Compile source code\n--------------------------\n::\n\n\t(Please un-tar the source code in a directory where the \n\tpath to this directory does not contain empty space. \n\tOtherwise there will be errors while running the code.)\n\n\t>> cd src\n\t\t\n\t1) IMM:\n\t>> cd imm\n\t>> make clean\n\t>> make\n\n\t2) liblinear:\n\t>> cd liblinear-2.1\n\t>> make clean\n\t>> make\n\t>> cd python\n\t>> make\n\n\t3) libsvm:\n\t>> cd libsvm-3.21\n\t>> make clean\n\t>> make\n\t>> cd python\n\t>> make\n\n3. Required packages and libraries\n----------------------------------\n::\n\t\n\tSeveral PERL modules and R packages are needed. \n\tPlease make sure to have them installed before you \n\trun the code:\n\n\t1) BioPerl (PERL)\n\t2)"
+  },
+  "Wang-Lin-boop/PPI-Miner": {
+   "description": "A Motif-Based PPI Searching Pipeline for PPI Mining and Protein Design",
+   "topics": [
+    "molecule-glue",
+    "protein-design",
+    "protein-protein-interaction"
+   ],
+   "stars": 22,
+   "archived": false,
+   "full_name": "Wang-Lin-boop/PPI-Miner",
+   "readme": ""
+  },
+  "maqin2001/PromotePredictor": {
+   "description": null,
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "maqin2001/PromotePredictor",
+   "readme": "======================================\nUsage\n======================================\nNote: The computer you use should have WEKA and MRMD installed. The WEKA's\ninstallation site is http://lab.malab.cn/soft/MRMD/index.html\n==================\nCMD line\n==================\n\n$ java -jar extractor.jar neg.fa pos.fa feature.arff\n\nextractor.jar can obtain the characteristic matrix of each sample in the 79-dimensional feature,which can convert fasta file to arff file\n\n\n==================\nInputs and outputs\n==================\n\nThe format of input file is fasta\nThe example of input file:\n\n-----\n\n>96_55_2762890_-_TTGGCACGATCCTTGCA_16079761_levD_81\nTAAGTGTTTCAACAACAAATTGCTATTGGCTGAAATAACAATGAAAACGCTTAACACAACTGTGTTGGCACGATCCTTGCA\n\n-----\n\nThe format of output file is arff\nThe example of output file:\n\n-----\n@RELATION 727\n@ATTRIBUTE 0 NUMERIC\n@ATTRIBUTE 1 NUMERIC\n@ATTRIBUTE 2 NUMERIC\n@ATTRIBUTE 3 NUMERIC\n@ATTRIBUTE 4 NUMERIC\n@ATTRIBUTE 5 NUMERIC\n...\n\n@ATTRIBUTE 203 NUMERIC\n@ATTRIBUTE class {0,1}\n@data\n0.5541,.......,0.5,0.5,1\n0.66621,........0.12332,0.342114,0\n....\n\nNote: the number 1 or 0 in the end of each line indicates whether this sequences is a promoter or not. \n==================\nResult\n======"
+  },
+  "XuegongLab/SCeQTL": {
+   "description": null,
+   "topics": [
+    "single-cell-rnaseq-eqtl"
+   ],
+   "stars": 19,
+   "archived": false,
+   "full_name": "XuegongLab/SCeQTL",
+   "readme": "# SCeQTL <img src=\"https://github.com/sunfenghao2017/logo/blob/master/logo.png\" align=\"right\" height =  50 width= 150/>\n\n\nSCeQTL is an R package that uses zero-inflated negative binomial regression to do eQTL analysis on single-cell data. It can distinguish two type of gene-expression differences among different genotype groups. It\u2019s more suitable to use SCeQTL to identify eQTLs from single-cell data. It can also be used for finding gene expression variations associated with other grouping factors like cell lineages. Following is the detail information and usage of this program. You can also found them in READ.ME. [R\nPackages](http://r-pkgs.had.co.nz/) is a book based around this workflow.\n## Authors\nHu Yue <<redacted>>\n\nXi Xi <<redacted>>\n\n\n## Installation\n\nTo install the developmental version from [GitHub](https://github.com/XuegongLab/SCeQTL) (recommended):\n\n```r\nif(!require(devtools)) install.packages(\"devtools\")\ndevtools::install_github(\"XuegongLab/SCeQTL\")\n```\n\nTo install from source package, you could download the R package from [Mac and Linux version](http://github.com/XuegongLab/SCeQTL/tree/master/sourcefile/SCeQTL_0.2.0.tar.gz) or [Windows version](http://github"
+  },
+  "ddhb/Workflow_of_Chipseq": {
+   "description": "R code in workflow of chip-seq analysis",
+   "topics": [],
+   "stars": 11,
+   "archived": false,
+   "full_name": "ddhb/Workflow_of_ChIPSeq",
+   "readme": ""
+  },
+  "vishakad/cpi-em": {
+   "description": "ChIP-seq Peak Intensity - Expectation Maximization (CPI-EM) algorithm for detecting cooperatively bound transcription factor pairs",
+   "topics": [],
+   "stars": 4,
+   "archived": false,
+   "full_name": "vishakad/cpi-em",
+   "readme": ""
+  },
+  "tadkeys/tabsat": {
+   "description": "Targeted Amplicon Bisulfite Sequencing Analysis Tool",
+   "topics": [
+    "bisulfite",
+    "bisulfite-sequencing",
+    "dockerfile",
+    "fastq",
+    "genome",
+    "methylation",
+    "targeted-sequencing"
+   ],
+   "stars": 11,
+   "archived": false,
+   "full_name": "spabinger/tabsat",
+   "readme": ""
+  },
+  "wqshi/TF2Exp": {
+   "description": "TF2Exp: regression models to predict the impact of altered TF binding on gene expression levels",
+   "topics": [],
+   "stars": 4,
+   "archived": false,
+   "full_name": "wqshi/TF2Exp",
+   "readme": ""
+  },
+  "kircherlab/BCalm": {
+   "description": null,
+   "topics": [],
+   "stars": 1,
+   "archived": false,
+   "full_name": "kircherlab/BCalm",
+   "readme": "[![DOI](https://zenodo.org/badge/858995953.svg)](https://doi.org/10.5281/zenodo.18802316)\n[![GitHub License](https://img.shields.io/github/license/kircherlab/BCalm)](https://github.com/kircherlab/BCalm/blob/master/LICENSE)\n[![GitHub Release](https://img.shields.io/github/v/release/kircherlab/BCalm)](https://github.com/kircherlab/BCalm/releases/latest)\n[![Bioconda Version](https://img.shields.io/conda/vn/bioconda/r-bcalm?label=bioconda)](https://bioconda.github.io/recipes/r-bcalm/README.html)\n[![R CMD check](https://github.com/kircherlab/BCalm/actions/workflows/r-cmd-check.yml/badge.svg?branch=master)](https://github.com/kircherlab/BCalm/actions/workflows/r-cmd-check.yml)\n[![GitHub Issues](https://img.shields.io/github/issues/kircherlab/BCalm)](https://github.com/kircherlab/BCalm/issues)\n[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kircherlab/BCalm)](https://github.com/kircherlab/BCalm/pulls)\n\n# BCalm and analyze your MPRA data\n\nBCalm is a package that provides a modification of [the mpralm package](https://github.com/hansenlab/mpra/tree/master), an R package that provides tools for differential analysis in MPRA studies.\nBCalm allows users to use individual barco"
+  },
+  "lichen-lab/DeepPHiC": {
+   "description": "Resources for DeepPHiC model",
+   "topics": [],
+   "stars": 1,
+   "archived": false,
+   "full_name": "lichen-lab/DeepPHiC",
+   "readme": ""
+  },
+  "DohertyLab/ExRANGES": {
+   "description": null,
+   "topics": [],
+   "stars": 1,
+   "archived": false,
+   "full_name": "DohertyLab/ExRANGES",
+   "readme": "# ExRANGES\n"
+  },
+  "paulbible/papst": {
+   "description": "A tool for Chip-seq analysis.",
+   "topics": [],
+   "stars": 8,
+   "archived": false,
+   "full_name": "paulbible/papst",
+   "readme": ""
+  },
+  "wangchao-malab/Enhancer-FRL": {
+   "description": null,
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "wangchao-malab/Enhancer-FRL",
+   "readme": "## Enhancer-FRL\n\n### 1. Description\nEnhancers are crucial for precisely regulation of gene expression, while enhancers identification and strength prediction is challenging because of their freely distribution and tremendous of similar fractions in genome. Enhancer-FRL, a two-layer predictor proposed for identifying enhancers (enhancers or non-enhancers) and their activities (strong and weak) using the feature representation learning scheme.\n\n### 2. Availability\n#### 2.1. Webserver is available at: http://39.100.246.211:10505/DeepSoluE/\nhttp://lab.malab.cn/~wangchao/softwares/Enhancer-FRL/\nhttp://39.100.246.211:10504/\n\n#### 2.2 Datasets and source code are available at:\nhttps://github.com/wangchao-malab/Enhancer-FRL and http://lab.malab.cn/~wangchao/softwares/Enhancer-FRL/\n\n#### 2.3 Local running\n##### 2.3.1 Environment\nBefore running, please make sure the following packages are installed in Python environment:\n\ngensim==3.4.0\n\npandas==1.1.3\n\npython==3.7.3\n\nbiopython==1.7.8\n\nnumpy==1.19.2\n\nscikit-learn==0.22.1\n\nFor convenience, we strongly recommended users to install the Anaconda Python 3.7.3 (or above) in your local computer.\n\n##### 2.3.2 Running\nChanging working dir to Enhancer-F"
+  },
+  "BioMedicalBigDataMiningLab/EPIHC": {
+   "description": "EPIHC: Improving Enhancer-Promoter Interaction Prediction by using Hybrid features and Communicative learning",
+   "topics": [],
+   "stars": 1,
+   "archived": false,
+   "full_name": "BioMedicalBigDataMiningLab/EPIHC",
+   "readme": ""
+  },
+  "haammim/OIPCQ-and-OIPCQ2": {
+   "description": null,
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "haammim/OIPCQ-and-OIPCQ2",
+   "readme": "# OIPCQ-and-OIPCQ2\n\nThese codes and outputs are related to \"An Order Independent Algorithm for Inferring Gene Regulatory Network Using Quantile Value for Conditional Independent Tests\".\n\nOIPCQ requires the functions of cmi and Compare, and OIPCQ2 requires the functions of cmi and MI2 and Compare.\n\nIn the DREAM3 and DREAM4 data, the columns represent the genes and the rows represent the different samples. Since we compute the dependency criterion of Mutual Information on rows we first calculate the transposed of this data.\nFor SOS-DATA and AML data there is no need to transpose because the rows represent the genes and the transcription factors and the columns represent the different samples.\nIn OIPC and OIPC2, data22 takes the data of DREAM3 and DREAM4 then calculates the transpose in the next line.\nFor SOS-DATA and AML data in both algorithms, you need to remove line 2 and add this code: \"data=data22;\".\n\nTo obtain the outputs mentioned in the article, we need to use a specific threshold for each method and dataset.\nWe consider the RACER network as a Golden Standard Network for the AML dataset.\nWe set the seventy percentile for all methods and datasets (psi=70).\nThe following are li"
+  },
+  "SchulzLab/Triangulate": {
+   "description": "Inferring regulators from single cell RNA-seq data",
+   "topics": [],
+   "stars": 6,
+   "archived": false,
+   "full_name": "SchulzLab/Triangulate",
+   "readme": ""
+  },
+  "Tiny-Snow/EVMP": {
+   "description": "EVMP: Enhancing machine learning models for synthetic promoter strength prediction by Extended Vision Mutant Priority framework",
+   "topics": [],
+   "stars": 5,
+   "archived": false,
+   "full_name": "Tiny-Snow/EVMP",
+   "readme": ""
+  },
+  "Dalei-Dalei/MEOMI": {
+   "description": "An Approach of Gene Regulatory Network Construction Using Mixed Entropy Optimizing Context-Related Likelihood Mutual Information",
+   "topics": [],
+   "stars": 1,
+   "archived": false,
+   "full_name": "Dalei-Dalei/MEOMI",
+   "readme": ""
+  },
+  "cbi-bioinfo/meth-SemiCancer": {
+   "description": "a cancer subtype classification framework via Semi-supervised learning utilizing DNA methylation profiles",
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "cbi-bioinfo/meth-SemiCancer",
+   "readme": ""
+  },
+  "hellosunking/Msuite2": {
+   "description": "Msuite2: integrated DNA methylation data analysis toolkit with enhanced performance",
+   "topics": [
+    "dna-methylation"
+   ],
+   "stars": 10,
+   "archived": false,
+   "full_name": "hellosunking/Msuite2",
+   "readme": ""
+  },
+  "zoozeal/Mtb-sig-miner": {
+   "description": null,
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "zoozeal/Mtb-sig-miner",
+   "readme": "# MTB_SIG_MINER"
+  },
+  "gordonliu810822/CoMM": {
+   "description": "Collaborative Mixed Model",
+   "topics": [],
+   "stars": 7,
+   "archived": false,
+   "full_name": "gordonliu810822/CoMM",
+   "readme": ""
+  },
+  "biocai/DeepHiC": {
+   "description": null,
+   "topics": [],
+   "stars": 4,
+   "archived": false,
+   "full_name": "biocai/DeepHiC",
+   "readme": "# DeepHiC\nDeepHiC is an integrative approach combining artificial intelligence - deep learning with high throughput experimental evidence of chromatin interaction leads to prioritizing the functional variants in disease- and phenotype-related loci.\n\n# Input\nWe compared models taking different bin sizes as input. The results showed that the model training on 40kb bin pairs performed best. \n\nAs DNA is a double helix, both the forward sequence and the reverse sequence were considered. Nucleotides A, T, C and G are encoded as [1,0,0,0], [0,1,0,0], [0,0,1,0] and [0,0,0,1] The sequences of each fragment pair were merged and converted to a one-hot matrix with 10,000 rows for 10kb bins (40,000 rows for 40kb bins and 100,000 rows for 100kb) and 16 columns encoding 4 nucleotides. \n\nFor better input, we saved the matrix (40000*16) as a grey image (png format). The well trained DeepHiC model can be found at https://drive.google.com/file/d/1OKXwq_1L5Sqs2ip1nrPVpXIfPB5Ws99A/view?usp=sharing.\n\nThe difference between the two predicted interaction probabilities (YA1 calculated using the reference allele A1 and YA2 calculated using the other allele A2) was used to assess the functional impact of the"
+  },
+  "xzc196/EPIPDLF": {
+   "description": null,
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "xzc196/EPIPDLF",
+   "readme": "EPIPDLF: a pre-trained deep learning framework for predicting enhancer-promoter interactions\n"
+  },
+  "jadermcg/mfmd": {
+   "description": null,
+   "topics": [],
+   "stars": 3,
+   "archived": false,
+   "full_name": "jadermcg/mfmd",
+   "readme": "# MFMD\nMFMD is a computational algorithm for *de novo* motif discovery. It uses heuristic approaches as a local optimizer and an algorithm based on the MEMES theory as a global optimizer.\n\n## Getting Started\nFollow the instructions below to be able to run mfmd.\n\n### Prerequisites\nBefore running MFMD, you must install the following external programs: Java JRE 8 or higher, WEBLOGO and R.\nFor details about how to install these packages, go to:\n* JAVA: www.java.com;\n* WEBLOGO: http://weblogo.threeplusone.com/;\n* R: https://www.r-project.org/.\n\nAfter installing the R package, you must initialize the server with the following command:\n```\nR CMD Rserve\n```\n\n### Installing\nNo MFMD installation procedure is required. After downloading the [mfmd.jar](https://github.com/jadermcg/mfmd/blob/master/mfmd.jar), just run the following command line:\n```\njava -jar mfmd.jar <dataset_name> <motif width> <significance level>\n```\n\n## Running the tests\nTo test MFMD, download [mfmd.jar](https://github.com/jadermcg/mfmd/blob/master/mfmd.jar) and the [dataset_crp.fasta](https://github.com/jadermcg/mfmd/blob/master/dataset_crp.fasta) into a directory of your choice. After that, open a terminal and run:\n```\nJa"
+  },
+  "ldiao/MixMir": {
+   "description": "A mixed linear model approach to small RNA motif discovery",
+   "topics": [],
+   "stars": 4,
+   "archived": false,
+   "full_name": "ldiao/MixMir",
+   "readme": ""
+  },
+  "theodorejperkins/RECAP": {
+   "description": "RECAP for RE-CAlibration of P-values from ChIP-seq peak calling, by method of RE-sampling reads and re-CAlling Peaks.",
+   "topics": [],
+   "stars": 5,
+   "archived": false,
+   "full_name": "theodorejperkins/RECAP",
+   "readme": ""
+  },
+  "abhisheknrl/MPRAscore": {
+   "description": "MPRAscore: Robust and non-parametric analysis of massively parallel reporter assays (MPRA)",
+   "topics": [
+    "mpra",
+    "mprascore"
+   ],
+   "stars": 1,
+   "archived": false,
+   "full_name": "abhisheknrl/MPRAscore",
+   "readme": ""
+  },
+  "yuabrahamliu/scDeconv": {
+   "description": "scDeconv is an R Package to Deconvolve Bulk DNA Methylation Data with scRNA-seq Data in a Multi-omics Manner.",
+   "topics": [],
+   "stars": 7,
+   "archived": false,
+   "full_name": "yuabrahamliu/scDeconv",
+   "readme": ""
+  },
+  "HuMingLab/SnapHiC-D": {
+   "description": null,
+   "topics": [],
+   "stars": 3,
+   "archived": false,
+   "full_name": "HuMingLab/SnapHiC-D",
+   "readme": "# SnapHiC-D\n\n## Identifying differential chromatin interactions from single cell Hi-C data\n\nFind the preprint [here](https://www.biorxiv.org/content/10.1101/2022.08.05.502991v1).\n\nSnapHiC-D is an extension of [SnapHiC](https://github.com/HuMingLab/SnapHiC) and requires SnapHiC's RWR step output for its input. For a faster version, use SnapHiC2, which is enabled by selecting *method*=\"sliding_window\".\n\n### Install SnapHiC-D\n\nInstall SnapHiC-D through `pip`:\n\n```\nconda create --name SnapHiC_D_env python==3.6.8\nconda activate SnapHiC_D_env\npip install SnapHiC-D\n```\n\n### Requirements\nSnapHiC-D was built using following Python packages.\n\n1. Python 3.6.8\n2. numpy 1.19.0\n3. pandas 1.1.5\n4. qnorm 0.8.1 (https://github.com/Maarten-vd-Sande/qnorm)\n5. scipy 1.5.4\n6. statsmodels 0.12.2\n7. futures 3.0.5\n8. click 7.1.2\n\n### Running SnapHiC-D\n\nActivate the python environment with SnapHiC-D installed and enter the following in the terminal:\n\n```\nSnapHiC-D diff-loops -i group_A_dir -j group_B_dir -o out_dir -c chr -n num_CPUs\\\n                     -b genome_region_path -g genome_transcript_path\\\n                     --binsize bin_size --fdr_threshold fdr_threshold\\\n                     --mini_gap m"
+  },
+  "hucongcong97/BS-clock": {
+   "description": "advancing epigenetic age prediction with high-resolution bisulfite sequencing data",
+   "topics": [],
+   "stars": 2,
+   "archived": false,
+   "full_name": "hucongcong97/BS-clock",
+   "readme": ""
+  },
+  "BobYHY/CAPE": {
+   "description": "Code and data for promoter evolution model CAPE. Please use our website http://www.cape-promoter.com or http://47.101.71.81 for directed evolution for your sequences.",
+   "topics": [],
+   "stars": 3,
+   "archived": false,
+   "full_name": "BobYHY/CAPE",
+   "readme": ""
+  },
+  "mz2/imotifs": {
+   "description": "Intuitive biological sequence motif viewer/analysis environment for OS X",
+   "topics": [],
+   "stars": 9,
+   "archived": false,
+   "full_name": "mz2/imotifs",
+   "readme": ""
+  },
+  "Wrede/mio": null,
+  "jxzb1988/PolyQTL": {
+   "description": "A Bayesian method performing multiple eQTL detection with a control for population structure and relatedness",
+   "topics": [],
+   "stars": 2,
+   "archived": false,
+   "full_name": "jxzb1988/PolyQTL",
+   "readme": ""
+  },
+  "UcarLab/QuIN": {
+   "description": null,
+   "topics": [],
+   "stars": 1,
+   "archived": false,
+   "full_name": "UcarLab/QuIN",
+   "readme": "# Disclaimer of Warranties and Liabilities\n\nThe Jackson Laboratory provides the software \u201cas is\u201d without warranty of any kind, implied or expressed. You assume full responsibility and risk of loss resulting from your downloading and use of the content of the     software.  We expressly disclaim any warranty of merchantability, title, security, accuracy and non-infringement.  In no event shall The Jackson Laboratory be liable for any claim, damages or other liability arising from the software or the use of the software. You may only use our content in academic research but not for commercial purposes.  The software is provided as an information resource only, and should not be used or relied on for any diagnostic or treatment purposes.\n\n# QuIN\nQuIN (Query tool for Interaction Networks, available at quin.jax.org) is a tool for visualizing, annotating, and querying chromatin interactions derived from technologies such as ChIA-PET or HiC.\n"
+  },
+  "Ivis4ml/ssemQr": {
+   "description": "An optimizer of Sparse Structural Equation Model based eQTL mapping. Joint eQTL mapping and Inference of Gene Regulatory Network Improves Power of Detecting both cis- and trans-eQTLs",
+   "topics": [],
+   "stars": 3,
+   "archived": false,
+   "full_name": "Ivis4ml/ssemQr",
+   "readme": ""
+  },
+  "BrentLab/TFPertRespExplainer": {
+   "description": "Predict genes' response to perturbations and explains which genomic factors determine the response predictions.",
+   "topics": [],
+   "stars": 3,
+   "archived": false,
+   "full_name": "BrentLab/TFPertRespExplainer",
+   "readme": ""
+  },
+  "huishenlab/dupsifter": {
+   "description": "WGBS/WGS PCR Duplicate Marking",
+   "topics": [],
+   "stars": 6,
+   "archived": false,
+   "full_name": "huishenlab/dupsifter",
+   "readme": ""
+  },
+  "HaoWuLab-Bioinformatics/iEnhancer-SKNN": {
+   "description": "iEnhancer-SKNN is a stacking ensemble learning model for accurately predicting enhancers and their strength.",
+   "topics": [],
+   "stars": 1,
+   "archived": false,
+   "full_name": "HaoWuLab-Bioinformatics/iEnhancer-SKNN",
+   "readme": ""
+  },
+  "hkwkevin28/MIC-MEME": {
+   "description": null,
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "hkwkevin28/MIC-MEME",
+   "readme": "#2017-2-5 by huangkw\nMIC-MEME is a parallel implementation of MEME based on hybrid CPU/MIC computing framework.The basic version of MEME we use is v4.11.2"
+  },
+  "QiZhangStat/ALIdetection": {
+   "description": "Detecting ALlelic Imbalance (ALI) from NGS data",
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "QiZhangStat/ALIdetection",
+   "readme": ""
+  },
+  "HaoWuLab-Bioinformatics/Be1DCNN": {
+   "description": null,
+   "topics": [],
+   "stars": 2,
+   "archived": false,
+   "full_name": "HaoWuLab-Bioinformatics/Be1DCNN",
+   "readme": "# Bi-1DCNN\n\n#### \u4ecb\u7ecd\nNeural network model for chromatin loop prediction based on bagging integrated learning\n\n\n#### \u5b89\u88c5\u6559\u7a0b\n\n\u4e0b\u8f7d\u6e90\u7801\u6216\u8005fork\uff0c\u5728\u6839\u76ee\u5f55\u4e0b\u8fd0\u884c\u811a\u672c python setup.py install\u3002\n\u8fdb\u5165bi1dcnn\u76ee\u5f55\u8fd0\u884ctrainModels\u6765\u8bad\u7ec3\u6a21\u578b\u3002\n\n#### \u4f7f\u7528\u8bf4\u660e\n\n\u53ea\u9700\u4e0b\u8f7d\u6e90\u7801\uff0c\u4f7f\u7528\u6307\u4ee4 python train_models.py\u5373\u53ef\u8bad\u7ec3\u6a21\u578b\u3002\u5982\u9700\u8981\u66f4\u6362\u8bad\u7ec3\u96c6\uff0c\u8bf7\u4ecetrain_models.py\u6e90\u7801\u4e2d\u4fee\u6539Apath\u548cAbedpe\u7b49\u53c2\u6570\u3002\npython \n\n#### \u53c2\u4e0e\u8d21\u732e\n\n1.  Fork \u672c\u4ed3\u5e93\n2.  \u65b0\u5efa Feat_xxx \u5206\u652f\n3.  \u63d0\u4ea4\u4ee3\u7801\n4.  \u65b0\u5efa Pull Request"
+  },
+  "chupan1218/BiModule": {
+   "description": null,
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "chupan1218/BiModule",
+   "readme": "# BiModule"
+  },
+  "BGI-SZ/BSVF": {
+   "description": "Bisulfite Sequencing Virus integration Finder",
+   "topics": [
+    "bisulfite-sequencing",
+    "carcinogenesis",
+    "dna-methylation",
+    "virus-integration"
+   ],
+   "stars": 4,
+   "archived": false,
+   "full_name": "BGI-SZ/BSVF",
+   "readme": ""
+  },
+  "lauromoraes/CapsNet-promoter": {
+   "description": null,
+   "topics": [],
+   "stars": 6,
+   "archived": false,
+   "full_name": "lauromoraes/CapsNet-promoter",
+   "readme": "## NOTE\nThis implementation is fork of https://github.com/XifengGuo/CapsNet-Keras , applied to promoters datasets.\n\n\n\n# CapsNet-promoter\n\nA Keras implementation of CapsNet in the paper:\n[Sara Sabour, Nicholas Frosst, Geoffrey E Hinton. Dynamic Routing Between Capsules. NIPS 2017](https://arxiv.org/abs/1710.09829)\n\n\n\n\n\n## Requirements\n- [Keras](https://github.com/fchollet/keras) \n- matplotlib\n"
+  },
+  "Nastume777/DeepGRNCS": {
+   "description": null,
+   "topics": [],
+   "stars": 2,
+   "archived": false,
+   "full_name": "Nastume777/DeepGRNCS",
+   "readme": "# DeepGRNCS: Deep learning-based framework for jointly inferring Gene Regulatory Networks across Cell Subpopulations\n\n## Dependencies\n- Python == 3.9\n- Pytorch == 2.0.0\n- scikit-learn == 1.3.0\n- numpy == 1.22.3\n- pandas == 2.0.3\n\n## Usage\n### Dataset\n1. For simulated gene expression datasets, regulatory networks between genes are inferred. Prepare the gene expression dataset in the following format:\n\n  |       | Cell1| Cell2|\u2026\u2026|\n  |-------|------|------|--|\n  | Gene1 | 0.046| 1.720|\u2026\u2026|\n  | Gene2 | 1.817| 0.019|\u2026\u2026|\n  | \u2026\u2026 | \u2026\u2026| \u2026\u2026|\u2026\u2026|\n\n2. For real gene expression datasets, regulatory networks between tfs and genes are inferred. Prepare the scRNA-seq dataset (as above), along with information on TFs and genes in the following format:\n\n  | TF|index|\n  |-------|------|\n  | TF1|1|\n  | TF2|3|\n  | \u2026\u2026 | \u2026\u2026|\n\n  | Gene|index|\n  |-------|------|\n  | Gene1|0|\n  | Gene2|2|\n  | \u2026\u2026 | \u2026\u2026|\n\nWhere 'index' indicates the column index position of the TF (gene) in the scRNA-seq dataset.\n\n### Command to run DeepGRNSC\n1. Inferring GRNs based on Gaussian simulated datasets:\n  ```\n  python main.py --task \"DeepGRNCS_demo\" --data_file \"data/ExpressionData\" --save_name \"output\" --net_number 3\n  ```\n\n2. Inferri"
+  },
+  "sb111169/tf-5mc": null,
+  "NIGMS/NIGMS-Sandbox": {
+   "description": "Collection of cloud-based biomedical data science learning modules funded by the National Institute of General Medical Sciences at the NIH",
+   "topics": [
+    "bioinformatics",
+    "google-cloud-platform",
+    "life-sciences",
+    "nih"
+   ],
+   "stars": 93,
+   "archived": false,
+   "full_name": "NIGMS/NIGMS-Sandbox",
+   "readme": ""
+  },
+  "lab-medvedeva/SAPIEnS": {
+   "description": null,
+   "topics": [],
+   "stars": 2,
+   "archived": false,
+   "full_name": "lab-medvedeva/SAPIEnS",
+   "readme": "# scATAC-seq preprocessing and imputation evaluation system for visualization, clustering and digital footprinting\n\n## Requirements\n\n* Python 3.7+\n* Docker for running inside containers\n* R 4.3.0 for running Cicero\n* CUDA 11.0+\n\n## Installation steps\n\nWe represent three options for you to install evaluation system.\n\n### Option 1. Docker images\nWe prepared Docker images to run evaluation system in Docker. Please, complete this steps using Docker images. CPU version:\n```\ndocker pull akhtyamovpavel/sapiens:cpu\ndocker run -v <full path to datasets>:/home/ubuntu/Datasets --name sapiens -it -d akhtyamovpavel akhtyamovpavel/sapiens:cpu bash\n```\nGPU version (SCALE supported)\n```\ndocker pull akhtyamovpavel/sapiens:gpu\ndocker run --gpus all --shm-size 10G -v <full path to datasets>:/home/ubuntu/Datasets --name sapiens -it -d akhtyamovpavel akhtyamovpavel/sapiens:gpu bash\n```\n\n### Option 2. Build Docker image\n1. CPU version:\n```\ndocker build -f Dockerfile-cpu -t lab-medvedeva/sapiens:cpu .\ndocker run -v <full path to datasets>:/home/ubuntu/Datasets --name sapiens -it -d akhtyamovpavel akhtyamovpavel/sapiens:cpu bash\n```\n2. GPU version:\n```\ndocker build -f Dockerfile -t lab-medvedeva/sapiens:g"
+  },
+  "wmalab/scHiCDiff": {
+   "description": null,
+   "topics": [],
+   "stars": 3,
+   "archived": false,
+   "full_name": "wmalab/scHiCDiff",
+   "readme": "# scHiCDiff\n\nscHiCDiff is a novel statistical algorithm to detect differential chromatin interactions (DCIs) between two Hi-C experiments at single-cell level. Here, we introduced 4 ways to capture the DCIs: two non-parametric tests (Kolmogorov\u2013Smirnov test/ Cram\u00e9r-von Mises test) and parametric likelihood ratio test with two regression models (Negative Binomial/ Zero-inflated Negative Binomial). Non-parametric tests are advantageous by allowing us detecting DCIs without any assumption on data distribution; negative binomial(NB) is the most common assumption for interaction counts in bulk Hi-C parametric approaches, while zero-inflated Negative Binomial(ZINB) regression models is specially designated for the interaction comparison at single-cell level by taking the excessive zeros feature into consideration.\n\n\n# Installation\n\nTo install and load the developmental version of scHiCDiff in R:\n\n```\n\ninstall.packages(\"path/scHiCDiff_1.0.tar.gz\", repos = NULL, type =\"source\")\nlibrary(scHiCDiff)\n\n```\n# License\n\n MIT\n\n# Usage\n\nThe functions in scHiCDiff can be classified as two types: The first type is the normalization function (scHiCDiff.sim) and the other type is the detection function "
+  },
+  "seferlab/sqtlhic": {
+   "description": null,
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "seferlab/sqtlhic",
+   "readme": "# Joint Analysis of sQTL and Hi-C in Cancer Tissues\n\nThis repository reproduces all analyses from the paper:\n\n**\"Joint Analysis of sQTL and Hi-C Reveals Spatial Proximity Between sQTLs and Target Genes in Cancer Tissues\"**  \nBatuhan Eralp & Emre Sefer, *Scientific Reports*\n\n---\n\n## \ud83d\udccc Overview\n\nThis pipeline jointly analyzes:\n- **Hi-C interaction frequency** (CIF)\n- **Splicing QTLs (sQTLs)** and **expression QTLs (eQTLs)**\n- **TADs**, **compartment domains**, and **FIREs**\n\nKey tasks:\n- Regression analysis of CIF vs sGenes\n- Enrichment of sQTL-gene pairs within TADs & compartments\n- Overlap of tissue-specific sQTLs with FIREs\n\n---\n\n## \ud83d\udcc1 Directory Structure\n\n```\nsqtl_hic_analysis/\n\u251c\u2500\u2500 run_pipeline.py             # Main script\n\u251c\u2500\u2500 data_loader.py              # Data reading & mapping\n\u251c\u2500\u2500 regression_analysis.py      # Negative binomial and linear models\n\u251c\u2500\u2500 enrichment_analysis.py      # TAD & compartment enrichment\n\u251c\u2500\u2500 fire_analysis.py            # FIRE overlap and statistics\n\u251c\u2500\u2500 visualization.py            # Figure generation\n\u251c\u2500\u2500 requirements.txt\n\u251c\u2500\u2500 README.md\n\u251c\u2500\u2500 results/                    # Output folder\n\u2514\u2500\u2500 data/\n    \u251c\u2500\u2500 sqtl/                   # sQTL TSV files\n    \u251c\u2500\u2500 eqtl/       "
+  },
+  "XingTang2014/annoPeak": {
+   "description": null,
+   "topics": [],
+   "stars": 7,
+   "archived": false,
+   "full_name": "XingTang2014/annoPeak",
+   "readme": "# annoPeak\nThis application was developed to help biologists visualize their ChIP-seq/ChIP-exo results and generate or validate their hypothesis eventually. To access this application, users can download this package and deploy it within R. Users can also access our online service from https://apps.medgen.iupui.edu/rsc/content/19/\n\n## Features\n* This application allows users to generate multiple types plots to compare multiple ChIP-seq/ChIP-exo experiments. \n* Peak sets from ChIP-seq/ChIP-exo experiments can be uploaded in a bed format. \n* annoPeak is constituted by 5 analysis modules: Peak associated gene structures, Peak size distribution, Peak to nearest peak distances, Overlapping peak identifications, Overlapping peak-associated genes.\n\n## Required R packages\n* Shiny\n* GenomicRanges \n* VennDiagram\n* ggplot2\n* RColorBrewer\n* reshape2\n* ChIPpeakAnno \n* xtable\n* biomaRt \n* GSEABase \n* GO.db \n* GOstats\n* TxDb.Mmusculus.UCSC.mm9.knownGene\n* TxDb.Mmusculus.UCSC.mm10.knownGene\n* TxDb.Hsapiens.UCSC.hg18.knownGene\n* TxDb.Hsapiens.UCSC.hg19.knownGene\n* TxDb.Hsapiens.UCSC.hg38.knownGene\n* org.Hs.eg.db \n* org.Mm.eg.db \n\n## Installation\n* Install R and RStudio\n\nPlease download the right ve"
+  },
+  "McIntyre-Lab/BayesASE": {
+   "description": "Bayesian analysis of allele specific expression",
+   "topics": [],
+   "stars": 3,
+   "archived": false,
+   "full_name": "McIntyre-Lab/BayesASE",
+   "readme": ""
+  },
+  "wangyang199897/CD-Loop": {
+   "description": "CD-Loop: A chromatin loop detection method based on the diffusion model",
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "wangyang199897/CD-Loop",
+   "readme": ""
+  },
+  "vidarmehr/ChIPWig-v2": {
+   "description": null,
+   "topics": [],
+   "stars": 6,
+   "archived": false,
+   "full_name": "vidarmehr/ChIPWig-v2",
+   "readme": "# ChIPWig-v2\nThe ChIPWig tool provides compression/decompression for the ChIP-seq Wig files. \n\nCopyright by Vida Ravanmehr, 2017.\n\nPlease contact <redacted> or <redacted> for any questions.\n\n\n\n                                                      Lossless ChIPWig:\n\t\t\t\t\t\t  \nTo compress a file, please use:\n\n wig2chipwig [InputFile] [OutputFile] \n \noptions: \n\n-r [B, encode block size from 12 to 18]\n\tfor random access and encode by blocks of size 2^B \n\n===========\n\nTo decompress a file, please use:\n\n chipwig2wig [InputFile] [OutputFile] \n \noptions:\n\n-b \ndecompresses a whole file that has been compressed by encoding block-by-block.\n\n Note: The input file must be a block-wise compressed ChIP-seq file. If the file has been compressed in a standard mode, please use the first command, which is chipwig2wig [InputFile] [OutputFile], to decompress the file.\n \n-s [ChrmName (e.g. chr1)] [Query Start (integer)] [Query End (integer)] \n\tsubsequence query \n\nNote: This command provides three output files:\n\n1. Outputfile which contains the information of chromosome ChrName for locations between Query Start and Query End.\n\n2. OutpufileSeq which is the decompressed file of the block("
+  },
+  "Cuily-v/Colorectal_cancer": {
+   "description": null,
+   "topics": [],
+   "stars": 1,
+   "archived": false,
+   "full_name": "Cuily-v/Colorectal_cancer",
+   "readme": "# Unsupervised construction of gene regulatory network based on single-cell multi-omics data of colorectal cancer\n## scATAC-seq data preprocessing\n1. [index](https://bowtie-bio.sourceforge.net/bowtie2/manual.shtml): Used in 'Bowtie2'.  \n2. [Human genome annotation information](https://www.gencodegenes.org/human/): Calculate the gene symbol based on the results of calling peaks.  \n## Database\n1. [Gene Expression Nebulas Database](https://ngdc.cncb.ac.cn/gen/): scRNA-seq data.  \n2. [Gene Expression Omnibus Database](https://www.ncbi.nlm.nih.gov/geo/): scATAC-seq data.  \n##  Visualization of gene regulatory networks\n1. [GRAND](https://grand.networkmedicine.org/): Visualization of gene regulatory networks. GRAND is a collection of gene regulatory networks derived from human tissues, cancer, cell lines, and small molecule drugs.     \n## Accuracy verification\n1. [TRRUST](https://www.grnpedia.org/trrust/): a manually curated database of human and mouse transcriptional regulatory networks.  \n2. [RegNetwork](https://regnetworkweb.org/home.jsp): RegNetwork integrates the curated regulations in various databases and the potential regulations inferred based on the transcription factor binding "
+  },
+  "Hongyu-Miao/DMI": {
+   "description": "Decomposable Multi-structure Identification Algorithm",
+   "topics": [],
+   "stars": 2,
+   "archived": false,
+   "full_name": "Hongyu-Miao/DMI",
+   "readme": ""
+  },
+  "megrawlab/IndeCut": {
+   "description": "A first method to evaluate uniform/independent graph sampling ",
+   "topics": [],
+   "stars": 6,
+   "archived": false,
+   "full_name": "megrawlab/IndeCut",
+   "readme": ""
+  },
+  "leirufeng/iPro2L-DG": {
+   "description": null,
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "leirufeng/iPro2L-DG",
+   "readme": ""
+  },
+  "ZWangTen/MethParquet": {
+   "description": "Manipulate and analyze methylation data using Apache Parquet",
+   "topics": [],
+   "stars": 1,
+   "archived": false,
+   "full_name": "ZWangTen/MethParquet",
+   "readme": ""
+  },
+  "yuabrahamliu/methylClass": {
+   "description": "methylClass is an R package for methylation-based classification and diagnosis",
+   "topics": [],
+   "stars": 2,
+   "archived": false,
+   "full_name": "yuabrahamliu/methylClass",
+   "readme": ""
+  },
+  "SaniyaKhullar/NetREm": {
+   "description": "Network Regression Embeddings reveal cell-type Transcription Factor coordination for target gene (TG) regulation",
+   "topics": [
+    "bioinformatics-software",
+    "gene-expression-profiles",
+    "gene-regulatory-network-inference",
+    "multiomics-data",
+    "netrem",
+    "network-based-inference",
+    "network-guided-regression",
+    "network-lasso",
+    "network-regularization",
+    "ppi-networks",
+    "predictor-interactions",
+    "protein-interaction",
+    "regression-embeddings",
+    "regression-with-prior-knowledge",
+    "regularization-embeddings",
+    "single-cell-analysis",
+    "transcription-factor-coordination",
+    "transcription-factors",
+    "transcriptional-regulatory-network"
+   ],
+   "stars": 9,
+   "archived": false,
+   "full_name": "SaniyaKhullar/NetREm",
+   "readme": ""
+  },
+  "lieboldj/StrucTFactor": {
+   "description": "Official implementation: Transcription factor prediction using protein 3D structures",
+   "topics": [],
+   "stars": 8,
+   "archived": false,
+   "full_name": "lieboldj/StrucTFactor",
+   "readme": ""
+  },
+  "Pandaman-Ryan/AgentBind-brain": {
+   "description": "This is an application of AgentBind on studying brain disorders.",
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "Pandaman-Ryan/AgentBind-brain",
+   "readme": ""
+  },
+  "redaq/atMPRA": {
+   "description": "Analysis Toolset for Massively Parallel Reporter Assay data",
+   "topics": [],
+   "stars": 3,
+   "archived": false,
+   "full_name": "redaq/atMPRA",
+   "readme": ""
+  },
+  "eunjikim-angie/CanalizingPower": {
+   "description": null,
+   "topics": [],
+   "stars": 1,
+   "archived": false,
+   "full_name": "eunjikim-angie/CanalizingPower",
+   "readme": "# General Information\n\nThe files contained in this download were used for paper submission. Detailed information about the paper will be provided. These codes have been developed and tested on MATLAB R2016b.\n\n## Getting Started\n1. Clone this repository to your computer using `git`, or download the entire repository.\n2. Unzip the `CP.zip` file, and run the `example.m`\n\n## Reference\nFunctions from BN/PBN toolbox [1] introduced by L\u00e4hdesm\u00e4ki and Shmulevich were used to simulate a synthetic Boolean network.\n\n[1] BN/PBN toolbox website. Available: http://code.google.com/p/pbn-matlab-toolbox. Accessed 2014 May 22.\n\n"
+  },
+  "kuikui-C/DconnLoop": {
+   "description": "A deep learning approach using multi-source data integration to predict chromatin loops.",
+   "topics": [],
+   "stars": 1,
+   "archived": false,
+   "full_name": "kuikui-C/DconnLoop",
+   "readme": ""
+  },
+  "nazanintbtb/DeepEPI": {
+   "description": null,
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "nazanintbtb/DeepEPI",
+   "readme": "# DeepEPI\nDeepEPI is a deep learning model designed to advance the study of Enhancer-Promoter Interactions (EPIs) using genomic sequences. By incorporating Convolutional Neural Networks (CNN) and Transformer blocks, our model aims to unravel the complex interplay between enhancers and promoters. DeepEPI employs innovative methods such as embedding layers for one-hot coding and multihead attention mechanisms to enhance the detection and interaction analysis of Transcription Factors (TFs).\n# DATASET\n**Data_Augmentation.R**\n\n**A tool of data augmentation provided by Mao et al. (2017). The details of the tool can be seen in https://github.com/wgmao/EPIANN.\nWe used this tool to create and amplify the positive samples in the training set to 20 times to achieve class balance.**\n# USAGE\n### Need package\npython3.9.18,  tensorflow==2.10.1, scikit-learn==1.4.0, numpy==1.26.4, gensim==4.3.2, cuda and cuDNN if you have GPU\n###  Preprocess instructions\n**If you want to use embedding_onehot encoding, run python (embedding_onehot.py) else if you want to use DNA2Vec encoding, run (python DNA2Vec.py)**\n### Train instruction\npyhton train.py [tool name] [cel line name]\n\ntool name can be = DNA2Vec_Deep"
+  },
+  "modENCODE-DCC/Galaxy": {
+   "description": "modENCODE Galaxy on Amazon Cloud",
+   "topics": [],
+   "stars": 12,
+   "archived": false,
+   "full_name": "modENCODE-DCC/Galaxy",
+   "readme": ""
+  },
+  "leirufeng/i5mC-DCGA": {
+   "description": null,
+   "topics": [],
+   "stars": 1,
+   "archived": false,
+   "full_name": "leirufeng/i5mC-DCGA",
+   "readme": ""
+  },
+  "senresearch/LiteQTL.jl": {
+   "description": "A lightweight Julia package for eQTL genome scans near real-time.",
+   "topics": [
+    "eqtl",
+    "genome-scan",
+    "gpu-computing",
+    "julia",
+    "linearmodel"
+   ],
+   "stars": 4,
+   "archived": false,
+   "full_name": "senresearch/LiteQTL.jl",
+   "readme": ""
+  },
+  "15831959673/MuSE": {
+   "description": null,
+   "topics": [],
+   "stars": 3,
+   "archived": false,
+   "full_name": "15831959673/MuSE",
+   "readme": "# MuSE\nMuSE:A Deep Learning Model based on Multi-Feature Fusion for Super-Enhancer Prediction\n\n\n## 1. Create one-hot features\n\nCreate a directory one hot under the path MuSE/datasets/, next\n\n- *python create_onehot.py* \n\n\n\n## 1. File descriptions\n\n### human_model/mouse_model\n\n#### data_preparation.py\n\nData processing for loading X2 features.\n\n#### run.py\n\nLoad the model and the remaining two features, and calculate the evaluation metrics.\n\n### model\n\nThe trained human and mouse model parameters are saved in this file.\n\n## 2. Environment setup\n\nWe recommend you to build a python virtual environment with Anaconda. \n\n\n#### 2.1 Create and activate a new virtual environment\n\n```\nconda create -n MuSE python=3.8\nconda activate MuSE\n```\n\n\n\n#### 2.2 Install the package and other requirements\n\n```\npython -m pip install -r requirements.txt\n```\nIf you want to download the pytorch environment separately, execute this command\n```\nconda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia\n```\n\n\n\n## 3. Calculate evaluation indicators\n### human/mouse\n- *python run.py* \n"
+  },
+  "COMBINE-lab/piscem": {
+   "description": "Mapping sequencing data to De Bruijn graphs, fast",
+   "topics": [],
+   "stars": 37,
+   "archived": false,
+   "full_name": "COMBINE-lab/piscem",
+   "readme": ""
+  },
+  "Iuliana-Ionita-Laza/PO.EN": {
+   "description": "An Elastic-Net Regularized Presence-Only Model",
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "Iuliana-Ionita-Laza/PO.EN",
+   "readme": ""
+  },
+  "ZhangLab312/BCDB": {
+   "description": null,
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "ZhangLab312/BCDB",
+   "readme": "# BCDB: A Dual-Branch Network Based on Transformer for Predicting Transcription Factor Binding Sites\n\nFirst, you need to download DNABERT. You can download it from https://github.com/jerryji1993/DNABERT. This project uses DNABERT6, which employs kmer=6. After downloading, place it in the current directory. Then, enter the following command to process the original TF data into K-mer format.\n```\npython process_690.py --kmer=6 --file_path=tf_data --output_path=./process_data/6\n```\nWhere file_path is the path to the original TF data, and output_path is the path for the preprocessed data. Finally, run the following.\n```\ntrain.py\n```\nYou need to change the path to the DNABERT in the train.py file to your download path.\n"
+  },
+  "OroujiLab/CUTandRun_Peak_Calling": {
+   "description": null,
+   "topics": [],
+   "stars": 2,
+   "archived": false,
+   "full_name": "OroujiLab/CUTandRun_Peak_Calling",
+   "readme": "![](images/Readme_2.png)\n\n# Benchmarking Peak Calling Methods for CUT&RUN:\n\nCleavage Under Targets and Release Using Nuclease (CUT&RUN) has rapidly gained prominence as an effective approach for mapping protein-DNA interactions, especially histone modifications, offering substantial improvements over conventional chromatin immunoprecipitation sequencing (ChIP-seq). However, the effectiveness of this technique is contingent upon accurate peak identification, necessitating the use of optimal peak calling methods tailored to the unique characteristics of CUT&RUN data. Here, we benchmark four prominent peak calling tools - MACS2, SEACR, GoPeaks, and LanceOtron - evaluating their performance in identifying peaks from CUT&RUN datasets. Our analysis utilizes in-house data of three histone marks (H3K4me3, H3K27ac, and H3K27me3) from mouse brain tissue, as well as samples from the 4DNucleome database. We systematically assess these tools based on parameters such as the number of peaks called, peak length distribution, signal enrichment, computational efficiency, and reproducibility across biological replicates. Our findings reveal substantial variability in peak calling efficacy, with each "
+  },
+  "BiodataAnalysisGroup/CWL_HTS_pipelines": {
+   "description": "CWL workflows and wrappers for processing HTS data from RNA-Seq, ChIP-Seq and Germline Variant calling experiments",
+   "topics": [],
+   "stars": 6,
+   "archived": false,
+   "full_name": "BiodataAnalysisGroup/CWL_HTS_pipelines",
+   "readme": ""
+  },
+  "hirvolt1/debruijn-motif": {
+   "description": "Protein motif finder",
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "hirvolt1/debruijn-motif",
+   "readme": ""
+  },
+  "zwang-bioinformatics/HiC2MicroC": {
+   "description": null,
+   "topics": [],
+   "stars": 5,
+   "archived": false,
+   "full_name": "zwang-bioinformatics/HiC2MicroC",
+   "readme": "# HiC2MicroC\n\n## Install\n\nThe following Python libraries are required. \n\n    1. Cooler (https://cooler.readthedocs.io/en/latest/index.html)\n    2. Pytorch \n    3. NumPy\n    4. Pandas\n    5. SciPy\n    6. einops (https://einops.rocks/) \n\n\n## Usage \n\nThree parameters required:\n\npython HiC2MicroC.py -f1 file1 -f2 file2 -f3 file3\n\n1. file1: a 5-kb Hi-C file in cool format\n1. file2: chromosome size file\n1. file3: output prefix\n\nHiC2MicroC will generate file3.cool, which is our predicted Micro-C file. \n"
+  },
+  "Zheng-Lab/MetaGRN": {
+   "description": "A meta-analysis of different GRN inference algorithms",
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "Zheng-Lab/MetaGRN",
+   "readme": ""
+  },
+  "yunliUNC/HPTAD": {
+   "description": "HPTAD is a method for calling TADs from HiChIP / PLAC-seq data",
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "yunliUNC/HPTAD",
+   "readme": ""
+  },
+  "weberlab-hhu/Predmoter": {
+   "description": "Deep Learning application to predict NGS data",
+   "topics": [],
+   "stars": 6,
+   "archived": false,
+   "full_name": "weberlab-hhu/Predmoter",
+   "readme": ""
+  },
+  "katouMegumiH/Promoter_BERT": {
+   "description": "Accurate identification of promoter sites is essential for deciphering gene expression patterns and the role of gene regulatory networks.",
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "katouMegumiH/Promoter_BERT",
+   "readme": ""
+  },
+  "laigen-unam/tf-properties-summarizer": {
+   "description": "Knowledge extraction for assisted curation of summaries of bacterial transcription factor properties.",
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "laigen-unam/tf-properties-summarizer",
+   "readme": ""
+  },
+  "lapohosorsolya/accessible_seq2exp": {
+   "description": "Refining sequence-to-expression modelling with chromatin accessibility",
+   "topics": [],
+   "stars": 8,
+   "archived": false,
+   "full_name": "lapohosorsolya/accessible_seq2exp",
+   "readme": ""
+  },
+  "zhanglabvt/BAM_ABS": {
+   "description": null,
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "zhanglabvt/BAM_ABS",
+   "readme": "Author: Saima Sultana Tithi and Hong Tran\n\n####Introduction\nBAM_ABS is a tool which simulates a Bayesian model that computes the posterior probability of mapping a multiread to each candidate genomic location, taking advantage of uniquely aligned reads. The inputs of this tool are a set of ambiguously mapped reads and a set of uniquely mapped reads from Bismark tool; and the output is the most probable genomic locations for those ambiguously mapped reads. The most probable genomic location is the location which has the highest calculated probability.\n\n####System Requirement\nThis software package has been tested on Ubuntu 14.04 LTS. To run this program, user needs to have samtools, perl, bedtools, and g++ compiler installed on his/her Linux/UNIX system. This program has been tested using g++ 4.8.4.\n\n####Compilation\nIf you receive BAM_ABS as a compressed file, first decompress it. Then use the following commands to create the executable file:\n```\nmake clean\nmake\n```\nFor this command to work, the user needs g++ installed on his/her system. You can use the following command to install g++:\n```\nsudo apt-get install g++\n```\n\t\n####Execution\n#####a) Pre-process the input data:\n_Step 1_: If"
+  },
+  "JakobSkouPedersenLab/bayesReact": {
+   "description": "Model to evaluate the distribution of Regular Expressions (REs) across a ranked sequence lists. ",
+   "topics": [
+    "bayesian-inference",
+    "bioinformatics",
+    "generative-model",
+    "microrna",
+    "motif-analysis",
+    "probabilistic-models",
+    "regulatory-activity",
+    "rna-seq-analysis",
+    "single-cell",
+    "unsupervised"
+   ],
+   "stars": 0,
+   "archived": false,
+   "full_name": "JakobSkouPedersenLab/bayesReact",
+   "readme": ""
+  },
+  "hippo-yf/bsgenova": {
+   "description": "An accurate, robust, and fast genotype caller for bisulfite-sequencing data",
+   "topics": [],
+   "stars": 2,
+   "archived": false,
+   "full_name": "hippo-yf/bsgenova",
+   "readme": ""
+  },
+  "wllwuliliwll/CGLoop": {
+   "description": "CGLoop: A Neural Network Framework for Chromatin Loop Prediction.",
+   "topics": [],
+   "stars": 1,
+   "archived": false,
+   "full_name": "wllwuliliwll/CGLoop",
+   "readme": ""
+  },
+  "cobisLab/CRMIPred": {
+   "description": null,
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "cobisLab/CRMIPred",
+   "readme": "# CRMIPred (CRM Interaction Predictor)\n\n\n## Related paper:\nYu-Huai Yu+, Wei-Cheng Dai+, Zhi-Hao Jiang+ and Tzu-Hsien Yang* \"CRMIPred: identifying the spatial interactions among Drosophila cis-regulatory modules via considering their cross-attended epigenetic profiles\", (submitting).\n\n+: These authors contributed equally.\n\n## Prepare the Environment\n\nSuggested running environments: Linux Ubuntu 16.04.6, Python 3.8.13\n\nWe recommend that you can use the conda package to create a new environment. This will automatically install the required python packages. \n\nHere is an example: \n\n1. Install the Conda package for you system. The installation of the package can be found <a href=\"https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html\">here</a>. \n\n2. Create the CRMIPred Conda environment. This may take a while, depending on the network status.\n\n```\nconda create -n \"CRMIPred\" python=3.8.13\n```\n\n3. Activate your CRMIPred Conda environment. \n\n```\nconda activate CRMIPred\n```\n\n## Steps to Use CRMIPred\n\n1. Download the codes from the following link and unzip the file. Please skip it if you have done this step.\n\n```\nwget https://cobis-fs.bme.ncku.edu.tw/CRMIPred/CRMIPred.ta"
+  },
+  "dvav/eQTLBookChapter": {
+   "description": "Book chapter on Bayesian eQTL mapping using Stan",
+   "topics": [
+    "bayesian-variable-selection",
+    "black-box-bayesian-inference",
+    "eqtl-mapping",
+    "global-local-shrinkage",
+    "horseshoe-prior",
+    "probabilistic-programming",
+    "rna-seq",
+    "rstan",
+    "rstats",
+    "stan"
+   ],
+   "stars": 1,
+   "archived": false,
+   "full_name": "dvav/eQTLBookChapter",
+   "readme": ""
+  },
+  "FischerJo/FAME": {
+   "description": null,
+   "topics": [],
+   "stars": 14,
+   "archived": false,
+   "full_name": "FischerJo/FAME",
+   "readme": "# FAME\n\n**F**ast and **A**ccurate **ME**thylation Aligner for large mammalian genomes.\nCarries out alignment and methylation calling for CpGs of Whole Genome Bisulfite Sequencing (WGBS) reads in one go without the need of intermediate alignment or buffer files. \nThe algorithm is working on the full alphabet (A,C,G,T), resolving the asymmetric mapping problem\\* correctly.\nReference genomes are expected to be .fasta files and reads in .fastq (or .fastq.gz) format.\n\nThe code is written in C++ and parallelized using OpenMP and is licensed under GPL3.\n\n\\*In WGBS experiments, unmethylated Cytosines are converted to Thymines in Reads, thus it is necessary to allow\nRead Thymines to map to Reference Cytosines, but not vice versa. This is termed asymmetric mapping problem and is commonly tackled by working only on the reduced alphabet (A,T,G), which results in false matchings of reference Ts to read Cs.\n\n## 0) News\n\n7/27/2021\tNew beta release v0.3 with several important bugfixes.\n\nThere is now an alpha release for single cell support.\n\n## 1) Getting Started\n\nThe following steps explain how to install and setup FAME .\n\n\n### A) Dependencies\n\nFAME is dependent on the following libraries, which "
+  },
+  "katlande/PCBS": {
+   "description": "Principle Component BiSulfite: a peer-reviewed R package for methylation analysis.",
+   "topics": [],
+   "stars": 1,
+   "archived": false,
+   "full_name": "katlande/PCBS",
+   "readme": ""
+  },
+  "YidanSunResearchLab/SnakeAltPromoter": {
+   "description": "A Comprehensive Pipeline for Differential Alternative Promoter Analysis",
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "YidanSunResearchLab/SnakeAltPromoter",
+   "readme": ""
+  },
+  "AMSSwanglab/SpecLoop": {
+   "description": "SpecLoop is a method for predicting cell type-specific chromatin loops via transcription factor cooperation.",
+   "topics": [],
+   "stars": 1,
+   "archived": false,
+   "full_name": "AMSSwanglab/SpecLoop",
+   "readme": ""
+  },
+  "namshik/tigeri": {
+   "description": "TIGERi: T FA I llustrator for G lobal E xplanation of R egulatory i nteractions",
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "namshik/tigeri",
+   "readme": ""
+  },
+  "lapohosorsolya/AmalgaMo": {
+   "description": null,
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "lapohosorsolya/AmalgaMo",
+   "readme": "# AmalgaMo: Motif Amalgamator\n\nThis repository houses AmalgaMo, a tool developed for flexible merging of DNA- or RNA-binding motifs of any organism, as well as our optimized merged HOCOMOCO human DNA-binding motif set in multiple formats.\n\n**Contents**\n\n- [Overview](#overview)\n- [Download](#download)\n- [Dependencies](#dependencies)\n- [AmalgaMo usage](#amalgamo-usage)\n  - [Input](#input)\n  - [Output](#output)\n  - [Converting AmalgaMo output to JASPAR format](#converting-amalgamo-output-to-jaspar-format)\n- [Using the output of AmalgaMo for monaLisa's randomized Lasso stability selection](#using-the-output-of-amalgamo-for-monalisas-randomized-lasso-stability-selection)\n  - [Environment for monaLisa pipeline](#environment-for-monalisa-pipeline)\n  - [Running monaLisa's randomized Lasso stability selection](#running-monalisas-randomized-lasso-stability-selection)\n- [Notes](#notes)\n\n\n## Overview\n\nGiven any set of input motifs for DNA-/RNA-binding proteins in HOCOMOCO, JASPAR, MEME, or CisBP format, AmalgaMo iteratively merges the most similar pairs according to the user-specified parameters, generating position-probability matrices, logos, and merging information for each resultant motif "
+  },
+  "jadermcg/biomapp-chip": {
+   "description": null,
+   "topics": [],
+   "stars": 3,
+   "archived": false,
+   "full_name": "jadermcg/biomapp-chip",
+   "readme": "# BIOMAPP::CHIP: Large-Scale Motif Analysis\n\n## Overview\n\n`Biomapp::chip` is a Linux/C++ computational tool designed for the efficient discovery of biological motifs in large datasets, specifically optimized for ChIP-seq data. Utilizing advanced k-mer counting algorithms and data structures, it offers a streamlined, accurate, and fast approach to motif discovery.\n\n## Quick start\n\n### Installation\n\n#### Step 1: Download the Binary Files\nFirst, you need to download all the contents of the `bin` directory from this GitHub repository. You can do this easily with svn. First install subversion: ```sudo apt install subversion``` and then run the following command within the directory in which you want to install Biomapp::chip: ```svn export https://github.com/jadermcg/ biomapp-chip/trunk/bin```.\n\n#### Step 2: Place the Binary Files\nAfter downloading, place the binary files in a directory of your choice on your computer. For example, you could place them in a folder called `biomapp_chip/bin` under your home directory. If you created the biomapp_chip directory and downloaded the files there, run this command line to make files executable ```sudo chmod -Rf u+x bin```.\n\n#### Step 3: Update th"
+  },
+  "hnikaein/bisHash": {
+   "description": null,
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "hnikaein/bisHash",
+   "readme": "# bisHash\n\n## Introduction\n\nbisHash is an advanced tool for aligning bisulfite-treated DNA sequences against a reference genome. This tool is developed in C++ to ensure accuracy and reliability in handling bisulfite sequencing data. While bisHash may not be the fastest aligner available, it is designed to provide highly accurate alignments, making it particularly suitable for studies where precision is paramount.\n\n## Installation\n\n### Prerequisites\n\nBefore installing bisHash, ensure you have the following prerequisites:\n\n- C++20 or later\n- CMake 3.16 or later\n- GCC or Clang compiler\n\n### Build Instructions\n\n1. Clone the repository:\n\n   ```bash\n   git clone https://github.com/hnikaein/bisHash.git\n   cd bisHash\n   ```\n\n2. Create a build directory and navigate into it:\n\n   ```bash\n   mkdir build\n   cd build\n   ```\n\n3. Run CMake to configure the build:\n\n   ```bash\n   cmake ..\n   ```\n\n4. Compile the source code:\n\n   ```bash\n   make\n   ```\n\n## Usage\n\nOnce maked, you can run bisHash with the following command:\n\n```bash\n./bisHash -r reference_file -q query_file -o output_file [OPTIONS]\n```\n\n\n### Command Line Options\n\n- `-r` or `--ref`: Reference file path (in FASTA format).\n- `-q` or `--qu"
+  },
+  "KanZh/BMGRN": {
+   "description": "This repository contains the implementation of the BMGRN Model.",
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "KanZh/BMGRN",
+   "readme": ""
+  },
+  "ycheung5/cancersubtyper": {
+   "description": null,
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "ycheung5/cancersubtyper",
+   "readme": "# CancerSubtyper: A Deep Learning Framework for Cancer Subtyping Through DNA Methylation Data\n\n\n**CancerSubtyper** is an end-to-end computational framework for deep learning\u2013based cancer subtyping using DNA methylation data, which is accessible through an intuitive web interface designed to support interactive exploration and downstream analysis. It supports two complementary models\u2014a semi-supervised classifier for cancers with well-defined subtypes, and a hybrid framework that enables the discovery of novel subtypes. CancerSubtyper provides automated data processing, feature selection, batch effect correction, and cancer subtyping along with extensive interactive visualizations for biological interpretation and clinical relevance assessment.\n\nThe platform currently includes:\n- **[BCtypeFinder](https://www.liebertpub.com/doi/abs/10.1177/15578666251380233?casa_token=FrsS1pL4s9EAAAAA%3ALj5R2mvC-Fvwf6j1QgLUi7qvyXVJ65__j5N-VfGLV9uNG3bmpppJMNV-xpmgqKSOuVJIk5Svw50)** \u2013 a semi-supervised classification approach optimized for cancers with well-established subtypes.\n- **[CancerSubminer](https://www.biorxiv.org/content/10.1101/2025.10.17.682936v1)** \u2013 an integrative framework that combines s"
+  },
+  "maruyama-lab-design/CBOEP2": {
+   "description": null,
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "maruyama-lab-design/CBOEP2",
+   "readme": "# Generators of Negative enhancer-promoter pairs, CBMF (Class Balanced negative set by Maximum-Flow) and CBGS (Class Balanced negative set by Gibbs Sampling)\n\nThis repository contains files related to our methods, CBMF and CBGS, a methods for generating sets of negative enhancer-promoter interactions (EPIs) from positive EPIs. \nThe implementations of the methods are `cbmf.py` and `cbgs.py` in the top directory. \n\nThe preliminary work has been published in the preceedings of ACM-BCB 2023 [1]. \nThe codes are publicly available at \nhttps://github.com/maruyama-lab-design/CBOEP/tree/main. \nWe recommend to use the codes in this site instead of those of the preliminary work. \n\n\n# Preprocessing input datasets\n1. Download the BENGI datasets from https://github.com/chenkenbio/TransEPI.\n2. The data are imported, processed and saved into the directory, input_to_EPI_predictor/_BENGI-P_BENGI-N. \n```\n   cd utils\n   python import_bengi_data.py path_to_TransEPI-main/data/BENGI\n```\n3. The datasets get format change and are saved into the directory, input_to_EPI_predictor/_BENGI-P_retainedBENGI-N.\n```\n   python change_format.py\n```\n4. Filtering is appled. The resulting files are saved into the direct"
+  },
+  "ruiping-Feng/CCTAD": {
+   "description": null,
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "ruiping-Feng/CCTAD",
+   "readme": "# CCTAD: A topologically associating domains detection method integrating convolutional autoencoder and hierarchical clustering\n# About CCTAD\nCCTAD is an unsupervised framework for identifying topologically associating domains (TADs) from Hi-C contact matrices using a one-dimensional convolutional autoencoder combined with adjacency-constrained hierarchical clustering.\n# Requirements\npython=3.9.2\uff0ctorch=2.2.0+cu118\uff0cscikit-learn=1.6.1\uff0cnumpy=1.26.4\uff0cscipy=1.13.1\n# Usage\n## First --prepare_data\n1.Run the following command to download the raw Hi-C data required for the experiments:\n```\nsh download_raw_hic.sh\n```\n2.Run the following command to generate the KR-normalized contact frequency matrices (all required files are in the prepare_data folder):\n```\nsh dump_data_from_hic.sh\n```\n3.For the other two cell lines (IMR90 and K562), run the following command to obtain normalized data:\n```\nsh Cells_observed.sh\n```\n## Second --Threshold generation\nAfter obtaining the KR normalized Hi-C matrix, modify the relevant parameters in the best_t.ipynb file, including(For example, with \"HIC002_50k_KR.chr20\")\n```\ndir='/home/houshiyuan/frp/CCTAD'   # Set the main project directory\nDataset='HIC002'    # Da"
+  },
+  "BoevaLab/Chiron3D": {
+   "description": "An interpretable deep learning framework for understanding the DNA code of chromatin looping",
+   "topics": [],
+   "stars": 3,
+   "archived": false,
+   "full_name": "BoevaLab/Chiron3D",
+   "readme": ""
+  },
+  "EpiGenomicsCode/ChromEnhancer": {
+   "description": null,
+   "topics": [],
+   "stars": 1,
+   "archived": false,
+   "full_name": "EpiGenomicsCode/ChromEnhancer",
+   "readme": "# Adversarial attack of sequence-free enhancer prediction identifies patterns of chromatin architecture\n\n## Jamil Gafur<sup>1</sup>, Olivia W Lang<sup>2</sup>, & William KM Lai<sup>2,3</sup>\n\n<sup>1</sup> Department of Computer Science, University of Iowa, Iowa City, Iowa 52242, USA\n\n<sup>2</sup> Department of Molecular Biology and Genetics, Cornell University, Ithaca, NY 14850, USA\n\n<sup>3</sup> Department of Computational Biology, Cornell University, Ithaca, NY 14850, USA\n\n## Abstract\n\nThe wide range of cellular complexity created by multicellular organisms is due in large part to the intricate and synergistic interplay of regulatory complexes throughout the eukaryotic genome. These regulatory elements \u2018enhance\u2019 specific gene programs and have been shown to operate in diverse networks that are distinct across cell states of the same organism. Attempts to characterize and predict enhancers have typically focused on leveraging information-dense DNA sequence in parallel with epigenomic assays. We examined the viability of enhancer prediction using only a minimal set of epigenomic datasets without direct DNA information. We demonstrate that chromatin datasets are sufficient to identi"
+  },
+  "zhengbingzi/CNNKSCEC": {
+   "description": null,
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "zhengbingzi/CNNKSCEC",
+   "readme": "# Introduction\r\nCNNKSCEC:A Deep Learning\u2013Based Framework for Chromatin Loop Prediction with Multi-Source Feature Integration\r\n# Installation\r\nCNNKSCEC requires Python3 and several scientific packages to run.\r\n```\r\ngit clone https://github.com/zhengbingzi/CNNKSCEC.git\r\nconda create -n CNNKSCEC python=3.7.12\r\nconda activate CNNKSCEC\r\n```\r\nTo set up a conda virtual environment, the following installation packages are required:\r\nscikit-learn=1.0.2   \r\ntensorflow=2.11.0  \r\nhic-straw=1.3.1\r\njoblib=1.3.1  \r\nnumpy  \r\nscipy   \r\npandas\r\nmatplotlib\r\nh5py   \r\ncooler\r\npysam  \r\npyBigWig\r\ntqdm\r\njuicer_tools\r\n# Usage\r\n## Data preparation\r\nData preparation mainly involves:downloading the.hic file and extracting the hic contact matrix from the.hic file, and generating the hic submatrix;downloading the bigwig file based on DNase-seq and generating the corresponding dnase submatrix.\r\n### Extracting Hi-C contact matrix from.hic file\r\nThe process obtains the hic contact matrix for each chromosome from the.hic file.  \r\nThis process extracts the hic contact matrix of each chromosome at a specific resolution from the.hic file. It will output frequency_matrix file.\r\nModify the path to the input and output f"
+  },
+  "jasonzhao371/DeepOCR": {
+   "description": null,
+   "topics": [],
+   "stars": 1,
+   "archived": false,
+   "full_name": "jasonzhao371/DeepOCR",
+   "readme": "# DeepOCR                                          \n# a multi-species deep learning-based framework for accurate identification of open chromatin regions in livestock\n\n\n## INSTALLATION \ngit clone https://github.com/jasonzhao371/DeepOCR.git\n\n## Requirements\n- Scikit-learn (http://scikit-learn.org/)\n- tensorflow-gpu (https://pypi.org/project/tensorflow-gpu/)\n- bedtools (https://bedtools.readthedocs.io/en/latest/)\n- h5py (https://pypi.org/project/h5py/)\n\n# Instructions\n\n## Step 1.Preprocessing\n### To preprocess the sequences, use the following command:\n```shell\npython ./src/preprocess.py --out <output directory> --pos <positive samples file> --neg <negative samples file>\n```\n### It will output two files including the sequence encoding file and the label encoding file in the output directory.\n#### Arguments\n  \n- output directory: the output file path of the final processed data(npy format)\n  \n- positive samples file: positive samples(.fa)\n  \n ```\n e.g.\n >Chr:start-end\n  AAAGTTTATTTGAGGCTGGAACAGCACCAAGGGTATAAATGGAAAAAACAGAAGT...\n ```\nnegative samples file: negative samples(.fa)\n ```\n e.g.\n >Chr:start-end\n  AGGTGTTAACTTTTAAAGAAGAATATATTAAGTTATGCCTACCGTGGAATAAGGT...\n ```\n#### Notes\nIf you"
+  },
+  "lmylynn/EM-MUL": {
+   "description": "EM-MUL is an effective tools which resolves ambiguous bisulfite-treated reads, making use of information we have.  #To run this program, we needs to have samtools, perl, bedtools,and g++ first.  The  inputs of this tool consists four parts. -r is the reference genome to be aligned; -u is the unique reads; -m is multireads,which align to multiple locations of the reference genome ambiguously; -o is the unique reads that overlapped with multireads; Among them, the unique reads and the multireads are obtained by aligning the original BS reads to bismark. Overlapfile can be obtained through the unique reads and multireads, the processing flow refers to BAM_ABS, the commad is: samtools view -bS unique_reads.sam > unique_reads.bam perl Convert_to_bed_unite.pl --ambiguous ambiguous_file.sam samtools view -L ambiguous_file.bed unique_reads.bam -q 20 > unique_reads.sam sort -n -r -k3,3 -k4,4 -k5,5 unique_reads.sam|uniq -u > unique_reads_nodup.sam perl Convert_to_bed_unite.pl --unique unique_reads_nodup.sam ./intersectBed -a ambiguous_file.bed -b unique_reads_nodup.bed -wb -wa > overlapfile.txt #python3 new_score_all_and_coverage_human -r hg38 -u unique_reads.sam -m multireads.sam -r overlapfile.sam",
+   "topics": [],
+   "stars": 1,
+   "archived": false,
+   "full_name": "lmylynn/EM-MUL",
+   "readme": ""
+  },
+  "ziadbkh/eQTLHap": {
+   "description": "eQTLHap: a comprehensive eQTL analysis tool.",
+   "topics": [],
+   "stars": 11,
+   "archived": false,
+   "full_name": "ziadbkh/eQTLHap",
+   "readme": ""
+  },
+  "zjxywt/GLNet-TFBS": {
+   "description": null,
+   "topics": [],
+   "stars": 1,
+   "archived": false,
+   "full_name": "zjxywt/GLNet-TFBS",
+   "readme": "# GLNet-TFBS"
+  },
+  "snizam001/greenPipes": {
+   "description": null,
+   "topics": [],
+   "stars": 3,
+   "archived": false,
+   "full_name": "snizam001/greenPipes",
+   "readme": "# greenPipes\n\nAutomated data analysis platform for greenCUT&RUN and CUT&RUN genome-localization datasets with options for integration with other -omics technology data.\n\n<p align=\"center\">\n<img src=\"https://github.com/snizam001/greenPipes/assets/28807444/3a08074a-a612-49af-baa1-1e353075ec2e.jpeg\" align=\"left\" width=\"100%\" height='100%'/>\n</p>\n\n\n# Citation:\n\n     https://doi.org/10.1093/bioinformatics/btae307\n\n# Installation:\n\n      greenPipes is tested on Ubuntu (version 22.04.2 LTS) and CentOS (version 7) operating system. Follow the following steps to install greenPipes. Mamba should be installed in your system. Go to https://github.com/conda-forge/miniforge to find instructions.\n\n      1. Open terminal and navigate to the directory of greenPipes by using cd command e.g.\n      cd /home/user/Desktop/greenPipes\n      \n      2. Now run the bash file using following command:\n      bash Install_linux.sh\n\n# Usage:\n\n     Follow the handbook to learn about different modes and options available in the greenPipes pipeline.\n\n     Handbook or manual is available at following google drive link given below\n     and also present as supplementary file at https://doi.org/10.1093/bioinformatics/bt"
+  },
+  "emanlee/Hi-Enhancer": {
+   "description": "forecasting/prediction/identification/detection/discriminate/distinguish/recognition of enhancers   ",
+   "topics": [],
+   "stars": 1,
+   "archived": false,
+   "full_name": "emanlee/Hi-Enhancer",
+   "readme": ""
+  },
+  "CDL-HongwooLee/Hi-GDT": {
+   "description": null,
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "CDL-HongwooLee/Hi-GDT",
+   "readme": "# Hi-GDT : A Hi-C-based 3D gene domain analysis tool for analyzing local chromatin contacts in plants\n  \n![Picture1](https://github.com/user-attachments/assets/f7db1078-e67c-4ee4-9540-594578f8351e)\n\nFor any question about Hi-GDT, please contact <redacted>\n\nExample and raw data files are available at https://zenodo.org/records/14728732\n\n## Dependencies\npython3 >= 3.8.\n\nRequired packages: subprocess, numpy, pickle, multiprocessing, PIL, functools, itertools, scipy\n\n## Installation\nGithub install\n\n```\ngit clone https://github.com/CDL-HongwooLee/Hi-GDT\n```\n\n# Quick start\n\nHi-GDT starts from .hic file generated from juicer (https://github.com/aidenlab/juicer/wiki)\n\n1. ```HiGDT.py``` identifies single-gene domains and multigene domains from an input .hic file.\n2. ```HiGDTdiff.py``` finds differential single-gene domains across two different Hi-C datasets.\n\n(Optional) ```PileUpImage.py``` makes images.pkl file that includes resized Hi-C contact images of given regions (.bed).\n\n## HiGDT.py\n\n### Usage\n\n```\nusage: HiGDT.py [-h] -b BEDFILE -c CHROMSIZE -p PREFIX [-j JUICERTOOLS] [-hic HIC] [-n NORM] [--skip] [-i1 INFILE1] [-i2 INFILE2]\n                [-o OUTDIR] [-bf BP_FRAG] [-f RES"
+  },
+  "liukaihua0213-source/HyperDeepTAD": {
+   "description": null,
+   "topics": [],
+   "stars": 1,
+   "archived": false,
+   "full_name": "liukaihua0213-source/HyperDeepTAD",
+   "readme": "# HyperDeepTAD: A topologically associated domains detection method based on multiway chromatin interaction data and deep learning\n\n\n\n# About HyperDeepTAD\n\nHigh-order interaction information is preserved through hypergraph modeling, and node transition probabilities are calculated to quantify dynamic interactions among multiple segments; the transition probability matrix is input into a dynamic convolutional network to capture local features, which are then processed by BiGRU to capture long-distance dependencies, with residual connections strengthening feature associations; boundaries are optimized by combining hypergraph clustering coefficients, and hierarchical TADs are obtained using cosine similarity.\n\n\n\n# Requirements\n\ntensorflow-gpu=2.8.0 \uff0cnumpy =1.24.3  \uff0cpandas= 2.0.3  \uff0cscikit-learn=1.3.2 \uff0ctqdm= 4.67.1  \n\n\n\n# Usage\n\n## First--prepare_data\n\nmultiway chromatin interaction data access number:**GSE202539  GSE114242**\n\nCorresponding Hi-C data\uff1ahttps://zenodo.org/records/10822184\n\nFor Pore-C reads, the input is the aligned data, and an example of the input is as follows:\n\n| read_name                            | read_length | read_start | read_end | strand | chrom | chrom_length |"
+  },
+  "ernstlab/LEPAE": {
+   "description": "Learning Evidence of Pairwise Association from Epigenomic and TF binding data",
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "ernstlab/LEPAE",
+   "readme": ""
+  },
+  "pengpclab/LLM-TF-interactions": {
+   "description": null,
+   "topics": [],
+   "stars": 1,
+   "archived": false,
+   "full_name": "pengpclab/LLM-TF-interactions",
+   "readme": "# TRRUST Raw Data\n\n## Citation\n\nTRRUST v2: an expanded reference database of human and mouse transcriptional regulatory interactions. Nucleic Acids Research 26 Oct, 2017 ([link](https://www.ncbi.nlm.nih.gov/pubmed/29087512))\n\n## Web Link\n\n- main website: [https://www.grnpedia.org/trrust/](https://www.grnpedia.org/trrust/)\n- download page: [https://www.grnpedia.org/trrust/downloadnetwork.php](https://www.grnpedia.org/trrust/downloadnetwork.php)\n\n# TRRUST Processed Data Notebook\n\nShows how the TRRUST raw data was processed.\n"
+  },
+  "ekffar/LSUE": {
+   "description": "Collaborative Completion of Transcription Factor Binding Profiles via Local Sensitive Unified Embedding",
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "linzhu123455/LSUE",
+   "readme": ""
+  },
+  "lisaber/OVAAnno": {
+   "description": null,
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "lisaber/OVAAnno",
+   "readme": "# OVAAnno\n## introduction\nRecent advances in single-cell technologies enable the rapid growth of multi-omics data. Cell type annotation is one common task in analyzing single-cell data. It is a challenge that some cell types in the testing set are not present in the training set (i.e. unknown cell types). Here, we present OVAAnno, an automatic cell types annotation method which utilizes open-set domain adaptation to detect unknown cell types in scATAC-seq data. OVAAnno consists of three parts: Variational AutoEncoder(VAE), a closed-set classifier and an open-set classifier including multiple binary classifiers(Figure \\ref{fig1}). Through the Variational AutoEncoder, we can obtain an information-rich embedding. Mapping the embedding to known cell types, the closed-set classifier selects the nearest known cell type for one sample (i.e. one cell). With adversarial training strategy, the open-set classifier identifies whether the sample belongs to known or unknown cell types.\n\n## Installation\n    conda env create -f environment.yml\n\n## Tutorial\n### tutorial.ipynb\nWe have provided a quick-start notebook named tutorial.ipynb in script. Users can modify flexibly based on this tutorial to "
+  },
+  "rezwanhosseini/MotifDiff": {
+   "description": "Ultra-fast variant effect prediction using first order and second order PWMs",
+   "topics": [],
+   "stars": 4,
+   "archived": false,
+   "full_name": "rezwanhosseini/MotifDiff",
+   "readme": ""
+  },
+  "nrr-90/MultiCausGRN": {
+   "description": "MultiCausGRN(Graph Attention Network for GENE Regulation) is a novel method to infer GRNs from single-cell multiome data built on top of PyTorch.  ",
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "nrr-90/MultiCausGRN",
+   "readme": ""
+  },
+  "zhichunlizzx/mwHIT": {
+   "description": null,
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "zhichunlizzx/mwHIT",
+   "readme": "# mwHIT\n\nmwHIT is a multi-level window attention-based Histone Imputation Transformer for predicting histone modification signals from RO-seq and DNA sequence features.\n\n## Files\n\n- `train_14k.py`: model training script.\n- `predict_1.py`: Pearson correlation evaluation script.\n- `predict_with_spearman.py`: Pearson and Spearman correlation evaluation script.\n- `one_predict.py`: genome-wide prediction script for generating signal tracks.\n- `model_SW2.py`: mwHIT model definition.\n- `SW_attention_gai.py`: window attention layers.\n- `SEmodule.py`: squeeze-and-excitation module.\n- `lion.py`: Lion optimizer implementation.\n\n## Model weights\n\nPretrained weights are not included in this repository because checkpoint files are large.\nAfter downloading or training weights, place them under:\n\n```text\nmodel/train_2/model.ckpt\n```\n\n## Requirements\n\nInstall the Python dependencies:\n\n```bash\npip install -r requirements.txt\n```\n\nFor `one_predict.py`, external command-line tools such as `sort-bed` and `bedGraphToBigWig` are also required.\n\n## Usage\n\nTrain mwHIT:\n\n```bash\npython train_14k.py\n```\n\nEvaluate with Pearson correlation:\n\n```bash\npython predict_1.py\n```\n\nEvaluate with Pearson and Spearman c"
+  },
+  "Xtu-LWGroup/NSSGRN": {
+   "description": "The code of paper NSSGRN",
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "Xtu-LWGroup/NSSGRN",
+   "readme": ""
+  },
+  "Mengyu8042/ot-grn": {
+   "description": "A Python library designed to infer differential gene regulatory networks (GRNs) from gene expression data using optimal transport (OT) theory, applicable to unpaired samples.",
+   "topics": [],
+   "stars": 2,
+   "archived": false,
+   "full_name": "Mengyu8042/ot-grn",
+   "readme": ""
+  },
+  "Tian-Dechao/PB-DiffHiC": {
+   "description": null,
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "Tian-Dechao/PB-DiffHiC",
+   "readme": "# Introduction\n`PB-DiffHiC` is a new optimized parametric statistical framework that directly analyzes the raw pseudo-bulk Hi-C data at 10 Kb resolution between conditions. It incorporates Gaussian convolution, the stability of short-range interactions, and Poisson modeling to jointly perform normalization and statistical testing.\n\n`PB-DiffHiC` provides a unified framework for two primary setups(merged-replicate setup and two-replicate setup) and consists of two key steps:\n- Applying Gaussian convolution to enhance interaction signals in pseudo-bulk Hi-C data.\n- Optimizing parametric hypothesis testing by combining P-value calculation with the estimation of scaling factors for normalizing contact matrices across conditions.\n\nThis project includes three main R scripts:\n- `PBdata_preprocess.R`: Applies Gaussian convolution to the raw pseudo-bulk Hi-C data and flattens interactions within the selected range.\n- `PB-DiffHiC_merged.R`: Detects Differential Chromatin Interactions under the merged-replicate setup.\n- `PB-DiffHiC_two.R`: Detects Differential Chromatin Interactions under the two-replicate setup.\n  \n# Installation\nRunning `PB-DiffHiC` requires the following dependency packages"
+  },
+  "mgledi/PhyFoo": {
+   "description": "Approaches for de-novo motif discovery based on phylogenetic footprinting",
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "mgledi/PhyFoo",
+   "readme": ""
+  },
+  "Genome-Function-Initiative-Oxford/REgulamentary": {
+   "description": null,
+   "topics": [],
+   "stars": 2,
+   "archived": false,
+   "full_name": "Genome-Function-Initiative-Oxford/REgulamentary",
+   "readme": "# REgulamentary: de novo genome-wide annotation of cis-regulatory elements\n### Enhancer, Promoter, and CTCF\n\n***\n## Getting started\nREgulamentary can be run using the __re__ conda environment, please follow the installation instruction detailed below. In doing so, the anlaysis is highly reproducible. \n\n### Installation instructions for conda environment\n\n#### 1. Clone the repository\n```\ngit clone <redacted>:Genome-Function-Initiative-Oxford/REgulamentary.git\ncd REgulamentary\n```\n\n#### 2. Install anaconda\nCheck if [Anaconda](https://www.anaconda.com), [Miniconda](https://docs.conda.io/en/latest/miniconda.html), or [Mambaforge](https://mamba.readthedocs.io/en/latest/installation.html) is installed, using:\n```\nwhich conda\n```   \nIf installed, the output should be:\n```\n~/anaconda3/condabin/conda\n```\nIf [Anaconda](https://www.anaconda.com), [Miniconda](https://docs.conda.io/en/latest/miniconda.html), or [Mambaforge](https://mamba.readthedocs.io/en/latest/installation.html) is not installed, we recommend to install [Mambaforge](https://mamba.readthedocs.io/en/latest/installation.html), since it has already integrated mamba for a fast and parallelisable installation.   \n\n\nDownload [Ma"
+  },
+  "SChatLab/ReMeDy": {
+   "description": "This repository contains all the R codes for implementing ReMeDy and reproducing the findings that can be found in our research article - ReMeDy: A flexible statistical framework for region-based detection of DNA methylation dysregulation.",
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "SChatLab/ReMeDy",
+   "readme": ""
+  },
+  "GudaLab/scAED": {
+   "description": "We have developed the first active enhancer database at single-cell resolution for both normal and disease conditions, named the Single Cell Active Enhancer Database (scAED).",
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "GudaLab/scAED",
+   "readme": ""
+  },
+  "qunhualilab/SIDR": {
+   "description": "An R package for assessing the reproducibility of Hi-C interactions.",
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "qunhualilab/SIDR",
+   "readme": ""
+  },
+  "HanLabUNLV/sleps": {
+   "description": "Supervised Learning of Enhancer Promoter Specificity.",
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "HanLabUNLV/sleps",
+   "readme": ""
+  },
+  "nkaan-kutlu/TEffectBayes": {
+   "description": "Multi Omic Bayesian Network Modelling",
+   "topics": [
+    "bayesian-inference",
+    "gene-regulatory-network",
+    "nextflow-pipeline"
+   ],
+   "stars": 0,
+   "archived": false,
+   "full_name": "nkaan-kutlu/TEffectBayes",
+   "readme": ""
+  },
+  "NatanTourne/TFBS-negatives": {
+   "description": null,
+   "topics": [],
+   "stars": 2,
+   "archived": false,
+   "full_name": "NatanTourne/TFBS-negatives",
+   "readme": "# How Negative Sampling Shapes the Performance of Transcription Factor Binding Site Prediction Models\n\nThis repository accompanies the study investigating how different negative sampling strategies impact transcription factor (TF) binding site (TFBS) prediction. It provides:\n- Data processing scripts to build per cell-line TF/ATAC peak datasets in HDF5 / h5torch format\n- Multiple negative sampling regimes implemented as dataset classes\n- A lightweight Enformer-inspired convolutional architecture (without transformer) for binary TF binding prediction\n- Training utilities for standard and High-Quality (HQ) datasets\n\n## 1. Installation\n\nPrerequisites: Python >=3.10 (setup requires >3.9), CUDA-capable GPUs recommended.\n\nClone and install (editable mode):\n```\ngit clone <your_fork_or_repo_url> TFBS_negatives\ncd TFBS_negatives\npip install -e .\n```\n\n## 2. Repository Layout (essentials)\n- TFBS_negatives/models.py : EnformerConvStack + TFmodel / TFmodel_HQ (LightningModules)\n- TFBS_negatives/data.py   : Dataset classes + Lightning DataModules\n- utils/train_model.py                : Train with chosen negative sampling mode\n- utils/train_model_HQ.py             : Train on High-Quality (ATAC fi"
+  },
+  "yimuhuashui/TM-Loop": {
+   "description": null,
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "yimuhuashui/TM-Loop",
+   "readme": "# TM-Loop\n# Introduction\nTM-Loop: Transformer Multi-omics Hierarchical detection of chromatin Loop.\n# Installation\nTM-Loop is developed and tested on Linux machines and relies on the following packages:\n```\n\ntensorflow\nkeras\nscikit-learn  \nhic-straw\njoblib  \nnumpy \nscipy   \npandas \nh5py   \ncooler \n```\nCreate an environment.\n```\ngit clone https://github.com/yimuhuashui/TM-Loop.git \nconda create -n TM-Loop python=3.6.13   \nconda activate TM-Loop    \n```\n# Usage\n## Feature extraction \nThe datasets required by the model can be downloaded from auxiliary materials and other websites. Feature extraction of the datasets can be carried out in feature.py. Run: \n```\n    python feature.py\n```\nIf you want to change the parameters, you can modify them by feature.py the parameters in the code file,Example:\n```\n    path = \"/public_data/yanghao/Rao2014-GM12878-MboI-allreps-filtered.10kb.cool\"\n    output = \"/home/yanghao/TM-Loop/TM-Loop/model-chr15\"\n    bedpe = \"/home/yanghao//TM-Loop/TM-Loop/data/gm12878_ctcf_h3k27ac.bedpe\"\n    atac_file = \"/home/yanghao/TM-Loop/TM-Loop/data/ATAC-ENCFF816ZFB.bigWig\"\n```\n\"path\" is the path to the hic data file, \"output\" is the output path of the model, and \"bedpe\" i"
+  },
+  "jianlin-cheng/TransBind": {
+   "description": "AI methods for predicting DNA sites for TF binding",
+   "topics": [],
+   "stars": 3,
+   "archived": false,
+   "full_name": "jianlin-cheng/TransBind",
+   "readme": ""
+  },
+  "nedashokraneh/vssHiC": {
+   "description": null,
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "nedashokraneh/vssHiC",
+   "readme": "# vssHiC\n\n## Overview\n\n```vssHiC``` is an extension of the [VSS](https://github.com/faezeh-bayat/VSS), a signal transformation approach used for variance stabilization of epigenomic signals to support \nHi-C modality. Genome-wide chromatin conformation capture assay, Hi-C, allows studying chromatin 3D structural features\nand their functional implications, but the variance instability of raw read counts hinders the visualization and downstream analysis of this data modality. ```vssHiC``` stabilizes \nthe variance of signals across a dynamic range, makes heatmap visualization of contact maps more appealing, and improves the performance of subcompartment callers \nrelying on Gaussian observed variables. ```vssHiC``` is compatible with a well-developed R class ```InteractionSet``` and file format ```.cool``` for Hi-C data. There are also \nwrapper functions implemented for three TAD callers to support ```InteractionSet``` object and output TAD domains as a ```GRanges``` object which can be easily visualized on top of the \nheatmap of Hi-C contact maps by the ```HiContacts``` package.\n\n## Installation\n\nYou can install the development version of vssHiC from Github:\n\n``` r\nlibrary(devtools)\nde"
   }
  }
 }

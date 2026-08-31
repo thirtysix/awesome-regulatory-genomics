@@ -166,6 +166,13 @@ happens to be usable on regulatory data is still out.
 Also decide: is this software at all, or is it a wet-lab assay, a database of results, or \
 a review? Assays are out.
 
+Ask what the paper ANNOUNCES. If its contribution is the bench procedure itself, is_software \
+is false even when analysis code ships alongside it - nextPBM introduces a nuclear-extract \
+protein-binding microarray, ChIP-Rx a spike-in ChIP protocol, GAM a contact-mapping method. \
+Nearly every assay paper now releases code, so accompanying software is not the test. A \
+program that ANALYSES data produced by such an assay is software and is in scope: bisulfite \
+aligners, MPRA statistics packages, ATAC quality-control tools.
+
 Reply with JSON only:
 {"in_scope": true|false, "is_software": true|false, "confidence": "high|medium|low", \
 "reason": "one short clause"}"""

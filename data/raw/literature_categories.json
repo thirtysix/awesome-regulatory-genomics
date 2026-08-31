@@ -1,5 +1,5 @@
 {
- "count": 569,
+ "count": 562,
  "list": [
   {
    "name": "metilene",
@@ -526,22 +526,6 @@
    "cat_prompt_sha": "65ddeba557ce"
   },
   {
-   "name": "Multiplex-GAM",
-   "repo": "",
-   "citations": 46,
-   "year": "2023",
-   "doi": "10.1038/s41592-023-01903-1",
-   "pmid": "37336949",
-   "description": "genome-wide identification of chromatin contacts yields insights overlooked by Hi-C",
-   "categories": [
-    "chromatin-3d"
-   ],
-   "invented": [],
-   "cat_confidence": "high",
-   "cat_model": "deepseek-ai/DeepSeek-V4-Flash",
-   "cat_prompt_sha": "65ddeba557ce"
-  },
-  {
    "name": "Methy-Pipe",
    "repo": "",
    "citations": 45,
@@ -894,23 +878,6 @@
    "description": "a bioconductor package for reproducible benchmarks of gene regulatory network inference",
    "categories": [
     "grn-inference"
-   ],
-   "invented": [],
-   "cat_confidence": "high",
-   "cat_model": "deepseek-ai/DeepSeek-V4-Flash",
-   "cat_prompt_sha": "65ddeba557ce"
-  },
-  {
-   "name": "NextPBM",
-   "repo": "",
-   "citations": 31,
-   "year": "2019",
-   "doi": "10.1093/nar/gkz020",
-   "pmid": "30657937",
-   "description": "a platform to study cell-specific transcription factor binding and cooperativity",
-   "categories": [
-    "motif-scanning",
-    "tfbs-prediction"
    ],
    "invented": [],
    "cat_confidence": "high",
@@ -1673,23 +1640,6 @@
    "cat_prompt_sha": "65ddeba557ce"
   },
   {
-   "name": "Q-RRBS",
-   "repo": "",
-   "citations": 20,
-   "year": "2015",
-   "doi": "10.1080/15592294.2015.1075690",
-   "pmid": "26213102",
-   "description": "a quantitative reduced representation bisulfite sequencing method for single-cell methylome analyses",
-   "categories": [
-    "dna-methylation",
-    "single-cell"
-   ],
-   "invented": [],
-   "cat_confidence": "high",
-   "cat_model": "deepseek-ai/DeepSeek-V4-Flash",
-   "cat_prompt_sha": "65ddeba557ce"
-  },
-  {
    "name": "RepeatSoaker",
    "repo": "https://github.com/mdozmorov/RepeatSoaker",
    "citations": 20,
@@ -1731,6 +1681,23 @@
    "description": "a stacking-based ensemble learning model for predicting the boundaries of topologically associating domains (TADs) accurately in fruit flies",
    "categories": [
     "chromatin-3d"
+   ],
+   "invented": [],
+   "cat_confidence": "high",
+   "cat_model": "deepseek-ai/DeepSeek-V4-Flash",
+   "cat_prompt_sha": "65ddeba557ce"
+  },
+  {
+   "name": "BigFoot",
+   "repo": "",
+   "citations": 19,
+   "year": "2009",
+   "doi": "10.1186/1471-2148-9-217",
+   "pmid": "19715598",
+   "description": "Bayesian alignment and phylogenetic footprinting with MCMC",
+   "categories": [
+    "footprinting",
+    "comparative"
    ],
    "invented": [],
    "cat_confidence": "high",
@@ -2997,6 +2964,22 @@
    "description": "Bacterial Promoter Prediction Tool Using DNA Structural Properties with Machine Learning and Explainable AI",
    "categories": [
     "regulatory-elements"
+   ],
+   "invented": [],
+   "cat_confidence": "high",
+   "cat_model": "deepseek-ai/DeepSeek-V4-Flash",
+   "cat_prompt_sha": "65ddeba557ce"
+  },
+  {
+   "name": "NPRD",
+   "repo": "",
+   "citations": 11,
+   "year": "2005",
+   "doi": "10.1093/nar/gki049",
+   "pmid": "15608285",
+   "description": "Nucleosome Positioning Region Database",
+   "categories": [
+    "nucleosome-chromatin"
    ],
    "invented": [],
    "cat_confidence": "high",
@@ -5177,20 +5160,6 @@
    "cat_prompt_sha": "65ddeba557ce"
   },
   {
-   "name": "IndeCut",
-   "repo": "https://github.com/megrawlab/IndeCut",
-   "citations": 4,
-   "year": "2018",
-   "doi": "10.1093/bioinformatics/btx798",
-   "pmid": "29236975",
-   "description": "IndeCut evaluates performance of network motif discovery algorithms",
-   "categories": [],
-   "invented": [],
-   "cat_confidence": "low",
-   "cat_model": "deepseek-ai/DeepSeek-V4-Flash",
-   "cat_prompt_sha": "65ddeba557ce"
-  },
-  {
    "name": "INSTINCT",
    "repo": "",
    "citations": 4,
@@ -5731,22 +5700,6 @@
    "cat_prompt_sha": "65ddeba557ce"
   },
   {
-   "name": "IsomiR-eQTL",
-   "repo": "",
-   "citations": 3,
-   "year": "2022",
-   "doi": "10.3390/ijms232012493",
-   "pmid": "36293349",
-   "description": "A Cancer-Specific Expression Quantitative Trait Loci Database of miRNAs and Their Isoforms",
-   "categories": [
-    "molecular-qtl"
-   ],
-   "invented": [],
-   "cat_confidence": "high",
-   "cat_model": "deepseek-ai/DeepSeek-V4-Flash",
-   "cat_prompt_sha": "65ddeba557ce"
-  },
-  {
    "name": "LinkNMF",
    "repo": "",
    "citations": 3,
@@ -6078,23 +6031,6 @@
    "cat_prompt_sha": "65ddeba557ce"
   },
   {
-   "name": "SMAdd-seq",
-   "repo": "",
-   "citations": 3,
-   "year": "2025",
-   "doi": "10.1093/nar/gkaf671",
-   "pmid": "40682816",
-   "description": "probing chromatin accessibility with small molecule DNA intercalation and nanopore sequencing",
-   "categories": [
-    "nucleosome-chromatin",
-    "single-cell"
-   ],
-   "invented": [],
-   "cat_confidence": "high",
-   "cat_model": "deepseek-ai/DeepSeek-V4-Flash",
-   "cat_prompt_sha": "65ddeba557ce"
-  },
-  {
    "name": "SMCis",
    "repo": "",
    "citations": 3,
@@ -6236,24 +6172,6 @@
    ],
    "invented": [],
    "cat_confidence": "high",
-   "cat_model": "deepseek-ai/DeepSeek-V4-Flash",
-   "cat_prompt_sha": "65ddeba557ce"
-  },
-  {
-   "name": "ChIP-Rx",
-   "repo": "",
-   "citations": 2,
-   "year": "2025",
-   "doi": "10.1007/978-1-0716-4228-3_5",
-   "pmid": "39576597",
-   "description": "Arabidopsis Chromatin Profiling Using Quantitative ChIP-Seq",
-   "categories": [
-    "peak-calling",
-    "peak-annotation",
-    "chip-resources"
-   ],
-   "invented": [],
-   "cat_confidence": "medium",
    "cat_model": "deepseek-ai/DeepSeek-V4-Flash",
    "cat_prompt_sha": "65ddeba557ce"
   },
@@ -6564,22 +6482,6 @@
    "description": "prior-guided symbolic regression for gene regulatory network inference from single-cell transcriptomics data",
    "categories": [
     "grn-inference",
-    "single-cell"
-   ],
-   "invented": [],
-   "cat_confidence": "high",
-   "cat_model": "deepseek-ai/DeepSeek-V4-Flash",
-   "cat_prompt_sha": "65ddeba557ce"
-  },
-  {
-   "name": "Numbat-multiome",
-   "repo": "",
-   "citations": 2,
-   "year": "2025",
-   "doi": "10.1093/bib/bbaf516",
-   "pmid": "41104806",
-   "description": "inferring copy number variations by combining RNA and chromatin accessibility information from single-cell data",
-   "categories": [
     "single-cell"
    ],
    "invented": [],
@@ -7005,23 +6907,6 @@
    "pmid": "39684652",
    "description": "An Interpretable Deep Learning Approach for Enhancer Classification",
    "categories": [
-    "regulatory-elements"
-   ],
-   "invented": [],
-   "cat_confidence": "high",
-   "cat_model": "deepseek-ai/DeepSeek-V4-Flash",
-   "cat_prompt_sha": "65ddeba557ce"
-  },
-  {
-   "name": "Diff-ATAC-STARR-Seq",
-   "repo": "",
-   "citations": 1,
-   "year": "2022",
-   "doi": "10.1248/bpb.b22-00400",
-   "pmid": "36184520",
-   "description": "A Method for Genome-Wide Functional Screening of Enhancer Activity in Vivo",
-   "categories": [
-    "reporter-assays",
     "regulatory-elements"
    ],
    "invented": [],
