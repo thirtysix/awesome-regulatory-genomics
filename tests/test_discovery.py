@@ -231,3 +231,25 @@ def test_name_matching_ignores_punctuation():
     assert not name_present("HHMD", "Hip Hop Museum Denmark")
     # Too short to carry evidence; two letters match everything.
     assert not name_present("BS", "bisulfite sequencing")
+
+
+def test_a_page_with_no_prose_is_unreadable_not_a_mismatch():
+    """A javascript shell is missing evidence, not contrary evidence.
+
+    Signac's homepage is a 573-byte meta-refresh, BECon is a Shiny app whose
+    HTML carries 11 characters of text, and the Google Code archive viewer
+    renders BSMAP client-side. Judged on their markup all three look like "the
+    name never appears and nothing overlaps", which is the same shape as a
+    re-registered domain. Calling that a mismatch retires live tools.
+    """
+    from verify_urls import judge
+    tool = {"name": "BECon", "description": "blood brain epigenetic concordance"}
+    assert judge(tool, "", "")[0] == "unreadable"
+    assert judge(tool, "", "loading...")[0] == "unreadable"
+
+
+def test_a_relaunched_domain_is_still_caught_once_there_is_text():
+    from verify_urls import judge
+    tool = {"name": "HHMD", "description": "the human histone modification database"}
+    prose = "exhibitions tickets opening hours Copenhagen concerts archive collection " * 8
+    assert judge(tool, "Hip Hop Museum Denmark", prose)[0] == "mismatch"

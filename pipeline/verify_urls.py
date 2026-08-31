@@ -27,8 +27,10 @@ The check is deterministic first and only asks a model about the middle:
 Nothing here asserts a tool is gone. `mismatch` means "the url is wrong", which
 is a reason to look for a better one, not to drop the tool.
 
-Cached on the content hash, so re-running after a rule change is free and only
-genuinely changed pages are re-examined.
+The extracted text of each page is cached, not a hash of it. Caching the hash
+would make a verdict cheap to repeat and a *rule change* cost 2,137 refetches,
+which is the same trade the full-text store already got wrong once. `--rejudge`
+re-runs every verdict from the cache without touching the network.
 """
 from __future__ import annotations
 
@@ -104,15 +106,23 @@ def name_present(name: str, *fields: str) -> bool:
     return flat in hay
 
 
+# Below this, the page carried no prose to reason about: a javascript shell, a
+# Shiny or Galaxy app, the Google Code archive viewer. Absence of evidence is
+# not evidence of the wrong tool, and calling it a mismatch retires live pages.
+MIN_TEXT = 300
+
+
 def judge(tool: dict, title: str, text: str) -> tuple[str, str]:
     """Deterministic verdict, or 'undecided' when a model should look."""
     named = name_present(tool["name"], title, text)
+    if len(text) < MIN_TEXT and not named:
+        return "unreadable", f"only {len(text)} characters of text; nothing to judge"
     shared = terms(tool.get("description", "")) & terms(title + " " + text)
     n = len(shared)
     sample = ", ".join(sorted(shared)[:5])
     if named and n >= 2:
         return "confirmed", f"name on the page and {n} shared terms ({sample})"
-    if named and n == 0 and len(text) > 400:
+    if named and n == 0 and len(text) > MIN_TEXT:
         # The name is there but nothing else is. Usually a person's page or a
         # departmental index that merely lists the tool - real, but not the
         # tool's own page. Worth a look rather than a verdict.
@@ -156,12 +166,30 @@ def ask_model(tool: dict, title: str, text: str, key: str, model: str, cache: di
     return got
 
 
-def fetch(http: requests.Session, url: str) -> tuple[str, str, str]:
+META_REFRESH = re.compile(
+    r"""<meta[^>]+http-equiv=['"]?refresh['"]?[^>]*content=['"][^'"]*url=([^'"]+)""",
+    re.I)
+
+
+def fetch(http: requests.Session, url: str, hops: int = 2) -> tuple[str, str, str]:
+    """Fetch, following meta-refresh as well as HTTP redirects.
+
+    requests follows 3xx; it cannot follow a page that redirects in markup.
+    Signac's homepage is 573 bytes titled "Page Redirection", and judging that
+    shell says the page has nothing to do with Signac.
+    """
     try:
         r = http.get(url, timeout=30, allow_redirects=True)
-        return classify(r.status_code, ""), r.text if r.status_code < 400 else "", str(r.url)
     except requests.RequestException as e:
         return classify(None, type(e).__name__), "", url
+    if r.status_code >= 400:
+        return classify(r.status_code, ""), "", str(r.url)
+    m = META_REFRESH.search(r.text[:4000])
+    if m and hops > 0:
+        nxt = requests.compat.urljoin(str(r.url), m.group(1).strip())
+        if nxt.rstrip("/") != str(r.url).rstrip("/"):
+            return fetch(http, nxt, hops - 1)
+    return classify(r.status_code, ""), r.text, str(r.url)
 
 
 def main() -> None:
@@ -171,6 +199,8 @@ def main() -> None:
     ap.add_argument("--no-llm", action="store_true", help="deterministic verdicts only")
     ap.add_argument("--model", default="deepseek-ai/DeepSeek-V4-Flash")
     ap.add_argument("--only", help="one tool, by name")
+    ap.add_argument("--rejudge", action="store_true",
+                    help="re-run verdicts from cached page text, no network")
     args = ap.parse_args()
 
     src = read_json(Path(args.input))
@@ -195,20 +225,36 @@ def main() -> None:
     out, counts = [], {}
     for i, t in enumerate(rows, 1):
         url = t.get("url") or t.get("homepage")
-        grade, html, final = fetch(http, url)
-        if grade != "ok" or not html:
-            verdict, why = "unchecked", f"page not readable ({grade})"
-            title, text = "", ""
-        else:
-            title, text = page_title(html), visible_text(html)
-            h = hashlib.sha256(text.encode()).hexdigest()[:16]
+        if args.rejudge:
+            hit = pages.get(url)
+            if not hit:
+                continue
+            grade, final = hit.get("grade", "ok"), hit.get("final_url", url)
+            title, text = hit.get("title", ""), hit.get("text", "")
             verdict, why = judge(t, title, text)
             if verdict == "undecided" and not args.no_llm:
                 got = ask_model(t, title, text, key, args.model, llm)
                 b = got.get("belongs")
                 verdict = "confirmed" if b else ("mismatch" if b is False else "undecided")
                 why = f"model({got.get('confidence', '?')}): {got.get('reason', '')[:110]}"
-            pages[url] = {"hash": h, "title": title, "grade": grade}
+            counts[verdict] = counts.get(verdict, 0) + 1
+            out.append({"name": t["name"], "url": url, "final_url": final,
+                        "grade": grade, "verdict": verdict, "why": why, "title": title})
+            continue
+        grade, html, final = fetch(http, url)
+        if grade != "ok" or not html:
+            verdict, why = "unchecked", f"page not readable ({grade})"
+            title, text = "", ""
+        else:
+            title, text = page_title(html), visible_text(html)
+            verdict, why = judge(t, title, text)
+            if verdict == "undecided" and not args.no_llm:
+                got = ask_model(t, title, text, key, args.model, llm)
+                b = got.get("belongs")
+                verdict = "confirmed" if b else ("mismatch" if b is False else "undecided")
+                why = f"model({got.get('confidence', '?')}): {got.get('reason', '')[:110]}"
+            pages[url] = {"title": title, "text": text, "grade": grade,
+                          "final_url": final}
         counts[verdict] = counts.get(verdict, 0) + 1
         out.append({"name": t["name"], "url": url, "final_url": final,
                     "grade": grade, "verdict": verdict, "why": why, "title": title})
@@ -217,12 +263,13 @@ def main() -> None:
         if i % 50 == 0:
             print(f"  {i}/{len(rows)}", file=sys.stderr)
             write_json(CACHE, cache)
-        time.sleep(0.2)
+        if not args.rejudge:
+            time.sleep(0.2)
 
     write_json(CACHE, cache)
     write_json(OUT, {"count": len(out), "list": out})
     print(f"\n{len(out)} urls checked")
-    for k in ("confirmed", "undecided", "mismatch", "unchecked"):
+    for k in ("confirmed", "undecided", "mismatch", "unreadable", "unchecked"):
         if counts.get(k):
             print(f"  {counts[k]:5d}  {k}")
     print(f"-> {OUT.relative_to(ROOT)}")
