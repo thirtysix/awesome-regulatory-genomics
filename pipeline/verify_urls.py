@@ -40,14 +40,18 @@ import json
 import os
 import re
 import sys
+import threading
 import time
+from datetime import date, timedelta
 from pathlib import Path
+from urllib.parse import urljoin, urlparse
 
 import requests
+from concurrent.futures import ThreadPoolExecutor
 
 from check_homepages import classify
 from config import user_agent
-from jsonio import read_json, write_json
+from jsonio import read_json, redact_emails, write_json
 # Imported for its side effect as much as its function: llm_assist puts the
 # DeepInfra key into the environment when it loads, so reading the key before
 # this import reports "no key" on a machine that has one.
@@ -111,6 +115,10 @@ def name_present(name: str, *fields: str) -> bool:
 # not evidence of the wrong tool, and calling it a mismatch retires live pages.
 MIN_TEXT = 300
 
+META_REFRESH = re.compile(
+    r"""<meta[^>]+http-equiv=['"]?refresh['"]?[^>]*content=['"][^'"]*url=([^'"]+)""",
+    re.I)
+
 
 def judge(tool: dict, title: str, text: str) -> tuple[str, str]:
     """Deterministic verdict, or 'undecided' when a model should look."""
@@ -151,45 +159,105 @@ subject matter, not quality. If the page is empty or gives you nothing to go
 on, say false with low confidence."""
 
 
-def ask_model(tool: dict, title: str, text: str, key: str, model: str, cache: dict) -> dict:
+def ask_model(tool: dict, title: str, text: str, key: str, model: str,
+              cache: dict, lock: threading.Lock | None = None) -> dict:
     user = (f"Tool: {tool['name']}\n"
             f"Description: {tool.get('description', '')[:300]}\n\n"
             f"Page title: {title}\n"
             f"Page text: {text[:1800]}")
     ck = f"{model}:{hashlib.sha256((LLM_SYSTEM + user).encode()).hexdigest()[:16]}"
-    if ck in cache:
+    if lock:
+        with lock:
+            if ck in cache:
+                return cache[ck]
+    elif ck in cache:
         return cache[ck]
     text_out, _cost, _s = llm_call(model, LLM_SYSTEM, user, key, max_tokens=300)
     got = parse_json(text_out) or {"belongs": None, "confidence": "low",
                                    "reason": "model returned no usable json"}
-    cache[ck] = got
+    if lock:
+        with lock:
+            cache[ck] = got
+    else:
+        cache[ck] = got
     return got
 
 
-META_REFRESH = re.compile(
-    r"""<meta[^>]+http-equiv=['"]?refresh['"]?[^>]*content=['"][^'"]*url=([^'"]+)""",
-    re.I)
+# Connect and read budgets, separately. A host that will not complete a TCP
+# handshake in five seconds is not going to serve a page, and the old single
+# 30-second budget meant the ~26% of urls that do not answer consumed about
+# three quarters of the wall clock.
+TIMEOUT = (5, 15)
+MAX_BYTES = 1_500_000     # a page bigger than this is not a tool homepage
+
+_local = threading.local()
+_host_locks: dict[str, threading.Lock] = {}
+_host_lock_guard = threading.Lock()
 
 
-def fetch(http: requests.Session, url: str, hops: int = 2) -> tuple[str, str, str]:
+def session() -> requests.Session:
+    """One Session per thread: requests.Session is not thread-safe."""
+    sess = getattr(_local, "sess", None)
+    if sess is None:
+        sess = requests.Session()
+        sess.headers.update({"User-Agent": BROWSER, "Accept-Language": "en"})
+        _local.sess = sess
+    return sess
+
+
+def host_lock(url: str) -> threading.Lock:
+    """One request at a time per host, however many workers are running.
+
+    Concurrency here is a win because the catalog points at ~2,000 different
+    hosts; it must not become eight simultaneous requests to one university
+    that is already struggling to answer once.
+    """
+    host = urlparse(url).netloc.lower()
+    with _host_lock_guard:
+        return _host_locks.setdefault(host, threading.Lock())
+
+
+def fetch(url: str, hops: int = 2) -> tuple[str, str, str]:
     """Fetch, following meta-refresh as well as HTTP redirects.
 
     requests follows 3xx; it cannot follow a page that redirects in markup.
     Signac's homepage is 573 bytes titled "Page Redirection", and judging that
     shell says the page has nothing to do with Signac.
     """
-    try:
-        r = http.get(url, timeout=30, allow_redirects=True)
-    except requests.RequestException as e:
-        return classify(None, type(e).__name__), "", url
+    http = session()
+    with host_lock(url):
+        try:
+            r = http.get(url, timeout=TIMEOUT, allow_redirects=True, stream=True)
+            body = r.raw.read(MAX_BYTES, decode_content=True) or b""
+        except Exception as e:
+            return classify(None, type(e).__name__), "", url
+        finally:
+            time.sleep(0.2)
     if r.status_code >= 400:
+        r.close()
         return classify(r.status_code, ""), "", str(r.url)
-    m = META_REFRESH.search(r.text[:4000])
+    text = body.decode(r.encoding or "utf-8", "replace")
+    r.close()
+    m = META_REFRESH.search(text[:4000])
     if m and hops > 0:
-        nxt = requests.compat.urljoin(str(r.url), m.group(1).strip())
+        nxt = urljoin(str(r.url), m.group(1).strip())
         if nxt.rstrip("/") != str(r.url).rstrip("/"):
-            return fetch(http, nxt, hops - 1)
-    return classify(r.status_code, ""), r.text, str(r.url)
+            return fetch(nxt, hops - 1)
+    return classify(r.status_code, ""), text, str(r.url)
+
+
+def verdict_for(t: dict, title: str, text: str, grade: str,
+                key: str, model: str, llm: dict, lock: threading.Lock,
+                use_llm: bool) -> tuple[str, str]:
+    if grade != "ok":
+        return "unchecked", f"page not readable ({grade})"
+    v, why = judge(t, title, text)
+    if v == "undecided" and use_llm:
+        got = ask_model(t, title, text, key, model, llm, lock)
+        b = got.get("belongs")
+        v = "confirmed" if b else ("mismatch" if b is False else "undecided")
+        why = f"model({got.get('confidence', '?')}): {got.get('reason', '')[:110]}"
+    return v, why
 
 
 def main() -> None:
@@ -200,8 +268,19 @@ def main() -> None:
     ap.add_argument("--model", default="deepseek-ai/DeepSeek-V4-Flash")
     ap.add_argument("--only", help="one tool, by name")
     ap.add_argument("--rejudge", action="store_true",
-                    help="re-run verdicts from cached page text, no network")
+                    help="re-run verdicts from the cache, no network at all")
+    ap.add_argument("--workers", type=int, default=8,
+                    help="parallel fetches; this laptop's ceiling is 12")
+    ap.add_argument("--max-age", type=int, default=30,
+                    help="days before a cached SUCCESSFUL probe is refetched")
+    ap.add_argument("--retry-age", type=int, default=3,
+                    help="days before a cached FAILURE is retried; check_homepages' "
+                         "rule is that a non-200 needs two runs to agree, so a "
+                         "timeout or a 429 must not be trusted for a month")
+    ap.add_argument("--refresh", action="store_true", help="ignore cached probes")
     args = ap.parse_args()
+    # I/O-bound or not, this machine throttles hard above eight.
+    workers = max(1, min(args.workers, 12))
 
     src = read_json(Path(args.input))
     rows = src["tools"] if isinstance(src, dict) and "tools" in src else (
@@ -218,53 +297,62 @@ def main() -> None:
     if not key and not args.no_llm:
         print("no DEEPINFRA_API_KEY; running deterministic verdicts only", file=sys.stderr)
         args.no_llm = True
+    use_llm = not args.no_llm
+    clock = threading.Lock()
+    fresh_after = (date.today() - timedelta(days=args.max_age)).isoformat()
+    retry_after = (date.today() - timedelta(days=args.retry_age)).isoformat()
 
-    http = requests.Session()
-    http.headers.update({"User-Agent": BROWSER, "Accept-Language": "en"})
-
-    out, counts = [], {}
-    for i, t in enumerate(rows, 1):
+    def probe(t: dict) -> dict | None:
+        """Fetch if needed, judge, and return one row."""
         url = t.get("url") or t.get("homepage")
-        if args.rejudge:
+        with clock:
             hit = pages.get(url)
+        # A cached probe is reused whatever its grade. Caching only the
+        # successes meant a resume re-probed every dead host, which is the
+        # slowest quarter of the run and the part least likely to have changed.
+        cutoff = fresh_after if (hit or {}).get("grade") == "ok" else retry_after
+        usable = hit and not args.refresh and hit.get("checked", "") >= cutoff
+        if args.rejudge:
             if not hit:
-                continue
+                return None
+            usable = True
+        if usable:
             grade, final = hit.get("grade", "ok"), hit.get("final_url", url)
             title, text = hit.get("title", ""), hit.get("text", "")
-            verdict, why = judge(t, title, text)
-            if verdict == "undecided" and not args.no_llm:
-                got = ask_model(t, title, text, key, args.model, llm)
-                b = got.get("belongs")
-                verdict = "confirmed" if b else ("mismatch" if b is False else "undecided")
-                why = f"model({got.get('confidence', '?')}): {got.get('reason', '')[:110]}"
-            counts[verdict] = counts.get(verdict, 0) + 1
-            out.append({"name": t["name"], "url": url, "final_url": final,
-                        "grade": grade, "verdict": verdict, "why": why, "title": title})
-            continue
-        grade, html, final = fetch(http, url)
-        if grade != "ok" or not html:
-            verdict, why = "unchecked", f"page not readable ({grade})"
-            title, text = "", ""
+        elif args.rejudge:
+            return None
         else:
-            title, text = page_title(html), visible_text(html)
-            verdict, why = judge(t, title, text)
-            if verdict == "undecided" and not args.no_llm:
-                got = ask_model(t, title, text, key, args.model, llm)
-                b = got.get("belongs")
-                verdict = "confirmed" if b else ("mismatch" if b is False else "undecided")
-                why = f"model({got.get('confidence', '?')}): {got.get('reason', '')[:110]}"
-            pages[url] = {"title": title, "text": text, "grade": grade,
-                          "final_url": final}
-        counts[verdict] = counts.get(verdict, 0) + 1
-        out.append({"name": t["name"], "url": url, "final_url": final,
-                    "grade": grade, "verdict": verdict, "why": why, "title": title})
-        if verdict == "mismatch":
-            print(f"  MISMATCH {t['name'][:22]:24s} {url[:44]:46s} {why[:50]}")
-        if i % 50 == 0:
-            print(f"  {i}/{len(rows)}", file=sys.stderr)
-            write_json(CACHE, cache)
-        if not args.rejudge:
-            time.sleep(0.2)
+            grade, html, final = fetch(url)
+            title = page_title(html) if html else ""
+            text = visible_text(html) if html else ""
+            with clock:
+                # Scrubbed on the way in. This cache is committed and the repo
+                # is public, and a lab homepage's "contact: someone@..." is
+                # exactly the third-party address repo_map.json was leaking.
+                pages[url] = redact_emails(
+                    {"grade": grade, "title": title, "text": text,
+                     "final_url": final, "checked": date.today().isoformat()})
+        v, why = verdict_for(t, title, text, grade, key, args.model, llm, clock, use_llm)
+        return {"name": t["name"], "url": url, "final_url": final,
+                "grade": grade, "verdict": v, "why": why, "title": title}
+
+    out, counts, done = [], {}, 0
+    with ThreadPoolExecutor(max_workers=1 if args.rejudge else workers) as pool:
+        for row in pool.map(probe, rows):
+            done += 1
+            if row is None:
+                continue
+            counts[row["verdict"]] = counts.get(row["verdict"], 0) + 1
+            out.append(row)
+            if row["verdict"] == "mismatch":
+                print(f"  MISMATCH {row['name'][:22]:24s} {row['url'][:44]:46s} {row['why'][:52]}")
+            # Written as we go. The last run was killed at 1550/2137 and the
+            # results existed only in memory, so none of them survived.
+            if done % 50 == 0:
+                with clock:
+                    write_json(CACHE, cache)
+                    write_json(OUT, {"count": len(out), "list": out})
+                print(f"  {done}/{len(rows)}", file=sys.stderr)
 
     write_json(CACHE, cache)
     write_json(OUT, {"count": len(out), "list": out})
