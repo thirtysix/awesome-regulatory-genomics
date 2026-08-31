@@ -1957,3 +1957,129 @@ tools:
     tags:
     - literature
 
+  # --- promoted from the literature queue, reviewed by hand 2026-08-31 ------------
+  # 6 of these carry a url the reviewer corrected; the one the
+  # pipeline had pointed at different software entirely.
+  - name: metilene
+    url: http://legacy.bioinf.uni-leipzig.de/Software/metilene/
+    description: fast and sensitive calling of differentially methylated regions from bisulfite sequencing data
+    categories: [dna-methylation]
+    doi: 10.1101/gr.196394.115
+
+  - name: SEdb
+    url: http://www.licpathway.net/sedb/
+    description: a comprehensive human super-enhancer database
+    categories: [regulatory-elements, chip-resources, histone-marks]
+    doi: 10.1093/nar/gky1025
+
+  - name: Xenbase
+    url: https://www.xenbase.org
+    description: 'deep integration of GEO &amp; SRA RNA-seq and ChIP-seq data in a model organism database'
+    categories: [chip-resources]
+    doi: 10.1093/nar/gkz933
+
+  - name: MOABS
+    url: https://github.com/sunnyisgalaxy/moabs
+    repo: sunnyisgalaxy/moabs
+    description: model based analysis of bisulfite sequencing data
+    categories: [dna-methylation]
+    doi: 10.1186/gb-2014-15-2-r38
+
+  - name: HiTAD
+    url: https://github.com/XiaoTaoWang/TADLib
+    repo: XiaoTaoWang/TADLib
+    description: detecting the structural and functional hierarchies of topologically associating domains from chromatin interactions
+    categories: [chromatin-3d]
+    doi: 10.1093/nar/gkx735
+
+  - name: ATAC-clock
+    url: https://github.com/SunScript0/ATAC-clock
+    repo: SunScript0/ATAC-clock
+    description: An aging clock based on chromatin accessibility
+    categories: [nucleosome-chromatin]
+    doi: 10.1007/s11357-023-00986-0
+
+  - name: PEP
+    url: https://github.com/ma-compbio/PEP
+    repo: ma-compbio/PEP
+    description: Exploiting sequence-based features for predicting enhancer-promoter interactions
+    categories: [regulatory-elements, chromatin-3d]
+    doi: 10.1093/bioinformatics/btx257
+
+  - name: epiGBS
+    url: https://github.com/thomasvangurp/epiGBS
+    repo: thomasvangurp/epiGBS
+    description: reference-free reduced representation bisulfite sequencing
+    categories: [dna-methylation]
+    doi: 10.1038/nmeth.3763
+
+  - name: BS-SNPer
+    url: https://github.com/hellbelly/BS-Snper
+    repo: hellbelly/BS-Snper
+    description: SNP calling in bisulfite-seq data
+    categories: [dna-methylation]
+    doi: 10.1093/bioinformatics/btv507
+
+  - name: inferelator
+    url: https://github.com/flatironinstitute/inferelator
+    repo: flatironinstitute/inferelator
+    description: 'High-performance single-cell gene regulatory network inference at scale: the Inferelator 3.0'
+    categories: [grn-inference, single-cell]
+    doi: 10.1093/bioinformatics/btac117
+
+  - name: REPTILE
+    url: https://github.com/yupenghe/REPTILE
+    repo: yupenghe/REPTILE
+    description: Improved regulatory element prediction based on tissue-specific local epigenomic signatures
+    categories: [regulatory-elements]
+    doi: 10.1073/pnas.1618353114
+
+  - name: CUT-RUNTools-2.0
+    url: https://github.com/fl-yu/CUT-RUNTools-2.0
+    repo: fl-yu/CUT-RUNTools-2.0
+    description: 'CUT&RUNTools 2.0: a pipeline for single-cell and bulk-level CUT&RUN and CUT&Tag data analysis'
+    categories: [peak-calling, single-cell]
+    doi: 10.1093/bioinformatics/btab507
+
+  - name: WALT
+    url: https://github.com/smithlabcode/walt
+    repo: smithlabcode/walt
+    description: fast and accurate read mapping for bisulfite sequencing
+    categories: [dna-methylation]
+    doi: 10.1093/bioinformatics/btw490
+
+  - name: Deopen
+    url: https://github.com/kimmo1019/Deopen
+    repo: kimmo1019/Deopen
+    description: Chromatin accessibility prediction via a hybrid deep convolutional neural network
+    categories: [tfbs-prediction, regulatory-variants]
+    doi: 10.1093/bioinformatics/btx679
+
+  - name: gemBS
+    url: https://github.com/heathsc/gemBS
+    repo: heathsc/gemBS
+    description: high throughput processing for DNA methylation data from bisulfite sequencing
+    categories: [dna-methylation]
+    doi: 10.1093/bioinformatics/bty690
+
+  - name: DeepTACT
+    url: https://github.com/liwenran/DeepTACT
+    repo: liwenran/DeepTACT
+    description: predicting 3D chromatin contacts via bootstrapping deep learning
+    categories: [chromatin-3d]
+    doi: 10.1093/nar/gkz167
+
+  - name: Epiphany
+    url: https://github.com/arnavmdas/epiphany
+    repo: arnavmdas/epiphany
+    description: predicting Hi-C contact maps from 1D epigenomic signals
+    categories: [chromatin-3d]
+    doi: 10.1186/s13059-023-02934-9
+
+  - name: BayesCCE
+    url: https://github.com/cozygene/bayescce
+    repo: cozygene/bayescce
+    description: a Bayesian framework for estimating cell-type composition from DNA methylation without the need for methylation reference
+    categories: [dna-methylation]
+    doi: 10.1186/s13059-018-1513-2
+

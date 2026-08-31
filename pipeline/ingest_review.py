@@ -25,7 +25,7 @@ from pathlib import Path
 
 import yaml
 
-from promotion_queue import build, slug_of
+from promotion_queue import absolute, build, slug_of
 
 ROOT = Path(__file__).resolve().parent.parent
 SEEDS = ROOT / "curation" / "seeds.yaml"
@@ -103,11 +103,22 @@ def main() -> None:
     rows = {r["name"]: r for r in build()}
     have, declined = existing_names(), already_declined()
 
-    keep, skip, blocked, unknown = [], [], [], []
+    keep, skip, blocked, unknown, unchecked = [], [], [], [], []
     for name, mark in marks.items():
         verdict = mark.get("verdict") if isinstance(mark, dict) else mark
         reason = (mark.get("reason") or "").strip() if isinstance(mark, dict) else ""
         r = rows.get(name)
+        # A reviewer may correct the url the pipeline found. This is not a
+        # nicety: an unvalidated url can point at entirely different software -
+        # SEdb's stored repo was "Search Engine DataBase utils" - so the review
+        # is the last place a wrong one can be caught before it is published.
+        if r is not None and isinstance(mark, dict) and (mark.get("url") or mark.get("repo")):
+            r = dict(r)
+            if mark.get("url"):
+                r["software_url"] = r["code"] = mark["url"]
+            r["repo"] = absolute(mark["repo"]) if mark.get("repo") else (
+                mark.get("url", "") if "github.com" in str(mark.get("url", "")) else "")
+            r["corrected"] = True
         if r is None:
             unknown.append(name)
         elif verdict == "keep":
@@ -117,11 +128,42 @@ def main() -> None:
                 blocked.append((name, "no url, and seeds.yaml requires one"))
             elif not r["categories"]:
                 blocked.append((name, "no categories from the categorise stage"))
+            elif r["layer1"] in ("hold", "fail") and not r.get("corrected"):
+                # A code-host url layer 1 would not confirm is the one way this
+                # pipeline writes the WRONG software into the catalog rather
+                # than merely a useless link. SEdb's was "Search Engine
+                # DataBase utils"; BiSearch's was a binary-search package;
+                # Xenbase's was a javascript polyfill. Keeping one is fine, but
+                # it has to be a deliberate act: supply the url in the decision.
+                blocked.append((name, f"layer 1 refused this repo ({r['layer1']}); "
+                                      f"confirm or correct the url in the decision"))
+            elif (not r["layer1"]) and slug_of(r["software_url"]) and not r.get("corrected"):
+                unchecked.append(r)
             else:
                 keep.append(r)
         elif verdict == "skip":
             if name not in declined:
                 skip.append((r, reason))
+
+    # A keep whose repo was never validated gets validated now, rather than
+    # trusted or refused. Names in this field are short and generic, so a repo
+    # called bisearch is not evidence of anything on its own.
+    if unchecked:
+        import requests
+        from config import user_agent
+        from enrich import github_token
+        from resolve_repos import github_meta, validate as l1_validate
+        http = requests.Session(); http.headers.update({"User-Agent": user_agent()})
+        token, cache = github_token(), {}
+        print(f"validating {len(unchecked)} repos the pipeline never checked")
+        for r in unchecked:
+            slug = slug_of(r["software_url"])
+            meta = github_meta(http, slug, token, cache)
+            ok, why = l1_validate({"name": r["name"], "description": r["description"]},
+                                  slug, meta, source="review")
+            r["layer1"], r["layer1_why"] = ("pass" if ok else "hold"), why
+            print(f"    {'PASS' if ok else 'HOLD'} {r['name'][:20]:22s} {slug:32s} {why[:44]}")
+            (keep if ok else blocked).append(r if ok else (r["name"], f"validation refused it: {why[:60]}"))
 
     print(f"decisions read : {len(marks)}")
     print(f"  to seed      : {len(keep)}")
@@ -135,8 +177,12 @@ def main() -> None:
 
     stamp = dt.date.today().isoformat()
     if keep:
+        n_fixed = sum(1 for r in keep if r.get("corrected"))
         block = (f"\n  # --- promoted from the literature queue, reviewed by hand {stamp} "
-                 + "-" * max(0, 12) + "\n" + "\n\n".join(seed_entry(r) for r in keep) + "\n")
+                 + "-" * max(0, 12) + "\n"
+                 + (f"  # {n_fixed} of these carry a url the reviewer corrected; the one the\n"
+                    f"  # pipeline had pointed at different software entirely.\n" if n_fixed else "")
+                 + "\n\n".join(seed_entry(r) for r in keep) + "\n")
         print("\n--- would append to curation/seeds.yaml ---")
         print(block[:1200] + ("\n  ...\n" if len(block) > 1200 else ""))
     if skip:
