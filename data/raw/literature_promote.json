@@ -2410,7 +2410,7 @@
    "repo_description": "Collaborative Completion of Transcription Factor Binding Profiles via Local Sensitive Unified Embedding"
   },
   {
-   "name": "master",
+   "name": "OVAAnno",
    "repo": "https://github.com/lisaber/OVAAnno/tree/master",
    "slug": "lisaber/OVAAnno",
    "citations": 0,

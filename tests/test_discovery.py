@@ -9,7 +9,7 @@ name.
 import pytest
 
 from check_homepages import classify as grade
-from discover_literature import candidate_from
+from discover_literature import candidate_from, name_from_repo
 from discover_registries import (BIOCVIEW_TOPIC, as_biotools_record, canon_url,
                                  collapse_wrappers, parse_dcf)
 from render import site_url
@@ -147,3 +147,26 @@ def test_site_is_the_project_page_when_there_is_one():
 def test_site_ignores_trailing_slash_and_www_when_comparing():
     assert site_url({"homepage": "http://www.example.org/tool/",
                      "repo_url": "http://example.org/tool"}) == ""
+
+
+# ---------------------------------------------------------------------------
+# a repository url names the tool by its repository, not by its tail
+# ---------------------------------------------------------------------------
+def test_name_comes_from_the_repository_not_the_branch():
+    """A deep github url must not name the candidate after a path segment.
+
+    .../lisaber/OVAAnno/tree/master put a tool called "master" in the queue.
+    It cleared the appears-in-the-text guard because that guard strips word
+    boundaries before matching, so a short common word finds itself inside
+    some longer run of letters.
+    """
+    title = ("Detecting novel cell type in single-cell chromatin accessibility "
+             "data via open-set domain adaptation with OVAAnno")
+    assert name_from_repo("https://github.com/lisaber/OVAAnno/tree/master", title, "") == "OVAAnno"
+    assert name_from_repo("https://bitbucket.org/team/toolx/src/main",
+                          "we present toolx here", "") == "toolx"
+
+
+def test_the_appears_in_the_text_guard_still_holds():
+    assert name_from_repo("https://github.com/someone/paper-figures", "Unrelated title", "") is None
+    assert name_from_repo("https://github.com/MoonLord0525", "A person", "") is None

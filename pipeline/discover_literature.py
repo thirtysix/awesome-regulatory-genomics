@@ -295,9 +295,15 @@ def name_from_repo(url: str, title: str, abstract: str) -> str | None:
     parts = [x for x in path.split("/") if x]
     # A code host needs owner/repo. One segment is a user profile, and
     # github.com/MoonLord0525 is a person, not a tool.
-    if re.search(r"(github|gitlab|bitbucket|codeberg)\.", url, re.I) and len(parts) < 2:
+    is_code_host = bool(re.search(r"(github|gitlab|bitbucket|codeberg)\.", url, re.I))
+    if is_code_host and len(parts) < 2:
         return None
-    seg = parts[-1] if parts else ""
+    # On a code host the tool is the repository, the second segment - never the
+    # tail, which is a branch or a file. .../lisaber/OVAAnno/tree/master named a
+    # candidate "master", and it survived the appears-in-the-text guard because
+    # that guard flattens away word boundaries and "master" turns up inside some
+    # longer run of letters. Reading the right segment is the actual fix.
+    seg = parts[1] if (is_code_host and len(parts) > 1) else (parts[-1] if parts else "")
     seg = re.sub(r"\.(git|io|html|htm|php|jsp)$", "", seg, flags=re.I)
     if not seg or len(seg) > 25 or seg.isdigit() or seg.lower() in NOT_A_NAME:
         return None
