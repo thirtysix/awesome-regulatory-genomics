@@ -40,7 +40,7 @@ from pathlib import Path
 import requests
 
 from config import CACHE, DATA, DOCS, RAW, user_agent
-from jsonio import read_json, write_json
+from jsonio import read_json, redact_emails, write_json
 from resolve_repos import clean_slug, github_meta, norm, validate
 from enrich import github_token
 
@@ -129,7 +129,9 @@ def layer1(rows: list[dict]) -> list[dict]:
                 rec["note"] = "url points inside a larger repository, not at its root"
         out.append(rec)
         print(f"  {rec['layer1']:5s} {r['name'][:22]:24s} {rec.get('why','')[:64]}", flush=True)
-    REPOMAP.write_text(json.dumps(cache, indent=1))
+    # redact_emails: this cache holds README text and is committed to a
+    # public repository. See resolve_repos.github_meta.
+    REPOMAP.write_text(json.dumps(redact_emails(cache), indent=1))
     return out
 
 

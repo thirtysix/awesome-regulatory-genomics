@@ -40,7 +40,7 @@ from datetime import date
 import requests
 
 from config import CACHE, DOCS, RAW, user_agent
-from jsonio import read_json
+from jsonio import read_json, redact_emails
 from mdutil import cell
 
 ENRICHED = RAW / "enriched.json.gz"
@@ -319,7 +319,12 @@ def github_meta(http, slug, token, cache) -> dict | None:
                           headers={**headers, "Accept": "application/vnd.github.raw"},
                           timeout=20)
             if rr.status_code == 200:
-                meta["readme"] = rr.text[:1200]
+                # Redact here, not at the write: this cache is committed and
+                # this repository is public, so a README's "Contact:
+                # someone@university.edu" would republish a third party's
+                # address in bulk. jsonio.redact_emails states the policy; the
+                # cache is written with a bare json.dumps and never reached it.
+                meta["readme"] = redact_emails(rr.text[:1200])
         except requests.RequestException:
             pass
     cache[slug] = meta
@@ -368,7 +373,7 @@ def main() -> None:
             if i % 100 == 0:
                 print(f"  {i}/{len(blob)}", flush=True)
             time.sleep(0.05)
-        REPOMAP.write_text(json.dumps(blob, indent=1, sort_keys=True))
+        REPOMAP.write_text(json.dumps(redact_emails(blob), indent=1, sort_keys=True))
         acc = sum(1 for v in blob.values() if v["accepted"])
         print(f"revalidated {len(blob)}: {acc} accepted, {len(blob)-acc} held "
               f"({flipped} changed)")
@@ -477,7 +482,7 @@ def main() -> None:
                       f"{sum(1 for v in found.values() if v['accepted'])}  "
                       f"searches used {searches[0]}/{args.search_budget}", flush=True)
                 REPOMAP.parent.mkdir(parents=True, exist_ok=True)
-                REPOMAP.write_text(json.dumps(found, indent=1, sort_keys=True))
+                REPOMAP.write_text(json.dumps(redact_emails(found), indent=1, sort_keys=True))
         return result
 
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
@@ -488,7 +493,7 @@ def main() -> None:
                 print(f"    ! {exc}", file=sys.stderr)
 
     REPOMAP.parent.mkdir(parents=True, exist_ok=True)
-    REPOMAP.write_text(json.dumps(found, indent=1, sort_keys=True))
+    REPOMAP.write_text(json.dumps(redact_emails(found), indent=1, sort_keys=True))
 
     accepted = {k: v for k, v in found.items() if v["accepted"]}
     rejected = {k: v for k, v in found.items() if not v["accepted"]}
