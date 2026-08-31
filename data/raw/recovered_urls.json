@@ -1,0 +1,301 @@
+{
+ "count": 59,
+ "recovered": 55,
+ "list": [
+  {
+   "name": "CENTIPEDE",
+   "url": "http://web.archive.org/web/20251010213620/https://centipede.uchicago.edu/",
+   "how": "wayback (archived 20251010)"
+  },
+  {
+   "name": "lncRNAdb",
+   "url": "http://web.archive.org/web/20260305042123/https://lncrnadb.org/",
+   "how": "wayback (archived 20260305)"
+  },
+  {
+   "name": "GWAVA",
+   "url": "http://web.archive.org/web/20260508110732/https://www.sanger.ac.uk/tool/gwava/",
+   "how": "wayback (archived 20260508)"
+  },
+  {
+   "name": "FirstEF",
+   "url": "http://web.archive.org/web/20220120051406/http://rulai.cshl.org/tools/FirstEF/",
+   "how": "wayback (archived 20220120)"
+  },
+  {
+   "name": "Eponine",
+   "url": "http://web.archive.org/web/20150905111146/http://www.sanger.ac.uk/resources/software/eponine/",
+   "how": "wayback (archived 20150905)"
+  },
+  {
+   "name": "Transcription factor prediction database (DBD)",
+   "url": "http://web.archive.org/web/20200718213737/http://www.transcriptionfactor.org:80/index.cgi",
+   "how": "wayback (archived 20200718)"
+  },
+  {
+   "name": "peakcalling_findpeaks",
+   "url": "http://web.archive.org/web/20260807133846/https://www.htslib.org/",
+   "how": "wayback (archived 20260807)"
+  },
+  {
+   "name": "chipmunk_chiphorde",
+   "url": "http://web.archive.org/web/20160804131406/http://autosome.ru/smbsm/librettos/libretto_chipmunk/chipmunk_home.rhtml",
+   "how": "wayback (archived 20160804)"
+  },
+  {
+   "name": "MONKEY",
+   "url": "http://web.archive.org/web/20181106130536/http://labs.csb.utoronto.ca:80/moses/monkey.html",
+   "how": "wayback (archived 20181106)"
+  },
+  {
+   "name": "MEMO",
+   "url": "http://web.archive.org/web/20231118202824/http://github.com/MEMO-toolbox/MEMO",
+   "how": "wayback (archived 20231118)"
+  },
+  {
+   "name": "HINT",
+   "url": "http://web.archive.org/web/20260822205129/https://hint.yulab.org/",
+   "how": "wayback (archived 20260822)"
+  },
+  {
+   "name": "SFmap",
+   "url": "http://web.archive.org/web/20260114155213/http://sfmap.technion.ac.il/",
+   "how": "wayback (archived 20260114)"
+  },
+  {
+   "name": "GADEM",
+   "url": "http://web.archive.org/web/20231224111713/https://www.niehs.nih.gov/research/resources/software/biostatistics/gadem/index.cfm",
+   "how": "wayback (archived 20231224)"
+  },
+  {
+   "name": "qDRIP",
+   "url": "http://web.archive.org/web/20240506182613/https://github.com/cimprichlab/crossley_et_al_2019",
+   "how": "wayback (archived 20240506)"
+  },
+  {
+   "name": "SteinerNet",
+   "url": "https://github.com/krashkov/SteinerNet",
+   "how": "github search (name match + 3 shared terms (problem, steine)"
+  },
+  {
+   "name": "CSDeconv",
+   "url": "http://web.archive.org/web/20201030042035/http://crab.rutgers.edu/~dslun/csdeconv/index.html",
+   "how": "wayback (archived 20201030)"
+  },
+  {
+   "name": "BRAT",
+   "url": "http://web.archive.org/web/20260825063825/http://brat.nlplab.org/",
+   "how": "wayback (archived 20260825)"
+  },
+  {
+   "name": "XXmotif",
+   "url": "https://github.com/soedinglab/xxmotif",
+   "how": "github search (name match + 3 shared terms (nucleotide, seq)"
+  },
+  {
+   "name": "ipDMR",
+   "url": "http://web.archive.org/web/20260226063135/https://bioconductor.org/packages/release/bioc/html/ENmix.html",
+   "how": "wayback (archived 20260226)"
+  },
+  {
+   "name": "SDDA",
+   "url": "http://web.archive.org/web/20140123071007/http://www.stats.gla.ac.uk:80/~mgupta/publications.htm",
+   "how": "wayback (archived 20140123)"
+  },
+  {
+   "name": "Non-Coding RNA database",
+   "url": "http://web.archive.org/web/20200805224028/http://biobases.ibch.poznan.pl/ncRNA/",
+   "how": "wayback (archived 20200805)"
+  },
+  {
+   "name": "PTHGRN",
+   "url": "",
+   "how": "nothing found"
+  },
+  {
+   "name": "ChIPnorm",
+   "url": "http://web.archive.org/web/20191019210639/https://lcbb.epfl.ch/software.html",
+   "how": "wayback (archived 20191019)"
+  },
+  {
+   "name": "META-BASE",
+   "url": "http://web.archive.org/web/20231118072209/http://github.com/DEIB-GECO/Metadata-Manager/",
+   "how": "wayback (archived 20231118)"
+  },
+  {
+   "name": "YPA",
+   "url": "http://web.archive.org/web/20130815155528/http://ypa.ee.ncku.edu.tw",
+   "how": "wayback (archived 20130815)"
+  },
+  {
+   "name": "BroadPeak",
+   "url": "http://web.archive.org/web/20210725091430/http://jordan.biology.gatech.edu/page/software/broadpeak/index.html",
+   "how": "wayback (archived 20210725)"
+  },
+  {
+   "name": "NBIA",
+   "url": "http://web.archive.org/web/20260226063121/https://bioconductor.org/packages/release/bioc/html/BLMA.html",
+   "how": "wayback (archived 20260226)"
+  },
+  {
+   "name": "GobyWeb",
+   "url": "http://web.archive.org/web/20200728132033/http://campagnelab.org:80/software/gobyweb/",
+   "how": "wayback (archived 20200728)"
+  },
+  {
+   "name": "FACT-seq",
+   "url": "http://web.archive.org/web/20240511220503/https://github.com/pengweixing/FACT",
+   "how": "wayback (archived 20240511)"
+  },
+  {
+   "name": "PIRCh-seq",
+   "url": "http://web.archive.org/web/20221016214759/http://github.com/QuKunLab/PIRCh",
+   "how": "wayback (archived 20221016)"
+  },
+  {
+   "name": "OncoCis",
+   "url": "https://github.com/dilmi/OncoCis",
+   "how": "github search (name match + 4 shared terms (cancer, cis, mu)"
+  },
+  {
+   "name": "MINDY",
+   "url": "http://web.archive.org/web/20141208212946/http://wiki.c2b2.columbia.edu/califanolab/index.php/Software/MINDY2",
+   "how": "wayback (archived 20141208)"
+  },
+  {
+   "name": "TimiRGeN",
+   "url": "https://github.com/bioconductor-source/TimiRGeN",
+   "how": "github search (name match + 6 shared terms (data, different)"
+  },
+  {
+   "name": "ASP-G",
+   "url": "http://web.archive.org/web/20220702070412/http://bioinformatics.intec.ugent.be/kmarchal/Supplementary_Information_Musthofa_2014/asp-g.zip",
+   "how": "wayback (archived 20220702)"
+  },
+  {
+   "name": "EpiAnnotator",
+   "url": "http://web.archive.org/web/20180817222906/http://computational-epigenomics.com/en/epiannotator",
+   "how": "wayback (archived 20180817)"
+  },
+  {
+   "name": "Seqinspector",
+   "url": "http://web.archive.org/web/20250418163002/http://seqinspector.cremag.org/",
+   "how": "wayback (archived 20250418)"
+  },
+  {
+   "name": "PAnDA (Protein And DNA Associations)",
+   "url": "",
+   "how": "nothing found"
+  },
+  {
+   "name": "sciMET-cap",
+   "url": "http://web.archive.org/web/20221211145908/http://github.com/adeylab/sciMETv2",
+   "how": "wayback (archived 20221211)"
+  },
+  {
+   "name": "OccuPeak",
+   "url": "http://web.archive.org/web/20160602114511/http://hartfaalcentrum.nl/index.php?main=files&fileName=ManualOccuPeak_V2.pdf&description=Occupeak%20manual&sub=ManualOccuPeak_V2",
+   "how": "wayback (archived 20160602)"
+  },
+  {
+   "name": "iDHS-DMCAC",
+   "url": "http://web.archive.org/web/20201009033832/https://github.com/shengli0201/Datasets",
+   "how": "wayback (archived 20201009)"
+  },
+  {
+   "name": "hgv_pass",
+   "url": "http://web.archive.org/web/20241009130929/https://github.com/galaxyproject/galaxy/tree/dev/tools",
+   "how": "wayback (archived 20241009)"
+  },
+  {
+   "name": "sRNA workflow",
+   "url": "https://github.com/forestbiotech-lab/sRNA-Portal-workflow",
+   "how": "github search (4 shared terms (annotated, data, plant, srna)"
+  },
+  {
+   "name": "MPRAnator",
+   "url": "http://web.archive.org/web/20191023203228/https://www.sanger.ac.uk/science/tools/mpranator",
+   "how": "wayback (archived 20191023)"
+  },
+  {
+   "name": "APPLES",
+   "url": "http://web.archive.org/web/20241205171156/https://cyverseuk.org/applications/warwick/analysis-of-plant-promoter-linked-elements/",
+   "how": "wayback (archived 20241205)"
+  },
+  {
+   "name": "Tulip",
+   "url": "",
+   "how": "nothing found"
+  },
+  {
+   "name": "ChIPMunk",
+   "url": "http://web.archive.org/web/20220307170954/http://autosome.ru/ChIPMunk/",
+   "how": "wayback (archived 20220307)"
+  },
+  {
+   "name": "HyperChIP",
+   "url": "http://web.archive.org/web/20260110081414/https://github.com/tushiqi/MAnorm2",
+   "how": "wayback (archived 20260110)"
+  },
+  {
+   "name": "Animal QTLdb",
+   "url": "https://github.com/liuyufong/AnimalQTLDB",
+   "how": "github search (name match + 5 shared terms (animalqtldb, da)"
+  },
+  {
+   "name": "peakC",
+   "url": "http://web.archive.org/web/20250628124706/https://github.com/deWitLab/peakC",
+   "how": "wayback (archived 20250628)"
+  },
+  {
+   "name": "EAT-Rice",
+   "url": "http://web.archive.org/web/20231117225543/http://predictor.nchu.edu.tw/EAT-Rice/",
+   "how": "wayback (archived 20231117)"
+  },
+  {
+   "name": "TADMaster",
+   "url": "https://github.com/OluwadareLab/TADMaster",
+   "how": "github search (name match + 5 shared terms (analysis, assoc)"
+  },
+  {
+   "name": "activeTF",
+   "url": "http://web.archive.org/web/20260513224531/https://hulab.ucf.edu/software",
+   "how": "wayback (archived 20260513)"
+  },
+  {
+   "name": "BWASP",
+   "url": "http://web.archive.org/web/20221016205934/https://brendelgroup.org/SingularityHub/bwasp.sif",
+   "how": "wayback (archived 20221016)"
+  },
+  {
+   "name": "Cloud ATAC",
+   "url": "",
+   "how": "nothing found"
+  },
+  {
+   "name": "TreeGibbsSampler",
+   "url": "http://web.archive.org/web/20260513224531/https://hulab.ucf.edu/software",
+   "how": "wayback (archived 20260513)"
+  },
+  {
+   "name": "NIACS",
+   "url": "http://web.archive.org/web/20260821193119/https://warwick.ac.uk/fac/sci/systemsbiology/research/software/",
+   "how": "wayback (archived 20260821)"
+  },
+  {
+   "name": "Cattle QTLdb",
+   "url": "http://web.archive.org/web/20260621053645/https://www.animalgenome.org/cgi-bin/QTLdb/BT/index",
+   "how": "wayback (archived 20260621)"
+  },
+  {
+   "name": "createcontrolsubset",
+   "url": "http://web.archive.org/web/20260807133846/https://www.htslib.org/",
+   "how": "wayback (archived 20260807)"
+  },
+  {
+   "name": "QSeq",
+   "url": "http://web.archive.org/web/20150905090633/http://www.dnastar.com/t-nextgen-qseq.aspx",
+   "how": "wayback (archived 20150905)"
+  }
+ ]
+}

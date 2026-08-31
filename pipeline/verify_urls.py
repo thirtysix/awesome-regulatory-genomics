@@ -296,6 +296,10 @@ def main() -> None:
                          "rule is that a non-200 needs two runs to agree, so a "
                          "timeout or a 429 must not be trusted for a month")
     ap.add_argument("--refresh", action="store_true", help="ignore cached probes")
+    ap.add_argument("--output", help="where to write the verdicts; defaults to "
+                    "data/raw/url_identity.json. Pass it when checking a list "
+                    "that is not the catalog, or the catalog's own results are "
+                    "silently overwritten by a 55-row side quest.")
     args = ap.parse_args()
     # I/O-bound or not, this machine throttles hard above eight.
     workers = max(1, min(args.workers, 12))
@@ -354,6 +358,7 @@ def main() -> None:
         return {"name": t["name"], "url": url, "final_url": final,
                 "grade": grade, "verdict": v, "why": why, "title": title}
 
+    out_path = Path(args.output) if args.output else OUT
     out, counts, done = [], {}, 0
     with ThreadPoolExecutor(max_workers=1 if args.rejudge else workers) as pool:
         for row in pool.map(probe, rows):
@@ -369,16 +374,16 @@ def main() -> None:
             if done % 50 == 0:
                 with clock:
                     write_json(CACHE, cache)
-                    write_json(OUT, {"count": len(out), "list": out})
+                    write_json(out_path, {"count": len(out), "list": out})
                 print(f"  {done}/{len(rows)}", file=sys.stderr)
 
     write_json(CACHE, cache)
-    write_json(OUT, {"count": len(out), "list": out})
+    write_json(out_path, {"count": len(out), "list": out})
     print(f"\n{len(out)} urls checked")
     for k in ("confirmed", "undecided", "mismatch", "unreadable", "unchecked"):
         if counts.get(k):
             print(f"  {counts[k]:5d}  {k}")
-    print(f"-> {OUT.relative_to(ROOT)}")
+    print(f"-> {out_path}")
 
 
 if __name__ == "__main__":
