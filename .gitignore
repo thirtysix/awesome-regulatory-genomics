@@ -43,3 +43,10 @@ drafts/
 # 59 of 240 are CC BY; 18 are NC/ND and 163 state no licence at all. Fetching
 # them for text mining is not the same act as redistributing them.
 data/cache/fulltext/
+
+# Scraped page text from ~1,600 third-party sites, kept so a rule change is a
+# free --rejudge instead of 2,137 refetches. Not committed: this repo is
+# public, fetching a page to check it is ours is not the same act as
+# republishing 5 MB of other people's site content. The verdicts derived from
+# it (data/raw/url_identity.json) are our own work and are committed.
+data/cache/url_identity.json

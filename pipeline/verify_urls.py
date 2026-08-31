@@ -147,7 +147,14 @@ LLM_SYSTEM = """You decide whether a web page belongs to a named scientific soft
 You are given the tool's name, its one-line description, and the title plus an
 extract of the page found at the url the tool's publication gave.
 
-Answer ONLY with json: {"belongs": true|false, "confidence": "high"|"medium"|"low", "reason": "<one sentence>"}
+Answer ONLY with json: {"belongs": true|false|"unjudgeable", "confidence": "high"|"medium"|"low", "reason": "<one sentence>"}
+
+Answer "unjudgeable" when the page did not show you its content: a sign-in or
+login screen, a bot-protection or captcha challenge, a "please enable
+JavaScript" shell, a maintenance or "temporarily unavailable" notice, or raw
+binary. Those tell you nothing about the tool either way, and calling them
+false would retire a tool for being behind a login. Prefer "unjudgeable" over a
+guess in exactly those cases, and only those.
 
 Say true when the page is the tool's own page, its repository, its
 documentation, or a lab or project page that clearly hosts it.
@@ -252,10 +259,21 @@ def verdict_for(t: dict, title: str, text: str, grade: str,
     if grade != "ok":
         return "unchecked", f"page not readable ({grade})"
     v, why = judge(t, title, text)
-    if v == "undecided" and use_llm:
+    # A deterministic mismatch is a *candidate*, not a verdict. It is the one
+    # consequential call this stage makes - it says a catalog url is wrong - and
+    # the rule behind it is crude: the name is absent and no vocabulary
+    # overlaps. That is also what a Google Drive sign-in wall, a bot challenge,
+    # a "please enable javascript" notice and a maintenance page all look like.
+    # Asked for a second opinion, the model overturned 3 of 31.
+    if v in ("undecided", "mismatch") and use_llm:
         got = ask_model(t, title, text, key, model, llm, lock)
         b = got.get("belongs")
-        v = "confirmed" if b else ("mismatch" if b is False else "undecided")
+        if b == "unjudgeable":
+            v = "unreadable"
+        elif b is True:
+            v = "confirmed"
+        elif b is False:
+            v = "mismatch"
         why = f"model({got.get('confidence', '?')}): {got.get('reason', '')[:110]}"
     return v, why
 
