@@ -129,6 +129,15 @@ def layer1(rows: list[dict]) -> list[dict]:
 # ---------------------------------------------------------------------------
 # Layers 2 and 3 - the model calls
 # ---------------------------------------------------------------------------
+def taxonomy_block() -> str:
+    from config import CATEGORIES
+    return "\n".join(f"  {k} - {label}: {desc}" for k, label, desc in CATEGORIES)
+
+
+# Scope IS the taxonomy, using config.CATEGORIES' own definitions rather than a
+# hand-written paraphrase. Before this the scope call - the harder judgement - got
+# bare domain names while the categorise call got full definitions, so the two could
+# disagree about what a domain meant and a new category did not widen scope.
 # Scope is defined POSITIVELY here. llm_assist.CATEGORISE_SYSTEM, which produced
 # the 130 scope drops this catalog applies, defines in_scope only by exclusion
 # and never names the 3D genome, methylation, QTL, reporter assays or histone
@@ -136,14 +145,13 @@ def layer1(rows: list[dict]) -> list[dict]:
 # while chromatin-3d held 153 records. Cell-cell communication is named out
 # explicitly because CellCall is the case a rule cannot reach: classify() admits
 # it on the phrase "transcription factor" and a reader sees a signalling tool.
-SCOPE_SYSTEM = """You decide whether a software tool belongs in a catalog of REGULATORY \
+SCOPE_SYSTEM = f"""You decide whether a software tool belongs in a catalog of REGULATORY \
 GENOMICS tools. You are given the tool's name, its paper's title, and its abstract.
 
-IN scope: transcription-factor binding and motifs; promoters, enhancers and cis-regulatory \
-elements; DNase/ATAC footprinting; ChIP-seq/ATAC-seq peak calling and annotation; chromatin \
-accessibility and nucleosomes; gene-regulatory networks; regulatory variant effect; DNA \
-methylation; the 3D genome (Hi-C, HiChIP, loops, TADs); histone modifications; reporter \
-assays (MPRA/STARR-seq); molecular QTL (eQTL, caQTL); and databases serving any of those.
+IN scope is exactly the catalog's own taxonomy, with the definitions the catalog uses. A
+tool belongs if it does any of these, or is a database serving one:
+
+{taxonomy_block()}
 
 OUT of scope: general alignment and assembly; RNA secondary structure; protein structure, \
 folding, docking and ligand binding; mass spectrometry; proteomics; metabolomics; \
@@ -174,13 +182,8 @@ program that ANALYSES data produced by such an assay is software and is in scope
 aligners, MPRA statistics packages, ATAC quality-control tools.
 
 Reply with JSON only:
-{"in_scope": true|false, "is_software": true|false, "confidence": "high|medium|low", \
-"reason": "one short clause"}"""
-
-
-def taxonomy_block() -> str:
-    from config import CATEGORIES
-    return "\n".join(f"  {k} - {label}: {desc}" for k, label, desc in CATEGORIES)
+{{"in_scope": true|false, "is_software": true|false, "confidence": "high|medium|low", \
+"reason": "one short clause"}}"""
 
 
 def categorise_system() -> str:
@@ -210,6 +213,27 @@ def api_key() -> str | None:
             if line.startswith("DEEPINFRA_API_KEY="):
                 return line.split("=", 1)[1].strip().strip("'\"")
     return None
+
+
+# Abstracts are sent whole. The earlier 2,600-character cut was arbitrary and,
+# although it fired on only 2 of 630 records, it was a TAIL cut on text whose
+# payload is in the tail: the "Availability: ... github.com/x/y" sentence sits at
+# median position 0.97 of the abstract, and 177 of 185 code urls fall in its final
+# quarter. One of the two truncated records lost its only url. There is no context
+# pressure to justify it either - the longest abstract here is ~700 tokens against
+# a 1M window, and the whole pass costs about $0.03 in input tokens.
+#
+# The cap that remains is a guard against a pathological record, not a budget, and
+# it keeps the END rather than the beginning for the reason above.
+ABSTRACT_CAP = 20000
+
+
+def clip(text: str, cap: int = ABSTRACT_CAP) -> str:
+    """Whole abstract, unless it is absurd - then keep the opening and the tail."""
+    if len(text) <= cap:
+        return text
+    head, tail = text[: cap // 2], text[-(cap // 2):]
+    return f"{head}\n[...]\n{tail}"
 
 
 def ask(model: str, system: str, user: str, key: str) -> tuple[dict | None, str, float]:
@@ -276,7 +300,7 @@ def layer3(rows: list[dict]) -> list[dict]:
         else:
             a = ab.get(str(r.get("pmid") or "")) or ab.get(str(r.get("doi") or "")) or ""
             user = (f"Tool name: {r['name']}\nPaper title: {r.get('description','')}\n\n"
-                    f"Abstract:\n{a[:2600]}" if a else
+                    f"Abstract:\n{clip(a)}" if a else
                     f"Tool name: {r['name']}\nPaper title: {r.get('description','')}\n"
                     f"(no abstract available)")
             j, raw, cost = ask(model, SCOPE_SYSTEM, user, key)
@@ -324,7 +348,7 @@ def layer2(rows: list[dict]) -> list[dict]:
         else:
             a = ab.get(str(r.get("pmid") or "")) or ab.get(str(r.get("doi") or "")) or ""
             user = (f"Tool name: {r['name']}\nPaper title: {r.get('description','')}\n\n"
-                    f"Abstract:\n{a[:2600]}" if a else
+                    f"Abstract:\n{clip(a)}" if a else
                     f"Tool name: {r['name']}\nPaper title: {r.get('description','')}\n"
                     f"(no abstract available)")
             j, raw, cost = ask(model, system, user, key)

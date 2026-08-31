@@ -219,7 +219,7 @@ Reply with JSON only:
 {"description": "...", "paper_matches": true, "mismatch_reason": ""}
 or {"description": null, "paper_matches": true, "mismatch_reason": ""}"""
 
-SCOPE_AUDIT_SYSTEM = """You review tools that an automated filter ADMITTED into a catalog of \
+SCOPE_AUDIT_SYSTEM = f"""You review tools that an automated filter ADMITTED into a catalog of \
 regulatory-genomics tools, and identify the ones admitted wrongly.
 
 Each of these was admitted on a single EDAM operation annotation with nothing corroborating it. \
@@ -227,11 +227,10 @@ Those annotations are frequently wrong: a cytochrome-P450 inhibition predictor w
 "Promoter prediction", a protein beta-strand predictor likewise. So judge the tool by what its \
 description and paper say it DOES, and treat the EDAM operation as unreliable.
 
-IN scope: transcription-factor binding and motifs; promoters, enhancers and cis-regulatory \
-elements; DNase/ATAC footprinting; ChIP-seq/ATAC-seq peak calling and annotation; chromatin \
-accessibility and nucleosomes; gene-regulatory networks; regulatory variant effect; DNA \
-methylation; the 3D genome (Hi-C, HiChIP, loops, TADs); histone modifications; reporter assays \
-(MPRA/STARR-seq); molecular QTL (eQTL, caQTL); and databases serving any of those.
+IN scope is exactly the catalog's own taxonomy, with the definitions the catalog uses. \
+A tool belongs if it does any of these, or is a database serving one:
+
+{TAXONOMY}
 
 OUT of scope: general alignment and assembly; RNA secondary structure; protein structure, \
 folding, docking and ligand or small-molecule binding sites; mass spectrometry; proteomics; \
@@ -244,15 +243,15 @@ A DNA-binding protein predictor IS in scope. A protein-ligand binding site predi
 A tool for RNA modification sites is NOT, even though it says "modification site prediction".
 
 Reply with JSON only:
-{"in_scope": true, "confidence": "high|medium|low", "reason": "one short clause"}"""
+{{"in_scope": true, "confidence": "high|medium|low", "reason": "one short clause"}}"""
 
-ADJUDICATE_SYSTEM = """You review bioinformatics tools that an automated filter EXCLUDED from a \
+ADJUDICATE_SYSTEM = f"""You review bioinformatics tools that an automated filter EXCLUDED from a \
 catalog of regulatory-genomics tools, and identify the ones excluded wrongly.
 
-In scope: transcription-factor binding and motifs; promoters, enhancers and cis-regulatory \
-elements; DNase/ATAC footprinting; ChIP-seq/ATAC-seq peak calling and annotation; chromatin \
-accessibility and nucleosomes; gene-regulatory networks; regulatory variant effect; and databases \
-serving those.
+IN scope is exactly the catalog's own taxonomy, with the definitions the catalog uses. \
+A tool belongs if it does any of these, or is a database serving one:
+
+{TAXONOMY}
 
 Out of scope: general alignment and assembly, RNA structure, protein structure and docking, mass \
 spectrometry, proteomics, metabolomics, phylogenetics, and generic differential-expression \
@@ -261,7 +260,7 @@ tooling - even when they share vocabulary like "motif", "peak" or "binding".
 Be strict. The filter is usually right; only flag a clear mistake.
 
 Reply with JSON only:
-{"should_include": false, "reason": "one short clause"}"""
+{{"should_include": false, "reason": "one short clause"}}"""
 
 
 def digest(*parts: str) -> str:
