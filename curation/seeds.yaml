@@ -2083,3 +2083,38 @@ tools:
     categories: [dna-methylation]
     doi: 10.1186/s13059-018-1513-2
 
+  # --- promoted from the literature queue, reviewed by hand 2026-08-31 ------------
+  # 5 of these carry a url the reviewer corrected; the one the
+  # pipeline had pointed at different software entirely.
+  - name: SAAP-RRBS
+    url: https://github.com/Shicheng-Guo/saap-rrbs
+    repo: Shicheng-Guo/saap-rrbs
+    description: streamlined analysis and annotation pipeline for reduced representation bisulfite sequencing
+    categories: [dna-methylation]
+    doi: 10.1093/bioinformatics/bts337
+
+  - name: BRAT-BW
+    url: http://compbio.cs.ucr.edu/brat/
+    description: efficient and accurate mapping of bisulfite-treated reads
+    categories: [dna-methylation]
+    doi: 10.1093/bioinformatics/bts264
+
+  - name: Genevar
+    url: https://www.sanger.ac.uk/tool/genevar-gene-expression-variation/
+    description: a database and Java application for the analysis and visualization of SNP-gene associations in eQTL studies
+    categories: [molecular-qtl]
+    doi: 10.1093/bioinformatics/btq452
+
+  - name: RRBSMAP
+    url: https://github.com/zyndagj/BSMAPz
+    repo: zyndagj/BSMAPz
+    description: 'a fast, accurate and user-friendly alignment tool for reduced representation bisulfite sequencing'
+    categories: [dna-methylation]
+    doi: 10.1093/bioinformatics/btr668
+
+  - name: HiChIP
+    url: https://bioinformaticstools.mayo.edu/research/hichipseq-pipeline/
+    description: a high-throughput pipeline for integrative analysis of ChIP-Seq data
+    categories: [peak-calling, peak-annotation, motif-discovery]
+    doi: 10.1186/1471-2105-15-280
+
