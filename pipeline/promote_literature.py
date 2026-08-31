@@ -30,6 +30,7 @@ wrongly excluded one is invisible.
 from __future__ import annotations
 
 import argparse
+import gzip
 import hashlib
 import json
 import os
@@ -48,7 +49,7 @@ VERDICTS = RAW / "literature_promote.json"
 SCOPE_VERDICTS = RAW / "literature_scope.json"
 SCOPE_CACHE = CACHE / "literature_scope_cache.json"
 FULLTEXT_VERDICTS = RAW / "literature_fulltext_urls.json"
-FULLTEXT_CACHE = CACHE / "fulltext_urls.json"
+FULLTEXT_DIR = CACHE / "fulltext"          # the documents themselves, gzipped
 RESOLVE_VERDICTS = RAW / "literature_resolved_repos.json"
 RESOLVE_CACHE = CACHE / "literature_resolve.json"
 CAT_VERDICTS = RAW / "literature_categories.json"
@@ -400,7 +401,6 @@ def fulltext_urls(rows: list[dict]) -> list[dict]:
             k = rec.get("pmid") or rec.get("doi")
             if k:
                 epmc[str(k)] = rec
-    cache = json.loads(FULLTEXT_CACHE.read_text()) if FULLTEXT_CACHE.exists() else {}
     http = requests.Session()
     http.headers.update({"User-Agent": user_agent()})
     out, n_new = [], 0
@@ -412,29 +412,37 @@ def fulltext_urls(rows: list[dict]) -> list[dict]:
             rec |= {"status": "no full text", "url": "", "code": []}
             out.append(rec)
             continue
-        if pmcid in cache:
-            hit = cache[pmcid]
+        # The DOCUMENT is cached, not the urls extracted from it. Caching the
+        # extraction meant every change to the rules cost 270 refetches, and the
+        # rules changed four times: code-host-only, then boilerplate, then the
+        # name guard, then the availability-section exemption. Keeping the source
+        # makes a rule change a re-parse.
+        doc_path = FULLTEXT_DIR / f"{pmcid}.xml.gz"
+        text = ""
+        if doc_path.exists():
+            with gzip.open(doc_path, "rt", encoding="utf-8", errors="replace") as fh:
+                text = fh.read()
         else:
             try:
                 resp = http.get(FULLTEXT.format(pmcid=pmcid), timeout=60)
-                code, other = (software_urls(resp.text, r["name"])
-                               if resp.status_code == 200 else ([], []))
-                hit = {"code": code[:3], "other": other[:3]}
-            except requests.RequestException as exc:
-                hit = {"error": str(exc)[:80], "code": [], "other": []}
-            cache[pmcid] = hit
+                text = resp.text if resp.status_code == 200 else ""
+            except requests.RequestException:
+                text = ""
+            if text:
+                FULLTEXT_DIR.mkdir(parents=True, exist_ok=True)
+                with gzip.open(doc_path, "wt", encoding="utf-8") as fh:
+                    fh.write(text)
             n_new += 1
             if n_new % 25 == 0:
-                FULLTEXT_CACHE.write_text(json.dumps(cache))
-                print(f"  {i}/{len(rows)}", flush=True)
+                print(f"  {i}/{len(rows)} fetched", flush=True)
             time.sleep(0.25)
-        code, other = hit.get("code") or [], hit.get("other") or []
+        code, other = software_urls(text, r["name"]) if text else ([], [])
         best = code[0] if code else (other[0] if other else "")
         rec |= {"status": "code host" if code else ("named url" if other else "none"),
                 "url": best, "code": code}
         out.append(rec)
-    FULLTEXT_CACHE.write_text(json.dumps(cache))
-    print(f"  {n_new} documents fetched")
+    print(f"  {n_new} documents fetched; "
+          f"{len(list(FULLTEXT_DIR.glob('*.xml.gz'))) if FULLTEXT_DIR.exists() else 0} on disk")
     return out
 
 def resolve_remaining(rows: list[dict]) -> list[dict]:

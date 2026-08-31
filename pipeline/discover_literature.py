@@ -180,6 +180,38 @@ BOILERPLATE_RE = re.compile(
 FULLTEXT = "https://www.ebi.ac.uk/europepmc/webservices/rest/{pmcid}/fullTextXML"
 
 
+# An Availability / Implementation section is the author saying "this is where my
+# software lives", which is stronger evidence than name similarity. HiTAD's paper
+# reads "HiTAD is integrated to a Python package called TADLib, which is freely
+# available online at https://pypi.python.org/pypi/TADLib" - the url is right
+# there and the name guard rejects it, because the tool ships inside a
+# differently-named package. Same shape as QuASAR-MPRA living inside QuASAR.
+#
+# So urls found INSIDE such a section skip the name guard. Everything outside it
+# keeps the guard: eQED's paper links mathworks.com and mosek.com, which are its
+# dependencies, and those must still be refused.
+AVAIL_RE = re.compile(
+    r"(availability|implementation|software availability|code availability|"
+    r"data and software|download|source code)", re.I)
+
+
+def availability_urls(text: str) -> list[str]:
+    """Urls appearing within ~600 characters after an availability-type heading."""
+    out = []
+    for m in re.finditer(r"<(?:title|label)[^>]*>\s*[^<]{0,60}", text):
+        if not AVAIL_RE.search(m.group(0)):
+            continue
+        window = text[m.start(): m.start() + 900]
+        urls, _ = abstract_urls(window)
+        out += [u for u in urls if not BOILERPLATE_RE.search(u)]
+    seen, uniq = set(), []
+    for u in out:
+        if u not in seen:
+            seen.add(u)
+            uniq.append(u)
+    return uniq
+
+
 def named_for(url: str, tool: str) -> bool:
     """Does this url plausibly belong to THIS tool rather than one it cites?
 
@@ -204,7 +236,8 @@ def software_urls(text: str, tool: str = "") -> tuple[list[str], list[str]]:
     urls, _ = abstract_urls(text)
     keep = [u for u in urls if not BOILERPLATE_RE.search(u)]
     if tool:
-        keep = [u for u in keep if named_for(u, tool)]
+        avail = availability_urls(text)
+        keep = [u for u in keep if named_for(u, tool) or u in avail]
     code = [u for u in keep if CODE_HOST_RE.search(u)]
     other = [u for u in keep if not CODE_HOST_RE.search(u)]
     return code, other

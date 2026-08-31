@@ -5227,6 +5227,100 @@
    "archived": false,
    "full_name": "shuaibinw/UniChrom",
    "readme": ""
+  },
+  "csbbcompbio/CSBB-v3.0": {
+   "description": "CSBB - Computational Suite For Bioinformaticians and Biologists",
+   "topics": [
+    "atac-seq",
+    "chip-seq",
+    "correlation",
+    "differential-expression",
+    "heatmap",
+    "linegraph",
+    "ngs-pipeline",
+    "nmf-decomposition",
+    "normalization",
+    "pca",
+    "pipelines",
+    "protein-protein-interaction",
+    "publicdata",
+    "rna-seq",
+    "scatter-plot",
+    "statistics"
+   ],
+   "stars": 6,
+   "archived": false,
+   "full_name": "csbbcompbio/CSBB-v3.0",
+   "readme": ""
+  },
+  "khuang28jhu/bs3": {
+   "description": "BS-Seeker3: An Ultra-fast, Versatile Pipeline for Mapping Bisulfite-treated Reads.",
+   "topics": [
+    "alignment",
+    "bisulfite",
+    "methylation-rate-calculation",
+    "ngstools",
+    "python-2"
+   ],
+   "stars": 29,
+   "archived": false,
+   "full_name": "khuang28jhu/bs3",
+   "readme": ""
+  },
+  "quon-titative-biology/scBFA": {
+   "description": "Binary Factor Analysis: a dimensionality reduction tool for noisy, high throughput single cell genomic data",
+   "topics": [
+    "human-cell-atlas",
+    "scrna-seq",
+    "scrna-seq-analysis",
+    "single-cell",
+    "single-cell-atac-seq",
+    "single-cell-genomics"
+   ],
+   "stars": 4,
+   "archived": false,
+   "full_name": "quon-titative-biology/scBFA",
+   "readme": ""
+  },
+  "occasumlux/Promoters": {
+   "description": "Implementation of PromoterLCNN: A Light CNN-based Promoter Prediction and Classification model.",
+   "topics": [],
+   "stars": 0,
+   "archived": false,
+   "full_name": "occasumlux/Promoters",
+   "readme": ""
+  },
+  "GreenleafLab/MPAL-Single-Cell-2019": {
+   "description": "Publication Page for MPAL Paper 2019",
+   "topics": [],
+   "stars": 86,
+   "archived": false,
+   "full_name": "GreenleafLab/MPAL-Single-Cell-2019",
+   "readme": ""
+  },
+  "aertslab/AUCell": {
+   "description": "AUCell: score single cells with gene regulatory networks",
+   "topics": [],
+   "stars": 202,
+   "archived": false,
+   "full_name": "aertslab/AUCell",
+   "readme": ""
+  },
+  "BovReg/BovReg_eQTL": {
+   "description": "Repository",
+   "topics": [],
+   "stars": 10,
+   "archived": false,
+   "full_name": "BovReg/BovReg_eQTL",
+   "readme": ""
+  },
+  "mikolmogorov/Flye": {
+   "description": "De novo assembler for single molecule sequencing reads using repeat graphs",
+   "topics": [],
+   "stars": 950,
+   "archived": false,
+   "full_name": "mikolmogorov/Flye",
+   "readme": ""
   }
  }
 }

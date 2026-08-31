@@ -89,8 +89,8 @@
    "pmcid": "PMC5737579",
    "doi": "10.1093/nar/gkx735",
    "pmid": "28977529",
-   "status": "none",
-   "url": "",
+   "status": "named url",
+   "url": "https://pypi.python.org/pypi/TADLib",
    "code": []
   },
   {
@@ -99,8 +99,9 @@
    "doi": "10.1093/nar/gkz933",
    "pmid": "31733057",
    "status": "code host",
-   "url": "https://gitlab.com/Xenbase/bioinformatics/pipeline",
+   "url": "https://github.com/csbbcompbio/CSBB-v3.0",
    "code": [
+    "https://github.com/csbbcompbio/CSBB-v3.0",
     "https://gitlab.com/Xenbase/bioinformatics/pipeline"
    ]
   },
@@ -186,8 +187,8 @@
    "pmcid": "PMC4152589",
    "doi": "10.1186/1471-2105-15-280",
    "pmid": "25128017",
-   "status": "none",
-   "url": "",
+   "status": "named url",
+   "url": "http://bioinformaticstools.mayo.edu",
    "code": []
   },
   {
@@ -307,8 +308,8 @@
    "pmcid": "PMC6498543",
    "doi": "10.1186/s12859-019-2798-1",
    "pmid": "31046682",
-   "status": "none",
-   "url": "",
+   "status": "named url",
+   "url": "https://osf.io/gkedt",
    "code": []
   },
   {
@@ -334,9 +335,11 @@
    "pmcid": "PMC5883884",
    "doi": "10.1186/s12859-018-2120-7",
    "pmid": "29614954",
-   "status": "none",
-   "url": "",
-   "code": []
+   "status": "code host",
+   "url": "https://github.com/khuang28jhu/bs3",
+   "code": [
+    "https://github.com/khuang28jhu/bs3"
+   ]
   },
   {
    "name": "ChromatinDB",
@@ -445,7 +448,7 @@
    "doi": "10.1186/1471-2105-5-27",
    "pmid": "15113408",
    "status": "named url",
-   "url": "http://dev.wormbase.org/CisOrtho",
+   "url": "http://www.sgi.com/tech/stl",
    "code": []
   },
   {
@@ -667,8 +670,10 @@
    "doi": "10.1038/s41467-024-46045-w",
    "pmid": "38388573",
    "status": "code host",
-   "url": "https://github.com/BioX-NKU/scCASE",
+   "url": "https://github.com/quon-titative-biology/scBFA",
    "code": [
+    "https://github.com/quon-titative-biology/scBFA",
+    "https://github.com/CostaLab/scopen-reproducibility/blob/main/scripts/Imputation/scBFA.R",
     "https://github.com/BioX-NKU/scCASE"
    ]
   },
@@ -1050,9 +1055,11 @@
    "pmcid": "PMC3798280",
    "doi": "10.1371/journal.pcbi.1003246",
    "pmid": "24146601",
-   "status": "named url",
-   "url": "http://www.stat.wisc.edu/~chungdon/dpeak",
-   "code": []
+   "status": "code host",
+   "url": "http://www.bioconductor.org",
+   "code": [
+    "http://www.bioconductor.org"
+   ]
   },
   {
    "name": "PASS-bis",
@@ -1139,8 +1146,8 @@
    "pmcid": "PMC3866262",
    "doi": "10.1186/1752-0509-7-s2-s14",
    "pmid": "24564945",
-   "status": "none",
-   "url": "",
+   "status": "named url",
+   "url": "http://www.benoslab.pitt.edu/stamp",
    "code": []
   },
   {
@@ -1168,8 +1175,8 @@
    "pmcid": "PMC4838354",
    "doi": "10.1093/nar/gkv1491",
    "pmid": "26704972",
-   "status": "none",
-   "url": "",
+   "status": "named url",
+   "url": "http://www.cbil.ece.vt.edu/software.htm",
    "code": []
   },
   {
@@ -1265,8 +1272,8 @@
    "pmcid": "PMC4234473",
    "doi": "10.1186/1471-2164-15-290",
    "pmid": "24734894",
-   "status": "none",
-   "url": "",
+   "status": "named url",
+   "url": "http://www.mcgill.ca/psychiatricgenetics",
    "code": []
   },
   {
@@ -1379,9 +1386,11 @@
    "pmcid": "PMC9325283",
    "doi": "10.3390/genes13071126",
    "pmid": "35885909",
-   "status": "none",
-   "url": "",
-   "code": []
+   "status": "code host",
+   "url": "https://github.com/occasumlux/Promoters",
+   "code": [
+    "https://github.com/occasumlux/Promoters"
+   ]
   },
   {
    "name": "scHiMe",
@@ -1524,8 +1533,8 @@
    "pmcid": "PMC7885521",
    "doi": "10.1186/s12859-020-03927-2",
    "pmid": "33588754",
-   "status": "none",
-   "url": "",
+   "status": "named url",
+   "url": "https://www.encodeproject.org",
    "code": []
   },
   {
@@ -1533,8 +1542,8 @@
    "pmcid": "PMC3039987",
    "doi": "10.6026/97320630005049",
    "pmid": "21346861",
-   "status": "none",
-   "url": "",
+   "status": "named url",
+   "url": "http://research.umbc.edu/~erill",
    "code": []
   },
   {
@@ -1662,8 +1671,8 @@
    "pmcid": "PMC3561985",
    "doi": "10.1093/nar/gks1286",
    "pmid": "23241390",
-   "status": "none",
-   "url": "",
+   "status": "named url",
+   "url": "http://www.noraybio.com/en/gennetec.asp",
    "code": []
   },
   {
@@ -1720,8 +1729,8 @@
    "pmcid": "PMC1156870",
    "doi": "10.1186/1471-2105-6-130",
    "pmid": "15921531",
-   "status": "none",
-   "url": "",
+   "status": "named url",
+   "url": "http://cbis.anu.edu.au/software",
    "code": []
   },
   {
@@ -1758,8 +1767,8 @@
    "pmcid": "PMC11253421",
    "doi": "10.1186/s13072-024-00545-7",
    "pmid": "39014503",
-   "status": "none",
-   "url": "",
+   "status": "named url",
+   "url": "https://zenodo.org/records/11407329",
    "code": []
   },
   {
@@ -1814,8 +1823,8 @@
    "pmcid": "PMC5303264",
    "doi": "10.1186/s12859-017-1461-y",
    "pmid": "28187703",
-   "status": "none",
-   "url": "",
+   "status": "named url",
+   "url": "http://www.tongjidmb.com/human/index.html",
    "code": []
   },
   {
@@ -1915,8 +1924,8 @@
    "pmcid": "PMC1838919",
    "doi": "10.1186/1471-2105-8-100",
    "pmid": "17378935",
-   "status": "none",
-   "url": "",
+   "status": "named url",
+   "url": "http://emu.src.riken.jp/combinator",
    "code": []
   },
   {
@@ -2177,8 +2186,9 @@
    "doi": "10.1093/bib/bbaf069",
    "pmid": "39987573",
    "status": "code host",
-   "url": "https://github.com/xmuhuanglab/DECA",
+   "url": "https://github.com/GreenleafLab/MPAL-Single-Cell-2019",
    "code": [
+    "https://github.com/GreenleafLab/MPAL-Single-Cell-2019",
     "https://github.com/xmuhuanglab/DECA"
    ]
   },
@@ -2421,8 +2431,8 @@
    "pmcid": "PMC11756770",
    "doi": "10.1371/journal.pgen.1011563",
    "pmid": "39792937",
-   "status": "none",
-   "url": "",
+   "status": "named url",
+   "url": "http://palmerlab.org/protocols-data",
    "code": []
   },
   {
@@ -2570,9 +2580,11 @@
    "pmcid": "PMC12636526",
    "doi": "10.1093/bib/bbaf621",
    "pmid": "41269283",
-   "status": "none",
-   "url": "",
-   "code": []
+   "status": "code host",
+   "url": "https://github.com/aertslab/AUCell",
+   "code": [
+    "https://github.com/aertslab/AUCell"
+   ]
   },
   {
    "name": "RefTM",
@@ -2600,8 +2612,8 @@
    "pmcid": "PMC10689045",
    "doi": "10.1093/nargab/lqad105",
    "pmid": "38046273",
-   "status": "none",
-   "url": "",
+   "status": "named url",
+   "url": "https://zenodo.org/doi/10.5281/zenodo.10185302",
    "code": []
   },
   {
@@ -2674,8 +2686,8 @@
    "pmcid": "PMC12844561",
    "doi": "10.3389/fgene.2026.1743148",
    "pmid": "41607593",
-   "status": "none",
-   "url": "",
+   "status": "named url",
+   "url": "https://ngdc.cncb.ac.cn/search/specific?db=bioproject&amp",
    "code": []
   },
   {
@@ -3010,8 +3022,8 @@
    "pmcid": "PMC11170880",
    "doi": "10.1186/s12859-024-05833-3",
    "pmid": "38872103",
-   "status": "none",
-   "url": "",
+   "status": "named url",
+   "url": "https://www.10xgenomics.com/datasets/pbmc-from-a-healthy-donor-no-cell-sorting-10-k-1-standard-2-0-0",
    "code": []
   },
   {
@@ -3101,7 +3113,8 @@
    "status": "code host",
    "url": "https://github.com/StatBiomed/CRAK-Velo.git",
    "code": [
-    "https://github.com/StatBiomed/CRAK-Velo.git"
+    "https://github.com/StatBiomed/CRAK-Velo.git",
+    "https://github.com/Nour899/cisTopic.git"
    ]
   },
   {
@@ -3180,9 +3193,13 @@
    "pmcid": "PMC11420669",
    "doi": "10.1093/nargab/lqae122",
    "pmid": "39318506",
-   "status": "none",
-   "url": "",
-   "code": []
+   "status": "code host",
+   "url": "https://github.com/BovReg/BovReg_eQTL",
+   "code": [
+    "https://github.com/BovReg/BovReg_eQTL",
+    "https://hub.docker.com/u/praveenchitneedi",
+    "https://github.com/BovReg/BovReg_eQTL/tree/main/conf"
+   ]
   },
   {
    "name": "FastGxC",
@@ -3397,9 +3414,11 @@
    "pmcid": "PMC13116353",
    "doi": "10.1002/advs.202517692",
    "pmid": "41684299",
-   "status": "none",
-   "url": "",
-   "code": []
+   "status": "code host",
+   "url": "https://github.com/mikolmogorov/Flye",
+   "code": [
+    "https://github.com/mikolmogorov/Flye"
+   ]
   },
   {
    "name": "Neur-Ally",
@@ -3585,7 +3604,8 @@
    "status": "code host",
    "url": "https://github.com/CatonTree1024/TF-loop",
    "code": [
-    "https://github.com/CatonTree1024/TF-loop"
+    "https://github.com/CatonTree1024/TF-loop",
+    "https://github.com/CatonTree1024/TF-BERT"
    ]
   },
   {

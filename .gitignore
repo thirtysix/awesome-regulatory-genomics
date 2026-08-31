@@ -37,3 +37,9 @@ docs/candidate-review.md
 
 # Unsent correspondence and copy. Durable on disk, never published.
 drafts/
+
+# Cached Europe PMC full-text documents: kept on disk so extraction-rule changes
+# re-parse instead of refetching, never committed. This repo is public and only
+# 59 of 240 are CC BY; 18 are NC/ND and 163 state no licence at all. Fetching
+# them for text mining is not the same act as redistributing them.
+data/cache/fulltext/
