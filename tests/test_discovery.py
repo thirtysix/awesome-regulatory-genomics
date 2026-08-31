@@ -211,8 +211,11 @@ def test_a_relaunched_domain_is_a_mismatch_not_a_live_page():
     """
     from verify_urls import judge
     tool = {"name": "HHMD", "description": "the human histone modification database"}
-    verdict, _why = judge(tool, "Hip Hop Museum Denmark",
-                          "Hip Hop Museum Denmark exhibitions tickets opening hours Copenhagen")
+    # A real relaunched domain serves a real page; the text has to be long
+    # enough to clear MIN_TEXT, or the verdict is `unreadable` and says so.
+    prose = ("Hip Hop Museum Denmark exhibitions tickets opening hours Copenhagen "
+             "concerts archive collection workshops events visit us ") * 6
+    verdict, _why = judge(tool, "Hip Hop Museum Denmark", prose)
     assert verdict == "mismatch"
 
 
@@ -247,9 +250,3 @@ def test_a_page_with_no_prose_is_unreadable_not_a_mismatch():
     assert judge(tool, "", "")[0] == "unreadable"
     assert judge(tool, "", "loading...")[0] == "unreadable"
 
-
-def test_a_relaunched_domain_is_still_caught_once_there_is_text():
-    from verify_urls import judge
-    tool = {"name": "HHMD", "description": "the human histone modification database"}
-    prose = "exhibitions tickets opening hours Copenhagen concerts archive collection " * 8
-    assert judge(tool, "Hip Hop Museum Denmark", prose)[0] == "mismatch"
