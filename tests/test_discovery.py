@@ -196,3 +196,38 @@ def test_the_queue_is_the_join_of_in_scope_and_is_software():
     assert absolute("https://github.com/owner/name") == "https://github.com/owner/name"
     assert absolute("http://example.org/tool") == "http://example.org/tool"
     assert absolute("") == ""
+
+
+# ---------------------------------------------------------------------------
+# a url that resolves is not a url that belongs to the tool
+# ---------------------------------------------------------------------------
+def test_a_relaunched_domain_is_a_mismatch_not_a_live_page():
+    """HHMD's paper offers www.hhmd.org. It is the Hip Hop Museum Denmark.
+
+    check_homepages grades that 200/ok and is right to: the url resolves. The
+    identity check is what separates "the server answered" from "the tool is
+    there", and it has to reach `mismatch` without a model, because the model
+    tier is optional.
+    """
+    from verify_urls import judge
+    tool = {"name": "HHMD", "description": "the human histone modification database"}
+    verdict, _why = judge(tool, "Hip Hop Museum Denmark",
+                          "Hip Hop Museum Denmark exhibitions tickets opening hours Copenhagen")
+    assert verdict == "mismatch"
+
+
+def test_the_tools_own_page_is_confirmed_without_a_model():
+    from verify_urls import judge
+    tool = {"name": "BRAT-BW", "description": "efficient and accurate mapping of bisulfite-treated reads"}
+    verdict, _why = judge(tool, "BRAT",
+                          "BRAT-BW is a tool for efficient and accurate mapping of bisulfite treated reads")
+    assert verdict == "confirmed"
+
+
+def test_name_matching_ignores_punctuation():
+    from verify_urls import name_present
+    assert name_present("BRAT-BW", "BRAT BW mapping")
+    assert name_present("CUT-RUNTools-2.0", "CUT&RUNTools 2.0 release")
+    assert not name_present("HHMD", "Hip Hop Museum Denmark")
+    # Too short to carry evidence; two letters match everything.
+    assert not name_present("BS", "bisulfite sequencing")

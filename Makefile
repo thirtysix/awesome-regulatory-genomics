@@ -2,7 +2,7 @@ PY ?= python3
 PORT ?= 8000        # override if 8000 is taken: make serve PORT=8420
 PIPELINE := $(PY) pipeline
 
-.PHONY: all harvest select enrich links build render audit curate refresh clean check test serve llm bench verify-additions repos repos-revalidate discover discover-refresh discover-lit discover-pubs check-links fill-metadata installs audit-scope recheck-pubs search-pubs verify-upstream biotools-edit
+.PHONY: all harvest select enrich links build render audit curate refresh clean check test serve llm bench verify-additions repos repos-revalidate discover discover-refresh discover-lit discover-pubs check-links fill-metadata installs audit-scope recheck-pubs search-pubs verify-upstream biotools-edit verify-urls recover-urls
 
 ## build everything from the existing sweep (no network beyond enrichment)
 all: select enrich repos links build render audit
@@ -45,6 +45,20 @@ links:
 ## only a 404/410 counts as dead. Cached, so re-runs only recheck stale entries.
 check-links:
 	$(PIPELINE)/check_homepages.py
+
+## is the page at each url actually THIS tool? check-links answers whether a
+## url resolves; it cannot answer whether the thing that answered is the tool.
+## HHMD's own paper offers www.hhmd.org, which resolves, returns 200, and is
+## the Hip Hop Museum Denmark. Deterministic first; a cheap DeepInfra model
+## only sees the ambiguous middle. Runs without a key, at lower resolution.
+verify-urls:
+	$(PIPELINE)/verify_urls.py
+
+## find a url for a tool that has none, or whose url verify-urls rejected.
+## Registries, then the GitHub search API behind layer 1's validation, then a
+## Wayback snapshot. No search engine and no agent: every source is an API.
+recover-urls:
+	$(PIPELINE)/recover_urls.py --input data/raw/url_identity.json
 
 ## read install routes (PyPI/conda/CRAN/Bioconductor/Docker) off each tool's
 ## own repository README. Better evidence than a name match in a registry, and
