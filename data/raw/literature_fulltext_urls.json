@@ -1,0 +1,3639 @@
+{
+ "count": 377,
+ "list": [
+  {
+   "name": "metilene",
+   "pmcid": "PMC4728377",
+   "doi": "10.1101/gr.196394.115",
+   "pmid": "26631489",
+   "status": "named url",
+   "url": "http://www.bioinf.uni-leipzig.de/Software/metilene",
+   "code": []
+  },
+  {
+   "name": "Genevar",
+   "pmcid": "PMC2944204",
+   "doi": "10.1093/bioinformatics/btq452",
+   "pmid": "20702402",
+   "status": "named url",
+   "url": "http://www.sanger.ac.uk/resources/software/genevar",
+   "code": []
+  },
+  {
+   "name": "MOABS",
+   "pmcid": "PMC4054608",
+   "doi": "10.1186/gb-2014-15-2-r38",
+   "pmid": "24565500",
+   "status": "named url",
+   "url": "http://code.google.com/p/moabs",
+   "code": []
+  },
+  {
+   "name": "SEdb",
+   "pmcid": "PMC6323980",
+   "doi": "10.1093/nar/gky1025",
+   "pmid": "30371817",
+   "status": "named url",
+   "url": "http://www.licpathway.net/sedb",
+   "code": []
+  },
+  {
+   "name": "BiSearch",
+   "pmcid": "PMC546182",
+   "doi": "10.1093/nar/gni012",
+   "pmid": "15653630",
+   "status": "named url",
+   "url": "http://bisearch.enzim.hu",
+   "code": []
+  },
+  {
+   "name": "DeepTACT",
+   "pmcid": "PMC6547469",
+   "doi": "10.1093/nar/gkz167",
+   "pmid": "30869141",
+   "status": "code host",
+   "url": "https://github.com/liwenran/DeepTACT",
+   "code": [
+    "https://github.com/liwenran/DeepTACT"
+   ]
+  },
+  {
+   "name": "SCORE",
+   "pmcid": "PMC125053",
+   "doi": "10.1073/pnas.152320899",
+   "pmid": "12107285",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "FootPrinter",
+   "pmcid": "PMC169012",
+   "doi": "10.1093/nar/gkg606",
+   "pmid": "12824433",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "eQED",
+   "pmcid": "PMC2290938",
+   "doi": "10.1038/msb.2008.4",
+   "pmid": "18319721",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "HiTAD",
+   "pmcid": "PMC5737579",
+   "doi": "10.1093/nar/gkx735",
+   "pmid": "28977529",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "Xenbase",
+   "pmcid": "PMC7145613",
+   "doi": "10.1093/nar/gkz933",
+   "pmid": "31733057",
+   "status": "code host",
+   "url": "https://gitlab.com/Xenbase/bioinformatics/pipeline",
+   "code": [
+    "https://gitlab.com/Xenbase/bioinformatics/pipeline"
+   ]
+  },
+  {
+   "name": "HHMD",
+   "pmcid": "PMC2808954",
+   "doi": "10.1093/nar/gkp968",
+   "pmid": "19892823",
+   "status": "named url",
+   "url": "http://bioinfo.hrbmu.edu.cn/hhmd",
+   "code": []
+  },
+  {
+   "name": "RRBSMAP",
+   "pmcid": "PMC3268241",
+   "doi": "10.1093/bioinformatics/btr668",
+   "pmid": "22155871",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "BRAT-BW",
+   "pmcid": "PMC3381974",
+   "doi": "10.1093/bioinformatics/bts264",
+   "pmid": "22563065",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "BioOptimizer",
+   "pmcid": null,
+   "doi": "10.1093/bioinformatics/bth127",
+   "pmid": "14962923",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "Epiphany",
+   "pmcid": "PMC10242996",
+   "doi": "10.1186/s13059-023-02934-9",
+   "pmid": "37280678",
+   "status": "code host",
+   "url": "https://github.com/arnavmdas/epiphany",
+   "code": [
+    "https://github.com/arnavmdas/epiphany"
+   ]
+  },
+  {
+   "name": "SAAP-RRBS",
+   "pmcid": "PMC3413387",
+   "doi": "10.1093/bioinformatics/bts337",
+   "pmid": "22689387",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "BayesCCE",
+   "pmcid": "PMC6151042",
+   "doi": "10.1186/s13059-018-1513-2",
+   "pmid": "30241486",
+   "status": "code host",
+   "url": "https://github.com/cozygene/bayescce",
+   "code": [
+    "https://github.com/cozygene/bayescce",
+    "https://github.com/cozygene/BayesCCE"
+   ]
+  },
+  {
+   "name": "gemBS",
+   "pmcid": null,
+   "doi": "10.1093/bioinformatics/bty690",
+   "pmid": "30137223",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "HiChIP",
+   "pmcid": "PMC4152589",
+   "doi": "10.1186/1471-2105-15-280",
+   "pmid": "25128017",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "ATAC-clock",
+   "pmcid": "PMC10828344",
+   "doi": "10.1007/s11357-023-00986-0",
+   "pmid": "37924441",
+   "status": "code host",
+   "url": "https://github.com/SunScript0/ATAC-clock",
+   "code": [
+    "https://github.com/SunScript0/ATAC-clock"
+   ]
+  },
+  {
+   "name": "PrimerSuite",
+   "pmcid": "PMC5259761",
+   "doi": "10.1038/srep41328",
+   "pmid": "28117430",
+   "status": "named url",
+   "url": "http://www.primer-suite.com",
+   "code": []
+  },
+  {
+   "name": "iNuc-STNC",
+   "pmcid": null,
+   "doi": "10.1039/c6mb00221h",
+   "pmid": "27271822",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "Methy-Pipe",
+   "pmcid": "PMC4063866",
+   "doi": "10.1371/journal.pone.0100360",
+   "pmid": "24945300",
+   "status": "named url",
+   "url": "http://sunlab.lihs.cuhk.edu.hk/methy-pipe",
+   "code": []
+  },
+  {
+   "name": "BatMeth",
+   "pmcid": "PMC3491410",
+   "doi": "10.1186/gb-2012-13-10-r82",
+   "pmid": "23034162",
+   "status": "named url",
+   "url": "http://code.google.com/p/batmeth",
+   "code": []
+  },
+  {
+   "name": "IChrom-Deep",
+   "pmcid": null,
+   "doi": "10.1109/jbhi.2023.3292299",
+   "pmid": "37402191",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "MrTADFinder",
+   "pmcid": "PMC5546724",
+   "doi": "10.1371/journal.pcbi.1005647",
+   "pmid": "28742097",
+   "status": "code host",
+   "url": "https://github.com/gersteinlab/MrTADFinder",
+   "code": [
+    "https://github.com/gersteinlab/MrTADFinder"
+   ]
+  },
+  {
+   "name": "TADKB",
+   "pmcid": "PMC6419456",
+   "doi": "10.1186/s12864-019-5551-2",
+   "pmid": "30871473",
+   "status": "named url",
+   "url": "http://dna.cs.miami.edu/TADKB",
+   "code": []
+  },
+  {
+   "name": "TFmiR",
+   "pmcid": "PMC4489273",
+   "doi": "10.1093/nar/gkv418",
+   "pmid": "25943543",
+   "status": "named url",
+   "url": "http://service.bioinformatik.uni-saarland.de/tfmir",
+   "code": []
+  },
+  {
+   "name": "TreeQTL",
+   "pmcid": "PMC4978936",
+   "doi": "10.1093/bioinformatics/btw198",
+   "pmid": "27153635",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "CpG_MPs",
+   "pmcid": "PMC3592415",
+   "doi": "10.1093/nar/gks829",
+   "pmid": "22941633",
+   "status": "named url",
+   "url": "http://bioinfo.hrbmu.edu.cn/CpG_MPs",
+   "code": []
+  },
+  {
+   "name": "RiceSRTFDB",
+   "pmcid": "PMC3649641",
+   "doi": "10.1093/database/bat027",
+   "pmid": "23660286",
+   "status": "named url",
+   "url": "http://www.nipgr.res.in/RiceSRTFDB.html",
+   "code": []
+  },
+  {
+   "name": "WASABI",
+   "pmcid": "PMC6498543",
+   "doi": "10.1186/s12859-019-2798-1",
+   "pmid": "31046682",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "ChIP-PIT",
+   "pmcid": null,
+   "doi": "10.1109/tcbb.2015.2465893",
+   "pmid": "26886732",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "GAME",
+   "pmcid": null,
+   "doi": "10.1093/bioinformatics/btl147",
+   "pmid": "16632495",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "BS-Seeker3",
+   "pmcid": "PMC5883884",
+   "doi": "10.1186/s12859-018-2120-7",
+   "pmid": "29614954",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "ChromatinDB",
+   "pmcid": null,
+   "doi": "10.1093/bioinformatics/btm236",
+   "pmid": "17485428",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "OxyBS",
+   "pmcid": "PMC4978924",
+   "doi": "10.1093/bioinformatics/btw158",
+   "pmid": "27153596",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "TF2LncRNA",
+   "pmcid": "PMC3960524",
+   "doi": "10.1155/2014/317642",
+   "pmid": "24729968",
+   "status": "named url",
+   "url": "http://mlg.hit.edu.cn/tf2lncrna",
+   "code": []
+  },
+  {
+   "name": "BSeQC",
+   "pmcid": "PMC3842756",
+   "doi": "10.1093/bioinformatics/btt548",
+   "pmid": "24064417",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "NetBenchmark",
+   "pmcid": "PMC4587916",
+   "doi": "10.1186/s12859-015-0728-4",
+   "pmid": "26415849",
+   "status": "named url",
+   "url": "https://imatge.upc.edu/netbenchmark",
+   "code": []
+  },
+  {
+   "name": "RRBS-analyser",
+   "pmcid": null,
+   "doi": "10.1002/humu.22444",
+   "pmid": "24106010",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "Bi-PROF",
+   "pmcid": "PMC3781196",
+   "doi": "10.4161/epi.25242",
+   "pmid": "23803588",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "CORE_TF",
+   "pmcid": "PMC2613159",
+   "doi": "10.1186/1471-2105-9-495",
+   "pmid": "19036135",
+   "status": "named url",
+   "url": "http://www.LGTC.nl/CORE_TF",
+   "code": []
+  },
+  {
+   "name": "BNArray",
+   "pmcid": null,
+   "doi": "10.1093/bioinformatics/btl491",
+   "pmid": "17005537",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "QChIPat",
+   "pmcid": "PMC4042236",
+   "doi": "10.1186/1471-2164-14-s8-s3",
+   "pmid": "24564479",
+   "status": "named url",
+   "url": "http://motif.bmi.ohio-state.edu/QChIPat",
+   "code": []
+  },
+  {
+   "name": "SAPPHIRE.CNN",
+   "pmcid": "PMC9478156",
+   "doi": "10.1016/j.csbj.2022.09.006",
+   "pmid": "36147675",
+   "status": "code host",
+   "url": "https://github.com/LoGT-KULeuven/SAPPHIRE_CNN_model_development",
+   "code": [
+    "https://github.com/LoGT-KULeuven/SAPPHIRE_CNN_model_development"
+   ]
+  },
+  {
+   "name": "CisOrtho",
+   "pmcid": "PMC406492",
+   "doi": "10.1186/1471-2105-5-27",
+   "pmid": "15113408",
+   "status": "named url",
+   "url": "http://dev.wormbase.org/CisOrtho",
+   "code": []
+  },
+  {
+   "name": "MORPH",
+   "pmcid": "PMC2065892",
+   "doi": "10.1371/journal.pcbi.0030216",
+   "pmid": "17997594",
+   "status": "named url",
+   "url": "http://veda.cs.uiuc.edu/Morphalign/supplement",
+   "code": []
+  },
+  {
+   "name": "NucPosPred",
+   "pmcid": null,
+   "doi": "10.1016/j.jtbi.2018.04.025",
+   "pmid": "29678692",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "HiC-ACT",
+   "pmcid": "PMC7895999",
+   "doi": "10.1016/j.ajhg.2021.01.009",
+   "pmid": "33545029",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "ATAC2GRN",
+   "pmcid": "PMC6069842",
+   "doi": "10.1186/s12864-018-4943-z",
+   "pmid": "30064353",
+   "status": "code host",
+   "url": "https://github.com/ChioriniLab/ATAC2GRN",
+   "code": [
+    "https://github.com/ChioriniLab/ATAC2GRN"
+   ]
+  },
+  {
+   "name": "CMGRN",
+   "pmcid": null,
+   "doi": "10.1093/bioinformatics/btt761",
+   "pmid": "24389658",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "GBSA",
+   "pmcid": "PMC3575794",
+   "doi": "10.1093/nar/gks1281",
+   "pmid": "23268441",
+   "status": "named url",
+   "url": "http://ctrad-csi.nus.edu.sg/gbsa",
+   "code": []
+  },
+  {
+   "name": "MMDiff",
+   "pmcid": "PMC4008153",
+   "doi": "10.1186/1471-2164-14-826",
+   "pmid": "24267901",
+   "status": "named url",
+   "url": "http://homepages.inf.ed.ac.uk/gschweik/MMDiff.html",
+   "code": []
+  },
+  {
+   "name": "MOPAT",
+   "pmcid": "PMC2490743",
+   "doi": "10.1093/nar/gkn407",
+   "pmid": "18606616",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "BTNET",
+   "pmcid": "PMC5861501",
+   "doi": "10.1186/s12918-018-0547-0",
+   "pmid": "29560827",
+   "status": "named url",
+   "url": "http://infos.korea.ac.kr/btnet",
+   "code": []
+  },
+  {
+   "name": "FastMap",
+   "pmcid": "PMC2642639",
+   "doi": "10.1093/bioinformatics/btn648",
+   "pmid": "19091771",
+   "status": "named url",
+   "url": "http://cebc.unc.edu/fastmap86.html",
+   "code": []
+  },
+  {
+   "name": "LegumeGRN",
+   "pmcid": "PMC3701055",
+   "doi": "10.1371/journal.pone.0067434",
+   "pmid": "23844010",
+   "status": "named url",
+   "url": "http://legumegrn.noble.org",
+   "code": []
+  },
+  {
+   "name": "oxBS-MLE",
+   "pmcid": "PMC5181539",
+   "doi": "10.1093/bioinformatics/btw527",
+   "pmid": "27522082",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "BSPAT",
+   "pmcid": "PMC4499179",
+   "doi": "10.1186/s12859-015-0649-2",
+   "pmid": "26163275",
+   "status": "code host",
+   "url": "https://github.com/lancelothk/BSPAT",
+   "code": [
+    "https://github.com/lancelothk/BSPAT"
+   ]
+  },
+  {
+   "name": "CisView",
+   "pmcid": null,
+   "doi": "10.1093/dnares/dsl005",
+   "pmid": "16980320",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "DIRECTION",
+   "pmcid": "PMC5870843",
+   "doi": "10.1093/bioinformatics/btx316",
+   "pmid": "28505334",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "EZ-Retrieve",
+   "pmcid": "PMC135846",
+   "doi": "10.1093/nar/gnf120",
+   "pmid": "12409480",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "MT-HESS",
+   "pmcid": "PMC4743623",
+   "doi": "10.1093/bioinformatics/btv568",
+   "pmid": "26504141",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "sciCAN",
+   "pmcid": "PMC9464763",
+   "doi": "10.1038/s41540-022-00245-6",
+   "pmid": "36089620",
+   "status": "code host",
+   "url": "https://github.com/rpmccordlab/sciCAN",
+   "code": [
+    "https://github.com/rpmccordlab/sciCAN"
+   ]
+  },
+  {
+   "name": "MetaProm",
+   "pmcid": "PMC2194789",
+   "doi": "10.1186/1471-2164-8-374",
+   "pmid": "17941982",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "PeaKDEck",
+   "pmcid": "PMC3998130",
+   "doi": "10.1093/bioinformatics/btt774",
+   "pmid": "24407222",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "info-gibbs",
+   "pmcid": null,
+   "doi": "10.1093/bioinformatics/btp490",
+   "pmid": "19689955",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "kruX",
+   "pmcid": "PMC3897912",
+   "doi": "10.1186/1471-2105-15-11",
+   "pmid": "24423115",
+   "status": "named url",
+   "url": "http://krux.googlecode.com",
+   "code": []
+  },
+  {
+   "name": "NSRGRN",
+   "pmcid": null,
+   "doi": "10.1093/bib/bbad129",
+   "pmid": "37078865",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "scCASE",
+   "pmcid": "PMC10884038",
+   "doi": "10.1038/s41467-024-46045-w",
+   "pmid": "38388573",
+   "status": "code host",
+   "url": "https://github.com/BioX-NKU/scCASE",
+   "code": [
+    "https://github.com/BioX-NKU/scCASE"
+   ]
+  },
+  {
+   "name": "SELER",
+   "pmcid": "PMC6390648",
+   "doi": "10.1093/database/baz027",
+   "pmid": "30806704",
+   "status": "named url",
+   "url": "http://www.seler.cn",
+   "code": []
+  },
+  {
+   "name": "SIOMICS",
+   "pmcid": "PMC3950686",
+   "doi": "10.1093/nar/gkt1288",
+   "pmid": "24322294",
+   "status": "named url",
+   "url": "http://www.eecs.ucf.edu/~xiaoman/SIOMICS/SIOMICS.html",
+   "code": []
+  },
+  {
+   "name": "TRACE",
+   "pmcid": "PMC7397869",
+   "doi": "10.1101/gr.258228.119",
+   "pmid": "32660981",
+   "status": "code host",
+   "url": "https://github.com/Boyle-Lab/TRACE",
+   "code": [
+    "https://github.com/Boyle-Lab/TRACE"
+   ]
+  },
+  {
+   "name": "NSCGRN",
+   "pmcid": null,
+   "doi": "10.1093/bib/bbac156",
+   "pmid": "35554485",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "BigFoot",
+   "pmcid": "PMC2744684",
+   "doi": "10.1186/1471-2148-9-217",
+   "pmid": "19715598",
+   "status": "named url",
+   "url": "http://www.stats.ox.ac.uk/~satija/BigFoot",
+   "code": []
+  },
+  {
+   "name": "FineStr",
+   "pmcid": null,
+   "doi": "10.1093/bioinformatics/btq030",
+   "pmid": "20106816",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "SeAMotE",
+   "pmcid": "PMC4223730",
+   "doi": "10.1186/1471-2164-15-925",
+   "pmid": "25341390",
+   "status": "named url",
+   "url": "http://s.tartaglialab.com/new_submission/seamote",
+   "code": []
+  },
+  {
+   "name": "ChIPModule",
+   "pmcid": null,
+   "doi": "10.1142/9789814447973_0032",
+   "pmid": "23424137",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "HEFT",
+   "pmcid": "PMC3904522",
+   "doi": "10.1093/bioinformatics/btt690",
+   "pmid": "24307700",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "RSIR",
+   "pmcid": null,
+   "doi": "10.1093/bioinformatics/bti680",
+   "pmid": "16166098",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "B-SOLANA",
+   "pmcid": "PMC3268236",
+   "doi": "10.1093/bioinformatics/btr660",
+   "pmid": "22155865",
+   "status": "named url",
+   "url": "http://code.google.com/p/bsolana",
+   "code": []
+  },
+  {
+   "name": "CRNET",
+   "pmcid": "PMC5946876",
+   "doi": "10.1093/bioinformatics/btx827",
+   "pmid": "29280996",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "iNuc-ext-PseTNC",
+   "pmcid": null,
+   "doi": "10.1007/s00438-018-1498-2",
+   "pmid": "30291426",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "MetaSEM",
+   "pmcid": "PMC9916710",
+   "doi": "10.3390/ijms24032595",
+   "pmid": "36768917",
+   "status": "code host",
+   "url": "https://github.com/ZhangLab312/MetaSEM",
+   "code": [
+    "https://github.com/ZhangLab312/MetaSEM"
+   ]
+  },
+  {
+   "name": "NeuronMotif",
+   "pmcid": "PMC10104575",
+   "doi": "10.1073/pnas.2216698120",
+   "pmid": "37023129",
+   "status": "code host",
+   "url": "https://github.com/XWangLabTHU/NeuronMotif",
+   "code": [
+    "https://github.com/XWangLabTHU/NeuronMotif"
+   ]
+  },
+  {
+   "name": "TargetOrtho",
+   "pmcid": "PMC4012501",
+   "doi": "10.1534/genetics.113.160721",
+   "pmid": "24558259",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "BAT",
+   "pmcid": "PMC5590080",
+   "doi": "10.12688/f1000research.12302.1",
+   "pmid": "28979767",
+   "status": "code host",
+   "url": "https://hub.docker.com/r/christianbioinf/bat",
+   "code": [
+    "https://hub.docker.com/r/christianbioinf/bat",
+    "https://github.com/helenebioinf/BAT"
+   ]
+  },
+  {
+   "name": "Ceres",
+   "pmcid": null,
+   "doi": "10.1093/bioinformatics/btp657",
+   "pmid": "19959498",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "DeepFGRN",
+   "pmcid": "PMC10998536",
+   "doi": "10.1093/bib/bbae143",
+   "pmid": "38581416",
+   "status": "code host",
+   "url": "https://github.com/PhoebeGaoZhen/DeepFGRN/tree/master",
+   "code": [
+    "https://github.com/PhoebeGaoZhen/DeepFGRN/tree/master"
+   ]
+  },
+  {
+   "name": "FootPrinter3",
+   "pmcid": "PMC1538810",
+   "doi": "10.1093/nar/gkl123",
+   "pmid": "16845084",
+   "status": "named url",
+   "url": "http://www.mcb.mcgill.ca/~blanchem/FootPrinter3",
+   "code": []
+  },
+  {
+   "name": "iCREPCP",
+   "pmcid": "PMC9860178",
+   "doi": "10.1016/j.xplc.2022.100455",
+   "pmid": "36171722",
+   "status": "code host",
+   "url": "https://github.com/kaixuanDeng95/iCREPCP",
+   "code": [
+    "https://github.com/kaixuanDeng95/iCREPCP"
+   ]
+  },
+  {
+   "name": "MethyQA",
+   "pmcid": "PMC3765750",
+   "doi": "10.1186/1471-2105-14-259",
+   "pmid": "23968174",
+   "status": "named url",
+   "url": "http://hal.case.edu/~sun/MethyQA.v2.zip",
+   "code": []
+  },
+  {
+   "name": "PlantBind",
+   "pmcid": null,
+   "doi": "10.1093/bib/bbac425",
+   "pmid": "36155619",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "scGREAT",
+   "pmcid": "PMC10951644",
+   "doi": "10.1016/j.isci.2024.109352",
+   "pmid": "38510148",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "SPACER",
+   "pmcid": null,
+   "doi": "10.1093/bioinformatics/btm041",
+   "pmid": "17470480",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "STIF",
+   "pmcid": "PMC2561162",
+   "doi": "10.6026/97320630002431",
+   "pmid": "18841238",
+   "status": "named url",
+   "url": "http://caps.ncbs.res.in/download/stif",
+   "code": []
+  },
+  {
+   "name": "BEAM",
+   "pmcid": null,
+   "doi": "10.1089/cmb.2006.13.686",
+   "pmid": "16706719",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "bPeaks",
+   "pmcid": null,
+   "doi": "10.1002/yea.3031",
+   "pmid": "25041923",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "CisMapper",
+   "pmcid": "PMC5389714",
+   "doi": "10.1093/nar/gkw956",
+   "pmid": "28204599",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "EPI-Trans",
+   "pmcid": "PMC11184834",
+   "doi": "10.1186/s12859-024-05784-9",
+   "pmid": "38890584",
+   "status": "code host",
+   "url": "https://github.com/FMoonlightS/EPI-Trans",
+   "code": [
+    "https://github.com/FMoonlightS/EPI-Trans"
+   ]
+  },
+  {
+   "name": "MMFGRN",
+   "pmcid": null,
+   "doi": "10.1093/bib/bbab166",
+   "pmid": "33939795",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "WBSA",
+   "pmcid": "PMC3907392",
+   "doi": "10.1371/journal.pone.0086707",
+   "pmid": "24497972",
+   "status": "named url",
+   "url": "http://wbsa.big.ac.cn",
+   "code": []
+  },
+  {
+   "name": "WSMD",
+   "pmcid": "PMC5468353",
+   "doi": "10.1038/s41598-017-03554-7",
+   "pmid": "28607381",
+   "status": "code host",
+   "url": "https://github.com/hongbozhang0808/WSMD",
+   "code": [
+    "https://github.com/hongbozhang0808/WSMD"
+   ]
+  },
+  {
+   "name": "ChIP-PaM",
+   "pmcid": "PMC2893127",
+   "doi": "10.1186/1742-4682-7-18",
+   "pmid": "20525272",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "COPS",
+   "pmcid": "PMC3525548",
+   "doi": "10.1371/journal.pone.0052055",
+   "pmid": "23272209",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "DiffGRN",
+   "pmcid": "PMC6526019",
+   "doi": "10.1504/ijdmb.2018.094891",
+   "pmid": "31114627",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "DiNuP",
+   "pmcid": "PMC3400967",
+   "doi": "10.1093/bioinformatics/bts329",
+   "pmid": "22668788",
+   "status": "named url",
+   "url": "http://www.tongji.edu.cn/~zhanglab/DiNuP",
+   "code": []
+  },
+  {
+   "name": "intePareto",
+   "pmcid": "PMC7771091",
+   "doi": "10.1186/s12864-020-07205-6",
+   "pmid": "33372591",
+   "status": "code host",
+   "url": "https://cran.r-project.org/web/packages/intePareto",
+   "code": [
+    "https://cran.r-project.org/web/packages/intePareto",
+    "https://github.com/yingstat/intePareto"
+   ]
+  },
+  {
+   "name": "CREaTor",
+   "pmcid": "PMC10666311",
+   "doi": "10.1186/s13059-023-03103-8",
+   "pmid": "37996959",
+   "status": "code host",
+   "url": "https://github.com/DLS5-Omics/CREaTor",
+   "code": [
+    "https://github.com/DLS5-Omics/CREaTor"
+   ]
+  },
+  {
+   "name": "dPeak",
+   "pmcid": "PMC3798280",
+   "doi": "10.1371/journal.pcbi.1003246",
+   "pmid": "24146601",
+   "status": "named url",
+   "url": "http://www.stat.wisc.edu/~chungdon/dpeak",
+   "code": []
+  },
+  {
+   "name": "PASS-bis",
+   "pmcid": null,
+   "doi": "10.1093/bioinformatics/bts675",
+   "pmid": "23162053",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "PMF-GRN",
+   "pmcid": "PMC11003171",
+   "doi": "10.1186/s13059-024-03226-6",
+   "pmid": "38589899",
+   "status": "code host",
+   "url": "https://github.com/nyu-dl/pmf-grn",
+   "code": [
+    "https://github.com/nyu-dl/pmf-grn"
+   ]
+  },
+  {
+   "name": "PromGER",
+   "pmcid": "PMC10379012",
+   "doi": "10.3390/genes14071441",
+   "pmid": "37510345",
+   "status": "code host",
+   "url": "https://github.com/XiaoxiangHugh/PromGER",
+   "code": [
+    "https://github.com/XiaoxiangHugh/PromGER"
+   ]
+  },
+  {
+   "name": "SIGNET",
+   "pmcid": "PMC8769917",
+   "doi": "10.1093/bib/bbab547",
+   "pmid": "34962260",
+   "status": "code host",
+   "url": "https://github.com/Lan-lab/SIGNET",
+   "code": [
+    "https://github.com/Lan-lab/SIGNET"
+   ]
+  },
+  {
+   "name": "SMAP",
+   "pmcid": "PMC4488126",
+   "doi": "10.1186/s13742-015-0070-9",
+   "pmid": "26140213",
+   "status": "code host",
+   "url": "https://github.com/gaosjlucky/SMAPdigger",
+   "code": [
+    "https://github.com/gaosjlucky/SMAPdigger"
+   ]
+  },
+  {
+   "name": "mHapTk",
+   "pmcid": null,
+   "doi": "10.1093/bioinformatics/btac650",
+   "pmid": "36179079",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "PeakPass",
+   "pmcid": null,
+   "doi": "10.1089/cmb.2019.0295",
+   "pmid": "31855064",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "RecMotif",
+   "pmcid": "PMC3024859",
+   "doi": "10.1186/1471-2105-11-s11-s8",
+   "pmid": "21172058",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "SPIC",
+   "pmcid": "PMC3866262",
+   "doi": "10.1186/1752-0509-7-s2-s14",
+   "pmid": "24564945",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "BindVAE",
+   "pmcid": "PMC9380350",
+   "doi": "10.1186/s13059-022-02723-w",
+   "pmid": "35971180",
+   "status": "code host",
+   "url": "https://github.com/microsoft/BindVAE",
+   "code": [
+    "https://github.com/microsoft/BindVAE"
+   ]
+  },
+  {
+   "name": "BRAT-nova",
+   "pmcid": null,
+   "doi": "10.1093/bioinformatics/btw226",
+   "pmid": "27153660",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "ChIP-BIT",
+   "pmcid": "PMC4838354",
+   "doi": "10.1093/nar/gkv1491",
+   "pmid": "26704972",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "cisMEP",
+   "pmcid": "PMC4290730",
+   "doi": "10.1186/1752-0509-8-s4-s8",
+   "pmid": "25521507",
+   "status": "named url",
+   "url": "http://cosbi3.ee.ncku.edu.tw/cisMEP",
+   "code": []
+  },
+  {
+   "name": "COTRASIF",
+   "pmcid": "PMC2673430",
+   "doi": "10.1093/nar/gkp084",
+   "pmid": "19264796",
+   "status": "named url",
+   "url": "http://biomed.org.ua/COTRASIF",
+   "code": []
+  },
+  {
+   "name": "DeepChIA-PET",
+   "pmcid": "PMC10368233",
+   "doi": "10.1371/journal.pcbi.1011307",
+   "pmid": "37440599",
+   "status": "code host",
+   "url": "https://github.com/zwang-bioinformatics/DeepChIA-PET",
+   "code": [
+    "https://github.com/zwang-bioinformatics/DeepChIA-PET"
+   ]
+  },
+  {
+   "name": "GibbsST",
+   "pmcid": "PMC1647290",
+   "doi": "10.1186/1471-2105-7-486",
+   "pmid": "17083740",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "HT-eQTL",
+   "pmcid": "PMC5845327",
+   "doi": "10.1186/s12859-018-2088-3",
+   "pmid": "29523079",
+   "status": "code host",
+   "url": "https://github.com/reagan0323/MT-eQTL/tree/master/HT-eQTL",
+   "code": [
+    "https://github.com/reagan0323/MT-eQTL/tree/master/HT-eQTL"
+   ]
+  },
+  {
+   "name": "MCAST",
+   "pmcid": "PMC4907379",
+   "doi": "10.1093/bioinformatics/btv750",
+   "pmid": "26704599",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "MLDSPP",
+   "pmcid": null,
+   "doi": "10.1021/acs.jcim.3c02017",
+   "pmid": "38258978",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "NPRD",
+   "pmcid": "PMC540003",
+   "doi": "10.1093/nar/gki049",
+   "pmid": "15608285",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "SpikeFlow",
+   "pmcid": "PMC11358820",
+   "doi": "10.1093/nargab/lqae118",
+   "pmid": "39211331",
+   "status": "code host",
+   "url": "https://hub.docker.com/r/davidebrex/spikeflow",
+   "code": [
+    "https://hub.docker.com/r/davidebrex/spikeflow",
+    "https://github.com/DavideBrex/SpikeFlow"
+   ]
+  },
+  {
+   "name": "BisQC",
+   "pmcid": "PMC4234473",
+   "doi": "10.1186/1471-2164-15-290",
+   "pmid": "24734894",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "DeepCBA",
+   "pmcid": "PMC11413363",
+   "doi": "10.1016/j.xplc.2024.100985",
+   "pmid": "38859587",
+   "status": "code host",
+   "url": "https://github.com/Jie-Lii/DeepCBA",
+   "code": [
+    "https://github.com/Jie-Lii/DeepCBA"
+   ]
+  },
+  {
+   "name": "Imogene",
+   "pmcid": "PMC4041412",
+   "doi": "10.1093/nar/gku209",
+   "pmid": "24682824",
+   "status": "code host",
+   "url": "http://github.com/hrouault/Imogene",
+   "code": [
+    "http://github.com/hrouault/Imogene"
+   ]
+  },
+  {
+   "name": "POWRS",
+   "pmcid": "PMC3390389",
+   "doi": "10.1371/journal.pone.0040373",
+   "pmid": "22792292",
+   "status": "named url",
+   "url": "http://grassrootsbio.com/papers/powrs",
+   "code": []
+  },
+  {
+   "name": "RWRNET",
+   "pmcid": "PMC7545090",
+   "doi": "10.3389/fgene.2020.591461",
+   "pmid": "33101398",
+   "status": "code host",
+   "url": "https://github.com/Dam-1517/RWRNET",
+   "code": [
+    "https://github.com/Dam-1517/RWRNET"
+   ]
+  },
+  {
+   "name": "Vocabulon",
+   "pmcid": null,
+   "doi": "10.1093/bioinformatics/bti083",
+   "pmid": "15509602",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "CAGEd-oPOSSUM",
+   "pmcid": "PMC5018375",
+   "doi": "10.1093/bioinformatics/btw337",
+   "pmid": "27334471",
+   "status": "named url",
+   "url": "http://cagedop.cmmt.ubc.ca/CAGEd_oPOSSUM",
+   "code": []
+  },
+  {
+   "name": "CNNGRN",
+   "pmcid": null,
+   "doi": "10.1109/tcbb.2023.3282212",
+   "pmid": "37267145",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "CoMoDis",
+   "pmcid": "PMC1702496",
+   "doi": "10.1093/nar/gkl839",
+   "pmid": "17130158",
+   "status": "named url",
+   "url": "http://hscl.cimr.cam.ac.uk/CoMoDis_portal.html",
+   "code": []
+  },
+  {
+   "name": "HeliCis",
+   "pmcid": "PMC2200674",
+   "doi": "10.1186/1471-2105-8-418",
+   "pmid": "17963524",
+   "status": "named url",
+   "url": "http://lymphomics.wall.gu.se/helicis",
+   "code": []
+  },
+  {
+   "name": "MethylMapper",
+   "pmcid": null,
+   "doi": "10.2144/000112035",
+   "pmid": "16235556",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "nuMap",
+   "pmcid": "PMC4411418",
+   "doi": "10.1016/j.gpb.2014.08.001",
+   "pmid": "25220945",
+   "status": "named url",
+   "url": "http://numap.rit.edu",
+   "code": []
+  },
+  {
+   "name": "PromoterLCNN",
+   "pmcid": "PMC9325283",
+   "doi": "10.3390/genes13071126",
+   "pmid": "35885909",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "scHiMe",
+   "pmcid": "PMC10359091",
+   "doi": "10.1093/bib/bbad223",
+   "pmid": "37302805",
+   "status": "named url",
+   "url": "http://dna.cs.miami.edu/scHiMe",
+   "code": []
+  },
+  {
+   "name": "SICTIN",
+   "pmcid": "PMC2928217",
+   "doi": "10.1186/1756-0381-3-4",
+   "pmid": "20707885",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "AIControl",
+   "pmcid": "PMC6547432",
+   "doi": "10.1093/nar/gkz156",
+   "pmid": "30869146",
+   "status": "code host",
+   "url": "https://github.com/suinleelab/AIControl.jl",
+   "code": [
+    "https://github.com/suinleelab/AIControl.jl"
+   ]
+  },
+  {
+   "name": "DeepNup",
+   "pmcid": "PMC9689664",
+   "doi": "10.3390/genes13111983",
+   "pmid": "36360220",
+   "status": "code host",
+   "url": "https://github.com/lennylv/DeepNup",
+   "code": [
+    "https://github.com/lennylv/DeepNup"
+   ]
+  },
+  {
+   "name": "DeNOPA",
+   "pmcid": null,
+   "doi": "10.1093/bib/bbab469",
+   "pmid": "34875002",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "dHICA",
+   "pmcid": "PMC11421843",
+   "doi": "10.1093/bib/bbae459",
+   "pmid": "39316943",
+   "status": "code host",
+   "url": "https://github.com/wzhy2000/dHICA",
+   "code": [
+    "https://github.com/wzhy2000/dHICA"
+   ]
+  },
+  {
+   "name": "EnContact",
+   "pmcid": "PMC6746221",
+   "doi": "10.7717/peerj.7657",
+   "pmid": "31565573",
+   "status": "code host",
+   "url": "https://github.com/liwenran/EnContact",
+   "code": [
+    "https://github.com/liwenran/EnContact"
+   ]
+  },
+  {
+   "name": "FISim",
+   "pmcid": "PMC2722654",
+   "doi": "10.1186/1471-2105-10-224",
+   "pmid": "19615102",
+   "status": "named url",
+   "url": "http://genome.ugr.es/fisim",
+   "code": []
+  },
+  {
+   "name": "LmSmdB",
+   "pmcid": "PMC4778613",
+   "doi": "10.1016/j.gdata.2015.12.012",
+   "pmid": "26981382",
+   "status": "named url",
+   "url": "http://www.nccs.res.in/LmSmdb",
+   "code": []
+  },
+  {
+   "name": "MD-SVM",
+   "pmcid": "PMC6509868",
+   "doi": "10.1186/s12859-019-2735-3",
+   "pmid": "31074373",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "Meta-eQTL",
+   "pmcid": "PMC4262975",
+   "doi": "10.1186/s12859-014-0392-0",
+   "pmid": "25431350",
+   "status": "named url",
+   "url": "https://haok01.u.hpc.mssm.edu/meta_eQTL",
+   "code": []
+  },
+  {
+   "name": "MotifClick",
+   "pmcid": "PMC3225181",
+   "doi": "10.1186/1471-2105-12-238",
+   "pmid": "21679436",
+   "status": "named url",
+   "url": "http://motifclick.uncc.edu",
+   "code": []
+  },
+  {
+   "name": "PMS6",
+   "pmcid": "PMC3744182",
+   "doi": "10.1109/iccabs.2012.6182627",
+   "pmid": "23959399",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "scaDA",
+   "pmcid": "PMC11324137",
+   "doi": "10.1371/journal.pcbi.1011854",
+   "pmid": "39093856",
+   "status": "code host",
+   "url": "https://github.com/fzhaouf/scaDA",
+   "code": [
+    "https://github.com/fzhaouf/scaDA"
+   ]
+  },
+  {
+   "name": "WACS",
+   "pmcid": "PMC7885521",
+   "doi": "10.1186/s12859-020-03927-2",
+   "pmid": "33588754",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "xFITOM",
+   "pmcid": "PMC3039987",
+   "doi": "10.6026/97320630005049",
+   "pmid": "21346861",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "AtacAnnoR",
+   "pmcid": null,
+   "doi": "10.1093/bib/bbad268",
+   "pmid": "37497729",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "CATCH-UP",
+   "pmcid": "PMC7618610",
+   "doi": "10.3791/65633",
+   "pmid": "37811941",
+   "status": "code host",
+   "url": "https://github.com/Genome-Function-Initiative-Oxford/UpStreamPipeline/tree/main/genetics/CATCH-UP",
+   "code": [
+    "https://github.com/Genome-Function-Initiative-Oxford/UpStreamPipeline/tree/main/genetics/CATCH-UP"
+   ]
+  },
+  {
+   "name": "CelEst",
+   "pmcid": "PMC11912867",
+   "doi": "10.1093/genetics/iyae189",
+   "pmid": "39705007",
+   "status": "code host",
+   "url": "https://github.com/IBMB-MFP/CelEsT-app",
+   "code": [
+    "https://github.com/IBMB-MFP/CelEsT-app",
+    "https://github.com/IBMB-MFP/CelEsT-MS"
+   ]
+  },
+  {
+   "name": "Descart",
+   "pmcid": "PMC11686967",
+   "doi": "10.1186/s13059-024-03458-6",
+   "pmid": "39736655",
+   "status": "code host",
+   "url": "https://github.com/likeyi19/Descart",
+   "code": [
+    "https://github.com/likeyi19/Descart"
+   ]
+  },
+  {
+   "name": "DIA-MCIS",
+   "pmcid": null,
+   "doi": "10.1093/bioinformatics/btm454",
+   "pmid": "17901083",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "epiG",
+   "pmcid": "PMC5320668",
+   "doi": "10.1186/s13059-017-1168-4",
+   "pmid": "28222791",
+   "status": "code host",
+   "url": "http://github.com/vincent-dk/epiG",
+   "code": [
+    "http://github.com/vincent-dk/epiG",
+    "http://github.com/vincent-dk/using-epiG"
+   ]
+  },
+  {
+   "name": "eSNPO",
+   "pmcid": "PMC4965794",
+   "doi": "10.1038/srep30595",
+   "pmid": "27470167",
+   "status": "named url",
+   "url": "http://bioinfo.hrbmu.edu.cn/esnpo",
+   "code": []
+  },
+  {
+   "name": "FastMotif",
+   "pmcid": null,
+   "doi": "10.1093/bioinformatics/btv208",
+   "pmid": "25886979",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "GRiP",
+   "pmcid": "PMC3338021",
+   "doi": "10.1093/bioinformatics/bts132",
+   "pmid": "22426343",
+   "status": "named url",
+   "url": "http://logic.sysbiol.cam.ac.uk/grip",
+   "code": []
+  },
+  {
+   "name": "Less-is-more",
+   "pmcid": "PMC10899791",
+   "doi": "10.1093/nar/gkad1240",
+   "pmid": "38214231",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "LPAD",
+   "pmcid": null,
+   "doi": "10.1093/bib/bbad165",
+   "pmid": "37139561",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "POLYPHEMUS",
+   "pmcid": "PMC3287170",
+   "doi": "10.1093/nar/gkr1205",
+   "pmid": "22156059",
+   "status": "code host",
+   "url": "http://cran.r-project.org/web/packages/polyphemus",
+   "code": [
+    "http://cran.r-project.org/web/packages/polyphemus"
+   ]
+  },
+  {
+   "name": "PreCisIon",
+   "pmcid": "PMC3561985",
+   "doi": "10.1093/nar/gks1286",
+   "pmid": "23241390",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "scPADGRN",
+   "pmcid": "PMC7410337",
+   "doi": "10.1371/journal.pcbi.1007471",
+   "pmid": "32716923",
+   "status": "code host",
+   "url": "https://github.com/xzheng-ac/scPADGRN",
+   "code": [
+    "https://github.com/xzheng-ac/scPADGRN"
+   ]
+  },
+  {
+   "name": "scVAEBGM",
+   "pmcid": null,
+   "doi": "10.1007/s12539-022-00536-w",
+   "pmid": "35939233",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "Single_cell_GRN",
+   "pmcid": "PMC9188720",
+   "doi": "10.1186/s13040-022-00297-8",
+   "pmid": "35690842",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "SMARTcleaner",
+   "pmcid": "PMC6307164",
+   "doi": "10.1186/s12859-018-2577-4",
+   "pmid": "30587107",
+   "status": "code host",
+   "url": "https://github.com/dzhaobio/SMARTcleaner",
+   "code": [
+    "https://github.com/dzhaobio/SMARTcleaner"
+   ]
+  },
+  {
+   "name": "Teamwork",
+   "pmcid": "PMC3404069",
+   "doi": "10.1371/journal.pone.0040916",
+   "pmid": "22911718",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "Vestige",
+   "pmcid": "PMC1156870",
+   "doi": "10.1186/1471-2105-6-130",
+   "pmid": "15921531",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "coMOTIF",
+   "pmcid": "PMC3179653",
+   "doi": "10.1093/bioinformatics/btr397",
+   "pmid": "21775309",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "ConBind",
+   "pmcid": "PMC4856970",
+   "doi": "10.1093/nar/gkv1518",
+   "pmid": "26721389",
+   "status": "named url",
+   "url": "http://www.conbind.org",
+   "code": []
+  },
+  {
+   "name": "CREATE",
+   "pmcid": "PMC12085597",
+   "doi": "10.1038/s41467-025-59780-5",
+   "pmid": "40382355",
+   "status": "code host",
+   "url": "https://github.com/cuixj19/CREATE",
+   "code": [
+    "https://github.com/cuixj19/CREATE"
+   ]
+  },
+  {
+   "name": "CREdb",
+   "pmcid": "PMC11253421",
+   "doi": "10.1186/s13072-024-00545-7",
+   "pmid": "39014503",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "DeepSATA",
+   "pmcid": "PMC10418434",
+   "doi": "10.3390/ijms241512023",
+   "pmid": "37569400",
+   "status": "code host",
+   "url": "https://github.com/mawenlong2016/DeepSATA",
+   "code": [
+    "https://github.com/mawenlong2016/DeepSATA"
+   ]
+  },
+  {
+   "name": "DISCLOSE",
+   "pmcid": "PMC2661003",
+   "doi": "10.1186/1471-2105-9-535",
+   "pmid": "19087282",
+   "status": "named url",
+   "url": "http://bioinformatics.biol.rug.nl/standalone/disclose",
+   "code": []
+  },
+  {
+   "name": "EAP-LSTM",
+   "pmcid": null,
+   "doi": "10.1109/jbhi.2025.3620986",
+   "pmid": "41086069",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "F-MAP",
+   "pmcid": "PMC5609748",
+   "doi": "10.1371/journal.pone.0184795",
+   "pmid": "28938012",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "HEAP",
+   "pmcid": null,
+   "doi": "10.1093/bib/bbad286",
+   "pmid": "37539835",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "iHMS",
+   "pmcid": "PMC5303264",
+   "doi": "10.1186/s12859-017-1461-y",
+   "pmid": "28187703",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "MARZ",
+   "pmcid": "PMC4384306",
+   "doi": "10.1186/s12859-014-0446-3",
+   "pmid": "25637281",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "PGRNIG",
+   "pmcid": null,
+   "doi": "10.1093/bfgp/elac028",
+   "pmid": "36064791",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "reg-eQTL",
+   "pmcid": "PMC11947170",
+   "doi": "10.1016/j.ajhg.2025.01.015",
+   "pmid": "39922197",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "scTIGER",
+   "pmcid": "PMC10488287",
+   "doi": "10.3390/ijms241713339",
+   "pmid": "37686146",
+   "status": "code host",
+   "url": "https://github.com/chenyongrowan/scTIGER",
+   "code": [
+    "https://github.com/chenyongrowan/scTIGER"
+   ]
+  },
+  {
+   "name": "TDSDMI",
+   "pmcid": null,
+   "doi": "10.1016/j.compbiomed.2016.03.024",
+   "pmid": "27058285",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "CisML",
+   "pmcid": null,
+   "doi": "10.1093/bioinformatics/bth162",
+   "pmid": "15001475",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "CompMoby",
+   "pmcid": "PMC2605473",
+   "doi": "10.1186/1471-2105-9-455",
+   "pmid": "18950538",
+   "status": "named url",
+   "url": "http://genome.ucsf.edu/compmoby",
+   "code": []
+  },
+  {
+   "name": "eQuIPS",
+   "pmcid": null,
+   "doi": "10.1002/gepi.21961",
+   "pmid": "26989050",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "GeRNet",
+   "pmcid": null,
+   "doi": "10.1016/j.biosystems.2017.08.006",
+   "pmid": "28860069",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "KFGRNI",
+   "pmcid": null,
+   "doi": "10.1142/s0219720021500025",
+   "pmid": "33657986",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "MotifCombinator",
+   "pmcid": "PMC1838919",
+   "doi": "10.1186/1471-2105-8-100",
+   "pmid": "17378935",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "PairMotif+",
+   "pmcid": "PMC3654438",
+   "doi": "10.7150/ijbs.5786",
+   "pmid": "23678291",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "SPACE",
+   "pmcid": "PMC7784913",
+   "doi": "10.1038/s41423-020-0416-9",
+   "pmid": "32238917",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "WENDY",
+   "pmcid": null,
+   "doi": "10.1016/j.mbs.2024.109284",
+   "pmid": "39168402",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "AttentionGRN",
+   "pmcid": "PMC11926986",
+   "doi": "10.1093/bib/bbaf118",
+   "pmid": "40116659",
+   "status": "code host",
+   "url": "https://github.com/Phoebe-GaoZhen/AttentionGRN/tree/master",
+   "code": [
+    "https://github.com/Phoebe-GaoZhen/AttentionGRN/tree/master"
+   ]
+  },
+  {
+   "name": "CATAD",
+   "pmcid": null,
+   "doi": "10.1093/bib/bbad204",
+   "pmid": "37279476",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "Compo",
+   "pmcid": "PMC2614996",
+   "doi": "10.1186/1471-2105-9-527",
+   "pmid": "19063744",
+   "status": "named url",
+   "url": "http://tare.medisin.ntnu.no/compo/index.php",
+   "code": []
+  },
+  {
+   "name": "CTF",
+   "pmcid": "PMC3535700",
+   "doi": "10.1186/1471-2164-13-s8-s18",
+   "pmid": "23282203",
+   "status": "named url",
+   "url": "http://cbb.sjtu.edu.cn/~ccwei/pub/software/CTF/CTF.php",
+   "code": []
+  },
+  {
+   "name": "CVGAE",
+   "pmcid": null,
+   "doi": "10.1007/s12539-024-00633-y",
+   "pmid": "38778003",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "FastBill",
+   "pmcid": null,
+   "doi": "10.1089/cmb.2016.0108",
+   "pmid": "27710048",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "FisherMP",
+   "pmcid": "PMC6589551",
+   "doi": "10.1093/dnares/dsz004",
+   "pmid": "30957858",
+   "status": "code host",
+   "url": "https://github.com/shaoqiangzhang/fishermp",
+   "code": [
+    "https://github.com/shaoqiangzhang/fishermp"
+   ]
+  },
+  {
+   "name": "GenomicLinks",
+   "pmcid": "PMC11420838",
+   "doi": "10.1093/nargab/lqae123",
+   "pmid": "39318505",
+   "status": "code host",
+   "url": "https://github.com/jlab-code/GenomicLinks",
+   "code": [
+    "https://github.com/jlab-code/GenomicLinks"
+   ]
+  },
+  {
+   "name": "INSTINCT",
+   "pmcid": "PMC11787322",
+   "doi": "10.1038/s41467-025-56535-0",
+   "pmid": "39893190",
+   "status": "code host",
+   "url": "https://github.com/yyLIU12138/INSTINCT",
+   "code": [
+    "https://github.com/yyLIU12138/INSTINCT"
+   ]
+  },
+  {
+   "name": "KDeep",
+   "pmcid": "PMC10580661",
+   "doi": "10.1186/s12967-023-04593-7",
+   "pmid": "37845681",
+   "status": "code host",
+   "url": "https://github.com/nazanintbtb/KDeep",
+   "code": [
+    "https://github.com/nazanintbtb/KDeep"
+   ]
+  },
+  {
+   "name": "KEGNI",
+   "pmcid": "PMC12455831",
+   "doi": "10.1186/s13059-025-03780-7",
+   "pmid": "40983951",
+   "status": "code host",
+   "url": "https://github.com/Lipxiao/KEGNI",
+   "code": [
+    "https://github.com/Lipxiao/KEGNI"
+   ]
+  },
+  {
+   "name": "LDsplit",
+   "pmcid": "PMC3936957",
+   "doi": "10.1186/1471-2105-15-48",
+   "pmid": "24533858",
+   "status": "named url",
+   "url": "http://www.ntu.edu.sg/home/zhengjie/software/LDsplit.htm",
+   "code": []
+  },
+  {
+   "name": "MACO",
+   "pmcid": null,
+   "doi": "10.3233/isb-00243",
+   "pmid": "16922693",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "MulTFBS",
+   "pmcid": null,
+   "doi": "10.1021/acs.jcim.3c02088",
+   "pmid": "38733561",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "NEXT-peak",
+   "pmcid": "PMC3672025",
+   "doi": "10.1186/1471-2164-14-349",
+   "pmid": "23706083",
+   "status": "named url",
+   "url": "http://www.odu.edu/~nxkim/nextpeak",
+   "code": []
+  },
+  {
+   "name": "OrthReg",
+   "pmcid": "PMC7340522",
+   "doi": "10.24272/j.issn.2095-8137.2020.099",
+   "pmid": "32543792",
+   "status": "code host",
+   "url": "https://github.com/haibing-evo/OrthReg",
+   "code": [
+    "https://github.com/haibing-evo/OrthReg"
+   ]
+  },
+  {
+   "name": "PriorsEditor",
+   "pmcid": "PMC2922893",
+   "doi": "10.1093/bioinformatics/btq357",
+   "pmid": "20628076",
+   "status": "named url",
+   "url": "http://tare.medisin.ntnu.no/priorseditor",
+   "code": []
+  },
+  {
+   "name": "REPA",
+   "pmcid": null,
+   "doi": "10.1109/tcbb.2015.2453948",
+   "pmid": "27019499",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "SemanticCAP",
+   "pmcid": "PMC9028922",
+   "doi": "10.3390/genes13040568",
+   "pmid": "35456374",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "Twine",
+   "pmcid": "PMC3694643",
+   "doi": "10.1093/bioinformatics/btt264",
+   "pmid": "23658420",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "Argo_CUDA",
+   "pmcid": null,
+   "doi": "10.1142/s0219720017400121",
+   "pmid": "29281953",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "chromMAGMA",
+   "pmcid": "PMC9251535",
+   "doi": "10.26508/lsa.202201446",
+   "pmid": "35777959",
+   "status": "code host",
+   "url": "https://github.com/lawrenson-lab/chromMAGMA-public",
+   "code": [
+    "https://github.com/lawrenson-lab/chromMAGMA-public"
+   ]
+  },
+  {
+   "name": "Cofea",
+   "pmcid": "PMC10782922",
+   "doi": "10.1093/bib/bbad458",
+   "pmid": "38113078",
+   "status": "code host",
+   "url": "https://github.com/likeyi19/Cofea",
+   "code": [
+    "https://github.com/likeyi19/Cofea"
+   ]
+  },
+  {
+   "name": "DECA",
+   "pmcid": "PMC11847511",
+   "doi": "10.1093/bib/bbaf069",
+   "pmid": "39987573",
+   "status": "code host",
+   "url": "https://github.com/xmuhuanglab/DECA",
+   "code": [
+    "https://github.com/xmuhuanglab/DECA"
+   ]
+  },
+  {
+   "name": "DeepDualEnhancer",
+   "pmcid": "PMC11546905",
+   "doi": "10.3390/ijms252111744",
+   "pmid": "39519295",
+   "status": "code host",
+   "url": "https://github.com/UPC020317/DeepDualEnhancer",
+   "code": [
+    "https://github.com/UPC020317/DeepDualEnhancer"
+   ]
+  },
+  {
+   "name": "dPattern",
+   "pmcid": null,
+   "doi": "10.1093/bioinformatics/btm288",
+   "pmid": "17550915",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "GPU-BSM",
+   "pmcid": "PMC4026317",
+   "doi": "10.1371/journal.pone.0097277",
+   "pmid": "24842718",
+   "status": "named url",
+   "url": "http://pypi.python.org/pypi/GPU-BSM",
+   "code": []
+  },
+  {
+   "name": "GT-GRN",
+   "pmcid": "PMC12597036",
+   "doi": "10.1093/bib/bbaf584",
+   "pmid": "41206950",
+   "status": "code host",
+   "url": "https://github.com/Netralab/GT-GRN",
+   "code": [
+    "https://github.com/Netralab/GT-GRN"
+   ]
+  },
+  {
+   "name": "HBI",
+   "pmcid": "PMC11476968",
+   "doi": "10.1186/s13059-024-03411-7",
+   "pmid": "39407252",
+   "status": "code host",
+   "url": "https://github.com/YoushuCheng/HBI",
+   "code": [
+    "https://github.com/YoushuCheng/HBI"
+   ]
+  },
+  {
+   "name": "HSCVFNT",
+   "pmcid": "PMC6214043",
+   "doi": "10.3390/ijms19103178",
+   "pmid": "30326663",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "LinkNMF",
+   "pmcid": null,
+   "doi": "10.1016/j.gene.2012.11.027",
+   "pmid": "23266811",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "MalariaSED",
+   "pmcid": "PMC10577899",
+   "doi": "10.1186/s13059-023-03063-z",
+   "pmid": "37845769",
+   "status": "code host",
+   "url": "https://github.com/CharleyWang/MalariaSED",
+   "code": [
+    "https://github.com/CharleyWang/MalariaSED"
+   ]
+  },
+  {
+   "name": "MeinteR",
+   "pmcid": "PMC6915744",
+   "doi": "10.1038/s41598-019-55453-8",
+   "pmid": "31844073",
+   "status": "code host",
+   "url": "https://github.com/andigoni/MeinteR",
+   "code": [
+    "https://github.com/andigoni/MeinteR"
+   ]
+  },
+  {
+   "name": "MINGLE",
+   "pmcid": "PMC12153207",
+   "doi": "10.1186/s13059-025-03603-9",
+   "pmid": "40500763",
+   "status": "code host",
+   "url": "https://github.com/BioX-NKU/MINGLE",
+   "code": [
+    "https://github.com/BioX-NKU/MINGLE"
+   ]
+  },
+  {
+   "name": "MotifAdjuster",
+   "pmcid": "PMC2718512",
+   "doi": "10.1186/gb-2009-10-5-r46",
+   "pmid": "19409082",
+   "status": "named url",
+   "url": "http://dig.ipk-gatersleben.de/MotifAdjuster.html",
+   "code": []
+  },
+  {
+   "name": "NG-SEM",
+   "pmcid": null,
+   "doi": "10.1093/bib/bbad369",
+   "pmid": "37864293",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "PEAK",
+   "pmcid": null,
+   "doi": "10.1089/cmb.2016.0199",
+   "pmid": "28294630",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "PEAKQC",
+   "pmcid": "PMC12448717",
+   "doi": "10.1093/bib/bbaf465",
+   "pmid": "40966653",
+   "status": "code host",
+   "url": "https://github.com/loosolab/PEAKQC",
+   "code": [
+    "https://github.com/loosolab/PEAKQC"
+   ]
+  },
+  {
+   "name": "PKI",
+   "pmcid": null,
+   "doi": "10.1016/j.bbagrm.2023.194911",
+   "pmid": "36804477",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "scEpiLock",
+   "pmcid": "PMC9312957",
+   "doi": "10.3390/biom12070874",
+   "pmid": "35883430",
+   "status": "code host",
+   "url": "https://github.com/aicb-ZhangLabs/scEpiLock",
+   "code": [
+    "https://github.com/aicb-ZhangLabs/scEpiLock"
+   ]
+  },
+  {
+   "name": "SCRN",
+   "pmcid": null,
+   "doi": "10.1109/tcbb.2024.3424400",
+   "pmid": "38976461",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "Sig2GRN",
+   "pmcid": "PMC5259907",
+   "doi": "10.1186/s12918-016-0365-1",
+   "pmid": "28155685",
+   "status": "named url",
+   "url": "http://histone.scse.ntu.edu.sg/Sig2GRN",
+   "code": []
+  },
+  {
+   "name": "SigSeeker",
+   "pmcid": "PMC5860059",
+   "doi": "10.1093/bioinformatics/btx276",
+   "pmid": "28449120",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "SIMON",
+   "pmcid": "PMC6978500",
+   "doi": "10.5511/plantbiotechnology.19.0822a",
+   "pmid": "31983875",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "SMCis",
+   "pmcid": "PMC5026350",
+   "doi": "10.1371/journal.pone.0162968",
+   "pmid": "27637070",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "SnapHiC-G",
+   "pmcid": "PMC11367764",
+   "doi": "10.1093/bib/bbae426",
+   "pmid": "39222061",
+   "status": "code host",
+   "url": "https://github.com/wjzhong/SnapHiC-G",
+   "code": [
+    "https://github.com/wjzhong/SnapHiC-G"
+   ]
+  },
+  {
+   "name": "T-KDE",
+   "pmcid": "PMC3903014",
+   "doi": "10.1186/1471-2164-15-27",
+   "pmid": "24428924",
+   "status": "named url",
+   "url": "http://www.niehs.nih.gov/research/resources/software/biostatistics/t-kde/index.cfm",
+   "code": []
+  },
+  {
+   "name": "TBCA",
+   "pmcid": null,
+   "doi": "10.1109/jbhi.2024.3355758",
+   "pmid": "38236675",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "ADELLE",
+   "pmcid": "PMC11756770",
+   "doi": "10.1371/journal.pgen.1011563",
+   "pmid": "39792937",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "BIC-LP",
+   "pmcid": null,
+   "doi": "10.1109/tcbb.2023.3345317",
+   "pmid": "38127613",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "BSS-HMM3s",
+   "pmcid": null,
+   "doi": "10.1080/10425170500356032",
+   "pmid": "16287619",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "ChIPbinner",
+   "pmcid": "PMC11934474",
+   "doi": "10.1186/s12859-025-06103-6",
+   "pmid": "40128719",
+   "status": "code host",
+   "url": "https://github.com/padilr1/ChIPbinner_database",
+   "code": [
+    "https://github.com/padilr1/ChIPbinner_database",
+    "https://github.com/padilr1/ChIPbinner"
+   ]
+  },
+  {
+   "name": "CLAMP",
+   "pmcid": "PMC12903630",
+   "doi": "10.1186/s13059-026-03948-9",
+   "pmid": "41555433",
+   "status": "code host",
+   "url": "https://github.com/chikit2077/CLAMP-paper",
+   "code": [
+    "https://github.com/chikit2077/CLAMP-paper",
+    "https://github.com/chikit2077/CLAMPpaper"
+   ]
+  },
+  {
+   "name": "CMT",
+   "pmcid": "PMC3988018",
+   "doi": "10.1371/journal.pone.0093873",
+   "pmid": "24736605",
+   "status": "named url",
+   "url": "http://luisrueda.cs.uwindsor.ca/software/CMT-ChIP-Seq.rar",
+   "code": []
+  },
+  {
+   "name": "coiTAD",
+   "pmcid": "PMC11507547",
+   "doi": "10.3390/genes15101293",
+   "pmid": "39457417",
+   "status": "code host",
+   "url": "https://github.com/OluwadareLab/coiTAD",
+   "code": [
+    "https://github.com/OluwadareLab/coiTAD"
+   ]
+  },
+  {
+   "name": "D-peaks",
+   "pmcid": "PMC3632623",
+   "doi": "10.4161/trns.22457",
+   "pmid": "23132505",
+   "status": "named url",
+   "url": "http://rsat.ulb.ac.be/dpeaks",
+   "code": []
+  },
+  {
+   "name": "DMAP2",
+   "pmcid": null,
+   "doi": "10.1002/cpz1.70003",
+   "pmid": "39258384",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "GNet",
+   "pmcid": null,
+   "doi": "10.3934/mbe.2023704",
+   "pmid": "37919990",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "GRANet",
+   "pmcid": "PMC12289554",
+   "doi": "10.1093/bib/bbaf349",
+   "pmid": "40708222",
+   "status": "code host",
+   "url": "https://github.com/HaoWuLab-Bioinformatics/GRANet",
+   "code": [
+    "https://github.com/HaoWuLab-Bioinformatics/GRANet"
+   ]
+  },
+  {
+   "name": "HiCORE",
+   "pmcid": "PMC8718365",
+   "doi": "10.14348/molcells.2021.0014",
+   "pmid": "34963105",
+   "status": "code host",
+   "url": "https://github.com/CDL-HongwooLee/HiCORE",
+   "code": [
+    "https://github.com/CDL-HongwooLee/HiCORE"
+   ]
+  },
+  {
+   "name": "iFunMed",
+   "pmcid": "PMC6788777",
+   "doi": "10.1002/gepi.22217",
+   "pmid": "31328826",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "jChIP",
+   "pmcid": "PMC4189168",
+   "doi": "10.1186/1756-0500-7-676",
+   "pmid": "25260876",
+   "status": "code host",
+   "url": "http://sourceforge.net/projects/jchip",
+   "code": [
+    "http://sourceforge.net/projects/jchip"
+   ]
+  },
+  {
+   "name": "LineGRN",
+   "pmcid": null,
+   "doi": "10.1109/jbhi.2025.3591840",
+   "pmid": "40699953",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "LogicSR",
+   "pmcid": "PMC12636526",
+   "doi": "10.1093/bib/bbaf621",
+   "pmid": "41269283",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "RefTM",
+   "pmcid": null,
+   "doi": "10.1093/bib/bbac540",
+   "pmid": "36513377",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "scIBD",
+   "pmcid": "PMC10561408",
+   "doi": "10.1186/s13059-023-03072-y",
+   "pmid": "37814314",
+   "status": "code host",
+   "url": "https://github.com/Ying-Lab/scIBD",
+   "code": [
+    "https://github.com/Ying-Lab/scIBD",
+    "http://github.com/Ying-Lab/scIBD"
+   ]
+  },
+  {
+   "name": "scPipe",
+   "pmcid": "PMC10689045",
+   "doi": "10.1093/nargab/lqad105",
+   "pmid": "38046273",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "TEMPLE",
+   "pmcid": null,
+   "doi": "10.1111/1755-0998.12535",
+   "pmid": "27106869",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "TIGRNCRN",
+   "pmcid": null,
+   "doi": "10.1142/s0219720019500185",
+   "pmid": "31288638",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "TRAmHap",
+   "pmcid": null,
+   "doi": "10.1093/bib/bbad214",
+   "pmid": "37279467",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "VAliBS",
+   "pmcid": "PMC5657078",
+   "doi": "10.1186/s12859-017-1827-1",
+   "pmid": "29072146",
+   "status": "code host",
+   "url": "https://github.com/wwwyxder/valibs",
+   "code": [
+    "https://github.com/wwwyxder/valibs"
+   ]
+  },
+  {
+   "name": "ZCMM",
+   "pmcid": "PMC6827144",
+   "doi": "10.3390/genes10100765",
+   "pmid": "31569414",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "AutoGRN",
+   "pmcid": null,
+   "doi": "10.1109/jbhi.2025.3609408",
+   "pmid": "40956752",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "BFMDDT",
+   "pmcid": null,
+   "doi": "10.1109/tcbbio.2025.3570817",
+   "pmid": "40811307",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "Bream",
+   "pmcid": "PMC12844561",
+   "doi": "10.3389/fgene.2026.1743148",
+   "pmid": "41607593",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "Cloud-BS",
+   "pmcid": null,
+   "doi": "10.1142/s0219720018400280",
+   "pmid": "30567473",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "CMStalker",
+   "pmcid": null,
+   "doi": "10.1109/tcbb.2014.2359444",
+   "pmid": "26451824",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "CSER",
+   "pmcid": "PMC11449711",
+   "doi": "10.3389/fgene.2024.1481787",
+   "pmid": "39371416",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "DARDN",
+   "pmcid": "PMC10888155",
+   "doi": "10.3390/genes15020144",
+   "pmid": "38397134",
+   "status": "code host",
+   "url": "https://github.com/berkuva/DARDN",
+   "code": [
+    "https://github.com/berkuva/DARDN"
+   ]
+  },
+  {
+   "name": "DeepEnhancerPPO",
+   "pmcid": "PMC11641363",
+   "doi": "10.3390/ijms252312942",
+   "pmid": "39684652",
+   "status": "code host",
+   "url": "https://github.com/Mxc666/DeepEnhancerPPO.git",
+   "code": [
+    "https://github.com/Mxc666/DeepEnhancerPPO.git"
+   ]
+  },
+  {
+   "name": "DPRP",
+   "pmcid": "PMC3965116",
+   "doi": "10.1093/nar/gkt1254",
+   "pmid": "24302579",
+   "status": "named url",
+   "url": "http://syslab.nchu.edu.tw/DPRP",
+   "code": []
+  },
+  {
+   "name": "ENT3C",
+   "pmcid": "PMC11217677",
+   "doi": "10.1093/nargab/lqae076",
+   "pmid": "38962256",
+   "status": "code host",
+   "url": "https://github.com/X3N1A/ENT3C",
+   "code": [
+    "https://github.com/X3N1A/ENT3C"
+   ]
+  },
+  {
+   "name": "GNNMF",
+   "pmcid": "PMC10956247",
+   "doi": "10.1186/s12864-024-10218-0",
+   "pmid": "38515040",
+   "status": "code host",
+   "url": "https://github.com/zhangsq06/GNNMF.git",
+   "code": [
+    "https://github.com/zhangsq06/GNNMF.git"
+   ]
+  },
+  {
+   "name": "GRISOTTO",
+   "pmcid": "PMC3112114",
+   "doi": "10.1186/1748-7188-6-13",
+   "pmid": "21513505",
+   "status": "named url",
+   "url": "http://kdbio.inesc-id.pt/~asmc/software/grisotto.html",
+   "code": []
+  },
+  {
+   "name": "HyGAnno",
+   "pmcid": "PMC10998639",
+   "doi": "10.1093/bib/bbae152",
+   "pmid": "38581422",
+   "status": "code host",
+   "url": "https://github.com/WeihangZJP/HyGAnno",
+   "code": [
+    "https://github.com/WeihangZJP/HyGAnno"
+   ]
+  },
+  {
+   "name": "iComBat",
+   "pmcid": "PMC12495439",
+   "doi": "10.1016/j.csbj.2025.09.014",
+   "pmid": "41050465",
+   "status": "code host",
+   "url": "https://github.com/t-yui/iComBat",
+   "code": [
+    "https://github.com/t-yui/iComBat"
+   ]
+  },
+  {
+   "name": "KansformerEPI",
+   "pmcid": "PMC12165831",
+   "doi": "10.1093/bib/bbaf272",
+   "pmid": "40515390",
+   "status": "code host",
+   "url": "https://github.com/shaohongyihhh/KansformerEPI",
+   "code": [
+    "https://github.com/shaohongyihhh/KansformerEPI"
+   ]
+  },
+  {
+   "name": "LOGOWheat",
+   "pmcid": "PMC11717721",
+   "doi": "10.1093/bib/bbae705",
+   "pmid": "39789857",
+   "status": "code host",
+   "url": "https://github.com/mrklp/LOGOWheat",
+   "code": [
+    "https://github.com/mrklp/LOGOWheat"
+   ]
+  },
+  {
+   "name": "MCOIN",
+   "pmcid": "PMC3716798",
+   "doi": "10.1186/1748-7188-8-16",
+   "pmid": "23806098",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "Mutex",
+   "pmcid": null,
+   "doi": "10.1016/s0003-2697(03)00404-4",
+   "pmid": "12963067",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "PmiProPred",
+   "pmcid": null,
+   "doi": "10.1016/j.ijbiomac.2025.140630",
+   "pmid": "39909261",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "PMS6MC",
+   "pmcid": "PMC4193679",
+   "doi": "10.3390/a6040805",
+   "pmid": "25309700",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "PorcineAI-Enhancer",
+   "pmcid": "PMC10526013",
+   "doi": "10.3390/ani13182935",
+   "pmid": "37760334",
+   "status": "code host",
+   "url": "https://github.com/castwj/PorcineAI-enhancer",
+   "code": [
+    "https://github.com/castwj/PorcineAI-enhancer"
+   ]
+  },
+  {
+   "name": "ProMT",
+   "pmcid": null,
+   "doi": "10.1109/tnb.2014.2327586",
+   "pmid": "24919203",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "RobusTAD",
+   "pmcid": "PMC12087246",
+   "doi": "10.1186/s13059-025-03568-9",
+   "pmid": "40390127",
+   "status": "code host",
+   "url": "https://github.com/zhyanlin/RobusTAD",
+   "code": [
+    "https://github.com/zhyanlin/RobusTAD"
+   ]
+  },
+  {
+   "name": "rTRM-web",
+   "pmcid": null,
+   "doi": "10.1016/j.gene.2014.06.016",
+   "pmid": "24927962",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "scRegulate",
+   "pmcid": "PMC12701802",
+   "doi": "10.1093/bioinformatics/btaf638",
+   "pmid": "41288963",
+   "status": "code host",
+   "url": "http://github.com/YDaiLab/scRegulate",
+   "code": [
+    "http://github.com/YDaiLab/scRegulate",
+    "https://github.com/YDaiLab/scRegulate"
+   ]
+  },
+  {
+   "name": "SCRMshaw",
+   "pmcid": "PMC11620701",
+   "doi": "10.1371/journal.pone.0311752",
+   "pmid": "39637210",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "TopoLoop",
+   "pmcid": "PMC11604096",
+   "doi": "10.1063/5.0236090",
+   "pmid": "39575737",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "TrFAST",
+   "pmcid": "PMC5054711",
+   "doi": "10.1016/j.gpb.2012.06.007",
+   "pmid": "23317703",
+   "status": "named url",
+   "url": "http://www.fi-pk.com/trfast.html",
+   "code": []
+  },
+  {
+   "name": "TrieAMD",
+   "pmcid": null,
+   "doi": "10.1504/ijdmb.2015.070833",
+   "pmid": "26529905",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "UniversalEPI",
+   "pmcid": "PMC13191297",
+   "doi": "10.1093/nar/gkag485",
+   "pmid": "42165138",
+   "status": "code host",
+   "url": "https://github.com/BoevaLab/UniversalEPI",
+   "code": [
+    "https://github.com/BoevaLab/UniversalEPI",
+    "https://github.com/BoevaLab/UniversalEPI/wiki"
+   ]
+  },
+  {
+   "name": "ActiveMotif",
+   "pmcid": null,
+   "doi": "10.1109/embc.2017.8037423",
+   "pmid": "29060464",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "AliBiMotif",
+   "pmcid": null,
+   "doi": "10.1504/ijdmb.2012.048198",
+   "pmid": "22724298",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "BestCRM",
+   "pmcid": "PMC10856692",
+   "doi": "10.3390/ijms25031903",
+   "pmid": "38339181",
+   "status": "code host",
+   "url": "https://github.com/Deyneko/BestCRM",
+   "code": [
+    "https://github.com/Deyneko/BestCRM"
+   ]
+  },
+  {
+   "name": "Bi-billboard",
+   "pmcid": null,
+   "doi": "10.1089/cmb.2010.0299",
+   "pmid": "21563976",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "C2c",
+   "pmcid": "PMC11203216",
+   "doi": "10.3390/genes15060673",
+   "pmid": "38927609",
+   "status": "code host",
+   "url": "https://github.com/zwang-bioinformatics/C2c",
+   "code": [
+    "https://github.com/zwang-bioinformatics/C2c"
+   ]
+  },
+  {
+   "name": "CAGAD",
+   "pmcid": null,
+   "doi": "10.1007/s12064-026-00460-3",
+   "pmid": "41774282",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "CAraCAl",
+   "pmcid": "PMC11170880",
+   "doi": "10.1186/s12859-024-05833-3",
+   "pmid": "38872103",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "CASHeart",
+   "pmcid": "PMC12806100",
+   "doi": "10.1002/qub2.90",
+   "pmid": "41675513",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "CellPolaris",
+   "pmcid": "PMC12948241",
+   "doi": "10.1002/advs.202508697",
+   "pmid": "41498638",
+   "status": "code host",
+   "url": "https://github.com/xCompass-AI/CellPolaris",
+   "code": [
+    "https://github.com/xCompass-AI/CellPolaris",
+    "https://github.com/xCompass\u2010AI/CellPolaris"
+   ]
+  },
+  {
+   "name": "ceQTL",
+   "pmcid": "PMC13215588",
+   "doi": "10.1093/bib/bbag258",
+   "pmid": "42202282",
+   "status": "code host",
+   "url": "https://github.com/pwwang/ceQTL",
+   "code": [
+    "https://github.com/pwwang/ceQTL"
+   ]
+  },
+  {
+   "name": "cfDECOR",
+   "pmcid": null,
+   "doi": "10.1038/s41598-026-50180-3",
+   "pmid": "42036438",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "Chromatin",
+   "pmcid": null,
+   "doi": "10.1038/nrg3331",
+   "pmid": "22929987",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "ChromTag",
+   "pmcid": null,
+   "doi": "10.3389/fbinf.2026.1805772",
+   "pmid": "42428152",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "COPAR",
+   "pmcid": "PMC5357551",
+   "doi": "10.1155/2017/5346793",
+   "pmid": "28357402",
+   "status": "code host",
+   "url": "https://github.com/gladex/COPAR",
+   "code": [
+    "https://github.com/gladex/COPAR"
+   ]
+  },
+  {
+   "name": "CoReGRN",
+   "pmcid": null,
+   "doi": "10.1186/s12864-026-13185-w",
+   "pmid": "42458246",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "CRAK-Velo",
+   "pmcid": "PMC13312768",
+   "doi": "10.1186/s13059-026-04086-y",
+   "pmid": "42087173",
+   "status": "code host",
+   "url": "https://github.com/StatBiomed/CRAK-Velo.git",
+   "code": [
+    "https://github.com/StatBiomed/CRAK-Velo.git"
+   ]
+  },
+  {
+   "name": "CrossMP",
+   "pmcid": "PMC11276538",
+   "doi": "10.3390/genes15070882",
+   "pmid": "39062661",
+   "status": "code host",
+   "url": "https://github.com/tang27abu/CrossMP",
+   "code": [
+    "https://github.com/tang27abu/CrossMP"
+   ]
+  },
+  {
+   "name": "Dbert2_LR",
+   "pmcid": null,
+   "doi": "10.1016/j.ygeno.2026.111201",
+   "pmid": "41544987",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "DcSE",
+   "pmcid": "PMC13134126",
+   "doi": "10.1186/s12864-026-12768-x",
+   "pmid": "41877008",
+   "status": "code host",
+   "url": "https://github.com/zhangao-clude/DcSE",
+   "code": [
+    "https://github.com/zhangao-clude/DcSE"
+   ]
+  },
+  {
+   "name": "DiTSim",
+   "pmcid": null,
+   "doi": "10.1007/s12539-025-00773-9",
+   "pmid": "41120648",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "DMDGRN",
+   "pmcid": null,
+   "doi": "10.1016/j.jbi.2026.104985",
+   "pmid": "41544912",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "EPINTLM",
+   "pmcid": "PMC12908682",
+   "doi": "10.1093/bib/bbag064",
+   "pmid": "41697918",
+   "status": "code host",
+   "url": "https://github.com/langiocn/EPINTLM",
+   "code": [
+    "https://github.com/langiocn/EPINTLM"
+   ]
+  },
+  {
+   "name": "EpiXFormer",
+   "pmcid": "PMC12796812",
+   "doi": "10.1093/bib/bbaf721",
+   "pmid": "41527854",
+   "status": "code host",
+   "url": "https://github.com/Zer0o0/epixformer",
+   "code": [
+    "https://github.com/Zer0o0/epixformer"
+   ]
+  },
+  {
+   "name": "eQTL-Detect",
+   "pmcid": "PMC11420669",
+   "doi": "10.1093/nargab/lqae122",
+   "pmid": "39318506",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "FastGxC",
+   "pmcid": "PMC13261669",
+   "doi": "10.1016/j.xgen.2026.101250",
+   "pmid": "42155441",
+   "status": "code host",
+   "url": "https://github.com/BalliuLab/FastGxC",
+   "code": [
+    "https://github.com/BalliuLab/FastGxC",
+    "https://github.com/BalliuLab/FastGxC_Manuscript"
+   ]
+  },
+  {
+   "name": "GAMI-CRM",
+   "pmcid": "PMC12382777",
+   "doi": "10.1109/cec.2014.6900542",
+   "pmid": "40881463",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "GTAT-GRN",
+   "pmcid": "PMC12540167",
+   "doi": "10.3389/fgene.2025.1668773",
+   "pmid": "41132794",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "HBCR_DMR",
+   "pmcid": "PMC11051304",
+   "doi": "10.3390/jpm14040361",
+   "pmid": "38672987",
+   "status": "code host",
+   "url": "https://github.com/Genetics-Research-Laboratory-RROC/HBCR-DMR",
+   "code": [
+    "https://github.com/Genetics-Research-Laboratory-RROC/HBCR-DMR"
+   ]
+  },
+  {
+   "name": "HemaCisDB",
+   "pmcid": "PMC12343011",
+   "doi": "10.1093/gpbjnl/qzae088",
+   "pmid": "39724337",
+   "status": "named url",
+   "url": "https://hemacisdb.chinablood.com.cn",
+   "code": []
+  },
+  {
+   "name": "HERON",
+   "pmcid": "PMC8348143",
+   "doi": "10.3390/ijms22158123",
+   "pmid": "34360892",
+   "status": "code host",
+   "url": "https://github.com/maciosz/HERON",
+   "code": [
+    "https://github.com/maciosz/HERON"
+   ]
+  },
+  {
+   "name": "HGATLink",
+   "pmcid": "PMC11817978",
+   "doi": "10.1186/s12859-025-06071-x",
+   "pmid": "39934680",
+   "status": "code host",
+   "url": "https://github.com/aniani6aa/HGATLink",
+   "code": [
+    "https://github.com/aniani6aa/HGATLink"
+   ]
+  },
+  {
+   "name": "iEnhancer-Flow",
+   "pmcid": null,
+   "doi": "10.1007/s12539-025-00787-3",
+   "pmid": "41283958",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "IMAGE",
+   "pmcid": "PMC2735968",
+   "doi": "",
+   "pmid": "19812788",
+   "status": "named url",
+   "url": "http://image.ylichron.it",
+   "code": []
+  },
+  {
+   "name": "IN-MACA-MCC",
+   "pmcid": "PMC4123571",
+   "doi": "10.1155/2014/261362",
+   "pmid": "25132849",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "InCURA",
+   "pmcid": "PMC12715506",
+   "doi": "10.1093/nar/gkaf1377",
+   "pmid": "41416520",
+   "status": "code host",
+   "url": "https://github.com/SinghalLab/incura_app",
+   "code": [
+    "https://github.com/SinghalLab/incura_app",
+    "https://github.com/SinghalLab/incura"
+   ]
+  },
+  {
+   "name": "LBF-MI",
+   "pmcid": "PMC11675687",
+   "doi": "10.3390/genes15121530",
+   "pmid": "39766797",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "LiBis",
+   "pmcid": null,
+   "doi": "10.1093/bib/bbaa332",
+   "pmid": "33316060",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "LORSEN",
+   "pmcid": "PMC8636089",
+   "doi": "10.3389/fgene.2021.690926",
+   "pmid": "34868194",
+   "status": "code host",
+   "url": "https://github.com/gaochengPRC/LORSEN",
+   "code": [
+    "https://github.com/gaochengPRC/LORSEN"
+   ]
+  },
+  {
+   "name": "MEFFGRN",
+   "pmcid": null,
+   "doi": "10.1016/j.compbiomed.2024.108835",
+   "pmid": "38996550",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "MESIA",
+   "pmcid": "PMC10681995",
+   "doi": "10.1038/s41598-023-47948-2",
+   "pmid": "38012291",
+   "status": "code host",
+   "url": "https://github.com/ERASMUSlab/MESIA",
+   "code": [
+    "https://github.com/ERASMUSlab/MESIA"
+   ]
+  },
+  {
+   "name": "MetArea",
+   "pmcid": "PMC11813801",
+   "doi": "10.18699/vjgb-24-90",
+   "pmid": "39944799",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "MethPy",
+   "pmcid": "PMC12657857",
+   "doi": "10.1038/s41598-025-26089-8",
+   "pmid": "41298606",
+   "status": "named url",
+   "url": "https://dmsp.web.uniroma1.it/it/methpy",
+   "code": []
+  },
+  {
+   "name": "mist",
+   "pmcid": "PMC13121613",
+   "doi": "10.1038/s41467-026-70523-y",
+   "pmid": "41820383",
+   "status": "code host",
+   "url": "https://bioconductor.org/packages/mist",
+   "code": [
+    "https://bioconductor.org/packages/mist",
+    "https://github.com/dxd429/mist"
+   ]
+  },
+  {
+   "name": "MODSIDE",
+   "pmcid": "PMC6194616",
+   "doi": "10.1186/s12864-018-5148-1",
+   "pmid": "30340511",
+   "status": "named url",
+   "url": "http://modside.org",
+   "code": []
+  },
+  {
+   "name": "Motif-Cluster",
+   "pmcid": null,
+   "doi": "10.1371/journal.pcbi.1014639",
+   "pmid": "42555666",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "NanoLoop",
+   "pmcid": "PMC13116353",
+   "doi": "10.1002/advs.202517692",
+   "pmid": "41684299",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "Neur-Ally",
+   "pmcid": "PMC12164584",
+   "doi": "10.1093/nargab/lqaf080",
+   "pmid": "40519652",
+   "status": "code host",
+   "url": "https://github.com/anilprakash94/neur_ally",
+   "code": [
+    "https://github.com/anilprakash94/neur_ally"
+   ]
+  },
+  {
+   "name": "NyxBind",
+   "pmcid": "PMC13093223",
+   "doi": "10.1093/bib/bbag182",
+   "pmid": "42007520",
+   "status": "code host",
+   "url": "https://github.com/ai4nucleome/NyxBind",
+   "code": [
+    "https://github.com/ai4nucleome/NyxBind"
+   ]
+  },
+  {
+   "name": "PAD2",
+   "pmcid": "PMC10090434",
+   "doi": "10.1016/j.xpro.2023.102203",
+   "pmid": "37000617",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "PERFILS",
+   "pmcid": null,
+   "doi": "10.1093/bioinformatics/9.5.607",
+   "pmid": "8293335",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "PSGRN",
+   "pmcid": "PMC13127566",
+   "doi": "10.1126/sciadv.aeb3376",
+   "pmid": "42054465",
+   "status": "code host",
+   "url": "https://github.com/GuanLab/PSGRN",
+   "code": [
+    "https://github.com/GuanLab/PSGRN"
+   ]
+  },
+  {
+   "name": "QWENDY",
+   "pmcid": null,
+   "doi": "10.1007/s11538-025-01542-x",
+   "pmid": "41123731",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "RegRegSEA",
+   "pmcid": null,
+   "doi": "10.1093/nar/gkag454",
+   "pmid": "42109173",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "sc-ChromAging",
+   "pmcid": null,
+   "doi": "10.1038/s41514-026-00398-2",
+   "pmid": "42106399",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "scCNMF",
+   "pmcid": "PMC12962131",
+   "doi": "10.7717/peerj.20836",
+   "pmid": "41800139",
+   "status": "code host",
+   "url": "https://github.com/Jinsl-lab/scCNMF",
+   "code": [
+    "https://github.com/Jinsl-lab/scCNMF"
+   ]
+  },
+  {
+   "name": "scTELL",
+   "pmcid": "PMC13037063",
+   "doi": "10.1186/s13100-026-00395-y",
+   "pmid": "41731605",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "SGMHA",
+   "pmcid": null,
+   "doi": "10.1186/s12864-026-13022-0",
+   "pmid": "42265576",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "SIGRN",
+   "pmcid": "PMC11641499",
+   "doi": "10.3390/ijms252312741",
+   "pmid": "39684451",
+   "status": "code host",
+   "url": "https://github.com/lryup/SIGRN",
+   "code": [
+    "https://github.com/lryup/SIGRN"
+   ]
+  },
+  {
+   "name": "SimMapNet",
+   "pmcid": null,
+   "doi": "10.1186/s12859-026-06542-9",
+   "pmid": "42363058",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "SIN-KNO",
+   "pmcid": null,
+   "doi": "10.1142/s0219720019500355",
+   "pmid": "32019417",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "SNPs2ChIP",
+   "pmcid": "PMC6417821",
+   "doi": "10.1142/9789813279827_0017",
+   "pmid": "30864321",
+   "status": "code host",
+   "url": "https://github.com/lkalesinskas/SNPs2ChIP",
+   "code": [
+    "https://github.com/lkalesinskas/SNPs2ChIP"
+   ]
+  },
+  {
+   "name": "SuperTAD-Fast",
+   "pmcid": null,
+   "doi": "10.1089/cmb.2024.0490",
+   "pmid": "39047029",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "TADShop",
+   "pmcid": null,
+   "doi": "10.1038/s41592-026-03100-2",
+   "pmid": "42203861",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "TDAGENE",
+   "pmcid": "PMC13139726",
+   "doi": "10.34133/csbj.0080",
+   "pmid": "42093817",
+   "status": "code host",
+   "url": "https://github.com/TDAGENE/TDAGENE",
+   "code": [
+    "https://github.com/TDAGENE/TDAGENE"
+   ]
+  },
+  {
+   "name": "TF-loop",
+   "pmcid": "PMC13076942",
+   "doi": "10.1093/bib/bbag162",
+   "pmid": "41978381",
+   "status": "code host",
+   "url": "https://github.com/CatonTree1024/TF-loop",
+   "code": [
+    "https://github.com/CatonTree1024/TF-loop"
+   ]
+  },
+  {
+   "name": "THC-net",
+   "pmcid": null,
+   "doi": "10.1186/s12859-026-06504-1",
+   "pmid": "42237102",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "TwinEQTL",
+   "pmcid": "PMC9339336",
+   "doi": "10.1093/genetics/iyac088",
+   "pmid": "35689615",
+   "status": "none",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "UniChrom",
+   "pmcid": "PMC12990449",
+   "doi": "10.1186/s12864-026-12625-x",
+   "pmid": "41663926",
+   "status": "code host",
+   "url": "https://github.com/shuaibinw/UniChrom",
+   "code": [
+    "https://github.com/shuaibinw/UniChrom"
+   ]
+  },
+  {
+   "name": "UnionLoops",
+   "pmcid": null,
+   "doi": "10.1186/s13059-026-04169-w",
+   "pmid": "42323656",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  },
+  {
+   "name": "UPNT",
+   "pmcid": null,
+   "doi": "10.1504/ijbra.2008.017166",
+   "pmid": "18283031",
+   "status": "no full text",
+   "url": "",
+   "code": []
+  }
+ ]
+}

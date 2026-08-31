@@ -157,6 +157,59 @@ NOT_A_NAME = {
 }
 
 
+# Full text carries what the abstract does not: journals put the software link in
+# an Availability section, which is body text. Of 377 promotable candidates with no
+# url in their abstract, 270 have full text in Europe PMC.
+#
+# Two things learned from probing metilene (PMC4728377) before building this:
+# its real link is http://www.bioinf.uni-leipzig.de/Software/metilene - an
+# institutional page, not a code host - so requiring a code host finds nothing;
+# and six of the seven urls in that document are boilerplate the markup carries on
+# every article. So: take every url, drop the boilerplate, and rank code hosts
+# first without demanding one.
+BOILERPLATE_RE = re.compile(
+    r"(w3\.org|creativecommons\.org|/licenses?/|doi\.org|dx\.doi|crossref\.org|"
+    r"ncbi\.nlm\.nih\.gov/pubmed|europepmc\.org|pubmed\.ncbi|orcid\.org|"
+    r"niso\.org|jats|ncbi\.nlm\.nih\.gov/geo|ncbi\.nlm\.nih\.gov/sra|"
+    r"ncbi\.nlm\.nih\.gov/bioproject|ebi\.ac\.uk/(ena|arrayexpress)|"
+    r"genome\.cshlp\.org|genome\.org|oup\.com|springer|wiley|elsevier|biomedcentral\.com|"
+    r"/cgi/doi/|/cgi/content|academic\.oup|sciencedirect|"
+    r"nature\.com|plos\.org|frontiersin|mdpi\.com|r-project\.org/?$|"
+    r"\.(png|jpg|gif|svg|pdf|css|js)$)", re.I)
+
+FULLTEXT = "https://www.ebi.ac.uk/europepmc/webservices/rest/{pmcid}/fullTextXML"
+
+
+def named_for(url: str, tool: str) -> bool:
+    """Does this url plausibly belong to THIS tool rather than one it cites?
+
+    A full-text paper links every tool it benchmarks against, so the first
+    non-boilerplate url is usually somebody else's software: BiSearch's paper
+    links perlprimer.sourceforge.net, Xenbase's links a CSBB repo. Requiring the
+    tool's name in the url is the same discriminator resolve_repos.validate()
+    uses, and it is the only thing separating the tool from its citations.
+    """
+    t = re.sub(r"[^a-z0-9]", "", tool.lower())
+    u = re.sub(r"[^a-z0-9]", "", url.lower())
+    return len(t) >= 3 and t in u
+
+
+def software_urls(text: str, tool: str = "") -> tuple[list[str], list[str]]:
+    """Candidate software locations in a full-text document.
+
+    Returns (code_host_urls, other_candidate_urls). Boilerplate the publisher's
+    markup carries on every article is removed first; without that, every paper
+    "contains" half a dozen urls and none of them are the tool.
+    """
+    urls, _ = abstract_urls(text)
+    keep = [u for u in urls if not BOILERPLATE_RE.search(u)]
+    if tool:
+        keep = [u for u in keep if named_for(u, tool)]
+    code = [u for u in keep if CODE_HOST_RE.search(u)]
+    other = [u for u in keep if not CODE_HOST_RE.search(u)]
+    return code, other
+
+
 def http() -> requests.Session:
     s = requests.Session()
     s.headers.update({"User-Agent": user_agent()})

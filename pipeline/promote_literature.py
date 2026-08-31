@@ -33,6 +33,8 @@ import argparse
 import hashlib
 import json
 import os
+import time
+from pathlib import Path
 
 import requests
 
@@ -45,6 +47,8 @@ CANDIDATES = RAW / "literature_candidates.json"
 VERDICTS = RAW / "literature_promote.json"
 SCOPE_VERDICTS = RAW / "literature_scope.json"
 SCOPE_CACHE = CACHE / "literature_scope_cache.json"
+FULLTEXT_VERDICTS = RAW / "literature_fulltext_urls.json"
+FULLTEXT_CACHE = CACHE / "fulltext_urls.json"
 CAT_VERDICTS = RAW / "literature_categories.json"
 CAT_CACHE = CACHE / "literature_category_cache.json"
 REPOMAP = CACHE / "repo_map.json"
@@ -372,10 +376,71 @@ def layer2(rows: list[dict]) -> list[dict]:
     print(f"  {n_new} new calls, ${spend:.4f}")
     return out
 
+def fulltext_urls(rows: list[dict]) -> list[dict]:
+    """Recover a software url from full text for candidates whose abstract had none.
+
+    Journals put the link in an Availability section, which is body text, so an
+    abstract-only reader misses it: 377 promotable candidates state no url and 270
+    of them have full text in Europe PMC.
+
+    The url must be NAMED for the tool. A paper links every tool it benchmarks
+    against, so the first non-boilerplate url is usually somebody else's: before
+    the guard, BiSearch resolved to perlprimer.sourceforge.net and Xenbase to an
+    unrelated CSBB repo. With it, precision on a 12-record probe went from about
+    half to all twelve, at the cost of 2 fewer hits. A wrong link is worse than
+    none.
+    """
+    import glob
+    from discover_literature import FULLTEXT, software_urls
+    epmc = {}
+    for f in glob.glob(str(CACHE / "literature" / "*.json")):
+        for rec in json.loads(Path(f).read_text()):
+            k = rec.get("pmid") or rec.get("doi")
+            if k:
+                epmc[str(k)] = rec
+    cache = json.loads(FULLTEXT_CACHE.read_text()) if FULLTEXT_CACHE.exists() else {}
+    http = requests.Session()
+    http.headers.update({"User-Agent": user_agent()})
+    out, n_new = [], 0
+    for i, r in enumerate(rows, 1):
+        meta = epmc.get(str(r.get("pmid") or "")) or epmc.get(str(r.get("doi") or "")) or {}
+        pmcid = meta.get("pmcid")
+        rec = {"name": r["name"], "pmcid": pmcid, "doi": r.get("doi"), "pmid": r.get("pmid")}
+        if not pmcid or meta.get("inEPMC") != "Y":
+            rec |= {"status": "no full text", "url": "", "code": []}
+            out.append(rec)
+            continue
+        if pmcid in cache:
+            hit = cache[pmcid]
+        else:
+            try:
+                resp = http.get(FULLTEXT.format(pmcid=pmcid), timeout=60)
+                code, other = (software_urls(resp.text, r["name"])
+                               if resp.status_code == 200 else ([], []))
+                hit = {"code": code[:3], "other": other[:3]}
+            except requests.RequestException as exc:
+                hit = {"error": str(exc)[:80], "code": [], "other": []}
+            cache[pmcid] = hit
+            n_new += 1
+            if n_new % 25 == 0:
+                FULLTEXT_CACHE.write_text(json.dumps(cache))
+                print(f"  {i}/{len(rows)}", flush=True)
+            time.sleep(0.25)
+        code, other = hit.get("code") or [], hit.get("other") or []
+        best = code[0] if code else (other[0] if other else "")
+        rec |= {"status": "code host" if code else ("named url" if other else "none"),
+                "url": best, "code": code}
+        out.append(rec)
+    FULLTEXT_CACHE.write_text(json.dumps(cache))
+    print(f"  {n_new} documents fetched")
+    return out
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--layer1", action="store_true",
                     help="validate stated repositories (only candidates that name one)")
+    ap.add_argument("--fulltext", action="store_true",
+                    help="recover software urls from full text, for candidates with none")
     ap.add_argument("--layer2", action="store_true",
                     help="categorise the candidates that cleared layer 3")
     ap.add_argument("--layer3", action="store_true",
@@ -387,7 +452,14 @@ def main() -> None:
     rows = load_candidates(args.only, args.limit, require_repo=args.layer1)
     print(f"{len(rows)} candidates"
           + (" with a stated code url" if args.layer1 else " not yet in the catalog"))
-    if args.layer2:
+    if args.fulltext:
+        scoped = read_json(SCOPE_VERDICTS)["list"]
+        need = {x["name"] for x in scoped
+                if x.get("in_scope") and x.get("is_software") and not x.get("repo")}
+        rows = [r for r in rows if r["name"] in need]
+        print(f"  {len(rows)} promotable candidates with no url in their abstract")
+        verdicts = fulltext_urls(rows)
+    elif args.layer2:
         scoped = read_json(SCOPE_VERDICTS)["list"]
         ok = {x["name"] for x in scoped if x.get("in_scope") and x.get("is_software")}
         rows = [r for r in rows if r["name"] in ok]
@@ -400,9 +472,9 @@ def main() -> None:
     else:
         print("nothing to do: pass --layer1 or --layer3")
         return
-    out = CAT_VERDICTS if args.layer2 else (SCOPE_VERDICTS if args.layer3 else VERDICTS)
+    out = FULLTEXT_VERDICTS if args.fulltext else CAT_VERDICTS if args.layer2 else (SCOPE_VERDICTS if args.layer3 else VERDICTS)
     write_json(out, {"count": len(verdicts), "list": verdicts})
-    field = "cat_confidence" if args.layer2 else ("in_scope" if args.layer3 else "layer1")
+    field = "status" if args.fulltext else "cat_confidence" if args.layer2 else ("in_scope" if args.layer3 else "layer1")
     tally = {}
     for v in verdicts:
         tally[str(v.get(field))] = tally.get(str(v.get(field)), 0) + 1
