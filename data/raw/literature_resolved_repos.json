@@ -1,0 +1,2112 @@
+{
+ "count": 301,
+ "list": [
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "metilene"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "Genevar"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "MOABS"
+  },
+  {
+   "slug": "Hansimov/sedb",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 1 shared terms (database)",
+   "name": "SEdb"
+  },
+  {
+   "slug": "KPRATT11/bisearch",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "BiSearch"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "SCORE"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "FootPrinter"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "eQED"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "HiTAD"
+  },
+  {
+   "slug": "whatwg/fetch",
+   "source": "homepage",
+   "layer1": "hold",
+   "why": "no name match and only 0 shared terms ()",
+   "name": "Xenbase"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "HHMD"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "RRBSMAP"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "BRAT-BW"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "BioOptimizer"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "SAAP-RRBS"
+  },
+  {
+   "slug": "heathsc/gemBS",
+   "source": "bioconda",
+   "layer1": "pass",
+   "why": "name match + 7 shared terms (bisulfite, data, dna, high)",
+   "name": "gemBS"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "HiChIP"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "PrimerSuite"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "iNuc-STNC"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "Methy-Pipe"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "BatMeth"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "IChrom-Deep"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "TADKB"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "TFmiR"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "TreeQTL"
+  },
+  {
+   "slug": "sterding/powerEQTL",
+   "source": "cran",
+   "layer1": "pass",
+   "why": "name match + 3 shared terms (analysis, eqtl, power)",
+   "name": "powerEQTL"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "CpG_MPs"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "RiceSRTFDB"
+  },
+  {
+   "slug": "explosion/wasabi",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "WASABI"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "ChIP-PIT"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "GAME"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "BS-Seeker3"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "ChromatinDB"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "OxyBS"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "TF2LncRNA"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "BSeQC"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "NetBenchmark"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "QuASAR-MPRA"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "RRBS-analyser"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "Bi-PROF"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "CORE_TF"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "BNArray"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "QChIPat"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "CisOrtho"
+  },
+  {
+   "slug": "metagriffin/morph",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "MORPH"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "RUbioSeq"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "NucPosPred"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "HiC-ACT"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "CMGRN"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "GBSA"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "MMDiff"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "MOPAT"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "BTNET"
+  },
+  {
+   "slug": "fastmap-io/fastmap",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "FastMap"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "LegumeGRN"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "oxBS-MLE"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "CisView"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "DIRECTION"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "EZ-Retrieve"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "MT-HESS"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "MetaProm"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "PeaKDEck"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "info-gibbs"
+  },
+  {
+   "slug": "claydodo/krux",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "kruX"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "NSRGRN"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "SELER"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "SIOMICS"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "NSCGRN"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "sequence-shape"
+  },
+  {
+   "slug": "axiomantic/python-tripwire",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "no name match and only 0 shared terms ()",
+   "name": "BigFoot"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "FineStr"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "SeAMotE"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "ChIPModule"
+  },
+  {
+   "slug": "mroclin/heft",
+   "source": "pypi",
+   "layer1": "fail",
+   "why": "candidate repo unreachable",
+   "name": "HEFT"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "RSIR"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "B-SOLANA"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "CRNET"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "enpred"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "iNuc-ext-PseTNC"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "TargetOrtho"
+  },
+  {
+   "slug": "SuperCowPowers/zat",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "no name match and only 3 shared terms (analysis, data, processing)",
+   "name": "BAT"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "Ceres"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "FootPrinter3"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "MethyQA"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "PlantBind"
+  },
+  {
+   "slug": "ChaozhongLiu/scGREAT",
+   "source": "pypi",
+   "layer1": "pass",
+   "why": "name match + 3 shared terms (cell, regulatory, single)",
+   "name": "scGREAT"
+  },
+  {
+   "slug": "datalayer/spacer",
+   "source": "pypi",
+   "layer1": "fail",
+   "why": "candidate repo unreachable",
+   "name": "SPACER"
+  },
+  {
+   "slug": "johanneskopton/stif",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "STIF"
+  },
+  {
+   "slug": "gebn/beam",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "BEAM"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "bPeaks"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "CisMapper"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "MMFGRN"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "WBSA"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "ChIP-PaM"
+  },
+  {
+   "slug": "rickhw/pipProject",
+   "source": "pypi",
+   "layer1": "fail",
+   "why": "candidate repo unreachable",
+   "name": "COPS"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "DiffGRN"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "DiNuP"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "intePareto"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "PromotePredictor"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "dPeak"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "PASS-bis"
+  },
+  {
+   "slug": "GATB/bcalm",
+   "source": "bioconda",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "BCalm"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "ExRANGES"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "lscon"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "mHapTk"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "PeakPass"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "RecMotif"
+  },
+  {
+   "slug": "joshua-auchincloss/spic",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "SPIC"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "bioconductor.org"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "BRAT-nova"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "ChIP-BIT"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "cisMEP"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "COTRASIF"
+  },
+  {
+   "slug": "BlackPoint-CX/forecast",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "forecast"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "GibbsST"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "iBMQ"
+  },
+  {
+   "slug": "fdev31/mcast",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "MCAST"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "MLDSPP"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "NPRD"
+  },
+  {
+   "slug": "DavideBrex/SpikeFlow",
+   "source": "homepage",
+   "layer1": "pass",
+   "why": "name match + 4 shared terms (chip, data, seq, spike)",
+   "name": "SpikeFlow"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "BisQC"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "Mtb-sig-miner"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "POWRS"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "Vocabulon"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "CAGEd-oPOSSUM"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "CNNGRN"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "CoMoDis"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "HeliCis"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "MethylMapper"
+  },
+  {
+   "slug": "TheNirnir/NUMAP",
+   "source": "pypi",
+   "layer1": "fail",
+   "why": "candidate repo unreachable",
+   "name": "nuMap"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "PromoterLCNN"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "scHiMe"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "SICTIN"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "DeNOPA"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "evopromoter"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "FISim"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "LmSmdB"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "MD-SVM"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "Meta-eQTL"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "MotifClick"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "PMS6"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "WACS"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "xFITOM"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "AtacAnnoR"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "DIA-MCIS"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "eSNPO"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "FastMotif"
+  },
+  {
+   "slug": "joeyespo/grip",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "GRiP"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "Less-is-more"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "LPAD"
+  },
+  {
+   "slug": "polyphemus-ci/polyphemus",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "POLYPHEMUS"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "PreCisIon"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "scVAEBGM"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "Single_cell_GRN"
+  },
+  {
+   "slug": "gtdelong/teamwork",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "Teamwork"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "Vestige"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "coMOTIF"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "ConBind"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "CREdb"
+  },
+  {
+   "slug": "silasray/disclose",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "DISCLOSE"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "EAP-LSTM"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "F-MAP"
+  },
+  {
+   "slug": "heap/heap-python",
+   "source": "pypi",
+   "layer1": "fail",
+   "why": "candidate repo unreachable",
+   "name": "HEAP"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "idemax"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "iHMS"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "MARZ"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "MIC-MEME"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "PGRNIG"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "reg-eQTL"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "TDSDMI"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "BiModule"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "CapsProm"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "CisML"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "CompMoby"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "DeepMethylation"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "eQuIPS"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "GeRNet"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "KFGRNI"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "MotifCombinator"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "PairMotif+"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "SPACE"
+  },
+  {
+   "slug": "jobovy/wendy",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "WENDY"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "CATAD"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "Compo"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "CTF"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "CVGAE"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "ddgraph"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "FastBill"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "iPro2L-DG"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "LDsplit"
+  },
+  {
+   "slug": "CybercentreCanada/Maco",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "MACO"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "MulTFBS"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "NEXT-peak"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "PriorsEditor"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "REPA"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "SemanticCAP"
+  },
+  {
+   "slug": "pypa/twine",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "Twine"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "Argo_CUDA"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "dPattern"
+  },
+  {
+   "slug": "pypi/warehouse",
+   "source": "homepage",
+   "layer1": "hold",
+   "why": "no name match and only 0 shared terms ()",
+   "name": "GPU-BSM"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "HSCVFNT"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "i5mC-DCGA"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "LinkNMF"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "MethyMer"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "MotifAdjuster"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "msa-edna"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "NG-SEM"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "PEAK"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "PKI"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "SCRN"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "Sig2GRN"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "SigSeeker"
+  },
+  {
+   "slug": "dirn/Simon",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "SIMON"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "SMCis"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "T-KDE"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "TBCA"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "ADELLE"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "BIC-LP"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "BSS-HMM3s"
+  },
+  {
+   "slug": "IceflowRE/cmt",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "CMT"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "D-peaks"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "DMAP2"
+  },
+  {
+   "slug": "MGokcayK/gNet",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 1 shared terms (neural)",
+   "name": "GNet"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "HiC2MicroC"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "histonePrior"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "iFunMed"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "jChIP"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "LineGRN"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "LogicSR"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "RefTM"
+  },
+  {
+   "slug": "LuyiTian/scPipe",
+   "source": "bioconductor",
+   "layer1": "pass",
+   "why": "name match + 5 shared terms (cell, data, pipeline, seq)",
+   "name": "scPipe"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "spa"
+  },
+  {
+   "slug": "CloverHealth/temple",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "TEMPLE"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "TIGRNCRN"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "TRAmHap"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "ZCMM"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "AutoGRN"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "BFMDDT"
+  },
+  {
+   "slug": "tpgillam/bream",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "Bream"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "Cloud-BS"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "CMStalker"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "CSER"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "DPRP"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "FootprintCharter"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "GRISOTTO"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "MCOIN"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "Mutex"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "PmiProPred"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "PMS6MC"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "ProMT"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "rTRM-web"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "SCRMshaw"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "TopoLoop"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "TrFAST"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "TrieAMD"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "ActiveMotif"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "AliBiMotif"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "Bi-billboard"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "CAGAD"
+  },
+  {
+   "slug": "caracal-pipeline/caracal",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "CAraCAl"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "CASHeart"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "cfDECOR"
+  },
+  {
+   "slug": "tek/chromatin",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "Chromatin"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "ChromTag"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "CoReGRN"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "Dbert2_LR"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "DiTSim"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "DMDGRN"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "eQTL-Detect"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "GAMI-CRM"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "GLNet-TFBS"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "GTAT-GRN"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "HemaCisDB"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "iEnhancer-Flow"
+  },
+  {
+   "slug": "francescortiz/image",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "IMAGE"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "IN-MACA-MCC"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "LBF-MI"
+  },
+  {
+   "slug": "Dangertrip/LiBis",
+   "source": "bioconda",
+   "layer1": "pass",
+   "why": "name match + 6 shared terms (alignment, bisulfite, input, low)",
+   "name": "LiBis"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "MEFFGRN"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "MetArea"
+  },
+  {
+   "slug": "Smarties98/MethPy",
+   "source": "homepage",
+   "layer1": "pass",
+   "why": "name match + 3 shared terms (cpg, methylation, non)",
+   "name": "MethPy"
+  },
+  {
+   "slug": "dxd429/mist",
+   "source": "bioconductor",
+   "layer1": "pass",
+   "why": "name match + 3 shared terms (cell, methylation, single)",
+   "name": "mist"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "MODSIDE"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "Motif-Cluster"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "NanoLoop"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "PAD2"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "PERFILS"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "powerlaw_sparsity"
+  },
+  {
+   "slug": "YueWangMathbio/QWENDY",
+   "source": "pypi",
+   "layer1": "hold",
+   "why": "name matches but only 0 shared terms ()",
+   "name": "QWENDY"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "RegRegSEA"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "sc-ChromAging"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "scTELL"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "SGMHA"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "SimMapNet"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "SIN-KNO"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "SuperTAD-Fast"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "TADShop"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "THC-net"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "TwinEQTL"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "UnionLoops"
+  },
+  {
+   "slug": null,
+   "source": "",
+   "layer1": "none",
+   "why": "no candidate found",
+   "name": "UPNT"
+  }
+ ]
+}

@@ -49,6 +49,8 @@ SCOPE_VERDICTS = RAW / "literature_scope.json"
 SCOPE_CACHE = CACHE / "literature_scope_cache.json"
 FULLTEXT_VERDICTS = RAW / "literature_fulltext_urls.json"
 FULLTEXT_CACHE = CACHE / "fulltext_urls.json"
+RESOLVE_VERDICTS = RAW / "literature_resolved_repos.json"
+RESOLVE_CACHE = CACHE / "literature_resolve.json"
 CAT_VERDICTS = RAW / "literature_categories.json"
 CAT_CACHE = CACHE / "literature_category_cache.json"
 REPOMAP = CACHE / "repo_map.json"
@@ -435,10 +437,82 @@ def fulltext_urls(rows: list[dict]) -> list[dict]:
     print(f"  {n_new} documents fetched")
     return out
 
+def resolve_remaining(rows: list[dict]) -> list[dict]:
+    """Registry and homepage lookup for candidates still without a validated repo.
+
+    Reuses resolve_repos' resolvers rather than reimplementing them, so the same
+    validate() guards every result: a matching name is necessary and never
+    sufficient, because tool names in this field are short and generic.
+
+    Order is by cost and by how much the source asserts. bioconda, Bioconductor,
+    PyPI and CRAN are one cheap request each and the package IS the tool. The
+    homepage scrape comes next and is the point of the full-text stage: 78
+    candidates got an institutional page rather than a repo, and a project page
+    usually links its own code. GitHub search is last, budgeted, and trusted
+    least - resolve_repos demands 3 shared terms from it rather than 2, because
+    it returns the most popular repo with a similar name.
+    """
+    from resolve_repos import (from_bioconda, from_bioconductor, from_cran,
+                               from_homepage, from_pypi, github_meta, validate)
+    from enrich import github_token
+    key_gh = github_token()
+    http = requests.Session()
+    http.headers.update({"User-Agent": user_agent()})
+    cache = json.loads(RESOLVE_CACHE.read_text()) if RESOLVE_CACHE.exists() else {}
+    gh_cache = json.loads((CACHE / "repo_map.json").read_text()).get("_gh_meta", {})
+    ft = {x["name"]: x for x in read_json(FULLTEXT_VERDICTS)["list"]} \
+        if FULLTEXT_VERDICTS.exists() else {}
+
+    out, n_new = [], 0
+    for i, r in enumerate(rows, 1):
+        name = r["name"]
+        if name in cache:
+            out.append({**cache[name], "name": name})
+            continue
+        found, src = None, ""
+        for fn, label in ((from_bioconda, "bioconda"), (from_bioconductor, "bioconductor"),
+                          (from_pypi, "pypi"), (from_cran, "cran")):
+            try:
+                got = fn(http, name)
+            except Exception:                                   # noqa: BLE001
+                got = None
+            if got:
+                found, src = got[0], label
+                break
+        if not found:
+            page = (ft.get(name) or {}).get("url") or ""
+            if page and "github.com" not in page:
+                try:
+                    for slug, _why in from_homepage(http, page):
+                        found, src = slug, "homepage"
+                        break
+                except Exception:                               # noqa: BLE001
+                    pass
+        rec = {"slug": found, "source": src, "layer1": "none", "why": "no candidate found"}
+        if found:
+            meta = github_meta(http, found, key_gh, gh_cache)
+            if meta is None:
+                rec |= {"layer1": "fail", "why": "candidate repo unreachable"}
+            else:
+                ok, why = validate(r, found, meta, source=src)
+                rec |= {"layer1": "pass" if ok else "hold", "why": why}
+        cache[name] = rec
+        n_new += 1
+        out.append({**rec, "name": name})
+        if n_new % 25 == 0:
+            RESOLVE_CACHE.write_text(json.dumps(cache))
+            print(f"  {i}/{len(rows)}", flush=True)
+        time.sleep(0.2)
+    RESOLVE_CACHE.write_text(json.dumps(cache))
+    print(f"  {n_new} newly looked up")
+    return out
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--layer1", action="store_true",
                     help="validate stated repositories (only candidates that name one)")
+    ap.add_argument("--resolve", action="store_true",
+                    help="registry and homepage lookup for candidates still lacking a repo")
     ap.add_argument("--fulltext", action="store_true",
                     help="recover software urls from full text, for candidates with none")
     ap.add_argument("--layer2", action="store_true",
@@ -452,7 +526,16 @@ def main() -> None:
     rows = load_candidates(args.only, args.limit, require_repo=args.layer1)
     print(f"{len(rows)} candidates"
           + (" with a stated code url" if args.layer1 else " not yet in the catalog"))
-    if args.fulltext:
+    if args.resolve:
+        scoped = read_json(SCOPE_VERDICTS)["list"]
+        promotable = {x["name"] for x in scoped if x.get("in_scope") and x.get("is_software")}
+        have = {x["name"] for x in read_json(VERDICTS)["list"] if x.get("layer1") == "pass"}
+        ftv = read_json(FULLTEXT_VERDICTS)["list"] if FULLTEXT_VERDICTS.exists() else []
+        have |= {x["name"] for x in ftv if x.get("url") and "github.com" in x["url"]}
+        rows = [r for r in rows if r["name"] in promotable and r["name"] not in have]
+        print(f"  {len(rows)} promotable candidates still without a validated repo")
+        verdicts = resolve_remaining(rows)
+    elif args.fulltext:
         scoped = read_json(SCOPE_VERDICTS)["list"]
         need = {x["name"] for x in scoped
                 if x.get("in_scope") and x.get("is_software") and not x.get("repo")}
@@ -472,9 +555,9 @@ def main() -> None:
     else:
         print("nothing to do: pass --layer1 or --layer3")
         return
-    out = FULLTEXT_VERDICTS if args.fulltext else CAT_VERDICTS if args.layer2 else (SCOPE_VERDICTS if args.layer3 else VERDICTS)
+    out = RESOLVE_VERDICTS if args.resolve else FULLTEXT_VERDICTS if args.fulltext else CAT_VERDICTS if args.layer2 else (SCOPE_VERDICTS if args.layer3 else VERDICTS)
     write_json(out, {"count": len(verdicts), "list": verdicts})
-    field = "status" if args.fulltext else "cat_confidence" if args.layer2 else ("in_scope" if args.layer3 else "layer1")
+    field = "layer1" if args.resolve else "status" if args.fulltext else "cat_confidence" if args.layer2 else ("in_scope" if args.layer3 else "layer1")
     tally = {}
     for v in verdicts:
         tally[str(v.get(field))] = tally.get(str(v.get(field)), 0) + 1
