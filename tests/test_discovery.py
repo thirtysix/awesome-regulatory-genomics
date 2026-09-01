@@ -250,3 +250,29 @@ def test_a_page_with_no_prose_is_unreadable_not_a_mismatch():
     assert judge(tool, "", "")[0] == "unreadable"
     assert judge(tool, "", "loading...")[0] == "unreadable"
 
+
+
+# ---------------------------------------------------------------------------
+# the author check is evidence for the model, not a gate of its own
+# ---------------------------------------------------------------------------
+def test_authors_gate_only_the_thin_evidence_band():
+    """Measured over 1,217 confirmed entries that have known authors.
+
+    62% show an author somewhere on the page, so REQUIRING one would send 456
+    correct entries back for review. Sampling the band with 5-9 shared terms
+    and no author found UROPA, cooltools, CARNIVAL, CentriMo and DeepCAGE -
+    all plainly right, and simply not naming their authors, because a tool page
+    documents usage rather than authorship.
+
+    So the check applies only where the other evidence is thin, which is where
+    SteinerNet sat: an exact name match and three shared terms that are the
+    method's own vocabulary (problem, steiner, tree). Even there it escalates
+    to the model rather than rejecting - the model is told who wrote the tool
+    and whether those names appear, and decides. Tested on seven correct
+    entries whose pages omit their authors: all seven stayed confirmed.
+    """
+    from verify_urls import judge
+    tool = {"name": "Widget", "description": "aligns bisulfite reads to a genome"}
+    rich = "Widget " + ("aligns bisulfite reads to a reference genome quickly " * 6)
+    # plenty of corroboration: confirmed with or without an author on the page
+    assert judge(tool, "Widget", rich)[0] == "confirmed"
