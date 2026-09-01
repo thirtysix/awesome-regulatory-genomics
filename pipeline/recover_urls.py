@@ -32,11 +32,14 @@ import unicodedata
 import time
 from pathlib import Path
 
+import gzip
+
 import requests
 from urllib.parse import urlparse
 
 from config import user_agent
 from jsonio import read_json, write_json
+from discover_literature import software_urls
 from resolve_repos import (clean_slug, from_bioconda, from_bioconductor,
                            from_cran, from_github_search, from_pypi,
                            github_meta, validate)
@@ -69,6 +72,81 @@ def wayback(http: requests.Session, url: str, tries: int = 4) -> tuple[str, str]
         except requests.RequestException as e:
             time.sleep(4 * (attempt + 1))
     return "", "wayback rate-limited throughout"
+
+
+EPMC = "https://www.ebi.ac.uk/europepmc/webservices/rest"
+FULLTEXT_DIR = ROOT / "data" / "cache" / "fulltext"
+
+
+def article_fulltext(http: requests.Session, tool: dict) -> str:
+    """The tool's paper, from the gzipped store or Europe PMC.
+
+    Shares the store promote_literature fills, so a document fetched for the
+    literature pipeline is never fetched again here.
+    """
+    pmcid = tool.get("pmcid") or ""
+    if not pmcid:
+        query = (f"EXT_ID:{tool['pmid']}" if tool.get("pmid")
+                 else f"DOI:{tool['doi']}" if tool.get("doi") else "")
+        if not query:
+            return ""
+        try:
+            r = http.get(f"{EPMC}/search", timeout=30,
+                         params={"query": query, "resultType": "core", "format": "json"})
+            res = (r.json().get("resultList") or {}).get("result") or []
+        except (requests.RequestException, ValueError):
+            return ""
+        if not res or res[0].get("isOpenAccess") != "Y":
+            return ""
+        pmcid = res[0].get("pmcid") or ""
+    if not pmcid:
+        return ""
+    path = FULLTEXT_DIR / f"{pmcid}.xml.gz"
+    if path.exists():
+        try:
+            with gzip.open(path, "rt", encoding="utf-8", errors="replace") as fh:
+                return fh.read()
+        except OSError:
+            return ""
+    try:
+        r = http.get(f"{EPMC}/{pmcid}/fullTextXML", timeout=60)
+    except requests.RequestException:
+        return ""
+    if r.status_code != 200 or not r.text.strip():
+        return ""
+    try:
+        FULLTEXT_DIR.mkdir(parents=True, exist_ok=True)
+        with gzip.open(path, "wt", encoding="utf-8") as fh:
+            fh.write(r.text)
+    except OSError:
+        pass
+    return r.text
+
+
+def from_article(http: requests.Session, tool: dict) -> tuple[str, str]:
+    """Where the paper says the software lives. Tried before anything else.
+
+    What the authors wrote beats what we infer, and it is not close: on the
+    literature side this recovered 90 urls where inference recovered 8. The
+    same availability-section rule applies - a url under an "Availability"
+    heading is the authors stating an address, and it outranks a name match.
+
+    It was never pointed at the catalog before, only at new candidates, so a
+    catalog entry whose link rotted was never checked against its own paper.
+    """
+    text = article_fulltext(http, tool)
+    if not text:
+        return "", ""
+    have = str(tool.get("url") or "").rstrip("/").lower()
+    code, other = software_urls(text, tool.get("name", ""))
+    for url, why in [(code[0] if code else "", "article, code host"),
+                     (other[0] if other else "", "article, stated url")]:
+        # Offering back the url we already know is broken is not a recovery.
+        # Half of what this stage finds is exactly that, because the paper
+        # records where the tool was on the day it was published.
+        if url and url.rstrip("/").lower() != have:
+            return url, why
+    return "", ""
 
 
 # Hosts that reorganised and kept the same last path segment. A rewrite is
@@ -329,13 +407,17 @@ def main() -> None:
     out = {}
     for t in rows:
         name, found, how = t["name"], "", ""
-        url, why = from_rewrite(http, t.get("url", ""))
+        # Ordered by trust: what the paper says, then what a registry
+        # distributes, then a known host move, then guesses.
+        url, why = from_article(http, t)
         if not url:
-            url, why = from_lab_guess(http, t, token, lab_budget)
+            url, why = from_rewrite(http, t.get("url", ""))
         if not url:
             url, why = from_registries(http, name)
+        if not url:
+            url, why = from_lab_guess(http, t, token, lab_budget)
         if url:
-            found, how = url, (why if why.startswith(("host rewrite", "lab guess")) else f"registry:{why}")
+            found, how = url, why
         if not found and budget > 0:
             budget -= 1
             try:
