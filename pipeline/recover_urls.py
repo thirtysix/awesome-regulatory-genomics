@@ -259,17 +259,45 @@ def from_lab_guess(http: requests.Session, tool: dict, token: str | None,
     return "", ""
 
 
+# The canonical page a package registry keeps for itself. Preferred over the
+# repository when the registry has one: it is the address the package is
+# distributed from, it survives the repository being renamed or moved, and for
+# an R or Bioconductor package it is what the community actually cites.
+REGISTRY_PAGE = {
+    "pypi": "https://pypi.org/project/{0}/",
+    "cran": "https://cran.r-project.org/package={0}",
+    "bioconductor": "https://bioconductor.org/packages/{0}/",
+}
+
+
 def from_registries(http: requests.Session, name: str) -> tuple[str, str]:
+    """A repository or canonical page from PyPI, Bioconda, Bioconductor or CRAN.
+
+    These resolvers return an owner/name SLUG, never a url. An earlier version
+    of this function looked for a string starting with http, found none, and
+    silently returned nothing every single time - so the registries, the most
+    trustworthy source in the ordering above, contributed to no run at all.
+    """
     for fn, label in ((from_pypi, "pypi"), (from_bioconda, "bioconda"),
                       (from_bioconductor, "bioconductor"), (from_cran, "cran")):
         try:
             got = fn(http, name)
         except Exception:
-            got = None
-        if got:
-            url = next((x for x in got if isinstance(x, str) and x.startswith("http")), "")
-            if url:
-                return url, label
+            continue
+        if not got:
+            continue
+        slug = got[0] if isinstance(got, (tuple, list)) else got
+        if not isinstance(slug, str) or "/" not in slug:
+            continue
+        page = REGISTRY_PAGE.get(label)
+        if page:
+            cand = page.format(name)
+            try:
+                if http.get(cand, timeout=25, allow_redirects=True).status_code == 200:
+                    return cand, f"{label} package page"
+            except requests.RequestException:
+                pass
+        return f"https://github.com/{slug}", f"{label} -> repository"
     return "", ""
 
 

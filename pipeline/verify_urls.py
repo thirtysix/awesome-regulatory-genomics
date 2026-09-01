@@ -141,6 +141,27 @@ META_REFRESH = re.compile(
     re.I)
 
 
+def authors_on_page(tool: dict, title: str, text: str) -> tuple[list[str], list[str]]:
+    """(known author surnames, those appearing on the page).
+
+    Weak evidence for finding a tool and strong evidence for checking one.
+    Catalog SteinerNet is Tuncbag and Fraenkel's omics web server; CRAN's
+    SteinerNet is Afshin Sadeghi's generic Steiner-tree package. The names are
+    identical, both pages say "steiner", "tree" and "problem", and both the
+    rules and the model called the second one a match. Neither author appears
+    on it, and that is the difference nothing else could see.
+    """
+    try:
+        from recover_urls import author_tokens
+    except Exception:
+        return [], []
+    known = author_tokens(tool)
+    if not known:
+        return [], []
+    hay = (title + " " + text).lower()
+    return known, [a for a in known if a.lower() in hay]
+
+
 def judge(tool: dict, title: str, text: str) -> tuple[str, str]:
     """Deterministic verdict, or 'undecided' when a model should look."""
     named = name_present(tool["name"], title, text)
@@ -150,7 +171,16 @@ def judge(tool: dict, title: str, text: str) -> tuple[str, str]:
     n = len(shared)
     sample = ", ".join(sorted(shared)[:5])
     if named and n >= 2:
-        return "confirmed", f"name on the page and {n} shared terms ({sample})"
+        known, seen = authors_on_page(tool, title, text)
+        # A name match plus generic method vocabulary is exactly what a
+        # same-name different-tool looks like. When we know who wrote the tool
+        # and none of them are anywhere on the page, that is not a confirmation
+        # to make on the rules alone.
+        if known and not seen and n < 5:
+            return "undecided", (f"name matches and {n} shared terms ({sample}), but none of "
+                                 f"{'/'.join(known[:2])} appear")
+        credit = f"; {'/'.join(seen)} on the page" if seen else ""
+        return "confirmed", f"name on the page and {n} shared terms ({sample}){credit}"
     if named and n == 0 and len(text) > MIN_TEXT:
         # The name is there but nothing else is. Usually a person's page or a
         # departmental index that merely lists the tool - real, but not the
@@ -183,14 +213,25 @@ Say false when the page is about something else entirely - a different tool
 that shares the name, a re-registered domain now selling something unrelated, a
 generic institutional index, a parked or error page, or a journal landing page.
 A page can be sparse, dated or ugly and still be the tool's own page; judge
-subject matter, not quality. If the page is empty or gives you nothing to go
+subject matter, not quality. When you are told the tool's authors and none of
+their names appear, treat a match on the tool's name alone with suspicion: two
+groups naming different software the same thing is common, and shared generic
+vocabulary is not evidence that this is the same tool. If the page is empty or gives you nothing to go
 on, say false with low confidence."""
 
 
 def ask_model(tool: dict, title: str, text: str, key: str, model: str,
               cache: dict, lock: threading.Lock | None = None) -> dict:
+    known, seen = authors_on_page(tool, title, text)
+    who = ""
+    if known:
+        who = (f"Published by: {', '.join(known[:2])}. "
+               + (f"Those names DO appear on this page: {', '.join(seen)}."
+                  if seen else "None of those names appear anywhere on this page.")
+               + "\n")
     user = (f"Tool: {tool['name']}\n"
-            f"Description: {tool.get('description', '')[:300]}\n\n"
+            f"Description: {tool.get('description', '')[:300]}\n"
+            f"{who}\n"
             f"Page title: {title}\n"
             f"Page text: {text[:1800]}")
     ck = f"{model}:{hashlib.sha256((LLM_SYSTEM + user).encode()).hexdigest()[:16]}"
