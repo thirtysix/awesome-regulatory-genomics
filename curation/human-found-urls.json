@@ -24,6 +24,12 @@
    "name": "ChIPnorm",
    "url": "https://archiveweb.epfl.ch/lcbb.epfl.ch/software.html",
    "note": "EPFL archived the lab and redirects every path to the archive root; re-appending software.html reaches the page. from_kept_path now does this"
+  },
+  {
+   "name": "MINDY",
+   "url": "https://califano.c2b2.columbia.edu/software",
+   "repo": "https://sourceforge.net/projects/citrus1/files/Cindy.jar/download",
+   "note": "the lab ships MINDY2 and CINDy as one entry, so Cindy.jar is MINDY2's download - the lab's own page links exactly this url, behind an Outlook safelink. The software index names and describes MINDY, unlike BroadPeak's lab root"
   }
  ]
 }

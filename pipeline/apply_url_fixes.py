@@ -75,9 +75,15 @@ def main() -> None:
             url = (mark or {}).get("url")
             if not url:
                 skipped.append((name, "replace with no url")); continue
-            lines.append(f"  {key}:\n"
-                         f"    homepage: {url}\n"
-                         f"    note: {yaml_str(f'url reviewed {stamp}; the previous one served a different site')}")
+            # A decision may carry a repository as well as a homepage: MINDY's
+            # page is the lab's software index and its download is a jar on
+            # SourceForge, and neither substitutes for the other.
+            repo = (mark or {}).get("repo") or ""
+            block = f"  {key}:\n    homepage: {url}\n"
+            if repo:
+                block += f"    repo_url: {repo}\n"
+            block += f"    note: {yaml_str(f'url reviewed {stamp}; the previous one served a different site')}"
+            lines.append(block)
         elif verdict == "drop":
             lines.append(f"  {key}:\n"
                          f"    homepage: \"\"\n"
