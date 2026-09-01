@@ -1,6 +1,6 @@
 {
- "count": 59,
- "recovered": 55,
+ "count": 52,
+ "recovered": 48,
  "list": [
   {
    "name": "CENTIPEDE",
@@ -13,19 +13,19 @@
    "how": "wayback (archived 20260305)"
   },
   {
-   "name": "GWAVA",
-   "url": "http://web.archive.org/web/20260508110732/https://www.sanger.ac.uk/tool/gwava/",
-   "how": "wayback (archived 20260508)"
-  },
-  {
    "name": "FirstEF",
    "url": "http://web.archive.org/web/20220120051406/http://rulai.cshl.org/tools/FirstEF/",
    "how": "wayback (archived 20220120)"
   },
   {
+   "name": "PlantTFDB 2.0",
+   "url": "http://web.archive.org/web/20260815165203/http://planttfdb.cbi.pku.edu.cn/",
+   "how": "wayback (archived 20260815)"
+  },
+  {
    "name": "Eponine",
-   "url": "http://web.archive.org/web/20150905111146/http://www.sanger.ac.uk/resources/software/eponine/",
-   "how": "wayback (archived 20150905)"
+   "url": "https://www.sanger.ac.uk/tool/eponine/",
+   "how": "host rewrite"
   },
   {
    "name": "Transcription factor prediction database (DBD)",
@@ -58,16 +58,6 @@
    "how": "wayback (archived 20260822)"
   },
   {
-   "name": "SFmap",
-   "url": "http://web.archive.org/web/20260114155213/http://sfmap.technion.ac.il/",
-   "how": "wayback (archived 20260114)"
-  },
-  {
-   "name": "GADEM",
-   "url": "http://web.archive.org/web/20231224111713/https://www.niehs.nih.gov/research/resources/software/biostatistics/gadem/index.cfm",
-   "how": "wayback (archived 20231224)"
-  },
-  {
    "name": "qDRIP",
    "url": "http://web.archive.org/web/20240506182613/https://github.com/cimprichlab/crossley_et_al_2019",
    "how": "wayback (archived 20240506)"
@@ -76,11 +66,6 @@
    "name": "SteinerNet",
    "url": "https://github.com/krashkov/SteinerNet",
    "how": "github search (name match + 3 shared terms (problem, steine)"
-  },
-  {
-   "name": "CSDeconv",
-   "url": "http://web.archive.org/web/20201030042035/http://crab.rutgers.edu/~dslun/csdeconv/index.html",
-   "how": "wayback (archived 20201030)"
   },
   {
    "name": "BRAT",
@@ -148,11 +133,6 @@
    "how": "wayback (archived 20240511)"
   },
   {
-   "name": "PIRCh-seq",
-   "url": "http://web.archive.org/web/20221016214759/http://github.com/QuKunLab/PIRCh",
-   "how": "wayback (archived 20221016)"
-  },
-  {
    "name": "OncoCis",
    "url": "https://github.com/dilmi/OncoCis",
    "how": "github search (name match + 4 shared terms (cancer, cis, mu)"
@@ -188,16 +168,6 @@
    "how": "nothing found"
   },
   {
-   "name": "sciMET-cap",
-   "url": "http://web.archive.org/web/20221211145908/http://github.com/adeylab/sciMETv2",
-   "how": "wayback (archived 20221211)"
-  },
-  {
-   "name": "OccuPeak",
-   "url": "http://web.archive.org/web/20160602114511/http://hartfaalcentrum.nl/index.php?main=files&fileName=ManualOccuPeak_V2.pdf&description=Occupeak%20manual&sub=ManualOccuPeak_V2",
-   "how": "wayback (archived 20160602)"
-  },
-  {
    "name": "iDHS-DMCAC",
    "url": "http://web.archive.org/web/20201009033832/https://github.com/shengli0201/Datasets",
    "how": "wayback (archived 20201009)"
@@ -211,11 +181,6 @@
    "name": "sRNA workflow",
    "url": "https://github.com/forestbiotech-lab/sRNA-Portal-workflow",
    "how": "github search (4 shared terms (annotated, data, plant, srna)"
-  },
-  {
-   "name": "MPRAnator",
-   "url": "http://web.archive.org/web/20191023203228/https://www.sanger.ac.uk/science/tools/mpranator",
-   "how": "wayback (archived 20191023)"
   },
   {
    "name": "APPLES",
@@ -238,14 +203,9 @@
    "how": "wayback (archived 20260110)"
   },
   {
-   "name": "Animal QTLdb",
-   "url": "https://github.com/liuyufong/AnimalQTLDB",
-   "how": "github search (name match + 5 shared terms (animalqtldb, da)"
-  },
-  {
-   "name": "peakC",
-   "url": "http://web.archive.org/web/20250628124706/https://github.com/deWitLab/peakC",
-   "how": "wayback (archived 20250628)"
+   "name": "tREMAP",
+   "url": "http://web.archive.org/web/20240421162137/https://github.com/hansaimlim/REMAP/tree/master/TriFacREMAP",
+   "how": "wayback (archived 20240421)"
   },
   {
    "name": "EAT-Rice",
@@ -291,6 +251,11 @@
    "name": "createcontrolsubset",
    "url": "http://web.archive.org/web/20260807133846/https://www.htslib.org/",
    "how": "wayback (archived 20260807)"
+  },
+  {
+   "name": "NovoalignCS",
+   "url": "http://web.archive.org/web/20260803023404/https://www.novocraft.com/products/novoalign/",
+   "how": "wayback (archived 20260803)"
   },
   {
    "name": "QSeq",

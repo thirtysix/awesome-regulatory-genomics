@@ -1,5 +1,5 @@
 {
- "count": 55,
+ "count": 48,
  "list": [
   {
    "name": "CENTIPEDE",
@@ -16,17 +16,8 @@
    "final_url": "http://web.archive.org/web/20260305042123/https://lncrnadb.org/",
    "grade": "ok",
    "verdict": "mismatch",
-   "why": "model(high): The page is a generic AI news and reviews site, not the lncRNAdb database of long noncoding RNAs.",
+   "why": "model(high): The page is a generic AI and technology news blog, not the lncRNAdb database of long noncoding RNAs.",
    "title": "lncrnadb \u2014 Science, Technology, and AI Made Clear"
-  },
-  {
-   "name": "GWAVA",
-   "url": "http://web.archive.org/web/20260508110732/https://www.sanger.ac.uk/tool/gwava/",
-   "final_url": "http://web.archive.org/web/20260508110732/https://www.sanger.ac.uk/tool/gwava/",
-   "grade": "ok",
-   "verdict": "mismatch",
-   "why": "model(high): The page is the Wellcome Sanger Institute's generic careers and about page, not the GWAVA tool's own page.",
-   "title": "GWAVA"
   },
   {
    "name": "FirstEF",
@@ -38,13 +29,22 @@
    "title": "FirstEF: first-exon and promoter prediction program for human DNA"
   },
   {
+   "name": "PlantTFDB 2.0",
+   "url": "http://web.archive.org/web/20260815165203/http://planttfdb.cbi.pku.edu.cn/",
+   "final_url": "http://web.archive.org/web/20260815165203/http://planttfdb.cbi.pku.edu.cn/",
+   "grade": "ok",
+   "verdict": "mismatch",
+   "why": "model(high): The page is a lab homepage listing many tools, not the specific PlantTFDB 2.0 page itself.",
+   "title": "Gao Lab \u00e2\u0080\u0093 Bioinformatics and Computational Genomics"
+  },
+  {
    "name": "Eponine",
-   "url": "http://web.archive.org/web/20150905111146/http://www.sanger.ac.uk/resources/software/eponine/",
-   "final_url": "http://web.archive.org/web/20150905111146/http://www.sanger.ac.uk/resources/software/eponine/",
+   "url": "https://www.sanger.ac.uk/tool/eponine/",
+   "final_url": "https://www.sanger.ac.uk/tool/eponine/",
    "grade": "ok",
    "verdict": "confirmed",
-   "why": "name on the page and 9 shared terms (detects, genomic, mammalian, method, probabilistic)",
-   "title": "Eponine - Wellcome Trust Sanger Institute"
+   "why": "name on the page and 8 shared terms (genomic, mammalian, method, probabilistic, sequence)",
+   "title": "Eponine"
   },
   {
    "name": "Transcription factor prediction database (DBD)",
@@ -52,7 +52,7 @@
    "final_url": "http://web.archive.org/web/20200718213737/http://www.transcriptionfactor.org:80/index.cgi",
    "grade": "ok",
    "verdict": "confirmed",
-   "why": "model(high): The page is titled 'DBD: Transcription factor database Home' and its text describes exactly the tool: a databa",
+   "why": "model(high): The page title and text explicitly describe the DBD transcription factor prediction database, matching the too",
    "title": "DBD: Transcription factor database Home"
   },
   {
@@ -61,7 +61,7 @@
    "final_url": "http://web.archive.org/web/20260807133846/https://www.htslib.org/",
    "grade": "ok",
    "verdict": "mismatch",
-   "why": "model(high): The page is about Samtools, a different tool for interacting with high-throughput sequencing data, not the ChI",
+   "why": "model(high): The page is about Samtools, a completely different tool for high-throughput sequencing data, not the ChIP-seq ",
    "title": "Samtools"
   },
   {
@@ -88,7 +88,7 @@
    "final_url": "http://web.archive.org/web/20231118202824/http://github.com/MEMO-toolbox/MEMO",
    "grade": "ok",
    "verdict": "mismatch",
-   "why": "model(high): The page is about a different MEMO tool (Matlab toolbox for mixture model analysis) unrelated to methylation s",
+   "why": "model(high): The page describes a MATLAB toolbox for multi-experiment mixture model analysis, not the methylation site pred",
    "title": "GitHub - MEMO-toolbox/MEMO: MEMO - A Matlab Toolbox for Multi-Experiment mixture MOdel analysis of censored data"
   },
   {
@@ -101,30 +101,12 @@
    "title": "HINT - High-quality interactomes"
   },
   {
-   "name": "SFmap",
-   "url": "http://web.archive.org/web/20260114155213/http://sfmap.technion.ac.il/",
-   "final_url": "http://web.archive.org/web/20260114155213/http://sfmap.technion.ac.il/",
-   "grade": "ok",
-   "verdict": "mismatch",
-   "why": "model(high): The page is about BindUP-Alpha, a tool for predicting DNA- and RNA-binding proteins, not SFmap which predicts ",
-   "title": "BindUP-Alpha - Predicting DNA- and RNA-Binding Proteins based on Experimental and Computational Structural Models"
-  },
-  {
-   "name": "GADEM",
-   "url": "http://web.archive.org/web/20231224111713/https://www.niehs.nih.gov/research/resources/software/biostatistics/gadem/index.cfm",
-   "final_url": "http://web.archive.org/web/20231224111713/https://www.niehs.nih.gov/research/resources/software/biostatistics/gadem/index.cfm",
-   "grade": "ok",
-   "verdict": "confirmed",
-   "why": "name on the page and 4 shared terms (algorithm, dyads, genetic, spaced)",
-   "title": "GADEM - A Genetic Algorithm Guided Formation of Spaced Dyads Coupled with an EM Algorithm for Motif Discovery"
-  },
-  {
    "name": "qDRIP",
    "url": "http://web.archive.org/web/20240506182613/https://github.com/cimprichlab/crossley_et_al_2019",
    "final_url": "http://web.archive.org/web/20240506182613/https://github.com/cimprichlab/crossley_et_al_2019",
    "grade": "ok",
    "verdict": "mismatch",
-   "why": "model(high): The page is a GitHub repository for a specific publication (crossley_et_al_2019), not the tool's own page, rep",
+   "why": "model(high): The page is a GitHub repository containing analysis notebooks for a 2019 paper, not the qDRIP tool itself.",
    "title": "GitHub - cimprichlab/crossley_et_al_2019"
   },
   {
@@ -135,15 +117,6 @@
    "verdict": "confirmed",
    "why": "name on the page and 3 shared terms (problem, steiner, tree)",
    "title": "GitHub - krashkov/SteinerNet: R Package: Steiner tree approach for graph analysis \u00b7 GitHub"
-  },
-  {
-   "name": "CSDeconv",
-   "url": "http://web.archive.org/web/20201030042035/http://crab.rutgers.edu/~dslun/csdeconv/index.html",
-   "final_url": "http://web.archive.org/web/20201030042035/http://crab.rutgers.edu/~dslun/csdeconv/index.html",
-   "grade": "ok",
-   "verdict": "confirmed",
-   "why": "name on the page and 10 shared terms (binding, blind, chip, deconvolution, factor)",
-   "title": "CSDeconv"
   },
   {
    "name": "BRAT",
@@ -160,7 +133,7 @@
    "final_url": "https://github.com/soedinglab/xxmotif",
    "grade": "ok",
    "verdict": "confirmed",
-   "why": "name on the page and 3 shared terms (nucleotide, sequences, weight)",
+   "why": "name on the page and 6 shared terms (motifs, nucleotide, position, sequences, values)",
    "title": "GitHub - soedinglab/xxmotif: XXmotif: eXhaustive, weight matriX-based motif discovery in nucleotide sequences \u00b7 GitHub"
   },
   {
@@ -169,7 +142,7 @@
    "final_url": "http://web.archive.org/web/20260226063135/https://bioconductor.org/packages/release/bioc/html/ENmix.html",
    "grade": "ok",
    "verdict": "mismatch",
-   "why": "model(high): The page is about the ENmix package for DNA methylation analysis, not the ipDMR tool for identifying different",
+   "why": "model(high): The page is about the ENmix package, not ipDMR.",
    "title": "Bioconductor - ENmix"
   },
   {
@@ -205,7 +178,7 @@
    "final_url": "http://web.archive.org/web/20231118072209/http://github.com/DEIB-GECO/Metadata-Manager/",
    "grade": "ok",
    "verdict": "mismatch",
-   "why": "model(high): The page is a GitHub repository for 'Metadata-Manager', a public dataset downloader for GMQL framework, not th",
+   "why": "model(high): The page is for Metadata-Manager, a tool for GMQL, not META-BASE.",
    "title": "GitHub - DEIB-GECO/Metadata-Manager: Public dataset downloader for GMQL framework"
   },
   {
@@ -232,7 +205,7 @@
    "final_url": "http://web.archive.org/web/20260226063121/https://bioconductor.org/packages/release/bioc/html/BLMA.html",
    "grade": "ok",
    "verdict": "mismatch",
-   "why": "model(high): The page is for the BLMA package, not NBIA, and the description of BLMA does not match NBIA's stated functiona",
+   "why": "model(high): The page is for BLMA, a different tool for bi-level meta-analysis, not NBIA which integrates effect sizes and ",
    "title": "Bioconductor - BLMA"
   },
   {
@@ -249,18 +222,9 @@
    "url": "http://web.archive.org/web/20240511220503/https://github.com/pengweixing/FACT",
    "final_url": "http://web.archive.org/web/20240511220503/https://github.com/pengweixing/FACT",
    "grade": "ok",
-   "verdict": "confirmed",
-   "why": "model(high): The GitHub repository named 'FACT' by user 'pengweixing' is the likely code repository for the FACT-seq tool, ",
+   "verdict": "mismatch",
+   "why": "model(high): The GitHub repository is named 'FACT', not 'FACT-seq', and its description focuses on T7 adapter trimming and ",
    "title": "GitHub - pengweixing/FACT"
-  },
-  {
-   "name": "PIRCh-seq",
-   "url": "http://web.archive.org/web/20221016214759/http://github.com/QuKunLab/PIRCh",
-   "final_url": "http://web.archive.org/web/20221016214759/http://github.com/QuKunLab/PIRCh",
-   "grade": "ok",
-   "verdict": "confirmed",
-   "why": "model(high): The page is the GitHub repository for PIRCh, which matches the tool name PIRCh-seq and is hosted by the lab th",
-   "title": "GitHub - QuKunLab/PIRCh"
   },
   {
    "name": "OncoCis",
@@ -317,30 +281,12 @@
    "title": "Domena seqinspector.cremag.org jest utrzymywana na serwerach nazwa.pl"
   },
   {
-   "name": "sciMET-cap",
-   "url": "http://web.archive.org/web/20221211145908/http://github.com/adeylab/sciMETv2",
-   "final_url": "http://web.archive.org/web/20221211145908/http://github.com/adeylab/sciMETv2",
-   "grade": "ok",
-   "verdict": "mismatch",
-   "why": "model(high): The page is the GitHub repository for sciMETv2, not sciMET-cap, and the description of sciMETv2 does not match",
-   "title": "GitHub - adeylab/sciMETv2"
-  },
-  {
-   "name": "OccuPeak",
-   "url": "http://web.archive.org/web/20160602114511/http://hartfaalcentrum.nl/index.php?main=files&fileName=ManualOccuPeak_V2.pdf&description=Occupeak%20manual&sub=ManualOccuPeak_V2",
-   "final_url": "http://web.archive.org/web/20160602114511/http://hartfaalcentrum.nl/index.php?main=files&fileName=ManualOccuPeak_V2.pdf&description=Occupeak%20manual&sub=ManualOccuPeak_V2",
-   "grade": "ok",
-   "verdict": "confirmed",
-   "why": "model(high): The page is part of the Heart Failure Research Center and provides download links, a manual, and a reference t",
-   "title": "HFRC"
-  },
-  {
    "name": "iDHS-DMCAC",
    "url": "http://web.archive.org/web/20201009033832/https://github.com/shengli0201/Datasets",
    "final_url": "http://web.archive.org/web/20201009033832/https://github.com/shengli0201/Datasets",
    "grade": "ok",
    "verdict": "mismatch",
-   "why": "model(high): The page is a GitHub repository for 'Datasets' and 'DHSs-MFF', not for the tool iDHS-DMCAC.",
+   "why": "model(low): The page is a GitHub repository for 'Datasets' related to a different tool 'DHSs-MFF', not the tool 'iDHS-DMCA",
    "title": "GitHub - shengli0201/Datasets: DHSs-MFF"
   },
   {
@@ -349,7 +295,7 @@
    "final_url": "http://web.archive.org/web/20241009130929/https://github.com/galaxyproject/galaxy/tree/dev/tools",
    "grade": "ok",
    "verdict": "mismatch",
-   "why": "model(low): The page is a GitHub repository listing for galaxy tools, not a dedicated page for the hgv_pass tool.",
+   "why": "model(low): The page is a GitHub directory listing for Galaxy tools, not specifically about the hgv_pass tool.",
    "title": "galaxy/tools at dev \u00b7 galaxyproject/galaxy \u00b7 GitHub"
   },
   {
@@ -358,17 +304,8 @@
    "final_url": "https://github.com/forestbiotech-lab/sRNA-Portal-workflow",
    "grade": "ok",
    "verdict": "confirmed",
-   "why": "model(high): The page is the GitHub repository for the sRNA-Portal-workflow, which is the exact tool described as 'sRNA wor",
+   "why": "model(high): The page is the GitHub repository for the sRNA-Portal-workflow, which implements the sRNA workflow tool descri",
    "title": "GitHub - forestbiotech-lab/sRNA-Portal-workflow: The plant sRNA portal is an online resource integrating a workflow for identifying, predicting and annotating plant small RNAs (sRNA), and a database t"
-  },
-  {
-   "name": "MPRAnator",
-   "url": "http://web.archive.org/web/20191023203228/https://www.sanger.ac.uk/science/tools/mpranator",
-   "final_url": "http://web.archive.org/web/20191023203228/https://www.sanger.ac.uk/science/tools/mpranator",
-   "grade": "ok",
-   "verdict": "confirmed",
-   "why": "name on the page and 8 shared terms (assay, controls, effects, experiments, massively)",
-   "title": "MPRAnator | Wellcome Sanger Institute"
   },
   {
    "name": "APPLES",
@@ -376,7 +313,7 @@
    "final_url": "http://web.archive.org/web/20241205171156/https://cyverseuk.org/applications/warwick/analysis-of-plant-promoter-linked-elements/",
    "grade": "ok",
    "verdict": "confirmed",
-   "why": "name on the page and 4 shared terms (elements, genome, promoter, wide)",
+   "why": "name on the page and 2 shared terms (elements, promoter)",
    "title": "Analysis of Plant Promoter-Linked Elements (APPLES) &#8211; CyVerse UK"
   },
   {
@@ -385,7 +322,7 @@
    "final_url": "http://web.archive.org/web/20220307170954/http://autosome.ru/ChIPMunk/",
    "grade": "ok",
    "verdict": "confirmed",
-   "why": "model(high): The page is the official ChIPMunk homepage, providing downloads, documentation, and citation information for t",
+   "why": "model(high): The page is the official site for the ChIPMunk tool, providing downloads, documentation, and citation informat",
    "title": "ChIPMunk: fast and efficient motif discovery tool, reborn and running"
   },
   {
@@ -394,26 +331,17 @@
    "final_url": "http://web.archive.org/web/20260110081414/https://github.com/tushiqi/MAnorm2",
    "grade": "ok",
    "verdict": "mismatch",
-   "why": "model(high): The page is the GitHub repository for MAnorm2, a different tool, not HyperChIP.",
+   "why": "model(high): The page is the GitHub repository for MAnorm2, a different tool for normalizing and comparing ChIP-seq samples",
    "title": "GitHub - tushiqi/MAnorm2: MAnorm2 for Normalizing and Comparing ChIP-seq Samples"
   },
   {
-   "name": "Animal QTLdb",
-   "url": "https://github.com/liuyufong/AnimalQTLDB",
-   "final_url": "https://github.com/liuyufong/AnimalQTLDB",
+   "name": "tREMAP",
+   "url": "http://web.archive.org/web/20240421162137/https://github.com/hansaimlim/REMAP/tree/master/TriFacREMAP",
+   "final_url": "http://web.archive.org/web/20240421162137/https://github.com/hansaimlim/REMAP/tree/master/TriFacREMAP",
    "grade": "ok",
-   "verdict": "confirmed",
-   "why": "name on the page and 4 shared terms (animalqtldb, database, livestock, provides)",
-   "title": "GitHub - liuyufong/AnimalQTLDB \u00b7 GitHub"
-  },
-  {
-   "name": "peakC",
-   "url": "http://web.archive.org/web/20250628124706/https://github.com/deWitLab/peakC",
-   "final_url": "http://web.archive.org/web/20250628124706/https://github.com/deWitLab/peakC",
-   "grade": "ok",
-   "verdict": "mismatch",
-   "why": "model(high): The page describes 'peakC' as a tool for peak calling for 4C data, not for benchmarking 4C-seq pipelines using",
-   "title": "GitHub - deWitLab/peakC: Peak calling for 4C data"
+   "verdict": "unreadable",
+   "why": "only 53 characters of text; nothing to judge",
+   "title": "REMAP/TriFacREMAP at master \u00b7 hansaimlim/REMAP \u00b7 GitHub"
   },
   {
    "name": "EAT-Rice",
@@ -446,9 +374,9 @@
    "name": "BWASP",
    "url": "http://web.archive.org/web/20221016205934/https://brendelgroup.org/SingularityHub/bwasp.sif",
    "final_url": "http://web.archive.org/web/20221016205934/https://brendelgroup.org/SingularityHub/bwasp.sif",
-   "grade": "unreachable",
-   "verdict": "unchecked",
-   "why": "page not readable (unreachable)",
+   "grade": "ok",
+   "verdict": "mismatch",
+   "why": "model(high): The page content is raw binary data (a Singularity container file), not a human-readable web page about the BW",
    "title": ""
   },
   {
@@ -466,7 +394,7 @@
    "final_url": "http://web.archive.org/web/20260821193119/https://warwick.ac.uk/fac/sci/systemsbiology/research/software/",
    "grade": "ok",
    "verdict": "mismatch",
-   "why": "model(high): The page is a generic software downloads page for a systems biology centre, listing multiple tools (TRS, MDI-G",
+   "why": "model(low): The page lists multiple software tools but does not mention NIACS, and the description of TRS and other tools ",
    "title": "Software Downloads"
   },
   {
@@ -484,8 +412,17 @@
    "final_url": "http://web.archive.org/web/20260807133846/https://www.htslib.org/",
    "grade": "ok",
    "verdict": "mismatch",
-   "why": "model(high): The page is the homepage of the Samtools suite, not the tool 'createcontrolsubset'.",
+   "why": "model(high): The page is the homepage of the Samtools project, not the tool 'createcontrolsubset'.",
    "title": "Samtools"
+  },
+  {
+   "name": "NovoalignCS",
+   "url": "http://web.archive.org/web/20260803023404/https://www.novocraft.com/products/novoalign/",
+   "final_url": "http://web.archive.org/web/20260803023404/https://www.novocraft.com/products/novoalign/",
+   "grade": "ok",
+   "verdict": "mismatch",
+   "why": "model(high): The page describes novoAlign, a tool for Illumina and MGI platforms, not NovoalignCS for SOLiD color space rea",
+   "title": "novoAlign | Novocraft"
   },
   {
    "name": "QSeq",
