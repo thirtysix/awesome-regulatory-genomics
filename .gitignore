@@ -50,3 +50,8 @@ data/cache/fulltext/
 # republishing 5 MB of other people's site content. The verdicts derived from
 # it (data/raw/url_identity.json) are our own work and are committed.
 data/cache/url_identity.json
+
+# Gzipped copies of the pages verify_urls checked, so changing the text
+# extraction is a --reextract instead of 2,137 refetches. Not committed, for
+# the same reason as the full-text store: this is other people's site content.
+data/cache/pages/

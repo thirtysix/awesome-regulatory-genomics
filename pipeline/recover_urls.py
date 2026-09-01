@@ -69,6 +69,38 @@ def wayback(http: requests.Session, url: str, tries: int = 4) -> tuple[str, str]
     return "", "wayback rate-limited throughout"
 
 
+# Hosts that reorganised and kept the same last path segment. A rewrite is
+# tried before anything else, because it is one request and it returns the
+# tool's own current page rather than an archive of its old one.
+#
+# The Sanger Institute has used three shapes: /resources/software/<x>/, then
+# /science/tools/<x>, now /tool/<x>/. Eponine's catalog url still answers 200
+# and serves a generic "Tools" index, which is the worst kind of broken - it
+# looks alive to any status-code check.
+HOST_REWRITES = [
+    (re.compile(r"^https?://(?:www\.)?sanger\.ac\.uk/(?:resources/software|science/tools|tool)/([^/?#]+)",
+                re.I), "https://www.sanger.ac.uk/tool/{0}/"),
+]
+
+
+def from_rewrite(http: requests.Session, url: str) -> tuple[str, str]:
+    """A known host reorganisation, tried and checked before anything else."""
+    for pat, tmpl in HOST_REWRITES:
+        m = pat.match(url or "")
+        if not m:
+            continue
+        cand = tmpl.format(*m.groups())
+        if cand.rstrip("/") == (url or "").rstrip("/"):
+            continue
+        try:
+            r = http.get(cand, timeout=25, allow_redirects=True)
+        except requests.RequestException:
+            continue
+        if r.status_code == 200:
+            return cand, "host rewrite"
+    return "", ""
+
+
 def from_registries(http: requests.Session, name: str) -> tuple[str, str]:
     for fn, label in ((from_pypi, "pypi"), (from_bioconda, "bioconda"),
                       (from_bioconductor, "bioconductor"), (from_cran, "cran")):
@@ -107,9 +139,11 @@ def main() -> None:
     out = {}
     for t in rows:
         name, found, how = t["name"], "", ""
-        url, why = from_registries(http, name)
+        url, why = from_rewrite(http, t.get("url", ""))
+        if not url:
+            url, why = from_registries(http, name)
         if url:
-            found, how = url, f"registry:{why}"
+            found, how = url, (why if why == "host rewrite" else f"registry:{why}")
         if not found and budget > 0:
             budget -= 1
             try:

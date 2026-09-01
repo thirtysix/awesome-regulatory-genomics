@@ -35,6 +35,7 @@ re-runs every verdict from the cache without touching the network.
 from __future__ import annotations
 
 import argparse
+import gzip
 import hashlib
 import json
 import os
@@ -59,6 +60,11 @@ from llm_assist import call as llm_call, parse_json
 
 ROOT = Path(__file__).resolve().parent.parent
 CACHE = ROOT / "data" / "cache" / "url_identity.json"
+# The pages themselves, gzipped. The extracted text was cached once and the
+# extraction rule then changed - site chrome had to come off - which cost a
+# full refetch. Same lesson as the full-text store and the llm prompt hashes:
+# keep the input, because the rule that reads it is the thing that changes.
+PAGES = ROOT / "data" / "cache" / "pages"
 OUT = ROOT / "data" / "raw" / "url_identity.json"
 
 # A browser string, because several university hosts refuse anything else and a
@@ -66,7 +72,12 @@ OUT = ROOT / "data" / "raw" / "url_identity.json"
 BROWSER = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
            "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
 
-TAG = re.compile(r"<(script|style)[^>]*>.*?</\1>", re.S | re.I)
+TAG = re.compile(r"<(script|style|noscript|svg)[^>]*>.*?</\1>", re.S | re.I)
+# Site furniture. Sanger's tool pages put a careers menu ahead of the content,
+# so the first 4,000 characters of GWAVA's page are "Working at the Sanger
+# Institute is truly unique" and a model reading that calls it an about page.
+CHROME = re.compile(r"<(nav|header|footer|aside|form)\b[^>]*>.*?</\1>", re.S | re.I)
+MAIN = re.compile(r"<(main|article)\b[^>]*>(.*?)</\1>", re.S | re.I)
 STRIP = re.compile(r"<[^>]+>")
 WORD = re.compile(r"[a-z0-9]{4,}")
 
@@ -82,7 +93,17 @@ STOP = {
 
 
 def visible_text(html: str, limit: int = 4000) -> str:
+    """The page's own words, with the site's furniture taken off first.
+
+    Truncating raw markup to a fixed budget spends it on whatever the CMS puts
+    first, which is a navigation menu. Prefer <main> or <article> when the page
+    marks one, and drop nav/header/footer/aside either way.
+    """
     body = TAG.sub(" ", html)
+    body = CHROME.sub(" ", body)
+    m = MAIN.search(body)
+    if m and len(STRIP.sub(" ", m.group(2)).strip()) > 200:
+        body = m.group(2)
     body = STRIP.sub(" ", body)
     body = re.sub(r"&[a-z]+;|&#\d+;", " ", body)
     return re.sub(r"\s+", " ", body).strip()[:limit]
@@ -224,6 +245,30 @@ def host_lock(url: str) -> threading.Lock:
         return _host_locks.setdefault(host, threading.Lock())
 
 
+def page_path(url: str) -> Path:
+    return PAGES / (hashlib.sha1(url.encode()).hexdigest() + ".html.gz")
+
+
+def store_page(url: str, html: str) -> None:
+    try:
+        PAGES.mkdir(parents=True, exist_ok=True)
+        with gzip.open(page_path(url), "wt", encoding="utf-8") as fh:
+            fh.write(html)
+    except OSError:
+        pass
+
+
+def load_page(url: str) -> str:
+    p = page_path(url)
+    if not p.exists():
+        return ""
+    try:
+        with gzip.open(p, "rt", encoding="utf-8", errors="replace") as fh:
+            return fh.read()
+    except OSError:
+        return ""
+
+
 def fetch(url: str, hops: int = 2) -> tuple[str, str, str]:
     """Fetch, following meta-refresh as well as HTTP redirects.
 
@@ -287,6 +332,9 @@ def main() -> None:
     ap.add_argument("--only", help="one tool, by name")
     ap.add_argument("--rejudge", action="store_true",
                     help="re-run verdicts from the cache, no network at all")
+    ap.add_argument("--reextract", action="store_true",
+                    help="re-derive the text from the stored pages, then judge. "
+                         "Use after changing visible_text; costs no requests.")
     ap.add_argument("--workers", type=int, default=8,
                     help="parallel fetches; this laptop's ceiling is 12")
     ap.add_argument("--max-age", type=int, default=30,
@@ -334,17 +382,25 @@ def main() -> None:
         # slowest quarter of the run and the part least likely to have changed.
         cutoff = fresh_after if (hit or {}).get("grade") == "ok" else retry_after
         usable = hit and not args.refresh and hit.get("checked", "") >= cutoff
-        if args.rejudge:
+        if args.rejudge or args.reextract:
             if not hit:
                 return None
             usable = True
         if usable:
             grade, final = hit.get("grade", "ok"), hit.get("final_url", url)
             title, text = hit.get("title", ""), hit.get("text", "")
+            if args.reextract:
+                html = load_page(url)
+                if html:
+                    title, text = page_title(html), visible_text(html)
+                    with clock:
+                        pages[url] = redact_emails({**hit, "title": title, "text": text})
         elif args.rejudge:
             return None
         else:
             grade, html, final = fetch(url)
+            if html:
+                store_page(url, html)
             title = page_title(html) if html else ""
             text = visible_text(html) if html else ""
             with clock:
@@ -360,7 +416,8 @@ def main() -> None:
 
     out_path = Path(args.output) if args.output else OUT
     out, counts, done = [], {}, 0
-    with ThreadPoolExecutor(max_workers=1 if args.rejudge else workers) as pool:
+    serial = args.rejudge or args.reextract
+    with ThreadPoolExecutor(max_workers=1 if serial else workers) as pool:
         for row in pool.map(probe, rows):
             done += 1
             if row is None:
