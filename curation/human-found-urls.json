@@ -30,6 +30,16 @@
    "url": "https://califano.c2b2.columbia.edu/software",
    "repo": "https://sourceforge.net/projects/citrus1/files/Cindy.jar/download",
    "note": "the lab ships MINDY2 and CINDy as one entry, so Cindy.jar is MINDY2's download - the lab's own page links exactly this url, behind an Outlook safelink. The software index names and describes MINDY, unlike BroadPeak's lab root"
+  },
+  {
+   "name": "PAnDA (Protein And DNA Associations)",
+   "url": "https://service.tartaglialab.com/static_files/shared/tutorial_panda.html",
+   "note": "the catalog's s.tartaglialab.com became service.tartaglialab.com. from_kept_path finds the submission form at tools.tartaglialab.com/new_submission/panda, which is the tool but a 1kB javascript shell that verifies only as undecided; this tutorial page describes PAnDA and names Tartaglia, so it verifies and tells a reader more"
+  },
+  {
+   "name": "EpiAnnotator",
+   "url": "",
+   "note": "NOT FOUND, and searched exhaustively: the paper calls it an R package with a web interface, but it is on neither CRAN, Bioconductor nor PyPI, absent from all 55 CompEpigen repos and from the Bock lab's, both authors have zero public repos, and computational-epigenomics.com now redirects to a DKFZ division page that never names it. Recorded so the search is not repeated"
   }
  ]
 }
