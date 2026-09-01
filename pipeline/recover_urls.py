@@ -367,11 +367,20 @@ def from_registries(http: requests.Session, name: str) -> tuple[str, str]:
         slug = got[0] if isinstance(got, (tuple, list)) else got
         if not isinstance(slug, str) or "/" not in slug:
             continue
+        # Prefer the registry's own page only if it can actually be READ. A
+        # canonical address outlives a repository being renamed, which is worth
+        # something, and nothing at all if the next stage cannot verify it:
+        # pypi.org answers 200 and serves a bot challenge, so every pypi
+        # candidate came back "unreadable, 226 characters". The repository is
+        # the weaker address and the checkable one.
         page = REGISTRY_PAGE.get(label)
         if page:
             cand = page.format(name)
             try:
-                if http.get(cand, timeout=25, allow_redirects=True).status_code == 200:
+                r = http.get(cand, timeout=25, allow_redirects=True)
+                body = re.sub(r"<[^>]+>", " ", re.sub(r"<(script|style)[^>]*>.*?</\1>", " ",
+                                                      r.text, flags=re.S | re.I))
+                if r.status_code == 200 and len(re.sub(r"\s+", " ", body).strip()) > 600:
                     return cand, f"{label} package page"
             except requests.RequestException:
                 pass
