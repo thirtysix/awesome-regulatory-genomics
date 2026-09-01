@@ -28,10 +28,12 @@ from __future__ import annotations
 import argparse
 import re
 import sys
+import unicodedata
 import time
 from pathlib import Path
 
 import requests
+from urllib.parse import urlparse
 
 from config import user_agent
 from jsonio import read_json, write_json
@@ -101,6 +103,162 @@ def from_rewrite(http: requests.Session, url: str) -> tuple[str, str]:
     return "", ""
 
 
+# Path segments that are site furniture rather than a person or a group.
+NOT_A_LAB = {
+    "www", "web", "software", "tools", "tool", "research", "index", "home",
+    "public", "html", "htm", "projects", "project", "downloads", "download",
+    "resources", "science", "labs", "lab", "people", "group", "groups", "en",
+    "bio", "bioinfo", "bioinformatics", "cgi", "bin", "pub", "data", "site",
+}
+
+
+def lab_tokens(url: str) -> list[str]:
+    """Person or group names hiding in a url, most specific first.
+
+    Academic urls name the lab in the path far more often than the tool does:
+    labs.csb.utoronto.ca/moses/monkey.html says "moses", and MONKEY turned out
+    to live at github.com/moses-lab/MONKEY. A tilde is the older convention -
+    stats.gla.ac.uk/~mgupta - and the subdomain sometimes carries it too.
+    """
+    parsed = urlparse(url or "")
+    out = []
+    for seg in parsed.path.split("/"):
+        seg = re.sub(r"\.(html?|php|jsp|aspx|cgi|rhtml)$", "", seg.strip("~ ").strip())
+        if seg and seg.lower() not in NOT_A_LAB and re.fullmatch(r"[A-Za-z][A-Za-z0-9_-]{2,24}", seg):
+            out.append(seg)
+    host = parsed.netloc.split(":")[0].split(".")
+    if host and host[0].lower() not in NOT_A_LAB and re.fullmatch(r"[a-z][a-z0-9-]{2,24}", host[0].lower()):
+        out.append(host[0])
+    seen, uniq = set(), []
+    for t in out:
+        if t.lower() not in seen:
+            seen.add(t.lower()); uniq.append(t)
+    return uniq
+
+
+# Two tokens and three owner spellings, not four and four. The combinatorics
+# are the whole risk here: sixteen probes per tool is 830 requests across a
+# review set this size, spent almost entirely on 404s. Six is enough to catch
+# the shape that works - <lab>-lab/<Tool> - and the budget below caps the rest.
+# Three owner tokens, three spellings: nine probes per tool at the very most,
+# and the run-wide budget caps the total. Ordering matters more than breadth -
+# the shape that works is <firstauthor>-lab/<Tool>, and MONKEY resolves on the
+# first probe of the first token. Each is one core-API call (5,000/hour), never
+# the search API (30/minute).
+OWNER_FORMS = ("{0}-lab", "{0}lab", "{0}")
+MAX_TOKENS = 4
+# 52 candidates at nine probes each needs 468, and a budget of 300 silently
+# stopped before reaching TADMaster, whose Oluwadarelab/TADMaster answers 200.
+# A cap that truncates the run is worse than no cap: it looks like the rule
+# failing rather than the budget ending.
+LAB_BUDGET = 500
+
+
+# Surnames too common to be a useful GitHub owner guess.
+COMMON_SURNAME = {"li", "wang", "zhang", "liu", "chen", "yang", "huang", "zhao",
+                  "wu", "zhou", "xu", "sun", "ma", "zhu", "hu", "guo", "he",
+                  "lin", "luo", "kim", "lee", "park", "smith", "jones", "brown"}
+
+
+# German and Nordic names have two romanisations and GitHub accounts use both.
+# Soding vs Soeding decides whether soedinglab/xxmotif is ever found: the NFKD
+# fold gives the first, the convention the account was named under gives the
+# second.
+UMLAUT = {"\u00e4": "ae", "\u00f6": "oe", "\u00fc": "ue", "\u00df": "ss",
+          "\u00c4": "Ae", "\u00d6": "Oe", "\u00dc": "Ue",
+          "\u00e5": "aa", "\u00f8": "oe", "\u00e6": "ae"}
+
+
+def transliterations(name: str) -> list[str]:
+    """Both romanisations of a surname, most likely first."""
+    plain = re.sub(r"[^A-Za-z-]", "", unicodedata.normalize("NFKD", name))
+    expanded = re.sub(r"[^A-Za-z-]", "",
+                      unicodedata.normalize("NFKD", "".join(UMLAUT.get(c, c) for c in name)))
+    return [plain] if expanded == plain else [plain, expanded]
+
+
+def author_tokens(tool: dict) -> list[str]:
+    """First and last authors' surnames, from the OpenAlex cache. Offline.
+
+    Better than mining the url, because a url encodes the lab only when the
+    lab happened to name a directory after itself, whereas nearly every entry
+    has a paper. 99% of the ~4,800 cached works carry authorships, and the
+    lab's GitHub account is named for the first or the last author far more
+    often than for anything in the old homepage's path.
+    """
+    from enrich import ident_key, read_openalex_work
+    out = []
+    # ident_key wants the prefixed form. Passing a bare pmid yields the key
+    # "15575972_", which matches no file and fails silently as "no authors".
+    idents = [f"doi:{tool['doi']}" if tool.get("doi") else "",
+              f"pmid:{tool['pmid']}" if tool.get("pmid") else ""]
+    for ident in [i for i in idents if i]:
+        work = read_openalex_work(ident_key(ident))
+        auths = (work or {}).get("authorships") or []
+        for a in ([auths[0], auths[-1]] if auths else []):
+            name = ((a.get("author") or {}).get("display_name") or "").strip()
+            if not name:
+                continue
+            # Fold accents rather than deleting them: stripping non-ASCII
+            # turns Piqué-Regi into "Piqu-Regi" and Söding into "Sding",
+            # neither of which is anyone's GitHub account.
+            raw = name.split()[-1]
+            for variant in transliterations(raw):
+                if len(variant) > 2 and variant.lower() not in COMMON_SURNAME:
+                    out.append(variant)
+        if out:
+            break
+    seen, uniq = set(), []
+    for t in out:
+        if t.lower() not in seen:
+            seen.add(t.lower()); uniq.append(t)
+    return uniq
+
+
+def from_lab_guess(http: requests.Session, tool: dict, token: str | None,
+                   budget: list[int]) -> tuple[str, str]:
+    """Guess the lab's GitHub account from the url, then look for the tool there.
+
+    One GET per candidate owner/repo pair against the core API, which allows
+    5,000/hour - not the search API, which allows 30/minute and would be the
+    wrong endpoint to spend on a guess. The answer still goes through the same
+    validation layer 1 uses, so a coincidental name match is rejected.
+    """
+    name = tool.get("name") or ""
+    if len(re.sub(r"[^A-Za-z0-9]", "", name)) < 3:
+        return "", ""
+    headers = {"Accept": "application/vnd.github+json"}
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    # Authors first: nearly every entry has a paper, while a url names the lab
+    # only when somebody happened to name a directory after it.
+    cands = author_tokens(tool) + lab_tokens(tool.get("url", ""))
+    for lab in cands[:MAX_TOKENS]:
+        for form in OWNER_FORMS:
+            if budget[0] <= 0:
+                return "", ""
+            owner = form.format(lab)
+            slug = f"{owner}/{name}"
+            budget[0] -= 1
+            try:
+                r = http.get(f"https://api.github.com/repos/{slug}", headers=headers, timeout=25)
+            except requests.RequestException:
+                continue
+            if r.status_code == 403 and "rate" in r.text.lower():
+                budget[0] = 0
+                return "", "github rate limit reached; stopping lab guesses"
+            if r.status_code != 200:
+                continue
+            d = r.json()
+            meta = {"description": d.get("description"), "topics": d.get("topics") or [],
+                    "stars": d.get("stargazers_count"), "archived": d.get("archived"),
+                    "full_name": d.get("full_name"), "readme": ""}
+            ok, why = validate(tool, d.get("full_name") or slug, meta, source="lab guess")
+            if ok:
+                return d.get("html_url") or f"https://github.com/{slug}", f"lab guess ({why[:40]})"
+    return "", ""
+
+
 def from_registries(http: requests.Session, name: str) -> tuple[str, str]:
     for fn, label in ((from_pypi, "pypi"), (from_bioconda, "bioconda"),
                       (from_bioconductor, "bioconductor"), (from_cran, "cran")):
@@ -122,6 +280,9 @@ def main() -> None:
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--search-budget", type=int, default=40,
                     help="GitHub search calls; the API allows 30/min")
+    ap.add_argument("--lab-budget", type=int, default=LAB_BUDGET,
+                    help="cap on lab-guess probes for the whole run; each is one "
+                         "core-API call and most are 404s")
     ap.add_argument("--no-wayback", action="store_true")
     args = ap.parse_args()
 
@@ -135,15 +296,18 @@ def main() -> None:
     http.headers.update({"User-Agent": user_agent()})
     from enrich import github_token
     token, meta_cache, budget = github_token(), {}, args.search_budget
+    lab_budget = [args.lab_budget]
 
     out = {}
     for t in rows:
         name, found, how = t["name"], "", ""
         url, why = from_rewrite(http, t.get("url", ""))
         if not url:
+            url, why = from_lab_guess(http, t, token, lab_budget)
+        if not url:
             url, why = from_registries(http, name)
         if url:
-            found, how = url, (why if why == "host rewrite" else f"registry:{why}")
+            found, how = url, (why if why.startswith(("host rewrite", "lab guess")) else f"registry:{why}")
         if not found and budget > 0:
             budget -= 1
             try:
