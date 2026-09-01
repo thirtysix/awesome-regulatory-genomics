@@ -4,8 +4,8 @@
  "list": [
   {
    "name": "CENTIPEDE",
-   "url": "http://web.archive.org/web/20251010213620/https://centipede.uchicago.edu/",
-   "how": "wayback (archived 20251010)"
+   "url": "",
+   "how": "nothing found"
   },
   {
    "name": "lncRNAdb",
@@ -29,8 +29,8 @@
   },
   {
    "name": "Transcription factor prediction database (DBD)",
-   "url": "http://web.archive.org/web/20200718213737/http://www.transcriptionfactor.org:80/index.cgi",
-   "how": "wayback (archived 20200718)"
+   "url": "",
+   "how": "nothing found"
   },
   {
    "name": "peakcalling_findpeaks",
@@ -44,18 +44,18 @@
   },
   {
    "name": "MONKEY",
-   "url": "http://web.archive.org/web/20181106130536/http://labs.csb.utoronto.ca:80/moses/monkey.html",
-   "how": "wayback (archived 20181106)"
+   "url": "http://rana.lbl.gov/monkey",
+   "how": "article, stated url"
   },
   {
    "name": "MEMO",
-   "url": "http://web.archive.org/web/20231118202824/http://github.com/MEMO-toolbox/MEMO",
-   "how": "wayback (archived 20231118)"
+   "url": "http://www.bioinfo.tsinghua.edu.cn/~tigerchen/memo.html",
+   "how": "article, stated url"
   },
   {
    "name": "HINT",
-   "url": "http://web.archive.org/web/20260822205129/https://hint.yulab.org/",
-   "how": "wayback (archived 20260822)"
+   "url": "https://github.com/parklab/HiNT",
+   "how": "bioconda -> repository"
   },
   {
    "name": "qDRIP",
@@ -64,18 +64,18 @@
   },
   {
    "name": "SteinerNet",
-   "url": "https://github.com/krashkov/SteinerNet",
-   "how": "github search (name match + 3 shared terms (problem, steine)"
+   "url": "https://github.com/afshinsadeghi/steinernetpy",
+   "how": "pypi -> repository"
   },
   {
    "name": "BRAT",
-   "url": "http://web.archive.org/web/20260825063825/http://brat.nlplab.org/",
-   "how": "wayback (archived 20260825)"
+   "url": "https://github.com/iamsk/brat",
+   "how": "pypi -> repository"
   },
   {
    "name": "XXmotif",
-   "url": "https://github.com/soedinglab/xxmotif",
-   "how": "github search (name match + 3 shared terms (nucleotide, seq)"
+   "url": "http://xxmotif.genzentrum.lmu.de",
+   "how": "article, stated url"
   },
   {
    "name": "ipDMR",
@@ -124,8 +124,8 @@
   },
   {
    "name": "GobyWeb",
-   "url": "http://web.archive.org/web/20200728132033/http://campagnelab.org:80/software/gobyweb/",
-   "how": "wayback (archived 20200728)"
+   "url": "http://github.com/CampagneLaboratory/gobyweb2-plugins",
+   "how": "article, code host"
   },
   {
    "name": "FACT-seq",
@@ -184,18 +184,18 @@
   },
   {
    "name": "APPLES",
-   "url": "http://web.archive.org/web/20241205171156/https://cyverseuk.org/applications/warwick/analysis-of-plant-promoter-linked-elements/",
-   "how": "wayback (archived 20241205)"
+   "url": "http://waspatlas.com/cns_temp",
+   "how": "article, stated url"
   },
   {
    "name": "Tulip",
-   "url": "",
-   "how": "nothing found"
+   "url": "https://github.com/gymreklab/chips",
+   "how": "article, code host"
   },
   {
    "name": "ChIPMunk",
-   "url": "http://web.archive.org/web/20220307170954/http://autosome.ru/ChIPMunk/",
-   "how": "wayback (archived 20220307)"
+   "url": "https://github.com/Rigdon/chipmunk",
+   "how": "pypi -> repository"
   },
   {
    "name": "HyperChIP",
@@ -215,7 +215,7 @@
   {
    "name": "TADMaster",
    "url": "https://github.com/OluwadareLab/TADMaster",
-   "how": "github search (name match + 5 shared terms (analysis, assoc)"
+   "how": "article, code host"
   },
   {
    "name": "activeTF",
@@ -229,8 +229,8 @@
   },
   {
    "name": "Cloud ATAC",
-   "url": "",
-   "how": "nothing found"
+   "url": "http://web.archive.org/web/20250404225539/https://github.com/NIGMS/ATAC-Seq-and-Single-Cell-ATAC-Seq-Analysis",
+   "how": "wayback (archived 20250404)"
   },
   {
    "name": "TreeGibbsSampler",
