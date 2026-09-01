@@ -123,6 +123,29 @@ def article_fulltext(http: requests.Session, tool: dict) -> str:
     return r.text
 
 
+def from_relocation(http: requests.Session, tool: dict) -> tuple[str, str]:
+    """The successor address the broken page itself names, if it names one.
+
+    Costs nothing: verify_urls already fetched and stored this page. A lab that
+    migrates often leaves a notice rather than a redirect, and no status code
+    or 3xx reveals it - PlantTFDB's PKU address answers 200 and serves a Gao
+    Lab page listing a new address for each of a dozen tools.
+    """
+    from verify_urls import load_page, relocation_url, visible_text
+    url = tool.get("url") or ""
+    if not url:
+        return "", ""
+    html = load_page(url)
+    if not html:
+        try:
+            r = http.get(url, timeout=25, allow_redirects=True)
+            html = r.text if r.status_code < 400 else ""
+        except requests.RequestException:
+            return "", ""
+    moved = relocation_url(tool.get("name", ""), visible_text(html, 12000), url)
+    return (moved, "the old page names its successor") if moved else ("", "")
+
+
 def from_article(http: requests.Session, tool: dict) -> tuple[str, str]:
     """Where the paper says the software lives. Tried before anything else.
 
@@ -418,7 +441,9 @@ def main() -> None:
         name, found, how = t["name"], "", ""
         # Ordered by trust: what the paper says, then what a registry
         # distributes, then a known host move, then guesses.
-        url, why = from_article(http, t)
+        url, why = from_relocation(http, t)
+        if not url:
+            url, why = from_article(http, t)
         if not url:
             url, why = from_rewrite(http, t.get("url", ""))
         if not url:

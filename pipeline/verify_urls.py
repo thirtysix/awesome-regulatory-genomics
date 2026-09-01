@@ -141,6 +141,46 @@ META_REFRESH = re.compile(
     re.I)
 
 
+# A page that says, in prose, that the thing has moved. Distinct from a meta
+# refresh, which redirects; this one just tells a human and expects them to
+# click. PlantTFDB's old PKU address serves a Gao Lab notice listing a new
+# address per tool, and no status code or redirect reveals it.
+MOVED_RE = re.compile(
+    r"(has|have)\s+(been\s+)?(migrated|moved|relocated)"
+    r"|new\s+(url|address|website|site|location)"
+    r"|(this|the)\s+(site|page|server|website)\s+(has\s+)?moved"
+    r"|we\s+(have\s+)?moved|relocated\s+to", re.I)
+URL_IN_TEXT = re.compile(r"https?://[^\s\"'<>)\]]+")
+# Places a project talks ABOUT itself rather than lives. diffReps' page says it
+# migrated to GitHub and links its mailing list; the name match then picks
+# "diffreps-discuss" as the new home.
+NOT_A_HOME = re.compile(
+    r"(groups\.google\.|lists?\.|listserv|mailman|twitter\.com|x\.com/|"
+    r"facebook\.|linkedin\.|youtube\.|doi\.org|dx\.doi|scholar\.google)", re.I)
+
+
+def relocation_url(tool_name: str, text: str, current: str) -> str:
+    """A successor address the page names for THIS tool, or "".
+
+    The name match is what makes it safe: the Gao Lab notice lists a dozen
+    tools' new addresses on one page, so taking the first link would move
+    PlantTFDB to AnnoLnc.
+    """
+    if not text or not MOVED_RE.search(text):
+        return ""
+    here = re.sub(r"^https?://(www\.)?", "", current or "").split("/")[0].lower()
+    token = re.sub(r"[^a-z0-9]", "", (tool_name or "").split()[0].lower()) if tool_name else ""
+    if len(token) < 4:
+        return ""
+    for url in dict.fromkeys(URL_IN_TEXT.findall(text)):
+        host = re.sub(r"^https?://(www\.)?", "", url).split("/")[0].lower()
+        if host == here or NOT_A_HOME.search(url):
+            continue
+        if token in re.sub(r"[^a-z0-9]", "", url.lower()):
+            return url.rstrip(".,;")
+    return ""
+
+
 def authors_on_page(tool: dict, title: str, text: str) -> tuple[list[str], list[str]]:
     """(known author surnames, those appearing on the page).
 
@@ -359,7 +399,12 @@ def verdict_for(t: dict, title: str, text: str, grade: str,
         elif b is True:
             v = "confirmed"
         elif b is False:
-            v = "mismatch"
+            # A low-confidence "no" is not evidence that the url is wrong. It
+            # is almost always a page too terse to judge - PRODORIC's own
+            # frontend repository was rejected as "too terse" - and calling
+            # that a mismatch retires working links. 18 of 65 mismatches were
+            # this before the prompt stopped asking for it.
+            v = "mismatch" if got.get("confidence") != "low" else "unreadable"
         why = f"model({got.get('confidence', '?')}): {got.get('reason', '')[:110]}"
     return v, why
 
@@ -452,8 +497,14 @@ def main() -> None:
                     {"grade": grade, "title": title, "text": text,
                      "final_url": final, "checked": date.today().isoformat()})
         v, why = verdict_for(t, title, text, grade, key, args.model, llm, clock, use_llm)
-        return {"name": t["name"], "url": url, "final_url": final,
-                "grade": grade, "verdict": v, "why": why, "title": title}
+        row = {"name": t["name"], "url": url, "final_url": final,
+               "grade": grade, "verdict": v, "why": why, "title": title}
+        moved = relocation_url(t["name"], text, url)
+        if moved:
+            # Reported even when the verdict is `confirmed`: a page can be the
+            # tool's own and still say the tool now lives somewhere else.
+            row["superseded_by"] = moved
+        return row
 
     out_path = Path(args.output) if args.output else OUT
     out, counts, done = [], {}, 0
