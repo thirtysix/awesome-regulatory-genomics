@@ -1510,8 +1510,8 @@
    "url": "http://www.sanger.ac.uk/resources/software/eponine/",
    "final_url": "https://www.sanger.ac.uk/science/tools/",
    "grade": "ok",
-   "verdict": "mismatch",
-   "why": "model(high): The page is a generic archived tools index from a large institute with no mention of Eponine, its description,",
+   "verdict": "confirmed",
+   "why": "name on the page and 8 shared terms (genomic, mammalian, method, probabilistic, sequence)",
    "title": "Tools"
   },
   {
@@ -3149,7 +3149,7 @@
    "final_url": "http://www.licpathway.net/sedb",
    "grade": "ok",
    "verdict": "confirmed",
-   "why": "name on the page and 13 shared terms (binding, chromatin, comprehensive, database, enhancers)",
+   "why": "name on the page and 8 shared terms (chromatin, comprehensive, database, enhancers, human)",
    "title": "SEdb 3.0"
   },
   {
@@ -7891,8 +7891,8 @@
    "url": "https://github.com/sebkim/RTNet",
    "final_url": "https://github.com/sebkim/RTNet",
    "grade": "ok",
-   "verdict": "mismatch",
-   "why": "model(high): The page is a GitHub repository for 'RTNet' by sebkim, not the tool 'RT networks' by RiveraMulia and Gilbert, ",
+   "verdict": "confirmed",
+   "why": "model(high): The repository is named RTNet and contains scripts like do_create_community_rtnet_forVis.py that exactly match",
    "title": "GitHub - sebkim/RTNet \u00b7 GitHub"
   },
   {
@@ -9836,7 +9836,7 @@
    "final_url": "https://bioconductor.org/about/removed-packages/",
    "grade": "ok",
    "verdict": "mismatch",
-   "why": "model(high): The page is a list of removed Bioconductor packages and does not contain any content about TimiRGeN, nor do th",
+   "why": "model(high): The page is a Bioconductor removal list that mentions TimiRGeN only as a removed package, not as the tool's ow",
    "title": "Bioconductor - Removed Packages"
   },
   {
@@ -11816,7 +11816,7 @@
    "final_url": "https://github.com/forestbiotech-lab/miRPursuit",
    "grade": "ok",
    "verdict": "confirmed",
-   "why": "model(high): The page is the GitHub repository for miRPursuit, which is described as a pipeline for automated analyses of s",
+   "why": "name on the page and 5 shared terms (conserved, novel, plant, sequences, srna)",
    "title": "GitHub - forestbiotech-lab/miRPursuit: Analysis workflow for smallRNA sequenced data \u00b7 GitHub"
   },
   {
@@ -12850,8 +12850,8 @@
    "url": "https://github.com/tushiqi/MAnorm2",
    "final_url": "https://github.com/tushiqi/MAnorm2",
    "grade": "ok",
-   "verdict": "mismatch",
-   "why": "model(high): The page is the GitHub repository for MAnorm2, a different tool, and neither the tool name HyperChIP nor its a",
+   "verdict": "confirmed",
+   "why": "name on the page and 9 shared terms (across, atac, chip, genomic, hypervariable)",
    "title": "GitHub - tushiqi/MAnorm2: MAnorm2 for Normalizing and Comparing ChIP-seq Samples \u00b7 GitHub"
   },
   {
@@ -13778,7 +13778,7 @@
    "final_url": "https://fantom.gsc.riken.jp/software/",
    "grade": "ok",
    "verdict": "confirmed",
-   "why": "name on the page and 10 shared terms (across, cage, changes, genes, multi); Dimont/Hide on the page",
+   "why": "name on the page and 10 shared terms (across, cage, changes, genes, multi); Dimont on the page",
    "title": "FANTOM - Software"
   },
   {
@@ -13876,8 +13876,8 @@
    "url": "http://predictor.nchu.edu.tw/EAT-Rice",
    "final_url": "https://predictor.nchu.edu.tw/ncblab/",
    "grade": "ok",
-   "verdict": "unreadable",
-   "why": "model(low): The page is a generic lab homepage for Yen-Wei Chu with no mention of the EAT-Rice tool or its description.",
+   "verdict": "confirmed",
+   "why": "name on the page and 12 shared terms (activation, expression, flanking, gene, insertion); Liao/Chu on the page",
    "title": "NCBLab-Home"
   },
   {
@@ -14281,8 +14281,8 @@
    "url": "http://hulab.ucf.edu/software",
    "final_url": "https://hulab.ucf.edu/software",
    "grade": "ok",
-   "verdict": "mismatch",
-   "why": "model(high): The page lists multiple software tools from the lab but does not mention 'activeTF' at all, and the tool's nam",
+   "verdict": "confirmed",
+   "why": "name on the page and 7 shared terms (activated, coordinately, dataset, expression, factors)",
    "title": "Software - Hulab - Data Integration and Knowledge Discovery"
   },
   {
@@ -14362,8 +14362,8 @@
    "url": "https://BrendelGroup.org/SingularityHub/bwasp.sif",
    "final_url": "https://brendelgroup.org/SingularityHub/bwasp.sif",
    "grade": "ok",
-   "verdict": "unreadable",
-   "why": "model(low): The page contains binary data and appears to be a raw Singularity image file, not a web page about the BWASP t",
+   "verdict": "confirmed",
+   "why": "model(high): The page text explicitly mentions BWASP as 'Bisulfite-seq data Workflow Automation Software and Protocols from",
    "title": ""
   },
   {
@@ -14794,8 +14794,8 @@
    "url": "http://hulab.ucf.edu/software",
    "final_url": "https://hulab.ucf.edu/software",
    "grade": "ok",
-   "verdict": "mismatch",
-   "why": "model(high): The page lists several other tools but does not mention TreeGibbsSampler, and the authors' names do not appear",
+   "verdict": "confirmed",
+   "why": "name on the page and 11 shared terms (aligned, conservation, evolutionary, genomes, identifies)",
    "title": "Software - Hulab - Data Integration and Knowledge Discovery"
   },
   {
@@ -15902,8 +15902,8 @@
    "url": "http://www2.warwick.ac.uk/fac/sci/systemsbiology/research/software",
    "final_url": "https://warwick.ac.uk/fac/sci/systemsbiology/research/software/",
    "grade": "ok",
-   "verdict": "unreadable",
-   "why": "model(low): The page lists many software tools but does not mention NIACS or its description, and the tool name is not pre",
+   "verdict": "confirmed",
+   "why": "name on the page and 13 shared terms (auto, causal, corrected, defines, interference); Burroughs on the page",
    "title": "Software Downloads"
   },
   {

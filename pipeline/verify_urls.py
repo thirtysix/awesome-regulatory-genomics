@@ -109,6 +109,37 @@ def visible_text(html: str, limit: int = 4000) -> str:
     return re.sub(r"\s+", " ", body).strip()[:limit]
 
 
+def focused_text(html: str, tool_name: str, limit: int = 4000) -> str:
+    """The page's text, centred on the tool if the page mentions it.
+
+    A lab's software index runs to 20,000 characters and lists a dozen tools in
+    no particular order. Taking the first 4,000 gives whichever tool is
+    alphabetically or chronologically first, so MINDY was judged on its own
+    section and EAT-Rice on somebody else's - the NCBLab page describes EAT-Rice
+    in full, 12,000 characters down, and we called the page a generic lab
+    homepage. Look through the whole document for the name, then quote around
+    it; fall back to the head when the name is absent.
+    """
+    full = visible_text(html, 60000)
+    token = re.sub(r"[^a-z0-9]", "", (tool_name or "").lower())
+    if len(token) >= 4:
+        flat = re.sub(r"[^a-z0-9]", "", full.lower())
+        # map flattened offset back to the real string
+        idx, seen = -1, 0
+        pos = flat.find(token)
+        if pos != -1:
+            for i, ch in enumerate(full):
+                if ch.isalnum():
+                    if seen == pos:
+                        idx = i
+                        break
+                    seen += 1
+        if idx != -1:
+            start = max(0, idx - limit // 3)
+            return full[start:start + limit]
+    return full[:limit]
+
+
 def page_title(html: str) -> str:
     m = re.search(r"<title[^>]*>(.*?)</title>", html, re.S | re.I)
     return re.sub(r"\s+", " ", STRIP.sub(" ", m.group(1))).strip()[:200] if m else ""
@@ -478,7 +509,7 @@ def main() -> None:
             if args.reextract:
                 html = load_page(url)
                 if html:
-                    title, text = page_title(html), visible_text(html)
+                    title, text = page_title(html), focused_text(html, t["name"])
                     with clock:
                         pages[url] = redact_emails({**hit, "title": title, "text": text})
         elif args.rejudge:
@@ -488,7 +519,7 @@ def main() -> None:
             if html:
                 store_page(url, html)
             title = page_title(html) if html else ""
-            text = visible_text(html) if html else ""
+            text = focused_text(html, t["name"]) if html else ""
             with clock:
                 # Scrubbed on the way in. This cache is committed and the repo
                 # is public, and a lab homepage's "contact: someone@..." is

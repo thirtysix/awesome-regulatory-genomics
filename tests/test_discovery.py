@@ -276,3 +276,18 @@ def test_authors_gate_only_the_thin_evidence_band():
     rich = "Widget " + ("aligns bisulfite reads to a reference genome quickly " * 6)
     # plenty of corroboration: confirmed with or without an author on the page
     assert judge(tool, "Widget", rich)[0] == "confirmed"
+
+
+def test_the_extract_is_centred_on_the_tool_not_the_top_of_the_page():
+    """A lab index lists a dozen tools; the first 4,000 characters are somebody
+    else's. NCBLab's Tools.html describes EAT-Rice in full about 12,000
+    characters down, and judging the head called it a generic lab homepage.
+    """
+    from verify_urls import focused_text
+    html = ("<html><body><p>" + ("Alpha tool for unrelated things. " * 300)
+            + "<p>EAT-Rice predicts flanking gene expression of T-DNA insertion "
+              "activation-tagged rice mutants.</p></body></html>")
+    head = focused_text(html, "")[:200]
+    focus = focused_text(html, "EAT-Rice")
+    assert "EAT-Rice" not in head
+    assert "EAT-Rice" in focus and "flanking gene expression" in focus
