@@ -1,8 +1,29 @@
-{"tools":[
- {"name":"chipmunk_chiphorde","url":"https://autosome.org/ChIPMunk/",
-  "note":"lab moved autosome.ru -> autosome.org; the old page redirects to the github org and never names the new domain, so no rule here finds it"},
- {"name":"PlantTFDB 2.0","url":"https://planttfdb.gao-lab.org/",
-  "note":"the old PKU page carries a Gao Lab migration notice; from_relocation now finds this independently"},
- {"name":"Eponine","url":"https://www.sanger.ac.uk/tool/eponine/",
-  "note":"Sanger moved to /tool/<name>/; HOST_REWRITES now finds this independently"}
-]}
+{
+ "tools": [
+  {
+   "name": "chipmunk_chiphorde",
+   "url": "https://autosome.org/ChIPMunk/",
+   "note": "lab moved autosome.ru -> autosome.org; the old page redirects to the github org and never names the new domain, so no rule here finds it"
+  },
+  {
+   "name": "PlantTFDB 2.0",
+   "url": "https://planttfdb.gao-lab.org/",
+   "note": "the old PKU page carries a Gao Lab migration notice; from_relocation now finds this independently"
+  },
+  {
+   "name": "Eponine",
+   "url": "https://www.sanger.ac.uk/tool/eponine/",
+   "note": "Sanger moved to /tool/<name>/; HOST_REWRITES now finds this independently"
+  },
+  {
+   "name": "BroadPeak",
+   "url": "https://jordan.biosci.gatech.edu/",
+   "note": "the tool's own page is gone (/page/software/ is a 404) and the old host redirects to the lab root, dropping the path. Curation decision: the lab that wrote it beats a dead link, even though the page never names BroadPeak"
+  },
+  {
+   "name": "ChIPnorm",
+   "url": "https://archiveweb.epfl.ch/lcbb.epfl.ch/software.html",
+   "note": "EPFL archived the lab and redirects every path to the archive root; re-appending software.html reaches the page. from_kept_path now does this"
+  }
+ ]
+}

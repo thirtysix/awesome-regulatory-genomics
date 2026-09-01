@@ -123,6 +123,40 @@ def article_fulltext(http: requests.Session, tool: dict) -> str:
     return r.text
 
 
+def from_kept_path(http: requests.Session, tool: dict) -> tuple[str, str]:
+    """A redirect that moved the site but threw the path away.
+
+    Institutional archives do this: lcbb.epfl.ch/software.html redirects, twice,
+    to archiveweb.epfl.ch/lcbb.epfl.ch/ - the whole lab, minus the page you
+    asked for. The content is there under the same path on the new host, and
+    the redirect gives no hint of it. Re-asking with the path appended costs one
+    request and returns the page the old url meant.
+    """
+    url = tool.get("url") or ""
+    path = urlparse(url).path.strip("/")
+    if not url or not path or path.lower() in ("index.html", "index.htm"):
+        return "", ""
+    try:
+        r = http.get(url, timeout=25, allow_redirects=True)
+    except requests.RequestException:
+        return "", ""
+    final = str(r.url)
+    fp = urlparse(final)
+    # Only interesting when we were redirected somewhere that dropped the path.
+    if urlparse(url).netloc.lower() == fp.netloc.lower():
+        return "", ""
+    if path.lower() in final.lower():
+        return "", ""
+    cand = final.rstrip("/") + "/" + path
+    try:
+        rr = http.get(cand, timeout=25, allow_redirects=True)
+    except requests.RequestException:
+        return "", ""
+    if rr.status_code == 200 and len(rr.text) > 800:
+        return cand, "the redirect dropped the path; re-appended"
+    return "", ""
+
+
 def from_relocation(http: requests.Session, tool: dict) -> tuple[str, str]:
     """The successor address the broken page itself names, if it names one.
 
@@ -441,7 +475,9 @@ def main() -> None:
         name, found, how = t["name"], "", ""
         # Ordered by trust: what the paper says, then what a registry
         # distributes, then a known host move, then guesses.
-        url, why = from_relocation(http, t)
+        url, why = from_kept_path(http, t)
+        if not url:
+            url, why = from_relocation(http, t)
         if not url:
             url, why = from_article(http, t)
         if not url:
