@@ -69,7 +69,17 @@ MODEL_PARAMS = {
         {"temperature": 0.3, "top_p": 0.9},
 }
 BULK_MODEL = "deepseek-ai/DeepSeek-V4-Flash"
-QUALITY_MODEL = "deepseek-ai/DeepSeek-V3.1-Terminus"
+# A second opinion has to come from a second model. DeepSeek-V3.1-Terminus,
+# used here until 2026-09-02, is a silent alias: DeepInfra answers it with
+# DeepSeek-V4-Flash-0731, returning 200 and a good answer with nothing to
+# indicate the substitution. Every "two models agreed" in llm_proposals.yaml -
+# 250 admitted_out_of_scope and 96 out_of_scope_confirmed - was one model asked
+# twice. GLM-5 is a different family and answers as itself; cross-family
+# agreement is worth far more than a rerun of one model anyway.
+QUALITY_MODEL = "zai-org/GLM-5"
+
+# Models already reported as aliased, so the warning is printed once each.
+_ALIAS_WARNED: set[str] = set()
 
 
 def load_params(model: str) -> dict:
@@ -125,6 +135,11 @@ def call(model: str, system: str, user: str, api_key: str,
             j = json.loads(payload)
         except ValueError:
             continue
+        served = j.get("model")
+        if served and served != model and model not in _ALIAS_WARNED:
+            _ALIAS_WARNED.add(model)
+            print(f"ALIAS: asked for {model}, served {served}. Anything that "
+                  f"calls this a second opinion is wrong.", file=sys.stderr)
         choices = j.get("choices") or []
         if choices and (choices[0].get("delta") or {}).get("content"):
             chunks.append(choices[0]["delta"]["content"])
