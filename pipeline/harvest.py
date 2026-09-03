@@ -121,6 +121,55 @@ def harvest(max_pages: int) -> dict:
             "provenance": provenance, "list": list(records.values())}
 
 
+def add_seeds() -> dict | None:
+    """Fetch the curated ids the existing sweep is missing, and only those.
+
+    Seeding a tool should not cost a re-sweep. A full harvest is ~200 paged
+    queries and it also pulls in whatever changed upstream since the last one,
+    so adding a curated id that way buries the addition in unrelated drift.
+    This reads the sweep, fetches the ids absent from it, and rewrites it with
+    `forced` and the provenance log brought up to date - nothing else moves.
+    """
+    if not SWEEP.exists():
+        print(f"{SWEEP} does not exist; run a full harvest first.")
+        return None
+    result = read_json(SWEEP)
+    records = {r["biotoolsID"]: r for r in result["list"]}
+    provenance = result.setdefault("provenance", {})
+
+    missing = [i for i in SEED_BIOTOOLS_IDS if i not in records]
+    print(f"sweep holds {len(records)} records; {len(missing)} curated ids missing")
+    session, fetched, gone = make_session(), [], []
+    for n, biotools_id in enumerate(missing, 1):
+        record = fetch_by_id(session, biotools_id)
+        if record:
+            records[biotools_id] = record
+            provenance.setdefault(biotools_id, []).append("id (curated)")
+            fetched.append(biotools_id)
+        else:
+            gone.append(biotools_id)
+        if n % 25 == 0 or n == len(missing):
+            print(f"  {n}/{len(missing)} fetched={len(fetched)} unavailable={len(gone)}", flush=True)
+        time.sleep(0.1)
+
+    if gone:
+        # Not fatal: an id can be retired upstream after we curate it. Name
+        # them so the seed list can be corrected rather than silently carrying
+        # ids that will never resolve.
+        print(f"\n  {len(gone)} id(s) did not resolve: {', '.join(gone[:12])}"
+              + (" ..." if len(gone) > 12 else ""), file=sys.stderr)
+    if not fetched:
+        print("nothing to add; sweep untouched")
+        return result
+
+    result["list"] = list(records.values())
+    result["count"] = len(records)
+    result["forced"] = [i for i in SEED_BIOTOOLS_IDS if i in records]
+    write_json(SWEEP, result)
+    print(f"\nadded {len(fetched)} records -> {SWEEP} (now {result['count']})")
+    return result
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--max-pages", type=int, default=60,
@@ -129,7 +178,13 @@ def main() -> None:
                     help="write the sweep even if it is far smaller than last time")
     ap.add_argument("--refresh", action="store_true",
                     help="re-run even if a sweep already exists")
+    ap.add_argument("--seeds-only", action="store_true",
+                    help="fetch curated ids missing from the sweep; no queries")
     args = ap.parse_args()
+
+    if args.seeds_only:
+        add_seeds()
+        return
 
     if SWEEP.exists() and not args.refresh:
         print(f"{SWEEP} exists; pass --refresh to re-harvest.")

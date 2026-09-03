@@ -33,10 +33,15 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--decisions", required=True)
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--reasons", help="json map of id -> one-line reason, when the "
+                                      "decisions did not come from the scope audit")
+    ap.add_argument("--note", help="provenance comment for the block; the default "
+                                   "describes the scope-audit restore")
     args = ap.parse_args()
 
     marks = json.loads(Path(args.decisions).read_text())
     audit = {r["biotools_id"]: r for r in json.loads(AUDIT.read_text())} if AUDIT.exists() else {}
+    reasons = json.loads(Path(args.reasons).read_text()) if args.reasons else {}
 
     sys.path.insert(0, str(ROOT / "pipeline"))
     from config import SEED_BIOTOOLS_IDS
@@ -61,15 +66,19 @@ def main() -> None:
 
     stamp = dt.date.today().isoformat()
     width = max(len(b) for b in add) + 3
-    block = (f"\n    # Restored {stamp}. Each was excluded by the scope audit under a\n"
-             f"    # prompt that listed the in-scope domains by hand and had drifted out of\n"
-             f"    # sync with CATEGORIES; re-audited with the generated taxonomy and\n"
-             f"    # confirmed by a second model that is genuinely a second model, which the\n"
-             f"    # original exclusions only appeared to have. They are seeded rather than\n"
-             f"    # merely re-admitted because classify() already passes them - it is the\n"
-             f"    # scope audit that drops them, and only a curated row is protected.\n")
+    if args.note:
+        body = "\n".join(f"    # {ln}" for ln in args.note.splitlines())
+        block = f"\n    # Seeded {stamp}.\n{body}\n"
+    else:
+        block = (f"\n    # Restored {stamp}. Each was excluded by the scope audit under a\n"
+                 f"    # prompt that listed the in-scope domains by hand and had drifted out of\n"
+                 f"    # sync with CATEGORIES; re-audited with the generated taxonomy and\n"
+                 f"    # confirmed by a second model that is genuinely a second model, which the\n"
+                 f"    # original exclusions only appeared to have. They are seeded rather than\n"
+                 f"    # merely re-admitted because classify() already passes them - it is the\n"
+                 f"    # scope audit that drops them, and only a curated row is protected.\n")
     for bid in add:
-        why = (audit.get(bid, {}).get("bulk_reason") or "").split(".")[0][:66]
+        why = (reasons.get(bid) or audit.get(bid, {}).get("bulk_reason") or "").split(".")[0][:66]
         block += f'    "{bid}",'.ljust(width + 8) + (f"# {why}\n" if why else "\n")
 
     src = CONFIG.read_text()
@@ -100,7 +109,10 @@ def main() -> None:
         return
     CONFIG.write_text(merged)
     print(f"seeded {len(add)} ids into {CONFIG.relative_to(ROOT)}")
-    print("run `make build` to rebuild the catalog with them")
+    # `make build` alone is not enough for an id the sweep has never seen: it
+    # rebuilds from cached enrichment, so a record nobody fetched stays absent
+    # and the run reports success having added nothing.
+    print("next: pipeline/harvest.py --seeds-only, then make select enrich build render")
 
 
 if __name__ == "__main__":

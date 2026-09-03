@@ -5774,3 +5774,44 @@ tools:
     categories: [chromatin-3d]
     doi: 10.1186/s12864-026-12625-x
 
+  # --- retired from bio.tools, still published -------------------------------
+  # These six were found by the exhaustive registry pass and confirmed in scope,
+  # then returned 404 from the bio.tools API when we went to fetch them: they
+  # were indexed when the research-software-ecosystem mirror was taken and have
+  # since been withdrawn. The packages themselves are live on Bioconductor, so
+  # the record is stale upstream, not the tool. Added here because a seeded id
+  # that no longer resolves would warn on every harvest and never arrive.
+  - name: DMCFB
+    url: https://bioconductor.org/packages/DMCFB
+    description: Identifies differentially methylated cytosines in bisulfite sequencing data with a Bayesian functional regression model
+    categories: [dna-methylation]
+    doi: 10.1111/biom.12965
+
+  - name: dominoSignal
+    url: https://bioconductor.org/packages/dominoSignal
+    description: Analyses cell signalling through ligand-receptor-transcription factor networks in single-cell RNA-seq data
+    categories: [grn-inference, single-cell]
+    doi: 10.1038/s41551-021-00770-5
+
+  - name: GIGSEA
+    url: https://bioconductor.org/packages/GIGSEA
+    description: Genotype-imputed gene set enrichment analysis, using GWAS and eQTL-imputed trait-associated differential expression
+    categories: [molecular-qtl, regulatory-variants]
+    doi: 10.1093/bioinformatics/bty529
+
+  - name: iNETgrate
+    url: https://bioconductor.org/packages/iNETgrate
+    description: Builds gene correlation networks that integrate DNA methylation with gene expression
+    categories: [dna-methylation, grn-inference]
+    doi: 10.1038/s41598-023-48237-8
+
+  - name: MEAT
+    url: https://bioconductor.org/packages/MEAT
+    description: Estimates epigenetic age in skeletal muscle from Illumina Infinium DNA methylation data
+    categories: [dna-methylation]
+
+  - name: scQTLtools
+    url: https://bioconductor.org/packages/scQTLtools
+    description: End-to-end single-cell eQTL analysis, from preprocessing through visualisation
+    categories: [molecular-qtl, single-cell]
+    doi: 10.3390/biology14070743

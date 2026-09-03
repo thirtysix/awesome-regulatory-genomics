@@ -1,5 +1,5 @@
 {
- "count": 1640,
+ "count": 1636,
  "list": [
   {
    "biotoolsID": "imimic_iint",
@@ -2120,16 +2120,6 @@
     "Gene methylation analysis",
     "Post-translation modification site prediction",
     "Weighted correlation network analysis"
-   ]
-  },
-  {
-   "biotoolsID": "methinheritsim",
-   "name": "methInheritSim",
-   "reason": "no-match",
-   "description": "Simulate a multigeneration methylation case versus control experiment with inheritance relation using a real control dataset.",
-   "operations": [
-    "Differentially-methylated region identification",
-    "Whole genome methylation analysis"
    ]
   },
   {
@@ -14678,16 +14668,6 @@
    ]
   },
   {
-   "biotoolsID": "tcgabiolinksgui",
-   "name": "TCGAbiolinksGUI",
-   "reason": "no-match",
-   "description": "A Graphical User Interface to analyze cancer molecular and clinical data.",
-   "operations": [
-    "Differential gene expression analysis",
-    "Differentially-methylated region identification"
-   ]
-  },
-  {
    "biotoolsID": "samexplorer",
    "name": "samExploreR",
    "reason": "no-match",
@@ -15414,17 +15394,6 @@
    "operations": [
     "Pathway or network analysis",
     "RNA-Seq analysis"
-   ]
-  },
-  {
-   "biotoolsID": "quasr",
-   "name": "QuasR",
-   "reason": "no-match",
-   "description": "This package provides a framework for the quantification and analysis of Short Reads. It covers a complete workflow starting from raw sequence reads, over creation of alignments and quality control pl",
-   "operations": [
-    "Read mapping",
-    "Read pre-processing",
-    "Statistical calculation"
    ]
   },
   {
@@ -17017,18 +16986,6 @@
    "description": "Binary classification of microsatellite instability using methylation and mutations.",
    "operations": [
     "Variant classification"
-   ]
-  },
-  {
-   "biotoolsID": "cola",
-   "name": "cola",
-   "reason": "no-match",
-   "description": "cola is an R package that provides a general framework for consensus partitioning through a general framework.",
-   "operations": [
-    "Clustering",
-    "Enrichment analysis",
-    "Essential dynamics",
-    "Expression analysis"
    ]
   },
   {

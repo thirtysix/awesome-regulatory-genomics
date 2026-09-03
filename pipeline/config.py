@@ -399,6 +399,233 @@ SEED_BIOTOOLS_IDS = [
     "cplexa",                                   # Models gene expression at complex promoters with TF binding sites,
     "idbp-dep",                                 # Predicts DNA-binding proteins, which are directly involved in gene
     "malacoda",                                 # Designed for MPRA analysis, which is a reporter-assay method in sc
+
+    # Seeded 2026-09-03.
+    # Found by an exhaustive pass over the whole bio.tools registry rather than
+    # by our own sweep. classify() admits 2,706 of the 34,379 records; the sweep had
+    # harvested 2,241 of them, leaving a 405-record gap. 200 of these 212 were
+    # admitted on a text rule and only 2 on an EDAM operation, which is the whole
+    # story: the sweep asks bio.tools by annotation and the filter judges by
+    # description, so a tool whose description is in scope and whose EDAM terms are
+    # not was never fetched to be judged. Each was re-audited under the inclusive
+    # policy and confirmed by a second model from another family. Seeding is what
+    # makes that audit the decision of record; a free-text sweep is the durable fix.
+    "3CDB",                                          # Database of 3C data, directly serves chromatin 3D analysis
+    "3DChrom",                                       # Reconstructs 3D chromatin structures and TADs from Hi-C data, dire
+    "3d-footprint",                                  # Provides binding specificity estimates for protein-DNA complexes, 
+    "BIRD",                                          # Tool is explicitly designed for high-throughput reporter assays (M
+    "Cis-mQTL-mapping-protocol-for-methylome",       # It maps methylation QTLs, which is a molecular QTL method in scope
+    "DNAm-age-predictor",                            # Directly performs DNA methylation analysis, which is an in-scope c
+    "EWAS",                                          # Epigenome-wide association studies directly involve DNA methylatio
+    "KnockTF",                                       # Database of TF knockdown/knockout expression profiles directly sup
+    "LightCpG",                                      # Detects CpG sites, directly relevant to DNA methylation analysis
+    "Logomaker",                                     # Creates sequence logos, directly used in motif-comparison and moti
+    "MuLan-Methyl",                                  # DNA methylation prediction is explicitly in scope
+    "PTM-CrossTalkMapper",                           # Analyzes histone modifications, directly relevant to histone-marks
+    "PhagePromoter",                                 # Predicts promoter sequences, which are regulatory elements
+    "ReQTL",                                         # Identifies correlations between expressed SNVs and gene expression
+    "Selfish",                                       # Discovers differential chromatin interactions, directly in scope f
+    "TRI_tool",                                      # Predicts protein-protein interactions in transcriptional regulatio
+    "VEnCode",                                       # Uses FANTOM5 CAGE enhancer data to find VEnCodes, directly relevan
+    "alea",                                          # Allele-specific epigenomics analysis directly involves regulatory 
+    "alevin-fry-atac",                               # Processes single-cell ATAC-seq data for mapping and quantification
+    "basic4cseq",                                    # Analyzes 4C-seq data for chromatin conformation, directly serving 
+    "benchmarkncvtools",                             # Directly compares tools for scoring non-coding variants, which is 
+    "bioconductor-atacinfercnv",                     # Processes single-cell ATAC-seq data for CNV analysis, directly ser
+    "bioconductor-betahmm",                          # Identifies differentially methylated cytosines (DMCs) from beta va
+    "bioconductor-biscuiteer",                       # tool processes whole-genome bisulfite sequencing data for DNA meth
+    "bioconductor-borealis",                         # It analyzes bisulfite sequencing data for outlier methylated CpG s
+    "bioconductor-decemedip",                        # Infers cell-type abundances from methylation data, directly servin
+    "bioconductor-enmcb",                            # Creates correlated blocks from DNA methylation profiles, directly 
+    "bioconductor-foursynergy",                      # 4C-seq analysis for chromatin conformation is in scope under chrom
+    "bioconductor-genomicplot",                      # Visualizes NGS data including regulatory elements like promoters a
+    "bioconductor-geotcgadata",                      # Handles DNA methylation data from TCGA
+    "bioconductor-macsr",                            # MACS is a canonical ChIP-seq peak caller for TF binding sites
+    "bioconductor-magar",                            # Computes methQTL from DNA methylation data, directly in scope for 
+    "bioconductor-metapod",                          # Combining p-values is used in differential ChIP-seq and ATAC-seq a
+    "bioconductor-methylimp2",                       # DNA methylation imputation is directly in scope
+    "bioconductor-planet",                           # Predicts biological variables from placental DNA methylation data,
+    "bioconductor-regionalpcs",                      # Summarizes DNA methylation data, directly within the dna-methylati
+    "bioconductor-scdblfinder",                      # Detects doublets in single-cell ATAC-seq data, directly supporting
+    "bioconductor-seqtometry",                       # Analyzes single-cell ATAC-seq data, directly in scope for single-c
+    "bioconductor-simd",                             # Analyzes differentially methylated CpG sites from MeDIP-seq, direc
+    "bioconductor-somnibus",                         # Analyzes count-based methylation data on genomic regions, directly
+    "bioconductor-vmrseq",                           # Tool for single-cell DNA methylation analysis, directly matching d
+    "biotapestry",                                   # Directly builds and simulates genetic regulatory networks, fitting
+    "birte",                                         # Uses regulatory networks and expression data to predict, which ali
+    "booleannet",                                    # Directly simulates biological regulatory networks, fitting grn-inf
+    "bowtie2",                                       # Read alignment is a preprocessing step for regulatory genomics ana
+    "bwa-meth",                                      # Alignment of bisulfite sequencing reads is a preprocessing step fo
+    "cancerend",                                     # A database of cancer-associated enhancers, directly serving regula
+    "catalogue_-_blood_eqtms_in_children",           # Database of molecular QTLs (eQTMs) linking DNA methylation to gene
+    "chipchipnorm",                                  # Normalization for ChIP-chip data is a preprocessing step for regul
+    "chromswitch",                                   # Detects chromatin state switches, directly relevant to chromatin-s
+    "circularlogo",                                  # Creates sequence logos for DNA motifs, directly serving motif visu
+    "cmf",                                           # Finds motifs with differential enrichment between datasets, direct
+    "cocas",                                         # ChIP-on-chip analysis is a form of peak-calling for regulatory bin
+    "cogrim",                                        # Integrates ChIP binding and expression data for TF-target inferenc
+    "cola",                                          # Used for subgroup classification in DNA methylation data analysis,
+    "compute-pwm-display-sequencelogo-frequency",    # Computes PWMs and sequence logos, directly used in motif-scanning 
+    "cpgplot",                                       # Identifies CpG islands, directly relevant to DNA methylation analy
+    "cpgplot-ebi",                                   # CpG islands are directly relevant to DNA methylation analysis, a r
+    "cscs",                                          # Provides chromatin state annotation for wheat, directly serving re
+    "csrep",                                         # Directly works with chromatin state annotations and differential a
+    "decomppipeline",                                # Performs deconvolution of DNA methylation data, directly serving d
+    "decoupler",                                     # Used for inferring transcription factor activities from omics data
+    "diana-mirextra",                                # Infers transcription factors from expression data, relevant to grn
+    "diffloop",                                      # Analyzes ChIA-PET data, which is a chromatin 3D assay
+    "discover",                                      # Performs supervised motif discovery on metazoan genomes
+    "dismiss",                                       # Detects DNA methylation from MeDIP-Seq, directly in scope as dna-m
+    "dmf",                                           # ab-initio motif finding is motif-discovery
+    "dmrdb",                                         # Focuses on CpG methylation, which is a regulatory-genomics topic u
+    "dmrseq",                                        # Identifies differentially methylated regions from bisulfite sequen
+    "dorothea",                                      # DoRothEA is a resource for TF-target networks, which directly fits
+    "drimust",                                       # Tool for de novo motif discovery from sequences
+    "enologos",                                      # Creates sequence logos, a core visualization for motif-discovery a
+    "epiTAD",                                        # Visualizes chromatin 3D conformation data, directly serving chroma
+    "epigenetic_age_prediction",                     # Directly predicts epigenetic age from DNA methylation data, which 
+    "epimutacions",                                  # Detects epimutations in DNA methylation data, directly matching dn
+    "epipack",                                       # Analyzes single-cell ATAC-seq data, directly within single-cell an
+    "eqtnminer",                                     # Directly maps molecular QTLs (eQTLs), fitting the molecular-qtl ca
+    "etph",                                          # Database of enhancers and their targets, directly in scope as regu
+    "ewas_catalog",                                  # It is a database of epigenome-wide association studies, directly r
+    "ewastools",                                     # Tool for DNA methylation analysis from BeadChip arrays
+    "factorviz",                                     # Methylome decomposition and bisulfite sequencing analysis fall und
+    "funcepimod",                                    # Integrative analysis of DNA methylation data directly falls under 
+    "gate",                                          # Detects epigenomic changes, directly relevant to histone-marks and
+    "gbat",                                          # Detects trans-gene regulation, directly relevant to regulatory-var
+    "gbdmr",                                         # Identifies differentially methylated regions, directly in scope fo
+    "geneattribution",                               # Identifies genes through which variation acts, relevant to regulat
+    "genomedata",                                    # Stores numeric genomic tracks usable for footprinting, peak-callin
+    "genomedisco",                                   # Compares contact maps from HiC, CaptureC, and other 3D genome data
+    "geqtl",                                         # Performs eQTL mapping, directly in scope as molecular-qtl
+    "ggb",                                           # A genome browser for visualizing high-density data including ChIP-
+    "ggd-lasso",                                     # It is explicitly described as an eQTL mapping tool, which falls un
+    "gqtlbase",                                      # Infrastructure for eQTL and mQTL studies directly matches molecula
+    "gqtlstats",                                     # Directly performs molecular QTL analysis
+    "hicaptools",                                    # Directly supports targeted chromatin conformation capture, a chrom
+    "hicdoc",                                        # Predicts A/B compartments from Hi-C data, directly serving chromat
+    "hichipper",                                     # Processes HiChIP data, which is chromatin 3D data
+    "hicnorm",                                       # Removes biases from Hi-C data, directly serving chromatin-3d analy
+    "hicrep",                                        # Assesses reproducibility of Hi-C data, directly serving chromatin 
+    "hihmm",                                         # Infers chromatin state maps, directly matching chromatin-state seg
+    "hiview",                                        # Visualizes Hi-C data for interpreting GWAS variants, directly serv
+    "icancer-pred",                                  # DNA methylation analysis is explicitly in scope
+    "idna-abt",                                      # Predicts DNA methylation sites, directly matching the dna-methylat
+    "idog",                                          # Integrates epigenomic data, relevant to regulatory genomics
+    "idrem",                                         # Integrates protein-DNA interaction data with time series for regul
+    "ienhancer-xg",                                  # Predicts enhancers, a regulatory element
+    "iepimutacions",                                 # Identifies epimutations from DNA methylation data, directly servin
+    "immreg",                                        # It is a regulon atlas, directly serving GRN inference
+    "intertads",                                     # Integrates multi-omics data on TADs, directly relevant to chromati
+    "inucs",                                         # Identifies nucleosome interactions from ligation junctions, direct
+    "iqtl-vc",                                       # iQTL mapping is a form of molecular QTL analysis, which is explici
+    "jamir-eqtl",                                    # It identifies miRNA eQTLs, directly fitting the molecular-qtl cate
+    "jaxqtl",                                        # It maps eQTLs, which is molecular-QTL analysis
+    "juicebox",                                      # Visualization of Hi-C data directly serves chromatin-3d analysis
+    "juicer",                                        # Juicer is a platform for analyzing Hi-C data, which is a chromatin
+    "loci2path",                                     # Performs enrichment analysis of eQTLs, directly serving molecular-
+    "locusfocus",                                    # Colocalizes GWAS with eQTLs, directly serving molecular-qtl analys
+    "logoddslogo",                                   # Generates sequence logos, a standard motif-visualization method us
+    "logojs",                                        # Creates sequence logos, directly used for motif comparison and vis
+    "lors",                                          # Performs eQTL mapping, which is a molecular-QTL analysis
+    "m3d",                                           # Identifies differentially methylated regions, directly in scope fo
+    "mango",                                         # ChIA-PET is a chromatin 3D interaction assay, directly in scope
+    "mariner",                                       # Explores Hi-C data, directly relevant to chromatin-3d analysis
+    "matrix_eqtl",                                   # Tool for eQTL mapping, directly in molecular-qtl category
+    "meta",                                          # Aligns TF-maps of promoter regions, directly relevant to regulator
+    "methinheritsim",                                # Directly performs differential methylation analysis and conservati
+    "methylation_preprocessing",                     # Preprocessing and QC of DNA methylation microarray data is directl
+    "methylclock",                                   # Estimates DNA methylation age, directly within dna-methylation cat
+    "methylspectrum",                                # Deconvolves DNA methylation array data, directly serving dna-methy
+    "metilene3",                                     # Identifies differentially methylated regions, directly in scope un
+    "miRDRN",                                        # miRNA target prediction and disease regulatory network analysis al
+    "micc",                                          # Detects chromatin interactions from ChIA-PET data, directly in sco
+    "microcket",                                     # Processes Hi-C data for chromatin architecture, directly in chroma
+    "mirgtf-net",                                    # Constructs miRNA-gene-TF regulatory networks, directly performing 
+    "mmeta",                                         # Aligns TF-maps of multiple promoter regions, directly serving regu
+    "moirai",                                        # CAGE data analysis is directly used for regulatory genomics, speci
+    "motifsampler",                                  # De novo motif discovery from co-regulated gene upstream regions
+    "motifscan",                                     # It scans DNA sequences for motifs, matching motif-scanning
+    "mpradecoder",                                   # Processes MPRA data, a reporter-assay method
+    "msp-htprimer",                                  # Primer design for DNA methylation analysis directly supports the d
+    "musa",                                          # Performs de novo motif discovery from sequences
+    "n-score",                                       # Predicts nucleosome positions, directly in nucleosome-chromatin ca
+    "nanofreelunch",                                 # Detects DNA methylation from nanopore data, which is a regulatory 
+    "newcpgreport-ebi",                              # CpG islands are key regulatory elements linked to DNA methylation 
+    "nf-core-hic",                                   # Processes Hi-C data for chromatin 3D analysis
+    "nucleofinder",                                  # Nucleosome positioning is explicitly listed in the nucleosome-chro
+    "open-cravat",                                   # Variant prioritization and annotation for regulatory variants is i
+    "open_targets_genetics",                         # Directly serves regulatory-variants and molecular-qtl analysis by 
+    "optimusqual",                                   # Directly reconstructs gene regulatory networks, which is grn-infer
+    "pairtools",                                     # Processes Hi-C data for chromatin 3D analysis
+    "phenetic_eqtl",                                 # Directly analyzes eQTL data, which is a molecular-QTL method in sc
+    "priority",                                      # De novo motif discovery for TF binding sites is explicitly in scop
+    "pro-coffee",                                    # Aligns homologous promoter regions, directly serving regulatory-el
+    "prom",                                          # Integrates a transcriptional regulatory network, which is directly
+    "proteomirexpress",                              # Infers miRNA-centered regulatory networks, which is a form of GRN 
+    "pub2tools2020__ncvardb",                        # Database of pathogenic non-coding variants directly supports regul
+    "pyicoteo",                                      # Designed for ChIP-seq analysis, a core regulatory-genomics assay
+    "pymethylprocess",                               # Preprocessing workflow for DNA methylation data, directly in scope
+    "q-nexus",                                       # Tool is designed for ChIP-nexus data, directly supporting peak-cal
+    "quasr",                                         # Supports bisulfite sequencing analysis for DNA methylation
+    "ramwas",                                        # Performs methylome-wide association studies, directly in scope for
+    "randomize",                                     # Data randomization is a preprocessing step applicable to DNA methy
+    "rbowtie2",                                      # ATAC-seq read quantification and analysis pipeline
+    "recoup",                                        # Calculates signal profiles from NGS reads, directly applicable to 
+    "regBase",                                       # Predicts functional impact of non-coding regulatory variants
+    "riso",                                          # Extracts conserved regularly spaced motifs from DNA sequences, whi
+    "saap-bs",                                       # Bisulfite sequencing analysis for DNA methylation, directly in sco
+    "scale4c",                                       # Processes 4C-seq data for chromatin conformation analysis, directl
+    "schicptr",                                      # Processes single-cell Hi-C data for pseudotime inference, directly
+    "scmoc",                                         # Clusters single-cell ATAC-seq data, directly serving single-cell r
+    "scomap",                                        # Generates single-cell ATAC-seq atlas and integrates scRNA-seq with
+    "scqtltools",                                    # Performs molecular QTL mapping from single-cell data
+    "seq2logo",                                      # Generates sequence logos for binding motifs, directly serving moti
+    "seqenhdl",                                      # predicts enhancers, a regulatory element
+    "seqlogo-generator",                             # Sequence logos are a standard visualization for motif discovery an
+    "sherman",                                       # Simulates bisulfite sequencing reads for DNA methylation analysis,
+    "sismonr",                                       # Simulates gene regulatory networks, directly supporting GRN infere
+    "smtrackr",                                      # Visualizes and quantifies protein-DNA binding on single molecules,
+    "snipa",                                         # Provides LD and functional annotation for variants, directly usabl
+    "snpdelscore",                                   # Assesses deleterious effects of noncoding variants, directly servi
+    "sombrero",                                      # De novo motif discovery from sequences
+    "symcurv",                                       # Predicts nucleosome positioning, which is explicitly in scope unde
+    "syntren",                                       # Generates synthetic data for regulatory network inference, directl
+    "t2",                                            # Analyzes ChIP-chip data, a regulatory-genomics assay
+    "tcgabiolinksgui",                               # Retrieves and preprocesses TCGA DNA methylation data for different
+    "tfinfer",                                       # Infers transcription factor activity from microarray data, directl
+    "tfpredict",                                     # Predicts transcription factors, directly relevant to tfbs-predicti
+    "tfta",                                          # Transcription factor target enrichment analysis directly involves 
+    "thunder",                                       # Infers cell type proportions from bulk Hi-C data, directly serving
+    "tigar-v2",                                      # Directly performs molecular QTL analysis via TWAS with eQTL weight
+    "tilehmm",                                       # Analyzes ChIP-on-chip data, directly relevant to peak-calling and 
+    "tisan",                                         # Estimates tissue-specific effects of coding and non-coding variant
+    "trace-rrbs",                                    # RRBS is a DNA methylation assay, which is in scope
+    "transfacpred",                                  # Predicts transcription factors from protein sequence, directly rel
+    "trim_galore",                                   # Used for preprocessing bisulfite-seq data for DNA methylation anal
+    "tsrchitect",                                    # Identifies promoters from TSS profiling data, directly matching re
+    "tssar",                                         # TSSAR annotates transcription start sites, which are regulatory el
+    "tssi",                                          # Identifies transcription start sites, directly relevant to regulat
+    "twistmethylflow",                               # Performs methylation calling and differential methylation analysis
+    "txreginfra",                                    # Directly supports regulatory network creation, which falls under g
+    "veqtl-mapper",                                  # Directly maps molecular QTLs, a core regulatory-genomics category
+    "visionet",                                      # Visualizes transcription factor networks, directly relevant to grn
+    "w4cseq",                                        # Analyzes 4C-Seq data, a chromatin conformation capture method, dir
+    "wenda",                                         # Tool for age prediction from DNA methylation data directly serves 
+    "zinba",                                         # ZINBA is a peak caller for ChIP-seq and related assays, directly f
+    "zpeaks",                                        # Peak calling from NGS experiments is explicitly in scope
+
+    # Seeded 2026-09-03.
+    # Same registry-gap pass as the block above, but a split decision rather than a
+    # unanimous one, so it is recorded separately. The confirming model rejected it on
+    # the grounds that splicing is post-transcriptional and out of scope; that reasoning
+    # does not survive CATEGORIES, which carries molecular-qtl as an explicit category
+    # and conventionally covers eQTL, sQTL, mQTL and caQTL alike. Kept under the
+    # inclusive policy. The other split, RNAAgeCalc, was left out: its keep rested on a
+    # misreading, the tool estimates age from RNA expression and only mentions
+    # methylation as background.
+    "RsQTL",    # Maps splicing QTLs from RNA-seq; molecular-qtl is a catalog catego
 ]
 
 # Free-text queries, for tools whose EDAM annotation is wrong or absent.

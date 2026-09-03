@@ -1,6 +1,6 @@
 {
  "meta": {
-  "count": 191,
+  "count": 192,
   "note": "Records the hand-written overlay excludes, with the full row they had when dropped. Delete the id from overlay.yaml: exclude and rebuild to reinstate one."
  },
  "tools": [
@@ -1250,6 +1250,57 @@
    "_excluded_reason": "Identifies ligand binding sites in protein structures, not regulatory genomics; admitted on EDAM 'Peak calling' alone",
    "featured": "",
    "primary_category": "tfbs-prediction"
+  },
+  {
+   "id": "bioconductor-methylclock",
+   "name": "methylclock",
+   "description": "This package allows to estimate chronological and gestational DNA methylation (DNAm) age as well as biological age using different methylation clocks",
+   "categories": [
+    "dna-methylation"
+   ],
+   "tier": "core",
+   "homepage": "https://bioconductor.org/packages/methylclock",
+   "repo_url": "https://github.com/isglobal-brge/methylclock",
+   "repo_origin": "recorded",
+   "repo_stars": 55,
+   "repo_pushed": "2026-05-18",
+   "repo_archived": false,
+   "repo_language": "HTML",
+   "repo_license": "MIT",
+   "tool_type": [
+    "Command-line tool",
+    "Library"
+   ],
+   "topics": [],
+   "languages": [
+    "R"
+   ],
+   "license": "MIT",
+   "maturity": "",
+   "cost": "",
+   "citations": 231,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2020",
+   "publication": "doi:10.1093/bioinformatics/btaa825",
+   "publication_is_preprint": false,
+   "biotools_id": "bioconductor-methylclock",
+   "biotools_url": "https://bio.tools/bioconductor-methylclock",
+   "last_update": "2026-08-30",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [],
+   "_select_reason": "curated: fetched by ID",
+   "_identifiers": [
+    "doi:10.1093/bioinformatics/btaa825"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/methylclock"
+   },
+   "_excluded_reason": "Duplicate bio.tools record for methylclock, which is already in the catalog under that id",
+   "featured": "",
+   "primary_category": "dna-methylation"
   },
   {
    "id": "ireceptor",

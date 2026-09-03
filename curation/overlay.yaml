@@ -278,6 +278,7 @@ exclude:
   patmatdb: Searches PROTEIN sequences with a motif; not DNA regulatory analysis
   weblogo_3: Duplicate bio.tools record for WebLogo
   meme_fimo: Duplicate of the MEME Suite / FIMO entries
+  bioconductor-methylclock: Duplicate bio.tools record for methylclock, which is already in the catalog under that id
   ROADMAP_epigenomics: Reference data repository rather than a tool; kept out to avoid inflating the ranking
 
   # Surfaced when the citation cache was refreshed: each had a lookup failure

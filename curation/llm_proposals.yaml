@@ -2,7 +2,7 @@
 # build.py merges this BELOW curation/overlay.yaml, so any hand-written
 # correction always wins. Review before trusting; promote what you agree
 # with into overlay.yaml, which is never overwritten.
-# model: deepseek-ai/DeepSeek-V4-Flash  jobs: describe
+# model: deepseek-ai/DeepSeek-V4-Flash  jobs: categorise
 
 admitted_out_of_scope:
   3d-spagnn-e:
@@ -2804,6 +2804,12 @@ categories:
     in_scope: false
     was:
     - nucleosome-chromatin
+  3d-footprint:
+    categories:
+    - motif-databases
+    confidence: high
+    in_scope: true
+    was: []
   3d-spagnn-e:
     categories: []
     confidence: high
@@ -3143,6 +3149,12 @@ categories:
     was:
     - regulatory-elements
     - regulatory-variants
+  KnockTF:
+    categories:
+    - grn-inference
+    confidence: medium
+    in_scope: true
+    was: []
   LTMG:
     categories: []
     confidence: high
@@ -3251,6 +3263,12 @@ categories:
     in_scope: false
     was:
     - grn-inference
+  PhagePromoter:
+    categories:
+    - regulatory-elements
+    confidence: high
+    in_scope: true
+    was: []
   PlantCircNet:
     categories: []
     confidence: high
@@ -3415,6 +3433,17 @@ categories:
     in_scope: true
     was:
     - tfbs-prediction
+  TRI_tool:
+    categories: []
+    confidence: high
+    in_scope: false
+    was: []
+  VEnCode:
+    categories:
+    - regulatory-elements
+    confidence: high
+    in_scope: true
+    was: []
   VISION:
     categories:
     - regulatory-elements
@@ -3492,6 +3521,12 @@ categories:
     - regulatory-elements
     - chip-resources
     - grn-inference
+  alea:
+    categories:
+    - regulatory-variants
+    confidence: high
+    in_scope: true
+    was: []
   allenricher:
     categories: []
     confidence: high
@@ -3552,6 +3587,12 @@ categories:
     in_scope: true
     was:
     - tfbs-prediction
+  aracne:
+    categories:
+    - grn-inference
+    confidence: high
+    in_scope: true
+    was: []
   archr:
     categories:
     - peak-calling
@@ -3630,6 +3671,12 @@ categories:
     in_scope: false
     was:
     - nucleosome-chromatin
+  atsnp:
+    categories:
+    - regulatory-variants
+    confidence: high
+    in_scope: true
+    was: []
   attune:
     categories:
     - grn-inference
@@ -3754,6 +3801,24 @@ categories:
     - tfbs-prediction
     - nucleosome-chromatin
     - single-cell
+  bioconductor-genomicplot:
+    categories:
+    - regulatory-elements
+    - peak-annotation
+    confidence: low
+    in_scope: true
+    was: []
+  bioconductor-macsr:
+    categories:
+    - peak-calling
+    confidence: high
+    in_scope: true
+    was: []
+  bioconductor-metapod:
+    categories: []
+    confidence: high
+    in_scope: false
+    was: []
   biolqm:
     categories: []
     confidence: high
@@ -3777,12 +3842,24 @@ categories:
     was:
     - motif-discovery
     - motif-scanning
+  biotapestry:
+    categories:
+    - grn-inference
+    confidence: high
+    in_scope: true
+    was: []
   bioword:
     categories: []
     confidence: high
     in_scope: false
     was:
     - motif-discovery
+  birte:
+    categories:
+    - grn-inference
+    confidence: high
+    in_scope: true
+    was: []
   bisa:
     categories:
     - motif-scanning
@@ -3824,6 +3901,17 @@ categories:
     in_scope: true
     was:
     - motif-discovery
+  booleannet:
+    categories:
+    - grn-inference
+    confidence: medium
+    in_scope: true
+    was: []
+  bowtie2:
+    categories: []
+    confidence: high
+    in_scope: false
+    was: []
   bpforms:
     categories: []
     confidence: high
@@ -3891,6 +3979,12 @@ categories:
     was:
     - regulatory-elements
     - chip-resources
+  cancerend:
+    categories:
+    - regulatory-elements
+    confidence: high
+    in_scope: true
+    was: []
   capC-MAP:
     categories:
     - peak-calling
@@ -4120,6 +4214,12 @@ categories:
     was:
     - tfbs-prediction
     - peak-calling
+  chipchipnorm:
+    categories:
+    - peak-calling
+    confidence: medium
+    in_scope: true
+    was: []
   chipin:
     categories:
     - peak-calling
@@ -4349,6 +4449,12 @@ categories:
     - peak-calling
     - peak-annotation
     - chip-resources
+  cocas:
+    categories:
+    - peak-calling
+    confidence: medium
+    in_scope: true
+    was: []
   cocoa:
     categories:
     - regulatory-elements
@@ -4357,6 +4463,12 @@ categories:
     was:
     - tfbs-prediction
     - nucleosome-chromatin
+  cogrim:
+    categories:
+    - grn-inference
+    confidence: high
+    in_scope: true
+    was: []
   cohesindb:
     categories:
     - chip-resources
@@ -4513,11 +4625,11 @@ categories:
     - nucleosome-chromatin
     - single-cell
   cplexa:
-    categories: []
-    confidence: low
-    in_scope: false
-    was:
+    categories:
     - regulatory-elements
+    confidence: medium
+    in_scope: true
+    was: []
   cpmodule:
     categories:
     - regulatory-elements
@@ -4723,6 +4835,12 @@ categories:
     was:
     - peak-calling
     - nucleosome-chromatin
+  decoupler:
+    categories:
+    - grn-inference
+    confidence: medium
+    in_scope: true
+    was: []
   dedoc2:
     categories:
     - nucleosome-chromatin
@@ -4881,6 +4999,12 @@ categories:
     was:
     - peak-calling
     - nucleosome-chromatin
+  diana-mirextra:
+    categories:
+    - grn-inference
+    confidence: medium
+    in_scope: true
+    was: []
   diana-mirgen:
     categories:
     - regulatory-elements
@@ -4915,6 +5039,17 @@ categories:
     was:
     - regulatory-elements
     - grn-inference
+  dorina:
+    categories: []
+    confidence: high
+    in_scope: false
+    was: []
+  dorothea:
+    categories:
+    - grn-inference
+    confidence: medium
+    in_scope: true
+    was: []
   drivergroup:
     categories: []
     confidence: high
@@ -5167,6 +5302,13 @@ categories:
     was:
     - nucleosome-chromatin
     - single-cell
+  etph:
+    categories:
+    - regulatory-elements
+    - chip-resources
+    confidence: medium
+    in_scope: true
+    was: []
   eucamod:
     categories:
     - regulatory-elements
@@ -5461,6 +5603,11 @@ categories:
     was:
     - tfbs-prediction
     - regulatory-elements
+  genomedata:
+    categories: []
+    confidence: high
+    in_scope: false
+    was: []
   genomepaint:
     categories:
     - regulatory-variants
@@ -5487,6 +5634,12 @@ categories:
     was:
     - tfbs-prediction
     - peak-calling
+  ggb:
+    categories:
+    - peak-annotation
+    confidence: medium
+    in_scope: true
+    was: []
   gibbs_motif_sampler:
     categories:
     - motif-discovery
@@ -5924,6 +6077,12 @@ categories:
     in_scope: false
     was:
     - tfbs-prediction
+  idrem:
+    categories:
+    - grn-inference
+    confidence: high
+    in_scope: true
+    was: []
   iepicas-dl:
     categories: []
     confidence: high
@@ -6324,6 +6483,12 @@ categories:
     - motif-discovery
     - motif-scanning
     - tfbs-prediction
+  meta:
+    categories:
+    - motif-comparison
+    confidence: high
+    in_scope: true
+    was: []
   meta-base:
     categories:
     - chip-resources
@@ -6363,6 +6528,11 @@ categories:
     - tfbs-prediction
     - nucleosome-chromatin
     - single-cell
+  miRDRN:
+    categories: []
+    confidence: high
+    in_scope: false
+    was: []
   microfootprinter:
     categories:
     - motif-discovery
@@ -6422,6 +6592,12 @@ categories:
     was:
     - regulatory-elements
     - grn-inference
+  mirgtf-net:
+    categories:
+    - grn-inference
+    confidence: high
+    in_scope: true
+    was: []
   mirstart_20:
     categories: []
     confidence: high
@@ -6436,6 +6612,14 @@ categories:
     was:
     - motif-discovery
     - motif-scanning
+  mmeta:
+    categories:
+    - motif-discovery
+    - motif-scanning
+    - motif-comparison
+    confidence: high
+    in_scope: true
+    was: []
   mobilomefinder:
     categories: []
     confidence: high
@@ -6488,6 +6672,12 @@ categories:
     was:
     - motif-scanning
     - regulatory-elements
+  moirai:
+    categories:
+    - regulatory-elements
+    confidence: medium
+    in_scope: true
+    was: []
   monkey:
     categories:
     - motif-scanning
@@ -6745,9 +6935,10 @@ categories:
     was:
     - motif-scanning
   non-b_db:
-    categories: []
+    categories:
+    - motif-databases
     confidence: high
-    in_scope: false
+    in_scope: true
     was: []
   ntw:
     categories:
@@ -6849,6 +7040,12 @@ categories:
     in_scope: false
     was:
     - nucleosome-chromatin
+  panda:
+    categories:
+    - grn-inference
+    confidence: high
+    in_scope: true
+    was: []
   pareidolia:
     categories: []
     confidence: high
@@ -7153,6 +7350,12 @@ categories:
     in_scope: true
     was:
     - peak-calling
+  pro-coffee:
+    categories:
+    - regulatory-elements
+    confidence: high
+    in_scope: true
+    was: []
   proberating:
     categories:
     - tfbs-prediction
@@ -7178,6 +7381,12 @@ categories:
     confidence: high
     in_scope: true
     was: []
+  prom:
+    categories:
+    - grn-inference
+    confidence: medium
+    in_scope: true
+    was: []
   promateus:
     categories: []
     confidence: high
@@ -7191,6 +7400,11 @@ categories:
     in_scope: false
     was:
     - tfbs-prediction
+  proteomirexpress:
+    categories: []
+    confidence: high
+    in_scope: false
+    was: []
   pwmscan:
     categories:
     - motif-scanning
@@ -7199,6 +7413,19 @@ categories:
     in_scope: true
     was:
     - motif-scanning
+  pyicoteo:
+    categories:
+    - peak-calling
+    - peak-annotation
+    confidence: medium
+    in_scope: true
+    was: []
+  q-nexus:
+    categories:
+    - peak-calling
+    confidence: high
+    in_scope: true
+    was: []
   r-loop:
     categories:
     - regulatory-elements
@@ -7272,6 +7499,12 @@ categories:
     in_scope: true
     was:
     - tfbs-prediction
+  recoup:
+    categories:
+    - peak-annotation
+    confidence: medium
+    in_scope: true
+    was: []
   redfly:
     categories:
     - regulatory-elements
@@ -7388,6 +7621,12 @@ categories:
     was:
     - tfbs-prediction
     - regulatory-variants
+  rgreat:
+    categories:
+    - peak-annotation
+    confidence: high
+    in_scope: true
+    was: []
   ricepilaf:
     categories: []
     confidence: high
@@ -7779,6 +8018,12 @@ categories:
     was:
     - footprinting
     - peak-calling
+  seqpattern:
+    categories:
+    - motif-scanning
+    confidence: high
+    in_scope: true
+    was: []
   seqplots:
     categories:
     - motif-scanning
@@ -7806,8 +8051,7 @@ categories:
     categories: []
     confidence: high
     in_scope: false
-    was:
-    - motif-scanning
+    was: []
   setuppromoter:
     categories:
     - regulatory-elements
@@ -7878,6 +8122,12 @@ categories:
     was:
     - nucleosome-chromatin
     - single-cell
+  sismonr:
+    categories:
+    - grn-inference
+    confidence: medium
+    in_scope: true
+    was: []
   siteseer:
     categories:
     - motif-scanning
@@ -7896,6 +8146,13 @@ categories:
     was:
     - tfbs-prediction
     - peak-calling
+  smtrackr:
+    categories:
+    - footprinting
+    - nucleosome-chromatin
+    confidence: high
+    in_scope: true
+    was: []
   snapatac:
     categories:
     - footprinting
@@ -8101,6 +8358,12 @@ categories:
     was:
     - tfbs-prediction
     - regulatory-elements
+  syntren:
+    categories:
+    - grn-inference
+    confidence: low
+    in_scope: true
+    was: []
   systempiper:
     categories:
     - peak-calling
@@ -8111,6 +8374,13 @@ categories:
     - peak-calling
     - peak-annotation
     - chip-resources
+  t2:
+    categories:
+    - peak-calling
+    - peak-annotation
+    confidence: medium
+    in_scope: true
+    was: []
   tadbd:
     categories: []
     confidence: low
@@ -8339,6 +8609,12 @@ categories:
     in_scope: true
     was:
     - tfbs-prediction
+  tfinfer:
+    categories:
+    - grn-inference
+    confidence: high
+    in_scope: true
+    was: []
   tfmotifview:
     categories:
     - motif-scanning
@@ -8348,6 +8624,18 @@ categories:
     was:
     - motif-scanning
     - peak-annotation
+  tfpredict:
+    categories:
+    - tfbs-prediction
+    confidence: medium
+    in_scope: true
+    was: []
+  tfta:
+    categories:
+    - grn-inference
+    confidence: medium
+    in_scope: true
+    was: []
   tftenricher:
     categories:
     - grn-inference
@@ -8379,6 +8667,12 @@ categories:
     in_scope: true
     was:
     - tfbs-prediction
+  tilehmm:
+    categories:
+    - peak-calling
+    confidence: high
+    in_scope: true
+    was: []
   timirgen:
     categories: []
     confidence: high
@@ -8426,6 +8720,11 @@ categories:
     was:
     - motif-scanning
     - motif-comparison
+  transfacpred:
+    categories: []
+    confidence: high
+    in_scope: false
+    was: []
   transmodis:
     categories:
     - motif-scanning
@@ -8489,6 +8788,12 @@ categories:
     in_scope: true
     was:
     - nucleosome-chromatin
+  tsrchitect:
+    categories:
+    - regulatory-elements
+    confidence: high
+    in_scope: true
+    was: []
   tsrexplorer:
     categories:
     - regulatory-elements
@@ -8496,6 +8801,18 @@ categories:
     in_scope: true
     was:
     - tfbs-prediction
+  tssar:
+    categories:
+    - regulatory-elements
+    confidence: medium
+    in_scope: true
+    was: []
+  tssi:
+    categories:
+    - regulatory-elements
+    confidence: high
+    in_scope: true
+    was: []
   tssr:
     categories:
     - regulatory-elements
@@ -8607,6 +8924,12 @@ categories:
     in_scope: false
     was:
     - regulatory-elements
+  visionet:
+    categories:
+    - grn-inference
+    confidence: medium
+    in_scope: true
+    was: []
   vivarium-collective:
     categories: []
     confidence: high
@@ -8705,6 +9028,12 @@ categories:
     was:
     - chip-resources
     - grn-inference
+  zinba:
+    categories:
+    - peak-calling
+    confidence: high
+    in_scope: true
+    was: []
 descriptions:
   3defdr:
     description: Identifies cell type-specific looping interactions from 5C and Hi-C data using a statistical
