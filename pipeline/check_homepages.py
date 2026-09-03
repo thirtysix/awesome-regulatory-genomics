@@ -164,6 +164,13 @@ def main() -> None:
             futures = {pool.submit(check_one, session, u): u for u in todo}
             for fut in as_completed(futures):
                 result = fut.result()
+                # Consecutive agreement, so a state that is not 404 can
+                # eventually be asserted. The graded outcomes exist because one
+                # observation of a timeout means little; two mean something,
+                # and nothing was counting them.
+                prev = cache.get(result["url"]) or {}
+                result["agree"] = (prev.get("agree", 0) + 1
+                                   if prev.get("state") == result["state"] else 1)
                 cache[result["url"]] = result
                 done += 1
                 if done % 100 == 0:

@@ -995,7 +995,7 @@ function render(){
     // link is a maintained project page or a lab URL from 2009.
     // A 404 is worth saying out loud; a timeout is not, because it is as
     // often a slow institutional host as a departed one.
-    const siteDead = t.homepage_status === 'dead';
+    const siteDead = t.homepage_status === 'dead' || t.homepage_status === 'unreachable';
     const siteCell = t.site
       ? '<a href="'+esc(t.site)+'" class="'+(siteDead?'gone':'')+'" title="'
           + (siteDead ? 'This page returned 404 when last checked. ' : '')

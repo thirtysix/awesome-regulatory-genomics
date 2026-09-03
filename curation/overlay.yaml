@@ -88,6 +88,50 @@ corrections:
 # wrongly, and matches no general exclusion pattern. They surfaced at the top of
 # the citation ranking, which is where contamination is most visible and most
 # damaging.
+
+  # --- urls reviewed by hand 2026-09-03 ----------------------------------
+  # Each of these served a page that was not the tool: a re-registered
+  # domain, a different tool of the same name, or a lab index that no
+  # longer hosts it. Replacements were verified the same way before being
+  # offered, and a human made the call.
+  planttfdb_2.0:
+    homepage: https://planttfdb.gao-lab.org/
+    note: url reviewed 2026-09-03; the previous one served a different site
+  eponine:
+    homepage: https://www.sanger.ac.uk/tool/eponine/
+    note: url reviewed 2026-09-03; the previous one served a different site
+  chipmunk_chiphorde:
+    homepage: https://autosome.org/ChIPMunk/
+    note: url reviewed 2026-09-03; the previous one served a different site
+  xxmotif:
+    homepage: https://github.com/soedinglab/xxmotif
+    note: url reviewed 2026-09-03; the previous one served a different site
+  ChIPnorm:
+    homepage: https://archiveweb.epfl.ch/lcbb.epfl.ch/software.html
+    note: url reviewed 2026-09-03; the previous one served a different site
+  broadpeak:
+    homepage: https://jordan.biosci.gatech.edu/
+    note: url reviewed 2026-09-03; the previous one served a different site
+  mindy:
+    homepage: https://califano.c2b2.columbia.edu/software
+    repo_url: https://sourceforge.net/projects/citrus1/files/Cindy.jar/download
+    note: url reviewed 2026-09-03; the previous one served a different site
+  timirgen:
+    homepage: https://github.com/Krutik6/TimiRGeN
+    note: url reviewed 2026-09-03; the previous one served a different site
+  panda_associations:
+    homepage: https://service.tartaglialab.com/static_files/shared/tutorial_panda.html
+    note: url reviewed 2026-09-03; the previous one served a different site
+  tadmaster:
+    homepage: https://github.com/OluwadareLab/TADMaster
+    note: url reviewed 2026-09-03; the previous one served a different site
+  bwasp:
+    homepage: https://github.com/BrendelGroup/BWASP
+    note: url reviewed 2026-09-03; the previous one served a different site
+  mrlocus:
+    homepage: https://thelovelab.github.io/mrlocus
+    note: url reviewed 2026-09-03; the previous one served a different site
+
 exclude:
   geneious: General-purpose sequence analysis suite; tagged "Sequence motif discovery" upstream
   cuffdiff: Differential transcript expression; tagged "Transcriptional regulatory element prediction" upstream

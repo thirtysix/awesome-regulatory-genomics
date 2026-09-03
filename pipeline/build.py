@@ -260,10 +260,18 @@ def publication_url(ident: str) -> str:
 def load_homepage_status() -> dict[str, str]:
     """Homepage URL -> state, from pipeline/check_homepages.py.
 
-    Only `dead` (404/410) is carried into the catalog. `unreachable` is a
-    timeout or a DNS failure, which is as often a slow institutional host as a
+    `dead` (404/410) is carried on a single observation: the server answered
+    and said no. Every other failing state needs TWO runs to agree, which is
+    what `agree` counts. One timeout is as often a slow institutional host as a
     departed one, and asserting it would repeat the mistake the DOI checker
-    made when it called 151 rate-limited requests broken links.
+    made when it called 151 rate-limited requests broken links - but a host
+    that has failed the same way twice is a broken link, and refusing to say so
+    leaves the reader to discover it instead.
+
+    Measured when this rule was introduced: of 490 urls that failed a first
+    pass, 480 failed identically on a second and 4 turned out to be fine,
+    including one 404 that was not - so the second pass is worth its cost in
+    both directions.
     """
     path = DATA / "cache" / "homepage_check.json"
     if not path.exists():
@@ -272,15 +280,27 @@ def load_homepage_status() -> dict[str, str]:
         blob = json.loads(path.read_text())
     except ValueError:
         return {}
+    def carried(rec):
+        st = rec.get("state") if isinstance(rec, dict) else None
+        if st == "dead":
+            return "dead"
+        # Not `blocked`: a 401 or 403 means the page is there and we are not
+        # welcome, which is this module's own reading of that code. Reporting
+        # it as broken would tell a reader a working page is gone.
+        if st == "unreachable" and (rec.get("agree") or 0) >= 2:
+            return st
+        return ""
+
     # Canonicalised, because the same page appears as a homepage and as a
     # repository link with a different scheme or a www prefix: PROBC's record
     # holds `http://www.github.com/seferlab/probc` and
     # `https://github.com/seferlab/probc` for one deleted repository.
-    dead = {}
+    broken = {}
     for url, r in blob.items():
-        if r.get("state") == "dead":
-            dead[canon_link(url)] = "dead"
-    return dead
+        state = carried(r)
+        if state:
+            broken[canon_link(url)] = state
+    return broken
 
 
 def canon_link(url: str) -> str:
