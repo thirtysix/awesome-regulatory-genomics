@@ -370,6 +370,35 @@ SEED_BIOTOOLS_IDS = [
     # WEAK, and withdrawn from both, because bio.tools hangs it on expression
     # atlases (see tests/test_scope_2026_07.py).
     "rasqual",
+
+    # Five more were restored here and then removed again: ibm_pattern_discovery,
+    # kimi, meta-meme, bimm_sc and evoprinter are excluded by hand in
+    # curation/overlay.yaml, which outranks a seed, so seeding them changed
+    # nothing. The hand reasons are better than the models managed - Meta-MEME
+    # models PROTEIN motifs, KIMI classifies metagenomic sequences, EvoPrinter
+    # works on viral genomes - and this note exists so nobody seeds them again.
+    #
+    # Restored 2026-09-03. Each was excluded by the scope audit under a
+    # prompt that listed the in-scope domains by hand and had drifted out of
+    # sync with CATEGORIES; re-audited with the generated taxonomy and
+    # confirmed by a second model that is genuinely a second model, which the
+    # original exclusions only appeared to have. They are seeded rather than
+    # merely re-admitted because classify() already passes them - it is the
+    # scope audit that drops them, and only a curated row is protected.
+    "csynth",                                   # Visualizes 3D genome structure from Hi-C data, directly serving ch
+    "multimm",                                  # It reconstructs 3D genome structure from chromatin data, fitting c
+    "orchestrating_chromosome_conformation",    # The tool is specifically for analyzing chromosome conformation cap
+    "yahs",                                     # It uses Hi-C data for scaffolding, which falls under chromatin-3d
+    "bat",                                      # BAT performs DNA methylation analysis, which is explicitly in scop
+    "champ",                                    # Tool for DNA methylation analysis, which is explicitly in scope
+    "comet_visualisation",                      # Visualizes DNA co-methylation patterns and epigenome-wide associat
+    "mea",                                      # Pipeline for methylomic and epigenomic allele-specific analysis, d
+    "Meffil",                                   # It analyzes DNA methylation data, which is explicitly in scope as 
+    "reactr",                                   # Includes motif discovery and promoter analysis, which are regulato
+    "erma",                                     # Epigenomics is broad but likely includes regulatory elements and h
+    "cplexa",                                   # Models gene expression at complex promoters with TF binding sites,
+    "idbp-dep",                                 # Predicts DNA-binding proteins, which are directly involved in gene
+    "malacoda",                                 # Designed for MPRA analysis, which is a reporter-assay method in sc
 ]
 
 # Free-text queries, for tools whose EDAM annotation is wrong or absent.

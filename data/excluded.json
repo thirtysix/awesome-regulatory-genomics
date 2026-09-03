@@ -1140,12 +1140,12 @@
    ],
    "tier": "core",
    "homepage": "https://cran.r-project.org/web/packages/propr/index.html",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
+   "repo_url": "https://github.com/tpq/propr",
+   "repo_origin": "recorded",
+   "repo_stars": 81,
+   "repo_pushed": "2026-05-19",
+   "repo_archived": false,
+   "repo_language": "R",
    "repo_license": "",
    "tool_type": [
     "Library"

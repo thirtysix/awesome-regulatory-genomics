@@ -122,6 +122,7 @@ doi_10.1007_S40484-020-0225-2,7
 doi_10.1007_s00412-021-00766-9,38
 doi_10.1007_s00438-018-1487-5,55
 doi_10.1007_s10930-024-10183-3,2
+doi_10.1007_s11357-023-00986-0,53
 doi_10.1016_J.AB.2021.114120,21
 doi_10.1016_J.AB.2021.114318,29
 doi_10.1016_J.BBAGRM.2019.194429,16
@@ -327,6 +328,7 @@ doi_10.1038_nmeth.2832,571
 doi_10.1038_nmeth.3115,649
 doi_10.1038_nmeth.3252,4023
 doi_10.1038_nmeth.3547,2643
+doi_10.1038_nmeth.3763,177
 doi_10.1038_nmeth.4463,7101
 doi_10.1038_s10038-019-0573-9,31
 doi_10.1038_s41419-021-04075-y,0
@@ -395,6 +397,7 @@ doi_10.1073_PNAS.2109995119,177
 doi_10.1073_PNAS.2411930122,1
 doi_10.1073_pnas.0505874102,95
 doi_10.1073_pnas.0630591100,351
+doi_10.1073_pnas.1618353114,86
 doi_10.1073_pnas.2021171118,160
 doi_10.1073_pnas.2211194119,47
 doi_10.1080_01621459.2021.1914634,97
@@ -709,6 +712,7 @@ doi_10.1093_bioinformatics_btab392,14
 doi_10.1093_bioinformatics_btab413,16
 doi_10.1093_bioinformatics_btab426,12
 doi_10.1093_bioinformatics_btab443,7
+doi_10.1093_bioinformatics_btab507,67
 doi_10.1093_bioinformatics_btab514,5
 doi_10.1093_bioinformatics_btab534,12
 doi_10.1093_bioinformatics_btab567,26
@@ -721,6 +725,7 @@ doi_10.1093_bioinformatics_btab746,36
 doi_10.1093_bioinformatics_btab815,2
 doi_10.1093_bioinformatics_btac067,10
 doi_10.1093_bioinformatics_btac102,120
+doi_10.1093_bioinformatics_btac117,80
 doi_10.1093_bioinformatics_btac148,9
 doi_10.1093_bioinformatics_btac157,0
 doi_10.1093_bioinformatics_btac175,78
@@ -826,6 +831,7 @@ doi_10.1093_bioinformatics_btq328,41
 doi_10.1093_bioinformatics_btq357,9
 doi_10.1093_bioinformatics_btq379,10
 doi_10.1093_bioinformatics_btq395,36
+doi_10.1093_bioinformatics_btq452,294
 doi_10.1093_bioinformatics_btq488,166
 doi_10.1093_bioinformatics_btq501,24
 doi_10.1093_bioinformatics_btq590,59
@@ -849,11 +855,14 @@ doi_10.1093_bioinformatics_btr492,19
 doi_10.1093_bioinformatics_btr605,93
 doi_10.1093_bioinformatics_btr625,193
 doi_10.1093_bioinformatics_btr646,55
+doi_10.1093_bioinformatics_btr668,88
 doi_10.1093_bioinformatics_btr700,65
 doi_10.1093_bioinformatics_bts122,8
 doi_10.1093_bioinformatics_bts199,20987
 doi_10.1093_bioinformatics_bts206,30
+doi_10.1093_bioinformatics_bts264,85
 doi_10.1093_bioinformatics_bts293,25
+doi_10.1093_bioinformatics_bts337,69
 doi_10.1093_bioinformatics_bts463,36
 doi_10.1093_bioinformatics_bts722,37
 doi_10.1093_bioinformatics_btt129,27
@@ -900,6 +909,7 @@ doi_10.1093_bioinformatics_btv391,21
 doi_10.1093_bioinformatics_btv464,6
 doi_10.1093_bioinformatics_btv466,17
 doi_10.1093_bioinformatics_btv470,358
+doi_10.1093_bioinformatics_btv507,99
 doi_10.1093_bioinformatics_btv612,561
 doi_10.1093_bioinformatics_btv645,8
 doi_10.1093_bioinformatics_btv650,60
@@ -918,6 +928,7 @@ doi_10.1093_bioinformatics_btw338,25
 doi_10.1093_bioinformatics_btw382,48
 doi_10.1093_bioinformatics_btw407,8
 doi_10.1093_bioinformatics_btw448,10
+doi_10.1093_bioinformatics_btw490,73
 doi_10.1093_bioinformatics_btw584,9
 doi_10.1093_bioinformatics_btw629,92
 doi_10.1093_bioinformatics_btw683,47
@@ -931,6 +942,7 @@ doi_10.1093_bioinformatics_btx183,553
 doi_10.1093_bioinformatics_btx201,5
 doi_10.1093_bioinformatics_btx223,54
 doi_10.1093_bioinformatics_btx248,13
+doi_10.1093_bioinformatics_btx257,136
 doi_10.1093_bioinformatics_btx267,16
 doi_10.1093_bioinformatics_btx315,74
 doi_10.1093_bioinformatics_btx326,18
@@ -940,6 +952,7 @@ doi_10.1093_bioinformatics_btx563,16
 doi_10.1093_bioinformatics_btx634,13
 doi_10.1093_bioinformatics_btx645,21
 doi_10.1093_bioinformatics_btx674,34
+doi_10.1093_bioinformatics_btx679,112
 doi_10.1093_bioinformatics_btx685,5
 doi_10.1093_bioinformatics_btx687,0
 doi_10.1093_bioinformatics_btx692,113
@@ -959,6 +972,7 @@ doi_10.1093_bioinformatics_bty227,8
 doi_10.1093_bioinformatics_bty396,16
 doi_10.1093_bioinformatics_bty437,11
 doi_10.1093_bioinformatics_bty655,9
+doi_10.1093_bioinformatics_bty690,75
 doi_10.1093_bioinformatics_bty717,15
 doi_10.1093_bioinformatics_btz048,96
 doi_10.1093_bioinformatics_btz096,65
@@ -1371,7 +1385,9 @@ doi_10.1093_nar_gkx278,10
 doi_10.1093_nar_gkx311,6
 doi_10.1093_nar_gkx323,165
 doi_10.1093_nar_gkx376,144
+doi_10.1093_nar_gkx735,106
 doi_10.1093_nar_gkx799,17
+doi_10.1093_nar_gky1025,231
 doi_10.1093_nar_gky317,207
 doi_10.1093_nar_gky321,5
 doi_10.1093_nar_gky406,95
@@ -1383,10 +1399,12 @@ doi_10.1093_nar_gkz1001,1934
 doi_10.1093_nar_gkz1014,106
 doi_10.1093_nar_gkz1046,10
 doi_10.1093_nar_gkz1088,33
+doi_10.1093_nar_gkz167,153
 doi_10.1093_nar_gkz325,6
 doi_10.1093_nar_gkz867,57
 doi_10.1093_nar_gkz888,153
 doi_10.1093_nar_gkz919,131
+doi_10.1093_nar_gkz933,65
 doi_10.1093_nar_gkz945,143
 doi_10.1093_nar_gkz970,43
 doi_10.1093_nar_gkz980,334
@@ -1723,6 +1741,7 @@ doi_10.1101_gr.1642804,98
 doi_10.1101_gr.169508.113,365
 doi_10.1101_gr.185272.114,512
 doi_10.1101_gr.189894.115,31
+doi_10.1101_gr.196394.115,572
 doi_10.1101_gr.200535.115,1185
 doi_10.1101_gr.201574.115,95
 doi_10.1101_gr.216102,302
@@ -1812,6 +1831,7 @@ doi_10.1186_1471-2105-14-188,16
 doi_10.1186_1471-2105-14-321,148
 doi_10.1186_1471-2105-14-78,9
 doi_10.1186_1471-2105-14-9,31
+doi_10.1186_1471-2105-15-280,84
 doi_10.1186_1471-2105-15-s9-s1,19
 doi_10.1186_1471-2105-6-162,58
 doi_10.1186_1471-2105-6-79,198
@@ -1980,6 +2000,7 @@ doi_10.1186_gb-2011-12-3-r22,1859
 doi_10.1186_gb-2011-12-8-r83,799
 doi_10.1186_gb-2012-13-3-r16,467
 doi_10.1186_gb-2014-15-2-r35,35
+doi_10.1186_gb-2014-15-2-r38,328
 doi_10.1186_s12859-015-0491-6,37
 doi_10.1186_s12859-015-0742-6,73
 doi_10.1186_s12859-015-0834-3,1
@@ -2064,6 +2085,7 @@ doi_10.1186_s13059-017-1165-7,40
 doi_10.1186_s13059-017-1366-0,46
 doi_10.1186_s13059-018-1415-3,80
 doi_10.1186_s13059-018-1430-4,87
+doi_10.1186_s13059-018-1513-2,64
 doi_10.1186_s13059-019-1642-2,517
 doi_10.1186_s13059-019-1698-z,47
 doi_10.1186_s13059-019-1706-3,31
@@ -2085,6 +2107,7 @@ doi_10.1186_s13059-022-02726-7,18
 doi_10.1186_s13059-022-02780-1,165
 doi_10.1186_s13059-022-02790-z,15
 doi_10.1186_s13059-022-02815-7,17
+doi_10.1186_s13059-023-02934-9,55
 doi_10.1186_s13059-023-02936-7,17
 doi_10.1186_s13059-023-02941-w,40
 doi_10.1186_s13059-023-02954-5,7

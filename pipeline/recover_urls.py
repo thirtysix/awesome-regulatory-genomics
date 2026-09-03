@@ -147,6 +147,15 @@ def from_kept_path(http: requests.Session, tool: dict) -> tuple[str, str]:
         return "", ""
     if path.lower() in final.lower():
         return "", ""
+    # Append only to a bare root. When the redirect already lands on a path we
+    # would be stitching two together: FirstEF redirects to ESEfinder's cgi and
+    # this produced .../ESE3/esefinder.cgi/tools/FirstEF, a url that exists
+    # nowhere. An archive redirect that keeps the site as a subdirectory -
+    # archiveweb.epfl.ch/lcbb.epfl.ch/ - is the case worth serving.
+    tail = fp.path.strip("/")
+    if tail and not (fp.netloc.lower().startswith(("archive", "web.archive"))
+                     or tail.count("/") == 0 and "." in tail):
+        return "", ""
     cand = final.rstrip("/") + "/" + path
     try:
         rr = http.get(cand, timeout=25, allow_redirects=True)
