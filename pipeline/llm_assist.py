@@ -375,6 +375,8 @@ def main() -> None:
                     help="retry model for invalid or low-confidence bulk output")
     ap.add_argument("--no-escalate", action="store_true")
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--only-uncategorised", action="store_true",
+                    help="categorise: only rows the rules left with no category")
     ap.add_argument("--workers", type=int, default=8,
                     help="concurrent API calls")
     ap.add_argument("--refresh", action="store_true",
@@ -469,6 +471,12 @@ def main() -> None:
     # --- categorise ---------------------------------------------------------
     if "categorise" in jobs:
         tools = [t for t in catalog if t["source"] == "bio.tools"]
+        if args.only_uncategorised:
+            # The rules derive categories from EDAM terms and a narrower text
+            # pattern than the one that admits a record, so a tool admitted on
+            # its description can arrive carrying no category at all - present
+            # in the catalog and reachable by none of its category filters.
+            tools = [t for t in tools if not t.get("categories")]
         tools = tools[: args.limit] if args.limit else tools
         print(f"categorise: {len(tools)} tools via {args.model} "
               f"({args.workers} workers)")
@@ -491,8 +499,22 @@ def main() -> None:
                               "confidence": res.get("confidence", "medium")}}
 
         out = run_batch(tools, do_categorise, "categorise")
-        proposals["categories"] = out
-        print(f"  {len(out)} differ from the rule-derived categories")
+        # A full run REPLACES the block: a tool whose rule-derived categories
+        # now match its proposal drops out of `out`, and replacing is what
+        # retires that stale proposal. A filtered run has no opinion about the
+        # tools it never looked at, so it must merge - replacing there silently
+        # discards every proposal outside the filter. Found the hard way: one
+        # `--only-uncategorised` run cut the block from 741 entries to 58.
+        partial = bool(args.limit or args.only_uncategorised)
+        if partial:
+            merged = dict(proposals.get("categories") or {})
+            merged.update(out)
+            proposals["categories"] = merged
+            print(f"  {len(out)} differ from the rule-derived categories "
+                  f"(merged into {len(merged)}; filtered run)")
+        else:
+            proposals["categories"] = out
+            print(f"  {len(out)} differ from the rule-derived categories")
 
     # --- describe -----------------------------------------------------------
     if "describe" in jobs:
