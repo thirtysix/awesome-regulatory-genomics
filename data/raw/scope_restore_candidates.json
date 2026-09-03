@@ -1,0 +1,426 @@
+[
+ {
+  "biotools_id": "bimm_sc",
+  "set": "admitted_out_of_scope",
+  "bulk": true,
+  "bulk_reason": "Discovers hub genes of TGF\u03b2, MYC, and SMAD3, which are transcription factors, and is described as gene regulatory network analysis.",
+  "second": true,
+  "second_reason": "Method infers hub genes and regulatory networks, matching grn-inference scope."
+ },
+ {
+  "biotools_id": "evoprinter",
+  "set": "admitted_out_of_scope",
+  "bulk": true,
+  "bulk_reason": "Discovers conserved DNA sequences across species, which is comparative regulatory sequence analysis.",
+  "second": true,
+  "second_reason": "Discovers conserved DNA sequences among orthologs, fitting comparative conservation of regulatory sequence."
+ },
+ {
+  "biotools_id": "ibm_pattern_discovery",
+  "set": "admitted_out_of_scope",
+  "bulk": true,
+  "bulk_reason": "Server includes motif discovery tools for DNA sequences, but also many out-of-scope tools.",
+  "second": true,
+  "second_reason": "Server includes pattern discovery tools for DNA sequences, which aligns with motif discovery."
+ },
+ {
+  "biotools_id": "kimi",
+  "set": "admitted_out_of_scope",
+  "bulk": true,
+  "bulk_reason": "The tool identifies sequence motifs from molecular sequences, which matches motif-discovery.",
+  "second": true,
+  "second_reason": "De novo motif discovery with FDR control."
+ },
+ {
+  "biotools_id": "meta-meme",
+  "set": "admitted_out_of_scope",
+  "bulk": true,
+  "bulk_reason": "Builds HMM from de novo motifs and scans sequences, matching motif-discovery and motif-scanning.",
+  "second": true,
+  "second_reason": "Builds HMMs from discovered motifs and scans sequences for matches, fitting motif-scanning."
+ },
+ {
+  "biotools_id": "3DGV",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Visualizes 3D genome models from Hi-C data, directly serving chromatin-3d analysis.",
+  "second": true,
+  "second_reason": "Visualizes 3D genome models from Hi-C data, fitting chromatin-3D."
+ },
+ {
+  "biotools_id": "ACCOST",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "It analyzes Hi-C contact counts, which falls under chromatin-3d.",
+  "second": true,
+  "second_reason": "Assigns statistical significance to differences in Hi-C contact counts, fitting chromatin-3d."
+ },
+ {
+  "biotools_id": "DLO_Hi-C",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "DLO Hi-C is a chromatin conformation capture method for analyzing 3D genome organization, which falls under chromatin-3d.",
+  "second": true,
+  "second_reason": "Hi-C data analysis pipeline for chromosome conformation capture."
+ },
+ {
+  "biotools_id": "FreeHi-C",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Simulates Hi-C data, directly relevant to chromatin-3D analysis.",
+  "second": true,
+  "second_reason": "Simulates Hi-C data, directly supporting the chromatin-3d scope."
+ },
+ {
+  "biotools_id": "HiCNAtra",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "It processes Hi-C data for chromatin 3D structure analysis, which is explicitly in scope under chromatin-3d.",
+  "second": true,
+  "second_reason": "Corrects Hi-C contact maps for CNV-induced biases, fitting chromatin-3d scope."
+ },
+ {
+  "biotools_id": "HiCeekR",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Hi-C data analysis for chromatin 3D structure is explicitly in scope.",
+  "second": true,
+  "second_reason": "Hi-C data analysis tool for loops, TADs and chromatin contacts."
+ },
+ {
+  "biotools_id": "Meffil",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Analyzes DNA methylation data, which is in scope under dna-methylation.",
+  "second": true,
+  "second_reason": "Tool analyzes DNA methylation data, matching the dna-methylation category."
+ },
+ {
+  "biotools_id": "bat",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "BAT performs DNA methylation analysis, which is explicitly in scope.",
+  "second": true,
+  "second_reason": "Bisulfite sequencing toolkit for methylation calling and DMR identification."
+ },
+ {
+  "biotools_id": "bhi-cect",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "It analyzes Hi-C data to find self-interacting chromosome clusters, which is chromatin 3D analysis.",
+  "second": true,
+  "second_reason": "Identifies hierarchical chromatin clusters from Hi-C data, fitting chromatin-3d."
+ },
+ {
+  "biotools_id": "champ",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Tool for DNA methylation analysis, which is explicitly in scope.",
+  "second": true,
+  "second_reason": "Identifies differentially methylated regions, fitting the dna-methylation category."
+ },
+ {
+  "biotools_id": "comet_visualisation",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Visualizes DNA co-methylation patterns and epigenome-wide association results, directly serving dna-methylation analysis.",
+  "second": true,
+  "second_reason": "visualizes EWAS results and DNA co-methylation patterns, fitting dna-methylation."
+ },
+ {
+  "biotools_id": "coolpuppy",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Performs pile-up analysis on Hi-C data, which is chromatin 3D interaction analysis.",
+  "second": true,
+  "second_reason": "Hi-C pile-up analysis tool for detecting and averaging chromatin interactions, fitting the chromatin-3d scope."
+ },
+ {
+  "biotools_id": "covnorm",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Normalizes Hi-C data, directly supporting chromatin-3d analysis.",
+  "second": true,
+  "second_reason": "Hi-C data normalization directly supports chromatin-3d analysis"
+ },
+ {
+  "biotools_id": "cplexa",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Models gene expression at complex promoters with TF binding sites, directly studying regulatory elements.",
+  "second": true,
+  "second_reason": "Computes gene expression probabilities from transcription-factor binding energetics at complex promoters."
+ },
+ {
+  "biotools_id": "csynth",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Visualizes 3D genome structure from Hi-C data, directly serving chromatin-3D analysis.",
+  "second": true,
+  "second_reason": "Visualizes 3D genome structure from Hi-C data, fitting chromatin-3d scope."
+ },
+ {
+  "biotools_id": "dchic",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Analyzes Hi-C data for differential compartments, which is chromatin 3D analysis.",
+  "second": true,
+  "second_reason": "Performs differential compartment analysis on Hi-C data, fitting the chromatin-3d scope."
+ },
+ {
+  "biotools_id": "diffgr",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Detects differential genomic regions at TAD level from Hi-C data, directly fitting chromatin-3d category.",
+  "second": true,
+  "second_reason": "Detects differential genomic regions at TAD level from Hi-C contact maps, fitting chromatin-3d."
+ },
+ {
+  "biotools_id": "enhic",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "It predicts Hi-C contact maps, which is chromatin 3D analysis.",
+  "second": true,
+  "second_reason": "Generates fine-resolution Hi-C contact maps, fitting chromatin-3d for 3D chromatin structure analysis."
+ },
+ {
+  "biotools_id": "esshi-c",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Directly analyzes Hi-C matrices for chromatin 3D structure.",
+  "second": true,
+  "second_reason": "Processes Hi-C matrices to isolate biological features and improve interaction patterns."
+ },
+ {
+  "biotools_id": "firecaller",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Detects frequently interacting regions from Hi-C data, which is chromatin 3D analysis.",
+  "second": true,
+  "second_reason": "Detects frequently interacting regions from Hi-C data, fitting chromatin-3d."
+ },
+ {
+  "biotools_id": "fithic-py",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "It analyzes Hi-C contact maps, which is chromatin-3d analysis.",
+  "second": true,
+  "second_reason": "Hi-C analysis tool for chromosomal contact maps, fitting the chromatin-3d scope."
+ },
+ {
+  "biotools_id": "hicGAN",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "It processes Hi-C data, which is chromatin 3D data, directly in scope.",
+  "second": true,
+  "second_reason": "Infers high-resolution Hi-C data, directly addressing chromatin-3d."
+ },
+ {
+  "biotools_id": "hicenterprise",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Identifies long-range chromatin contacts from Hi-C data, fitting chromatin-3d category.",
+  "second": true,
+  "second_reason": "Identifies long-range chromatin contacts from Hi-C data, fitting chromatin-3d."
+ },
+ {
+  "biotools_id": "hicexplorer",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Analyzes Hi-C, capture Hi-C and single-cell Hi-C data, directly serving chromatin-3d analysis.",
+  "second": true,
+  "second_reason": "Hi-C data analysis tool for chromatin conformation, loops, TADs and compartments."
+ },
+ {
+  "biotools_id": "hichap",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Hi-C data processing and analysis is chromatin 3D.",
+  "second": true,
+  "second_reason": "Processes diploid Hi-C data for chromatin 3D structure analysis."
+ },
+ {
+  "biotools_id": "hicrayon",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "It integrates 3D chromatin organization maps, which falls under chromatin-3d.",
+  "second": true,
+  "second_reason": "Integrates 3D chromatin organization maps with 1D datasets, fitting the chromatin-3d scope."
+ },
+ {
+  "biotools_id": "hicube",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Tool for Hi-C and 3D genome data visualization, which falls under chromatin-3d category.",
+  "second": true,
+  "second_reason": "Hi-C visualization tool matching chromatin-3d category"
+ },
+ {
+  "biotools_id": "hicup",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Processes Hi-C data for chromatin 3D interactions.",
+  "second": true,
+  "second_reason": "Processes Hi-C data for chromatin-3D analysis."
+ },
+ {
+  "biotools_id": "hifi",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Estimates DNA-DNA interaction frequency from Hi-C data, directly serving chromatin-3D analysis.",
+  "second": true,
+  "second_reason": "Infers DNA-DNA interaction frequencies from Hi-C data, fitting chromatin-3d."
+ },
+ {
+  "biotools_id": "hisif",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Identifies promoter-distal loops from Hi-C data, directly fitting chromatin-3d category.",
+  "second": true,
+  "second_reason": "Hi-C loop calling tool identifying promoter-distal chromatin interactions."
+ },
+ {
+  "biotools_id": "idbp-dep",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Predicts DNA-binding proteins, which are directly involved in gene regulation and are in scope.",
+  "second": true,
+  "second_reason": "predicts DNA-binding proteins from sequence, which is explicitly in scope"
+ },
+ {
+  "biotools_id": "malacoda",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Designed for MPRA analysis, which is a reporter-assay method in scope.",
+  "second": true,
+  "second_reason": "Designed for Bayesian analysis of MPRA and CRISPR screens, which are massively parallel regulatory assays."
+ },
+ {
+  "biotools_id": "multimm",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "It reconstructs 3D genome structure from chromatin data, fitting chromatin-3d.",
+  "second": true,
+  "second_reason": "reconstructs 3D genome structure from nucleosome positioning, loops, and compartments"
+ },
+ {
+  "biotools_id": "orchestrating_chromosome_conformation",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "The tool is specifically for analyzing chromosome conformation capture data (Hi-C, micro-C), which falls under chromatin-3d.",
+  "second": true,
+  "second_reason": "Hi-C analysis suite for chromatin 3D structure."
+ },
+ {
+  "biotools_id": "pareidolia",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Detects chromatin loops and domain borders from Hi-C data, directly matching chromatin-3d category.",
+  "second": true,
+  "second_reason": "Detects differential chromatin loops and domain borders from Hi-C data, fitting chromatin-3d."
+ },
+ {
+  "biotools_id": "reactr",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Includes motif discovery and promoter analysis, which are regulatory genomics tasks.",
+  "second": true,
+  "second_reason": "Includes motif discovery and promoter analysis in its regulatory characterization tier"
+ },
+ {
+  "biotools_id": "scdec-hi-c",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Analyzes single-cell Hi-C data for chromatin 3D structure, which is in scope under chromatin-3d and single-cell.",
+  "second": true,
+  "second_reason": "Single-cell Hi-C analysis falls under chromatin-3D."
+ },
+ {
+  "biotools_id": "snapfish",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Identifies chromatin loops from DNA FISH data, which is chromatin 3D analysis.",
+  "second": true,
+  "second_reason": "Identifies chromatin loops from imaging data, fitting the chromatin-3d category."
+ },
+ {
+  "biotools_id": "spectraltad",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "Detects TADs from Hi-C data, which is chromatin 3D structure analysis.",
+  "second": true,
+  "second_reason": "Detects TADs from Hi-C contact matrices, fitting the chromatin-3d category."
+ },
+ {
+  "biotools_id": "yahs",
+  "set": "out_of_scope_confirmed",
+  "bulk": true,
+  "bulk_reason": "It uses Hi-C data for scaffolding, which falls under chromatin-3d.",
+  "second": true,
+  "second_reason": "Hi-C scaffolding tool falls under chromatin-3d category for Hi-C data processing."
+ },
+ {
+  "biotools_id": "Meffil",
+  "set": "majority_out_of_scope",
+  "bulk": true,
+  "bulk_reason": "It analyzes DNA methylation data, which is explicitly in scope as 'dna-methylation'.",
+  "second": true,
+  "second_reason": "DNA methylation analysis is explicitly in scope under dna-methylation."
+ },
+ {
+  "biotools_id": "erma",
+  "set": "majority_out_of_scope",
+  "bulk": true,
+  "bulk_reason": "Epigenomics is broad but likely includes regulatory elements and histone marks.",
+  "second": true,
+  "second_reason": "Epigenomics software broadly aligns with regulatory-genomics scope."
+ },
+ {
+  "biotools_id": "giloop",
+  "set": "majority_out_of_scope",
+  "bulk": true,
+  "bulk_reason": "Detects chromatin loops from Hi-C data, which is chromatin-3d analysis.",
+  "second": true,
+  "second_reason": "Detects chromatin loops from Hi-C data, fitting the chromatin-3d category."
+ },
+ {
+  "biotools_id": "hi-c_aggregate",
+  "set": "majority_out_of_scope",
+  "bulk": true,
+  "bulk_reason": "Tool analyzes Hi-C data for chromatin interactions, which is chromatin-3d.",
+  "second": true,
+  "second_reason": "Hi-C chromatin interaction network tool falls under chromatin-3d category."
+ },
+ {
+  "biotools_id": "mea",
+  "set": "majority_out_of_scope",
+  "bulk": true,
+  "bulk_reason": "Pipeline for methylomic and epigenomic allele-specific analysis, directly relevant to dna-methylation and regulatory genomics.",
+  "second": true,
+  "second_reason": "Pipeline for allele-specific analysis of methylomic and epigenomic data including methylation and ChIP-seq."
+ },
+ {
+  "biotools_id": "pareidolia",
+  "set": "majority_out_of_scope",
+  "bulk": true,
+  "bulk_reason": "Detects chromatin loops and domain borders from Hi-C data, matching chromatin-3d.",
+  "second": true,
+  "second_reason": "Detects differential chromatin loops and domain borders from Hi-C data."
+ },
+ {
+  "biotools_id": "snapfish",
+  "set": "majority_out_of_scope",
+  "bulk": true,
+  "bulk_reason": "Identifies chromatin loops from multiplexed DNA FISH data, which is chromatin 3D analysis.",
+  "second": true,
+  "second_reason": "Identifies chromatin loops from imaging data, fitting chromatin-3d."
+ },
+ {
+  "biotools_id": "tcbf",
+  "set": "majority_out_of_scope",
+  "bulk": true,
+  "bulk_reason": "Analyzes topologically associating domains, which are chromatin 3D structures, fitting chromatin-3d category.",
+  "second": true,
+  "second_reason": "Tool for analyzing topologically associating domains, fitting chromatin-3d."
+ }
+]
