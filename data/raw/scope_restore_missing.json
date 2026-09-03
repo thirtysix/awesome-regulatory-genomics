@@ -1,0 +1,304 @@
+[
+ {
+  "id": "csynth",
+  "name": "CSynth",
+  "desc": "CSynth is a physics based interactive visualisation platform for visualizing the 3D structure of the biological molecules. It is primarily designed to provide an engaging way to explore and understand the complex structure of the genome in 3D by integrating da",
+  "homepage": "https://csynth.org",
+  "set": "out_of_scope_confirmed",
+  "admitted_by": "",
+  "bulk": "Visualizes 3D genome structure from Hi-C data, directly serving chromatin-3D analysis.",
+  "second": "Visualizes 3D genome structure from Hi-C data, fitting chromatin-3d scope.",
+  "ops": [
+   "Visualisation",
+   "Loop modelling",
+   "Virtual screening"
+  ],
+  "theme": "chromatin 3D / Hi-C"
+ },
+ {
+  "id": "multimm",
+  "name": "MultiMM",
+  "desc": "MultiMM is an open-source software utilizing OpenMM for whole genome 3D structure reconstruction. It employs a multi-scale energy minimization strategy and allows users to input files specifying nucleosome positioning, loops, compartments, or subcompartments.",
+  "homepage": "https://pypi.org/project/MultiMM/",
+  "set": "out_of_scope_confirmed",
+  "admitted_by": "",
+  "bulk": "It reconstructs 3D genome structure from chromatin data, fitting chromatin-3d.",
+  "second": "reconstructs 3D genome structure from nucleosome positioning, loops, and compartments",
+  "ops": [
+   "Visualisation",
+   "Loop modelling",
+   "Phasing"
+  ],
+  "theme": "chromatin 3D / Hi-C"
+ },
+ {
+  "id": "orchestrating_chromosome_conformation",
+  "name": "Orchestrating chromosome conformation capture analysis with Bioconductor",
+  "desc": "OHCA is a Bioconductor book and associated R package suite designed to orchestrate chromosome conformation capture analysis. It provides data structures, computational methods, and visualization tools to investigate Hi-C, micro-C, and related data.",
+  "homepage": "https://bioconductor.org/books/OHCA/",
+  "set": "out_of_scope_confirmed",
+  "admitted_by": "",
+  "bulk": "The tool is specifically for analyzing chromosome conformation capture data (Hi-C, micro-C), which falls under chromatin-3d.",
+  "second": "Hi-C analysis suite for chromatin 3D structure.",
+  "ops": [
+   "Visualisation",
+   "Aggregation",
+   "Weighted correlation network analysis",
+   "Scaffolding"
+  ],
+  "theme": "chromatin 3D / Hi-C"
+ },
+ {
+  "id": "yahs",
+  "name": "YaHS",
+  "desc": "YaHS is scaffolding tool using Hi-C data. It relies on a new algorithm for contig joining detection which considers the topological distribution of Hi-C signals aiming to distinguish real interaction signals from mapping noises.",
+  "homepage": "https://github.com/c-zhou/yahs",
+  "set": "out_of_scope_confirmed",
+  "admitted_by": "",
+  "bulk": "It uses Hi-C data for scaffolding, which falls under chromatin-3d.",
+  "second": "Hi-C scaffolding tool falls under chromatin-3d category for Hi-C data processing.",
+  "ops": [
+   "Scaffolding",
+   "Genome assembly",
+   "De-novo assembly"
+  ],
+  "theme": "chromatin 3D / Hi-C"
+ },
+ {
+  "id": "bat",
+  "name": "BAT",
+  "desc": "Bisulfite Analysis Toolkit. It facilitates the analysis of bisulfite sequencing data. It covers the essential analysis steps of read alignment, quality control, extraction of methylation information, and calling of differentially methylated regions, as well as",
+  "homepage": "http://www.bioinf.uni-leipzig.de/Software/BAT/",
+  "set": "out_of_scope_confirmed",
+  "admitted_by": "",
+  "bulk": "BAT performs DNA methylation analysis, which is explicitly in scope.",
+  "second": "Bisulfite sequencing toolkit for methylation calling and DMR identification.",
+  "ops": [
+   "Sequence analysis",
+   "Mapping",
+   "Variant calling",
+   "Sequence annotation"
+  ],
+  "theme": "DNA methylation"
+ },
+ {
+  "id": "champ",
+  "name": "ChAMP",
+  "desc": "The package includes quality control metrics, a selection of normalization methods and novel methods to identify differentially methylated regions and to highlight copy number alterations.",
+  "homepage": "http://bioconductor.org/packages/release/bioc/html/ChAMP.html",
+  "set": "out_of_scope_confirmed",
+  "admitted_by": "",
+  "bulk": "Tool for DNA methylation analysis, which is explicitly in scope.",
+  "second": "Identifies differentially methylated regions, fitting the dna-methylation category.",
+  "ops": [
+   "Peak calling",
+   "Methylation analysis"
+  ],
+  "theme": "DNA methylation"
+ },
+ {
+  "id": "comet_visualisation",
+  "name": "coMET",
+  "desc": "Visualisation of regional epigenome-wide association scan results and DNA co-methylation patterns.",
+  "homepage": "http://epigen.kcl.ac.uk/comet/",
+  "set": "out_of_scope_confirmed",
+  "admitted_by": "",
+  "bulk": "Visualizes DNA co-methylation patterns and epigenome-wide association results, directly serving dna-methylation analysis.",
+  "second": "visualizes EWAS results and DNA co-methylation patterns, fitting dna-methylation.",
+  "ops": [
+   "Genome visualisation"
+  ],
+  "theme": "DNA methylation"
+ },
+ {
+  "id": "mea",
+  "name": "MEA",
+  "desc": "A Methylomic and Epigenomic Allele-specific analysis pipeline",
+  "homepage": "https://github.com/julienrichardalbert/MEA",
+  "set": "majority_out_of_scope",
+  "admitted_by": "",
+  "bulk": "Pipeline for methylomic and epigenomic allele-specific analysis, directly relevant to dna-methylation and regulatory genomics.",
+  "second": "Pipeline for allele-specific analysis of methylomic and epigenomic data including methylation and ChIP-seq.",
+  "ops": [
+   "Haplotype mapping",
+   "Variant calling",
+   "RNA-Seq analysis",
+   "Gene methylation analysis"
+  ],
+  "theme": "DNA methylation"
+ },
+ {
+  "id": "Meffil",
+  "name": "Meffil",
+  "desc": "algorithms for analyzing DNA methylation data generated using Infinium HumanMethylation450 or MethylationEPIC BeadChips\nEpigenome-Wide Association Studies (EWAS)",
+  "homepage": "https://github.com/perishky/meffil",
+  "set": "out_of_scope_confirmed",
+  "admitted_by": "",
+  "bulk": "Analyzes DNA methylation data, which is in scope under dna-methylation.",
+  "second": "Tool analyzes DNA methylation data, matching the dna-methylation category.",
+  "ops": [
+   "Parsing",
+   "Genotyping"
+  ],
+  "theme": "DNA methylation"
+ },
+ {
+  "id": "ibm_pattern_discovery",
+  "name": "IBM Bioinformatics and Pattern Discovery Group",
+  "desc": "Extensive server possessing a wide range of tools for pattern discovery in DNA and protein sequences as well as in text. Tools for multiple sequence alignment, gene discovery, protein annotation, and other applications also exist on this server. A detailed hel",
+  "homepage": "http://cbcsrv.watson.ibm.com/Tspd.html",
+  "set": "admitted_out_of_scope",
+  "admitted_by": "",
+  "bulk": "Server includes motif discovery tools for DNA sequences, but also many out-of-scope tools.",
+  "second": "Server includes pattern discovery tools for DNA sequences, which aligns with motif discovery.",
+  "ops": [
+   "Indel detection",
+   "Multiple sequence alignment",
+   "Protein sequence analysis",
+   "Service discovery"
+  ],
+  "theme": "motif discovery"
+ },
+ {
+  "id": "kimi",
+  "name": "KIMI",
+  "desc": "Knockoff Inference for Motif Identification from molecular sequences with controlled false discovery rate.\n\nKIMI: R package based on Knockoff Inference for Motif Identification from molecular sequences with controlled false discovery rate.",
+  "homepage": "https://github.com/xinbaiusc/KIMI",
+  "set": "admitted_out_of_scope",
+  "admitted_by": "",
+  "bulk": "The tool identifies sequence motifs from molecular sequences, which matches motif-discovery.",
+  "second": "De novo motif discovery with FDR control.",
+  "ops": [
+   "k-mer counting",
+   "Sequence motif discovery",
+   "Standardisation and normalisation",
+   "Sequence assembly"
+  ],
+  "theme": "motif discovery"
+ },
+ {
+  "id": "meta-meme",
+  "name": "Meta-MEME",
+  "desc": "Creates hidden Markov model of motif from MEME output and searches sequence database for matches to this motif.",
+  "homepage": "http://metameme.sdsc.edu/",
+  "set": "admitted_out_of_scope",
+  "admitted_by": "",
+  "bulk": "Builds HMM from de novo motifs and scans sequences, matching motif-discovery and motif-scanning.",
+  "second": "Builds HMMs from discovered motifs and scans sequences for matches, fitting motif-scanning.",
+  "ops": [
+   "Sequence similarity search",
+   "Sequence motif recognition",
+   "Sequence database search",
+   "Modelling and simulation"
+  ],
+  "theme": "motif discovery"
+ },
+ {
+  "id": "reactr",
+  "name": "REACTR",
+  "desc": "Reactr is an modularized, Snakemake workflow for automated, species-agnostic characterization of gene families from sequence to experimental design. Given a query protein sequence and NCBI taxonomy IDs (or RefSeq assembly accessions), reactr retrieves genomic ",
+  "homepage": "https://zenodo.org/records/21125109",
+  "set": "out_of_scope_confirmed",
+  "admitted_by": "",
+  "bulk": "Includes motif discovery and promoter analysis, which are regulatory genomics tasks.",
+  "second": "Includes motif discovery and promoter analysis in its regulatory characterization tier",
+  "ops": [
+   "Data retrieval",
+   "Annotation",
+   "Comparison",
+   "Generation"
+  ],
+  "theme": "motif discovery"
+ },
+ {
+  "id": "erma",
+  "name": "erma",
+  "desc": "Software and data to support epigenomic road map adventures.",
+  "homepage": "http://bioconductor.org/packages/release/bioc/html/erma.html",
+  "set": "majority_out_of_scope",
+  "admitted_by": "",
+  "bulk": "Epigenomics is broad but likely includes regulatory elements and histone marks.",
+  "second": "Epigenomics software broadly aligns with regulatory-genomics scope.",
+  "ops": [
+   "Mapping"
+  ],
+  "theme": "ChIP-seq / peaks"
+ },
+ {
+  "id": "bimm_sc",
+  "name": "BIMM",
+  "desc": "A novel Bioinformatic Inference and Multiscale Modeling (BIMM) method that can  discovers hub genes of TGF\u03b2, MYC, and SMAD3 varied underlie DEX treatment",
+  "homepage": "https://github.com/chenm19/BIMM",
+  "set": "admitted_out_of_scope",
+  "admitted_by": "",
+  "bulk": "Discovers hub genes of TGF\u03b2, MYC, and SMAD3, which are transcription factors, and is described as gene regulatory network analysis.",
+  "second": "Method infers hub genes and regulatory networks, matching grn-inference scope.",
+  "ops": [
+   "Gene-set enrichment analysis",
+   "Pathway analysis",
+   "Gene regulatory network analysis"
+  ],
+  "theme": "other"
+ },
+ {
+  "id": "cplexa",
+  "name": "CplexA",
+  "desc": "CplexA is a Mathematica package that uses functional programming to efficiently compute probabilities and average properties over such exponentially large number of states from the energetics of the interactions. The package is particularly suited to study gen",
+  "homepage": "http://cplexa.sourceforge.net/",
+  "set": "out_of_scope_confirmed",
+  "admitted_by": "",
+  "bulk": "Models gene expression at complex promoters with TF binding sites, directly studying regulatory elements.",
+  "second": "Computes gene expression probabilities from transcription-factor binding energetics at complex promoters.",
+  "ops": [
+   "Sequence assembly"
+  ],
+  "theme": "other"
+ },
+ {
+  "id": "evoprinter",
+  "name": "EvoPrinter",
+  "desc": "Comparative genomics tool for discovering conserved DNA sequences that are shared among three or more orthologous DNAs.",
+  "homepage": "https://evoprinter.ninds.nih.gov/evoprintprogramHD/evphd.html",
+  "set": "admitted_out_of_scope",
+  "admitted_by": "",
+  "bulk": "Discovers conserved DNA sequences across species, which is comparative regulatory sequence analysis.",
+  "second": "Discovers conserved DNA sequences among orthologs, fitting comparative conservation of regulatory sequence.",
+  "ops": [
+   "Sequence motif discovery",
+   "Nucleic acid feature detection"
+  ],
+  "theme": "other"
+ },
+ {
+  "id": "idbp-dep",
+  "name": "iDBP-DEP",
+  "desc": "Sequence-based Detection of DNA-binding Proteins using Multiple-view Features Allied with Feature Selection.\n\nDNA-binding proteins play essential roles in many molecular functions and gene regulation. Therefore, it becomes highly desirable to develop effective",
+  "homepage": "https://github.com/Zll-codeside/iDBP-DEP",
+  "set": "out_of_scope_confirmed",
+  "admitted_by": "",
+  "bulk": "Predicts DNA-binding proteins, which are directly involved in gene regulation and are in scope.",
+  "second": "predicts DNA-binding proteins from sequence, which is explicitly in scope",
+  "ops": [
+   "DNA-binding protein prediction",
+   "RNA-binding protein prediction",
+   "DNA binding site prediction"
+  ],
+  "theme": "other"
+ },
+ {
+  "id": "malacoda",
+  "name": "malacoda",
+  "desc": "Bayesian modelling of high-throughput sequencing assays with malacoda.\n\nThe goal of malacoda is to enable Bayesian analysis of high-throughput genomic assays like massively parallel reporter assays (MPRA) and CRISPR screens.",
+  "homepage": "http://github.com/andrewGhazi/malacoda",
+  "set": "out_of_scope_confirmed",
+  "admitted_by": "",
+  "bulk": "Designed for MPRA analysis, which is a reporter-assay method in scope.",
+  "second": "Designed for Bayesian analysis of MPRA and CRISPR screens, which are massively parallel regulatory assays.",
+  "ops": [
+   "Variant calling",
+   "DNA barcoding",
+   "Genome annotation"
+  ],
+  "theme": "other"
+ }
+]
