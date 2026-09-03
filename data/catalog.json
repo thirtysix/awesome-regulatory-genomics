@@ -5723,7 +5723,7 @@
     "footprinting"
    ],
    "tier": "seed",
-   "homepage": "http://centipede.uchicago.edu/",
+   "homepage": "https://doi.org/10.1101/gr.112623.110",
    "repo_url": "",
    "repo_origin": "",
    "repo_stars": null,
@@ -5748,13 +5748,16 @@
    "biotools_url": "",
    "last_update": "",
    "source": "curated",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [],
    "_select_reason": "curated seed",
    "_identifiers": [
     "doi:10.1101/gr.112623.110"
    ],
    "_registries": {},
+   "note": "url reviewed 2026-09-03: http://centipede.uchicago.edu/ resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "tfbs-prediction",
    "homepage_status": "",
@@ -5777,7 +5780,7 @@
     "regulatory-elements"
    ],
    "tier": "core",
-   "homepage": "http://www.lncrnadb.org/",
+   "homepage": "https://doi.org/10.1093/nar/gkq1138",
    "repo_url": "",
    "repo_origin": "",
    "repo_stars": null,
@@ -5812,7 +5815,9 @@
    "biotools_url": "https://bio.tools/lncrnadb",
    "last_update": "2024-11-24",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "Gene expression profiling",
     "Query and retrieval",
@@ -5826,6 +5831,7 @@
    "_llm_applied": [
     "description"
    ],
+   "note": "url reviewed 2026-09-03: http://www.lncrnadb.org/ resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "regulatory-elements",
    "homepage_status": "",
@@ -8860,7 +8866,7 @@
     "regulatory-elements"
    ],
    "tier": "core",
-   "homepage": "http://rulai.cshl.org/tools/FirstEF/",
+   "homepage": "https://doi.org/10.1038/ng780",
    "repo_url": "",
    "repo_origin": "",
    "repo_stars": null,
@@ -8893,7 +8899,9 @@
    "biotools_url": "https://bio.tools/firstef",
    "last_update": "2024-11-25",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "CpG island and isochore detection",
     "Exonic splicing enhancer prediction",
@@ -8907,6 +8915,7 @@
    "_llm_applied": [
     "description"
    ],
+   "note": "url reviewed 2026-09-03: http://rulai.cshl.org/tools/FirstEF/ resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "tfbs-prediction",
    "homepage_status": "",
@@ -11973,7 +11982,7 @@
     "motif-databases"
    ],
    "tier": "core",
-   "homepage": "http://www.transcriptionfactor.org/index.cgi",
+   "homepage": "https://doi.org/10.1093/nar/gkm964",
    "repo_url": "",
    "repo_origin": "",
    "repo_stars": null,
@@ -12002,7 +12011,9 @@
    "biotools_url": "https://bio.tools/dbd",
    "last_update": "2024-11-24",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "Query and retrieval"
    ],
@@ -12015,6 +12026,7 @@
     "categories",
     "description"
    ],
+   "note": "url reviewed 2026-09-03: http://www.transcriptionfactor.org/index.cgi resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "motif-databases",
    "homepage_status": "",
@@ -12714,7 +12726,7 @@
     "peak-calling"
    ],
    "tier": "core",
-   "homepage": "http://www.htslib.org/",
+   "homepage": "https://doi.org/10.1093/bioinformatics/btn305",
    "repo_url": "",
    "repo_origin": "",
    "repo_stars": null,
@@ -12743,7 +12755,9 @@
    "biotools_url": "https://bio.tools/peakcalling_findpeaks",
    "last_update": "2024-11-25",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "Peak detection"
    ],
@@ -12757,6 +12771,7 @@
    "_llm_applied": [
     "description"
    ],
+   "note": "url reviewed 2026-09-03: http://www.htslib.org/ resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "peak-calling",
    "homepage_status": "",
@@ -21383,7 +21398,7 @@
     "comparative"
    ],
    "tier": "core",
-   "homepage": "http://labs.csb.utoronto.ca/moses/monkey.html",
+   "homepage": "https://doi.org/10.1186/gb-2004-5-12-r98",
    "repo_url": "",
    "repo_origin": "",
    "repo_stars": null,
@@ -21416,7 +21431,9 @@
    "biotools_url": "https://bio.tools/monkey",
    "last_update": "2024-11-25",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "Sequence alignment analysis (conservation)",
     "Transcription factor binding site prediction",
@@ -21431,6 +21448,7 @@
     "categories",
     "description"
    ],
+   "note": "url reviewed 2026-09-03: http://labs.csb.utoronto.ca/moses/monkey.html resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "motif-scanning",
    "homepage_status": "",
@@ -22340,7 +22358,7 @@
     "dna-methylation"
    ],
    "tier": "extended",
-   "homepage": "https://github.com/MEMO-toolbox/MEMO",
+   "homepage": "https://pubmed.ncbi.nlm.nih.gov/16845004/",
    "repo_url": "https://github.com/MEMO-toolbox/MEMO",
    "repo_origin": "recorded",
    "repo_stars": 0,
@@ -22374,7 +22392,9 @@
    "biotools_url": "https://bio.tools/memo",
    "last_update": "2024-11-25",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "Gene prediction",
     "Methylation analysis",
@@ -22385,6 +22405,7 @@
     "pmid:16845004"
    ],
    "_registries": {},
+   "note": "url reviewed 2026-09-03: https://github.com/MEMO-toolbox/MEMO resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "nucleosome-chromatin",
    "homepage_status": "",
@@ -25250,7 +25271,7 @@
     "chromatin-3d"
    ],
    "tier": "core",
-   "homepage": "https://github.com/PouletAxel/SIP/releases",
+   "homepage": "https://doi.org/10.1101/gr.257832.119",
    "repo_url": "https://github.com/PouletAxel/SIP",
    "repo_origin": "recorded",
    "repo_stars": 17,
@@ -25280,7 +25301,9 @@
    "biotools_url": "https://bio.tools/sip",
    "last_update": "2021-02-19",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "Loop modelling",
     "Peak calling",
@@ -25294,6 +25317,7 @@
    "_llm_applied": [
     "description"
    ],
+   "note": "url reviewed 2026-09-03: https://github.com/PouletAxel/SIP/releases resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "tfbs-prediction",
    "homepage_status": "",
@@ -27629,7 +27653,7 @@
     "nucleosome-chromatin"
    ],
    "tier": "core",
-   "homepage": "http://hint.yulab.org/",
+   "homepage": "https://doi.org/10.1093/bioinformatics/btu519",
    "repo_url": "",
    "repo_origin": "",
    "repo_stars": null,
@@ -27662,7 +27686,9 @@
    "biotools_url": "https://bio.tools/hint",
    "last_update": "2024-11-24",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "Nucleic acid feature detection",
     "Peak calling"
@@ -27675,6 +27701,7 @@
    "_llm_applied": [
     "description"
    ],
+   "note": "url reviewed 2026-09-03: http://hint.yulab.org/ resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "motif-databases",
    "homepage_status": "",
@@ -29731,7 +29758,7 @@
     "peak-annotation"
    ],
    "tier": "core",
-   "homepage": "https://github.com/cimprichlab/crossley_et_al_2019",
+   "homepage": "https://doi.org/10.1093/nar/gkaa500",
    "repo_url": "https://github.com/cimprichlab/crossley_et_al_2019",
    "repo_origin": "recorded",
    "repo_stars": 0,
@@ -29762,7 +29789,9 @@
    "biotools_url": "https://bio.tools/qdrip",
    "last_update": "2021-03-19",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "Peak calling",
     "Quantification",
@@ -29776,6 +29805,7 @@
    "_llm_applied": [
     "description"
    ],
+   "note": "url reviewed 2026-09-03: https://github.com/cimprichlab/crossley_et_al_2019 resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "peak-calling",
    "homepage_status": "",
@@ -36408,7 +36438,7 @@
     "grn-inference"
    ],
    "tier": "core",
-   "homepage": "http://fraenkel.mit.edu/steinernet",
+   "homepage": "https://doi.org/10.1093/nar/gks445",
    "repo_url": "",
    "repo_origin": "",
    "repo_stars": null,
@@ -36441,7 +36471,9 @@
    "biotools_url": "https://bio.tools/steinernet",
    "last_update": "2024-11-25",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "Gene expression profiling",
     "Gene regulatory network analysis",
@@ -36457,6 +36489,7 @@
    "_llm_applied": [
     "description"
    ],
+   "note": "url reviewed 2026-09-03: http://fraenkel.mit.edu/steinernet resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "tfbs-prediction",
    "homepage_status": "",
@@ -38382,7 +38415,7 @@
     "dna-methylation"
    ],
    "tier": "core",
-   "homepage": "http://brat.nlplab.org/",
+   "homepage": "https://doi.org/10.1093/bioinformatics/btp706",
    "repo_url": "",
    "repo_origin": "",
    "repo_stars": null,
@@ -38412,7 +38445,9 @@
    "biotools_url": "https://bio.tools/brat",
    "last_update": "2024-11-25",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "Bisulfite mapping",
     "Mapping"
@@ -38425,6 +38460,7 @@
    "_llm_applied": [
     "description"
    ],
+   "note": "url reviewed 2026-09-03: http://brat.nlplab.org/ resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "nucleosome-chromatin",
    "homepage_status": "",
@@ -41308,7 +41344,7 @@
     "dna-methylation"
    ],
    "tier": "core",
-   "homepage": "https://bioconductor.org/packages/release/bioc/html/ENmix.html",
+   "homepage": "https://pubmed.ncbi.nlm.nih.gov/32805005/",
    "repo_url": "https://github.com/Bioconductor/ENmix",
    "repo_origin": "recorded",
    "repo_stars": null,
@@ -41342,7 +41378,9 @@
    "biotools_url": "https://bio.tools/ipdmr",
    "last_update": "2024-11-24",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "DMR identification",
     "Gene methylation analysis",
@@ -41356,6 +41394,7 @@
    "_registries": {
     "bioconductor": "https://bioconductor.org/packages/release/bioc/html/ENmix.html"
    },
+   "note": "url reviewed 2026-09-03: https://bioconductor.org/packages/release/bioc/html/ENmix.html resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "nucleosome-chromatin",
    "homepage_status": "",
@@ -41883,7 +41922,7 @@
     "tfbs-prediction"
    ],
    "tier": "core",
-   "homepage": "http://www.stats.gla.ac.uk/~mgupta/publications.htm",
+   "homepage": "https://doi.org/10.1198/016214503388619094",
    "repo_url": "",
    "repo_origin": "",
    "repo_stars": null,
@@ -41914,7 +41953,9 @@
    "biotools_url": "https://bio.tools/sdda",
    "last_update": "2018-12-10",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "Transcription factor binding site prediction"
    ],
@@ -41927,6 +41968,7 @@
     "categories",
     "description"
    ],
+   "note": "url reviewed 2026-09-03: http://www.stats.gla.ac.uk/~mgupta/publications.htm resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "tfbs-prediction",
    "homepage_status": "",
@@ -45546,7 +45588,7 @@
     "regulatory-elements"
    ],
    "tier": "core",
-   "homepage": "http://biobases.ibch.poznan.pl/ncRNA/",
+   "homepage": "https://doi.org/10.1093/nar/gkl994",
    "repo_url": "",
    "repo_origin": "",
    "repo_stars": null,
@@ -45578,7 +45620,9 @@
    "biotools_url": "https://bio.tools/ncrna",
    "last_update": "2021-04-26",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "DNA transcription",
     "Gene expression profiling",
@@ -45594,6 +45638,7 @@
    "_llm_applied": [
     "description"
    ],
+   "note": "url reviewed 2026-09-03: http://biobases.ibch.poznan.pl/ncRNA/ resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "regulatory-elements",
    "homepage_status": "",
@@ -45873,7 +45918,7 @@
     "tfbs-prediction"
    ],
    "tier": "seed",
-   "homepage": "https://github.com/ramzan1990/sequence2vec",
+   "homepage": "https://doi.org/10.1093/bioinformatics/btx480",
    "repo_url": "",
    "repo_origin": "",
    "repo_stars": null,
@@ -45899,7 +45944,8 @@
    "last_update": "",
    "source": "curated",
    "tags": [
-    "literature"
+    "literature",
+    "no-software-url"
    ],
    "_operations": [],
    "_select_reason": "curated seed",
@@ -45907,6 +45953,7 @@
     "doi:10.1093/bioinformatics/btx480"
    ],
    "_registries": {},
+   "note": "url reviewed 2026-09-03: https://github.com/ramzan1990/sequence2vec resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "motif-discovery",
    "homepage_status": "",
@@ -50293,7 +50340,7 @@
     "nucleosome-chromatin"
    ],
    "tier": "core",
-   "homepage": "http://www.byanbioinfo.org/pthgrn",
+   "homepage": "https://doi.org/10.1093/nar/gku471",
    "repo_url": "",
    "repo_origin": "",
    "repo_stars": null,
@@ -50328,7 +50375,9 @@
    "biotools_url": "https://bio.tools/pthgrn",
    "last_update": "2018-12-10",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "Gene expression analysis",
     "Gene expression correlation",
@@ -50344,6 +50393,7 @@
    "_llm_applied": [
     "description"
    ],
+   "note": "url reviewed 2026-09-03: http://www.byanbioinfo.org/pthgrn resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "tfbs-prediction",
    "homepage_status": "",
@@ -52770,7 +52820,7 @@
     "peak-calling"
    ],
    "tier": "core",
-   "homepage": "https://github.com/Juliacvk/LuxR_H-NS",
+   "homepage": "https://doi.org/10.1093/nar/gkz1089",
    "repo_url": "https://github.com/Juliacvk/LuxR_H-NS",
    "repo_origin": "recorded",
    "repo_stars": 0,
@@ -52805,7 +52855,9 @@
    "biotools_url": "https://bio.tools/LuxR",
    "last_update": "2020-12-22",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "Formatting",
     "Operon prediction",
@@ -52818,6 +52870,7 @@
     "pmid:31745565"
    ],
    "_registries": {},
+   "note": "url reviewed 2026-09-03: https://github.com/Juliacvk/LuxR_H-NS resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "tfbs-prediction",
    "homepage_status": "",
@@ -54184,7 +54237,7 @@
     "chip-resources"
    ],
    "tier": "core",
-   "homepage": "https://github.com/DEIB-GECO/Metadata-Manager/",
+   "homepage": "https://doi.org/10.1109/tcbb.2020.2998954",
    "repo_url": "https://github.com/DEIB-GECO/Metadata-Manager",
    "repo_origin": "recorded",
    "repo_stars": 7,
@@ -54220,7 +54273,9 @@
    "biotools_url": "https://bio.tools/meta-base",
    "last_update": "2026-01-04",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [],
    "_select_reason": "text:\\bepigenom(e|ic)s?\\b",
    "_identifiers": [
@@ -54231,6 +54286,7 @@
     "categories",
     "description"
    ],
+   "note": "url reviewed 2026-09-03: https://github.com/DEIB-GECO/Metadata-Manager/ resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "chip-resources",
    "homepage_status": "",
@@ -55221,7 +55277,7 @@
     "nucleosome-chromatin"
    ],
    "tier": "core",
-   "homepage": "http://ypa.ee.ncku.edu.tw/",
+   "homepage": "https://doi.org/10.1093/nar/gkq1086",
    "repo_url": "",
    "repo_origin": "",
    "repo_stars": null,
@@ -55254,7 +55310,9 @@
    "biotools_url": "https://bio.tools/ypa",
    "last_update": "2024-11-25",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "DNA transcription",
     "Promoter prediction",
@@ -55269,6 +55327,7 @@
    "_llm_applied": [
     "description"
    ],
+   "note": "url reviewed 2026-09-03: http://ypa.ee.ncku.edu.tw/ resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "motif-databases",
    "homepage_status": "",
@@ -61881,7 +61940,7 @@
     "grn-inference"
    ],
    "tier": "core",
-   "homepage": "http://bioconductor.org/packages/release/bioc/html/BLMA.html",
+   "homepage": "https://doi.org/10.1038/s41598-020-60981-9",
    "repo_url": "",
    "repo_origin": "",
    "repo_stars": null,
@@ -61916,7 +61975,9 @@
    "biotools_url": "https://bio.tools/nbia",
    "last_update": "2021-03-08",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "Gene-set enrichment analysis",
     "Pathway analysis",
@@ -61932,6 +61993,7 @@
    "_llm_applied": [
     "description"
    ],
+   "note": "url reviewed 2026-09-03: http://bioconductor.org/packages/release/bioc/html/BLMA.html resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "grn-inference",
    "homepage_status": "",
@@ -68587,7 +68649,7 @@
     "regulatory-variants"
    ],
    "tier": "seed",
-   "homepage": "https://powcs.med.unsw.edu.au/OncoCis/",
+   "homepage": "https://doi.org/10.1186/s13059-014-0485-0",
    "repo_url": "",
    "repo_origin": "",
    "repo_stars": null,
@@ -68613,7 +68675,8 @@
    "last_update": "",
    "source": "curated",
    "tags": [
-    "literature"
+    "literature",
+    "no-software-url"
    ],
    "_operations": [],
    "_select_reason": "curated seed",
@@ -68621,6 +68684,7 @@
     "doi:10.1186/s13059-014-0485-0"
    ],
    "_registries": {},
+   "note": "url reviewed 2026-09-03: https://powcs.med.unsw.edu.au/OncoCis/ resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "regulatory-elements",
    "homepage_status": "",
@@ -88414,7 +88478,7 @@
     "single-cell"
    ],
    "tier": "core",
-   "homepage": "http://scan-atac-sim.gersteinlab.org",
+   "homepage": "https://doi.org/10.1093/bioinformatics/btaa1039",
    "repo_url": "",
    "repo_origin": "",
    "repo_stars": null,
@@ -88449,7 +88513,9 @@
    "biotools_url": "https://bio.tools/scan-atac",
    "last_update": "2024-11-24",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "Modelling and simulation",
     "Simulated gene expression data generation"
@@ -88463,6 +88529,7 @@
     "categories",
     "description"
    ],
+   "note": "url reviewed 2026-09-03: http://scan-atac-sim.gersteinlab.org resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "single-cell",
    "homepage_status": "",
@@ -88812,7 +88879,7 @@
     "grn-inference"
    ],
    "tier": "core",
-   "homepage": "http://bioinformatics.intec.ugent.be/kmarchal/Supplementary_Information_Musthofa_2014/asp-g.zip",
+   "homepage": "https://doi.org/10.1093/bioinformatics/btu481",
    "repo_url": "",
    "repo_origin": "",
    "repo_stars": null,
@@ -88841,7 +88908,9 @@
    "biotools_url": "https://bio.tools/asp-g",
    "last_update": "2024-11-25",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "Gene regulatory network analysis"
    ],
@@ -88853,6 +88922,7 @@
    "_llm_applied": [
     "description"
    ],
+   "note": "url reviewed 2026-09-03: http://bioinformatics.intec.ugent.be/kmarchal/Supplementary_Information_Musthofa_2014/asp-g.zip resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "grn-inference",
    "homepage_status": "",
@@ -89456,7 +89526,7 @@
     "peak-annotation"
    ],
    "tier": "core",
-   "homepage": "http://computational-epigenomics.com/en/epiannotator",
+   "homepage": "https://doi.org/10.1093/bioinformatics/bty007",
    "repo_url": "",
    "repo_origin": "",
    "repo_stars": null,
@@ -89490,7 +89560,9 @@
    "biotools_url": "https://bio.tools/epiannotator",
    "last_update": "2024-11-25",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "Genome annotation"
    ],
@@ -89503,6 +89575,7 @@
     "categories",
     "description"
    ],
+   "note": "url reviewed 2026-09-03: http://computational-epigenomics.com/en/epiannotator resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "regulatory-elements",
    "homepage_status": "",
@@ -103815,7 +103888,7 @@
     "regulatory-elements"
    ],
    "tier": "core",
-   "homepage": "https://github.com/shengli0201/Datasets",
+   "homepage": "https://doi.org/10.1080/1062936x.2019.1615546",
    "repo_url": "https://github.com/shengli0201/Datasets",
    "repo_origin": "recorded",
    "repo_stars": 0,
@@ -103847,7 +103920,9 @@
    "biotools_url": "https://bio.tools/iDHS-DMCAC",
    "last_update": "2020-06-16",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "Transcriptional regulatory element prediction"
    ],
@@ -103859,6 +103934,7 @@
    "_llm_applied": [
     "description"
    ],
+   "note": "url reviewed 2026-09-03: https://github.com/shengli0201/Datasets resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "tfbs-prediction",
    "homepage_status": "",
@@ -121328,7 +121404,7 @@
     "molecular-qtl"
    ],
    "tier": "core",
-   "homepage": "https://www.animalgenome.org/cgi-bin/QTLdb/index",
+   "homepage": "https://pubmed.ncbi.nlm.nih.gov/39766781/",
    "repo_url": "",
    "repo_origin": "",
    "repo_stars": null,
@@ -121361,7 +121437,9 @@
    "biotools_url": "https://bio.tools/animalqtldb",
    "last_update": "2026-02-22",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "Enrichment analysis",
     "Gene expression QTL analysis",
@@ -121374,6 +121452,7 @@
     "pmid:39766781"
    ],
    "_registries": {},
+   "note": "url reviewed 2026-09-03: https://www.animalgenome.org/cgi-bin/QTLdb/index resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "molecular-qtl",
    "homepage_status": "",
@@ -125094,7 +125173,7 @@
     "chromatin-3d"
    ],
    "tier": "core",
-   "homepage": "https://github.com/deWitLab/peakC",
+   "homepage": "https://doi.org/10.1093/bioinformatics/btz426",
    "repo_url": "https://github.com/deWitLab/peakC",
    "repo_origin": "recorded",
    "repo_stars": 13,
@@ -125126,7 +125205,9 @@
    "biotools_url": "https://bio.tools/peakC",
    "last_update": "2024-11-24",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "Peak calling"
    ],
@@ -125138,6 +125219,7 @@
    "_llm_applied": [
     "description"
    ],
+   "note": "url reviewed 2026-09-03: https://github.com/deWitLab/peakC resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "peak-calling",
    "homepage_status": "",
@@ -133707,7 +133789,7 @@
     "single-cell"
    ],
    "tier": "core",
-   "homepage": "https://github.com/NIGMS/ATAC-Seq-and-Single-Cell-ATAC-Seq-Analysis",
+   "homepage": "https://doi.org/10.1093/bib/bbae090",
    "repo_url": "https://github.com/NIGMS/ATAC-Seq-and-Single-Cell-ATAC-Seq-Analysis",
    "repo_origin": "recorded",
    "repo_stars": 10,
@@ -133738,7 +133820,9 @@
    "biotools_url": "https://bio.tools/atac-seq",
    "last_update": "2026-01-14",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "Essential dynamics",
     "Peak calling",
@@ -133752,6 +133836,7 @@
    "_llm_applied": [
     "description"
    ],
+   "note": "url reviewed 2026-09-03: https://github.com/NIGMS/ATAC-Seq-and-Single-Cell-ATAC-Seq-Analysis resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "peak-calling",
    "homepage_status": "",
@@ -135210,7 +135295,7 @@
     "regulatory-variants"
    ],
    "tier": "core",
-   "homepage": "http://www.licpathway.net/Cis-Cardio/index.html",
+   "homepage": "https://doi.org/10.1016/j.omtn.2023.07.030",
    "repo_url": "",
    "repo_origin": "",
    "repo_stars": null,
@@ -135243,7 +135328,9 @@
    "biotools_url": "https://bio.tools/icis_i-cardio",
    "last_update": "2024-11-24",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "Enrichment analysis",
     "Gene expression profiling",
@@ -135260,6 +135347,7 @@
     "categories",
     "description"
    ],
+   "note": "url reviewed 2026-09-03: http://www.licpathway.net/Cis-Cardio/index.html resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "regulatory-elements",
    "homepage_status": "",
@@ -139210,7 +139298,7 @@
     "grn-inference"
    ],
    "tier": "core",
-   "homepage": "https://cat-e.bioinfo-wuerz.eu/",
+   "homepage": "https://doi.org/10.1016/j.csbj.2024.03.024",
    "repo_url": "",
    "repo_origin": "",
    "repo_stars": null,
@@ -139245,7 +139333,9 @@
    "biotools_url": "https://bio.tools/cat_e",
    "last_update": "2024-11-24",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "Essential dynamics",
     "Gene regulatory network analysis",
@@ -139261,6 +139351,7 @@
    "_llm_applied": [
     "description"
    ],
+   "note": "url reviewed 2026-09-03: https://cat-e.bioinfo-wuerz.eu/ resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "grn-inference",
    "homepage_status": "",
@@ -164014,7 +164105,7 @@
     "peak-calling"
    ],
    "tier": "core",
-   "homepage": "http://www.htslib.org/",
+   "homepage": "https://doi.org/10.1093/nar/gkw343",
    "repo_url": "",
    "repo_origin": "",
    "repo_stars": null,
@@ -164044,7 +164135,9 @@
    "biotools_url": "https://bio.tools/createcontrolsubset",
    "last_update": "2020-06-16",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "Filtering"
    ],
@@ -164057,6 +164150,7 @@
    "_llm_applied": [
     "description"
    ],
+   "note": "url reviewed 2026-09-03: http://www.htslib.org/ resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "peak-calling",
    "homepage_status": "",
@@ -174200,7 +174294,7 @@
     "peak-calling"
    ],
    "tier": "core",
-   "homepage": "https://doi.org/10.5281/zenodo.7116424",
+   "homepage": "https://doi.org/10.1186/s12859-023-05613-5",
    "repo_url": "https://github.com/Caeph/paperfly",
    "repo_origin": "recorded",
    "repo_stars": 2,
@@ -174234,7 +174328,9 @@
    "biotools_url": "https://bio.tools/paperfly",
    "last_update": "2024-04-19",
    "source": "bio.tools",
-   "tags": [],
+   "tags": [
+    "no-software-url"
+   ],
    "_operations": [
     "De-novo assembly",
     "Deposition",
@@ -174250,6 +174346,7 @@
    "_llm_applied": [
     "description"
    ],
+   "note": "url reviewed 2026-09-03: https://doi.org/10.5281/zenodo.7116424 resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
    "primary_category": "tfbs-prediction",
    "homepage_status": "",

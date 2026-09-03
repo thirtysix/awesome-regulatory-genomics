@@ -132,6 +132,144 @@ corrections:
     homepage: https://thelovelab.github.io/mrlocus
     note: url reviewed 2026-09-03; the previous one served a different site
 
+  # --- urls reviewed by hand 2026-09-03 ----------------------------------
+  # Each of these served a page that was not the tool: a re-registered
+  # domain, a different tool of the same name, or a lab index that no
+  # longer hosts it. Replacements were verified the same way before being
+  # offered, and a human made the call.
+  CENTIPEDE:
+    homepage: https://doi.org/10.1101/gr.112623.110
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: http://centipede.uchicago.edu/ resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  lncrnadb:
+    homepage: https://doi.org/10.1093/nar/gkq1138
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: http://www.lncrnadb.org/ resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  firstef:
+    homepage: https://doi.org/10.1038/ng780
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: http://rulai.cshl.org/tools/FirstEF/ resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  dbd:
+    homepage: https://doi.org/10.1093/nar/gkm964
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: http://www.transcriptionfactor.org/index.cgi resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  peakcalling_findpeaks:
+    homepage: https://doi.org/10.1093/bioinformatics/btn305
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: http://www.htslib.org/ resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  monkey:
+    homepage: https://doi.org/10.1186/gb-2004-5-12-r98
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: http://labs.csb.utoronto.ca/moses/monkey.html resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  memo:
+    homepage: https://pubmed.ncbi.nlm.nih.gov/16845004/
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: https://github.com/MEMO-toolbox/MEMO resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  sip:
+    homepage: https://doi.org/10.1101/gr.257832.119
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: https://github.com/PouletAxel/SIP/releases resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  hint:
+    homepage: https://doi.org/10.1093/bioinformatics/btu519
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: http://hint.yulab.org/ resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  qdrip:
+    homepage: https://doi.org/10.1093/nar/gkaa500
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: https://github.com/cimprichlab/crossley_et_al_2019 resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  steinernet:
+    homepage: https://doi.org/10.1093/nar/gks445
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: http://fraenkel.mit.edu/steinernet resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  brat:
+    homepage: https://doi.org/10.1093/bioinformatics/btp706
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: http://brat.nlplab.org/ resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  ipdmr:
+    homepage: https://pubmed.ncbi.nlm.nih.gov/32805005/
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: https://bioconductor.org/packages/release/bioc/html/ENmix.html resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  sdda:
+    homepage: https://doi.org/10.1198/016214503388619094
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: http://www.stats.gla.ac.uk/~mgupta/publications.htm resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  ncrna:
+    homepage: https://doi.org/10.1093/nar/gkl994
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: http://biobases.ibch.poznan.pl/ncRNA/ resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  Sequence2Vec:
+    homepage: https://doi.org/10.1093/bioinformatics/btx480
+    tags: [literature, no-software-url]
+    note: 'url reviewed 2026-09-03: https://github.com/ramzan1990/sequence2vec resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  pthgrn:
+    homepage: https://doi.org/10.1093/nar/gku471
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: http://www.byanbioinfo.org/pthgrn resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  LuxR:
+    homepage: https://doi.org/10.1093/nar/gkz1089
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: https://github.com/Juliacvk/LuxR_H-NS resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  meta-base:
+    homepage: https://doi.org/10.1109/tcbb.2020.2998954
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: https://github.com/DEIB-GECO/Metadata-Manager/ resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  ypa:
+    homepage: https://doi.org/10.1093/nar/gkq1086
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: http://ypa.ee.ncku.edu.tw/ resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  nbia:
+    homepage: https://doi.org/10.1038/s41598-020-60981-9
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: http://bioconductor.org/packages/release/bioc/html/BLMA.html resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  OncoCis:
+    homepage: https://doi.org/10.1186/s13059-014-0485-0
+    tags: [literature, no-software-url]
+    note: 'url reviewed 2026-09-03: https://powcs.med.unsw.edu.au/OncoCis/ resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  scan-atac:
+    homepage: https://doi.org/10.1093/bioinformatics/btaa1039
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: http://scan-atac-sim.gersteinlab.org resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  asp-g:
+    homepage: https://doi.org/10.1093/bioinformatics/btu481
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: http://bioinformatics.intec.ugent.be/kmarchal/Supplementary_Information_Musthofa_2014/asp-g.zip resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  epiannotator:
+    homepage: https://doi.org/10.1093/bioinformatics/bty007
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: http://computational-epigenomics.com/en/epiannotator resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  iDHS-DMCAC:
+    homepage: https://doi.org/10.1080/1062936x.2019.1615546
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: https://github.com/shengli0201/Datasets resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  animalqtldb:
+    homepage: https://pubmed.ncbi.nlm.nih.gov/39766781/
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: https://www.animalgenome.org/cgi-bin/QTLdb/index resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  peakC:
+    homepage: https://doi.org/10.1093/bioinformatics/btz426
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: https://github.com/deWitLab/peakC resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  atac-seq:
+    homepage: https://doi.org/10.1093/bib/bbae090
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: https://github.com/NIGMS/ATAC-Seq-and-Single-Cell-ATAC-Seq-Analysis resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  icis_i-cardio:
+    homepage: https://doi.org/10.1016/j.omtn.2023.07.030
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: http://www.licpathway.net/Cis-Cardio/index.html resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  cat_e:
+    homepage: https://doi.org/10.1016/j.csbj.2024.03.024
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: https://cat-e.bioinfo-wuerz.eu/ resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  createcontrolsubset:
+    homepage: https://doi.org/10.1093/nar/gkw343
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: http://www.htslib.org/ resolves but serves different software, and no replacement was found; pointing at the paper instead'
+  paperfly:
+    homepage: https://doi.org/10.1186/s12859-023-05613-5
+    tags: [no-software-url]
+    note: 'url reviewed 2026-09-03: https://doi.org/10.5281/zenodo.7116424 resolves but serves different software, and no replacement was found; pointing at the paper instead'
+
 exclude:
   geneious: General-purpose sequence analysis suite; tagged "Sequence motif discovery" upstream
   cuffdiff: Differential transcript expression; tagged "Transcriptional regulatory element prediction" upstream

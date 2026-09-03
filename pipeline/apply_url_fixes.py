@@ -85,9 +85,27 @@ def main() -> None:
             block += f"    note: {yaml_str(f'url reviewed {stamp}; the previous one served a different site')}"
             lines.append(block)
         elif verdict == "drop":
-            lines.append(f"  {key}:\n"
-                         f"    homepage: \"\"\n"
-                         f"    note: {yaml_str(f'url reviewed {stamp} and removed; no page for this tool was found')}")
+            # Point at the paper, not at nothing, and say why. These entries
+            # mostly have a url that RESOLVES - it just serves somebody else's
+            # software - so leaving it would send a reader to brat.nlplab.org
+            # for a bisulfite mapper. The doi is the one address we can stand
+            # behind. Existing tags are preserved: build.py does row.update(),
+            # which replaces the list rather than extending it.
+            ident = t.get("doi") or (f"{t.get('pmid')}" if t.get("pmid") else "")
+            if not ident:
+                skipped.append((name, "no doi or pmid to point at")); continue
+            url = (f"https://doi.org/{ident}" if t.get("doi")
+                   else f"https://pubmed.ncbi.nlm.nih.gov/{ident}/")
+            tags = sorted(set(t.get("tags") or []) | {"no-software-url"})
+            was = t.get("homepage") or ""
+            block = (f"  {key}:\n"
+                     f"    homepage: {url}\n"
+                     f"    tags: [{', '.join(tags)}]\n")
+            note = (f"url reviewed {stamp}: {was} resolves but serves different software, "
+                    f"and no replacement was found; pointing at the paper instead"
+                    if was else
+                    f"url reviewed {stamp}; no software location was found, pointing at the paper")
+            lines.append(block + f"    note: {yaml_str(note)}")
         else:
             skipped.append((name, f"unknown verdict {verdict!r}"))
 
