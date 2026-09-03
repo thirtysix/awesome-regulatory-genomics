@@ -78,8 +78,17 @@ def already_declined() -> dict:
 
 
 def seed_entry(r: dict) -> str:
+    # A tool with no software location still has a paper, and for older entries
+    # the paper is the only thing that still resolves. Pointing at the doi is
+    # honest - here is the work, its code is not findable - and better than
+    # dropping a real tool for having outlived its hosting.
+    url = r["software_url"] or f"https://doi.org/{r['doi']}"
     lines = [f"  - name: {_yaml_str(r['name'])}",
-             f"    url: {r['software_url']}"]
+             f"    url: {url}"]
+    if not r["software_url"]:
+        lines.append("    tags: [no-software-url]")
+    if r.get("rejected_repo"):
+        lines.append(f"    note: {_yaml_str('a repository named for this tool exists at ' + r['rejected_repo'] + ' but did not verify as the same software')}")
     slug = slug_of(r["repo"] or r["code"])
     if slug:
         lines.append(f"    repo: {slug}")
@@ -124,19 +133,28 @@ def main() -> None:
         elif verdict == "keep":
             if name.lower() in have:
                 blocked.append((name, "already in seeds.yaml"))
-            elif not r["software_url"]:
-                blocked.append((name, "no url, and seeds.yaml requires one"))
+            elif not r["software_url"] and not r.get("doi"):
+                blocked.append((name, "no url and no doi, so nothing to point at"))
             elif not r["categories"]:
                 blocked.append((name, "no categories from the categorise stage"))
             elif r["layer1"] in ("hold", "fail") and not r.get("corrected"):
+                # A doubtful REPOSITORY is not a reason to drop the TOOL. The
+                # catalog is deliberately inclusive, so the entry goes in
+                # pointing at its paper and the unverified repository is
+                # recorded rather than published: SEdb's "repository" was
+                # "Search Engine DataBase utils", and printing that as a
+                # tool's source is worse than printing no source at all.
+                r = dict(r)
+                r["rejected_repo"] = r["software_url"]
+                r["software_url"] = r["code"] = r["repo"] = ""
+                keep.append(r)
                 # A code-host url layer 1 would not confirm is the one way this
                 # pipeline writes the WRONG software into the catalog rather
                 # than merely a useless link. SEdb's was "Search Engine
                 # DataBase utils"; BiSearch's was a binary-search package;
                 # Xenbase's was a javascript polyfill. Keeping one is fine, but
                 # it has to be a deliberate act: supply the url in the decision.
-                blocked.append((name, f"layer 1 refused this repo ({r['layer1']}); "
-                                      f"confirm or correct the url in the decision"))
+
             elif (not r["layer1"]) and slug_of(r["software_url"]) and not r.get("corrected"):
                 unchecked.append(r)
             else:
@@ -163,7 +181,11 @@ def main() -> None:
                                   slug, meta, source="review")
             r["layer1"], r["layer1_why"] = ("pass" if ok else "hold"), why
             print(f"    {'PASS' if ok else 'HOLD'} {r['name'][:20]:22s} {slug:32s} {why[:44]}")
-            (keep if ok else blocked).append(r if ok else (r["name"], f"validation refused it: {why[:60]}"))
+            if not ok:
+                # Same rule: keep the tool, drop the unproven repository.
+                r["rejected_repo"] = r["software_url"]
+                r["software_url"] = r["code"] = r["repo"] = ""
+            keep.append(r)
 
     print(f"decisions read : {len(marks)}")
     print(f"  to seed      : {len(keep)}")

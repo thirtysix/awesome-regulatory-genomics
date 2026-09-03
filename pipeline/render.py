@@ -544,6 +544,11 @@ a.theme:hover{border-color:var(--accent);color:var(--accent);text-decoration:non
       <input type="search" id="q" placeholder="Search name, description, category, language…" autocomplete="off">
       <select id="type"><option value="">Any tool type</option></select>
       <select id="lang"><option value="">Any language</option></select>
+      <select id="avail">
+        <option value="">Any availability</option>
+        <option value="software">Has a software url</option>
+        <option value="paper">Paper only, no software url</option>
+      </select>
       <select id="activity">
         <option value="">Any activity</option>
         <option value="repo">Has a source repository</option>
@@ -636,7 +641,7 @@ themeBtn.onclick = () => {
 };
 
 const $ = id => document.getElementById(id);
-const state = { q:'', cats:new Set(), type:'', lang:'', activity:'', col:{}, sort:'citations', dir:-1 };
+const state = { q:'', cats:new Set(), type:'', lang:'', activity:'', avail:'', col:{}, sort:'citations', dir:-1 };
 let visible = [];
 
 const params = new URLSearchParams(location.search);
@@ -692,6 +697,15 @@ const matches = t => {
   if (state.cats.size && !t.categories.some(c => state.cats.has(c))) return false;
   if (state.type && !t.tool_type.includes(state.type)) return false;
   if (state.lang && !t.languages.includes(state.lang) && t.repo_language !== state.lang) return false;
+  // Entries tagged no-software-url are tools whose software is no longer
+  // findable anywhere; they carry a doi so the work is still reachable. Worth
+  // filtering either way: out, to see only what you can run, or in, to see
+  // what the field has lost.
+  if (state.avail) {
+    const paperOnly = (t.tags || []).includes('no-software-url');
+    if (state.avail === 'software' && paperOnly) return false;
+    if (state.avail === 'paper' && !paperOnly) return false;
+  }
   if (state.activity) {
     const age = t.repo_pushed ? (Date.now() - Date.parse(t.repo_pushed)) / YEAR_MS : null;
     if (state.activity === 'repo' && !t.repo_url) return false;
@@ -1095,7 +1109,7 @@ addEventListener('resize', () => {
   clearTimeout(rzTimer);
   rzTimer = setTimeout(() => { if (statsOpen) renderStats(TOOLS.filter(matches)); }, 150);
 });
-['type','lang','activity'].forEach(id => $(id).onchange = e => { state[id] = e.target.value; render(); });
+['type','lang','activity','avail'].forEach(id => $(id).onchange = e => { state[id] = e.target.value; render(); });
 
 // Download exactly what is on screen: the current filters, in the current sort
 // order. Tab-separated to match data/catalog.tsv in the repository, and because

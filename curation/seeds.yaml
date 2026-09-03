@@ -2118,3 +2118,3659 @@ tools:
     categories: [peak-calling, peak-annotation, motif-discovery]
     doi: 10.1186/1471-2105-15-280
 
+  # --- promoted from the literature queue, reviewed by hand 2026-09-03 ------------
+  - name: BiSearch
+    url: https://doi.org/10.1093/nar/gni012
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/KPRATT11/bisearch but did not verify as the same software'
+    description: primer-design and search tool for PCR on bisulfite-treated genomes
+    categories: [dna-methylation]
+    doi: 10.1093/nar/gni012
+
+  - name: SCORE
+    url: https://doi.org/10.1073/pnas.152320899
+    tags: [no-software-url]
+    description: a computational approach to the identification of cis-regulatory modules and target genes in whole-genome sequence data. Site clustering over random expectation
+    categories: [motif-scanning, regulatory-elements]
+    doi: 10.1073/pnas.152320899
+
+  - name: FootPrinter
+    url: https://doi.org/10.1093/nar/gkg606
+    tags: [no-software-url]
+    description: A program designed for phylogenetic footprinting
+    categories: [motif-discovery, footprinting]
+    doi: 10.1093/nar/gkg606
+
+  - name: eQED
+    url: https://doi.org/10.1038/msb.2008.4
+    tags: [no-software-url]
+    description: an efficient method for interpreting eQTL associations using protein networks
+    categories: [molecular-qtl, grn-inference]
+    doi: 10.1038/msb.2008.4
+
+  - name: HHMD
+    url: http://bioinfo.hrbmu.edu.cn/hhmd
+    description: the human histone modification database
+    categories: [histone-marks, chip-resources]
+    doi: 10.1093/nar/gkp968
+
+  - name: BioOptimizer
+    url: https://doi.org/10.1093/bioinformatics/bth127
+    tags: [no-software-url]
+    description: a Bayesian scoring function approach to motif discovery
+    categories: [motif-discovery]
+    doi: 10.1093/bioinformatics/bth127
+
+  - name: PrimerSuite
+    url: http://www.primer-suite.com
+    description: A High-Throughput Web-Based Primer Design Program for Multiplex Bisulfite PCR
+    categories: [dna-methylation]
+    doi: 10.1038/srep41328
+
+  - name: ClusterTAD
+    url: https://github.com/BDM-Lab/ClusterTAD
+    repo: BDM-Lab/ClusterTAD
+    description: an unsupervised machine learning approach to detecting topologically associated domains of chromosomes from Hi-C data
+    categories: [chromatin-3d]
+    doi: 10.1186/s12859-017-1931-2
+
+  - name: iNuc-STNC
+    url: https://doi.org/10.1039/c6mb00221h
+    tags: [no-software-url]
+    description: 'a sequence-based predictor for identification of nucleosome positioning in genomes by extending the concept of SAAC and Chou''s PseAAC'
+    categories: [nucleosome-chromatin]
+    doi: 10.1039/c6mb00221h
+
+  - name: Methy-Pipe
+    url: http://sunlab.lihs.cuhk.edu.hk/methy-pipe
+    description: an integrated bioinformatics pipeline for whole genome bisulfite sequencing data analysis
+    categories: [dna-methylation]
+    doi: 10.1371/journal.pone.0100360
+
+  - name: BatMeth
+    url: http://code.google.com/p/batmeth
+    description: improved mapper for bisulfite sequencing reads on DNA methylation
+    categories: [dna-methylation]
+    doi: 10.1186/gb-2012-13-10-r82
+
+  - name: coda
+    url: https://github.com/kundajelab/coda
+    repo: kundajelab/coda
+    description: Denoising genome-wide histone ChIP-seq with convolutional neural networks
+    categories: [histone-marks]
+    doi: 10.1093/bioinformatics/btx243
+
+  - name: IChrom-Deep
+    url: https://doi.org/10.1109/jbhi.2023.3292299
+    tags: [no-software-url]
+    description: An Attention-Based Deep Learning Model for Identifying Chromatin Interactions
+    categories: [chromatin-3d]
+    doi: 10.1109/jbhi.2023.3292299
+
+  - name: TADKB
+    url: http://dna.cs.miami.edu/TADKB
+    description: Family classification and a knowledge base of topologically associating domains
+    categories: [chromatin-3d]
+    doi: 10.1186/s12864-019-5551-2
+
+  - name: TFmiR
+    url: http://service.bioinformatik.uni-saarland.de/tfmir
+    description: a web server for constructing and analyzing disease-specific transcription factor and miRNA co-regulatory networks
+    categories: [grn-inference]
+    doi: 10.1093/nar/gkv418
+
+  - name: TreeQTL
+    url: https://doi.org/10.1093/bioinformatics/btw198
+    tags: [no-software-url]
+    description: hierarchical error control for eQTL findings
+    categories: [molecular-qtl]
+    doi: 10.1093/bioinformatics/btw198
+
+  - name: powerEQTL
+    url: https://cran.r-project.org/web/packages/powerEQTL
+    description: an R package and shiny application for sample size and power calculation of bulk tissue and single-cell eQTL analysis
+    categories: [molecular-qtl]
+    doi: 10.1093/bioinformatics/btab385
+
+  - name: CpG_MPs
+    url: http://bioinfo.hrbmu.edu.cn/CpG_MPs
+    description: identification of CpG methylation patterns of genomic regions from high-throughput bisulfite sequencing data
+    categories: [dna-methylation]
+    doi: 10.1093/nar/gks829
+
+  - name: RiceSRTFDB
+    url: http://www.nipgr.res.in/RiceSRTFDB.html
+    description: 'a database of rice transcription factors containing comprehensive expression, cis-regulatory element and mutant information to facilitate gene function analysis'
+    categories: [motif-databases]
+    doi: 10.1093/database/bat027
+
+  - name: WASABI
+    url: https://doi.org/10.1186/s12859-019-2798-1
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/explosion/wasabi but did not verify as the same software'
+    description: a dynamic iterative framework for gene regulatory network inference
+    categories: [grn-inference, single-cell]
+    doi: 10.1186/s12859-019-2798-1
+
+  - name: ChIP-PIT
+    url: https://doi.org/10.1109/tcbb.2015.2465893
+    tags: [no-software-url]
+    description: Enhancing the Analysis of ChIP-Seq Data Using Convex-Relaxed Pair-Wise Interaction Tensor Decomposition
+    categories: [chip-resources]
+    doi: 10.1109/tcbb.2015.2465893
+
+  - name: STARE
+    url: https://github.com/schulzlab/STARE
+    repo: schulzlab/STARE
+    description: The adapted Activity-By-Contact model for enhancer-gene assignment and its application to single-cell data
+    categories: [regulatory-elements, chromatin-3d, single-cell]
+    doi: 10.1093/bioinformatics/btad062
+
+  - name: GAME
+    url: https://doi.org/10.1093/bioinformatics/btl147
+    tags: [no-software-url]
+    description: detecting cis-regulatory elements using a genetic algorithm
+    categories: [motif-discovery]
+    doi: 10.1093/bioinformatics/btl147
+
+  - name: BS-Seeker3
+    url: https://github.com/khuang28jhu/bs3
+    repo: khuang28jhu/bs3
+    description: ultrafast pipeline for bisulfite sequencing
+    categories: [dna-methylation]
+    doi: 10.1186/s12859-018-2120-7
+
+  - name: ChromatinDB
+    url: https://doi.org/10.1093/bioinformatics/btm236
+    tags: [no-software-url]
+    description: a database of genome-wide histone modification patterns for Saccharomyces cerevisiae
+    categories: [histone-marks, chip-resources]
+    doi: 10.1093/bioinformatics/btm236
+
+  - name: OxyBS
+    url: https://doi.org/10.1093/bioinformatics/btw158
+    tags: [no-software-url]
+    description: estimation of 5-methylcytosine and 5-hydroxymethylcytosine from tandem-treated oxidative bisulfite and bisulfite DNA
+    categories: [dna-methylation]
+    doi: 10.1093/bioinformatics/btw158
+
+  - name: TF2LncRNA
+    url: http://mlg.hit.edu.cn/tf2lncrna
+    description: identifying common transcription factors for a list of lncRNA genes from ChIP-Seq data
+    categories: [motif-scanning, peak-annotation, tfbs-prediction]
+    doi: 10.1155/2014/317642
+
+  - name: BSeQC
+    url: https://doi.org/10.1093/bioinformatics/btt548
+    tags: [no-software-url]
+    description: quality control of bisulfite sequencing experiments
+    categories: [dna-methylation]
+    doi: 10.1093/bioinformatics/btt548
+
+  - name: NetBenchmark
+    url: https://imatge.upc.edu/netbenchmark
+    description: a bioconductor package for reproducible benchmarks of gene regulatory network inference
+    categories: [grn-inference]
+    doi: 10.1186/s12859-015-0728-4
+
+  - name: QuASAR-MPRA
+    url: https://doi.org/10.1093/bioinformatics/btx598
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at http://github.com/piquelab/QuASAR/tree/master/mpra but did not verify as the same software'
+    description: accurate allele-specific analysis for massively parallel reporter assays
+    categories: [reporter-assays, regulatory-variants]
+    doi: 10.1093/bioinformatics/btx598
+
+  - name: RRBS-analyser
+    url: https://doi.org/10.1002/humu.22444
+    tags: [no-software-url]
+    description: a comprehensive web server for reduced representation bisulfite sequencing data analysis
+    categories: [dna-methylation]
+    doi: 10.1002/humu.22444
+
+  - name: TEPIC
+    url: https://github.com/SchulzLab/TEPIC
+    repo: SchulzLab/TEPIC
+    description: TEPIC 2-an extended framework for transcription factor binding prediction and integrative epigenomic analysis
+    categories: [tfbs-prediction, motif-scanning, grn-inference]
+    doi: 10.1093/bioinformatics/bty856
+
+  - name: Bi-PROF
+    url: https://doi.org/10.4161/epi.25242
+    tags: [no-software-url]
+    description: bisulfite profiling of target regions using 454 GS FLX Titanium technology
+    categories: [dna-methylation]
+    doi: 10.4161/epi.25242
+
+  - name: CORE_TF
+    url: http://www.LGTC.nl/CORE_TF
+    description: a user-friendly interface to identify evolutionary conserved transcription factor binding sites in sets of co-regulated genes
+    categories: [motif-scanning, motif-comparison, comparative]
+    doi: 10.1186/1471-2105-9-495
+
+  - name: BNArray
+    url: https://doi.org/10.1093/bioinformatics/btl491
+    tags: [no-software-url]
+    description: an R package for constructing gene regulatory networks from microarray data by using Bayesian network
+    categories: [grn-inference]
+    doi: 10.1093/bioinformatics/btl491
+
+  - name: QChIPat
+    url: http://motif.bmi.ohio-state.edu/QChIPat
+    description: a quantitative method to identify distinct binding patterns for two biological ChIP-seq samples in different experimental conditions
+    categories: [peak-calling, peak-annotation, histone-marks]
+    doi: 10.1186/1471-2164-14-s8-s3
+
+  - name: CisOrtho
+    url: http://www.sgi.com/tech/stl
+    description: a program pipeline for genome-wide identification of transcription factor target genes using phylogenetic footprinting
+    categories: [motif-scanning, footprinting]
+    doi: 10.1186/1471-2105-5-27
+
+  - name: MORPH
+    url: https://doi.org/10.1371/journal.pcbi.0030216
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/metagriffin/morph but did not verify as the same software'
+    description: probabilistic alignment combined with hidden Markov models of cis-regulatory modules
+    categories: [motif-discovery, comparative]
+    doi: 10.1371/journal.pcbi.0030216
+
+  - name: RUbioSeq
+    url: http://rubioseq.sourceforge.net
+    description: a suite of parallelized pipelines to automate exome variation and bisulfite-seq analyses
+    categories: [dna-methylation]
+    doi: 10.1093/bioinformatics/btt203
+
+  - name: NucPosPred
+    url: https://doi.org/10.1016/j.jtbi.2018.04.025
+    tags: [no-software-url]
+    description: Predicting species-specific genomic nucleosome positioning via four different modes of general PseKNC
+    categories: [nucleosome-chromatin]
+    doi: 10.1016/j.jtbi.2018.04.025
+
+  - name: HiC-ACT
+    url: https://doi.org/10.1016/j.ajhg.2021.01.009
+    tags: [no-software-url]
+    description: improved detection of chromatin interactions from Hi-C data via aggregated Cauchy test
+    categories: [chromatin-3d]
+    doi: 10.1016/j.ajhg.2021.01.009
+
+  - name: CMGRN
+    url: https://doi.org/10.1093/bioinformatics/btt761
+    tags: [no-software-url]
+    description: a web server for constructing multilevel gene regulatory networks using ChIP-seq and gene expression data
+    categories: [grn-inference]
+    doi: 10.1093/bioinformatics/btt761
+
+  - name: GBSA
+    url: http://ctrad-csi.nus.edu.sg/gbsa
+    description: a comprehensive software for analysing whole genome bisulfite sequencing data
+    categories: [dna-methylation]
+    doi: 10.1093/nar/gks1281
+
+  - name: MMDiff
+    url: http://homepages.inf.ed.ac.uk/gschweik/MMDiff.html
+    description: quantitative testing for shape changes in ChIP-Seq data sets
+    categories: [peak-annotation, histone-marks]
+    doi: 10.1186/1471-2164-14-826
+
+  - name: MOPAT
+    url: https://doi.org/10.1093/nar/gkn407
+    tags: [no-software-url]
+    description: a graph-based method to predict recurrent cis-regulatory modules from known motifs
+    categories: [motif-scanning, regulatory-elements]
+    doi: 10.1093/nar/gkn407
+
+  - name: BTNET
+    url: http://infos.korea.ac.kr/btnet
+    description: boosted tree based gene regulatory network inference algorithm using time-course measurement data
+    categories: [grn-inference]
+    doi: 10.1186/s12918-018-0547-0
+
+  - name: FastMap
+    url: https://doi.org/10.1093/bioinformatics/btn648
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/fastmap-io/fastmap but did not verify as the same software'
+    description: fast eQTL mapping in homozygous populations
+    categories: [molecular-qtl]
+    doi: 10.1093/bioinformatics/btn648
+
+  - name: LegumeGRN
+    url: http://legumegrn.noble.org
+    description: a gene regulatory network prediction server for functional and comparative studies
+    categories: [grn-inference]
+    doi: 10.1371/journal.pone.0067434
+
+  - name: oxBS-MLE
+    url: https://doi.org/10.1093/bioinformatics/btw527
+    tags: [no-software-url]
+    description: an efficient method to estimate 5-methylcytosine and 5-hydroxymethylcytosine in paired bisulfite and oxidative bisulfite treated DNA
+    categories: [dna-methylation]
+    doi: 10.1093/bioinformatics/btw527
+
+  - name: PeakError
+    url: https://github.com/tdhock/PeakError
+    repo: tdhock/PeakError
+    description: Optimizing ChIP-seq peak detectors using visual labels and supervised machine learning
+    categories: [peak-calling]
+    doi: 10.1093/bioinformatics/btw672
+
+  - name: CisView
+    url: https://doi.org/10.1093/dnares/dsl005
+    tags: [no-software-url]
+    description: a browser and database of cis-regulatory modules predicted in the mouse genome
+    categories: [motif-scanning, motif-databases, regulatory-elements]
+    doi: 10.1093/dnares/dsl005
+
+  - name: DIRECTION
+    url: https://doi.org/10.1093/bioinformatics/btx316
+    tags: [no-software-url]
+    description: a machine learning framework for predicting and characterizing DNA methylation and hydroxymethylation in mammalian genomes
+    categories: [dna-methylation]
+    doi: 10.1093/bioinformatics/btx316
+
+  - name: EZ-Retrieve
+    url: https://doi.org/10.1093/nar/gnf120
+    tags: [no-software-url]
+    description: a web-server for batch retrieval of coordinate-specified human DNA sequences and underscoring putative transcription factor-binding sites
+    categories: [motif-scanning, tfbs-prediction]
+    doi: 10.1093/nar/gnf120
+
+  - name: MT-HESS
+    url: https://doi.org/10.1093/bioinformatics/btv568
+    tags: [no-software-url]
+    description: 'an efficient Bayesian approach for simultaneous association detection in OMICS datasets, with application to eQTL mapping in multiple tissues'
+    categories: [molecular-qtl]
+    doi: 10.1093/bioinformatics/btv568
+
+  - name: SSP
+    url: https://github.com/rnakato/SSP
+    repo: rnakato/SSP
+    description: Sensitive and robust assessment of ChIP-seq read distribution using a strand-shift profile
+    categories: [peak-calling]
+    doi: 10.1093/bioinformatics/bty137
+
+  - name: DeepSNR
+    url: https://github.com/sirajulsalekin/DeepSNR
+    repo: sirajulsalekin/DeepSNR
+    description: Base-pair resolution detection of transcription factor binding site by deep deconvolutional network
+    categories: [tfbs-prediction]
+    doi: 10.1093/bioinformatics/bty383
+
+  - name: eQTLQC
+    url: https://github.com/stormlovetao/eQTLQC
+    repo: stormlovetao/eQTLQC
+    description: A pipeline for RNA-seq based eQTL analysis with automated quality control procedures
+    categories: [molecular-qtl]
+    doi: 10.1186/s12859-021-04307-0
+
+  - name: funtooNorm
+    url: https://github.com/GreenwoodLab/funtooNorm
+    repo: GreenwoodLab/funtooNorm
+    description: an R package for normalization of DNA methylation data when there are multiple cell or tissue types
+    categories: [dna-methylation]
+    doi: 10.1093/bioinformatics/btv615
+
+  - name: GetisDMR
+    url: https://github.com/DMU-lilab/GetisDMR
+    repo: DMU-lilab/GetisDMR
+    description: Detection of differentially methylated regions in whole genome bisulfite sequencing data using local Getis-Ord statistics
+    categories: [dna-methylation]
+    doi: 10.1093/bioinformatics/btw497
+
+  - name: MetaProm
+    url: https://doi.org/10.1186/1471-2164-8-374
+    tags: [no-software-url]
+    description: a neural network based meta-predictor for alternative human promoter prediction
+    categories: [regulatory-elements]
+    doi: 10.1186/1471-2164-8-374
+
+  - name: PeaKDEck
+    url: https://doi.org/10.1093/bioinformatics/btt774
+    tags: [no-software-url]
+    description: a kernel density estimator-based peak calling program for DNaseI-seq data
+    categories: [peak-calling]
+    doi: 10.1093/bioinformatics/btt774
+
+  - name: info-gibbs
+    url: https://doi.org/10.1093/bioinformatics/btp490
+    tags: [no-software-url]
+    description: a motif discovery algorithm that directly optimizes information content during sampling
+    categories: [motif-discovery]
+    doi: 10.1093/bioinformatics/btp490
+
+  - name: kruX
+    url: https://doi.org/10.1186/1471-2105-15-11
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/claydodo/krux but did not verify as the same software'
+    description: matrix-based non-parametric eQTL discovery
+    categories: [molecular-qtl]
+    doi: 10.1186/1471-2105-15-11
+
+  - name: NSRGRN
+    url: https://doi.org/10.1093/bib/bbad129
+    tags: [no-software-url]
+    description: a network structure refinement method for gene regulatory network inference
+    categories: [grn-inference]
+    doi: 10.1093/bib/bbad129
+
+  - name: scBS-map
+    url: https://github.com/wupengomics/scBS-map
+    repo: wupengomics/scBS-map
+    description: Using local alignment to enhance single-cell bisulfite sequencing data efficiency
+    categories: [dna-methylation, single-cell]
+    doi: 10.1093/bioinformatics/btz125
+
+  - name: SELER
+    url: http://www.seler.cn
+    description: a database of super-enhancer-associated lncRNA- directed transcriptional regulation in human cancers
+    categories: [regulatory-elements, chip-resources, histone-marks]
+    doi: 10.1093/database/baz027
+
+  - name: SIOMICS
+    url: http://www.eecs.ucf.edu/~xiaoman/SIOMICS/SIOMICS.html
+    description: a novel approach for systematic identification of motifs in ChIP-seq data
+    categories: [motif-discovery]
+    doi: 10.1093/nar/gkt1288
+
+  - name: Inter-Chrom
+    url: https://github.com/HaoWuLab-Bioinformatics/Inter-Chrom
+    repo: HaoWuLab-Bioinformatics/Inter-Chrom
+    description: A novel deep learning framework with dynamic tokenization for identifying chromatin interactions along with motif importance investigation
+    categories: [chromatin-3d]
+    doi: 10.1093/bib/bbaf289
+
+  - name: NSCGRN
+    url: https://doi.org/10.1093/bib/bbac156
+    tags: [no-software-url]
+    description: a network structure control method for gene regulatory network inference
+    categories: [grn-inference]
+    doi: 10.1093/bib/bbac156
+
+  - name: RepeatSoaker
+    url: https://github.com/mdozmorov/RepeatSoaker
+    repo: mdozmorov/RepeatSoaker
+    description: Detrimental effects of duplicate reads and low complexity regions on RNA- and ChIP-seq data
+    categories: [peak-calling]
+    doi: 10.1186/1471-2105-16-s13-s10
+
+  - name: sequence-shape
+    url: https://bitbucket.org/wenxiu/sequence-shape.git
+    description: DNA sequence+shape kernel enables alignment-free modeling of transcription factor binding
+    categories: [tfbs-prediction]
+    doi: 10.1093/bioinformatics/btx336
+
+  - name: StackTADB
+    url: https://github.com/HaoWuLab-Bioinformatics/StackTADB
+    repo: HaoWuLab-Bioinformatics/StackTADB
+    description: a stacking-based ensemble learning model for predicting the boundaries of topologically associating domains (TADs) accurately in fruit flies
+    categories: [chromatin-3d]
+    doi: 10.1093/bib/bbac023
+
+  - name: BigFoot
+    url: https://doi.org/10.1186/1471-2148-9-217
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/axiomantic/python-tripwire but did not verify as the same software'
+    description: Bayesian alignment and phylogenetic footprinting with MCMC
+    categories: [footprinting, comparative]
+    doi: 10.1186/1471-2148-9-217
+
+  - name: FineStr
+    url: https://doi.org/10.1093/bioinformatics/btq030
+    tags: [no-software-url]
+    description: a web server for single-base-resolution nucleosome positioning
+    categories: [nucleosome-chromatin]
+    doi: 10.1093/bioinformatics/btq030
+
+  - name: IBPP
+    url: https://github.com/hahatcdg/IBPP
+    repo: hahatcdg/IBPP
+    description: 'Image-based promoter prediction: a promoter prediction method based on evolutionarily generated patterns'
+    categories: [regulatory-elements]
+    doi: 10.1038/s41598-018-36308-0
+
+  - name: SeAMotE
+    url: http://s.tartaglialab.com/new_submission/seamote
+    description: a method for high-throughput motif discovery in nucleic acid sequences
+    categories: [motif-discovery]
+    doi: 10.1186/1471-2164-15-925
+
+  - name: ChIPModule
+    url: https://doi.org/10.1142/9789814447973_0032
+    tags: [no-software-url]
+    description: systematic discovery of transcription factors and their cofactors from ChIP-seq data
+    categories: [motif-discovery, motif-scanning, grn-inference]
+    doi: 10.1142/9789814447973_0032
+
+  - name: HEFT
+    url: https://doi.org/10.1093/bioinformatics/btt690
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/mroclin/heft but did not verify as the same software'
+    description: eQTL analysis of many thousands of expressed genes while simultaneously controlling for hidden factors
+    categories: [molecular-qtl]
+    doi: 10.1093/bioinformatics/btt690
+
+  - name: RSIR
+    url: https://doi.org/10.1093/bioinformatics/bti680
+    tags: [no-software-url]
+    description: regularized sliced inverse regression for motif discovery
+    categories: [motif-discovery]
+    doi: 10.1093/bioinformatics/bti680
+
+  - name: B-SOLANA
+    url: http://code.google.com/p/bsolana
+    description: an approach for the analysis of two-base encoding bisulfite sequencing data
+    categories: [dna-methylation]
+    doi: 10.1093/bioinformatics/btr660
+
+  - name: CRNET
+    url: https://doi.org/10.1093/bioinformatics/btx827
+    tags: [no-software-url]
+    description: an efficient sampling approach to infer functional regulatory networks by integrating large-scale ChIP-seq and time-course RNA-seq data
+    categories: [grn-inference]
+    doi: 10.1093/bioinformatics/btx827
+
+  - name: enpred
+    url: https://doi.org/10.1038/s41598-022-19099-3
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/csbioinfopk/enpred but did not verify as the same software'
+    description: A machine learning technique for identifying DNA enhancer regions utilizing CIS-regulatory element patterns
+    categories: [regulatory-elements]
+    doi: 10.1038/s41598-022-19099-3
+
+  - name: iNuc-ext-PseTNC
+    url: https://doi.org/10.1007/s00438-018-1498-2
+    tags: [no-software-url]
+    description: 'an efficient ensemble model for identification of nucleosome positioning by extending the concept of Chou''s PseAAC to pseudo-tri-nucleotide composition'
+    categories: [nucleosome-chromatin]
+    doi: 10.1007/s00438-018-1498-2
+
+  - name: TargetOrtho
+    url: https://doi.org/10.1534/genetics.113.160721
+    tags: [no-software-url]
+    description: a phylogenetic footprinting tool to identify transcription factor targets
+    categories: [motif-scanning, footprinting, comparative]
+    doi: 10.1534/genetics.113.160721
+
+  - name: TIVAN
+    url: https://github.com/lichen-lab/TIVAN
+    repo: lichen-lab/TIVAN
+    description: tissue-specific cis-eQTL single nucleotide variant annotation and prediction
+    categories: [regulatory-variants, molecular-qtl]
+    doi: 10.1093/bioinformatics/bty872
+
+  - name: Arioc
+    url: https://github.com/RWilton/Arioc
+    repo: RWilton/Arioc
+    description: GPU-accelerated alignment of short bisulfite-treated reads
+    categories: [dna-methylation]
+    doi: 10.1093/bioinformatics/bty167
+
+  - name: BAT
+    url: https://doi.org/10.12688/f1000research.12302.1
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/SuperCowPowers/zat but did not verify as the same software'
+    description: 'Bisulfite Analysis Toolkit: BAT is a toolkit to analyze DNA methylation sequencing data accurately and reproducibly. It covers standard processing and analysis steps from raw read mapping up to annotation data integration and calculation of correlating DMRs'
+    categories: [dna-methylation]
+    doi: 10.12688/f1000research.12302.1
+
+  - name: Ceres
+    url: https://doi.org/10.1093/bioinformatics/btp657
+    tags: [no-software-url]
+    description: software for the integrated analysis of transcription factor binding sites and nucleosome positions in Saccharomyces cerevisiae
+    categories: [motif-scanning, nucleosome-chromatin]
+    doi: 10.1093/bioinformatics/btp657
+
+  - name: FootPrinter3
+    url: http://www.mcb.mcgill.ca/~blanchem/FootPrinter3
+    description: phylogenetic footprinting in partially alignable sequences
+    categories: [motif-discovery, footprinting, tfbs-prediction]
+    doi: 10.1093/nar/gkl123
+
+  - name: MethyQA
+    url: http://hal.case.edu/~sun/MethyQA.v2.zip
+    description: a pipeline for bisulfite-treated methylation sequencing quality assessment
+    categories: [dna-methylation]
+    doi: 10.1186/1471-2105-14-259
+
+  - name: PlantBind
+    url: https://doi.org/10.1093/bib/bbac425
+    tags: [no-software-url]
+    description: an attention-based multi-label neural network for predicting plant transcription factor binding sites
+    categories: [tfbs-prediction, motif-discovery]
+    doi: 10.1093/bib/bbac425
+
+  - name: scGREAT
+    url: https://github.com/ChaozhongLiu/scGREAT
+    repo: ChaozhongLiu/scGREAT
+    description: Transformer-based deep-language model for gene regulatory network inference from single-cell transcriptomics
+    categories: [grn-inference, single-cell]
+    doi: 10.1016/j.isci.2024.109352
+
+  - name: SPACER
+    url: https://doi.org/10.1093/bioinformatics/btm041
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/datalayer/spacer but did not verify as the same software'
+    description: identification of cis-regulatory elements with non-contiguous critical residues
+    categories: [motif-discovery]
+    doi: 10.1093/bioinformatics/btm041
+
+  - name: STIF
+    url: https://doi.org/10.6026/97320630002431
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/johanneskopton/stif but did not verify as the same software'
+    description: Identification of stress-upregulated transcription factor binding sites in Arabidopsis thaliana
+    categories: [motif-scanning]
+    doi: 10.6026/97320630002431
+
+  - name: BEAM
+    url: https://doi.org/10.1089/cmb.2006.13.686
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/gebn/beam but did not verify as the same software'
+    description: a beam search algorithm for the identification of cis-regulatory elements in groups of genes
+    categories: [motif-discovery]
+    doi: 10.1089/cmb.2006.13.686
+
+  - name: bPeaks
+    url: https://doi.org/10.1002/yea.3031
+    tags: [no-software-url]
+    description: a bioinformatics tool to detect transcription factor binding sites from ChIPseq data in yeasts and other organisms with small genomes
+    categories: [peak-calling, peak-annotation, motif-discovery]
+    doi: 10.1002/yea.3031
+
+  - name: CisMapper
+    url: https://doi.org/10.1093/nar/gkw956
+    tags: [no-software-url]
+    description: predicting regulatory interactions from transcription factor ChIP-seq data
+    categories: [grn-inference, regulatory-elements]
+    doi: 10.1093/nar/gkw956
+
+  - name: iEnhancer-ELM
+    url: https://github.com/chen-bioinfo/iEnhancer-ELM
+    repo: chen-bioinfo/iEnhancer-ELM
+    description: improve enhancer identification by extracting position-related multiscale contextual information based on enhancer language models
+    categories: [regulatory-elements]
+    doi: 10.1093/bioadv/vbad043
+
+  - name: IMMBoost
+    url: https://github.com/weiyangedward/IMMBoost
+    repo: weiyangedward/IMMBoost
+    description: 'A novel method for predicting activity of cis-regulatory modules, based on a diverse training set'
+    categories: [regulatory-elements]
+    doi: 10.1093/bioinformatics/btw552
+
+  - name: MMFGRN
+    url: https://doi.org/10.1093/bib/bbab166
+    tags: [no-software-url]
+    description: a multi-source multi-model fusion method for gene regulatory network reconstruction
+    categories: [grn-inference]
+    doi: 10.1093/bib/bbab166
+
+  - name: WBSA
+    url: http://wbsa.big.ac.cn
+    description: web service for bisulfite sequencing data analysis
+    categories: [dna-methylation]
+    doi: 10.1371/journal.pone.0086707
+
+  - name: ChIP-PaM
+    url: https://doi.org/10.1186/1742-4682-7-18
+    tags: [no-software-url]
+    description: an algorithm to identify protein-DNA interaction using ChIP-Seq data
+    categories: [peak-calling, tfbs-prediction]
+    doi: 10.1186/1742-4682-7-18
+
+  - name: COPS
+    url: https://doi.org/10.1371/journal.pone.0052055
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/rickhw/pipProject but did not verify as the same software'
+    description: detecting co-occurrence and spatial arrangement of transcription factor binding motifs in genome-wide datasets
+    categories: [motif-scanning, motif-comparison]
+    doi: 10.1371/journal.pone.0052055
+
+  - name: DiffGRN
+    url: https://doi.org/10.1504/ijdmb.2018.094891
+    tags: [no-software-url]
+    description: differential gene regulatory network analysis
+    categories: [grn-inference]
+    doi: 10.1504/ijdmb.2018.094891
+
+  - name: DiNuP
+    url: http://www.tongji.edu.cn/~zhanglab/DiNuP
+    description: a systematic approach to identify regions of differential nucleosome positioning
+    categories: [nucleosome-chromatin]
+    doi: 10.1093/bioinformatics/bts329
+
+  - name: intePareto
+    url: https://cran.r-project.org/web/packages/intePareto
+    description: an R package for integrative analyses of RNA-Seq and ChIP-Seq data
+    categories: [peak-annotation, histone-marks]
+    doi: 10.1186/s12864-020-07205-6
+
+  - name: PromotePredictor
+    url: https://doi.org/10.1109/tcbb.2018.2816032
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/maqin2001/PromotePredictor but did not verify as the same software'
+    description: Computational Prediction of Sigma-54 Promoters in Bacterial Genomes by Integrating Motif Finding and Machine Learning Strategies
+    categories: [regulatory-elements, motif-discovery, tfbs-prediction]
+    doi: 10.1109/tcbb.2018.2816032
+
+  - name: SCeQTL
+    url: https://github.com/XuegongLab/SCeQTL
+    repo: XuegongLab/SCeQTL
+    description: an R package for identifying eQTL from single-cell parallel sequencing data
+    categories: [molecular-qtl, single-cell]
+    doi: 10.1186/s12859-020-3534-6
+
+  - name: Workflow_of_Chipseq
+    url: https://github.com/ddhb/Workflow_of_Chipseq
+    repo: ddhb/Workflow_of_Chipseq
+    description: A ChIP-Seq Data Analysis Pipeline Based on Bioconductor Packages
+    categories: [peak-calling, peak-annotation]
+    doi: 10.5808/gi.2017.15.1.11
+
+  - name: cpi-em
+    url: https://github.com/vishakad/cpi-em
+    repo: vishakad/cpi-em
+    description: Detection of cooperatively bound transcription factor pairs using ChIP-seq peak intensities and expectation maximization
+    categories: [peak-calling, tfbs-prediction]
+    doi: 10.1371/journal.pone.0199771
+
+  - name: dPeak
+    url: http://www.bioconductor.org
+    description: high resolution identification of transcription factor binding sites from PET and SET ChIP-Seq data
+    categories: [peak-calling]
+    doi: 10.1371/journal.pcbi.1003246
+
+  - name: PASS-bis
+    url: https://doi.org/10.1093/bioinformatics/bts675
+    tags: [no-software-url]
+    description: a bisulfite aligner suitable for whole methylome analysis of Illumina and SOLiD reads
+    categories: [dna-methylation]
+    doi: 10.1093/bioinformatics/bts675
+
+  - name: tabsat
+    url: https://github.com/tadkeys/tabsat
+    repo: tadkeys/tabsat
+    description: Analysis and Visualization Tool for Targeted Amplicon Bisulfite Sequencing on Ion Torrent Sequencers
+    categories: [dna-methylation]
+    doi: 10.1371/journal.pone.0160227
+
+  - name: TF2Exp
+    url: https://github.com/wqshi/TF2Exp
+    repo: wqshi/TF2Exp
+    description: Gene expression models based on transcription factor binding events confer insight into functional cis-regulatory variants
+    categories: [regulatory-variants, molecular-qtl]
+    doi: 10.1093/bioinformatics/bty992
+
+  - name: BCalm
+    url: https://doi.org/10.1186/s12859-025-06065-9
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/kircherlab/BCalm but did not verify as the same software'
+    description: Using individual barcodes to increase quantification power of massively parallel reporter assays
+    categories: [reporter-assays]
+    doi: 10.1186/s12859-025-06065-9
+
+  - name: DeepPHiC
+    url: https://github.com/lichen-lab/DeepPHiC
+    repo: lichen-lab/DeepPHiC
+    description: predicting promoter-centered chromatin interactions using a novel deep learning approach
+    categories: [chromatin-3d]
+    doi: 10.1093/bioinformatics/btac801
+
+  - name: ExRANGES
+    url: https://doi.org/10.1038/s41598-017-17143-1
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at http://github.com/DohertyLab/ExRANGES but did not verify as the same software'
+    description: Improving Gene Regulatory Network Inference by Incorporating Rates of Transcriptional Changes
+    categories: [grn-inference]
+    doi: 10.1038/s41598-017-17143-1
+
+  - name: lscon
+    url: https://bitbucket.org/sonnhammergrni/lscon
+    description: Fast and accurate gene regulatory network inference by normalized least squares regression
+    categories: [grn-inference]
+    doi: 10.1093/bioinformatics/btac103
+
+  - name: mHapTk
+    url: https://doi.org/10.1093/bioinformatics/btac650
+    tags: [no-software-url]
+    description: a comprehensive toolkit for the analysis of DNA methylation haplotypes
+    categories: [dna-methylation]
+    doi: 10.1093/bioinformatics/btac650
+
+  - name: papst
+    url: https://github.com/paulbible/papst
+    repo: paulbible/papst
+    description: 'PAPST, a User Friendly and Powerful Java Platform for ChIP-Seq Peak Co-Localization Analysis and Beyond'
+    categories: [peak-annotation]
+    doi: 10.1371/journal.pone.0127285
+
+  - name: PeakPass
+    url: https://doi.org/10.1089/cmb.2019.0295
+    tags: [no-software-url]
+    description: Automating ChIP-Seq Blacklist Creation
+    categories: [peak-calling]
+    doi: 10.1089/cmb.2019.0295
+
+  - name: RecMotif
+    url: https://doi.org/10.1186/1471-2105-11-s11-s8
+    tags: [no-software-url]
+    description: a novel fast algorithm for weak motif discovery
+    categories: [motif-discovery]
+    doi: 10.1186/1471-2105-11-s11-s8
+
+  - name: SPIC
+    url: https://doi.org/10.1186/1752-0509-7-s2-s14
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/joshua-auchincloss/spic but did not verify as the same software'
+    description: a novel similarity metric for comparing transcription factor binding site motifs based on information contents
+    categories: [motif-comparison]
+    doi: 10.1186/1752-0509-7-s2-s14
+
+  - name: bioconductor.org
+    url: http://bioconductor.org
+    description: 'PING 2.0: an R/Bioconductor package for nucleosome positioning using next-generation sequencing data'
+    categories: [nucleosome-chromatin]
+    doi: 10.1093/bioinformatics/btt348
+
+  - name: BRAT-nova
+    url: https://doi.org/10.1093/bioinformatics/btw226
+    tags: [no-software-url]
+    description: fast and accurate mapping of bisulfite-treated reads
+    categories: [dna-methylation]
+    doi: 10.1093/bioinformatics/btw226
+
+  - name: ChIP-BIT
+    url: http://www.cbil.ece.vt.edu/software.htm
+    description: Bayesian inference of target genes using a novel joint probabilistic model of ChIP-seq profiles
+    categories: [peak-calling, tfbs-prediction]
+    doi: 10.1093/nar/gkv1491
+
+  - name: cisMEP
+    url: http://cosbi3.ee.ncku.edu.tw/cisMEP
+    description: an integrated repository of genomic epigenetic profiles and cis-regulatory modules in Drosophila
+    categories: [regulatory-elements, chip-resources, motif-databases]
+    doi: 10.1186/1752-0509-8-s4-s8
+
+  - name: COTRASIF
+    url: http://biomed.org.ua/COTRASIF
+    description: conservation-aided transcription-factor-binding site finder
+    categories: [motif-scanning, comparative]
+    doi: 10.1093/nar/gkp084
+
+  - name: Enhancer-FRL
+    url: https://github.com/wangchao-malab/Enhancer-FRL
+    repo: wangchao-malab/Enhancer-FRL
+    description: Improved and Robust Identification of Enhancers and Their Activities Using Feature Representation Learning
+    categories: [regulatory-elements]
+    doi: 10.1109/tcbb.2022.3204365
+
+  - name: EPIHC
+    url: https://github.com/BioMedicalBigDataMiningLab/EPIHC
+    repo: BioMedicalBigDataMiningLab/EPIHC
+    description: Improving Enhancer-Promoter Interaction Prediction by Using Hybrid Features and Communicative Learning
+    categories: [regulatory-elements, chromatin-3d]
+    doi: 10.1109/tcbb.2021.3109488
+
+  - name: forecast
+    url: https://gitlab.com/Pierre-Aurelien/forecast
+    description: Effective design and inference for cell sorting and sequencing based massively parallel reporter assays
+    categories: [reporter-assays]
+    doi: 10.1093/bioinformatics/btad277
+
+  - name: GibbsST
+    url: https://doi.org/10.1186/1471-2105-7-486
+    tags: [no-software-url]
+    description: a Gibbs sampling method for motif discovery with enhanced resistance to local optima
+    categories: [motif-discovery]
+    doi: 10.1186/1471-2105-7-486
+
+  - name: iBMQ
+    url: http://bioconductor.org
+    description: a R/Bioconductor package for integrated Bayesian modeling of eQTL data
+    categories: [molecular-qtl]
+    doi: 10.1093/bioinformatics/btt485
+
+  - name: MCAST
+    url: https://doi.org/10.1093/bioinformatics/btv750
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/fdev31/mcast but did not verify as the same software'
+    description: scanning for cis-regulatory motif clusters
+    categories: [motif-scanning, regulatory-elements]
+    doi: 10.1093/bioinformatics/btv750
+
+  - name: MLDSPP
+    url: https://doi.org/10.1021/acs.jcim.3c02017
+    tags: [no-software-url]
+    description: Bacterial Promoter Prediction Tool Using DNA Structural Properties with Machine Learning and Explainable AI
+    categories: [regulatory-elements]
+    doi: 10.1021/acs.jcim.3c02017
+
+  - name: NPRD
+    url: https://doi.org/10.1093/nar/gki049
+    tags: [no-software-url]
+    description: Nucleosome Positioning Region Database
+    categories: [nucleosome-chromatin]
+    doi: 10.1093/nar/gki049
+
+  - name: OIPCQ-and-OIPCQ2
+    url: https://github.com/haammim/OIPCQ-and-OIPCQ2
+    repo: haammim/OIPCQ-and-OIPCQ2
+    description: An order independent algorithm for inferring gene regulatory network using quantile value for conditional independence tests
+    categories: [grn-inference]
+    doi: 10.1038/s41598-021-87074-5
+
+  - name: SpikeFlow
+    url: https://github.com/DavideBrex/SpikeFlow
+    repo: DavideBrex/SpikeFlow
+    description: automated and flexible analysis of ChIP-Seq data with spike-in control
+    categories: [peak-calling, peak-annotation, chip-resources]
+    doi: 10.1093/nargab/lqae118
+
+  - name: Triangulate
+    url: https://github.com/SchulzLab/Triangulate
+    repo: SchulzLab/Triangulate
+    description: Prediction of single-cell gene expression for transcription factor analysis
+    categories: [motif-scanning, grn-inference, single-cell]
+    doi: 10.1093/gigascience/giaa113
+
+  - name: BisQC
+    url: http://www.mcgill.ca/psychiatricgenetics
+    description: an operational pipeline for multiplexed bisulfite sequencing
+    categories: [dna-methylation]
+    doi: 10.1186/1471-2164-15-290
+
+  - name: MEOMI
+    url: https://github.com/Dalei-Dalei/MEOMI
+    repo: Dalei-Dalei/MEOMI
+    description: An approach of gene regulatory network construction using mixed entropy optimizing context-related likelihood mutual information
+    categories: [grn-inference]
+    doi: 10.1093/bioinformatics/btac717
+
+  - name: Msuite2
+    url: https://github.com/hellosunking/Msuite2
+    repo: hellosunking/Msuite2
+    description: All-in-one DNA methylation data analysis toolkit with enhanced usability and performance
+    categories: [dna-methylation]
+    doi: 10.1016/j.csbj.2022.03.005
+
+  - name: Mtb-sig-miner
+    url: https://doi.org/10.1016/j.gene.2017.10.054
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/zoozeal/Mtb-sig-miner but did not verify as the same software'
+    description: Computational insights into promoter architecture of toxin-antitoxin systems of Mycobacterium tuberculosis
+    categories: [motif-discovery, motif-scanning]
+    doi: 10.1016/j.gene.2017.10.054
+
+  - name: POWRS
+    url: http://grassrootsbio.com/papers/powrs
+    description: position-sensitive motif discovery
+    categories: [motif-discovery]
+    doi: 10.1371/journal.pone.0040373
+
+  - name: Vocabulon
+    url: https://doi.org/10.1093/bioinformatics/bti083
+    tags: [no-software-url]
+    description: a dictionary model approach for reconstruction and localization of transcription factor binding sites
+    categories: [motif-discovery, tfbs-prediction]
+    doi: 10.1093/bioinformatics/bti083
+
+  - name: CAGEd-oPOSSUM
+    url: http://cagedop.cmmt.ubc.ca/CAGEd_oPOSSUM
+    description: motif enrichment analysis from CAGE-derived TSSs
+    categories: [motif-scanning, motif-databases]
+    doi: 10.1093/bioinformatics/btw337
+
+  - name: CNNGRN
+    url: https://doi.org/10.1109/tcbb.2023.3282212
+    tags: [no-software-url]
+    description: A Convolutional Neural Network-Based Method for Gene Regulatory Network Inference From Bulk Time-Series Expression Data
+    categories: [grn-inference]
+    doi: 10.1109/tcbb.2023.3282212
+
+  - name: CoMM
+    url: https://github.com/gordonliu810822/CoMM
+    repo: gordonliu810822/CoMM
+    description: 'CoMM-S<sup>4</sup>: A Collaborative Mixed Model Using Summary-Level eQTL and GWAS Datasets in Transcriptome-Wide Association Studies'
+    categories: [molecular-qtl]
+    doi: 10.3389/fgene.2021.704538
+
+  - name: CoMoDis
+    url: http://hscl.cimr.cam.ac.uk/CoMoDis_portal.html
+    description: composite motif discovery in mammalian genomes
+    categories: [motif-discovery, comparative]
+    doi: 10.1093/nar/gkl839
+
+  - name: DeepHiC
+    url: https://github.com/biocai/DeepHiC
+    repo: biocai/DeepHiC
+    description: 'Combining artificial intelligence: deep learning with Hi-C data to predict the functional effects of non-coding variants'
+    categories: [chromatin-3d, regulatory-variants]
+    doi: 10.1093/bioinformatics/btaa970
+
+  - name: EPIPDLF
+    url: https://github.com/xzc196/EPIPDLF
+    repo: xzc196/EPIPDLF
+    description: a pretrained deep learning framework for predicting enhancer-promoter interactions
+    categories: [chromatin-3d]
+    doi: 10.1093/bioinformatics/btae716
+
+  - name: HeliCis
+    url: http://lymphomics.wall.gu.se/helicis
+    description: a DNA motif discovery tool for colocalized motif pairs with periodic spacing
+    categories: [motif-discovery]
+    doi: 10.1186/1471-2105-8-418
+
+  - name: MethylMapper
+    url: https://doi.org/10.2144/000112035
+    tags: [no-software-url]
+    description: 'a method for high-throughput, multilocus bisulfite sequence analysis and reporting'
+    categories: [dna-methylation]
+    doi: 10.2144/000112035
+
+  - name: mfmd
+    url: https://github.com/jadermcg/mfmd
+    repo: jadermcg/mfmd
+    description: Sequence motif finder using memetic algorithm
+    categories: [motif-discovery]
+    doi: 10.1186/s12859-017-2005-1
+
+  - name: MixMir
+    url: https://github.com/ldiao/MixMir
+    repo: ldiao/MixMir
+    description: microRNA motif discovery from gene expression data using mixed linear models
+    categories: [motif-discovery]
+    doi: 10.1093/nar/gku672
+
+  - name: nuMap
+    url: https://doi.org/10.1016/j.gpb.2014.08.001
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/TheNirnir/NUMAP but did not verify as the same software'
+    description: a web platform for accurate prediction of nucleosome positioning
+    categories: [nucleosome-chromatin]
+    doi: 10.1016/j.gpb.2014.08.001
+
+  - name: PromoterLCNN
+    url: https://github.com/occasumlux/Promoters
+    repo: occasumlux/Promoters
+    description: A Light CNN-Based Promoter Prediction and Classification Model
+    categories: [regulatory-elements]
+    doi: 10.3390/genes13071126
+
+  - name: RECAP
+    url: https://github.com/theodorejperkins/RECAP
+    repo: theodorejperkins/RECAP
+    description: RECAP reveals the true statistical significance of ChIP-seq peak calls
+    categories: [peak-calling]
+    doi: 10.1093/bioinformatics/btz150
+
+  - name: scHiMe
+    url: http://dna.cs.miami.edu/scHiMe
+    description: predicting single-cell DNA methylation levels based on single-cell Hi-C data
+    categories: [dna-methylation, single-cell]
+    doi: 10.1093/bib/bbad223
+
+  - name: SICTIN
+    url: https://doi.org/10.1186/1756-0381-3-4
+    tags: [no-software-url]
+    description: Rapid footprinting of massively parallel sequencing data
+    categories: [footprinting]
+    doi: 10.1186/1756-0381-3-4
+
+  - name: DeNOPA
+    url: https://doi.org/10.1093/bib/bbab469
+    tags: [no-software-url]
+    description: decoding nucleosome positions sensitively with sparse ATAC-seq data
+    categories: [nucleosome-chromatin]
+    doi: 10.1093/bib/bbab469
+
+  - name: evopromoter
+    url: http://sourceforge.net/projects/evopromoter
+    description: Finding cis-regulatory modules in Drosophila using phylogenetic hidden Markov models
+    categories: [motif-discovery, comparative]
+    doi: 10.1093/bioinformatics/btm299
+
+  - name: FISim
+    url: http://genome.ugr.es/fisim
+    description: a new similarity measure between transcription factor binding sites based on the fuzzy integral
+    categories: [motif-comparison]
+    doi: 10.1186/1471-2105-10-224
+
+  - name: LmSmdB
+    url: http://www.nccs.res.in/LmSmdb
+    description: an integrated database for metabolic and gene regulatory network in Leishmania major and Schistosoma mansoni
+    categories: [grn-inference, regulatory-elements]
+    doi: 10.1016/j.gdata.2015.12.012
+
+  - name: MD-SVM
+    url: https://doi.org/10.1186/s12859-019-2735-3
+    tags: [no-software-url]
+    description: a novel SVM-based algorithm for the motif discovery of transcription factor binding sites
+    categories: [motif-discovery]
+    doi: 10.1186/s12859-019-2735-3
+
+  - name: Meta-eQTL
+    url: https://haok01.u.hpc.mssm.edu/meta_eQTL
+    description: a tool set for flexible eQTL meta-analysis
+    categories: [molecular-qtl]
+    doi: 10.1186/s12859-014-0392-0
+
+  - name: MotifClick
+    url: http://motifclick.uncc.edu
+    description: prediction of cis-regulatory binding sites via merging cliques
+    categories: [motif-discovery]
+    doi: 10.1186/1471-2105-12-238
+
+  - name: MPRAscore
+    url: https://github.com/abhisheknrl/MPRAscore
+    repo: abhisheknrl/MPRAscore
+    description: robust and non-parametric analysis of massively parallel reporter assays
+    categories: [reporter-assays]
+    doi: 10.1093/bioinformatics/btz591
+
+  - name: PMS6
+    url: https://doi.org/10.1109/iccabs.2012.6182627
+    tags: [no-software-url]
+    description: A Fast Algorithm for Motif Discovery
+    categories: [motif-discovery]
+    doi: 10.1109/iccabs.2012.6182627
+
+  - name: scDeconv
+    url: https://github.com/yuabrahamliu/scDeconv
+    repo: yuabrahamliu/scDeconv
+    description: an R package to deconvolve bulk DNA methylation data with scRNA-seq data and paired bulk RNA-DNA methylation data
+    categories: [dna-methylation, single-cell]
+    doi: 10.1093/bib/bbac150
+
+  - name: SnapHiC-D
+    url: https://github.com/HuMingLab/SnapHiC-D
+    repo: HuMingLab/SnapHiC-D
+    description: a computational pipeline to identify differential chromatin contacts from single-cell Hi-C data
+    categories: [chromatin-3d, single-cell]
+    doi: 10.1093/bib/bbad315
+
+  - name: WACS
+    url: https://www.encodeproject.org
+    description: improving ChIP-seq peak calling by optimally weighting controls
+    categories: [peak-calling]
+    doi: 10.1186/s12859-020-03927-2
+
+  - name: xFITOM
+    url: http://research.umbc.edu/~erill
+    description: a generic GUI tool to search for transcription factor binding sites
+    categories: [motif-scanning]
+    doi: 10.6026/97320630005049
+
+  - name: AtacAnnoR
+    url: https://doi.org/10.1093/bib/bbad268
+    tags: [no-software-url]
+    description: a reference-based annotation tool for single cell ATAC-seq data
+    categories: [single-cell, peak-annotation]
+    doi: 10.1093/bib/bbad268
+
+  - name: CAPE
+    url: https://github.com/BobYHY/CAPE
+    repo: BobYHY/CAPE
+    description: a deep learning framework with Chaos-Attention net for Promoter Evolution
+    categories: [regulatory-elements]
+    doi: 10.1093/bib/bbae398
+
+  - name: DIA-MCIS
+    url: https://doi.org/10.1093/bioinformatics/btm454
+    tags: [no-software-url]
+    description: an importance sampling network randomizer for network motif discovery and other topological observables in transcription networks
+    categories: [motif-discovery]
+    doi: 10.1093/bioinformatics/btm454
+
+  - name: eSNPO
+    url: http://bioinfo.hrbmu.edu.cn/esnpo
+    description: An eQTL-based SNP Ontology and SNP functional enrichment analysis platform
+    categories: [molecular-qtl, regulatory-variants]
+    doi: 10.1038/srep30595
+
+  - name: FastMotif
+    url: https://doi.org/10.1093/bioinformatics/btv208
+    tags: [no-software-url]
+    description: spectral sequence motif discovery
+    categories: [motif-discovery]
+    doi: 10.1093/bioinformatics/btv208
+
+  - name: GRiP
+    url: https://doi.org/10.1093/bioinformatics/bts132
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/joeyespo/grip but did not verify as the same software'
+    description: a computational tool to simulate transcription factor binding in prokaryotes
+    categories: [tfbs-prediction]
+    doi: 10.1093/bioinformatics/bts132
+
+  - name: iMotifs
+    url: https://github.com/mz2/imotifs
+    repo: mz2/imotifs
+    description: an integrated sequence motif visualization and analysis environment
+    categories: [motif-discovery, motif-scanning, motif-comparison]
+    doi: 10.1093/bioinformatics/btq026
+
+  - name: Less-is-more
+    url: https://doi.org/10.1093/nar/gkad1240
+    tags: [no-software-url]
+    description: selecting transcription factor binding regions informative for motif inference
+    categories: [motif-discovery, peak-annotation]
+    doi: 10.1093/nar/gkad1240
+
+  - name: LPAD
+    url: https://doi.org/10.1093/bib/bbad165
+    tags: [no-software-url]
+    description: using network construction and label propagation to detect topologically associating domains from Hi-C data
+    categories: [chromatin-3d]
+    doi: 10.1093/bib/bbad165
+
+  - name: POLYPHEMUS
+    url: https://doi.org/10.1093/nar/gkr1205
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/polyphemus-ci/polyphemus but did not verify as the same software'
+    description: R package for comparative analysis of RNA polymerase II ChIP-seq profiles by non-linear normalization
+    categories: [peak-annotation]
+    doi: 10.1093/nar/gkr1205
+
+  - name: PolyQTL
+    url: https://github.com/jxzb1988/PolyQTL
+    repo: jxzb1988/PolyQTL
+    description: Bayesian multiple eQTL detection with control for population structure and sample relatedness
+    categories: [molecular-qtl]
+    doi: 10.1093/bioinformatics/bty728
+
+  - name: PreCisIon
+    url: http://www.noraybio.com/en/gennetec.asp
+    description: 'PREdiction of CIS-regulatory elements improved by gene''s positION'
+    categories: [tfbs-prediction, grn-inference]
+    doi: 10.1093/nar/gks1286
+
+  - name: QuIN
+    url: https://github.com/UcarLab/QuIN
+    repo: UcarLab/QuIN
+    description: A Web Server for Querying and Visualizing Chromatin Interaction Networks
+    categories: [chromatin-3d, regulatory-elements]
+    doi: 10.1371/journal.pcbi.1004809
+
+  - name: scVAEBGM
+    url: https://doi.org/10.1007/s12539-022-00536-w
+    tags: [no-software-url]
+    description: Clustering Analysis of Single-Cell ATAC-seq Data Using a Deep Generative Model
+    categories: [single-cell]
+    doi: 10.1007/s12539-022-00536-w
+
+  - name: Single_cell_GRN
+    url: https://doi.org/10.1186/s13040-022-00297-8
+    tags: [no-software-url]
+    description: gene regulatory network identification based on supervised learning method and Single-cell RNA-seq data
+    categories: [grn-inference, single-cell]
+    doi: 10.1186/s13040-022-00297-8
+
+  - name: ssemQr
+    url: https://github.com/Ivis4ml/ssemQr
+    repo: Ivis4ml/ssemQr
+    description: Joint eQTL mapping and inference of gene regulatory network improves power of detecting both cis- and trans-eQTLs
+    categories: [molecular-qtl, grn-inference]
+    doi: 10.1093/bioinformatics/btab609
+
+  - name: Teamwork
+    url: https://doi.org/10.1371/journal.pone.0040916
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/gtdelong/teamwork but did not verify as the same software'
+    description: improved eQTL mapping using combinations of machine learning methods
+    categories: [molecular-qtl, grn-inference]
+    doi: 10.1371/journal.pone.0040916
+
+  - name: TFPertRespExplainer
+    url: https://github.com/BrentLab/TFPertRespExplainer
+    repo: BrentLab/TFPertRespExplainer
+    description: Predicting which genes will respond to transcription factor perturbations
+    categories: [grn-inference, regulatory-variants]
+    doi: 10.1093/g3journal/jkac144
+
+  - name: Vestige
+    url: http://cbis.anu.edu.au/software
+    description: maximum likelihood phylogenetic footprinting
+    categories: [footprinting, comparative]
+    doi: 10.1186/1471-2105-6-130
+
+  - name: coMOTIF
+    url: https://doi.org/10.1093/bioinformatics/btr397
+    tags: [no-software-url]
+    description: a mixture framework for identifying transcription factor and a coregulator motif in ChIP-seq data
+    categories: [motif-discovery, motif-scanning]
+    doi: 10.1093/bioinformatics/btr397
+
+  - name: ConBind
+    url: http://www.conbind.org
+    description: motif-aware cross-species alignment for the identification of functional transcription factor binding sites
+    categories: [motif-discovery, comparative, tfbs-prediction]
+    doi: 10.1093/nar/gkv1518
+
+  - name: CREdb
+    url: https://zenodo.org/records/11407329
+    description: A comprehensive database of Cis-Regulatory Elements and their activity in human cells and tissues
+    categories: [regulatory-elements, chip-resources]
+    doi: 10.1186/s13072-024-00545-7
+
+  - name: DISCLOSE
+    url: https://doi.org/10.1186/1471-2105-9-535
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/silasray/disclose but did not verify as the same software'
+    description: DISsection of CLusters Obtained by SEries of transcriptome data using functional annotations and putative transcription factor binding sites
+    categories: [motif-discovery, motif-scanning]
+    doi: 10.1186/1471-2105-9-535
+
+  - name: Dupsifter
+    url: https://github.com/huishenlab/dupsifter
+    repo: huishenlab/dupsifter
+    description: a lightweight duplicate marking tool for whole genome bisulfite sequencing
+    categories: [dna-methylation]
+    doi: 10.1093/bioinformatics/btad729
+
+  - name: EAP-LSTM
+    url: https://doi.org/10.1109/jbhi.2025.3620986
+    tags: [no-software-url]
+    description: A Bi-LSTM-Based Deep Learning Framework for Quantitatively Predicting Enhancer Activity in Drosophila and Human Cell Lines
+    categories: [regulatory-elements, tfbs-prediction]
+    doi: 10.1109/jbhi.2025.3620986
+
+  - name: F-MAP
+    url: https://doi.org/10.1371/journal.pone.0184795
+    tags: [no-software-url]
+    description: A Bayesian approach to infer the gene regulatory network using external hints
+    categories: [grn-inference]
+    doi: 10.1371/journal.pone.0184795
+
+  - name: HEAP
+    url: https://doi.org/10.1093/bib/bbad286
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/heap/heap-python but did not verify as the same software'
+    description: a task adaptive-based explainable deep learning framework for enhancer activity prediction
+    categories: [regulatory-elements]
+    doi: 10.1093/bib/bbad286
+
+  - name: idemax
+    url: https://bitbucket.org/sonnhammergrni/idemax
+    description: Inferring the experimental design for accurate gene regulatory network inference
+    categories: [grn-inference]
+    doi: 10.1093/bioinformatics/btab367
+
+  - name: iEnhancer-SKNN
+    url: https://github.com/HaoWuLab-Bioinformatics/iEnhancer-SKNN
+    repo: HaoWuLab-Bioinformatics/iEnhancer-SKNN
+    description: a stacking ensemble learning-based method for enhancer identification and classification using sequence information
+    categories: [regulatory-elements]
+    doi: 10.1093/bfgp/elac057
+
+  - name: iHMS
+    url: http://www.tongjidmb.com/human/index.html
+    description: a database integrating human histone modification data across developmental stages and tissues
+    categories: [histone-marks]
+    doi: 10.1186/s12859-017-1461-y
+
+  - name: MARZ
+    url: https://doi.org/10.1186/s12859-014-0446-3
+    tags: [no-software-url]
+    description: an algorithm to combinatorially analyze gapped n-mer models of transcription factor binding
+    categories: [motif-discovery, motif-comparison]
+    doi: 10.1186/s12859-014-0446-3
+
+  - name: MIC-MEME
+    url: https://doi.org/10.1186/s12859-018-2276-1
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/hkwkevin28/MIC-MEME but did not verify as the same software'
+    description: Efficient computation of motif discovery on Intel Many Integrated Core (MIC) Architecture
+    categories: [motif-discovery]
+    doi: 10.1186/s12859-018-2276-1
+
+  - name: PGRNIG
+    url: https://doi.org/10.1093/bfgp/elac028
+    tags: [no-software-url]
+    description: novel parallel gene regulatory network identification algorithm based on GPU
+    categories: [grn-inference]
+    doi: 10.1093/bfgp/elac028
+
+  - name: reg-eQTL
+    url: https://doi.org/10.1016/j.ajhg.2025.01.015
+    tags: [no-software-url]
+    description: Integrating transcription factor effects to unveil regulatory variants
+    categories: [molecular-qtl, regulatory-variants]
+    doi: 10.1016/j.ajhg.2025.01.015
+
+  - name: TDSDMI
+    url: https://doi.org/10.1016/j.compbiomed.2016.03.024
+    tags: [no-software-url]
+    description: Inference of time-delayed gene regulatory network using S-system model with delayed mutual information
+    categories: [grn-inference]
+    doi: 10.1016/j.compbiomed.2016.03.024
+
+  - name: ALIdetection
+    url: https://github.com/QiZhangStat/ALIdetection
+    repo: QiZhangStat/ALIdetection
+    description: An empirical Bayes test for allelic-imbalance detection in ChIP-seq
+    categories: [peak-calling]
+    doi: 10.1093/biostatistics/kxx060
+
+  - name: Be-1DCNN
+    url: https://github.com/HaoWuLab-Bioinformatics/Be1DCNN
+    repo: HaoWuLab-Bioinformatics/Be1DCNN
+    description: a neural network model for chromatin loop prediction based on bagging ensemble learning
+    categories: [chromatin-3d]
+    doi: 10.1093/bfgp/elad015
+
+  - name: BiModule
+    url: https://doi.org/10.1109/tcbb.2019.2896155
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/chupan1218/BiModule but did not verify as the same software'
+    description: Biclique Modularity Strategy for Identifying Transcription Factor and microRNA Co-Regulatory Modules
+    categories: [grn-inference]
+    doi: 10.1109/tcbb.2019.2896155
+
+  - name: CapsProm
+    url: https://doi.org/10.1016/j.compbiomed.2022.105627
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/lauromoraes/CapsNet-promoter but did not verify as the same software'
+    description: a capsule network for promoter prediction
+    categories: [regulatory-elements]
+    doi: 10.1016/j.compbiomed.2022.105627
+
+  - name: CisML
+    url: https://doi.org/10.1093/bioinformatics/bth162
+    tags: [no-software-url]
+    description: an XML-based format for sequence motif detection software
+    categories: [motif-comparison, motif-databases]
+    doi: 10.1093/bioinformatics/bth162
+
+  - name: CompMoby
+    url: http://genome.ucsf.edu/compmoby
+    description: comparative MobyDick for detection of cis-regulatory motifs
+    categories: [motif-discovery, comparative]
+    doi: 10.1186/1471-2105-9-455
+
+  - name: DeepGRNCS
+    url: https://github.com/Nastume777/DeepGRNCS
+    repo: Nastume777/DeepGRNCS
+    description: deep learning-based framework for jointly inferring gene regulatory networks across cell subpopulations
+    categories: [grn-inference, single-cell]
+    doi: 10.1093/bib/bbae334
+
+  - name: DeepMethylation
+    url: https://doi.org/10.7717/peerj.16125
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/sb111169/tf-5mc but did not verify as the same software'
+    description: a deep learning based framework with GloVe and Transformer encoder for DNA methylation prediction
+    categories: [dna-methylation]
+    doi: 10.7717/peerj.16125
+
+  - name: eQuIPS
+    url: https://doi.org/10.1002/gepi.21961
+    tags: [no-software-url]
+    description: eQTL Analysis Using Informed Partitioning of SNPs - A Fully Bayesian Approach
+    categories: [molecular-qtl]
+    doi: 10.1002/gepi.21961
+
+  - name: GeRNet
+    url: https://doi.org/10.1016/j.biosystems.2017.08.006
+    tags: [no-software-url]
+    description: a gene regulatory network tool
+    categories: [grn-inference]
+    doi: 10.1016/j.biosystems.2017.08.006
+
+  - name: KFGRNI
+    url: https://doi.org/10.1142/s0219720021500025
+    tags: [no-software-url]
+    description: A robust method to inference gene regulatory network from time-course gene data based on ensemble Kalman filter
+    categories: [grn-inference]
+    doi: 10.1142/s0219720021500025
+
+  - name: MotifCombinator
+    url: http://emu.src.riken.jp/combinator
+    description: a web-based tool to search for combinations of cis-regulatory motifs
+    categories: [motif-discovery, motif-scanning]
+    doi: 10.1186/1471-2105-8-100
+
+  - name: NIGMS-Sandbox
+    url: https://github.com/NIGMS/NIGMS-Sandbox
+    repo: NIGMS/NIGMS-Sandbox
+    description: Whole-genome bisulfite sequencing data analysis learning module on Google Cloud Platform
+    categories: [dna-methylation]
+    doi: 10.1093/bib/bbae236
+
+  - name: PairMotif+
+    url: https://doi.org/10.7150/ijbs.5786
+    tags: [no-software-url]
+    description: a fast and effective algorithm for de novo motif discovery in DNA sequences
+    categories: [motif-discovery]
+    doi: 10.7150/ijbs.5786
+
+  - name: SAPIEnS
+    url: https://github.com/lab-medvedeva/SAPIEnS
+    repo: lab-medvedeva/SAPIEnS
+    description: 'scATAC-seq preprocessing and imputation evaluation system for visualization, clustering and digital footprinting'
+    categories: [single-cell, footprinting, chip-resources]
+    doi: 10.1093/bib/bbad447
+
+  - name: scHiCDiff
+    url: https://github.com/wmalab/scHiCDiff
+    repo: wmalab/scHiCDiff
+    description: detecting differential chromatin interactions in single-cell Hi-C data
+    categories: [chromatin-3d, single-cell]
+    doi: 10.1093/bioinformatics/btad625
+
+  - name: SPACE
+    url: https://doi.org/10.1038/s41423-020-0416-9
+    tags: [no-software-url]
+    description: a web server for linking chromatin accessibility with clinical phenotypes and the immune microenvironment in pan-cancer analysis
+    categories: [peak-annotation, regulatory-variants]
+    doi: 10.1038/s41423-020-0416-9
+
+  - name: sqtlhic
+    url: https://github.com/seferlab/sqtlhic
+    repo: seferlab/sqtlhic
+    description: Joint analysis of sQTL and Hi-C reveals spatial proximity between sQTLs and target genes in cancer tissues
+    categories: [molecular-qtl, chromatin-3d]
+    doi: 10.1038/s41598-025-21746-4
+
+  - name: WENDY
+    url: https://doi.org/10.1016/j.mbs.2024.109284
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/jobovy/wendy but did not verify as the same software'
+    description: Covariance dynamics based gene regulatory network inference
+    categories: [grn-inference]
+    doi: 10.1016/j.mbs.2024.109284
+
+  - name: annoPeak
+    url: https://github.com/XingTang2014/annoPeak
+    repo: XingTang2014/annoPeak
+    description: a web application to annotate and visualize peaks from ChIP-seq/ChIP-exo-seq
+    categories: [peak-annotation]
+    doi: 10.1093/bioinformatics/btx016
+
+  - name: BayesASE
+    url: https://github.com/McIntyre-Lab/BayesASE
+    repo: McIntyre-Lab/BayesASE
+    description: 'Testcrosses are an efficient strategy for identifying cis-regulatory variation: Bayesian analysis of allele-specific expression (BayesASE)'
+    categories: [molecular-qtl, regulatory-variants]
+    doi: 10.1093/g3journal/jkab096
+
+  - name: CATAD
+    url: https://doi.org/10.1093/bib/bbad204
+    tags: [no-software-url]
+    description: exploring topologically associating domains from an insight of core-attachment structure
+    categories: [chromatin-3d]
+    doi: 10.1093/bib/bbad204
+
+  - name: CD-Loop
+    url: https://github.com/wangyang199897/CD-Loop
+    repo: wangyang199897/CD-Loop
+    description: a chromatin loop detection method based on the diffusion model
+    categories: [chromatin-3d]
+    doi: 10.3389/fgene.2024.1393406
+
+  - name: ChIPWig
+    url: https://github.com/vidarmehr/ChIPWig-v2
+    repo: vidarmehr/ChIPWig-v2
+    description: a random access-enabling lossless and lossy compression method for ChIP-seq data
+    categories: [chip-resources]
+    doi: 10.1093/bioinformatics/btx685
+
+  - name: Colorectal_cancer
+    url: https://github.com/Cuily-v/Colorectal_cancer
+    repo: Cuily-v/Colorectal_cancer
+    description: Unsupervised construction of gene regulatory network based on single-cell multi-omics data of colorectal cancer
+    categories: [grn-inference, single-cell]
+    doi: 10.1093/bib/bbad011
+
+  - name: Compo
+    url: http://tare.medisin.ntnu.no/compo/index.php
+    description: composite motif discovery using discrete models
+    categories: [motif-discovery]
+    doi: 10.1186/1471-2105-9-527
+
+  - name: CTF
+    url: http://cbb.sjtu.edu.cn/~ccwei/pub/software/CTF/CTF.php
+    description: a CRF-based transcription factor binding sites finding system
+    categories: [tfbs-prediction]
+    doi: 10.1186/1471-2164-13-s8-s18
+
+  - name: CVGAE
+    url: https://doi.org/10.1007/s12539-024-00633-y
+    tags: [no-software-url]
+    description: A Self-Supervised Generative Method for Gene Regulatory Network Inference Using Single-Cell RNA Sequencing Data
+    categories: [grn-inference, single-cell]
+    doi: 10.1007/s12539-024-00633-y
+
+  - name: ddgraph
+    url: http://bioconductor.org/packages/2.11/bioc/html/ddgraph.html
+    description: A graphical modelling approach to the dissection of highly correlated transcription factor binding site profiles
+    categories: [grn-inference]
+    doi: 10.1371/journal.pcbi.1002725
+
+  - name: DMI
+    url: https://github.com/Hongyu-Miao/DMI
+    repo: Hongyu-Miao/DMI
+    description: A scalable algorithm for structure identification of complex gene regulatory network from temporal expression data
+    categories: [grn-inference]
+    doi: 10.1186/s12859-017-1489-z
+
+  - name: FastBill
+    url: https://doi.org/10.1089/cmb.2016.0108
+    tags: [no-software-url]
+    description: An Improved Tool for Prediction of Cis-Regulatory Modules
+    categories: [regulatory-elements, comparative]
+    doi: 10.1089/cmb.2016.0108
+
+  - name: iPro2L-DG
+    url: https://doi.org/10.1016/j.heliyon.2024.e27364
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/leirufeng/iPro2L-DG but did not verify as the same software'
+    description: Hybrid network based on improved densenet and global attention mechanism for identifying promoter sequences
+    categories: [regulatory-elements]
+    doi: 10.1016/j.heliyon.2024.e27364
+
+  - name: LDsplit
+    url: http://www.ntu.edu.sg/home/zhengjie/software/LDsplit.htm
+    description: screening for cis-regulatory motifs stimulating meiotic recombination hotspots by analysis of DNA sequence polymorphisms
+    categories: [motif-discovery]
+    doi: 10.1186/1471-2105-15-48
+
+  - name: MACO
+    url: https://doi.org/10.3233/isb-00243
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/CybercentreCanada/Maco but did not verify as the same software'
+    description: a gapped-alignment scoring tool for comparing transcription factor binding sites
+    categories: [motif-comparison]
+    doi: 10.3233/isb-00243
+
+  - name: MethParquet
+    url: https://github.com/ZWangTen/MethParquet
+    repo: ZWangTen/MethParquet
+    description: an R package for rapid and efficient DNA methylation association analysis adopting Apache Parquet
+    categories: [dna-methylation]
+    doi: 10.1093/bioinformatics/btae410
+
+  - name: methylClass
+    url: https://github.com/yuabrahamliu/methylClass
+    repo: yuabrahamliu/methylClass
+    description: an R package to construct DNA methylation-based classification models
+    categories: [dna-methylation]
+    doi: 10.1093/bib/bbad485
+
+  - name: MulTFBS
+    url: https://doi.org/10.1021/acs.jcim.3c02088
+    tags: [no-software-url]
+    description: A Spatial-Temporal Network with Multichannels for Predicting Transcription Factor Binding Sites
+    categories: [tfbs-prediction]
+    doi: 10.1021/acs.jcim.3c02088
+
+  - name: NetREm
+    url: https://github.com/SaniyaKhullar/NetREm
+    repo: SaniyaKhullar/NetREm
+    description: Network Regression Embeddings reveal cell-type transcription factor coordination for gene regulation
+    categories: [grn-inference, single-cell]
+    doi: 10.1093/bioadv/vbae206
+
+  - name: NEXT-peak
+    url: http://www.odu.edu/~nxkim/nextpeak
+    description: a normal-exponential two-peak model for peak-calling in ChIP-seq data
+    categories: [peak-calling]
+    doi: 10.1186/1471-2164-14-349
+
+  - name: PriorsEditor
+    url: http://tare.medisin.ntnu.no/priorseditor
+    description: a tool for the creation and use of positional priors in motif discovery
+    categories: [motif-discovery]
+    doi: 10.1093/bioinformatics/btq357
+
+  - name: REPA
+    url: https://doi.org/10.1109/tcbb.2015.2453948
+    tags: [no-software-url]
+    description: Applying Pathway Analysis to Genome-Wide Transcription Factor Binding Data
+    categories: [motif-scanning, grn-inference]
+    doi: 10.1109/tcbb.2015.2453948
+
+  - name: SemanticCAP
+    url: https://doi.org/10.3390/genes13040568
+    tags: [no-software-url]
+    description: Chromatin Accessibility Prediction Enhanced by Features Learning from a Language Model
+    categories: [nucleosome-chromatin]
+    doi: 10.3390/genes13040568
+
+  - name: Twine
+    url: https://doi.org/10.1093/bioinformatics/btt264
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/pypa/twine but did not verify as the same software'
+    description: display and analysis of cis-regulatory modules
+    categories: [motif-discovery, motif-scanning, comparative]
+    doi: 10.1093/bioinformatics/btt264
+
+  - name: AgentBind-brain
+    url: https://github.com/Pandaman-Ryan/AgentBind-brain
+    repo: Pandaman-Ryan/AgentBind-brain
+    description: Deep learning predicts the impact of regulatory variants on cell-type-specific enhancers in the brain
+    categories: [regulatory-variants, tfbs-prediction]
+    doi: 10.1093/bioadv/vbad002
+
+  - name: Argo_CUDA
+    url: https://doi.org/10.1142/s0219720017400121
+    tags: [no-software-url]
+    description: Exhaustive GPU based approach for motif discovery in large DNA datasets
+    categories: [motif-discovery]
+    doi: 10.1142/s0219720017400121
+
+  - name: atMPRA
+    url: https://github.com/redaq/atMPRA
+    repo: redaq/atMPRA
+    description: Statistical considerations for the analysis of massively parallel reporter assays data
+    categories: [reporter-assays]
+    doi: 10.1002/gepi.22337
+
+  - name: CanalizingPower
+    url: https://github.com/eunjikim-angie/CanalizingPower
+    repo: eunjikim-angie/CanalizingPower
+    description: Quantifying the notions of canalizing and master genes in a gene regulatory network-a Boolean network modeling perspective
+    categories: [grn-inference]
+    doi: 10.1093/bioinformatics/bty665
+
+  - name: DconnLoop
+    url: https://github.com/kuikui-C/DconnLoop
+    repo: kuikui-C/DconnLoop
+    description: a deep learning model for predicting chromatin loops based on multi-source data integration
+    categories: [chromatin-3d]
+    doi: 10.1186/s12859-025-06092-6
+
+  - name: DeepEPI
+    url: https://github.com/nazanintbtb/DeepEPI
+    repo: nazanintbtb/DeepEPI
+    description: CNN-transformer-based model for extracting TF interactions through predicting enhancer-promoter interactions
+    categories: [chromatin-3d, regulatory-elements]
+    doi: 10.1093/bioadv/vbaf221
+
+  - name: dPattern
+    url: https://doi.org/10.1093/bioinformatics/btm288
+    tags: [no-software-url]
+    description: transcription factor binding site (TFBS) discovery in human genome using a discriminative pattern analysis
+    categories: [motif-scanning]
+    doi: 10.1093/bioinformatics/btm288
+
+  - name: Galaxy
+    url: https://github.com/modENCODE-DCC/Galaxy
+    repo: modENCODE-DCC/Galaxy
+    description: Cloud-based uniform ChIP-Seq processing tools for modENCODE and ENCODE
+    categories: [peak-calling, chip-resources]
+    doi: 10.1186/1471-2164-14-494
+
+  - name: GPU-BSM
+    url: https://doi.org/10.1371/journal.pone.0097277
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/pypi/warehouse but did not verify as the same software'
+    description: a GPU-based tool to map bisulfite-treated reads
+    categories: [dna-methylation]
+    doi: 10.1371/journal.pone.0097277
+
+  - name: HSCVFNT
+    url: https://doi.org/10.3390/ijms19103178
+    tags: [no-software-url]
+    description: Inference of Time-Delayed Gene Regulatory Network Based on Complex-Valued Flexible Neural Tree Model
+    categories: [grn-inference]
+    doi: 10.3390/ijms19103178
+
+  - name: i5mC-DCGA
+    url: https://doi.org/10.1186/s12864-024-10154-z
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/leirufeng/i5mC-DCGA but did not verify as the same software'
+    description: an improved hybrid network framework based on the CBAM attention mechanism for identifying promoter 5mC sites
+    categories: [dna-methylation]
+    doi: 10.1186/s12864-024-10154-z
+
+  - name: LinkNMF
+    url: https://doi.org/10.1016/j.gene.2012.11.027
+    tags: [no-software-url]
+    description: identification of histone modification modules in the human genome using nonnegative matrix factorization
+    categories: [histone-marks]
+    doi: 10.1016/j.gene.2012.11.027
+
+  - name: LiteQTL.jl
+    url: https://github.com/senresearch/LiteQTL.jl
+    repo: senresearch/LiteQTL.jl
+    description: Speeding up eQTL scans in the BXD population using GPUs
+    categories: [molecular-qtl]
+    doi: 10.1093/g3journal/jkab254
+
+  - name: MethyMer
+    url: https://sourceforge.net/projects/methymer
+    description: Design of combinations of specific primers for bisulfite sequencing of complete CpG islands
+    categories: [dna-methylation]
+    doi: 10.1142/s0219720018400048
+
+  - name: MotifAdjuster
+    url: http://dig.ipk-gatersleben.de/MotifAdjuster.html
+    description: a tool for computational reassessment of transcription factor binding site annotations
+    categories: [motif-databases, motif-scanning]
+    doi: 10.1186/gb-2009-10-5-r46
+
+  - name: msa-edna
+    url: http://sourceforge.net/projects/msa-edna
+    description: A non-independent energy-based multiple sequence alignment improves prediction of transcription factor binding sites
+    categories: [motif-discovery, tfbs-prediction]
+    doi: 10.1093/bioinformatics/btt463
+
+  - name: MuSE
+    url: https://github.com/15831959673/MuSE
+    repo: 15831959673/MuSE
+    description: A deep learning model based on multi-feature fusion for super-enhancer prediction
+    categories: [regulatory-elements]
+    doi: 10.1016/j.compbiolchem.2024.108282
+
+  - name: NG-SEM
+    url: https://doi.org/10.1093/bib/bbad369
+    tags: [no-software-url]
+    description: an effective non-Gaussian structural equation modeling framework for gene regulatory network inference from single-cell RNA-seq data
+    categories: [grn-inference, single-cell]
+    doi: 10.1093/bib/bbad369
+
+  - name: PEAK
+    url: https://doi.org/10.1089/cmb.2016.0199
+    tags: [no-software-url]
+    description: Integrating Curated and Noisy Prior Knowledge in Gene Regulatory Network Inference
+    categories: [grn-inference]
+    doi: 10.1089/cmb.2016.0199
+
+  - name: piscem
+    url: https://github.com/COMBINE-lab/piscem
+    repo: COMBINE-lab/piscem
+    description: Alevin-fry-atac enables rapid and memory frugal mapping of single-cell ATAC-seq data using virtual colors for accurate genomic pseudoalignment
+    categories: [single-cell, peak-calling]
+    doi: 10.1093/bioinformatics/btaf234
+
+  - name: PKI
+    url: https://doi.org/10.1016/j.bbagrm.2023.194911
+    tags: [no-software-url]
+    description: A bioinformatics method of quantifying the importance of nodes in gene regulatory network via a pseudo knockout index
+    categories: [grn-inference]
+    doi: 10.1016/j.bbagrm.2023.194911
+
+  - name: PO.EN
+    url: https://github.com/Iuliana-Ionita-Laza/PO.EN
+    repo: Iuliana-Ionita-Laza/PO.EN
+    description: A semi-supervised model to predict regulatory effects of genetic variants at single nucleotide resolution using massively parallel reporter assays
+    categories: [regulatory-variants]
+    doi: 10.1093/bioinformatics/btab040
+
+  - name: SCRN
+    url: https://doi.org/10.1109/tcbb.2024.3424400
+    tags: [no-software-url]
+    description: 'Single-Cell Gene Regulatory Network Identification in Alzheimer''s Disease'
+    categories: [grn-inference, single-cell]
+    doi: 10.1109/tcbb.2024.3424400
+
+  - name: Sig2GRN
+    url: http://histone.scse.ntu.edu.sg/Sig2GRN
+    description: a software tool linking signaling pathway with gene regulatory network for dynamic simulation
+    categories: [grn-inference]
+    doi: 10.1186/s12918-016-0365-1
+
+  - name: SigSeeker
+    url: https://doi.org/10.1093/bioinformatics/btx276
+    tags: [no-software-url]
+    description: a peak-calling ensemble approach for constructing epigenetic signatures
+    categories: [peak-calling]
+    doi: 10.1093/bioinformatics/btx276
+
+  - name: SIMON
+    url: https://doi.org/10.5511/plantbiotechnology.19.0822a
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/dirn/Simon but did not verify as the same software'
+    description: Simple methods for analyzing DNA methylation by targeted bisulfite next-generation sequencing
+    categories: [dna-methylation]
+    doi: 10.5511/plantbiotechnology.19.0822a
+
+  - name: SMCis
+    url: https://doi.org/10.1371/journal.pone.0162968
+    tags: [no-software-url]
+    description: An Effective Algorithm for Discovery of Cis-Regulatory Modules
+    categories: [motif-discovery]
+    doi: 10.1371/journal.pone.0162968
+
+  - name: T-KDE
+    url: http://www.niehs.nih.gov/research/resources/software/biostatistics/t-kde/index.cfm
+    description: a method for genome-wide identification of constitutive protein binding sites from multiple ChIP-seq data sets
+    categories: [peak-calling, motif-discovery]
+    doi: 10.1186/1471-2164-15-27
+
+  - name: TBCA
+    url: https://doi.org/10.1109/jbhi.2024.3355758
+    tags: [no-software-url]
+    description: Prediction of transcription factor binding sites using a deep neural network with lightweight attention mechanism
+    categories: [tfbs-prediction]
+    doi: 10.1109/jbhi.2024.3355758
+
+  - name: ADELLE
+    url: http://palmerlab.org/protocols-data
+    description: A global testing method for trans-eQTL mapping
+    categories: [molecular-qtl]
+    doi: 10.1371/journal.pgen.1011563
+
+  - name: BCDB
+    url: https://github.com/ZhangLab312/BCDB
+    repo: ZhangLab312/BCDB
+    description: A dual-branch network based on transformer for predicting transcription factor binding sites
+    categories: [tfbs-prediction]
+    doi: 10.1016/j.ymeth.2024.12.006
+
+  - name: BIC-LP
+    url: https://doi.org/10.1109/tcbb.2023.3345317
+    tags: [no-software-url]
+    description: A Hybrid Higher-Order Dynamic Bayesian Network Score Function for Gene Regulatory Network Reconstruction
+    categories: [grn-inference]
+    doi: 10.1109/tcbb.2023.3345317
+
+  - name: BSS-HMM3s
+    url: https://doi.org/10.1080/10425170500356032
+    tags: [no-software-url]
+    description: an improved HMM method for identifying transcription factor binding sites
+    categories: [tfbs-prediction]
+    doi: 10.1080/10425170500356032
+
+  - name: CMT
+    url: https://doi.org/10.1371/journal.pone.0093873
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/IceflowRE/cmt but did not verify as the same software'
+    description: a constrained multi-level thresholding approach for ChIP-Seq data analysis
+    categories: [peak-calling]
+    doi: 10.1371/journal.pone.0093873
+
+  - name: CUTandRun_Peak_Calling
+    url: https://github.com/OroujiLab/CUTandRun_Peak_Calling
+    repo: OroujiLab/CUTandRun_Peak_Calling
+    description: 'Benchmarking peak calling methods for CUT&amp;RUN'
+    categories: [peak-calling]
+    doi: 10.1093/bioinformatics/btaf375
+
+  - name: CWL_HTS_pipelines
+    url: https://github.com/BiodataAnalysisGroup/CWL_HTS_pipelines
+    repo: BiodataAnalysisGroup/CWL_HTS_pipelines
+    description: 'Software pipelines for RNA-Seq, ChIP-Seq and germline variant calling analyses in common workflow language (CWL)'
+    categories: [peak-calling, chip-resources]
+    doi: 10.3389/fbinf.2023.1275593
+
+  - name: D-peaks
+    url: http://rsat.ulb.ac.be/dpeaks
+    description: a visual tool to display ChIP-seq peaks along the genome
+    categories: [peak-calling, peak-annotation]
+    doi: 10.4161/trns.22457
+
+  - name: DMAP2
+    url: https://doi.org/10.1002/cpz1.70003
+    tags: [no-software-url]
+    description: A Pipeline for Analysis of Whole-Genome-Scale DNA Methylation Sequencing Data
+    categories: [dna-methylation]
+    doi: 10.1002/cpz1.70003
+
+  - name: GNet
+    url: https://doi.org/10.3934/mbe.2023704
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/MGokcayK/gNet but did not verify as the same software'
+    description: An integrated context-aware neural framework for transcription factor binding signal at single nucleotide resolution prediction
+    categories: [tfbs-prediction, motif-discovery, peak-calling]
+    doi: 10.3934/mbe.2023704
+
+  - name: HiC2MicroC
+    url: https://doi.org/10.1371/journal.pcbi.1012136
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/zwang-bioinformatics/HiC2MicroC but did not verify as the same software'
+    description: Learning Micro-C from Hi-C with diffusion models
+    categories: [chromatin-3d]
+    doi: 10.1371/journal.pcbi.1012136
+
+  - name: histonePrior
+    url: https://doi.org/10.1109/tcbb.2018.2869590
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/Zheng-Lab/MetaGRN/tree/master/histonePrior but did not verify as the same software'
+    description: Bayesian Data Fusion of Gene Expression and Histone Modification Profiles for Inference of Gene Regulatory Network
+    categories: [grn-inference]
+    doi: 10.1109/tcbb.2018.2869590
+
+  - name: HPTAD
+    url: https://github.com/yunliUNC/HPTAD
+    repo: yunliUNC/HPTAD
+    description: A computational method to identify topologically associating domains from HiChIP and PLAC-seq datasets
+    categories: [chromatin-3d]
+    doi: 10.1016/j.csbj.2023.01.003
+
+  - name: iFunMed
+    url: https://doi.org/10.1002/gepi.22217
+    tags: [no-software-url]
+    description: Integrative functional mediation analysis of GWAS and eQTL studies
+    categories: [molecular-qtl, regulatory-variants]
+    doi: 10.1002/gepi.22217
+
+  - name: jChIP
+    url: http://sourceforge.net/projects/jchip
+    description: a graphical environment for exploratory ChIP-Seq data analysis
+    categories: [peak-annotation, chip-resources]
+    doi: 10.1186/1756-0500-7-676
+
+  - name: LineGRN
+    url: https://doi.org/10.1109/jbhi.2025.3591840
+    tags: [no-software-url]
+    description: A Line Graph Neural Network for Gene Regulatory Network Inference
+    categories: [grn-inference, single-cell]
+    doi: 10.1109/jbhi.2025.3591840
+
+  - name: LogicSR
+    url: https://github.com/aertslab/AUCell
+    repo: aertslab/AUCell
+    description: prior-guided symbolic regression for gene regulatory network inference from single-cell transcriptomics data
+    categories: [grn-inference, single-cell]
+    doi: 10.1093/bib/bbaf621
+
+  - name: Predmoter
+    url: https://github.com/weberlab-hhu/Predmoter
+    repo: weberlab-hhu/Predmoter
+    description: Predmoter-cross-species prediction of plant promoter and enhancer regions
+    categories: [regulatory-elements, peak-calling]
+    doi: 10.1093/bioadv/vbae074
+
+  - name: Promoter_BERT
+    url: https://github.com/katouMegumiH/Promoter_BERT
+    repo: katouMegumiH/Promoter_BERT
+    description: DNA promoter task-oriented dictionary mining and prediction model based on natural language technology
+    categories: [regulatory-elements]
+    doi: 10.1038/s41598-024-84105-9
+
+  - name: RefTM
+    url: https://doi.org/10.1093/bib/bbac540
+    tags: [no-software-url]
+    description: reference-guided topic modeling of single-cell chromatin accessibility data
+    categories: [single-cell, peak-calling]
+    doi: 10.1093/bib/bbac540
+
+  - name: scPipe
+    url: https://github.com/LuyiTian/scPipe
+    repo: LuyiTian/scPipe
+    description: an extended preprocessing pipeline for comprehensive single-cell ATAC-Seq data integration in R/Bioconductor
+    categories: [single-cell]
+    doi: 10.1093/nargab/lqad105
+
+  - name: spa
+    url: https://bitbucket.org/sonnhammergrni/spa
+    description: Optimal Sparsity Selection Based on an Information Criterion for Accurate Gene Regulatory Network Inference
+    categories: [grn-inference]
+    doi: 10.3389/fgene.2022.855770
+
+  - name: TEMPLE
+    url: https://doi.org/10.1111/1755-0998.12535
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/CloverHealth/temple but did not verify as the same software'
+    description: analysing population genetic variation at transcription factor binding sites
+    categories: [motif-scanning, regulatory-variants, comparative]
+    doi: 10.1111/1755-0998.12535
+
+  - name: TIGRNCRN
+    url: https://doi.org/10.1142/s0219720019500185
+    tags: [no-software-url]
+    description: Trustful inference of gene regulatory network using clustering and refining the network
+    categories: [grn-inference]
+    doi: 10.1142/s0219720019500185
+
+  - name: TRAmHap
+    url: https://doi.org/10.1093/bib/bbad214
+    tags: [no-software-url]
+    description: accurate prediction of transcriptional activity from DNA methylation haplotypes in bisulfite-sequencing data
+    categories: [dna-methylation, regulatory-elements]
+    doi: 10.1093/bib/bbad214
+
+  - name: ZCMM
+    url: https://doi.org/10.3390/genes10100765
+    tags: [no-software-url]
+    description: A Novel Method Using Z-Curve Theory- Based and Position Weight Matrix for Predicting Nucleosome Positioning
+    categories: [nucleosome-chromatin]
+    doi: 10.3390/genes10100765
+
+  - name: accessible_seq2exp
+    url: https://github.com/lapohosorsolya/accessible_seq2exp
+    repo: lapohosorsolya/accessible_seq2exp
+    description: Refining sequence-to-expression modelling with chromatin accessibility
+    categories: [regulatory-elements]
+    doi: 10.1093/bioinformatics/btag199
+
+  - name: AutoGRN
+    url: https://doi.org/10.1109/jbhi.2025.3609408
+    tags: [no-software-url]
+    description: An Automated Graph Neural Network Framework for Gene Regulatory Network Inference
+    categories: [grn-inference]
+    doi: 10.1109/jbhi.2025.3609408
+
+  - name: BAM_ABS
+    url: https://github.com/zhanglabvt/BAM_ABS
+    repo: zhanglabvt/BAM_ABS
+    description: A Bayesian Assignment Method for Ambiguous Bisulfite Short Reads
+    categories: [dna-methylation]
+    doi: 10.1371/journal.pone.0151826
+
+  - name: bayesReact
+    url: https://github.com/JakobSkouPedersenLab/bayesReact
+    repo: JakobSkouPedersenLab/bayesReact
+    description: 'expression-coupled regulatory motif analysis detects microRNA activity across cancers, tissues, and at the single-cell level'
+    categories: [motif-scanning, grn-inference]
+    doi: 10.1093/nar/gkag072
+
+  - name: BFMDDT
+    url: https://doi.org/10.1109/tcbbio.2025.3570817
+    tags: [no-software-url]
+    description: A Decision-Tree-Based Gene Regulatory Network Inference From Multi-Type Datasets
+    categories: [grn-inference]
+    doi: 10.1109/tcbbio.2025.3570817
+
+  - name: Bream
+    url: https://doi.org/10.3389/fgene.2026.1743148
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/tpgillam/bream but did not verify as the same software'
+    description: an open-source deep learning framework for simultaneous base calling and DNA methylation detection on novel nanopore sequencing platforms
+    categories: [dna-methylation]
+    doi: 10.3389/fgene.2026.1743148
+
+  - name: bsgenova
+    url: https://github.com/hippo-yf/bsgenova
+    repo: hippo-yf/bsgenova
+    description: 'an accurate, robust, and fast genotype caller for bisulfite-sequencing data'
+    categories: [dna-methylation]
+    doi: 10.1186/s12859-024-05821-7
+
+  - name: CGLoop
+    url: https://github.com/wllwuliliwll/CGLoop
+    repo: wllwuliliwll/CGLoop
+    description: a neural network framework for chromatin loop prediction
+    categories: [chromatin-3d]
+    doi: 10.1186/s12864-025-11531-y
+
+  - name: Cloud-BS
+    url: https://doi.org/10.1142/s0219720018400280
+    tags: [no-software-url]
+    description: A MapReduce-based bisulfite sequencing aligner on cloud
+    categories: [dna-methylation]
+    doi: 10.1142/s0219720018400280
+
+  - name: CMStalker
+    url: https://doi.org/10.1109/tcbb.2014.2359444
+    tags: [no-software-url]
+    description: A Combinatorial Tool for Composite Motif Discovery
+    categories: [motif-discovery, motif-scanning]
+    doi: 10.1109/tcbb.2014.2359444
+
+  - name: CRMIPred
+    url: https://github.com/cobisLab/CRMIPred
+    repo: cobisLab/CRMIPred
+    description: Identifying the spatial interactions among cis-regulatory modules via considering their cross-attended epigenetic profiles
+    categories: [regulatory-elements, chromatin-3d]
+    doi: 10.1016/j.cmpb.2026.109314
+
+  - name: CSER
+    url: https://doi.org/10.3389/fgene.2024.1481787
+    tags: [no-software-url]
+    description: a gene regulatory network construction method based on causal strength and ensemble regression
+    categories: [grn-inference]
+    doi: 10.3389/fgene.2024.1481787
+
+  - name: DPRP
+    url: http://syslab.nchu.edu.tw/DPRP
+    description: a database of phenotype-specific regulatory programs derived from transcription factor binding data
+    categories: [chip-resources, grn-inference]
+    doi: 10.1093/nar/gkt1254
+
+  - name: eQTLBookChapter
+    url: https://github.com/dvav/eQTLBookChapter
+    repo: dvav/eQTLBookChapter
+    description: Exploring Bayesian Approaches to eQTL Mapping Through Probabilistic Programming
+    categories: [molecular-qtl]
+    doi: 10.1007/978-1-0716-0026-9_9
+
+  - name: FAME
+    url: https://github.com/FischerJo/FAME
+    repo: FischerJo/FAME
+    description: Efficiently quantifying DNA methylation for bulk- and single-cell bisulfite data
+    categories: [dna-methylation]
+    doi: 10.1093/bioinformatics/btad386
+
+  - name: FootprintCharter
+    url: https://bioconductor.org/packages/SingleMoleculeFootprinting
+    description: unsupervised detection and quantification of footprints in single molecule footprinting data
+    categories: [footprinting]
+    doi: 10.1093/bioinformatics/btaf502
+
+  - name: GRISOTTO
+    url: http://kdbio.inesc-id.pt/~asmc/software/grisotto.html
+    description: A greedy approach to improve combinatorial algorithms for motif discovery with prior knowledge
+    categories: [motif-discovery]
+    doi: 10.1186/1748-7188-6-13
+
+  - name: MCOIN
+    url: https://doi.org/10.1186/1748-7188-8-16
+    tags: [no-software-url]
+    description: a novel heuristic for determining transcription factor binding site motif width
+    categories: [motif-discovery]
+    doi: 10.1186/1748-7188-8-16
+
+  - name: Mutex
+    url: https://doi.org/10.1016/s0003-2697(03)00404-4
+    tags: [no-software-url]
+    description: a method for simultaneous footprinting and determination of base pair specificity for transcription factor binding sites
+    categories: [footprinting, motif-discovery]
+    doi: 10.1016/s0003-2697(03)00404-4
+
+  - name: PCBS
+    url: https://github.com/katlande/PCBS
+    repo: katlande/PCBS
+    description: an R package for fast and accurate analysis of bisulfite sequencing data
+    categories: [dna-methylation]
+    doi: 10.1093/bioinformatics/btae593
+
+  - name: PmiProPred
+    url: https://doi.org/10.1016/j.ijbiomac.2025.140630
+    tags: [no-software-url]
+    description: A novel method towards plant miRNA promoter prediction based on CNN-Transformer network and convolutional block attention mechanism
+    categories: [regulatory-elements]
+    doi: 10.1016/j.ijbiomac.2025.140630
+
+  - name: PMS6MC
+    url: https://doi.org/10.3390/a6040805
+    tags: [no-software-url]
+    description: A Multicore Algorithm for Motif Discovery
+    categories: [motif-discovery]
+    doi: 10.3390/a6040805
+
+  - name: ProMT
+    url: https://doi.org/10.1109/tnb.2014.2327586
+    tags: [no-software-url]
+    description: effective human promoter prediction using Markov chain model based on DNA structural properties
+    categories: [regulatory-elements]
+    doi: 10.1109/tnb.2014.2327586
+
+  - name: rTRM-web
+    url: https://doi.org/10.1016/j.gene.2014.06.016
+    tags: [no-software-url]
+    description: a web tool for predicting transcriptional regulatory modules for ChIP-seq-ed transcription factors
+    categories: [grn-inference]
+    doi: 10.1016/j.gene.2014.06.016
+
+  - name: SCRMshaw
+    url: https://doi.org/10.1371/journal.pone.0311752
+    tags: [no-software-url]
+    description: Supervised cis-regulatory module prediction for insect genomes
+    categories: [regulatory-elements]
+    doi: 10.1371/journal.pone.0311752
+
+  - name: SnakeAltPromoter
+    url: https://github.com/YidanSunResearchLab/SnakeAltPromoter
+    repo: YidanSunResearchLab/SnakeAltPromoter
+    description: SnakeAltPromoter Facilitates Differential Alternative Promoter Analysis
+    categories: [regulatory-elements]
+    doi: 10.34133/csbj.0033
+
+  - name: SpecLoop
+    url: https://github.com/AMSSwanglab/SpecLoop
+    repo: AMSSwanglab/SpecLoop
+    description: SpecLoop predicts cell type-specific chromatin loop via transcription factor cooperation
+    categories: [chromatin-3d, tfbs-prediction]
+    doi: 10.1016/j.compbiomed.2024.108182
+
+  - name: TIGERi
+    url: https://github.com/namshik/tigeri
+    repo: namshik/tigeri
+    description: modeling and visualizing the responses to perturbation of a transcription factor network
+    categories: [grn-inference]
+    doi: 10.1186/s12859-017-1636-6
+
+  - name: TopoLoop
+    url: https://doi.org/10.1063/5.0236090
+    tags: [no-software-url]
+    description: A new tool for chromatin loop detection in live cells via single-particle tracking
+    categories: [chromatin-3d]
+    doi: 10.1063/5.0236090
+
+  - name: TrFAST
+    url: http://www.fi-pk.com/trfast.html
+    description: a tool to predict signaling pathway-specific transcription factor binding sites
+    categories: [motif-scanning, tfbs-prediction, comparative]
+    doi: 10.1016/j.gpb.2012.06.007
+
+  - name: TrieAMD
+    url: https://doi.org/10.1504/ijdmb.2015.070833
+    tags: [no-software-url]
+    description: a scalable and efficient apriori motif discovery approach
+    categories: [motif-discovery]
+    doi: 10.1504/ijdmb.2015.070833
+
+  - name: ActiveMotif
+    url: https://doi.org/10.1109/embc.2017.8037423
+    tags: [no-software-url]
+    description: Interactive motif discovery with human feedback
+    categories: [motif-discovery]
+    doi: 10.1109/embc.2017.8037423
+
+  - name: AliBiMotif
+    url: https://doi.org/10.1504/ijdmb.2012.048198
+    tags: [no-software-url]
+    description: integrating alignment and biclustering to unravel transcription factor binding sites in DNA sequences
+    categories: [motif-discovery]
+    doi: 10.1504/ijdmb.2012.048198
+
+  - name: AmalgaMo
+    url: https://github.com/lapohosorsolya/AmalgaMo
+    repo: lapohosorsolya/AmalgaMo
+    description: flexible DNA motif merging
+    categories: [motif-comparison]
+    doi: 10.1093/bioadv/vbag043
+
+  - name: Bi-billboard
+    url: https://doi.org/10.1089/cmb.2010.0299
+    tags: [no-software-url]
+    description: symmetrization and careful choice of informant species results in higher accuracy of regulatory element prediction
+    categories: [motif-scanning, regulatory-elements]
+    doi: 10.1089/cmb.2010.0299
+
+  - name: biomapp-chip
+    url: https://github.com/jadermcg/biomapp-chip
+    repo: jadermcg/biomapp-chip
+    description: 'BIOMAPP::CHIP: large-scale motif analysis'
+    categories: [motif-discovery]
+    doi: 10.1186/s12859-024-05752-3
+
+  - name: bisHash
+    url: https://github.com/hnikaein/bisHash
+    repo: hnikaein/bisHash
+    description: 'Multi-metric locality sensitive hashing enhances alignment accuracy of bisulfite sequencing reads: BisHash'
+    categories: [dna-methylation]
+    doi: 10.1093/bioadv/vbaf144
+
+  - name: BMGRN
+    url: https://github.com/KanZh/BMGRN
+    repo: KanZh/BMGRN
+    description: A Novel Framework for Gene Regulatory Network Inference Integrating Bidirectional Mamba and Dual Contrastive Learning
+    categories: [grn-inference]
+    doi: 10.1021/acssynbio.6c00112
+
+  - name: CAGAD
+    url: https://doi.org/10.1007/s12064-026-00460-3
+    tags: [no-software-url]
+    description: dynamic community attention for prediction gene regulatory network
+    categories: [grn-inference]
+    doi: 10.1007/s12064-026-00460-3
+
+  - name: CancerSubtyper
+    url: https://github.com/ycheung5/cancersubtyper
+    repo: ycheung5/cancersubtyper
+    description: a deep learning framework for cancer subtyping through DNA methylation data
+    categories: [dna-methylation]
+    doi: 10.1186/s13072-026-00682-1
+
+  - name: CAraCAl
+    url: https://doi.org/10.1186/s12859-024-05833-3
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/caracal-pipeline/caracal but did not verify as the same software'
+    description: CAMML with the integration of chromatin accessibility
+    categories: [single-cell]
+    doi: 10.1186/s12859-024-05833-3
+
+  - name: CASHeart
+    url: https://doi.org/10.1002/qub2.90
+    tags: [no-software-url]
+    description: A database of single cells chromatin accessibility for the human heart
+    categories: [single-cell, chip-resources]
+    doi: 10.1002/qub2.90
+
+  - name: CBOEP2
+    url: https://github.com/maruyama-lab-design/CBOEP2
+    repo: maruyama-lab-design/CBOEP2
+    description: Class-balanced negative training sets for improving classifier model predictions of enhancer-promoter interactions
+    categories: [chromatin-3d]
+    doi: 10.1186/s12859-025-06171-8
+
+  - name: CCTAD
+    url: https://github.com/ruiping-Feng/CCTAD
+    repo: ruiping-Feng/CCTAD
+    description: A topologically associating domains detection method integrating convolutional autoencoder and hierarchical clustering
+    categories: [chromatin-3d]
+    doi: 10.1016/j.compbiolchem.2026.108913
+
+  - name: cfDECOR
+    url: https://doi.org/10.1038/s41598-026-50180-3
+    tags: [no-software-url]
+    description: a novel approach for estimating cell type contributions to cfDNA based on chromatin accessibility patterns
+    categories: [single-cell, regulatory-elements]
+    doi: 10.1038/s41598-026-50180-3
+
+  - name: Chiron3D
+    url: https://github.com/BoevaLab/Chiron3D
+    repo: BoevaLab/Chiron3D
+    description: an interpretable deep learning framework for understanding the DNA code of chromatin looping
+    categories: [chromatin-3d, tfbs-prediction]
+    doi: 10.1093/bioinformatics/btag492
+
+  - name: Chromatin
+    url: https://doi.org/10.1038/nrg3331
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/tek/chromatin but did not verify as the same software'
+    description: a model for nucleosome positioning
+    categories: [nucleosome-chromatin]
+    doi: 10.1038/nrg3331
+
+  - name: ChromEnhancer
+    url: https://github.com/EpiGenomicsCode/ChromEnhancer
+    repo: EpiGenomicsCode/ChromEnhancer
+    description: Adversarial attack of sequence-free enhancer prediction identifies chromatin architecture
+    categories: [regulatory-elements]
+    doi: 10.1093/bioinformatics/btaf371
+
+  - name: ChromTag
+    url: https://doi.org/10.3389/fbinf.2026.1805772
+    tags: [no-software-url]
+    description: 'an interactive R-shiny platform for analysis and visualization of CUT&amp;Tag and ChIP-seq peak profiling data'
+    categories: [peak-annotation, motif-discovery, regulatory-elements]
+    doi: 10.3389/fbinf.2026.1805772
+
+  - name: CNNKSCEC
+    url: https://github.com/zhengbingzi/CNNKSCEC
+    repo: zhengbingzi/CNNKSCEC
+    description: a deep learning-based framework for chromatin loop prediction with multi-source feature integration
+    categories: [chromatin-3d]
+    doi: 10.3389/fgene.2026.1850219
+
+  - name: CoReGRN
+    url: https://doi.org/10.1186/s12864-026-13185-w
+    tags: [no-software-url]
+    description: a context-aware post-processing framework for gene regulatory network inference revealing regulatory signatures in HIV-Leishmaniasis
+    categories: [grn-inference]
+    doi: 10.1186/s12864-026-13185-w
+
+  - name: Dbert2_LR
+    url: https://doi.org/10.1016/j.ygeno.2026.111201
+    tags: [no-software-url]
+    description: A deep learning-based model for predicting cis-regulatory elements in crops
+    categories: [regulatory-elements]
+    doi: 10.1016/j.ygeno.2026.111201
+
+  - name: DeepOCR
+    url: https://github.com/jasonzhao371/DeepOCR
+    repo: jasonzhao371/DeepOCR
+    description: A multi-species deep-learning framework for accurate identification of open chromatin regions in livestock
+    categories: [peak-calling]
+    doi: 10.1016/j.compbiolchem.2024.108077
+
+  - name: DiTSim
+    url: https://doi.org/10.1007/s12539-025-00773-9
+    tags: [no-software-url]
+    description: A Diffusion-Transformers Based Single-Cell ATAC-seq Data Simulator
+    categories: [single-cell]
+    doi: 10.1007/s12539-025-00773-9
+
+  - name: DMDGRN
+    url: https://doi.org/10.1016/j.jbi.2026.104985
+    tags: [no-software-url]
+    description: A data augmentation-based multilayer directed graph convolutional network for gene regulatory network inference
+    categories: [grn-inference]
+    doi: 10.1016/j.jbi.2026.104985
+
+  - name: EM-MUL
+    url: https://github.com/lmylynn/EM-MUL
+    repo: lmylynn/EM-MUL
+    description: An effective method to resolve ambiguous bisulfite-treated reads
+    categories: [dna-methylation]
+    doi: 10.1186/s12859-021-04204-6
+
+  - name: eQTL-Detect
+    url: https://github.com/BovReg/BovReg_eQTL
+    repo: BovReg/BovReg_eQTL
+    description: nextflow-based pipeline for eQTL detection in modular format with sharable and parallelizable scripts
+    categories: [molecular-qtl]
+    doi: 10.1093/nargab/lqae122
+
+  - name: eQTLHap
+    url: https://github.com/ziadbkh/eQTLHap
+    repo: ziadbkh/eQTLHap
+    description: a tool for comprehensive eQTL analysis considering haplotypic and genotypic effects
+    categories: [molecular-qtl]
+    doi: 10.1093/bib/bbab093
+
+  - name: GAMI-CRM
+    url: https://doi.org/10.1109/cec.2014.6900542
+    tags: [no-software-url]
+    description: Using de novo motif inference to detect cis-regulatory modules
+    categories: [motif-discovery, regulatory-elements]
+    doi: 10.1109/cec.2014.6900542
+
+  - name: GLNet-TFBS
+    url: https://doi.org/10.1007/s12539-025-00807-2
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/zjxywt/GLNet-TFBS but did not verify as the same software'
+    description: A Deep Learning Framework with Multi-perspective Feature Fusion for Transcription Factor Binding Site Prediction
+    categories: [tfbs-prediction]
+    doi: 10.1007/s12539-025-00807-2
+
+  - name: greenPipes
+    url: https://github.com/snizam001/greenPipes
+    repo: snizam001/greenPipes
+    description: 'an integrated data analysis pipeline for greenCUT&RUN and CUT&RUN genome-localization datasets'
+    categories: [peak-calling, peak-annotation]
+    doi: 10.1093/bioinformatics/btae307
+
+  - name: GTAT-GRN
+    url: https://doi.org/10.3389/fgene.2025.1668773
+    tags: [no-software-url]
+    description: a graph topology-aware attention method with multi-source feature fusion for gene regulatory network inference
+    categories: [grn-inference]
+    doi: 10.3389/fgene.2025.1668773
+
+  - name: HemaCisDB
+    url: https://hemacisdb.chinablood.com.cn
+    description: An Interactive Database for Analyzing Cis-regulatory Elements Across Hematopoietic Malignancies
+    categories: [chip-resources, footprinting, regulatory-elements]
+    doi: 10.1093/gpbjnl/qzae088
+
+  - name: Hi-Enhancer
+    url: https://github.com/emanlee/Hi-Enhancer
+    repo: emanlee/Hi-Enhancer
+    description: a two-stage framework for prediction and localization of enhancers based on Blending-KAN and Stacking-Auto models
+    categories: [regulatory-elements]
+    doi: 10.1093/bioinformatics/btaf441
+
+  - name: Hi-GDT
+    url: https://github.com/CDL-HongwooLee/Hi-GDT
+    repo: CDL-HongwooLee/Hi-GDT
+    description: A Hi-C-based 3D gene domain analysis tool for analyzing local chromatin contacts in plants
+    categories: [chromatin-3d]
+    doi: 10.1093/gigascience/giaf020
+
+  - name: HyperDeepTAD
+    url: https://github.com/liukaihua0213-source/HyperDeepTAD
+    repo: liukaihua0213-source/HyperDeepTAD
+    description: a topologically associated domains detection method based on multiway chromatin interaction data and deep learning
+    categories: [chromatin-3d]
+    doi: 10.1186/s12864-026-12738-3
+
+  - name: iEnhancer-Flow
+    url: https://doi.org/10.1007/s12539-025-00787-3
+    tags: [no-software-url]
+    description: Integrating Transformer-Based Sequence Learning with DNA Shape Insights for Robust Enhancer Prediction
+    categories: [regulatory-elements]
+    doi: 10.1007/s12539-025-00787-3
+
+  - name: IMAGE
+    url: https://doi.org/
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/francescortiz/image but did not verify as the same software'
+    description: a new tool for the prediction of transcription factor binding sites
+    categories: [motif-discovery, tfbs-prediction]
+    pmid: 19812788
+
+  - name: IN-MACA-MCC
+    url: https://doi.org/10.1155/2014/261362
+    tags: [no-software-url]
+    description: Integrated Multiple Attractor Cellular Automata with Modified Clonal Classifier for Human Protein Coding and Promoter Prediction
+    categories: [regulatory-elements]
+    doi: 10.1155/2014/261362
+
+  - name: LBF-MI
+    url: https://doi.org/10.3390/genes15121530
+    tags: [no-software-url]
+    description: Limited Boolean Functions and Mutual Information to Infer a Gene Regulatory Network from Time-Series Gene Expression Data
+    categories: [grn-inference]
+    doi: 10.3390/genes15121530
+
+  - name: LEPAE
+    url: https://github.com/ernstlab/LEPAE
+    repo: ernstlab/LEPAE
+    description: Learning a pairwise epigenomic and transcription factor binding association score across the human genome
+    categories: [regulatory-variants, chromatin-3d]
+    doi: 10.1093/bioinformatics/btag024
+
+  - name: LiBis
+    url: https://github.com/Dangertrip/LiBis
+    repo: Dangertrip/LiBis
+    description: an ultrasensitive alignment augmentation for low-input bisulfite sequencing
+    categories: [dna-methylation]
+    doi: 10.1093/bib/bbaa332
+
+  - name: LLM-TF-interactions
+    url: https://github.com/pengpclab/LLM-TF-interactions
+    repo: pengpclab/LLM-TF-interactions
+    description: Benchmarking large language models for identifying transcription factor regulatory interactions
+    categories: [grn-inference]
+    doi: 10.1093/bioinformatics/btaf653
+
+  - name: LSUE
+    url: https://github.com/ekffar/LSUE
+    repo: ekffar/LSUE
+    description: Collaborative Completion of Transcription Factor Binding Profiles via Local Sensitive Unified Embedding
+    categories: [chip-resources]
+    doi: 10.1109/tnb.2016.2625823
+
+  - name: MEFFGRN
+    url: https://doi.org/10.1016/j.compbiomed.2024.108835
+    tags: [no-software-url]
+    description: Matrix enhancement and feature fusion-based method for reconstructing the gene regulatory network of epithelioma papulosum cyprini cells by spring viremia of carp virus infection
+    categories: [grn-inference]
+    doi: 10.1016/j.compbiomed.2024.108835
+
+  - name: MetArea
+    url: https://doi.org/10.18699/vjgb-24-90
+    tags: [no-software-url]
+    description: a software package for analysis of the mutually exclusive occurrence in pairs of motifs of transcription factor binding sites based on ChIP-seq data
+    categories: [motif-discovery, motif-scanning]
+    doi: 10.18699/vjgb-24-90
+
+  - name: MethPy
+    url: https://github.com/Smarties98/MethPy
+    repo: Smarties98/MethPy
+    description: a new software for analyzing non-CpG methylation after bisulfite assay and Sanger sequencing
+    categories: [dna-methylation]
+    doi: 10.1038/s41598-025-26089-8
+
+  - name: mist
+    url: https://github.com/dxd429/mist
+    repo: dxd429/mist
+    description: a hierarchical Bayesian framework for detecting differential DNA methylation dynamics in single-cell data
+    categories: [dna-methylation, single-cell]
+    doi: 10.1038/s41467-026-70523-y
+
+  - name: MODSIDE
+    url: http://modside.org
+    description: a motif discovery pipeline and similarity detector
+    categories: [motif-discovery, motif-comparison]
+    doi: 10.1186/s12864-018-5148-1
+
+  - name: Motif-Cluster
+    url: https://doi.org/10.1371/journal.pcbi.1014639
+    tags: [no-software-url]
+    description: Motif driven prioritization of transcription factor binding clusters
+    categories: [motif-scanning, motif-comparison]
+    doi: 10.1371/journal.pcbi.1014639
+
+  - name: MotifDiff
+    url: https://github.com/rezwanhosseini/MotifDiff
+    repo: rezwanhosseini/MotifDiff
+    description: Ultra-fast variant effect prediction using biophysical transcription factor binding models
+    categories: [regulatory-variants, motif-scanning]
+    doi: 10.1093/nar/gkaf940
+
+  - name: MultiCausGRN
+    url: https://github.com/nrr-90/MultiCausGRN
+    repo: nrr-90/MultiCausGRN
+    description: directed prior-guided graph attention model for multi-omics gene regulatory network inference
+    categories: [grn-inference]
+    doi: 10.3389/fbinf.2026.1883130
+
+  - name: mwHIT
+    url: https://github.com/zhichunlizzx/mwHIT
+    repo: zhichunlizzx/mwHIT
+    description: accelerated and accurate histone modification imputation using multi-scale window attention
+    categories: [histone-marks]
+    doi: 10.3389/fgene.2026.1896629
+
+  - name: NanoLoop
+    url: https://github.com/mikolmogorov/Flye
+    repo: mikolmogorov/Flye
+    description: A Deep Learning Framework Leveraging Nanopore Sequencing for Chromatin Loop Prediction
+    categories: [chromatin-3d]
+    doi: 10.1002/advs.202517692
+
+  - name: NSSGRN
+    url: https://github.com/Xtu-LWGroup/NSSGRN
+    repo: Xtu-LWGroup/NSSGRN
+    description: Network Structure Selection Method for Gene Regulatory Network Construction
+    categories: [grn-inference]
+    doi: 10.1109/jbhi.2026.3725058
+
+  - name: ot-grn
+    url: https://github.com/Mengyu8042/ot-grn
+    repo: Mengyu8042/ot-grn
+    description: Double optimal transport for differential gene regulatory network inference with unpaired samples
+    categories: [grn-inference]
+    doi: 10.1093/bioinformatics/btaf352
+
+  - name: OVAAnno
+    url: https://github.com/lisaber/OVAAnno
+    repo: lisaber/OVAAnno
+    description: Detecting novel cell type in single-cell chromatin accessibility data via open-set domain adaptation
+    categories: [single-cell]
+    doi: 10.1093/bib/bbae370
+
+  - name: PAD2
+    url: https://doi.org/10.1016/j.xpro.2023.102203
+    tags: [no-software-url]
+    description: interactive exploration of transcription factor genomic colocalization using ChIP-seq data
+    categories: [chip-resources, peak-annotation]
+    doi: 10.1016/j.xpro.2023.102203
+
+  - name: PB-DiffHiC
+    url: https://github.com/Tian-Dechao/PB-DiffHiC
+    repo: Tian-Dechao/PB-DiffHiC
+    description: a statistical framework for detecting differential chromatin interactions from high resolution pseudo-bulk Hi-C data
+    categories: [chromatin-3d]
+    doi: 10.1186/s12864-025-11987-y
+
+  - name: PERFILS
+    url: https://doi.org/10.1093/bioinformatics/9.5.607
+    tags: [no-software-url]
+    description: a program for the quantitative treatment of footprinting data
+    categories: [footprinting]
+    doi: 10.1093/bioinformatics/9.5.607
+
+  - name: PhyFoo
+    url: https://github.com/mgledi/PhyFoo
+    repo: mgledi/PhyFoo
+    description: Unrealistic phylogenetic trees may improve phylogenetic footprinting
+    categories: [footprinting]
+    doi: 10.1093/bioinformatics/btx033
+
+  - name: powerlaw_sparsity
+    url: https://bitbucket.org/sonnhammergrni/powerlaw_sparsity
+    description: Topology-based metrics for finding the optimal sparsity in gene regulatory network inference
+    categories: [grn-inference]
+    doi: 10.1093/bioinformatics/btaf120
+
+  - name: QWENDY
+    url: https://doi.org/10.1007/s11538-025-01542-x
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/YueWangMathbio/QWENDY but did not verify as the same software'
+    description: Gene Regulatory Network Inference by Quadruple Covariance Matrices
+    categories: [grn-inference]
+    doi: 10.1007/s11538-025-01542-x
+
+  - name: RegRegSEA
+    url: https://doi.org/10.1093/nar/gkag454
+    tags: [no-software-url]
+    description: a web server for regulatory region set enrichment analysis of epigenomic data
+    categories: [motif-scanning, regulatory-variants]
+    doi: 10.1093/nar/gkag454
+
+  - name: REgulamentary
+    url: https://github.com/Genome-Function-Initiative-Oxford/REgulamentary
+    repo: Genome-Function-Initiative-Oxford/REgulamentary
+    description: 'Deciphering &lt;i&gt;cis&lt;/i&gt;-regulatory elements using REgulamentary'
+    categories: [regulatory-elements]
+    doi: 10.1093/bioadv/vbag079
+
+  - name: ReMeDy
+    url: https://github.com/SChatLab/ReMeDy
+    repo: SChatLab/ReMeDy
+    description: A Flexible Statistical Framework for Region-Based Detection of DNA Methylation Dysregulation
+    categories: [dna-methylation]
+    doi: 10.1002/sim.70716
+
+  - name: sc-ChromAging
+    url: https://doi.org/10.1038/s41514-026-00398-2
+    tags: [no-software-url]
+    description: A Single-Cell Chromatin Accessibility-based Clock Decodes Cell-Type-Specific Epigenetic Aging Trajectories
+    categories: [single-cell, peak-calling]
+    doi: 10.1038/s41514-026-00398-2
+
+  - name: scAED
+    url: https://github.com/GudaLab/scAED
+    repo: GudaLab/scAED
+    description: a framework for mapping the enhancer state at single-cell resolution
+    categories: [regulatory-elements, single-cell, reporter-assays]
+    doi: 10.1093/bib/bbaf646
+
+  - name: scTELL
+    url: https://doi.org/10.1186/s13100-026-00395-y
+    tags: [no-software-url]
+    description: a single-cell ATAC-seq tool for locus-specific transposable element identification in chromatin accessibility
+    categories: [single-cell, peak-annotation]
+    doi: 10.1186/s13100-026-00395-y
+
+  - name: SGMHA
+    url: https://doi.org/10.1186/s12864-026-13022-0
+    tags: [no-software-url]
+    description: semantic graph reconstruction with multi-head attention for gene regulatory network inference
+    categories: [grn-inference]
+    doi: 10.1186/s12864-026-13022-0
+
+  - name: SIDR
+    url: https://github.com/qunhualilab/SIDR
+    repo: qunhualilab/SIDR
+    description: Assessing reproducibility of Hi-C chromatin interactions using stratum-adjusted irreproducible discovery rate
+    categories: [chromatin-3d]
+    doi: 10.1093/bioinformatics/btag390
+
+  - name: SimMapNet
+    url: https://doi.org/10.1186/s12859-026-06542-9
+    tags: [no-software-url]
+    description: a Bayesian framework for gene regulatory network inference using gene ontology similarities as external hint
+    categories: [grn-inference]
+    doi: 10.1186/s12859-026-06542-9
+
+  - name: SIN-KNO
+    url: https://doi.org/10.1142/s0219720019500355
+    tags: [no-software-url]
+    description: A method of gene regulatory network inference using single-cell transcription and gene knockout data
+    categories: [grn-inference, single-cell]
+    doi: 10.1142/s0219720019500355
+
+  - name: sleps
+    url: https://github.com/HanLabUNLV/sleps
+    repo: HanLabUNLV/sleps
+    description: Supervised learning of enhancer-promoter specificity based on genome-wide perturbation studies highlights areas for improvement in learning
+    categories: [regulatory-elements, grn-inference]
+    doi: 10.1093/bioinformatics/btae367
+
+  - name: SuperTAD-Fast
+    url: https://doi.org/10.1089/cmb.2024.0490
+    tags: [no-software-url]
+    description: Accelerating Topologically Associating Domains Detection Through Discretization
+    categories: [chromatin-3d]
+    doi: 10.1089/cmb.2024.0490
+
+  - name: TADShop
+    url: https://doi.org/10.1038/s41592-026-03100-2
+    tags: [no-software-url]
+    description: systematic benchmarking and identification of topologically associating domains
+    categories: [chromatin-3d]
+    doi: 10.1038/s41592-026-03100-2
+
+  - name: TEffectBayes
+    url: https://github.com/nkaan-kutlu/TEffectBayes
+    repo: nkaan-kutlu/TEffectBayes
+    description: a nextflow pipeline for exploring the potential effect of transposable elements in gene regulatory network with multi-omic Bayesian network model
+    categories: [grn-inference]
+    doi: 10.1007/s00438-026-02365-8
+
+  - name: TFBS-negatives
+    url: https://github.com/NatanTourne/TFBS-negatives
+    repo: NatanTourne/TFBS-negatives
+    description: How negative sampling shapes the performance of transcription factor binding site prediction models
+    categories: [tfbs-prediction]
+    doi: 10.1093/bioinformatics/btag048
+
+  - name: THC-net
+    url: https://doi.org/10.1186/s12859-026-06504-1
+    tags: [no-software-url]
+    description: an attention-based deep learning model for chromatin compartment prediction from histone modifications
+    categories: [chromatin-3d, histone-marks]
+    doi: 10.1186/s12859-026-06504-1
+
+  - name: TM-Loop
+    url: https://github.com/yimuhuashui/TM-Loop
+    repo: yimuhuashui/TM-Loop
+    description: Transformer multi-omics hierarchical detection of chromatin loop
+    categories: [chromatin-3d]
+    doi: 10.1038/s41598-026-56418-4
+
+  - name: TransBind
+    url: https://github.com/jianlin-cheng/TransBind
+    repo: jianlin-cheng/TransBind
+    description: Integrating protein and DNA embeddings for improving genome-wide transcription factor binding site prediction
+    categories: [tfbs-prediction]
+    doi: 10.1093/nargab/lqag047
+
+  - name: TwinEQTL
+    url: https://doi.org/10.1093/genetics/iyac088
+    tags: [no-software-url]
+    description: ultrafast and powerful association analysis for eQTL and GWAS in twin studies
+    categories: [molecular-qtl]
+    doi: 10.1093/genetics/iyac088
+
+  - name: UnionLoops
+    url: https://doi.org/10.1186/s13059-026-04169-w
+    tags: [no-software-url]
+    description: 'a workflow for calling chromatin loops across related Hi-C datasets with improved specificity, precision, and sensitivity'
+    categories: [chromatin-3d]
+    doi: 10.1186/s13059-026-04169-w
+
+  - name: UPNT
+    url: https://doi.org/10.1504/ijbra.2008.017166
+    tags: [no-software-url]
+    description: Uniform Projection and Neighbourhood Thresholding method for motif discovery
+    categories: [motif-discovery]
+    doi: 10.1504/ijbra.2008.017166
+
+  - name: VSS-Hi-C
+    url: https://github.com/nedashokraneh/vssHiC
+    repo: nedashokraneh/vssHiC
+    description: variance-stabilized signals for chromatin contacts
+    categories: [chromatin-3d]
+    doi: 10.1093/bioinformatics/btae715
+
+  - name: MrTADFinder
+    url: https://doi.org/10.1371/journal.pcbi.1005647
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/gersteinlab/MrTADFinder but did not verify as the same software'
+    description: A network modularity based approach to identify topologically associating domains in multiple resolutions
+    categories: [chromatin-3d]
+    doi: 10.1371/journal.pcbi.1005647
+
+  - name: SAPPHIRE.CNN
+    url: https://doi.org/10.1016/j.csbj.2022.09.006
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/LoGT-KULeuven/SAPPHIRE_CNN_model_development but did not verify as the same software'
+    description: 'Implementation of dRNA-seq-driven, species-specific promoter prediction using convolutional neural networks'
+    categories: [regulatory-elements]
+    doi: 10.1016/j.csbj.2022.09.006
+
+  - name: ATAC2GRN
+    url: https://github.com/ChioriniLab/ATAC2GRN
+    repo: ChioriniLab/ATAC2GRN
+    description: optimized ATAC-seq and DNase1-seq pipelines for rapid and accurate genome regulatory network inference
+    categories: [footprinting, grn-inference]
+    doi: 10.1186/s12864-018-4943-z
+
+  - name: BSPAT
+    url: https://github.com/lancelothk/BSPAT
+    repo: lancelothk/BSPAT
+    description: a fast online tool for DNA methylation co-occurrence pattern analysis based on high-throughput bisulfite sequencing data
+    categories: [dna-methylation]
+    doi: 10.1186/s12859-015-0649-2
+
+  - name: sciCAN
+    url: https://github.com/rpmccordlab/sciCAN
+    repo: rpmccordlab/sciCAN
+    description: single-cell chromatin accessibility and gene expression data integration via cycle-consistent adversarial network
+    categories: [single-cell]
+    doi: 10.1038/s41540-022-00245-6
+
+  - name: scCASE
+    url: https://doi.org/10.1038/s41467-024-46045-w
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/quon-titative-biology/scBFA but did not verify as the same software'
+    description: accurate and interpretable enhancement for single-cell chromatin accessibility sequencing data
+    categories: [single-cell]
+    doi: 10.1038/s41467-024-46045-w
+
+  - name: TRACE
+    url: https://doi.org/10.1101/gr.258228.119
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/Boyle-Lab/TRACE but did not verify as the same software'
+    description: transcription factor footprinting using chromatin accessibility data and DNA sequence
+    categories: [footprinting, tfbs-prediction]
+    doi: 10.1101/gr.258228.119
+
+  - name: MetaSEM
+    url: https://doi.org/10.3390/ijms24032595
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/ZhangLab312/MetaSEM but did not verify as the same software'
+    description: Gene Regulatory Network Inference from Single-Cell RNA Data by Meta-Learning
+    categories: [grn-inference, single-cell]
+    doi: 10.3390/ijms24032595
+
+  - name: NeuronMotif
+    url: https://github.com/XWangLabTHU/NeuronMotif
+    repo: XWangLabTHU/NeuronMotif
+    description: Deciphering cis-regulatory codes by layer-wise demixing of deep neural networks
+    categories: [motif-discovery, motif-comparison]
+    doi: 10.1073/pnas.2216698120
+
+  - name: DeepFGRN
+    url: https://github.com/PhoebeGaoZhen/DeepFGRN/tree/master
+    repo: PhoebeGaoZhen/DeepFGRN
+    description: inference of gene regulatory network with regulation type based on directed graph embedding
+    categories: [grn-inference]
+    doi: 10.1093/bib/bbae143
+
+  - name: iCREPCP
+    url: https://github.com/kaixuanDeng95/iCREPCP
+    repo: kaixuanDeng95/iCREPCP
+    description: A deep learning-based web server for identifying base-resolution cis-regulatory elements within plant core promoters
+    categories: [regulatory-elements]
+    doi: 10.1016/j.xplc.2022.100455
+
+  - name: EPI-Trans
+    url: https://github.com/FMoonlightS/EPI-Trans
+    repo: FMoonlightS/EPI-Trans
+    description: an effective transformer-based deep learning model for enhancer promoter interaction prediction
+    categories: [regulatory-elements, chromatin-3d]
+    doi: 10.1186/s12859-024-05784-9
+
+  - name: WSMD
+    url: https://github.com/hongbozhang0808/WSMD
+    repo: hongbozhang0808/WSMD
+    description: weakly-supervised motif discovery in transcription factor ChIP-seq data
+    categories: [motif-discovery]
+    doi: 10.1038/s41598-017-03554-7
+
+  - name: CREaTor
+    url: https://github.com/DLS5-Omics/CREaTor
+    repo: DLS5-Omics/CREaTor
+    description: zero-shot cis-regulatory pattern modeling with attention mechanisms
+    categories: [regulatory-elements, grn-inference]
+    doi: 10.1186/s13059-023-03103-8
+
+  - name: PMF-GRN
+    url: https://github.com/nyu-dl/pmf-grn
+    repo: nyu-dl/pmf-grn
+    description: a variational inference approach to single-cell gene regulatory network inference using probabilistic matrix factorization
+    categories: [grn-inference, single-cell]
+    doi: 10.1186/s13059-024-03226-6
+
+  - name: PromGER
+    url: https://doi.org/10.3390/genes14071441
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/XiaoxiangHugh/PromGER but did not verify as the same software'
+    description: Promoter Prediction Based on Graph Embedding and Ensemble Learning for Eukaryotic Sequence
+    categories: [regulatory-elements]
+    doi: 10.3390/genes14071441
+
+  - name: SIGNET
+    url: https://doi.org/10.1093/bib/bbab547
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/Lan-lab/SIGNET but did not verify as the same software'
+    description: single-cell RNA-seq-based gene regulatory network prediction using multiple-layer perceptron bagging
+    categories: [grn-inference, single-cell]
+    doi: 10.1093/bib/bbab547
+
+  - name: SMAP
+    url: https://doi.org/10.1186/s13742-015-0070-9
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/gaosjlucky/SMAPdigger but did not verify as the same software'
+    description: a streamlined methylation analysis pipeline for bisulfite sequencing
+    categories: [dna-methylation]
+    doi: 10.1186/s13742-015-0070-9
+
+  - name: BindVAE
+    url: https://github.com/microsoft/BindVAE
+    repo: microsoft/BindVAE
+    description: Dirichlet variational autoencoders for de novo motif discovery from accessible chromatin
+    categories: [motif-discovery]
+    doi: 10.1186/s13059-022-02723-w
+
+  - name: DeepChIA-PET
+    url: https://github.com/zwang-bioinformatics/DeepChIA-PET
+    repo: zwang-bioinformatics/DeepChIA-PET
+    description: Accurately predicting ChIA-PET from Hi-C and ChIP-seq with deep dilated networks
+    categories: [chromatin-3d]
+    doi: 10.1371/journal.pcbi.1011307
+
+  - name: HT-eQTL
+    url: https://doi.org/10.1186/s12859-018-2088-3
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/reagan0323/MT-eQTL/tree/master/HT-eQTL but did not verify as the same software'
+    description: integrative expression quantitative trait loci analysis in a large number of human tissues
+    categories: [molecular-qtl]
+    doi: 10.1186/s12859-018-2088-3
+
+  - name: DeepCBA
+    url: https://github.com/Jie-Lii/DeepCBA
+    repo: Jie-Lii/DeepCBA
+    description: A deep learning framework for gene expression prediction in maize based on DNA sequences and chromatin interactions
+    categories: [regulatory-elements, chromatin-3d, motif-discovery]
+    doi: 10.1016/j.xplc.2024.100985
+
+  - name: Imogene
+    url: http://github.com/hrouault/Imogene
+    repo: hrouault/Imogene
+    description: identification of motifs and cis-regulatory modules underlying gene co-regulation
+    categories: [motif-discovery, regulatory-elements]
+    doi: 10.1093/nar/gku209
+
+  - name: RWRNET
+    url: https://doi.org/10.3389/fgene.2020.591461
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/Dam-1517/RWRNET but did not verify as the same software'
+    description: A Gene Regulatory Network Inference Algorithm Using Random Walk With Restart
+    categories: [grn-inference]
+    doi: 10.3389/fgene.2020.591461
+
+  - name: AIControl
+    url: https://doi.org/10.1093/nar/gkz156
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/suinleelab/AIControl.jl but did not verify as the same software'
+    description: replacing matched control experiments with machine learning improves ChIP-seq peak identification
+    categories: [peak-calling]
+    doi: 10.1093/nar/gkz156
+
+  - name: DeepNup
+    url: https://github.com/lennylv/DeepNup
+    repo: lennylv/DeepNup
+    description: Prediction of Nucleosome Positioning from DNA Sequences Using Deep Neural Network
+    categories: [nucleosome-chromatin]
+    doi: 10.3390/genes13111983
+
+  - name: dHICA
+    url: https://github.com/wzhy2000/dHICA
+    repo: wzhy2000/dHICA
+    description: a deep transformer-based model enables accurate histone imputation from chromatin accessibility
+    categories: [histone-marks, chromatin-3d, regulatory-variants]
+    doi: 10.1093/bib/bbae459
+
+  - name: EnContact
+    url: https://github.com/liwenran/EnContact
+    repo: liwenran/EnContact
+    description: predicting enhancer-enhancer contacts using sequence-based deep learning model
+    categories: [chromatin-3d]
+    doi: 10.7717/peerj.7657
+
+  - name: scaDA
+    url: https://github.com/fzhaouf/scaDA
+    repo: fzhaouf/scaDA
+    description: A novel statistical method for differential analysis of single-cell chromatin accessibility sequencing data
+    categories: [single-cell, peak-annotation]
+    doi: 10.1371/journal.pcbi.1011854
+
+  - name: CATCH-UP
+    url: https://github.com/Genome-Function-Initiative-Oxford/UpStreamPipeline/tree/main/genetics/CATCH-UP
+    repo: Genome-Function-Initiative-Oxford/UpStreamPipeline
+    description: A High-Throughput Upstream-Pipeline for Bulk ATAC-Seq and ChIP-Seq Data
+    categories: [peak-calling]
+    doi: 10.3791/65633
+
+  - name: CelEst
+    url: https://doi.org/10.1093/genetics/iyae189
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/IBMB-MFP/CelEsT-app but did not verify as the same software'
+    description: a unified gene regulatory network for estimating transcription factor activities in C. elegans
+    categories: [grn-inference, tfbs-prediction]
+    doi: 10.1093/genetics/iyae189
+
+  - name: Descart
+    url: https://github.com/likeyi19/Descart
+    repo: likeyi19/Descart
+    description: a method for detecting spatial chromatin accessibility patterns with inter-cellular correlations
+    categories: [peak-calling, single-cell]
+    doi: 10.1186/s13059-024-03458-6
+
+  - name: epiG
+    url: https://doi.org/10.1186/s13059-017-1168-4
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at http://github.com/vincent-dk/epiG but did not verify as the same software'
+    description: statistical inference and profiling of DNA methylation from whole-genome bisulfite sequencing data
+    categories: [dna-methylation, nucleosome-chromatin]
+    doi: 10.1186/s13059-017-1168-4
+
+  - name: scPADGRN
+    url: https://github.com/xzheng-ac/scPADGRN
+    repo: xzheng-ac/scPADGRN
+    description: A preconditioned ADMM approach for reconstructing dynamic gene regulatory network using single-cell RNA sequencing data
+    categories: [grn-inference, single-cell]
+    doi: 10.1371/journal.pcbi.1007471
+
+  - name: SMARTcleaner
+    url: https://github.com/dzhaobio/SMARTcleaner
+    repo: dzhaobio/SMARTcleaner
+    description: identify and clean off-target signals in SMART ChIP-seq analysis
+    categories: [peak-calling]
+    doi: 10.1186/s12859-018-2577-4
+
+  - name: CREATE
+    url: https://github.com/cuixj19/CREATE
+    repo: cuixj19/CREATE
+    description: cell-type-specific cis-regulatory element identification via discrete embedding
+    categories: [regulatory-elements]
+    doi: 10.1038/s41467-025-59780-5
+
+  - name: DeepSATA
+    url: https://github.com/mawenlong2016/DeepSATA
+    repo: mawenlong2016/DeepSATA
+    description: A Deep Learning-Based Sequence Analyzer Incorporating the Transcription Factor Binding Affinity to Dissect the Effects of Non-Coding Genetic Variants
+    categories: [regulatory-variants, comparative, footprinting]
+    doi: 10.3390/ijms241512023
+
+  - name: scTIGER
+    url: https://github.com/chenyongrowan/scTIGER
+    repo: chenyongrowan/scTIGER
+    description: A Deep-Learning Method for Inferring Gene Regulatory Networks from Case versus Control scRNA-seq Datasets
+    categories: [grn-inference, single-cell]
+    doi: 10.3390/ijms241713339
+
+  - name: AttentionGRN
+    url: https://doi.org/10.1093/bib/bbaf118
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/Phoebe-GaoZhen/AttentionGRN/tree/master but did not verify as the same software'
+    description: a functional and directed graph transformer for gene regulatory network reconstruction from scRNA-seq data
+    categories: [grn-inference]
+    doi: 10.1093/bib/bbaf118
+
+  - name: FisherMP
+    url: https://doi.org/10.1093/dnares/dsz004
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/shaoqiangzhang/fishermp but did not verify as the same software'
+    description: fully parallel algorithm for detecting combinatorial motifs from large ChIP-seq datasets
+    categories: [motif-discovery, motif-scanning]
+    doi: 10.1093/dnares/dsz004
+
+  - name: GenomicLinks
+    url: https://github.com/jlab-code/GenomicLinks
+    repo: jlab-code/GenomicLinks
+    description: deep learning predictions of 3D chromatin interactions in the maize genome
+    categories: [chromatin-3d]
+    doi: 10.1093/nargab/lqae123
+
+  - name: INSTINCT
+    url: https://github.com/yyLIU12138/INSTINCT
+    repo: yyLIU12138/INSTINCT
+    description: Multi-sample integration of spatial chromatin accessibility sequencing data via stochastic domain translation
+    categories: [single-cell]
+    doi: 10.1038/s41467-025-56535-0
+
+  - name: KDeep
+    url: https://github.com/nazanintbtb/KDeep
+    repo: nazanintbtb/KDeep
+    description: a new memory-efficient data extraction method for accurately predicting DNA/RNA transcription factor binding sites
+    categories: [tfbs-prediction]
+    doi: 10.1186/s12967-023-04593-7
+
+  - name: KEGNI
+    url: https://github.com/Lipxiao/KEGNI
+    repo: Lipxiao/KEGNI
+    description: knowledge graph enhanced framework for gene regulatory network inference
+    categories: [grn-inference]
+    doi: 10.1186/s13059-025-03780-7
+
+  - name: OrthReg
+    url: https://doi.org/10.24272/j.issn.2095-8137.2020.099
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/haibing-evo/OrthReg but did not verify as the same software'
+    description: 'a tool to predict <i>cis</i>-regulatory elements based on cross-species orthologous sequence conservation'
+    categories: [regulatory-elements, comparative]
+    doi: 10.24272/j.issn.2095-8137.2020.099
+
+  - name: chromMAGMA
+    url: https://github.com/lawrenson-lab/chromMAGMA-public
+    repo: lawrenson-lab/chromMAGMA-public
+    description: regulatory element-centric interrogation of risk variants
+    categories: [regulatory-variants, molecular-qtl]
+    doi: 10.26508/lsa.202201446
+
+  - name: Cofea
+    url: https://github.com/likeyi19/Cofea
+    repo: likeyi19/Cofea
+    description: correlation-based feature selection for single-cell chromatin accessibility data
+    categories: [single-cell, peak-calling]
+    doi: 10.1093/bib/bbad458
+
+  - name: DECA
+    url: https://doi.org/10.1093/bib/bbaf069
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/GreenleafLab/MPAL-Single-Cell-2019 but did not verify as the same software'
+    description: harnessing interpretable transformer model for cellular deconvolution of chromatin accessibility profile
+    categories: [single-cell, regulatory-variants]
+    doi: 10.1093/bib/bbaf069
+
+  - name: DeepDualEnhancer
+    url: https://doi.org/10.3390/ijms252111744
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/UPC020317/DeepDualEnhancer but did not verify as the same software'
+    description: A Dual-Feature Input DNABert Based Deep Learning Method for Enhancer Recognition
+    categories: [regulatory-elements]
+    doi: 10.3390/ijms252111744
+
+  - name: GT-GRN
+    url: https://github.com/Netralab/GT-GRN
+    repo: Netralab/GT-GRN
+    description: a graph transformer framework for enhanced gene regulatory network inference via multimodal embedding of expression data and existing network knowledge
+    categories: [grn-inference]
+    doi: 10.1093/bib/bbaf584
+
+  - name: HBI
+    url: https://github.com/YoushuCheng/HBI
+    repo: YoushuCheng/HBI
+    description: a hierarchical Bayesian interaction model to estimate cell-type-specific methylation quantitative trait loci incorporating priors from cell-sorted bisulfite sequencing data
+    categories: [molecular-qtl, dna-methylation]
+    doi: 10.1186/s13059-024-03411-7
+
+  - name: MalariaSED
+    url: https://github.com/CharleyWang/MalariaSED
+    repo: CharleyWang/MalariaSED
+    description: a deep learning framework to decipher the regulatory contributions of noncoding variants in malaria parasites
+    categories: [regulatory-variants, tfbs-prediction, chromatin-3d]
+    doi: 10.1186/s13059-023-03063-z
+
+  - name: MeinteR
+    url: https://github.com/andigoni/MeinteR
+    repo: andigoni/MeinteR
+    description: A framework to prioritize DNA methylation aberrations based on conformational and cis-regulatory element enrichment
+    categories: [dna-methylation, regulatory-variants]
+    doi: 10.1038/s41598-019-55453-8
+
+  - name: MINGLE
+    url: https://github.com/BioX-NKU/MINGLE
+    repo: BioX-NKU/MINGLE
+    description: a mutual information-based interpretable framework for automatic cell type annotation in single-cell chromatin accessibility data
+    categories: [single-cell]
+    doi: 10.1186/s13059-025-03603-9
+
+  - name: PEAKQC
+    url: https://github.com/loosolab/PEAKQC
+    repo: loosolab/PEAKQC
+    description: periodicity evaluation in single-cell ATAC-seq data for quality assessment
+    categories: [single-cell, peak-calling]
+    doi: 10.1093/bib/bbaf465
+
+  - name: scEpiLock
+    url: https://github.com/aicb-ZhangLabs/scEpiLock
+    repo: aicb-ZhangLabs/scEpiLock
+    description: 'A Weakly Supervised Learning Framework for <i>cis</i>-Regulatory Element Localization and Variant Impact Quantification for Single-Cell Epigenetic Data'
+    categories: [peak-calling, regulatory-variants, single-cell]
+    doi: 10.3390/biom12070874
+
+  - name: SnapHiC-G
+    url: https://github.com/wjzhong/SnapHiC-G
+    repo: wjzhong/SnapHiC-G
+    description: identifying long-range enhancer-promoter interactions from single-cell Hi-C data via a global background model
+    categories: [chromatin-3d]
+    doi: 10.1093/bib/bbae426
+
+  - name: ChIPbinner
+    url: https://doi.org/10.1186/s12859-025-06103-6
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/padilr1/ChIPbinner_database but did not verify as the same software'
+    description: 'an R package for analyzing broad histone marks binned in uniform windows from ChIP-Seq or CUT&amp;RUN/TAG data'
+    categories: [histone-marks, peak-annotation]
+    doi: 10.1186/s12859-025-06103-6
+
+  - name: CLAMP
+    url: https://github.com/chikit2077/CLAMP-paper
+    repo: chikit2077/CLAMP-paper
+    description: predicting specific protein-mediated chromatin loops in diverse species with a chromatin accessibility language model
+    categories: [chromatin-3d]
+    doi: 10.1186/s13059-026-03948-9
+
+  - name: coiTAD
+    url: https://github.com/OluwadareLab/coiTAD
+    repo: OluwadareLab/coiTAD
+    description: Detection of Topologically Associating Domains Based on Clustering of Circular Influence Features from Hi-C Data
+    categories: [chromatin-3d]
+    doi: 10.3390/genes15101293
+
+  - name: GRANet
+    url: https://github.com/HaoWuLab-Bioinformatics/GRANet
+    repo: HaoWuLab-Bioinformatics/GRANet
+    description: a graph residual attention network for gene regulatory network inference
+    categories: [grn-inference, single-cell]
+    doi: 10.1093/bib/bbaf349
+
+  - name: HiCORE
+    url: https://github.com/CDL-HongwooLee/HiCORE
+    repo: CDL-HongwooLee/HiCORE
+    description: Hi-C Analysis for Identification of Core Chromatin Looping Regions with Higher Resolution
+    categories: [chromatin-3d]
+    doi: 10.14348/molcells.2021.0014
+
+  - name: scIBD
+    url: https://github.com/Ying-Lab/scIBD
+    repo: Ying-Lab/scIBD
+    description: a self-supervised iterative-optimizing model for boosting the detection of heterotypic doublets in single-cell chromatin accessibility data
+    categories: [single-cell]
+    doi: 10.1186/s13059-023-03072-y
+
+  - name: VAliBS
+    url: https://doi.org/10.1186/s12859-017-1827-1
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/wwwyxder/valibs but did not verify as the same software'
+    description: a visual aligner for bisulfite sequences
+    categories: [dna-methylation]
+    doi: 10.1186/s12859-017-1827-1
+
+  - name: DARDN
+    url: https://github.com/berkuva/DARDN
+    repo: berkuva/DARDN
+    description: A Deep-Learning Approach for CTCF Binding Sequence Classification and Oncogenic Regulatory Feature Discovery
+    categories: [motif-discovery, tfbs-prediction]
+    doi: 10.3390/genes15020144
+
+  - name: DeepEnhancerPPO
+    url: https://github.com/Mxc666/DeepEnhancerPPO.git
+    repo: Mxc666/DeepEnhancerPPO
+    description: An Interpretable Deep Learning Approach for Enhancer Classification
+    categories: [regulatory-elements]
+    doi: 10.3390/ijms252312942
+
+  - name: ENT3C
+    url: https://github.com/X3N1A/ENT3C
+    repo: X3N1A/ENT3C
+    description: an entropy-based similarity measure for Hi-C and micro-C derived contact matrices
+    categories: [chromatin-3d]
+    doi: 10.1093/nargab/lqae076
+
+  - name: GNNMF
+    url: https://github.com/zhangsq06/GNNMF.git
+    repo: zhangsq06/GNNMF
+    description: a multi-view graph neural network for ATAC-seq motif finding
+    categories: [motif-discovery, tfbs-prediction]
+    doi: 10.1186/s12864-024-10218-0
+
+  - name: HyGAnno
+    url: https://github.com/WeihangZJP/HyGAnno
+    repo: WeihangZJP/HyGAnno
+    description: hybrid graph neural network-based cell type annotation for single-cell ATAC sequencing data
+    categories: [single-cell]
+    doi: 10.1093/bib/bbae152
+
+  - name: iComBat
+    url: https://github.com/t-yui/iComBat
+    repo: t-yui/iComBat
+    description: An incremental framework for batch effect correction in DNA methylation array data
+    categories: [dna-methylation]
+    doi: 10.1016/j.csbj.2025.09.014
+
+  - name: KansformerEPI
+    url: https://github.com/shaohongyihhh/KansformerEPI
+    repo: shaohongyihhh/KansformerEPI
+    description: a deep learning framework integrating KAN and transformer for predicting enhancer-promoter interactions
+    categories: [chromatin-3d]
+    doi: 10.1093/bib/bbaf272
+
+  - name: LOGOWheat
+    url: https://github.com/mrklp/LOGOWheat
+    repo: mrklp/LOGOWheat
+    description: deep learning-based prediction of regulatory effects for noncoding variants in wheats
+    categories: [regulatory-variants, motif-discovery]
+    doi: 10.1093/bib/bbae705
+
+  - name: PorcineAI-Enhancer
+    url: https://github.com/castwj/PorcineAI-enhancer
+    repo: castwj/PorcineAI-enhancer
+    description: Prediction of Pig Enhancer Sequences Using Convolutional Neural Networks
+    categories: [regulatory-elements]
+    doi: 10.3390/ani13182935
+
+  - name: RobusTAD
+    url: https://github.com/zhyanlin/RobusTAD
+    repo: zhyanlin/RobusTAD
+    description: reference panel based annotation of nested topologically associating domains
+    categories: [chromatin-3d]
+    doi: 10.1186/s13059-025-03568-9
+
+  - name: scRegulate
+    url: http://github.com/YDaiLab/scRegulate
+    repo: YDaiLab/scRegulate
+    description: single-cell regulatory-embedded variational inference of transcription factor activity from gene expression
+    categories: [grn-inference, single-cell]
+    doi: 10.1093/bioinformatics/btaf638
+
+  - name: UniversalEPI
+    url: https://github.com/BoevaLab/UniversalEPI
+    repo: BoevaLab/UniversalEPI
+    description: robust prediction of cell type-specific and differential chromatin interactions from DNA sequence and chromatin accessibility
+    categories: [chromatin-3d]
+    doi: 10.1093/nar/gkag485
+
+  - name: BestCRM
+    url: https://github.com/Deyneko/BestCRM
+    repo: Deyneko/BestCRM
+    description: An Exhaustive Search for Optimal Cis-Regulatory Modules in Promoters Accelerated by the Multidimensional Hash Function
+    categories: [motif-discovery, regulatory-elements]
+    doi: 10.3390/ijms25031903
+
+  - name: C2c
+    url: https://github.com/zwang-bioinformatics/C2c
+    repo: zwang-bioinformatics/C2c
+    description: Predicting Micro-C from Hi-C
+    categories: [chromatin-3d]
+    doi: 10.3390/genes15060673
+
+  - name: CellPolaris
+    url: https://doi.org/10.1002/advs.202508697
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/xCompass-AI/CellPolaris but did not verify as the same software'
+    description: Transfer Learning for Gene Regulatory Network Construction to Guide Cell State Transitions
+    categories: [grn-inference, single-cell]
+    doi: 10.1002/advs.202508697
+
+  - name: ceQTL
+    url: https://doi.org/10.1093/bib/bbag258
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/pwwang/ceQTL but did not verify as the same software'
+    description: a co-expression QTL model to detect a variant that affects transcription factor binding and its target regulation
+    categories: [molecular-qtl, regulatory-variants]
+    doi: 10.1093/bib/bbag258
+
+  - name: COPAR
+    url: https://github.com/gladex/COPAR
+    repo: gladex/COPAR
+    description: A ChIP-Seq Optimal Peak Analyzer
+    categories: [peak-calling]
+    doi: 10.1155/2017/5346793
+
+  - name: CRAK-Velo
+    url: https://github.com/StatBiomed/CRAK-Velo.git
+    repo: StatBiomed/CRAK-Velo
+    description: chromatin accessibility kinetics integration improves RNA velocity estimation
+    categories: [single-cell]
+    doi: 10.1186/s13059-026-04086-y
+
+  - name: CrossMP
+    url: https://github.com/tang27abu/CrossMP
+    repo: tang27abu/CrossMP
+    description: Enabling Cross-Modality Translation between Single-Cell RNA-Seq and Single-Cell ATAC-Seq through Web-Based Portal
+    categories: [single-cell]
+    doi: 10.3390/genes15070882
+
+  - name: DcSE
+    url: https://doi.org/10.1186/s12864-026-12768-x
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/zhangao-clude/DcSE but did not verify as the same software'
+    description: an improved densenet with enhanced attention fusion for super-enhancer prediction
+    categories: [regulatory-elements]
+    doi: 10.1186/s12864-026-12768-x
+
+  - name: EPINTLM
+    url: https://github.com/langiocn/EPINTLM
+    repo: langiocn/EPINTLM
+    description: enhancer-promoter prediction with pretrained k-mer embeddings and residual cross-attention
+    categories: [regulatory-elements, chromatin-3d]
+    doi: 10.1093/bib/bbag064
+
+  - name: EpiXFormer
+    url: https://doi.org/10.1093/bib/bbaf721
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/Zer0o0/epixformer but did not verify as the same software'
+    description: a cross-attention neural network for predicting cell type-specific transcription factor binding sites
+    categories: [tfbs-prediction]
+    doi: 10.1093/bib/bbaf721
+
+  - name: FastGxC
+    url: https://github.com/BalliuLab/FastGxC
+    repo: BalliuLab/FastGxC
+    description: Fast and powerful context-specific eQTL mapping in bulk and single-cell data
+    categories: [molecular-qtl]
+    doi: 10.1016/j.xgen.2026.101250
+
+  - name: HBCR_DMR
+    url: https://doi.org/10.3390/jpm14040361
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/Genetics-Research-Laboratory-RROC/HBCR-DMR but did not verify as the same software'
+    description: A Hybrid Method Based on Beta-Binomial Bayesian Hierarchical Model and Combination of Ranking Method to Detect Differential Methylation Regions in Bisulfite Sequencing Data
+    categories: [dna-methylation]
+    doi: 10.3390/jpm14040361
+
+  - name: HERON
+    url: https://github.com/maciosz/HERON
+    repo: maciosz/HERON
+    description: 'A Novel Tool Enables Identification of Long, Weakly Enriched Genomic Domains in ChIP-seq Data'
+    categories: [peak-calling]
+    doi: 10.3390/ijms22158123
+
+  - name: HGATLink
+    url: https://github.com/aniani6aa/HGATLink
+    repo: aniani6aa/HGATLink
+    description: single-cell gene regulatory network inference via the fusion of heterogeneous graph attention networks and transformer
+    categories: [grn-inference, single-cell]
+    doi: 10.1186/s12859-025-06071-x
+
+  - name: InCURA
+    url: https://doi.org/10.1093/nar/gkaf1377
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/SinghalLab/incura_app but did not verify as the same software'
+    description: integrative gene clustering based on transcription factor binding sites
+    categories: [motif-scanning, grn-inference]
+    doi: 10.1093/nar/gkaf1377
+
+  - name: LORSEN
+    url: https://doi.org/10.3389/fgene.2021.690926
+    tags: [no-software-url]
+    note: 'a repository named for this tool exists at https://github.com/gaochengPRC/LORSEN but did not verify as the same software'
+    description: Fast and Efficient eQTL Mapping With Low Rank Penalized Regression
+    categories: [molecular-qtl]
+    doi: 10.3389/fgene.2021.690926
+
+  - name: MESIA
+    url: https://github.com/ERASMUSlab/MESIA
+    repo: ERASMUSlab/MESIA
+    description: multi-epigenome sample integration approach for precise peak calling
+    categories: [peak-calling]
+    doi: 10.1038/s41598-023-47948-2
+
+  - name: Neur-Ally
+    url: https://github.com/anilprakash94/neur_ally
+    repo: anilprakash94/neur_ally
+    description: a deep learning model for regulatory variant prediction based on genomic and epigenomic features in brain and its validation in certain neurological disorders
+    categories: [regulatory-variants, tfbs-prediction]
+    doi: 10.1093/nargab/lqaf080
+
+  - name: NyxBind
+    url: https://github.com/ai4nucleome/NyxBind
+    repo: ai4nucleome/NyxBind
+    description: enhancing deep neural representations for transcription factor binding site prediction via contrastive learning
+    categories: [tfbs-prediction]
+    doi: 10.1093/bib/bbag182
+
+  - name: PSGRN
+    url: https://github.com/GuanLab/PSGRN
+    repo: GuanLab/PSGRN
+    description: Gene regulatory network inference from single-cell perturbational data through self-training with synthetic gold standards
+    categories: [grn-inference, single-cell]
+    doi: 10.1126/sciadv.aeb3376
+
+  - name: scCNMF
+    url: https://github.com/Jinsl-lab/scCNMF
+    repo: Jinsl-lab/scCNMF
+    description: an integrated analysis model for paired single-cell RNA sequencing and assay for transposase-accessible chromatin sequencing data leveraging cell similarity and cis-regulatory potential
+    categories: [single-cell, grn-inference]
+    doi: 10.7717/peerj.20836
+
+  - name: SIGRN
+    url: https://github.com/lryup/SIGRN
+    repo: lryup/SIGRN
+    description: Inferring Gene Regulatory Network with Soft Introspective Variational Autoencoders
+    categories: [grn-inference]
+    doi: 10.3390/ijms252312741
+
+  - name: SNPs2ChIP
+    url: https://github.com/lkalesinskas/SNPs2ChIP
+    repo: lkalesinskas/SNPs2ChIP
+    description: Latent Factors of ChIP-seq to infer functions of non-coding SNPs
+    categories: [regulatory-variants]
+    doi: 10.1142/9789813279827_0017
+
+  - name: TDAGENE
+    url: https://github.com/TDAGENE/TDAGENE
+    repo: TDAGENE/TDAGENE
+    description: Inference of Gene Regulatory Network Based on Topological Data Analysis and Graph Attention Network for Single-Cell RNA Sequencing Data
+    categories: [grn-inference]
+    doi: 10.34133/csbj.0080
+
+  - name: TF-loop
+    url: https://github.com/CatonTree1024/TF-loop
+    repo: CatonTree1024/TF-loop
+    description: deciphering the transcription factor regulatory language for CTCF-mediated chromatin loop based on BERT
+    categories: [chromatin-3d, tfbs-prediction]
+    doi: 10.1093/bib/bbag162
+
+  - name: UniChrom
+    url: https://github.com/shuaibinw/UniChrom
+    repo: shuaibinw/UniChrom
+    description: a universal deep learning architecture for cross-scale chromatin interaction prediction
+    categories: [chromatin-3d]
+    doi: 10.1186/s12864-026-12625-x
+

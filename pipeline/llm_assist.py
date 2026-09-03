@@ -257,6 +257,18 @@ shares vocabulary like "motif", "peak", "binding" or "regulatory".
 A DNA-binding protein predictor IS in scope. A protein-ligand binding site predictor is NOT. \
 A tool for RNA modification sites is NOT, even though it says "modification site prediction".
 
+LEAN TOWARDS INCLUSION. This catalog is deliberately inclusive: a tool that does any of the \
+work above is an obvious keep, and so is one whose own subject sits outside the taxonomy but \
+which CAN be used in these analyses. Preprocessing, quality control, normalisation, \
+visualisation and format conversion for regulatory data all count - a ChIP-seq peak quality \
+assessor is in scope even though "quality assessment" names no category. Only exclude where \
+the overlap is genuinely tenuous or tangential: the tool would have to be bent out of shape \
+to serve a regulatory-genomics question, or its only connection is shared vocabulary. When you \
+can construct a realistic use of the tool in one of the analyses above, that is enough.
+
+The named OUT-of-scope list above still holds. Being inclusive means resolving genuine \
+ambiguity towards keeping, not admitting proteomics because a protein is involved.
+
 Reply with JSON only:
 {{"in_scope": true, "confidence": "high|medium|low", "reason": "one short clause"}}"""
 
