@@ -224,6 +224,13 @@ themeBtn.onclick = () => {
 
 const $ = id => document.getElementById(id);
 const state = { q:'', cats:new Set(), type:'', lang:'', activity:'', avail:'', col:{}, sort:'citations', dir:-1 };
+// A tool's citations are the sum over the publications verified as its own
+// work, not just the one we call primary. MEME Suite is 11,588 on its primary
+// paper and 20,363 across seven; JASPAR 2,171 against 11,177 across nine.
+// Only 36 entries have a verified multi-paper total, and for every other tool
+// this is simply its single count - so the ordering is right where we have
+// evidence and unchanged where we do not.
+const citesOf = t => t.cites_total || t.citations || 0;
 let visible = [];
 
 const params = new URLSearchParams(location.search);
@@ -324,6 +331,10 @@ const matches = t => {
 const cmp = (a,b) => {
   const k = state.sort;
   let x = a[k], y = b[k];
+  // Citations sort on the inclusive figure, so a tool with several verified
+  // papers is ranked by all of them rather than by whichever one we happened
+  // to call primary.
+  if (k === 'citations') { x = citesOf(a); y = citesOf(b); }
   if (k === 'categories') { x = x.join(); y = y.join(); }
   if (x === null || x === undefined || x === '') return 1;
   if (y === null || y === undefined || y === '') return -1;
@@ -621,8 +632,10 @@ function render(){
       : (t.cite_note ? '<span class="why" title="'+esc(t.cite_note)+'">' + dash + '</span>' : '');
     if (t.citations && t.cites_total && t.cites_papers) {
       citesCell += '<span class="agg" title="Total across the '
-        + t.cites_papers + ' publications verified as this tool own work. '
-        + 'Not used for sorting, because the rest of the catalog carries single-paper counts.">'
+        + t.cites_papers + ' publications verified as this tool own work, '
+        + 'and the figure this table sorts on. Tools without a verified total sort '
+        + 'on their single count, which may understate a tool whose other papers '
+        + 'were never confirmed as its own.">'
         + t.cites_total.toLocaleString() + ' / ' + t.cites_papers + 'p</span>';
     }
     const cats = t.categories.map(c=>'<span class="cat">'+esc(catLabel[c]||c)+'</span>').join('') +
@@ -731,7 +744,7 @@ const DL_COLS = [
   ['language',    t => t.repo_language],
   ['license',     t => t.repo_license],
   ['install',     t => (t.reg_names || []).join('; ')],
-  ['citations',   t => t.citations],
+  ['citations',   t => t.cites_total || t.citations],
   ['citations_verified_total',  t => t.cites_total],
   ['citations_verified_papers', t => t.cites_papers],
   ['citations_note', t => t.cite_note],
