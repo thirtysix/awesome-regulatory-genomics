@@ -8,11 +8,18 @@ decisions cite agreement between V4-Flash and V3.1-Terminus, and Terminus is a
 silent alias for V4-Flash, so that agreement never happened.
 """
 import sys, os, json, gzip, yaml, pathlib
+
+ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, "pipeline")
 from llm_assist import SCOPE_AUDIT_SYSTEM, call, parse_json, paper_context
 
-SP = "/tmp/claude-1000/-home-harl-Dropbox-manuscripts-000-dissertation/c784b26e-f6a9-42a5-8654-fdc7719f8789/scratchpad"
-STATE = pathlib.Path(f"{SP}/reaudit_state.json")
+# Working directory for the audit state, so a long run resumes. Never a
+# hardcoded absolute path: this file is committed to a public repository and an
+# author's home directory layout is nobody else's business.
+SP = os.environ.get("REAUDIT_DIR") or str(ROOT / "data" / "cache" / "reaudit")
+ROOT_DIR = pathlib.Path(SP)
+ROOT_DIR.mkdir(parents=True, exist_ok=True)
+STATE = ROOT_DIR / "reaudit_state.json"
 key = os.environ.get("DEEPINFRA_API_KEY") or os.environ.get("DEEPINFRA_TOKEN")
 BULK, SECOND = "deepseek-ai/DeepSeek-V4-Flash", "zai-org/GLM-5"
 
