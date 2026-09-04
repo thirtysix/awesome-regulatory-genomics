@@ -376,6 +376,38 @@ def primary_identifier(tool: dict, pubmap: dict[str, str] | None = None) -> str:
     return candidates[0] if candidates else ""
 
 
+# Registry prefixes bio.tools puts on auto-imported records. A package can be
+# registered twice - once by hand as "chromscape", once by an importer as
+# "bioconductor-chromscape" - and both are real records that a query reaches.
+REGISTRY_PREFIXES = ("bioconductor-", "bioconda-", "galaxy-", "pypi-", "cran-")
+
+
+def registry_key(biotools_id: str) -> str:
+    """The id with an import prefix removed, for spotting double registrations.
+
+    Deliberately does NOT normalise separators. "to_ast" and "TOAST" are two
+    different tools - a Hi-C TAD caller and a methylation deconvolution package
+    - that would collapse into one if underscores were stripped, and the same
+    goes for "tenet-network" against "bioconductor-tenet". Matching on the id
+    keeps this to records that are demonstrably the same registration; a shared
+    NAME is not evidence of that and is never treated as such.
+    """
+    low = biotools_id.lower()
+    for prefix in REGISTRY_PREFIXES:
+        if low.startswith(prefix):
+            return low[len(prefix):]
+    return low
+
+
+def _completeness(row: dict) -> tuple:
+    """How much a built row actually carries, for picking between duplicates."""
+    return (bool(row.get("doi") or row.get("pmid")),
+            bool(row.get("repo")),
+            bool(row.get("url")),
+            len(row.get("categories") or []),
+            len(row.get("description") or ""))
+
+
 def norm_name(name: str) -> str:
     """Loose name key, so a seed does not duplicate a bio.tools record.
 
@@ -641,6 +673,7 @@ def main() -> None:
 
     rows = []
     seen_names: dict[str, str] = {}
+    seen_registry: dict[str, int] = {}
 
     # Hand-vetted records are immune to the automated scope drop. A record that
     # someone deliberately featured, or added to SEED_BIOTOOLS_IDS because no
@@ -669,6 +702,22 @@ def main() -> None:
             continue
         if bid in llm_out_of_scope and bid not in protected:
             continue
+        key = registry_key(bid)
+        twin = seen_registry.get(key)
+        if twin is not None and norm_name(tool["name"]) == norm_name(rows[twin]["name"]):
+            # Same package registered twice upstream. Keep whichever record
+            # carries more, so the catalog does not lose a homepage or a paper
+            # to an auto-import that had neither.
+            incoming = from_biotools(tool, cites, shared, pubmap, repomap)
+            if _completeness(incoming) > _completeness(rows[twin]):
+                loser, rows[twin] = rows[twin], incoming
+            else:
+                loser = incoming
+            loser["_excluded_reason"] = (
+                f"duplicate bio.tools registration of {rows[twin]['id']}")
+            dropped.append(loser)
+            continue
+        seen_registry[key] = len(rows)
         rows.append(from_biotools(tool, cites, shared, pubmap, repomap))
         seen_names[norm_name(tool["name"])] = bid
 

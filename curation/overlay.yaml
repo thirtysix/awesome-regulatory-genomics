@@ -279,6 +279,8 @@ exclude:
   weblogo_3: Duplicate bio.tools record for WebLogo
   meme_fimo: Duplicate of the MEME Suite / FIMO entries
   bioconductor-methylclock: Duplicate bio.tools record for methylclock, which is already in the catalog under that id
+  pgltools-chromatin: Duplicate bio.tools record for pgltools; the suffix is not a
+    registry prefix, so the id rule in build.py cannot see it
 
   # --- 2026-09-04. Kept by both audit models on the registry-gap batch, each on
   # the grounds that regulatory analyses USE the tool rather than that the tool
