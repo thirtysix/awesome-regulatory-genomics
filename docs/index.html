@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Awesome Regulatory Genomics: catalog</title>
-<meta name="description" content="Searchable catalog of 2954 tools for transcription-factor binding, sequence motifs, regulatory elements, chromatin and gene-regulatory networks.">
+<meta name="description" content="Searchable catalog of 2951 tools for transcription-factor binding, sequence motifs, regulatory elements, chromatin and gene-regulatory networks.">
 <style>
 :root{
   --bg:#ffffff; --fg:#1a1d21; --muted:#5c6570; --line:#e3e6ea; --accent:#1b6ac9;
@@ -120,8 +120,8 @@ a.theme:hover{border-color:var(--accent);color:var(--accent);text-decoration:non
 <header>
   <div class="wrap">
     <h1><a href="https://github.com/thirtysix/awesome-regulatory-genomics">Awesome Regulatory Genomics</a></h1>
-    <div class="sub">2954 tools for transcription-factor binding, motifs, regulatory
-      elements, chromatin and gene-regulatory networks · updated 2026-09-03</div>
+    <div class="sub">2951 tools for transcription-factor binding, motifs, regulatory
+      elements, chromatin and gene-regulatory networks · updated 2026-09-04</div>
     <div class="controls">
       <input type="search" id="q" placeholder="Search name, description, category, language…" autocomplete="off">
       <select id="type"><option value="">Any tool type</option></select>
@@ -349,7 +349,7 @@ const reportUrl = t => REPORT + '?template=wrong-repository.yml&title='
 // The catalog's own build year, substituted at render time, so a rate computed
 // from it matches the citation counts as of that build rather than the viewer's
 // clock.
-const BUILD_YEAR = parseInt('2026-09-03'.slice(0, 4), 10);
+const BUILD_YEAR = parseInt('2026-09-04'.slice(0, 4), 10);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const catLabel = Object.fromEntries(CATS);
 

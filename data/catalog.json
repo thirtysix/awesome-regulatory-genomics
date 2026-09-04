@@ -1,14 +1,14 @@
 {
  "meta": {
-  "generated": "2026-09-03",
-  "count": 2954,
-  "from_biotools": 2179,
+  "generated": "2026-09-04",
+  "count": 2951,
+  "from_biotools": 2176,
   "curated_seeds": 775,
   "featured": 18,
-  "with_repo": 1440,
+  "with_repo": 1438,
   "repo_recovered": 51,
   "repo_by_origin": {
-   "recorded": 1128,
+   "recorded": 1126,
    "inferred": 47,
    "curated": 265
   },
@@ -16,75 +16,6 @@
   "llm_scope_dropped": 130
  },
  "tools": [
-  {
-   "id": "bowtie2",
-   "name": "Bowtie 2",
-   "description": "Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences",
-   "categories": [],
-   "tier": "core",
-   "homepage": "http://bowtie-bio.sourceforge.net/bowtie2/index.shtml",
-   "repo_url": "https://github.com/BenLangmead/bowtie2",
-   "repo_origin": "recorded",
-   "repo_stars": 811,
-   "repo_pushed": "2026-06-01",
-   "repo_archived": false,
-   "repo_language": "C++",
-   "repo_license": "GPL-3.0",
-   "tool_type": [
-    "Command-line tool"
-   ],
-   "topics": [
-    "Mapping",
-    "Genomics",
-    "Mapping"
-   ],
-   "languages": [
-    "C++"
-   ],
-   "license": "GPL-3.0",
-   "maturity": "Mature",
-   "cost": "",
-   "citations": 62401,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2012",
-   "publication": "pmid:22388286",
-   "publication_is_preprint": false,
-   "biotools_id": "bowtie2",
-   "biotools_url": "https://bio.tools/bowtie2",
-   "last_update": "2024-11-24",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Read mapping"
-   ],
-   "_select_reason": "curated: fetched by ID",
-   "_identifiers": [
-    "pmid:22388286",
-    "pmid:23758764",
-    "pmid:28286147",
-    "pmid:24708189",
-    "pmid:24626854",
-    "doi:10.7490/f1000research.1114334.1"
-   ],
-   "_registries": {
-    "conda": "https://anaconda.org/bioconda/bowtie2"
-   },
-   "featured": "",
-   "primary_category": "uncategorised",
-   "homepage_status": "",
-   "repo_status": "",
-   "publication_title": "",
-   "publication_venue": "",
-   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/22388286/",
-   "pmid": "22388286",
-   "doi": "",
-   "citations_recent": null,
-   "citations_recent_year": "",
-   "license_source": "declared",
-   "registries": "conda"
-  },
   {
    "id": "macs",
    "name": "MACS",
@@ -81146,68 +81077,6 @@
    "citations_recent": null,
    "citations_recent_year": "",
    "license_source": "",
-   "registries": ""
-  },
-  {
-   "id": "genomedata",
-   "name": "Genomedata",
-   "description": "Genomedata is a format for efficient storage of multiple tracks of numeric data anchored to a genome",
-   "categories": [],
-   "tier": "core",
-   "homepage": "http://noble.gs.washington.edu/proj/genomedata/",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Library"
-   ],
-   "topics": [
-    "Data management",
-    "Sequence analysis"
-   ],
-   "languages": [
-    "Python",
-    "C"
-   ],
-   "license": "GPL-3.0",
-   "maturity": "Mature",
-   "cost": "",
-   "citations": 23,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2010",
-   "publication": "pmid:20435580",
-   "publication_is_preprint": false,
-   "biotools_id": "genomedata",
-   "biotools_url": "https://bio.tools/genomedata",
-   "last_update": "2024-11-24",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Nucleic acid sequence analysis"
-   ],
-   "_select_reason": "curated: fetched by ID",
-   "_identifiers": [
-    "pmid:20435580"
-   ],
-   "_registries": {},
-   "featured": "",
-   "primary_category": "uncategorised",
-   "homepage_status": "",
-   "repo_status": "",
-   "publication_title": "",
-   "publication_venue": "",
-   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/20435580/",
-   "pmid": "20435580",
-   "doi": "",
-   "citations_recent": null,
-   "citations_recent_year": "",
-   "license_source": "declared",
    "registries": ""
   },
   {
@@ -183060,65 +182929,6 @@
    "citations_recent_year": "",
    "license_source": "",
    "registries": ""
-  },
-  {
-   "id": "bioconductor-metapod",
-   "name": "metapod",
-   "description": "Implements a variety of methods for combining p-values in differential analyses of genome-scale datasets",
-   "categories": [],
-   "tier": "core",
-   "homepage": "https://bioconductor.org/packages/metapod",
-   "repo_url": "https://github.com/LTLA/metapod",
-   "repo_origin": "recorded",
-   "repo_stars": 2,
-   "repo_pushed": "2026-02-17",
-   "repo_archived": false,
-   "repo_language": "R",
-   "repo_license": "",
-   "tool_type": [
-    "Library",
-    "Command-line tool"
-   ],
-   "topics": [],
-   "languages": [
-    "R"
-   ],
-   "license": "GPL-3.0",
-   "maturity": "",
-   "cost": "",
-   "citations": null,
-   "citation_note": "publication not indexed by OpenAlex",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "",
-   "publication": "doi:10.18129/B9.bioc.metapod",
-   "publication_is_preprint": false,
-   "biotools_id": "bioconductor-metapod",
-   "biotools_url": "https://bio.tools/bioconductor-metapod",
-   "last_update": "2026-09-01",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [],
-   "_select_reason": "curated: fetched by ID",
-   "_identifiers": [
-    "doi:10.18129/B9.bioc.metapod"
-   ],
-   "_registries": {
-    "bioconductor": "https://bioconductor.org/packages/metapod"
-   },
-   "featured": "",
-   "primary_category": "uncategorised",
-   "homepage_status": "",
-   "repo_status": "",
-   "publication_title": "",
-   "publication_venue": "",
-   "publication_url": "https://doi.org/10.18129/B9.bioc.metapod",
-   "pmid": "",
-   "doi": "10.18129/B9.bioc.metapod",
-   "citations_recent": null,
-   "citations_recent_year": "",
-   "license_source": "declared",
-   "registries": "bioconductor"
   },
   {
    "id": "MetArea",
