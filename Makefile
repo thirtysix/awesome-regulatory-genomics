@@ -76,6 +76,12 @@ fill-metadata:
 audit:
 	$(PIPELINE)/audit_coverage.py --probe
 
+## check the sweep asks for what the filter admits. Offline, no API key. The
+## two lists are maintained separately and drift silently: a term the filter
+## accepts but no query fetches costs recall with nothing to show for it.
+check-queries:
+	$(PIPELINE)/check_query_coverage.py --strict
+
 ## find in-domain tools bio.tools does not index, from registries that carry
 ## their own domain taxonomy. Writes docs/registry-discovery.md for review;
 ## nothing is added to the catalog automatically. Cached, so re-runs are

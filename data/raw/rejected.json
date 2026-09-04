@@ -1,5 +1,5 @@
 {
- "count": 1636,
+ "count": 1682,
  "list": [
   {
    "biotoolsID": "imimic_iint",
@@ -847,15 +847,6 @@
    ]
   },
   {
-   "biotoolsID": "pindel",
-   "name": "Pindel",
-   "reason": "weak-operation, no corroboration",
-   "description": "A pattern growth approach to detect break points of large deletions and medium sized insertions from paired end short reads.",
-   "operations": [
-    "Sequence motif recognition"
-   ]
-  },
-  {
    "biotoolsID": "RRMdb",
    "name": "RRMdb",
    "reason": "weak-operation, no corroboration",
@@ -863,6 +854,15 @@
    "operations": [
     "Fold recognition",
     "Protein domain recognition",
+    "Sequence motif recognition"
+   ]
+  },
+  {
+   "biotoolsID": "pindel",
+   "name": "Pindel",
+   "reason": "weak-operation, no corroboration",
+   "description": "A pattern growth approach to detect break points of large deletions and medium sized insertions from paired end short reads.",
+   "operations": [
     "Sequence motif recognition"
    ]
   },
@@ -1140,6 +1140,15 @@
    ]
   },
   {
+   "biotoolsID": "motifstack",
+   "name": "motifStack",
+   "reason": "hard-excluded:\\bamino[- ]acid (motif|pattern",
+   "description": "The motifStack package is designed for graphic representation of multiple motifs with different similarity scores. It works with both DNA/RNA sequence motif and amino acid sequence motif. In addition,",
+   "operations": [
+    "Sequence motif comparison"
+   ]
+  },
+  {
    "biotoolsID": "gravity-v2",
    "name": "GRAViTy-V2",
    "reason": "hard-excluded:\\bviral taxonom",
@@ -1148,15 +1157,6 @@
     "Genome assembly",
     "Sequence motif comparison",
     "Taxonomic classification"
-   ]
-  },
-  {
-   "biotoolsID": "motifstack",
-   "name": "motifStack",
-   "reason": "hard-excluded:\\bamino[- ]acid (motif|pattern",
-   "description": "This package is designed for graphic representation of multiple motifs with different similarity scores. It works with both DNA/RNA sequence motif and amino acid sequence motif. In addition, it provid",
-   "operations": [
-    "Sequence motif comparison"
    ]
   },
   {
@@ -1182,6 +1182,17 @@
    "description": "FACETS is an ASCN tool and open-source software with a broad application to whole genome, whole-exome, as well as targeted panel sequencing platforms.",
    "operations": [
     "Sequence motif comparison"
+   ]
+  },
+  {
+   "biotoolsID": "g4snvhunter",
+   "name": "G4SNVHunter",
+   "reason": "hard-excluded:\\bG-?quadruplex|\\bQGRS\\b",
+   "description": "G-quadruplexes (G4s) are unique nucleic acid secondary structures predominantly found in guanine-rich regions and have been shown to be involved in various biological regulatory processes. G4SNVHunter",
+   "operations": [
+    "Nucleic acid structure analysis",
+    "Sequence motif analysis",
+    "Variant calling"
    ]
   },
   {
@@ -1236,6 +1247,17 @@
     "PCR primer design",
     "Sequence assembly",
     "Sequence motif analysis"
+   ]
+  },
+  {
+   "biotoolsID": "bindingsitefinder",
+   "name": "BindingSiteFinder",
+   "reason": "hard-excluded:\\bRNA[- ]binding protein|\\bRBP",
+   "description": "Precise knowledge on the binding sites of an RNA-binding protein (RBP) is key to understand (post-) transcriptional regulatory processes. Here we present a workflow that describes how exact binding si",
+   "operations": [
+    "RNA binding site prediction",
+    "RNA-binding protein prediction",
+    "Transcription factor binding site prediction"
    ]
   },
   {
@@ -1732,6 +1754,17 @@
    ]
   },
   {
+   "biotoolsID": "tress",
+   "name": "TRESS",
+   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
+   "description": "This package is devoted to analyzing MeRIP-seq data. Current functionalities include 1. detect transcriptome wide m6A methylation regions 2. detect transcriptome wide differential m6A methylation regi",
+   "operations": [
+    "Gene expression profiling",
+    "Methylation calling",
+    "Peak calling"
+   ]
+  },
+  {
    "biotoolsID": "bindcompare",
    "name": "BindCompare",
    "reason": "hard-excluded:\\bRNA[- ]binding protein|\\bRBP",
@@ -1750,17 +1783,6 @@
    "reason": "hard-excluded:\\bmass spectrometr|\\bLC-MS\\b|\\",
    "description": "Flow Injection Analysis coupled to High-Resolution Mass Spectrometry is a promising approach for high-throughput metabolomics. FIA-HRMS data, however, cannot be pre-processed with current software too",
    "operations": [
-    "Peak calling"
-   ]
-  },
-  {
-   "biotoolsID": "tress",
-   "name": "TRESS",
-   "reason": "excluded:\\bepitranscriptom|\\bRNA methylat",
-   "description": "TRESS is a tool for detecting m6A methylation regions from Methylated RNA Immunoprecipitation Sequencing.",
-   "operations": [
-    "Gene expression profiling",
-    "Methylation calling",
     "Peak calling"
    ]
   },
@@ -1876,7 +1898,7 @@
    "biotoolsID": "pqsfinder",
    "name": "pqsfinder",
    "reason": "hard-excluded:\\bG-?quadruplex|\\bQGRS\\b",
-   "description": "The main functionality of the this package is to detect DNA sequence patterns that are likely to fold into an intramolecular G-quadruplex (G4). Unlike many other approaches, this package is able to de",
+   "description": "Pqsfinder detects DNA and RNA sequence patterns that are likely to fold into an intramolecular G-quadruplex (G4). Unlike many other approaches, pqsfinder is able to detect G4s folded from imperfect G-",
    "operations": [
     "Nucleic acid structure prediction",
     "Nucleosome position prediction",
@@ -2579,6 +2601,37 @@
    ]
   },
   {
+   "biotoolsID": "undo",
+   "name": "UNDO",
+   "reason": "no-match",
+   "description": "UNDO is an R package for unsupervised deconvolution of tumor and stromal mixed expression data. It detects marker genes and deconvolutes the mixing expression data without any prior knowledge.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Gene expression clustering"
+   ]
+  },
+  {
+   "biotoolsID": "gem",
+   "name": "GEM",
+   "reason": "no-match",
+   "description": "Tools for analyzing EWAS, methQTL and GxE genome widely.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genotyping"
+   ]
+  },
+  {
+   "biotoolsID": "CNVRanger",
+   "name": "CNVRanger",
+   "reason": "no-match",
+   "description": "The CNVRanger package implements a comprehensive tool suite for CNV analysis. This includes functionality for summarizing individual CNV calls across a population, assessing overlap with functional ge",
+   "operations": [
+    "Gene expression QTL analysis",
+    "RNA-Seq quantification",
+    "SNP detection"
+   ]
+  },
+  {
    "biotoolsID": "soyod",
    "name": "SoyOD",
    "reason": "no-match",
@@ -2771,16 +2824,6 @@
    ]
   },
   {
-   "biotoolsID": "undo",
-   "name": "UNDO",
-   "reason": "no-match",
-   "description": "R package for unsupervised deconvolution of tumor and stromal mixed expression data. It detects marker genes and deconvolutes the mixing expression data without any prior knowledge.",
-   "operations": [
-    "Gene expression QTL analysis",
-    "Gene expression clustering"
-   ]
-  },
-  {
    "biotoolsID": "t-profiler",
    "name": "T-profiler",
    "reason": "no-match",
@@ -2948,17 +2991,6 @@
     "Gene expression QTL analysis",
     "Genotyping",
     "Quantification"
-   ]
-  },
-  {
-   "biotoolsID": "CNVRanger",
-   "name": "CNVRanger",
-   "reason": "no-match",
-   "description": "association analysis of CNVs with gene expression and quantitative phenotypes | Summarization and expression/phenotype association of CNV ranges | The CNVRanger package implements a comprehensive tool",
-   "operations": [
-    "Gene expression QTL analysis",
-    "RNA-Seq quantification",
-    "SNP detection"
    ]
   },
   {
@@ -3372,6 +3404,16 @@
    ]
   },
   {
+   "biotoolsID": "MultiXcan",
+   "name": "MultiXcan",
+   "reason": "no-match",
+   "description": "Set of tools to perform integrative gene mapping studies.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genotyping"
+   ]
+  },
+  {
    "biotoolsID": "OSCA",
    "name": "OSCA",
    "reason": "no-match",
@@ -3391,27 +3433,6 @@
     "Gene expression QTL analysis",
     "Genotyping",
     "Variant calling"
-   ]
-  },
-  {
-   "biotoolsID": "MultiXcan",
-   "name": "MultiXcan",
-   "reason": "no-match",
-   "description": "Set of tools to perform integrative gene mapping studies.",
-   "operations": [
-    "Gene expression QTL analysis",
-    "Genotyping"
-   ]
-  },
-  {
-   "biotoolsID": "Funmap2",
-   "name": "Funmap2",
-   "reason": "no-match",
-   "description": "R package for QTL mapping using longitudinal phenotypes.",
-   "operations": [
-    "Gene expression QTL analysis",
-    "Genetic mapping",
-    "Genotyping"
    ]
   },
   {
@@ -3437,6 +3458,17 @@
    ]
   },
   {
+   "biotoolsID": "Funmap2",
+   "name": "Funmap2",
+   "reason": "no-match",
+   "description": "R package for QTL mapping using longitudinal phenotypes.",
+   "operations": [
+    "Gene expression QTL analysis",
+    "Genetic mapping",
+    "Genotyping"
+   ]
+  },
+  {
    "biotoolsID": "plexdb",
    "name": "PLEXdb",
    "reason": "no-match",
@@ -3446,16 +3478,6 @@
     "Gene expression analysis",
     "Gene expression clustering",
     "Gene expression profiling",
-    "Genotyping"
-   ]
-  },
-  {
-   "biotoolsID": "gem",
-   "name": "GEM",
-   "reason": "no-match",
-   "description": "Tools for analyzing EWAS, methQTL and GxE genome widely.",
-   "operations": [
-    "Gene expression QTL analysis",
     "Genotyping"
    ]
   },
@@ -3523,6 +3545,61 @@
     "Gene expression QTL analysis",
     "Gene expression analysis",
     "Gene expression profiling"
+   ]
+  },
+  {
+   "biotoolsID": "deepnci",
+   "name": "DeepNCI",
+   "reason": "no-match",
+   "description": "A multimodal deep learning model, DeepNCI, is proposed for improving noncovalent interactions (NCIs) calculated via density functional theory (DFT).",
+   "operations": [
+    "Network analysis",
+    "Protein structure validation",
+    "Visualisation"
+   ]
+  },
+  {
+   "biotoolsID": "viper",
+   "name": "viper",
+   "reason": "no-match",
+   "description": "Inference of protein activity from gene expression data, including the VIPER and msVIPER algorithms",
+   "operations": [
+    "Gene expression profiling",
+    "Network simulation",
+    "Protein quantification"
+   ]
+  },
+  {
+   "biotoolsID": "tximeta",
+   "name": "tximeta",
+   "reason": "no-match",
+   "description": "Transcript quantification import from Salmon and other quantifiers with automatic attachment of transcript ranges and release information, and other associated metadata. De novo transcriptomes can be ",
+   "operations": [
+    "De-novo assembly",
+    "Protein quantification",
+    "RNA-Seq quantification"
+   ]
+  },
+  {
+   "biotoolsID": "rfarm",
+   "name": "rfaRm",
+   "reason": "no-match",
+   "description": "rfaRm provides a client interface to the Rfam database of RNA families. Data that can be retrieved include RNA families, secondary structure images, covariance models, sequences within each family, al",
+   "operations": [
+    "Data retrieval",
+    "Multiple sequence alignment",
+    "Phylogenetic analysis",
+    "RNA structure covariance model generation"
+   ]
+  },
+  {
+   "biotoolsID": "pipets",
+   "name": "PIPETS",
+   "reason": "no-match",
+   "description": "PIPETS provides statistically robust analysis for 3'-seq/term-seq data. It utilizes a sliding window approach to apply a Poisson Distribution test to identify genomic positions with termination read c",
+   "operations": [
+    "Gene expression profiling",
+    "Read depth analysis"
    ]
   },
   {
@@ -4550,16 +4627,6 @@
    "operations": [
     "Image analysis",
     "Splitting"
-   ]
-  },
-  {
-   "biotoolsID": "pipets",
-   "name": "PIPETS",
-   "reason": "no-match",
-   "description": "PIPETS is an R package on Bioconductor that provides a statistically informed method for analyzing 3'-end sequencing data to identify bacterial termination peaks. It utilizes a sliding window approach",
-   "operations": [
-    "Gene expression profiling",
-    "Read depth analysis"
    ]
   },
   {
@@ -8162,17 +8229,6 @@
    ]
   },
   {
-   "biotoolsID": "deepnci",
-   "name": "DeepNCI",
-   "reason": "no-match",
-   "description": "A multimodal deep learning model, DeepNCI, is proposed for improving noncovalent interactions (NCIs) calculated via density functional theory (DFT).",
-   "operations": [
-    "Network analysis",
-    "Protein structure validation",
-    "Visualisation"
-   ]
-  },
-  {
    "biotoolsID": "circnet",
    "name": "CircNet",
    "reason": "hard-excluded:\\bcircular RNA|\\bcircRNA",
@@ -9697,18 +9753,6 @@
    "operations": [
     "Classification",
     "Prediction and recognition"
-   ]
-  },
-  {
-   "biotoolsID": "rfarm",
-   "name": "rfaRm",
-   "reason": "no-match",
-   "description": "An R client-side interface to facilitate the analysis of the Rfam database of RNA families.\n\nrfaRm is an R package providing a client-side interface for the Rfam database of non-coding RNA and other s",
-   "operations": [
-    "Data retrieval",
-    "Multiple sequence alignment",
-    "Phylogenetic analysis",
-    "RNA structure covariance model generation"
    ]
   },
   {
@@ -11922,17 +11966,6 @@
    ]
   },
   {
-   "biotoolsID": "tximeta",
-   "name": "tximeta",
-   "reason": "no-match",
-   "description": "reference sequence checksums for provenance identification in RNA-seq | Use of tximeta with a denovo transcriptome | Transcript Quantification Import with Automatic Metadata | Transcript quantificatio",
-   "operations": [
-    "De-novo assembly",
-    "Protein quantification",
-    "RNA-Seq quantification"
-   ]
-  },
-  {
    "biotoolsID": "MTK",
    "name": "MTK",
    "reason": "no-match",
@@ -12776,6 +12809,13 @@
    "operations": []
   },
   {
+   "biotoolsID": "HERMES_medical_imaging",
+   "name": "HERMES",
+   "reason": "no-match",
+   "description": "Aims to bring together geographically dispersed medical personnel in order to share a common workspace where they can collaborate over medical images in real-time.",
+   "operations": []
+  },
+  {
    "biotoolsID": "PacBio_Sequencing_Simulator",
    "name": "PaSS",
    "reason": "no-match",
@@ -12836,13 +12876,6 @@
     "Data retrieval",
     "Read binning"
    ]
-  },
-  {
-   "biotoolsID": "HERMES_medical_imaging",
-   "name": "HERMES",
-   "reason": "no-match",
-   "description": "Aims to bring together geographically dispersed medical personnel in order to share a common workspace where they can collaborate over medical images in real-time.",
-   "operations": []
   },
   {
    "biotoolsID": "iTerm-PseKNC",
@@ -12920,17 +12953,6 @@
    "description": "C++ program for HMM models",
    "operations": [
     "Annotation"
-   ]
-  },
-  {
-   "biotoolsID": "viper",
-   "name": "viper",
-   "reason": "no-match",
-   "description": "The package uses gene expression data to Infer protein activity. The package uses VIPER and msVIPER algorithms.",
-   "operations": [
-    "Gene expression profiling",
-    "Network simulation",
-    "Protein quantification"
    ]
   },
   {
@@ -13770,6 +13792,113 @@
    ]
   },
   {
+   "biotoolsID": "padog",
+   "name": "PADOG",
+   "reason": "no-match",
+   "description": "This package implements a general purpose gene set analysis method called PADOG that downplays the importance of genes that apear often accross the sets of genes to be analyzed. The package provides a",
+   "operations": [
+    "Gene-set enrichment analysis"
+   ]
+  },
+  {
+   "biotoolsID": "oscope",
+   "name": "Oscope",
+   "reason": "no-match",
+   "description": "Oscope is a statistical pipeline developed to identifying and recovering the base cycle profiles of oscillating genes in an unsynchronized single cell RNA-seq experiment. The Oscope pipeline includes ",
+   "operations": [
+    "Gene expression analysis",
+    "Statistical calculation"
+   ]
+  },
+  {
+   "biotoolsID": "omicrexposome",
+   "name": "omicRexposome",
+   "reason": "no-match",
+   "description": "omicRexposome systematizes the association evaluation between exposures and omic data, taking advantage of MultiDataSet for coordinated data management, rexposome for exposome data definition and limm",
+   "operations": [
+    "Comparison",
+    "Differential gene expression analysis",
+    "Differentially-methylated region identification",
+    "Regression analysis",
+    "Visualisation"
+   ]
+  },
+  {
+   "biotoolsID": "ocplus",
+   "name": "OCplus",
+   "reason": "no-match",
+   "description": "This package allows to characterize the operating characteristics of a microarray experiment, i.e. the trade-off between false discovery rate and the power to detect truly regulated genes. The package",
+   "operations": [
+    "Gene expression analysis"
+   ]
+  },
+  {
+   "biotoolsID": "imas",
+   "name": "IMAS",
+   "reason": "no-match",
+   "description": "Integrative analysis of Multi-omics data for Alternative splicing.",
+   "operations": [
+    "Differential gene expression analysis",
+    "Regression analysis"
+   ]
+  },
+  {
+   "biotoolsID": "gsri",
+   "name": "GSRI",
+   "reason": "no-match",
+   "description": "The GSRI package estimates the number of differentially expressed genes in gene sets, utilizing the concept of the Gene Set Regulation Index (GSRI).",
+   "operations": [
+    "Gene expression analysis",
+    "Gene set testing"
+   ]
+  },
+  {
+   "biotoolsID": "differentialregulation",
+   "name": "DifferentialRegulation",
+   "reason": "no-match",
+   "description": "DifferentialRegulation is a method for detecting differentially regulated genes between two groups of samples (e.g., healthy vs. disease, or treated vs. untreated samples), by targeting differences in",
+   "operations": [
+    "Alternative splicing prediction",
+    "Gene expression profiling",
+    "RNA-Seq quantification"
+   ]
+  },
+  {
+   "biotoolsID": "csdr",
+   "name": "csdR",
+   "reason": "no-match",
+   "description": "This package contains functionality to run differential gene co-expression across two different conditions. The algorithm is inspired by Voigt et al. 2017 and finds Conserved, Specific and Differentia",
+   "operations": []
+  },
+  {
+   "biotoolsID": "bumhmm",
+   "name": "BUMHMM",
+   "reason": "no-match",
+   "description": "This is a probabilistic modelling pipeline for computing per- nucleotide posterior probabilities of modification from the data collected in structure probing experiments. The model supports multiple e",
+   "operations": [
+    "Classification",
+    "Regression analysis"
+   ]
+  },
+  {
+   "biotoolsID": "macorrplot",
+   "name": "maCorrPlot",
+   "reason": "no-match",
+   "description": "Graphically displays correlation in microarray data that is due to insufficient normalization",
+   "operations": [
+    "Gene expression correlation"
+   ]
+  },
+  {
+   "biotoolsID": "bcseq",
+   "name": "bcSeq",
+   "reason": "no-match",
+   "description": "This Rcpp-based package implements a highly efficient data structure and algorithm for performing alignment of short reads from CRISPR or shRNA screens to reference barcode library. Sequencing error a",
+   "operations": [
+    "Mapping"
+   ]
+  },
+  {
    "biotoolsID": "spmoca",
    "name": "spMOCA",
    "reason": "no-match",
@@ -13839,30 +13968,6 @@
    ]
   },
   {
-   "biotoolsID": "differentialregulation",
-   "name": "DifferentialRegulation",
-   "reason": "no-match",
-   "description": "DifferentialRegulation is a Bayesian hierarchical method for detecting differentially regulated genes between experimental groups, leveraging spliced and unspliced mRNA abundances obtained from single",
-   "operations": [
-    "Alternative splicing prediction",
-    "Gene expression profiling",
-    "RNA-Seq quantification"
-   ]
-  },
-  {
-   "biotoolsID": "omicrexposome",
-   "name": "omicRexposome",
-   "reason": "no-match",
-   "description": "It systematizes the association evaluation between exposures and omic data, taking advantage of MultiDataSet for coordinated data management, rexposome for exposome data definition and limma for assoc",
-   "operations": [
-    "Comparison",
-    "Differential gene expression analysis",
-    "Differentially-methylated region identification",
-    "Regression analysis",
-    "Visualisation"
-   ]
-  },
-  {
    "biotoolsID": "BEACON-x",
    "name": "BEACON",
    "reason": "no-match",
@@ -13881,13 +13986,6 @@
     "Query and retrieval",
     "Sequence visualisation"
    ]
-  },
-  {
-   "biotoolsID": "csdr",
-   "name": "csdR",
-   "reason": "no-match",
-   "description": "Differential gene coexpression analysis based on the Conserved, Specific, and Differentiated (CSD) method",
-   "operations": []
   },
   {
    "biotoolsID": "miract",
@@ -13930,15 +14028,6 @@
    ]
   },
   {
-   "biotoolsID": "macorrplot",
-   "name": "maCorrPlot",
-   "reason": "no-match",
-   "description": "Graphically displays correlation in microarray data that is due to insufficient normalization.",
-   "operations": [
-    "Gene expression correlation"
-   ]
-  },
-  {
    "biotoolsID": "pathway_miner",
    "name": "Pathway Miner",
    "reason": "no-match",
@@ -13972,15 +14061,6 @@
    ]
   },
   {
-   "biotoolsID": "ocplus",
-   "name": "OCplus",
-   "reason": "no-match",
-   "description": "This package allows to characterize the operating characteristics of a microarray experiment, i.e. the trade-off between false discovery rate and the power to detect truly regulated genes. The package",
-   "operations": [
-    "Gene expression analysis"
-   ]
-  },
-  {
    "biotoolsID": "srgnet",
    "name": "SRGnet",
    "reason": "no-match",
@@ -14000,41 +14080,12 @@
    ]
   },
   {
-   "biotoolsID": "padog",
-   "name": "PADOG",
-   "reason": "no-match",
-   "description": "This package implements a general purpose gene set analysis method that downplays the importance of genes that apear often accross the sets of genes to be analyzed. The package provides also a benchma",
-   "operations": [
-    "Gene-set enrichment analysis"
-   ]
-  },
-  {
-   "biotoolsID": "oscope",
-   "name": "Oscope",
-   "reason": "no-match",
-   "description": "Statistical pipeline developed to identify and recover the base cycle profiles of oscillating genes in an unsynchronized single cell RNA-seq experiment. It includes three modules: a sine model module ",
-   "operations": [
-    "Gene expression analysis",
-    "Statistical calculation"
-   ]
-  },
-  {
    "biotoolsID": "mir2go",
    "name": "miR2GO",
    "reason": "no-match",
    "description": "Web based platform for comparative analyses of human miRNA functions. It includes two programs: miRmut2GO (Functional analysis of genetic and somatic mutations in microRNAs) and miRpair2GO (Comparativ",
    "operations": [
     "Gene expression analysis"
-   ]
-  },
-  {
-   "biotoolsID": "gsri",
-   "name": "GSRI",
-   "reason": "no-match",
-   "description": "This package estimates the number of differentially expressed genes in gene sets by using the concept of the gene set regulation index.",
-   "operations": [
-    "Gene expression analysis",
-    "Gene set testing"
    ]
   },
   {
@@ -14118,25 +14169,6 @@
    "operations": [
     "Gene expression analysis",
     "Gene expression clustering"
-   ]
-  },
-  {
-   "biotoolsID": "bcseq",
-   "name": "bcSeq",
-   "reason": "excluded:\\bCRISPR (screen|guide|repeat|ar",
-   "description": "Fast sequence mapping in high-throughput shRNA and CRISPR screens.",
-   "operations": [
-    "Mapping"
-   ]
-  },
-  {
-   "biotoolsID": "bumhmm",
-   "name": "BUMHMM",
-   "reason": "no-match",
-   "description": "This is a probabilistic modelling pipeline for computing per- nucleotide posterior probabilities of modification from the data collected in structure probing experiments. The model supports multiple e",
-   "operations": [
-    "Classification",
-    "Regression analysis"
    ]
   },
   {
@@ -14484,15 +14516,6 @@
    ]
   },
   {
-   "biotoolsID": "rsubread",
-   "name": "Rsubread",
-   "reason": "no-match",
-   "description": "Provides powerful and easy-to-use tools for analyzing next-gen sequencing read data. Includes quality assessment of sequence reads, read alignment, read summarization, exon-exon junction detection, fu",
-   "operations": [
-    "Sequence analysis"
-   ]
-  },
-  {
    "biotoolsID": "tradeseq",
    "name": "tradeSeq",
    "reason": "no-match",
@@ -14678,16 +14701,6 @@
    ]
   },
   {
-   "biotoolsID": "imas",
-   "name": "IMAS",
-   "reason": "no-match",
-   "description": "Integrative analysis of Multi-omics data for Alternative splicing.",
-   "operations": [
-    "Differential gene expression analysis",
-    "Regression analysis"
-   ]
-  },
-  {
    "biotoolsID": "anota2seq",
    "name": "anota2seq",
    "reason": "no-match",
@@ -14757,6 +14770,36 @@
     "Gene expression profiling",
     "Literature search",
     "Regression analysis"
+   ]
+  },
+  {
+   "biotoolsID": "segmentseq",
+   "name": "segmentSeq",
+   "reason": "no-match",
+   "description": "High-throughput sequencing technologies allow the production of large volumes of short sequences, which can be aligned to the genome to create a set of matches to the genome. By looking for regions of",
+   "operations": [
+    "Sequence alignment"
+   ]
+  },
+  {
+   "biotoolsID": "genomicfeatures",
+   "name": "GenomicFeatures",
+   "reason": "no-match",
+   "description": "The ability to efficiently represent and manipulate genomic annotations and alignments is playing a central role when it comes to analyzing high-throughput sequencing data (a.k.a. NGS data). The Genom",
+   "operations": [
+    "Data handling",
+    "Data retrieval"
+   ]
+  },
+  {
+   "biotoolsID": "bootranges",
+   "name": "bootRanges",
+   "reason": "no-match",
+   "description": "Modular package for generation of sets of ranges representing the null hypothesis. These can take the form of bootstrap samples of ranges (using the block bootstrap framework of Bickel et al 2010), or",
+   "operations": [
+    "Expression correlation analysis",
+    "Gene-set enrichment analysis",
+    "Statistical calculation"
    ]
   },
   {
@@ -14868,15 +14911,6 @@
    "description": "Probabilistically reincorporates multi-mapping tags into mapped short read data.",
    "operations": [
     "Mapping"
-   ]
-  },
-  {
-   "biotoolsID": "segmentseq",
-   "name": "segmentSeq",
-   "reason": "no-match",
-   "description": "This package allows the simultaneous segmentation of data from multiple samples, taking into account replicate data, in order to create a consensus segmentation. This has obvious applications in a num",
-   "operations": [
-    "Sequence alignment"
    ]
   },
   {
@@ -15067,17 +15101,6 @@
     "Genome assembly",
     "Scaffolding",
     "Sequence trimming"
-   ]
-  },
-  {
-   "biotoolsID": "bootranges",
-   "name": "bootRanges",
-   "reason": "no-match",
-   "description": "Flexible generation of null sets of genomic ranges for hypothesis testing.",
-   "operations": [
-    "Expression correlation analysis",
-    "Gene-set enrichment analysis",
-    "Statistical calculation"
    ]
   },
   {
@@ -15377,26 +15400,6 @@
    ]
   },
   {
-   "biotoolsID": "genomicfeatures",
-   "name": "GenomicFeatures",
-   "reason": "no-match",
-   "description": "A set of tools and methods for making and manipulating transcript centric annotations. With these tools the user can easily download the genomic locations of the transcripts, exons and CDS of a given ",
-   "operations": [
-    "Data handling",
-    "Data retrieval"
-   ]
-  },
-  {
-   "biotoolsID": "seq2pathway",
-   "name": "seq2pathway",
-   "reason": "no-match",
-   "description": "This functional gene-set tool for the analysis of NGS data consists of \"seq2gene\" and \"gene2path\" components. The seq2gene component links sequence-level measurements of genomic regions (including SNP",
-   "operations": [
-    "Pathway or network analysis",
-    "RNA-Seq analysis"
-   ]
-  },
-  {
    "biotoolsID": "iomics",
    "name": "IOmics",
    "reason": "no-match",
@@ -15486,6 +15489,59 @@
     "Read mapping",
     "SNP detection",
     "Sequence assembly"
+   ]
+  },
+  {
+   "biotoolsID": "spatialexperiment",
+   "name": "SpatialExperiment",
+   "reason": "no-match",
+   "description": "Defines an S4 class for storing data from spatial -omics experiments. The class extends SingleCellExperiment to support storage and retrieval of additional information from spot-based and molecule-bas",
+   "operations": [
+    "Data retrieval",
+    "Visualisation"
+   ]
+  },
+  {
+   "biotoolsID": "smite",
+   "name": "SMITE",
+   "reason": "no-match",
+   "description": "This package builds on the Epimods framework which facilitates finding weighted subnetworks (\"modules\") on Illumina Infinium 27k arrays using the SpinGlass algorithm, as implemented in the iGraph pack",
+   "operations": [
+    "Differential gene expression analysis",
+    "Differentially-methylated region identification",
+    "Genome annotation"
+   ]
+  },
+  {
+   "biotoolsID": "nipalsmcia",
+   "name": "nipalsMCIA",
+   "reason": "no-match",
+   "description": "Computes Multiple Co-Inertia Analysis (MCIA), a dimensionality reduction (jDR) algorithm, for a multi-block dataset using a modification to the Nonlinear Iterative Partial Least Squares method (NIPALS",
+   "operations": [
+    "Clustering",
+    "Dimensionality reduction",
+    "Essential dynamics"
+   ]
+  },
+  {
+   "biotoolsID": "mpac",
+   "name": "MPAC",
+   "reason": "no-match",
+   "description": "Multi-omic Pathway Analysis of Cells (MPAC), integrates multi-omic data for understanding cellular mechanisms. It predicts novel patient groups with distinct pathway profiles as well as identifying ke",
+   "operations": [
+    "Gene expression profiling",
+    "Gene-set enrichment analysis",
+    "Pathway analysis"
+   ]
+  },
+  {
+   "biotoolsID": "podkat",
+   "name": "podkat",
+   "reason": "no-match",
+   "description": "This package provides an association test that is capable of dealing with very rare and even private variants. This is accomplished by a kernel-based approach that takes the positions of the variants ",
+   "operations": [
+    "Variant calling",
+    "Variant classification"
    ]
   },
   {
@@ -15610,17 +15666,6 @@
    ]
   },
   {
-   "biotoolsID": "nipalsmcia",
-   "name": "nipalsMCIA",
-   "reason": "no-match",
-   "description": "nipalsMCIA is an R package implementing Multiple Co-Inertia Analysis (MCIA) for dimensionality reduction in multi-block datasets. It utilizes a modification to the Nonlinear Iterative Partial Least Sq",
-   "operations": [
-    "Clustering",
-    "Dimensionality reduction",
-    "Essential dynamics"
-   ]
-  },
-  {
    "biotoolsID": "graphcompass",
    "name": "GraphCompass",
    "reason": "no-match",
@@ -15629,17 +15674,6 @@
     "Protein architecture analysis",
     "Quantification",
     "Standardisation and normalisation"
-   ]
-  },
-  {
-   "biotoolsID": "mpac",
-   "name": "MPAC",
-   "reason": "no-match",
-   "description": "MPAC is a computational framework for inferring pathway activities from multi-omic data, predicting patient groups and identifying key proteins. It's available as an R package on Bioconductor.",
-   "operations": [
-    "Gene expression profiling",
-    "Gene-set enrichment analysis",
-    "Pathway analysis"
    ]
   },
   {
@@ -15713,27 +15747,6 @@
    "description": "TCGA data mining tool.",
    "operations": [
     "Database search"
-   ]
-  },
-  {
-   "biotoolsID": "podkat",
-   "name": "podkat",
-   "reason": "no-match",
-   "description": "This package provides an association test that is capable of dealing with very rare and even private variants. The test can be used for pre-processed matrix data, but also directly for variant data st",
-   "operations": [
-    "Variant calling",
-    "Variant classification"
-   ]
-  },
-  {
-   "biotoolsID": "smite",
-   "name": "SMITE",
-   "reason": "no-match",
-   "description": "This package builds on the Epimods framework which facilitates finding weighted subnetworks (\"modules\") on Illumina Infinium 27k arrays using the SpinGlass algorithm, as implemented in the iGraph pack",
-   "operations": [
-    "Differential gene expression analysis",
-    "Differentially-methylated region identification",
-    "Genome annotation"
    ]
   },
   {
@@ -16401,16 +16414,6 @@
    ]
   },
   {
-   "biotoolsID": "spatialexperiment",
-   "name": "SpatialExperiment",
-   "reason": "no-match",
-   "description": "infrastructure for spatially resolved transcriptomics data in R using Bioconductor.\n\nS4 Class for Spatial Experiments handling.\n\nDefines S4 classes for storing data for spatial experiments. Main examp",
-   "operations": [
-    "Data retrieval",
-    "Visualisation"
-   ]
-  },
-  {
    "biotoolsID": "nc2eye",
    "name": "Nc2Eye",
    "reason": "no-match",
@@ -16779,6 +16782,17 @@
    ]
   },
   {
+   "biotoolsID": "cell-id",
+   "name": "Cell-ID",
+   "reason": "no-match",
+   "description": "CelliD is a clustering-free multivariate statistical method for the robust extraction of per-cell gene signatures from single-cell RNA-seq. CelliD allows unbiased cell identity recognition across diff",
+   "operations": [
+    "Dimensionality reduction",
+    "Essential dynamics",
+    "Gene-set enrichment analysis"
+   ]
+  },
+  {
    "biotoolsID": "sccigen",
    "name": "sCCIgen",
    "reason": "no-match",
@@ -16929,17 +16943,6 @@
    ]
   },
   {
-   "biotoolsID": "cell-id",
-   "name": "Cell-ID",
-   "reason": "no-match",
-   "description": "Cell-ID is a R package for gene signature extraction and cell-identity recognition at individual cell level from single-cell RNA-seq.",
-   "operations": [
-    "Dimensionality reduction",
-    "Essential dynamics",
-    "Gene-set enrichment analysis"
-   ]
-  },
-  {
    "biotoolsID": "capturecompendium",
    "name": "CaptureCompendium",
    "reason": "no-match",
@@ -16962,21 +16965,21 @@
    ]
   },
   {
+   "biotoolsID": "medme",
+   "name": "MEDME",
+   "reason": "no-match",
+   "description": "MEDME allows the prediction of absolute and relative methylation levels based on measures obtained by MeDIP-microarray experiments",
+   "operations": [
+    "Differentially-methylated region identification"
+   ]
+  },
+  {
    "biotoolsID": "minimod",
    "name": "minimod",
    "reason": "no-match",
    "description": "A bioinformatics tool for viewing and calculating base modification frequencies from BAM files",
    "operations": [
     "Genome annotation"
-   ]
-  },
-  {
-   "biotoolsID": "medme",
-   "name": "MEDME",
-   "reason": "no-match",
-   "description": "A tool allows the prediction of absolute and relative methylation levels based on measures obtained by MeDIP-microarray experiments.",
-   "operations": [
-    "Differentially-methylated region identification"
    ]
   },
   {
@@ -17314,6 +17317,25 @@
    ]
   },
   {
+   "biotoolsID": "dexseq",
+   "name": "DEXSeq",
+   "reason": "no-match",
+   "description": "The package is focused on finding differential exon usage using RNA-seq exon counts between samples with different experimental designs. It provides functions that allows the user to make the necessar",
+   "operations": [
+    "Enrichment analysis",
+    "Exonic splicing enhancer prediction"
+   ]
+  },
+  {
+   "biotoolsID": "regsplice",
+   "name": "regsplice",
+   "reason": "no-match",
+   "description": "Statistical methods for detection of differential splicing (differential exon usage) in RNA-seq and exon microarray data, using L1-regularization (lasso) to improve power.",
+   "operations": [
+    "Exonic splicing enhancer prediction"
+   ]
+  },
+  {
    "biotoolsID": "spl-isoquant",
    "name": "Spl-ISOquant",
    "reason": "no-match",
@@ -17382,15 +17404,6 @@
     "Exonic splicing enhancer prediction",
     "Gene prediction",
     "Protein modelling"
-   ]
-  },
-  {
-   "biotoolsID": "regsplice",
-   "name": "regsplice",
-   "reason": "no-match",
-   "description": "Statistical methods for detection of differential exon usage in RNA-seq and exon microarray data sets, using L1 regularization (lasso) to improve power.",
-   "operations": [
-    "Exonic splicing enhancer prediction"
    ]
   },
   {
@@ -17651,16 +17664,6 @@
    ]
   },
   {
-   "biotoolsID": "dexseq",
-   "name": "DEXSeq",
-   "reason": "no-match",
-   "description": "The package is focused on finding differential exon usage using RNA-seq exon counts between samples with different experimental designs. It provides functions that allows the user to make the necessar",
-   "operations": [
-    "Enrichment analysis",
-    "Exonic splicing enhancer prediction"
-   ]
-  },
-  {
    "biotoolsID": "valerie",
    "name": "VALERIE",
    "reason": "no-match",
@@ -17794,6 +17797,13 @@
    ]
   },
   {
+   "biotoolsID": "bioconductor-graphexperiment",
+   "name": "GraphExperiment",
+   "reason": "hard-excluded:\\bmass spectrometr|\\bLC-MS\\b|\\",
+   "description": "GraphExperiment provides users and developers with an S4 class that extends `SingleCellExperiment` by offering infrastructure to store and retrieve networks (`igraph` objects) representing how assay f",
+   "operations": []
+  },
+  {
    "biotoolsID": "PlantCircNet",
    "name": "PlantCircNet",
    "reason": "hard-excluded:\\bcircular RNA|\\bcircRNA",
@@ -17804,6 +17814,457 @@
     "Pathway or network visualisation",
     "miRNA expression analysis",
     "miRNA target prediction"
+   ]
+  },
+  {
+   "biotoolsID": "regpredict",
+   "name": "RegPredict",
+   "reason": "no-match",
+   "description": "Provides comparative genomics tools for reconstruction and analysis of microbial regulons using comparative genomics.",
+   "operations": [
+    "Ancestral reconstruction",
+    "Haplotype mapping"
+   ]
+  },
+  {
+   "biotoolsID": "myomirdb",
+   "name": "MyomirDB",
+   "reason": "no-match",
+   "description": "A unified database and server platform for muscle atrophy myomiRs, coregulatory networks and regulons.\n\nA Database of miRNAs during Muscular Atrophy.\n\nDefence Institute of Physiology and Allied Scienc",
+   "operations": [
+    "Database search",
+    "miRNA expression analysis",
+    "miRNA target prediction"
+   ]
+  },
+  {
+   "biotoolsID": "bioconductor-pmscanr",
+   "name": "PMScanR",
+   "reason": "hard-excluded:\\bprotein (sequence )?motif|\\b",
+   "description": "Provides tools for large-scale protein motif analysis and visualization in R. PMScanR facilitates the identification of motifs using external tools like PROSITE's ps_scan (handling necessary file down",
+   "operations": []
+  },
+  {
+   "biotoolsID": "msa",
+   "name": "msa",
+   "reason": "no-match",
+   "description": "The 'msa' package provides a unified R/Bioconductor interface to the multiple sequence alignment algorithms ClustalW, ClustalOmega, and Muscle. All three algorithms are integrated in the package, ther",
+   "operations": [
+    "Multiple sequence alignment",
+    "Sequence visualisation"
+   ]
+  },
+  {
+   "biotoolsID": "msaviewer",
+   "name": "MSAViewer",
+   "reason": "no-match",
+   "description": "Large MSAs visualization interactively on the web.",
+   "operations": [
+    "Sequence visualisation"
+   ]
+  },
+  {
+   "biotoolsID": "icelogo",
+   "name": "iceLogo",
+   "reason": "hard-excluded:\\bpeptides?\\b",
+   "description": "Visualize significant conserved sequence patterns in multiple peptide sequence alignments against background (reference) sequence sets that can be tailored to the studied system and the used protocol.",
+   "operations": [
+    "Sequence visualisation"
+   ]
+  },
+  {
+   "biotoolsID": "kinasefusiondb",
+   "name": "KinaseFusionDB",
+   "reason": "weak-operation, no corroboration",
+   "description": "KinaseFusionDB is a knowledgebase providing functional annotation of kinase fusion genes, predicted protein structures, and virtual screening data for drug repurposing. It leverages an in silico pipel",
+   "operations": [
+    "Essential dynamics",
+    "Fold recognition",
+    "Protein geometry validation",
+    "Structural motif discovery",
+    "Virtual screening"
+   ]
+  },
+  {
+   "biotoolsID": "slimsuite",
+   "name": "SLiMSuite",
+   "reason": "hard-excluded:\\bshort linear motif|\\bSLiMs?\\",
+   "description": "Short Linear Motif discovery and molecular evolution is an open source suite of Python programs for sequence analysis, with a particular focus on the prediction and analysis of short linear motifs (SL",
+   "operations": [
+    "Sequence analysis"
+   ]
+  },
+  {
+   "biotoolsID": "mu3dsp",
+   "name": "MU3DSP",
+   "reason": "weak-operation, no corroboration",
+   "description": "Prediction of protein stability changes upon single-point variant using 3D structure profile.",
+   "operations": [
+    "Protein structure prediction",
+    "Structural motif discovery",
+    "Variant effect prediction"
+   ]
+  },
+  {
+   "biotoolsID": "vsflow",
+   "name": "VSFlow",
+   "reason": "weak-operation, no corroboration",
+   "description": "Open-source ligand-based virtual screening tool.",
+   "operations": [
+    "Structural motif discovery",
+    "Virtual screening",
+    "Visualisation"
+   ]
+  },
+  {
+   "biotoolsID": "psc-db",
+   "name": "PSC-db",
+   "reason": "weak-operation, no corroboration",
+   "description": "A structured and searchable 3D-Database for Plant Secondary Compounds.",
+   "operations": [
+    "Deposition",
+    "Protein-protein docking",
+    "Structural motif discovery",
+    "Virtual screening"
+   ]
+  },
+  {
+   "biotoolsID": "brewery",
+   "name": "Brewery",
+   "reason": "hard-excluded:\\bprotein (sequence )?motif|\\b",
+   "description": "Brewery uses a suite of ab initio predictors of 1D PSAs. Brewery uses multiple sources of evolutionary information to achieve state-of-the-art predictions of secondary structure, structural motifs, re",
+   "operations": [
+    "Protein secondary structure comparison",
+    "Protein secondary structure prediction",
+    "Protein structure prediction",
+    "Sequence feature detection",
+    "Structural motif discovery"
+   ]
+  },
+  {
+   "biotoolsID": "zagros",
+   "name": "Zagros",
+   "reason": "hard-excluded:\\bRNA[- ]binding protein|\\bRBP",
+   "description": "A motif discovery software for CLIP-Seq high-throughput protein-RNA interaction data. Given the regions of significant enrichment for reads it can characterize the binding site for the given RBP.",
+   "operations": [
+    "Enrichment",
+    "Motif discovery"
+   ]
+  },
+  {
+   "biotoolsID": "hmmer3",
+   "name": "HMMER3",
+   "reason": "no-match",
+   "description": "This tool is used for searching sequence databases for homologs of protein sequences, and for making protein sequence alignments. It implements methods using probabilistic models called profile hidden",
+   "operations": [
+    "Conversion",
+    "Data retrieval",
+    "Database search",
+    "Format validation",
+    "Formatting",
+    "Multiple sequence alignment",
+    "Probabilistic sequence generation",
+    "Sequence database search",
+    "Sequence generation",
+    "Sequence profile generation",
+    "Statistical calculation"
+   ]
+  },
+  {
+   "biotoolsID": "Kmasker",
+   "name": "Kmasker",
+   "reason": "no-match",
+   "description": "Kmasker plants is a tool for the automatic detection of sequence regions with meaningful k-mer characteristics. This can be sequences with highly abundant k-mer patterns (repeats), regions with diverg",
+   "operations": [
+    "Repeat sequence analysis",
+    "Repeat sequence detection",
+    "Sequence comparison",
+    "Validation",
+    "k-mer counting",
+    "miRNA target prediction"
+   ]
+  },
+  {
+   "biotoolsID": "rcpi",
+   "name": "Rcpi",
+   "reason": "no-match",
+   "description": "A molecular informatics toolkit with an integration of bioinformatics and chemoinformatics tools for drug discovery.",
+   "operations": [
+    "Protein-ligand docking"
+   ]
+  },
+  {
+   "biotoolsID": "sequana_coverage",
+   "name": "sequana_coverage",
+   "reason": "no-match",
+   "description": "Show coverage and interval of confidence to identify under and over represented genomic regions. The tool also creates an HTML report with various images showing the coverage and GC versus coverage pl",
+   "operations": [
+    "Sequence feature detection"
+   ]
+  },
+  {
+   "biotoolsID": "psi-blast",
+   "name": "PSI-BLAST (EBI)",
+   "reason": "no-match",
+   "description": "Iterative protein sequence similarity search based on BLAST: search with a custom, position-specific, scoring matrix which can help find distant evolutionary relationships.",
+   "operations": [
+    "Sequence similarity search"
+   ]
+  },
+  {
+   "biotoolsID": "psi-search",
+   "name": "PSI-Search (EBI)",
+   "reason": "no-match",
+   "description": "Iterative protein sequence similarity search based on Smith & Waterman algorithm with PSI-BLAST profile construction : find distantly related protein sequences.",
+   "operations": [
+    "Sequence similarity search"
+   ]
+  },
+  {
+   "biotoolsID": "stackppi",
+   "name": "StackPPI",
+   "reason": "no-match",
+   "description": "Improving protein-protein interactions prediction accuracy using XGBoost feature selection and stacked ensemble classifier.\n\nProtein-protein interactions (PPIs) are involved with most cellular activit",
+   "operations": [
+    "Dimensionality reduction",
+    "Protein interaction prediction",
+    "Protein-protein binding site prediction"
+   ]
+  },
+  {
+   "biotoolsID": "CNN-T4SE",
+   "name": "CNN-T4SE",
+   "reason": "no-match",
+   "description": "Convolutional neural network-based annotation of bacterial type IV secretion system effectors with enhanced accuracy and reduced false discovery.\n\nCNN-based Annotation of Bacterial Type IV Secretion S",
+   "operations": [
+    "Molecular dynamics",
+    "Protein secondary structure comparison",
+    "Protein secondary structure prediction"
+   ]
+  },
+  {
+   "biotoolsID": "convert",
+   "name": "convert",
+   "reason": "no-match",
+   "description": "Define coerce methods for microarray data objects.",
+   "operations": [
+    "Conversion",
+    "Formatting",
+    "Statistical calculation"
+   ]
+  },
+  {
+   "biotoolsID": "bioconductor-nearbynding",
+   "name": "nearBynding",
+   "reason": "excluded:\\bRNA (secondary |tertiary )?str",
+   "description": "Provides a pipeline to discern RNA structure at and proximal to the site of protein binding within regions of the transcriptome defined by the user. CLIP protein-binding data can be input as either al",
+   "operations": []
+  },
+  {
+   "biotoolsID": "nearbynding",
+   "name": "nearBynding",
+   "reason": "excluded:\\bRNA (secondary |tertiary )?str",
+   "description": "A flexible pipeline characterizing protein binding to local RNA structure.\n\nnearBynding is an R package that discerns RNA structure at and proximal to the site of protein binding within regions of the",
+   "operations": [
+    "Expression analysis",
+    "RNA binding site prediction",
+    "RNA structure prediction",
+    "Scaffolding",
+    "Structure visualisation"
+   ]
+  },
+  {
+   "biotoolsID": "cosg",
+   "name": "COSG",
+   "reason": "no-match",
+   "description": "COSG is a cosine similarity-based method for more accurate and scalable marker gene identification.",
+   "operations": [
+    "Nucleic acid sequence analysis"
+   ]
+  },
+  {
+   "biotoolsID": "bioconductor-betterchromvar",
+   "name": "betterChromVAR",
+   "reason": "no-match",
+   "description": "A much faster analytical implementation of chromVAR, with additional features, used to infer TF activity from (bulk or single-cell) ATAC-seq data and motif annotations (or binding probabilities). The ",
+   "operations": []
+  },
+  {
+   "biotoolsID": "guitar",
+   "name": "Guitar",
+   "reason": "no-match",
+   "description": "The package is designed for visualization of RNA-related genomic features with respect to the landmarks of RNA transcripts, i.e., transcription starting site, start codon, stop codon and transcription",
+   "operations": [
+    "Sequence analysis"
+   ]
+  },
+  {
+   "biotoolsID": "callicog",
+   "name": "CalliCog",
+   "reason": "no-match",
+   "description": "CalliCog is an open-source cognitive neuroscience toolkit designed for experiments with freely behaving nonhuman primates, specifically marmosets. It provides modular operant chambers and integrates s",
+   "operations": []
+  },
+  {
+   "biotoolsID": "medecom",
+   "name": "MeDeCom",
+   "reason": "no-match",
+   "description": "Computational method for decomposition of heterogeneous DNA methylomes. It applies matrix factorization with biologically motivated constratints and regularization to discover and quantify latent comp",
+   "operations": [
+    "Statistical inference"
+   ]
+  },
+  {
+   "biotoolsID": "trumpet",
+   "name": "trumpet",
+   "reason": "no-match",
+   "description": "The package is designed for the quality assessment of methylated RNA immunoprecipitation sequencing data.",
+   "operations": [
+    "Alignment",
+    "Validation"
+   ]
+  },
+  {
+   "biotoolsID": "smethillium",
+   "name": "SMETHILLIUM",
+   "reason": "no-match",
+   "description": "Spatial normalisation method for ILLumina InfinIUM HumanMethylation BeadChip to correct the spatial background noise which affect the signal-to-noise ratio. Outperforms BeadStudio to predict the methy",
+   "operations": [
+    "Normalisation",
+    "Prediction"
+   ]
+  },
+  {
+   "biotoolsID": "RF_Purify",
+   "name": "RF_Purify",
+   "reason": "no-match",
+   "description": "a novel tool for comprehensive analysis of tumor-purity in methylation array data based on random forest regression | RF model and functions to estimate tumor purity using methylation data | Install m",
+   "operations": [
+    "Copy number estimation",
+    "CpG island and isochore detection",
+    "Regression analysis"
+   ]
+  },
+  {
+   "biotoolsID": "bioconductor-hummingbird",
+   "name": "hummingbird",
+   "reason": "no-match",
+   "description": "A package for detecting differential methylation. It exploits a Bayesian hidden Markov model that incorporates location dependence among genomic loci, unlike most existing methods that assume independ",
+   "operations": []
+  },
+  {
+   "biotoolsID": "epidish",
+   "name": "EpiDISH",
+   "reason": "no-match",
+   "description": "It infers the proportions of a priori known cell subtypes present in a sample representing a mixture of such cell-types. Inference proceeds via one of 3 methods (Robust Partial Correlations-RPC, Ciber",
+   "operations": [
+    "Differentially-methylated region identification"
+   ]
+  },
+  {
+   "biotoolsID": "admeth",
+   "name": "ADmeth",
+   "reason": "no-match",
+   "description": "A manually curated database for the differential methylation in Alzheimer's disease.",
+   "operations": [
+    "Database search"
+   ]
+  },
+  {
+   "biotoolsID": "CandiMeth",
+   "name": "CandiMeth",
+   "reason": "no-match",
+   "description": "Using existing tools in the Galaxy environment we generated the workflow CandiMeth (CANDIdate feature METHylation). This takes as input a differential methylation table from an R-based package and map",
+   "operations": [
+    "Data handling"
+   ]
+  },
+  {
+   "biotoolsID": "gaprediction",
+   "name": "GAprediction",
+   "reason": "no-match",
+   "description": "[GAprediction] predicts gestational age using Illumina HumanMethylation450 CpG data.",
+   "operations": [
+    "CpG island and isochore detection"
+   ]
+  },
+  {
+   "biotoolsID": "cimpleg",
+   "name": "CimpleG",
+   "reason": "no-match",
+   "description": "CimpleG is a simple package to find single-CpG based signatures for use in classification and deconvolution.",
+   "operations": [
+    "CpG island and isochore detection",
+    "Deisotoping",
+    "Imputation",
+    "PTM site prediction"
+   ]
+  },
+  {
+   "biotoolsID": "isochore-ebi",
+   "name": "isochore (EBI)",
+   "reason": "no-match",
+   "description": "Plot potential isochore features.",
+   "operations": [
+    "CpG island and isochore detection"
+   ]
+  },
+  {
+   "biotoolsID": "unfolding-protein-two-states",
+   "name": "Unfolding protein in two states",
+   "reason": "no-match",
+   "description": "Applicable for thermal as well as chemical denaturation of protein",
+   "operations": [
+    "CpG island and isochore detection",
+    "PTM localisation",
+    "Protein globularity prediction"
+   ]
+  },
+  {
+   "biotoolsID": "GPRED-GC",
+   "name": "GPRED-GC",
+   "reason": "no-match",
+   "description": "a Gene PREDiction model accounting for 5 '- 3' GC gradient.\n\na Gene PREDiction model accounting for 5'-3' GC gradient.\n\nA new hidden Markov model (HMM)-based ab initio.\n\ngene prediction tool for findi",
+   "operations": [
+    "Ab initio structure prediction",
+    "CpG island and isochore detection",
+    "Gene prediction"
+   ]
+  },
+  {
+   "biotoolsID": "geecee",
+   "name": "geecee",
+   "reason": "no-match",
+   "description": "Calculate fractional GC content of nucleic acid sequences.",
+   "operations": [
+    "CpG island and isochore detection"
+   ]
+  },
+  {
+   "biotoolsID": "cpgreport",
+   "name": "cpgreport",
+   "reason": "no-match",
+   "description": "Identify and report CpG-rich regions in nucleotide sequence(s).",
+   "operations": [
+    "CpG island and isochore detection"
+   ]
+  },
+  {
+   "biotoolsID": "isochore",
+   "name": "isochore",
+   "reason": "no-match",
+   "description": "Plot isochores in DNA sequences.",
+   "operations": [
+    "CpG island and isochore detection"
+   ]
+  },
+  {
+   "biotoolsID": "newcpgseek",
+   "name": "newcpgseek",
+   "reason": "no-match",
+   "description": "Identify and report CpG-rich regions in nucleotide sequence(s).",
+   "operations": [
+    "CpG island and isochore detection"
    ]
   }
  ]

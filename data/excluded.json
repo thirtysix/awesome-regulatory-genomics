@@ -1,6 +1,6 @@
 {
  "meta": {
-  "count": 195,
+  "count": 208,
   "note": "Records the hand-written overlay excludes, with the full row they had when dropped. Delete the id from overlay.yaml: exclude and rebuild to reinstate one."
  },
  "tools": [
@@ -349,65 +349,6 @@
    "primary_category": "nucleosome-chromatin"
   },
   {
-   "id": "edger",
-   "name": "edgeR",
-   "description": "Differential expression analysis of RNA-seq expression profiles with biological replication",
-   "categories": [
-    "peak-calling"
-   ],
-   "tier": "core",
-   "homepage": "http://bioconductor.org/packages/release/bioc/html/edgeR.html",
-   "repo_url": "",
-   "repo_origin": "",
-   "repo_stars": null,
-   "repo_pushed": "",
-   "repo_archived": null,
-   "repo_language": "",
-   "repo_license": "",
-   "tool_type": [
-    "Command-line tool",
-    "Library"
-   ],
-   "topics": [
-    "Genetics",
-    "RNA-Seq",
-    "ChIP-seq"
-   ],
-   "languages": [
-    "R"
-   ],
-   "license": "GPL-2.0",
-   "maturity": "",
-   "cost": "",
-   "citations": 5871,
-   "citation_note": "",
-   "citations_total": null,
-   "citations_papers": null,
-   "year": "2012",
-   "publication": "pmid:22287627",
-   "publication_is_preprint": false,
-   "biotools_id": "edger",
-   "biotools_url": "https://bio.tools/edger",
-   "last_update": "2022-06-21",
-   "source": "bio.tools",
-   "tags": [],
-   "_operations": [
-    "Differential gene expression analysis"
-   ],
-   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
-   "_identifiers": [
-    "pmid:22287627",
-    "pmid:19910308",
-    "pmid:27508061"
-   ],
-   "_registries": {
-    "bioconductor": "http://bioconductor.org/packages/release/bioc/html/edgeR.html"
-   },
-   "_excluded_reason": "Generic differential expression for RNA-seq; admitted by a ChIP-seq text match",
-   "featured": "",
-   "primary_category": "peak-calling"
-  },
-  {
    "id": "meme_fimo",
    "name": "meme_fimo",
    "description": "A software tool for scanning DNA or protein sequences with motifs described as position-specific scoring matrices.",
@@ -465,6 +406,59 @@
    "_excluded_reason": "Duplicate of the MEME Suite / FIMO entries",
    "featured": "",
    "primary_category": "motif-discovery"
+  },
+  {
+   "id": "bioconductor-chromvar",
+   "name": "chromVAR",
+   "description": "Determine variation in chromatin accessibility across sets of annotations or peaks",
+   "categories": [
+    "peak-annotation",
+    "nucleosome-chromatin",
+    "single-cell"
+   ],
+   "tier": "core",
+   "homepage": "https://bioconductor.org/packages/chromVAR",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Library",
+    "Command-line tool"
+   ],
+   "topics": [],
+   "languages": [
+    "R"
+   ],
+   "license": "MIT",
+   "maturity": "",
+   "cost": "",
+   "citations": 1935,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1038/nmeth.4401",
+   "publication_is_preprint": false,
+   "biotools_id": "bioconductor-chromvar",
+   "biotools_url": "https://bio.tools/bioconductor-chromvar",
+   "last_update": "2026-09-01",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [],
+   "_select_reason": "text:\\bchromatin (accessibilit|state|loop",
+   "_identifiers": [
+    "doi:10.1038/nmeth.4401"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/chromVAR"
+   },
+   "_excluded_reason": "duplicate bio.tools registration of chromvar",
+   "featured": "",
+   "primary_category": "peak-annotation"
   },
   {
    "id": "crisprfinder",
@@ -636,6 +630,64 @@
    "_excluded_reason": "Curated resource of ferroptosis regulators; a disease gene list, not a regulatory-genomics tool",
    "featured": "",
    "primary_category": "grn-inference"
+  },
+  {
+   "id": "edger",
+   "name": "edgeR",
+   "description": "Differential expression analysis of sequence count data",
+   "categories": [
+    "peak-calling",
+    "dna-methylation"
+   ],
+   "tier": "core",
+   "homepage": "https://bioconductor.org/packages/edgeR",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Library",
+    "Command-line tool"
+   ],
+   "topics": [
+    "ChIP-seq",
+    "Genetics",
+    "RNA-Seq"
+   ],
+   "languages": [
+    "R"
+   ],
+   "license": "GPL-2.0",
+   "maturity": "",
+   "cost": "",
+   "citations": 684,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1093/nar/gkaf018",
+   "publication_is_preprint": false,
+   "biotools_id": "edger",
+   "biotools_url": "https://bio.tools/edger",
+   "last_update": "2026-09-01",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Differential gene expression analysis"
+   ],
+   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
+   "_identifiers": [
+    "doi:10.1093/nar/gkaf018"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/edgeR"
+   },
+   "_excluded_reason": "Generic differential expression for RNA-seq; admitted by a ChIP-seq text match",
+   "featured": "",
+   "primary_category": "peak-calling"
   },
   {
    "id": "predictprotein_open",
@@ -1341,7 +1393,7 @@
    "citation_note": "",
    "citations_total": null,
    "citations_papers": null,
-   "year": "2020",
+   "year": "",
    "publication": "doi:10.1093/bioinformatics/btaa825",
    "publication_is_preprint": false,
    "biotools_id": "bioconductor-methylclock",
@@ -1350,7 +1402,7 @@
    "source": "bio.tools",
    "tags": [],
    "_operations": [],
-   "_select_reason": "curated: fetched by ID",
+   "_select_reason": "text:\\bDNA methylation|\\bdifferentially m",
    "_identifiers": [
     "doi:10.1093/bioinformatics/btaa825"
    ],
@@ -1471,6 +1523,60 @@
    "_excluded_reason": "Tool models protein families and motifs, not regulatory genomics",
    "featured": "",
    "primary_category": "motif-scanning"
+  },
+  {
+   "id": "bioconductor-planet",
+   "name": "planet",
+   "description": "This package contains R functions to predict biological variables to from placnetal DNA methylation data generated from infinium arrays",
+   "categories": [
+    "dna-methylation"
+   ],
+   "tier": "core",
+   "homepage": "https://bioconductor.org/packages/planet",
+   "repo_url": "https://github.com/wvictor14/planet",
+   "repo_origin": "recorded",
+   "repo_stars": 4,
+   "repo_pushed": "2025-02-02",
+   "repo_archived": false,
+   "repo_language": "R",
+   "repo_license": "",
+   "tool_type": [
+    "Library",
+    "Command-line tool"
+   ],
+   "topics": [],
+   "languages": [
+    "R"
+   ],
+   "license": "GPL-2.0",
+   "maturity": "",
+   "cost": "",
+   "citations": 154,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1186/s12864-020-07186-6",
+   "publication_is_preprint": false,
+   "biotools_id": "bioconductor-planet",
+   "biotools_url": "https://bio.tools/bioconductor-planet",
+   "last_update": "2026-09-01",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [],
+   "_select_reason": "curated: fetched by ID",
+   "_identifiers": [
+    "doi:10.1186/s12864-020-07186-6",
+    "doi:10.1186/s13072-019-0296-3",
+    "doi:10.18129/B9.bioc.planet",
+    "doi:10.18632/aging.102049"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/planet"
+   },
+   "_excluded_reason": "duplicate bio.tools registration of PlaNET",
+   "featured": "",
+   "primary_category": "dna-methylation"
   },
   {
    "id": "mkt",
@@ -2040,6 +2146,57 @@
    "_excluded_reason": "TALENoffer predicts off-targets of TALENs for genome editing, not regulatory elements; admitted on EDAM 'Transcriptional regulatory element prediction' alone",
    "featured": "",
    "primary_category": "tfbs-prediction"
+  },
+  {
+   "id": "bioconductor-tadcompare",
+   "name": "TADCompare",
+   "description": "TADCompare is an R package designed to identify and characterize differential Topologically Associated Domains (TADs) between multiple Hi-C contact matrices",
+   "categories": [
+    "chromatin-3d"
+   ],
+   "tier": "core",
+   "homepage": "https://bioconductor.org/packages/TADCompare",
+   "repo_url": "https://github.com/dozmorovlab/TADCompare",
+   "repo_origin": "recorded",
+   "repo_stars": 27,
+   "repo_pushed": "2026-08-21",
+   "repo_archived": false,
+   "repo_language": "R",
+   "repo_license": "NOASSERTION",
+   "tool_type": [
+    "Library",
+    "Command-line tool"
+   ],
+   "topics": [],
+   "languages": [
+    "R"
+   ],
+   "license": "MIT",
+   "maturity": "",
+   "cost": "",
+   "citations": 93,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.3389/fgene.2020.00158",
+   "publication_is_preprint": false,
+   "biotools_id": "bioconductor-tadcompare",
+   "biotools_url": "https://bio.tools/bioconductor-tadcompare",
+   "last_update": "2026-08-30",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [],
+   "_select_reason": "text:\\bHiChIP\\b|\\bChIA-?PET\\b|\\bCapture-?",
+   "_identifiers": [
+    "doi:10.3389/fgene.2020.00158"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/TADCompare"
+   },
+   "_excluded_reason": "duplicate bio.tools registration of tadcompare",
+   "featured": "",
+   "primary_category": "chromatin-3d"
   },
   {
    "id": "glytoucan",
@@ -2723,6 +2880,62 @@
    "primary_category": "tfbs-prediction"
   },
   {
+   "id": "spectraltad",
+   "name": "SpectralTAD",
+   "description": "an R package for defining a hierarchy of topologically associated domains using spectral clustering",
+   "categories": [
+    "chromatin-3d"
+   ],
+   "tier": "core",
+   "homepage": "http://bioconductor.org/packages/SpectralTAD/",
+   "repo_url": "https://github.com/dozmorovlab/SpectralTAD",
+   "repo_origin": "recorded",
+   "repo_stars": 13,
+   "repo_pushed": "2026-07-15",
+   "repo_archived": false,
+   "repo_language": "R",
+   "repo_license": "NOASSERTION",
+   "tool_type": [],
+   "topics": [
+    "Chromosome conformation capture",
+    "Gene regulation",
+    "Model organisms"
+   ],
+   "languages": [
+    "R"
+   ],
+   "license": "MIT",
+   "maturity": "",
+   "cost": "",
+   "citations": 68,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2020",
+   "publication": "pmid:32689928",
+   "publication_is_preprint": false,
+   "biotools_id": "spectraltad",
+   "biotools_url": "https://bio.tools/spectraltad",
+   "last_update": "2021-02-21",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Clustering",
+    "Gene-set enrichment analysis",
+    "Splitting"
+   ],
+   "_select_reason": "curated: fetched by ID",
+   "_identifiers": [
+    "pmid:32689928"
+   ],
+   "_registries": {
+    "bioconductor": "http://bioconductor.org/packages/SpectralTAD/"
+   },
+   "_excluded_reason": "duplicate bio.tools registration of bioconductor-spectraltad",
+   "featured": "",
+   "primary_category": "chromatin-3d"
+  },
+  {
    "id": "rna-targeting",
    "name": "RNA-targeting",
    "description": "Here, we have predicted CasRx guide efficiency for all human and mouse RefSeq genes",
@@ -3060,6 +3273,60 @@
    "_excluded_reason": "Tool identifies subnetworks of co-expressed genes, not gene-regulatory networks; admitted on EDAM 'Gene regulatory network analysis' alone",
    "featured": "",
    "primary_category": "grn-inference"
+  },
+  {
+   "id": "pgltools-chromatin",
+   "name": "pgltools",
+   "description": "Pgltools is a genomic arithmetic tool suite for manipulation of Hi-C peak and other chromatin interaction data.",
+   "categories": [
+    "chromatin-3d"
+   ],
+   "tier": "core",
+   "homepage": "https://github.com/billgreenwald/pgltools",
+   "repo_url": "https://github.com/billgreenwald/pgltools",
+   "repo_origin": "recorded",
+   "repo_stars": 35,
+   "repo_pushed": "2022-11-23",
+   "repo_archived": false,
+   "repo_language": "Python",
+   "repo_license": "BSD-3-Clause",
+   "tool_type": [
+    "Command-line tool"
+   ],
+   "topics": [
+    "DNA packaging",
+    "Applied mathematics",
+    "Genomics"
+   ],
+   "languages": [
+    "Python"
+   ],
+   "license": "BSD-3-Clause",
+   "maturity": "",
+   "cost": "",
+   "citations": 55,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2017",
+   "publication": "pmid:28388874",
+   "publication_is_preprint": false,
+   "biotools_id": "pgltools-chromatin",
+   "biotools_url": "https://bio.tools/pgltools-chromatin",
+   "last_update": "2019-01-15",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Sequence analysis"
+   ],
+   "_select_reason": "text:\\bchromatin (accessibilit|state|loop",
+   "_identifiers": [
+    "pmid:28388874"
+   ],
+   "_registries": {},
+   "_excluded_reason": "Duplicate bio.tools record for pgltools; the suffix is not a registry prefix, so the id rule in build.py cannot see it",
+   "featured": "",
+   "primary_category": "chromatin-3d"
   },
   {
    "id": "modsubnetbiomident",
@@ -4268,6 +4535,57 @@
    "primary_category": "grn-inference"
   },
   {
+   "id": "bioconductor-chromscape",
+   "name": "ChromSCape",
+   "description": "ChromSCape - Chromatin landscape profiling for Single Cells - is a ready-to-launch user-friendly Shiny Application for the analysis of single-cell epigenomics datasets (scChIP-seq, scATAC-seq, scCUT&Tag, ...) from aligned data to differential analysis & gene set enrichment analysis",
+   "categories": [
+    "single-cell"
+   ],
+   "tier": "core",
+   "homepage": "https://bioconductor.org/packages/ChromSCape",
+   "repo_url": "https://github.com/vallotlab/ChromSCape",
+   "repo_origin": "recorded",
+   "repo_stars": 14,
+   "repo_pushed": "2025-07-30",
+   "repo_archived": false,
+   "repo_language": "R",
+   "repo_license": "",
+   "tool_type": [
+    "Library",
+    "Command-line tool"
+   ],
+   "topics": [],
+   "languages": [
+    "R"
+   ],
+   "license": "GPL-3.0",
+   "maturity": "",
+   "cost": "",
+   "citations": 38,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1038/s41467-020-19542-x",
+   "publication_is_preprint": false,
+   "biotools_id": "bioconductor-chromscape",
+   "biotools_url": "https://bio.tools/bioconductor-chromscape",
+   "last_update": "2026-09-01",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [],
+   "_select_reason": "text:\\bsc(ATAC|-ATAC)|\\bsingle[- ](cell|n",
+   "_identifiers": [
+    "doi:10.1038/s41467-020-19542-x"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/ChromSCape"
+   },
+   "_excluded_reason": "duplicate bio.tools registration of chromscape",
+   "featured": "",
+   "primary_category": "single-cell"
+  },
+  {
    "id": "gidetector",
    "name": "GIDetector",
    "description": "Software that is used to detect genomic islands in prokaryotic genomes",
@@ -4856,6 +5174,60 @@
    "primary_category": "grn-inference"
   },
   {
+   "id": "bioconductor-methreg",
+   "name": "MethReg",
+   "description": "Epigenome-wide association studies (EWAS) detects a large number of DNA methylation differences, often hundreds of differentially methylated regions and thousands of CpGs, that are significantly associated with a disease, many are located in non-coding regions",
+   "categories": [
+    "tfbs-prediction",
+    "grn-inference",
+    "dna-methylation"
+   ],
+   "tier": "core",
+   "homepage": "https://bioconductor.org/packages/MethReg",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Library",
+    "Command-line tool"
+   ],
+   "topics": [],
+   "languages": [
+    "R"
+   ],
+   "license": "GPL-3.0",
+   "maturity": "",
+   "cost": "",
+   "citations": 30,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1093/nar/gkac030",
+   "publication_is_preprint": false,
+   "biotools_id": "bioconductor-methreg",
+   "biotools_url": "https://bio.tools/bioconductor-methreg",
+   "last_update": "2026-09-01",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [],
+   "_select_reason": "text:\\btranscription[- ]factor",
+   "_identifiers": [
+    "doi:10.1093/nar/gkac030",
+    "doi:10.1093/nar/gkac030"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/MethReg"
+   },
+   "_excluded_reason": "duplicate bio.tools registration of methreg",
+   "featured": "",
+   "primary_category": "tfbs-prediction"
+  },
+  {
    "id": "expansin-engineering-db",
    "name": "Expansin Engineering Database",
    "description": "Expansin Engineering Database integrates information on sequence, structure and function of expansins.",
@@ -4911,6 +5283,57 @@
    "_excluded_reason": "Focuses on plant cell wall proteins and carbohydrate binding, not regulatory genomics",
    "featured": "",
    "primary_category": "motif-scanning"
+  },
+  {
+   "id": "bioconductor-shinyepico",
+   "name": "shinyepico",
+   "description": "Shiny\u00c9PICo is a graphical pipeline to analyze Illumina DNA methylation arrays (450k or EPIC)",
+   "categories": [
+    "dna-methylation"
+   ],
+   "tier": "core",
+   "homepage": "https://bioconductor.org/packages/shinyepico",
+   "repo_url": "https://github.com/omorante/shiny_epico",
+   "repo_origin": "recorded",
+   "repo_stars": 6,
+   "repo_pushed": "2023-05-09",
+   "repo_archived": false,
+   "repo_language": "R",
+   "repo_license": "AGPL-3.0",
+   "tool_type": [
+    "Library",
+    "Command-line tool"
+   ],
+   "topics": [],
+   "languages": [
+    "R"
+   ],
+   "license": "AGPL-3.0",
+   "maturity": "",
+   "cost": "",
+   "citations": 28,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1093/bioinformatics/btaa1095",
+   "publication_is_preprint": false,
+   "biotools_id": "bioconductor-shinyepico",
+   "biotools_url": "https://bio.tools/bioconductor-shinyepico",
+   "last_update": "2026-09-01",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [],
+   "_select_reason": "text:\\bDNA methylation|\\bdifferentially m",
+   "_identifiers": [
+    "doi:10.1093/bioinformatics/btaa1095"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/shinyepico"
+   },
+   "_excluded_reason": "duplicate bio.tools registration of shinyepico",
+   "featured": "",
+   "primary_category": "dna-methylation"
   },
   {
    "id": "ippd",
@@ -5926,6 +6349,58 @@
    "_excluded_reason": "Focuses on general topological signal analysis in single-cell data, not specifically on gene-regulatory networks or other regulatory genomics topics; admitted on EDAM 'Gene regulatory network analysis' alone",
    "featured": "",
    "primary_category": "grn-inference"
+  },
+  {
+   "id": "bioconductor-idr2d",
+   "name": "idr2d",
+   "description": "A tool to measure reproducibility between genomic experiments that produce two-dimensional peaks (interactions between peaks), such as ChIA-PET, HiChIP, and HiC",
+   "categories": [
+    "chromatin-3d"
+   ],
+   "tier": "core",
+   "homepage": "https://bioconductor.org/packages/idr2d",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Library",
+    "Command-line tool"
+   ],
+   "topics": [],
+   "languages": [
+    "R"
+   ],
+   "license": "MIT",
+   "maturity": "",
+   "cost": "",
+   "citations": 18,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1093/nar/gkaa030",
+   "publication_is_preprint": false,
+   "biotools_id": "bioconductor-idr2d",
+   "biotools_url": "https://bio.tools/bioconductor-idr2d",
+   "last_update": "2026-08-30",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [],
+   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
+   "_identifiers": [
+    "doi:10.1093/nar/gkaa030",
+    "doi:10.1093/nar/gkaa030"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/idr2d"
+   },
+   "_excluded_reason": "duplicate bio.tools registration of idr2d",
+   "featured": "",
+   "primary_category": "chromatin-3d"
   },
   {
    "id": "mpvnn",
@@ -7816,6 +8291,57 @@
    "primary_category": "grn-inference"
   },
   {
+   "id": "bioconductor-epialleler",
+   "name": "epialleleR",
+   "description": "Epialleles are specific DNA methylation patterns that are mitotically and/or meiotically inherited",
+   "categories": [
+    "dna-methylation"
+   ],
+   "tier": "core",
+   "homepage": "https://bioconductor.org/packages/epialleleR",
+   "repo_url": "https://github.com/BBCG/epialleleR",
+   "repo_origin": "recorded",
+   "repo_stars": 7,
+   "repo_pushed": "2026-01-25",
+   "repo_archived": false,
+   "repo_language": "R",
+   "repo_license": "",
+   "tool_type": [
+    "Library",
+    "Command-line tool"
+   ],
+   "topics": [],
+   "languages": [
+    "R"
+   ],
+   "license": "Artistic-2.0",
+   "maturity": "",
+   "cost": "",
+   "citations": 9,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1093/gigascience/giad087",
+   "publication_is_preprint": false,
+   "biotools_id": "bioconductor-epialleler",
+   "biotools_url": "https://bio.tools/bioconductor-epialleler",
+   "last_update": "2026-08-30",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [],
+   "_select_reason": "text:\\bDNA methylation|\\bdifferentially m",
+   "_identifiers": [
+    "doi:10.1093/gigascience/giad087"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/epialleleR"
+   },
+   "_excluded_reason": "duplicate bio.tools registration of epialleleR",
+   "featured": "",
+   "primary_category": "dna-methylation"
+  },
+  {
    "id": "visgremlin",
    "name": "visGReMLIN",
    "description": "A graph mining based detection and visualization of conserved motifs in 3D protein-ligand interface at the atomic level",
@@ -9599,6 +10125,65 @@
    "primary_category": "grn-inference"
   },
   {
+   "id": "kboost",
+   "name": "KBoost",
+   "description": "KBoost is a R package to infer gene regulatory networks from gene expression data",
+   "categories": [
+    "grn-inference"
+   ],
+   "tier": "core",
+   "homepage": "https://github.com/Luisiglm/KBoost",
+   "repo_url": "https://github.com/Luisiglm/KBoost",
+   "repo_origin": "recorded",
+   "repo_stars": 4,
+   "repo_pushed": "2021-05-12",
+   "repo_archived": false,
+   "repo_language": "R",
+   "repo_license": "",
+   "tool_type": [
+    "Library"
+   ],
+   "topics": [
+    "Molecular interactions, pathways and networks",
+    "Gene expression",
+    "Gene transcripts",
+    "Oncology",
+    "RNA-Seq"
+   ],
+   "languages": [
+    "R"
+   ],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 2,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1101/2021.04.01.438059",
+   "publication_is_preprint": true,
+   "biotools_id": "kboost",
+   "biotools_url": "https://bio.tools/kboost",
+   "last_update": "2021-10-04",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Essential dynamics",
+    "Gene regulatory network analysis",
+    "Gene regulatory network prediction",
+    "Regression analysis"
+   ],
+   "_select_reason": "text:\\btranscription[- ]factor",
+   "_identifiers": [
+    "doi:10.1101/2021.04.01.438059"
+   ],
+   "_registries": {},
+   "_excluded_reason": "duplicate bio.tools registration of bioconductor-kboost",
+   "featured": "",
+   "primary_category": "grn-inference"
+  },
+  {
    "id": "3d-spagnn-e",
    "name": "3D-spaGNN-E",
    "description": "3D-spaGNN-E is a pipeline that develops spatially resolved gene neighborhood network embedding to identify subcellular gene proximity relationships and key subcellular motifs in cell-cell communication",
@@ -9880,12 +10465,12 @@
   {
    "id": "netactivity",
    "name": "NetActivity",
-   "description": "NetActivity is a Bioconductor package that computes gene set activity scores from previously trained sparsely-connected autoencoders",
+   "description": "#' NetActivity enables to compute gene set scores from previously trained sparsely-connected autoencoders",
    "categories": [
     "grn-inference"
    ],
    "tier": "core",
-   "homepage": "http://www.bioconductor.org/packages/NetActivity",
+   "homepage": "https://bioconductor.org/packages/NetActivity",
    "repo_url": "",
    "repo_origin": "",
    "repo_stars": null,
@@ -9896,10 +10481,10 @@
    "tool_type": [],
    "topics": [
     "Gene expression",
-    "RNA-Seq",
     "Microarray experiment",
     "Molecular interactions, pathways and networks",
-    "Oncology"
+    "Oncology",
+    "RNA-Seq"
    ],
    "languages": [
     "R"
@@ -9912,11 +10497,11 @@
    "citations_total": null,
    "citations_papers": null,
    "year": "",
-   "publication": "pmid:38597610",
+   "publication": "doi:10.1093/NAR/GKAE197",
    "publication_is_preprint": false,
    "biotools_id": "netactivity",
    "biotools_url": "https://bio.tools/netactivity",
-   "last_update": "2026-01-14",
+   "last_update": "2026-09-01",
    "source": "bio.tools",
    "tags": [],
    "_operations": [
@@ -9928,11 +10513,10 @@
    ],
    "_select_reason": "operation:Gene regulatory network analysis",
    "_identifiers": [
-    "pmid:38597610"
+    "doi:10.1093/NAR/GKAE197"
    ],
    "_registries": {
-    "bioconductor": "http://www.bioconductor.org/packages/NetActivity",
-    "docker": "https://hub.docker.com/r/yocra3/netactivity_analysis"
+    "bioconductor": "https://bioconductor.org/packages/NetActivity"
    },
    "_excluded_reason": "It computes gene set activity scores from bulk RNA-seq and microarray data, not regulatory genomics; admitted on EDAM 'Gene regulatory network analysis' alone",
    "featured": "",
@@ -11110,6 +11694,110 @@
    "_excluded_reason": "Searches PROTEIN sequences with a motif; not DNA regulatory analysis",
    "featured": "",
    "primary_category": "uncategorised"
+  },
+  {
+   "id": "bioconductor-motifpeeker",
+   "name": "MotifPeeker",
+   "description": "MotifPeeker is used to compare and analyse datasets from epigenomic profiling methods with motif enrichment as the key benchmark",
+   "categories": [
+    "motif-discovery",
+    "motif-scanning"
+   ],
+   "tier": "core",
+   "homepage": "https://bioconductor.org/packages/MotifPeeker",
+   "repo_url": "https://github.com/neurogenomics/MotifPeeker",
+   "repo_origin": "recorded",
+   "repo_stars": 2,
+   "repo_pushed": "2026-04-20",
+   "repo_archived": false,
+   "repo_language": "R",
+   "repo_license": "GPL-3.0",
+   "tool_type": [
+    "Library",
+    "Command-line tool"
+   ],
+   "topics": [],
+   "languages": [
+    "R"
+   ],
+   "license": "GPL-3.0-or-later",
+   "maturity": "",
+   "cost": "",
+   "citations": 0,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1093/bioadv/vbag023",
+   "publication_is_preprint": false,
+   "biotools_id": "bioconductor-motifpeeker",
+   "biotools_url": "https://bio.tools/bioconductor-motifpeeker",
+   "last_update": "2026-08-30",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [],
+   "_select_reason": "text:\\bmotif (discovery|enrichment|scan|s",
+   "_identifiers": [
+    "doi:10.1093/bioadv/vbag023",
+    "doi:10.1093/bioadv/vbag023"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/MotifPeeker"
+   },
+   "_excluded_reason": "duplicate bio.tools registration of motifpeeker",
+   "featured": "",
+   "primary_category": "motif-discovery"
+  },
+  {
+   "id": "bioconductor-periodicdna",
+   "name": "periodicDNA",
+   "description": "This R package helps the user identify k-mers (e.g. di- or tri-nucleotides) present periodically in a set of genomic loci (typically regulatory elements)",
+   "categories": [
+    "regulatory-elements"
+   ],
+   "tier": "core",
+   "homepage": "https://bioconductor.org/packages/periodicDNA",
+   "repo_url": "https://github.com/js2264/periodicDNA",
+   "repo_origin": "recorded",
+   "repo_stars": 6,
+   "repo_pushed": "2022-11-01",
+   "repo_archived": false,
+   "repo_language": "R",
+   "repo_license": "GPL-3.0",
+   "tool_type": [
+    "Library",
+    "Command-line tool"
+   ],
+   "topics": [],
+   "languages": [
+    "R"
+   ],
+   "license": "GPL-3.0",
+   "maturity": "",
+   "cost": "",
+   "citations": null,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.18129/B9.bioc.periodicDNA",
+   "publication_is_preprint": false,
+   "biotools_id": "bioconductor-periodicdna",
+   "biotools_url": "https://bio.tools/bioconductor-periodicdna",
+   "last_update": "2026-09-01",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [],
+   "_select_reason": "text:\\bcis-regulatory|\\bregulatory elemen",
+   "_identifiers": [
+    "doi:10.18129/B9.bioc.periodicDNA"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/periodicDNA"
+   },
+   "_excluded_reason": "duplicate bio.tools registration of periodicdna",
+   "featured": "",
+   "primary_category": "regulatory-elements"
   },
   {
    "id": "bioconductor-metapod",

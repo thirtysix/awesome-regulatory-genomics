@@ -626,6 +626,27 @@ SEED_BIOTOOLS_IDS = [
     # misreading, the tool estimates age from RNA expression and only mentions
     # methylation as background.
     "RsQTL",    # Maps splicing QTLs from RNA-seq; molecular-qtl is a catalog catego
+
+    # Seeded 2026-09-04.
+    # Present in the catalog until 2026-09-04, dropped by a re-harvest that changed
+    # nothing about the rules. bio.tools rewrote 140 of 4,088 descriptions between
+    # sweeps - 68 of them substantially, no EDAM term touched - and these seven fell
+    # below the text rules on the new wording alone. esATAC now carries Rbowtie2s
+    # description verbatim, which is an upstream error rather than a rewording.
+    # Both audit models judged all seven in scope on the NEW text. Seeded because the
+    # filter reads a description we do not control, and a tool should not leave the
+    # catalog because someone upstream reworded a paragraph.
+    # Two others dropped in the same re-harvest and were left out on purpose:
+    # BindingSiteFinder (RNA-binding protein sites) and G4SNVHunter (G-quadruplex).
+    # Both are hard-excluded by name; their old text had slipped past those rules, so
+    # losing them is the correction working, not drift.
+    "cogito",               # Automated reports over ChIP-seq and RNA-seq intervals
+    "esatac",               # ATAC-seq pipeline; upstream description is now Rbowtie2s
+    "fccac",                # Functional CCA over ChIP-seq coverage
+    "methylinheritance",    # Transgenerational DNA methylation inheritance
+    "rtnduals",             # Co-regulatory loops between regulons
+    "systempiper",          # ChIP-seq workflow templates including peak calling
+    "bprmeth",              # Quantifies DNA methylation profiles
 ]
 
 # Free-text queries, for tools whose EDAM annotation is wrong or absent.
@@ -649,6 +670,70 @@ QUERY_FREETEXT = [
     "gene regulatory network",
     "transcription factor database",
     "chromatin accessibility",
+
+    # Added 2026-09-04, from the admission vocabulary rather than from memory.
+    # STRONG_TEXT_PATTERNS decides what classify() admits; this list decides
+    # what the sweep ever fetches. They were written independently and drifted:
+    # 49 of the 71 admission alternatives had no query that would surface them,
+    # so a tool whose description was squarely in scope and whose EDAM terms
+    # were not never arrived to be judged at all. That gap is what the
+    # exhaustive registry pass found - 405 unseen records, 212 of them in scope,
+    # concentrated in exactly the vocabulary missing here: methylation, 3D,
+    # QTLs, histone marks, single-cell.
+    # pipeline/check_query_coverage.py compares the two lists and fails on an
+    # uncovered term, so the drift cannot reopen silently.
+    # Probed before adding: 1,534 hits across the 52 candidates, ~154 pages.
+    # "5C-seq" and "caQTL" returned zero and are left out.
+    "TF binding site",
+    "cis-element",
+    "regulon",
+    "super-enhancer",
+    "sequence logo",
+    "DNA motif",
+    "motif discovery",
+    "position frequency matrix",
+    "position specific scoring matrix",
+    "peak calling",
+    "open chromatin",
+    "scATAC-seq",
+    "single-cell ATAC",
+    "single-cell regulome",
+    "single-cell epigenomics",
+    "massively parallel reporter assay",
+    "MPRA",
+    "STARR-seq",
+    "transcription start site",
+    "CAGE",
+    "HiChIP",
+    "ChIA-PET",
+    "Capture-C",
+    "topologically associating domain",
+    "CTCF",
+    "regulatory variant",
+    "noncoding variant",
+    "WGBS",
+    "RRBS",
+    "methylome",
+    "methyl-seq",
+    "bisulfite sequencing",
+    "DNA methylation",
+    "differentially methylated",
+    "CpG island",
+    "CpG site",
+    "micro-C",
+    "4C-seq",
+    "chromatin loop",
+    "chromatin interaction",
+    "A/B compartment",
+    "loop calling",
+    "loop extrusion",
+    "molecular QTL",
+    "expression quantitative trait locus",
+    "eQTL",
+    "mQTL",
+    "sQTL",
+    "histone modification",
+    "histone mark",
 ]
 
 # Selection is tiered, because EDAM terms differ wildly in how reliably
