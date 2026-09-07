@@ -660,10 +660,42 @@ def main() -> None:
     if PROPOSALS.exists() and not args.no_llm:
         blob = yaml.safe_load(PROPOSALS.read_text()) or {}
         if args.apply_scope:
-            # Two independent out-of-scope votes, from whichever pass produced
-            # them. Both sources require agreement between different models.
-            llm_out_of_scope = dict(blob.get("out_of_scope_confirmed") or {})
-            llm_out_of_scope.update(blob.get("majority_out_of_scope") or {})
+            # A drop needs far more evidence than a keep, because the two
+            # mistakes are not symmetric. A wrong keep sits in the catalog where
+            # anyone can see it and exclude it later; a wrong drop removes the
+            # tool and leaves nothing behind to notice.
+            #
+            # Measured 2026-09-07 on 26 labelled fixtures: the scope pass scored
+            # 21/20/18 across three identical runs, so its own spread is ~3 of
+            # 26. Two prompt variants differed by 1.6, which is inside that
+            # spread and therefore not a difference at all. temperature=0 did
+            # not help - the provider is not deterministic - and on one sample
+            # the pass called MACS out of scope. A single sample from an
+            # instrument like that must never be allowed to subtract.
+            #
+            # So a proposal only drops a tool when it records `runs` samples
+            # that agreed and at least two model FAMILIES. Anything else is
+            # advisory: it stays in the file and is reported, and the tool
+            # stays in the catalog. `agreed_by` naming two DeepSeek ids does not
+            # qualify - DeepInfra served V3.1-Terminus from V4-Flash, so 40 of
+            # the 76 drops in force at the time were one model agreeing with
+            # itself.
+            def _families(entry: dict) -> int:
+                names = entry.get("agreed_by") or []
+                return len({n.split("/")[0].split("-")[0].lower() for n in names
+                            if isinstance(n, str) and "/" in n})
+
+            advisory = {}
+            for key, entry in {**(blob.get("out_of_scope_confirmed") or {}),
+                               **(blob.get("majority_out_of_scope") or {})}.items():
+                entry = entry if isinstance(entry, dict) else {}
+                if (entry.get("runs") or 0) >= 3 and _families(entry) >= 2:
+                    llm_out_of_scope[key] = entry
+                else:
+                    advisory[key] = entry
+            if advisory:
+                print(f"  {len(advisory)} out-of-scope proposals are advisory only "
+                      f"(need runs>=3 across 2+ model families); tools kept")
         for key, entry in (blob.get("categories") or {}).items():
             if entry.get("in_scope") and entry.get("confidence") in ("high", "medium"):
                 proposed.setdefault(key, {})["categories"] = entry["categories"]

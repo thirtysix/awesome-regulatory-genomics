@@ -1,19 +1,19 @@
 {
  "meta": {
   "generated": "2026-09-07",
-  "count": 3024,
-  "from_biotools": 2307,
-  "curated_seeds": 717,
+  "count": 3069,
+  "from_biotools": 2353,
+  "curated_seeds": 716,
   "featured": 18,
-  "with_repo": 1486,
-  "repo_recovered": 52,
+  "with_repo": 1508,
+  "repo_recovered": 53,
   "repo_by_origin": {
-   "recorded": 1181,
-   "inferred": 48,
+   "recorded": 1202,
+   "inferred": 49,
    "curated": 257
   },
-  "llm_assisted": 1670,
-  "llm_scope_dropped": 130
+  "llm_assisted": 1672,
+  "llm_scope_dropped": 21
  },
  "tools": [
   {
@@ -3229,6 +3229,67 @@
    "registries": "bioconductor"
   },
   {
+   "id": "PathwayCommons_SPARQL_endpoint",
+   "name": "PathwayCommons SPARQL endpoint",
+   "description": "Pathway Commons aims to collect and disseminate biological pathway and interaction data",
+   "categories": [
+    "grn-inference"
+   ],
+   "tier": "core",
+   "homepage": "http://rdf.pathwaycommons.org/sparql/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "SPARQL endpoint"
+   ],
+   "topics": [
+    "Systems biology",
+    "Computational biology"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "Mature",
+   "cost": "Free of charge (with restrictions)",
+   "citations": 1161,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2011",
+   "publication": "pmid:21071392",
+   "publication_is_preprint": false,
+   "biotools_id": "PathwayCommons_SPARQL_endpoint",
+   "biotools_url": "https://bio.tools/PathwayCommons_SPARQL_endpoint",
+   "last_update": "2024-11-25",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Query and retrieval"
+   ],
+   "_select_reason": "text:\\bgene regulatory network|\\bregulato",
+   "_identifiers": [
+    "pmid:21071392"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "grn-inference",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/21071392/",
+   "pmid": "21071392",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "",
+   "registries": ""
+  },
+  {
    "id": "DREME",
    "name": "DREME",
    "description": "Discriminative motif discovery for short motifs in large ChIP-seq datasets (superseded by STREME)",
@@ -4682,6 +4743,71 @@
    "citations_recent": 20,
    "citations_recent_year": "2025",
    "license_source": "",
+   "registries": ""
+  },
+  {
+   "id": "SALSA",
+   "name": "SALSA",
+   "description": "> VERY_LOW CONFIDENCE! | > CORRECT NAME OF TOOL COULD ALSO BE 'chromosome-scale', 'reference-quality', 'Hi-C', 'scaffolder' | Integrating Hi-C links with assembly graphs for chromosome-scale assembly | SALSA: A tool to scaffold long read assemblies with Hi-C data | SALSA: A tool to scaffold long read assemblies with Hi-C | This code is used to scaffold your assemblies using Hi-C data",
+   "categories": [
+    "chromatin-3d"
+   ],
+   "tier": "extended",
+   "homepage": "https://github.com/machinegun/SALSA",
+   "repo_url": "https://github.com/machinegun/SALSA",
+   "repo_origin": "recorded",
+   "repo_stars": 189,
+   "repo_pushed": "2024-05-17",
+   "repo_archived": false,
+   "repo_language": "Python",
+   "repo_license": "MIT",
+   "tool_type": [],
+   "topics": [
+    "Sequence assembly",
+    "DNA binding sites",
+    "Mapping"
+   ],
+   "languages": [
+    "C++",
+    "Python"
+   ],
+   "license": "MIT",
+   "maturity": "",
+   "cost": "",
+   "citations": 769,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2019",
+   "publication": "pmid:31433799",
+   "publication_is_preprint": false,
+   "biotools_id": "SALSA",
+   "biotools_url": "https://bio.tools/SALSA",
+   "last_update": "2020-12-16",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "De-novo assembly",
+    "Genome assembly",
+    "Scaffolding"
+   ],
+   "_select_reason": "text+topic:\\bHi-?C\\b|\\bChIA-?PET\\b|\\bHiChIP",
+   "_identifiers": [
+    "pmid:31433799"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "chromatin-3d",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/31433799/",
+   "pmid": "31433799",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "declared",
    "registries": ""
   },
   {
@@ -6823,6 +6949,73 @@
    "doi": "10.1038/nmeth.2832",
    "citations_recent": 15,
    "citations_recent_year": "2025",
+   "license_source": "",
+   "registries": ""
+  },
+  {
+   "id": "dbgap",
+   "name": "dbGAP",
+   "description": "The Database of Genotypes and Phenotypes (dbGAP) is a National Institutes of Health-sponsored repository charged to archive and distribute the data and results from studies that have investigated the interaction of genotype and phenotype in humans",
+   "categories": [
+    "chip-resources",
+    "nucleosome-chromatin"
+   ],
+   "tier": "core",
+   "homepage": "http://www.ncbi.nlm.nih.gov/gap",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Web application",
+    "Database portal"
+   ],
+   "topics": [
+    "Genotype and phenotype",
+    "Epigenomics",
+    "Experimental design and studies",
+    "Rare diseases"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "Mature",
+   "cost": "Free of charge (with restrictions)",
+   "citations": 568,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2014",
+   "publication": "pmid:24297256",
+   "publication_is_preprint": false,
+   "biotools_id": "dbgap",
+   "biotools_url": "https://bio.tools/dbgap",
+   "last_update": "2021-04-17",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Data retrieval",
+    "Deposition",
+    "Genotyping"
+   ],
+   "_select_reason": "text:\\bepigenom(e|ic)s?\\b",
+   "_identifiers": [
+    "pmid:24297256"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "chip-resources",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/24297256/",
+   "pmid": "24297256",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
    "license_source": "",
    "registries": ""
   },
@@ -11165,6 +11358,74 @@
    "doi": "10.1093/nar/gkq1110",
    "citations_recent": 2,
    "citations_recent_year": "2025",
+   "license_source": "",
+   "registries": ""
+  },
+  {
+   "id": "aging-atlas",
+   "name": "Aging Atlas",
+   "description": "Aging Atlas is a curated biomedical database comprising a range of aging-related multi-omics datasets (i.e. transcriptomics, single-cell transcriptomics, epigenomics, proteomics, and pharmacogenomics), as well as bioinformatics tools to query and visualize these datasets.",
+   "categories": [
+    "chip-resources",
+    "nucleosome-chromatin",
+    "single-cell"
+   ],
+   "tier": "core",
+   "homepage": "https://bigd.big.ac.cn/aging/index",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Database portal"
+   ],
+   "topics": [
+    "Pharmacogenomics",
+    "Epigenomics",
+    "RNA-Seq",
+    "Proteomics",
+    "Geriatric medicine"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 351,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2021",
+   "publication": "pmid:33119753",
+   "publication_is_preprint": false,
+   "biotools_id": "aging-atlas",
+   "biotools_url": "https://bio.tools/aging-atlas",
+   "last_update": "2024-11-24",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Data retrieval",
+    "Database search",
+    "Expression analysis"
+   ],
+   "_select_reason": "text:\\bepigenom(e|ic)s?\\b",
+   "_identifiers": [
+    "pmid:33119753"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "chip-resources",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/33119753/",
+   "pmid": "33119753",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
    "license_source": "",
    "registries": ""
   },
@@ -21416,6 +21677,78 @@
    "registries": ""
   },
   {
+   "id": "pipipes",
+   "name": "piPipes",
+   "description": "Coordinated set of pipelines to analyze piRNA (PIWI-interacting RNAs) and transposon-derived RNAs from a variety of high-throughput sequencing libraries, including small RNA, RNA, degradome or 7-methyl guanosine cap analysis of gene expression (CAGE), chromatin immunoprecipitation (ChIP) and genomic DNA-seq.",
+   "categories": [
+    "peak-calling"
+   ],
+   "tier": "core",
+   "homepage": "http://bowhan.github.io/piPipes/",
+   "repo_url": "https://github.com/bowhan/piPipes",
+   "repo_origin": "recorded",
+   "repo_stars": 65,
+   "repo_pushed": "2025-06-22",
+   "repo_archived": false,
+   "repo_language": "HTML",
+   "repo_license": "GPL-3.0",
+   "tool_type": [
+    "Command-line tool"
+   ],
+   "topics": [
+    "ChIP-seq",
+    "Functional, regulatory and non-coding RNA",
+    "Gene expression",
+    "RNA",
+    "DNA",
+    "Sequencing"
+   ],
+   "languages": [
+    "R",
+    "C",
+    "Python",
+    "Shell",
+    "C++",
+    "Perl"
+   ],
+   "license": "GPL-3.0",
+   "maturity": "",
+   "cost": "",
+   "citations": 166,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "pmid:25342065",
+   "publication_is_preprint": false,
+   "biotools_id": "pipipes",
+   "biotools_url": "https://bio.tools/pipipes",
+   "last_update": "2024-11-25",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Gene expression analysis"
+   ],
+   "_select_reason": "text:\\btranscription start site|\\bCAGE\\b",
+   "_identifiers": [
+    "pmid:25342065"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "peak-calling",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/25342065/",
+   "pmid": "25342065",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "repository",
+   "registries": ""
+  },
+  {
    "id": "ringo",
    "name": "Ringo",
    "description": "Reads, assesses quality, visualizes, and identifies enriched genomic regions from ChIP-chip data",
@@ -26906,6 +27239,70 @@
    "registries": ""
   },
   {
+   "id": "SilkDB_3.0",
+   "name": "SilkDB 3.0",
+   "description": "SilkDB is an open-accessibility database and powerful platform that provides comprehensive information on the silkworm (Bombyx mori) genome",
+   "categories": [
+    "chromatin-3d"
+   ],
+   "tier": "extended",
+   "homepage": "https://silkdb.bioinfotoolkits.net",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [
+    "Mapping",
+    "Transcriptomics",
+    "DNA",
+    "Gene and protein families",
+    "Gene regulation"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 131,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2020",
+   "publication": "pmid:31642484",
+   "publication_is_preprint": false,
+   "biotools_id": "SilkDB_3.0",
+   "biotools_url": "https://bio.tools/SilkDB_3.0",
+   "last_update": "2024-11-24",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Genome assembly",
+    "Scaffolding",
+    "Visualisation"
+   ],
+   "_select_reason": "text+topic:\\bHi-?C\\b|\\bChIA-?PET\\b|\\bHiChIP",
+   "_identifiers": [
+    "pmid:31642484"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "chromatin-3d",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/31642484/",
+   "pmid": "31642484",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "",
+   "registries": ""
+  },
+  {
    "id": "dire",
    "name": "DiRE",
    "description": "Predicts distant regulatory elements in higher eukaryotic genomes from co-expressed genes using TFBS profiles and comparative genomics",
@@ -29268,6 +29665,68 @@
    "registries": ""
   },
   {
+   "id": "discovery_environment",
+   "name": "Discovery Environment",
+   "description": "Numerous methods for expression and promoter analysis.",
+   "categories": [],
+   "tier": "core",
+   "homepage": "http://www.cyverse.org/discovery-environment",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Web application"
+   ],
+   "topics": [
+    "Molecular interactions, pathways and networks",
+    "GWAS study",
+    "Phylogenetics"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 113,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2018",
+   "publication": "pmid:29126246",
+   "publication_is_preprint": false,
+   "biotools_id": "discovery_environment",
+   "biotools_url": "https://bio.tools/discovery_environment",
+   "last_update": "2024-11-25",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Genetic mapping",
+    "Phylogenetic tree analysis",
+    "Query and retrieval"
+   ],
+   "_select_reason": "text:\\bpromoter\\b|\\benhancer\\b|\\bsuper-?e",
+   "_identifiers": [
+    "pmid:29126246"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "uncategorised",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/29126246/",
+   "pmid": "29126246",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "",
+   "registries": ""
+  },
+  {
    "id": "EWAS_Data_Hub",
    "name": "EWAS Data Hub",
    "description": "A resource of DNA methylation array data and metadata.",
@@ -29930,6 +30389,66 @@
    "doi": "10.1016/j.crmeth.2022.100182",
    "citations_recent": 28,
    "citations_recent_year": "2025",
+   "license_source": "",
+   "registries": ""
+  },
+  {
+   "id": "pombase_motif_search",
+   "name": "PomBase Motif search",
+   "description": "Search PomBase protein set for a given motif.",
+   "categories": [
+    "motif-scanning"
+   ],
+   "tier": "core",
+   "homepage": "https://www.pombase.org/motif_search",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Web application"
+   ],
+   "topics": [
+    "Sequence sites, features and motifs"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 109,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2015",
+   "publication": "pmid:25361970",
+   "publication_is_preprint": false,
+   "biotools_id": "pombase_motif_search",
+   "biotools_url": "https://bio.tools/pombase_motif_search",
+   "last_update": "2024-11-24",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Sequence motif recognition"
+   ],
+   "_select_reason": "text:\\bmotif (discovery|enrichment|scan|s",
+   "_identifiers": [
+    "pmid:25361970"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "motif-scanning",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/25361970/",
+   "pmid": "25361970",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
    "license_source": "",
    "registries": ""
   },
@@ -32580,6 +33099,76 @@
    "citations_recent": 5,
    "citations_recent_year": "2025",
    "license_source": "declared",
+   "registries": ""
+  },
+  {
+   "id": "dact",
+   "name": "DACT",
+   "description": "DACT is an R package for testing mediation effects in genome-wide epigenetic studies",
+   "categories": [
+    "tfbs-prediction",
+    "nucleosome-chromatin",
+    "dna-methylation"
+   ],
+   "tier": "core",
+   "homepage": "https://github.com/zhonghualiu/DACT",
+   "repo_url": "https://github.com/zhonghualiu/DACT",
+   "repo_origin": "recorded",
+   "repo_stars": 5,
+   "repo_pushed": "2026-03-16",
+   "repo_archived": false,
+   "repo_language": "R",
+   "repo_license": "",
+   "tool_type": [
+    "Library"
+   ],
+   "topics": [
+    "Epigenetics",
+    "Experimental design and studies",
+    "Statistics and probability",
+    "Transcription factors and regulatory sites",
+    "Microarray experiment"
+   ],
+   "languages": [
+    "R"
+   ],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 97,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1080/01621459.2021.1914634",
+   "publication_is_preprint": false,
+   "biotools_id": "dact",
+   "biotools_url": "https://bio.tools/dact",
+   "last_update": "2021-02-22",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Gene methylation analysis",
+    "PTM site prediction",
+    "Statistical calculation"
+   ],
+   "_select_reason": "text:\\bepigenom(e|ic)s?\\b",
+   "_identifiers": [
+    "doi:10.1101/2020.09.20.20198226"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "tfbs-prediction",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://doi.org/10.1080/01621459.2021.1914634",
+   "pmid": "",
+   "doi": "10.1080/01621459.2021.1914634",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "",
    "registries": ""
   },
   {
@@ -36885,6 +37474,77 @@
    "citations_recent": 5,
    "citations_recent_year": "2025",
    "license_source": "",
+   "registries": ""
+  },
+  {
+   "id": "bcbio-nextgen",
+   "name": "Bcbio-nextgen",
+   "description": "Python scripts and modules for automated next gen sequencing analysis",
+   "categories": [
+    "motif-scanning",
+    "peak-calling"
+   ],
+   "tier": "core",
+   "homepage": "https://github.com/chapmanb/bcbb/blob/master/nextgen/README.md",
+   "repo_url": "https://github.com/chapmanb/bcbb",
+   "repo_origin": "recorded",
+   "repo_stars": 644,
+   "repo_pushed": "2025-02-05",
+   "repo_archived": false,
+   "repo_language": "Python",
+   "repo_license": "",
+   "tool_type": [
+    "Script"
+   ],
+   "topics": [
+    "Workflows"
+   ],
+   "languages": [
+    "Python"
+   ],
+   "license": "MIT",
+   "maturity": "Mature",
+   "cost": "",
+   "citations": 82,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2015",
+   "publication": "doi:10.1093/bioinformatics/btv061",
+   "publication_is_preprint": false,
+   "biotools_id": "bcbio-nextgen",
+   "biotools_url": "https://bio.tools/bcbio-nextgen",
+   "last_update": "2018-12-10",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Filtering",
+    "Genome comparison",
+    "Genotyping",
+    "Peak calling",
+    "Read mapping",
+    "Sequence alignment",
+    "Sequence motif recognition",
+    "Sequence trimming",
+    "Sequencing quality control"
+   ],
+   "_select_reason": "operation:Peak calling",
+   "_identifiers": [
+    "doi:10.1093/bioinformatics/btv061"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "motif-scanning",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://doi.org/10.1093/bioinformatics/btv061",
+   "pmid": "",
+   "doi": "10.1093/bioinformatics/btv061",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "declared",
    "registries": ""
   },
   {
@@ -41503,6 +42163,73 @@
    "registries": ""
   },
   {
+   "id": "r_spider",
+   "name": "R spider",
+   "description": "R spider is a web tool for the analysis of a gene list using the systematic knowledge of core pathways and reactions from KEGG and Reactome.",
+   "categories": [
+    "grn-inference"
+   ],
+   "tier": "core",
+   "homepage": "http://mips.helmholtz-muenchen.de/proj/rspider",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Web application"
+   ],
+   "topics": [
+    "Molecular interactions, pathways and networks",
+    "Model organisms",
+    "Endocrinology and metabolism",
+    "Human biology"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 70,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "pmid:20519200",
+   "publication_is_preprint": false,
+   "biotools_id": "r_spider",
+   "biotools_url": "https://bio.tools/r_spider",
+   "last_update": "2024-11-25",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Differential gene expression analysis",
+    "Gene regulatory network analysis",
+    "Gene-set enrichment analysis",
+    "Metabolic network modelling",
+    "Pathway or network analysis"
+   ],
+   "_select_reason": "operation:Gene regulatory network analysis",
+   "_identifiers": [
+    "pmid:20519200"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "grn-inference",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/20519200/",
+   "pmid": "20519200",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "",
+   "registries": ""
+  },
+  {
    "id": "tcof-db",
    "name": "TcoF-DB",
    "description": "Explores human transcription factors and co-factors that regulate transcription via DNA binding or protein-protein interactions",
@@ -43168,6 +43895,72 @@
    "publication_venue": "",
    "publication_url": "https://pubmed.ncbi.nlm.nih.gov/33624746/",
    "pmid": "33624746",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "",
+   "registries": ""
+  },
+  {
+   "id": "salad",
+   "name": "SALAD",
+   "description": "It is a unique comparative genomics database from plant-genome-based proteome data sets",
+   "categories": [
+    "motif-comparison",
+    "comparative"
+   ],
+   "tier": "core",
+   "homepage": "http://salad.dna.affrc.go.jp/salad/en/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Database portal"
+   ],
+   "topics": [
+    "Model organisms",
+    "Plant biology",
+    "Proteins",
+    "Proteomics"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 67,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2009",
+   "publication": "pmid:19854933",
+   "publication_is_preprint": false,
+   "biotools_id": "salad",
+   "biotools_url": "https://bio.tools/salad",
+   "last_update": "2024-11-25",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Clustering",
+    "Phylogenetic tree comparison",
+    "Sequence motif comparison"
+   ],
+   "_select_reason": "operation:Sequence motif comparison",
+   "_identifiers": [
+    "pmid:19854933"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "motif-comparison",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/19854933/",
+   "pmid": "19854933",
    "doi": "",
    "citations_recent": null,
    "citations_recent_year": "",
@@ -46808,6 +47601,76 @@
    "citations_recent": 2,
    "citations_recent_year": "2025",
    "license_source": "",
+   "registries": ""
+  },
+  {
+   "id": "instaGRAAL",
+   "name": "instaGRAAL",
+   "description": "Chromosome-level quality scaffolding of brown algal genomes using InstaGRAAL",
+   "categories": [
+    "chromatin-3d"
+   ],
+   "tier": "extended",
+   "homepage": "https://github.com/koszullab/instaGRAAL",
+   "repo_url": "https://github.com/koszullab/instaGRAAL",
+   "repo_origin": "recorded",
+   "repo_stars": 44,
+   "repo_pushed": "2026-04-27",
+   "repo_archived": false,
+   "repo_language": "Python",
+   "repo_license": "GPL-3.0",
+   "tool_type": [
+    "Command-line tool",
+    "Library"
+   ],
+   "topics": [
+    "Sequence assembly",
+    "Mapping",
+    "Metagenomics",
+    "Statistics and probability",
+    "DNA binding sites"
+   ],
+   "languages": [
+    "Python"
+   ],
+   "license": "GPL-3.0",
+   "maturity": "",
+   "cost": "",
+   "citations": 60,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1186/s13059-020-02041-z",
+   "publication_is_preprint": false,
+   "biotools_id": "instaGRAAL",
+   "biotools_url": "https://bio.tools/instaGRAAL",
+   "last_update": "2020-12-14",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Genetic mapping",
+    "Genome assembly",
+    "Mapping assembly",
+    "Scaffolding"
+   ],
+   "_select_reason": "text+topic:\\bHi-?C\\b|\\bChIA-?PET\\b|\\bHiChIP",
+   "_identifiers": [
+    "doi:10.1101/2019.12.22.882084"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "chromatin-3d",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://doi.org/10.1186/s13059-020-02041-z",
+   "pmid": "",
+   "doi": "10.1186/s13059-020-02041-z",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "declared",
    "registries": ""
   },
   {
@@ -50686,6 +51549,69 @@
    "publication_url": "https://doi.org/10.1186/s12859-015-0728-4",
    "pmid": "",
    "doi": "10.1186/s12859-015-0728-4",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "",
+   "registries": ""
+  },
+  {
+   "id": "pash",
+   "name": "PASH",
+   "description": "Pash 3.0 performs sequence comparison and read mapping and can be employed as a module within diverse configurable analysis pipelines, including ChIP-seq and methylome mapping by whole-genome bisulfite sequencing",
+   "categories": [
+    "nucleosome-chromatin",
+    "dna-methylation"
+   ],
+   "tier": "core",
+   "homepage": "http://www.brl.bcm.tmc.edu/pash/pashDownload.rhtml",
+   "repo_url": "https://github.com/binpash/pash",
+   "repo_origin": "inferred",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Command-line tool"
+   ],
+   "topics": [
+    "Epigenomics",
+    "Epigenetics"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 54,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2010",
+   "publication": "pmid:21092284",
+   "publication_is_preprint": false,
+   "biotools_id": "pash",
+   "biotools_url": "https://bio.tools/pash",
+   "last_update": "2024-11-24",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Bisulfite mapping",
+    "Sequence alignment"
+   ],
+   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
+   "_identifiers": [
+    "pmid:21092284"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "nucleosome-chromatin",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/21092284/",
+   "pmid": "21092284",
+   "doi": "",
    "citations_recent": null,
    "citations_recent_year": "",
    "license_source": "",
@@ -56588,6 +57514,79 @@
    "registries": ""
   },
   {
+   "id": "artdeco",
+   "name": "ARTDeco",
+   "description": "ARTDeco is a pipeline for analyzing and characterizing transcriptional readthrough",
+   "categories": [
+    "tfbs-prediction",
+    "peak-calling",
+    "nucleosome-chromatin"
+   ],
+   "tier": "core",
+   "homepage": "https://github.com/sjroth/ARTDeco",
+   "repo_url": "https://github.com/sjroth/ARTDeco",
+   "repo_origin": "recorded",
+   "repo_stars": 23,
+   "repo_pushed": "2024-05-06",
+   "repo_archived": false,
+   "repo_language": "Python",
+   "repo_license": "MIT",
+   "tool_type": [
+    "Command-line tool",
+    "Workflow"
+   ],
+   "topics": [
+    "Transcription factors and regulatory sites",
+    "RNA-Seq",
+    "Transcriptomics",
+    "Gene transcripts",
+    "Epigenetics"
+   ],
+   "languages": [
+    "Python"
+   ],
+   "license": "MIT",
+   "maturity": "",
+   "cost": "",
+   "citations": 44,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2020",
+   "publication": "pmid:32456667",
+   "publication_is_preprint": false,
+   "biotools_id": "artdeco",
+   "biotools_url": "https://bio.tools/artdeco",
+   "last_update": "2021-01-28",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Deisotoping",
+    "Differential gene expression analysis",
+    "Expression analysis",
+    "Peak calling",
+    "Quantification"
+   ],
+   "_select_reason": "operation:Peak calling",
+   "_identifiers": [
+    "pmid:32456667"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "tfbs-prediction",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/32456667/",
+   "pmid": "32456667",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "declared",
+   "registries": ""
+  },
+  {
    "id": "gbat",
    "name": "GBAT",
    "description": "A gene-based association test for robust detection of trans-gene regulation",
@@ -58087,6 +59086,72 @@
    "doi": "10.1093/bioinformatics/btz929",
    "citations_recent": 2,
    "citations_recent_year": "2025",
+   "license_source": "",
+   "registries": ""
+  },
+  {
+   "id": "fire-pro",
+   "name": "FIRE-pro",
+   "description": "Motif discovery and characterization program for proteins based on mutual information",
+   "categories": [
+    "motif-discovery",
+    "tfbs-prediction"
+   ],
+   "tier": "core",
+   "homepage": "https://tavazoielab.c2b2.columbia.edu/FIRE-pro/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Command-line tool"
+   ],
+   "topics": [
+    "Proteins",
+    "Protein expression",
+    "Transcription factors and regulatory sites"
+   ],
+   "languages": [
+    "Perl"
+   ],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 42,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "pmid:21206902",
+   "publication_is_preprint": false,
+   "biotools_id": "fire-pro",
+   "biotools_url": "https://bio.tools/fire-pro",
+   "last_update": "2024-11-25",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Protein sequence analysis",
+    "Sequence motif discovery"
+   ],
+   "_select_reason": "text:\\bmotif (discovery|enrichment|scan|s",
+   "_identifiers": [
+    "pmid:21206902"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "motif-discovery",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/21206902/",
+   "pmid": "21206902",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
    "license_source": "",
    "registries": ""
   },
@@ -62595,6 +63660,77 @@
    "citations_recent": null,
    "citations_recent_year": "",
    "license_source": "",
+   "registries": ""
+  },
+  {
+   "id": "allenricher",
+   "name": "AllEnricher",
+   "description": "A comprehensive gene set function enrichment tool for both model and non-model species",
+   "categories": [
+    "nucleosome-chromatin"
+   ],
+   "tier": "core",
+   "homepage": "https://github.com/zd105/AllEnricher",
+   "repo_url": "https://github.com/zd105/AllEnricher",
+   "repo_origin": "recorded",
+   "repo_stars": 14,
+   "repo_pushed": "2020-03-23",
+   "repo_archived": false,
+   "repo_language": "Shell",
+   "repo_license": "MIT",
+   "tool_type": [
+    "Script"
+   ],
+   "topics": [
+    "Epigenomics",
+    "Gene expression",
+    "Molecular interactions, pathways and networks",
+    "Pathology",
+    "Ontology and terminology"
+   ],
+   "languages": [
+    "Shell",
+    "Perl",
+    "R"
+   ],
+   "license": "MIT",
+   "maturity": "",
+   "cost": "",
+   "citations": 37,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2020",
+   "publication": "pmid:32183716",
+   "publication_is_preprint": false,
+   "biotools_id": "allenricher",
+   "biotools_url": "https://bio.tools/allenricher",
+   "last_update": "2021-01-23",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Differential gene expression analysis",
+    "Enrichment analysis",
+    "Expression correlation analysis",
+    "Pathway analysis"
+   ],
+   "_select_reason": "text:\\bepigenom(e|ic)s?\\b",
+   "_identifiers": [
+    "pmid:32183716"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "nucleosome-chromatin",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/32183716/",
+   "pmid": "32183716",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "declared",
    "registries": ""
   },
   {
@@ -67395,6 +68531,75 @@
    "registries": ""
   },
   {
+   "id": "genecodis",
+   "name": "GeneCodis",
+   "description": "GeneCodis is a web-based tool for the ontological analysis of lists of genes, proteins, and regulatory elements like miRNAs, transcription factors, and CpGs.",
+   "categories": [
+    "regulatory-elements"
+   ],
+   "tier": "core",
+   "homepage": "https://genecodis.genyo.es",
+   "repo_url": "https://github.com/GENyO-BioInformatics/GeneCodis",
+   "repo_origin": "curated",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Web application"
+   ],
+   "topics": [
+    "Functional, regulatory and non-coding RNA",
+    "Transcription factors and regulatory sites",
+    "Molecular interactions, pathways and networks",
+    "Ontology and terminology",
+    "Epigenetics"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 34,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1101/2021.04.15.439962",
+   "publication_is_preprint": true,
+   "biotools_id": "genecodis",
+   "biotools_url": "https://bio.tools/genecodis",
+   "last_update": "2022-06-14",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Gene-set enrichment analysis",
+    "Query and retrieval",
+    "miRNA expression analysis"
+   ],
+   "_select_reason": "text:\\btranscription[- ]factor",
+   "_identifiers": [
+    "doi:10.1101/2021.04.15.439962"
+   ],
+   "_registries": {},
+   "_llm_applied": [
+    "categories"
+   ],
+   "featured": "",
+   "primary_category": "regulatory-elements",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://doi.org/10.1101/2021.04.15.439962",
+   "pmid": "",
+   "doi": "10.1101/2021.04.15.439962",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "",
+   "registries": ""
+  },
+  {
    "id": "hichipdb",
    "name": "HiChIPdb",
    "description": "Aggregates and annotates HiChIP regulatory interactions with genes and GWAS SNPs across cell types",
@@ -67463,6 +68668,71 @@
    "citations_recent": 16,
    "citations_recent_year": "2025",
    "license_source": "",
+   "registries": ""
+  },
+  {
+   "id": "ismags",
+   "name": "ISMAGS",
+   "description": "A Cytoscape app for motif enumeration with ISMAGS",
+   "categories": [
+    "motif-discovery",
+    "motif-scanning"
+   ],
+   "tier": "core",
+   "homepage": "https://gitlab.psb.ugent.be/thpar/ISMAGS_Cytoscape",
+   "repo_url": "https://github.com/biointec/ismags",
+   "repo_origin": "recorded",
+   "repo_stars": 3,
+   "repo_pushed": "2022-08-17",
+   "repo_archived": false,
+   "repo_language": "Java",
+   "repo_license": "GPL-3.0",
+   "tool_type": [],
+   "topics": [
+    "Sequence sites, features and motifs",
+    "Systems biology",
+    "Protein structural motifs and surfaces"
+   ],
+   "languages": [
+    "Java"
+   ],
+   "license": "GPL-3.0",
+   "maturity": "",
+   "cost": "",
+   "citations": 34,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2017",
+   "publication": "pmid:28158465",
+   "publication_is_preprint": false,
+   "biotools_id": "ismags",
+   "biotools_url": "https://bio.tools/ismags",
+   "last_update": "2021-01-14",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Database search",
+    "Sequence motif discovery",
+    "Sequence motif recognition"
+   ],
+   "_select_reason": "operation:Sequence motif discovery",
+   "_identifiers": [
+    "pmid:28158465"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "motif-discovery",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/28158465/",
+   "pmid": "28158465",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "repository",
    "registries": ""
   },
   {
@@ -72242,6 +73512,76 @@
    "registries": ""
   },
   {
+   "id": "iepicas-dl",
+   "name": "iEpiCas-DL",
+   "description": "Predicting sgRNA activity for CRISPR-mediated epigenome editing by deep learning.",
+   "categories": [
+    "nucleosome-chromatin",
+    "dna-methylation"
+   ],
+   "tier": "core",
+   "homepage": "http://www.sunlab.fun:3838/EpiCas-DL",
+   "repo_url": "https://github.com/yangqianq/EpiCas-DL",
+   "repo_origin": "recorded",
+   "repo_stars": 1,
+   "repo_pushed": "2025-03-07",
+   "repo_archived": false,
+   "repo_language": "Jupyter Notebook",
+   "repo_license": "",
+   "tool_type": [
+    "Web application",
+    "Command-line tool"
+   ],
+   "topics": [
+    "Epigenomics",
+    "Gene expression",
+    "Machine learning",
+    "Methylated DNA immunoprecipitation",
+    "DNA"
+   ],
+   "languages": [
+    "Python"
+   ],
+   "license": "Not licensed",
+   "maturity": "",
+   "cost": "Free of charge",
+   "citations": 30,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2023",
+   "publication": "pmid:36582444",
+   "publication_is_preprint": false,
+   "biotools_id": "iepicas-dl",
+   "biotools_url": "https://bio.tools/iepicas-dl",
+   "last_update": "2023-02-24",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Editing",
+    "PTM site prediction",
+    "Standardisation and normalisation"
+   ],
+   "_select_reason": "text:\\bepigenom(e|ic)s?\\b",
+   "_identifiers": [
+    "pmid:36582444"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "nucleosome-chromatin",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/36582444/",
+   "pmid": "36582444",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "declared",
+   "registries": ""
+  },
+  {
    "id": "NORMAL",
    "name": "NORMAL",
    "description": "Predicts nucleosome positions from genomic sequence data using a modified Gaussian mixture model for improved accuracy",
@@ -74668,6 +76008,75 @@
    "doi": "10.1093/bioinformatics/btaa267",
    "citations_recent": 3,
    "citations_recent_year": "2025",
+   "license_source": "",
+   "registries": ""
+  },
+  {
+   "id": "grok",
+   "name": "GROK",
+   "description": "This tool is \u201cSwiss Army knife\u201d library for processing genomic interval data",
+   "categories": [
+    "peak-calling"
+   ],
+   "tier": "core",
+   "homepage": "http://csbi.ltdk.helsinki.fi/grok/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Library"
+   ],
+   "topics": [
+    "Genomics",
+    "Sequence analysis",
+    "ChIP-seq"
+   ],
+   "languages": [
+    "R",
+    "Shell",
+    "C++",
+    "Python",
+    "Lua"
+   ],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 28,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2013",
+   "publication": "pmid:23702556",
+   "publication_is_preprint": false,
+   "biotools_id": "grok",
+   "biotools_url": "https://bio.tools/grok",
+   "last_update": "2018-12-10",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Filtering",
+    "Formatting"
+   ],
+   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
+   "_identifiers": [
+    "pmid:23702556"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "peak-calling",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/23702556/",
+   "pmid": "23702556",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
    "license_source": "",
    "registries": ""
   },
@@ -82386,6 +83795,72 @@
    "registries": ""
   },
   {
+   "id": "IDDomainSpotter",
+   "name": "IDDomainSpotter",
+   "description": "Compositional bias reveals domains in long disordered protein regions-Insights from transcription factors",
+   "categories": [
+    "tfbs-prediction"
+   ],
+   "tier": "core",
+   "homepage": "http://www.bio.ku.dk/sbinlab/IDDomainSpotter",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Web application"
+   ],
+   "topics": [
+    "NMR",
+    "Transcription factors and regulatory sites",
+    "Protein folds and structural domains",
+    "Biophysics",
+    "Plant biology"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 23,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2020",
+   "publication": "pmid:31642121",
+   "publication_is_preprint": false,
+   "biotools_id": "IDDomainSpotter",
+   "biotools_url": "https://bio.tools/IDDomainSpotter",
+   "last_update": "2020-12-14",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Fold recognition",
+    "Protein disorder prediction",
+    "Visualisation"
+   ],
+   "_select_reason": "text:\\btranscription[- ]factor",
+   "_identifiers": [
+    "pmid:31642121"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "tfbs-prediction",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/31642121/",
+   "pmid": "31642121",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "",
+   "registries": ""
+  },
+  {
    "id": "Inter-Chrom",
    "name": "Inter-Chrom",
    "description": "A novel deep learning framework with dynamic tokenization for identifying chromatin interactions along with motif importance investigation",
@@ -88752,6 +90227,72 @@
    "registries": ""
   },
   {
+   "id": "StanEx1",
+   "name": "StanEx1",
+   "description": "Interscholastic Network To Generate LexA Enhancer Trap Lines in Drosophila.",
+   "categories": [
+    "tfbs-prediction"
+   ],
+   "tier": "core",
+   "homepage": "http://stanex.stanford.edu/about/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Web application"
+   ],
+   "topics": [
+    "Neurobiology",
+    "Transcription factors and regulatory sites",
+    "Molecular interactions, pathways and networks"
+   ],
+   "languages": [
+    "JavaScript",
+    "PHP",
+    "SQL"
+   ],
+   "license": "Unlicense",
+   "maturity": "Mature",
+   "cost": "Free of charge",
+   "citations": 20,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2019",
+   "publication": "pmid:31040111",
+   "publication_is_preprint": false,
+   "biotools_id": "StanEx1",
+   "biotools_url": "https://bio.tools/StanEx1",
+   "last_update": "2020-06-16",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Scaffolding"
+   ],
+   "_select_reason": "text:\\bpromoter\\b|\\benhancer\\b|\\bsuper-?e",
+   "_identifiers": [
+    "pmid:31040111"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "tfbs-prediction",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/31040111/",
+   "pmid": "31040111",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "declared",
+   "registries": ""
+  },
+  {
    "id": "TargetOrtho",
    "name": "TargetOrtho",
    "description": "a phylogenetic footprinting tool to identify transcription factor targets",
@@ -88804,6 +90345,71 @@
    "publication_url": "https://doi.org/10.1534/genetics.113.160721",
    "pmid": "",
    "doi": "10.1534/genetics.113.160721",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "",
+   "registries": ""
+  },
+  {
+   "id": "transsynw",
+   "name": "TransSynW",
+   "description": "A single-cell RNA-sequencing based web application to guide cell conversion experiments",
+   "categories": [
+    "tfbs-prediction",
+    "single-cell"
+   ],
+   "tier": "core",
+   "homepage": "https://transsynw.lcsb.uni.lu/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [
+    "Regenerative medicine",
+    "Transcription factors and regulatory sites",
+    "Cell biology",
+    "RNA-Seq",
+    "Ontology and terminology"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 20,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2021",
+   "publication": "pmid:33125830",
+   "publication_is_preprint": false,
+   "biotools_id": "transsynw",
+   "biotools_url": "https://bio.tools/transsynw",
+   "last_update": "2023-01-19",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Expression profile clustering",
+    "Formatting",
+    "Parsing"
+   ],
+   "_select_reason": "text:\\btranscription[- ]factor",
+   "_identifiers": [
+    "pmid:33125830"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "tfbs-prediction",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/33125830/",
+   "pmid": "33125830",
+   "doi": "",
    "citations_recent": null,
    "citations_recent_year": "",
    "license_source": "",
@@ -90907,6 +92513,71 @@
    "registries": ""
   },
   {
+   "id": "renco",
+   "name": "RENCO",
+   "description": "A C++ based software for automatic generation of ordinary differential equations for gene and protein expression dynamics in artificial regulatory networks.",
+   "categories": [
+    "tfbs-prediction"
+   ],
+   "tier": "core",
+   "homepage": "http://sourceforge.net/projects/renco/",
+   "repo_url": "http://sourceforge.net/projects/renco/",
+   "repo_origin": "recorded",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Command-line tool"
+   ],
+   "topics": [
+    "Systems biology",
+    "Transcription factors and regulatory sites",
+    "Protein expression",
+    "Protein interactions"
+   ],
+   "languages": [
+    "C++"
+   ],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 19,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "pmid:18400774",
+   "publication_is_preprint": false,
+   "biotools_id": "renco",
+   "biotools_url": "https://bio.tools/renco",
+   "last_update": "2024-11-25",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Network simulation"
+   ],
+   "_select_reason": "text:\\bgene regulatory network|\\bregulato",
+   "_identifiers": [
+    "pmid:18400774"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "tfbs-prediction",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/18400774/",
+   "pmid": "18400774",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "",
+   "registries": ""
+  },
+  {
    "id": "rgpdb",
    "name": "RGPDB",
    "description": "Provides root-associated genes and promoter sequences for maize, soybean, and sorghum",
@@ -92089,6 +93760,74 @@
    "citations_recent_year": "2025",
    "license_source": "",
    "registries": "bioconductor"
+  },
+  {
+   "id": "igliosub",
+   "name": "iGlioSub",
+   "description": "An integrative transcriptomic and epigenomic classifier for glioblastoma molecular subtypes.",
+   "categories": [
+    "nucleosome-chromatin"
+   ],
+   "tier": "core",
+   "homepage": "https://github.com/mensenyat/iGlioSub",
+   "repo_url": "https://github.com/mensenyat/iGlioSub",
+   "repo_origin": "recorded",
+   "repo_stars": 3,
+   "repo_pushed": "2021-09-29",
+   "repo_archived": false,
+   "repo_language": "R",
+   "repo_license": "",
+   "tool_type": [
+    "Script"
+   ],
+   "topics": [
+    "Epigenomics",
+    "Epistasis",
+    "Transcriptomics",
+    "Machine learning",
+    "Oncology"
+   ],
+   "languages": [
+    "R"
+   ],
+   "license": "Not licensed",
+   "maturity": "",
+   "cost": "Free of charge",
+   "citations": 18,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2021",
+   "publication": "pmid:34425860",
+   "publication_is_preprint": false,
+   "biotools_id": "igliosub",
+   "biotools_url": "https://bio.tools/igliosub",
+   "last_update": "2022-01-18",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Essential dynamics",
+    "Gene expression profiling",
+    "Gene-set enrichment analysis"
+   ],
+   "_select_reason": "text:\\bepigenom(e|ic)s?\\b",
+   "_identifiers": [
+    "pmid:34425860"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "nucleosome-chromatin",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/34425860/",
+   "pmid": "34425860",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "declared",
+   "registries": ""
   },
   {
    "id": "intad",
@@ -95925,6 +97664,81 @@
    "publication_url": "https://doi.org/10.1038/s41598-021-87074-5",
    "pmid": "",
    "doi": "10.1038/s41598-021-87074-5",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "",
+   "registries": ""
+  },
+  {
+   "id": "onto-tools",
+   "name": "Onto-Tools",
+   "description": "Suite of tools for data mining based on information from Gene Ontology (GO)",
+   "categories": [
+    "tfbs-prediction"
+   ],
+   "tier": "core",
+   "homepage": "http://vortex.cs.wayne.edu/Projects.html",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Web application"
+   ],
+   "topics": [
+    "Gene expression",
+    "Molecular interactions, pathways and networks",
+    "Microarray experiment",
+    "Transcription factors and regulatory sites",
+    "Biotechnology"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 17,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "pmid:12664686",
+   "publication_is_preprint": false,
+   "biotools_id": "onto-tools",
+   "biotools_url": "https://bio.tools/onto-tools",
+   "last_update": "2024-11-25",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Gene expression analysis",
+    "Gene expression profile clustering",
+    "Gene expression profile comparison",
+    "Gene expression profile pathway mapping",
+    "Gene expression profiling"
+   ],
+   "_select_reason": "text:\\bpromoter\\b|\\benhancer\\b|\\bsuper-?e",
+   "_identifiers": [
+    "pmid:12664686",
+    "pmid:12824416",
+    "pmid:11829497",
+    "pmid:17584796",
+    "pmid:16845086",
+    "pmid:12620386",
+    "pmid:15980579",
+    "pmid:15215428"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "tfbs-prediction",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/12664686/",
+   "pmid": "12664686",
+   "doi": "",
    "citations_recent": null,
    "citations_recent_year": "",
    "license_source": "",
@@ -103759,6 +105573,66 @@
    "registries": ""
   },
   {
+   "id": "rbscore",
+   "name": "RBscore",
+   "description": "RNA binding score is a web server to predict RNA/DNA binding sites on proteins.",
+   "categories": [],
+   "tier": "core",
+   "homepage": "http://ahsoka.u-strasbg.fr/rbscore/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Web application"
+   ],
+   "topics": [
+    "DNA binding sites",
+    "Protein binding sites",
+    "Protein properties"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 14,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "pmid:27084939",
+   "publication_is_preprint": false,
+   "biotools_id": "rbscore",
+   "biotools_url": "https://bio.tools/rbscore",
+   "last_update": "2024-11-25",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Prediction and recognition"
+   ],
+   "_select_reason": "text:\\bDNA[- ]binding (site|preference|sp",
+   "_identifiers": [
+    "pmid:27084939"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "uncategorised",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/27084939/",
+   "pmid": "27084939",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "",
+   "registries": ""
+  },
+  {
    "id": "sciddo",
    "name": "SCIDDO",
    "description": "Detects differential chromatin domains from chromatin state segmentation maps",
@@ -104096,6 +105970,67 @@
    "citations_recent": 4,
    "citations_recent_year": "2025",
    "license_source": "declared",
+   "registries": ""
+  },
+  {
+   "id": "trdistiller",
+   "name": "TRDistiller",
+   "description": "A rapid filter that is based on the comparison of composition and order of short strings in the adjacent sequence motifs.",
+   "categories": [],
+   "tier": "core",
+   "homepage": "http://bioinfo.montp.cnrs.fr/?r=TRDistiller",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Command-line tool"
+   ],
+   "topics": [
+    "DNA polymorphism",
+    "Sequence composition, complexity and repeats",
+    "Sequence analysis"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 14,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2014",
+   "publication": "pmid:24681324",
+   "publication_is_preprint": false,
+   "biotools_id": "trdistiller",
+   "biotools_url": "https://bio.tools/trdistiller",
+   "last_update": "2024-11-25",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Protein sequence analysis",
+    "Repeat sequence analysis"
+   ],
+   "_select_reason": "text:\\bsequence logo|\\bsequence motifs?\\b",
+   "_identifiers": [
+    "pmid:24681324"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "uncategorised",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/24681324/",
+   "pmid": "24681324",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "",
    "registries": ""
   },
   {
@@ -108016,6 +109951,75 @@
    "registries": ""
   },
   {
+   "id": "d-mirt",
+   "name": "D-miRT",
+   "description": "D-miRT is a two-stream convolutional neural network for microRNA transcription start site feature integration and identification.",
+   "categories": [
+    "grn-inference",
+    "nucleosome-chromatin"
+   ],
+   "tier": "core",
+   "homepage": "http://hulab.ucf.edu/research/projects/DmiRT/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Command-line tool"
+   ],
+   "topics": [
+    "Functional, regulatory and non-coding RNA",
+    "Machine learning",
+    "RNA-Seq",
+    "Epigenetics",
+    "Gene regulation"
+   ],
+   "languages": [
+    "Python"
+   ],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 12,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "pmid:33707582",
+   "publication_is_preprint": false,
+   "biotools_id": "d-mirt",
+   "biotools_url": "https://bio.tools/d-mirt",
+   "last_update": "2021-08-24",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Gene regulatory network prediction",
+    "miRNA expression analysis",
+    "miRNA target prediction"
+   ],
+   "_select_reason": "text:\\btranscription start site|\\bCAGE\\b",
+   "_identifiers": [
+    "pmid:33707582"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "grn-inference",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/33707582/",
+   "pmid": "33707582",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "",
+   "registries": ""
+  },
+  {
    "id": "D3GRN",
    "name": "D3GRN",
    "description": "Infers gene regulatory networks from gene-expression data by transforming regulatory relationships into functional decomposition problems and solving them with ARNI, bootstrapping and area-based scoring",
@@ -109270,6 +111274,76 @@
    "citations_recent": 1,
    "citations_recent_year": "2025",
    "license_source": "",
+   "registries": ""
+  },
+  {
+   "id": "maracas",
+   "name": "MARACAS",
+   "description": "ALGAEFUN with MARACAS, microALGAE FUNctional enrichment tool for MicroAlgae RnA-seq and Chip-seq AnalysiS.",
+   "categories": [
+    "peak-calling"
+   ],
+   "tier": "core",
+   "homepage": "https://github.com/fran-romero-campero/MARACAS",
+   "repo_url": "https://github.com/fran-romero-campero/MARACAS",
+   "repo_origin": "recorded",
+   "repo_stars": 0,
+   "repo_pushed": "2023-07-09",
+   "repo_archived": false,
+   "repo_language": "Scheme",
+   "repo_license": "GPL-3.0",
+   "tool_type": [
+    "Command-line tool"
+   ],
+   "topics": [
+    "ChIP-seq",
+    "RNA-Seq",
+    "Gene expression",
+    "Agricultural science",
+    "Gene transcripts"
+   ],
+   "languages": [
+    "Scheme"
+   ],
+   "license": "GPL-3.0",
+   "maturity": "",
+   "cost": "Free of charge",
+   "citations": 12,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2022",
+   "publication": "pmid:35361110",
+   "publication_is_preprint": false,
+   "biotools_id": "maracas",
+   "biotools_url": "https://bio.tools/maracas",
+   "last_update": "2022-07-26",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Deposition",
+    "Differential gene expression profiling",
+    "Gene-set enrichment analysis",
+    "RNA-Seq analysis",
+    "RNA-Seq quantification"
+   ],
+   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
+   "_identifiers": [
+    "pmid:35361110"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "peak-calling",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/35361110/",
+   "pmid": "35361110",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "declared",
    "registries": ""
   },
   {
@@ -115043,6 +117117,88 @@
    "registries": ""
   },
   {
+   "id": "bpforms",
+   "name": "BpForms",
+   "description": "BpForms is a toolkit for unambiguously describing the molecular structure (atoms and bonds) of DNA, RNA, and proteins, including non-canonical monomeric forms (subunits which compose polymers), crosslinks, nicks, and circular topologies",
+   "categories": [
+    "chip-resources",
+    "nucleosome-chromatin"
+   ],
+   "tier": "core",
+   "homepage": "https://www.bpforms.org",
+   "repo_url": "https://github.com/KarrLab/bpforms",
+   "repo_origin": "recorded",
+   "repo_stars": 7,
+   "repo_pushed": "2020-10-05",
+   "repo_archived": false,
+   "repo_language": "Python",
+   "repo_license": "MIT",
+   "tool_type": [
+    "Command-line tool",
+    "Library",
+    "Web application",
+    "Web API"
+   ],
+   "topics": [
+    "Biochemistry",
+    "Chemical biology",
+    "Genetics",
+    "Epigenomics",
+    "Systems biology",
+    "Biochemistry",
+    "Nucleic acids",
+    "Proteins",
+    "Sequence sites, features and motifs"
+   ],
+   "languages": [
+    "Python"
+   ],
+   "license": "MIT",
+   "maturity": "Emerging",
+   "cost": "Free of charge",
+   "citations": 10,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2020",
+   "publication": "pmid:32423472",
+   "publication_is_preprint": false,
+   "biotools_id": "bpforms",
+   "biotools_url": "https://bio.tools/bpforms",
+   "last_update": "2024-11-24",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Nucleic acid comparison",
+    "Nucleic acid property calculation",
+    "Protein property calculation",
+    "Sequence analysis",
+    "Sequence conversion",
+    "Sequence visualisation",
+    "Validation"
+   ],
+   "_select_reason": "text:\\bepigenom(e|ic)s?\\b",
+   "_identifiers": [
+    "pmid:32423472"
+   ],
+   "_registries": {
+    "pypi": "https://pypi.org/project/bpforms/"
+   },
+   "featured": "",
+   "primary_category": "chip-resources",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/32423472/",
+   "pmid": "32423472",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "declared",
+   "registries": "pypi"
+  },
+  {
    "id": "CATCH-UP",
    "name": "CATCH-UP",
    "description": "A High-Throughput Upstream-Pipeline for Bulk ATAC-Seq and ChIP-Seq Data",
@@ -117559,6 +119715,76 @@
    "registries": ""
   },
   {
+   "id": "spechap",
+   "name": "SpecHap",
+   "description": "SpecHap is an ultra fast phasing algorithm based on spectral graph analysis",
+   "categories": [
+    "nucleosome-chromatin",
+    "chromatin-3d"
+   ],
+   "tier": "extended",
+   "homepage": "https://github.com/deepomicslab/SpecHap",
+   "repo_url": "https://github.com/deepomicslab/SpecHap",
+   "repo_origin": "recorded",
+   "repo_stars": 12,
+   "repo_pushed": "2023-12-06",
+   "repo_archived": false,
+   "repo_language": "C++",
+   "repo_license": "NOASSERTION",
+   "tool_type": [
+    "Command-line tool"
+   ],
+   "topics": [
+    "Whole genome sequencing",
+    "Human genetics",
+    "Epigenomics"
+   ],
+   "languages": [
+    "C",
+    "C++",
+    "Python",
+    "Shell"
+   ],
+   "license": "MIT",
+   "maturity": "",
+   "cost": "Free of charge",
+   "citations": 10,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2021",
+   "publication": "pmid:34403470",
+   "publication_is_preprint": false,
+   "biotools_id": "spechap",
+   "biotools_url": "https://bio.tools/spechap",
+   "last_update": "2024-11-24",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Haplotype mapping",
+    "Linkage disequilibrium calculation",
+    "Phasing"
+   ],
+   "_select_reason": "text+topic:\\bHi-?C\\b|\\bChIA-?PET\\b|\\bHiChIP",
+   "_identifiers": [
+    "pmid:34403470"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "nucleosome-chromatin",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/34403470/",
+   "pmid": "34403470",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "declared",
+   "registries": ""
+  },
+  {
    "id": "spikchip",
    "name": "spikChIP",
    "description": "Performs multiple alternative normalization corrections on ChIP-seq data with spike-in using a local regression strategy",
@@ -119474,6 +121700,64 @@
    "publication_url": "https://doi.org/10.1093/bioinformatics/btaf074",
    "pmid": "",
    "doi": "10.1093/bioinformatics/btaf074",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "",
+   "registries": ""
+  },
+  {
+   "id": "gpcr-sas",
+   "name": "GPCR-SAS",
+   "description": "The G Protein-Coupled Receptors-Sequence Analysis and Statistics (GPCR-SAS) web application provides a set of tools to perform comparative analysis of sequence positions between receptors, based on a curated structural-informed multiple sequence alignment",
+   "categories": [],
+   "tier": "core",
+   "homepage": "http://lmc.uab.cat/gpcrsas/",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Web application"
+   ],
+   "topics": [
+    "Computational biology",
+    "Protein structure analysis",
+    "Protein interactions"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 9,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2018",
+   "publication": "pmid:30044824",
+   "publication_is_preprint": false,
+   "biotools_id": "gpcr-sas",
+   "biotools_url": "https://bio.tools/gpcr-sas",
+   "last_update": "2024-11-24",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [],
+   "_select_reason": "text:\\bsequence logo|\\bsequence motifs?\\b",
+   "_identifiers": [
+    "pmid:30044824"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "uncategorised",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/30044824/",
+   "pmid": "30044824",
+   "doi": "",
    "citations_recent": null,
    "citations_recent_year": "",
    "license_source": "",
@@ -126414,6 +128698,72 @@
    "registries": ""
   },
   {
+   "id": "tlsea",
+   "name": "TLSEA",
+   "description": "Tool for lncRNA set enrichment analysis based on multi-source heterogeneous information fusion.",
+   "categories": [
+    "grn-inference"
+   ],
+   "tier": "core",
+   "homepage": "http://www.lirmed.com:5003/tlsea",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Desktop application"
+   ],
+   "topics": [
+    "Functional, regulatory and non-coding RNA",
+    "Molecular interactions, pathways and networks",
+    "Pathology",
+    "Gene expression",
+    "Oncology"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "Free of charge",
+   "citations": 8,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2023",
+   "publication": "pmid:37205123",
+   "publication_is_preprint": false,
+   "biotools_id": "tlsea",
+   "biotools_url": "https://bio.tools/tlsea",
+   "last_update": "2024-11-24",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Gene functional annotation",
+    "Gene regulatory network analysis",
+    "Gene-set enrichment analysis"
+   ],
+   "_select_reason": "operation:Gene regulatory network analysis",
+   "_identifiers": [
+    "pmid:37205123"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "grn-inference",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/37205123/",
+   "pmid": "37205123",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "",
+   "registries": ""
+  },
+  {
    "id": "Tulip",
    "name": "Tulip",
    "description": "Simulates ChIP-seq data using statistical models of key experimental steps",
@@ -130828,6 +133178,72 @@
    "citations_recent": 0,
    "citations_recent_year": "2025",
    "license_source": "declared",
+   "registries": ""
+  },
+  {
+   "id": "sigprofilertopography",
+   "name": "SigProfilerTopography",
+   "description": "SigProfilerTopography is a Python package that allows evaluating the effect of chromatin organization and other genomic features on mutational signatures in cancer genomes, providing insights into the biological mechanisms shaping mutation patterns.",
+   "categories": [
+    "tfbs-prediction",
+    "nucleosome-chromatin"
+   ],
+   "tier": "core",
+   "homepage": "https://github.com/AlexandrovLab/SigProfilerTopography",
+   "repo_url": "https://github.com/AlexandrovLab/SigProfilerTopography",
+   "repo_origin": "recorded",
+   "repo_stars": 24,
+   "repo_pushed": "2026-07-08",
+   "repo_archived": false,
+   "repo_language": "Python",
+   "repo_license": "BSD-2-Clause",
+   "tool_type": [],
+   "topics": [
+    "Genetic variation",
+    "Transcription factors and regulatory sites",
+    "Epigenetics",
+    "Oncology",
+    "ATAC-seq"
+   ],
+   "languages": [
+    "Python"
+   ],
+   "license": "BSD-2-Clause",
+   "maturity": "",
+   "cost": "",
+   "citations": 7,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "pmid:40394581",
+   "publication_is_preprint": false,
+   "biotools_id": "sigprofilertopography",
+   "biotools_url": "https://bio.tools/sigprofilertopography",
+   "last_update": "2026-02-22",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "DNA transcription",
+    "Variant calling"
+   ],
+   "_select_reason": "text:\\bchromatin (accessibilit|state|loop",
+   "_identifiers": [
+    "pmid:40394581"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "tfbs-prediction",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/40394581/",
+   "pmid": "40394581",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "repository",
    "registries": ""
   },
   {
@@ -138007,6 +140423,74 @@
    "registries": ""
   },
   {
+   "id": "cdna-detector",
+   "name": "cDNA-detector",
+   "description": "cDNA-detector is a Python tool for detecting and removing contaminating cDNA from vectors and other sources in DNA-Seq data (ATAC-Seq, ChIP-Seq, WES, etc).",
+   "categories": [
+    "peak-calling"
+   ],
+   "tier": "core",
+   "homepage": "https://github.com/rheinbaylab/cDNA-detector",
+   "repo_url": "https://github.com/rheinbaylab/cDNA-detector",
+   "repo_origin": "recorded",
+   "repo_stars": 3,
+   "repo_pushed": "2021-11-05",
+   "repo_archived": false,
+   "repo_language": "Python",
+   "repo_license": "BSD-3-Clause",
+   "tool_type": [
+    "Command-line tool"
+   ],
+   "topics": [
+    "Gene transcripts",
+    "Sequencing",
+    "DNA",
+    "Gene expression",
+    "RNA immunoprecipitation"
+   ],
+   "languages": [
+    "Python"
+   ],
+   "license": "BSD-3-Clause",
+   "maturity": "",
+   "cost": "Free of charge (with restrictions)",
+   "citations": 5,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1186/s12859-021-04529-2",
+   "publication_is_preprint": false,
+   "biotools_id": "cdna-detector",
+   "biotools_url": "https://bio.tools/cdna-detector",
+   "last_update": "2021-12-15",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Peak calling",
+    "Read pre-processing",
+    "Variant calling"
+   ],
+   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
+   "_identifiers": [
+    "doi:10.1101/2021.08.11.455962"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "peak-calling",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://doi.org/10.1186/s12859-021-04529-2",
+   "pmid": "",
+   "doi": "10.1186/s12859-021-04529-2",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "declared",
+   "registries": ""
+  },
+  {
    "id": "cell2location",
    "name": "Cell2location",
    "description": "Infers cell type abundances from spatial transcriptomics data, also applicable to spatial chromatin accessibility data",
@@ -138211,45 +140695,58 @@
    "registries": ""
   },
   {
-   "id": "ChIPWig",
+   "id": "chipwig",
    "name": "ChIPWig",
-   "description": "a random access-enabling lossless and lossy compression method for ChIP-seq data",
+   "description": "Random access-enabling lossless and lossy compression method for ChIP-seq data.",
    "categories": [
     "chip-resources"
    ],
-   "tier": "seed",
+   "tier": "core",
    "homepage": "https://github.com/vidarmehr/ChIPWig-v2",
    "repo_url": "https://github.com/vidarmehr/ChIPWig-v2",
-   "repo_origin": "curated",
+   "repo_origin": "recorded",
    "repo_stars": 6,
    "repo_pushed": "2017-10-19",
    "repo_archived": false,
    "repo_language": "C++",
    "repo_license": "",
-   "tool_type": [],
-   "topics": [],
-   "languages": [],
+   "tool_type": [
+    "Library"
+   ],
+   "topics": [
+    "ChIP-seq",
+    "Data governance",
+    "Laboratory information management"
+   ],
+   "languages": [
+    "C++"
+   ],
    "license": "",
    "maturity": "",
    "cost": "",
    "citations": 5,
    "citation_note": "",
-   "year": "",
    "citations_total": null,
    "citations_papers": null,
+   "year": "2018",
    "publication": "doi:10.1093/bioinformatics/btx685",
    "publication_is_preprint": false,
-   "biotools_id": "",
-   "biotools_url": "",
-   "last_update": "",
-   "source": "curated",
+   "biotools_id": "chipwig",
+   "biotools_url": "https://bio.tools/chipwig",
+   "last_update": "2018-12-10",
+   "source": "bio.tools",
    "tags": [],
-   "_operations": [],
-   "_select_reason": "curated seed",
+   "_operations": [
+    "Formatting"
+   ],
+   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
    "_identifiers": [
     "doi:10.1093/bioinformatics/btx685"
    ],
    "_registries": {},
+   "_llm_applied": [
+    "categories"
+   ],
    "featured": "",
    "primary_category": "chip-resources",
    "homepage_status": "",
@@ -143165,6 +145662,70 @@
    "doi": "10.3390/biology11050684",
    "citations_recent": 2,
    "citations_recent_year": "2025",
+   "license_source": "declared",
+   "registries": ""
+  },
+  {
+   "id": "atlasxploretm",
+   "name": "AtlasXploreTM",
+   "description": "Web platform for visualizing and sharing spatial epigenome data.",
+   "categories": [
+    "nucleosome-chromatin"
+   ],
+   "tier": "core",
+   "homepage": "https://web.atlasxomics.com",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Web application"
+   ],
+   "topics": [
+    "Epigenomics",
+    "Imaging"
+   ],
+   "languages": [
+    "Python",
+    "R"
+   ],
+   "license": "MIT",
+   "maturity": "",
+   "cost": "Free of charge",
+   "citations": 4,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "2023",
+   "publication": "pmid:37478350",
+   "publication_is_preprint": false,
+   "biotools_id": "atlasxploretm",
+   "biotools_url": "https://bio.tools/atlasxploretm",
+   "last_update": "2024-11-24",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Visualisation"
+   ],
+   "_select_reason": "text:\\bepigenom(e|ic)s?\\b",
+   "_identifiers": [
+    "pmid:37478350"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "nucleosome-chromatin",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://pubmed.ncbi.nlm.nih.gov/37478350/",
+   "pmid": "37478350",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
    "license_source": "declared",
    "registries": ""
   },
@@ -154653,6 +157214,70 @@
    "citations_recent_year": "2025",
    "license_source": "declared",
    "registries": "bioconductor"
+  },
+  {
+   "id": "sbgn_bricks",
+   "name": "SBGN bricks",
+   "description": "SBGN Bricks Ontology as a tool to describe recurring concepts in molecular networks",
+   "categories": [
+    "tfbs-prediction"
+   ],
+   "tier": "core",
+   "homepage": "http://sbgnbricks.org",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [],
+   "topics": [
+    "Ontology and terminology",
+    "Molecular interactions, pathways and networks",
+    "Systems biology",
+    "Endocrinology and metabolism",
+    "Transcription factors and regulatory sites"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 3,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1101/2020.11.16.369330",
+   "publication_is_preprint": true,
+   "biotools_id": "sbgn_bricks",
+   "biotools_url": "https://bio.tools/sbgn_bricks",
+   "last_update": "2021-02-11",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Data retrieval",
+    "Mapping",
+    "Sequence assembly"
+   ],
+   "_select_reason": "text:\\bgene regulatory network|\\bregulato",
+   "_identifiers": [
+    "doi:10.1101/2020.11.16.369330"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "tfbs-prediction",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://doi.org/10.1101/2020.11.16.369330",
+   "pmid": "",
+   "doi": "10.1101/2020.11.16.369330",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "",
+   "registries": ""
   },
   {
    "id": "scask",
@@ -172990,6 +175615,71 @@
    "registries": "bioconductor"
   },
   {
+   "id": "bacon",
+   "name": "bacon",
+   "description": "Bacon can be used to remove inflation and bias often observed in epigenome- and transcriptome-wide association studies",
+   "categories": [
+    "nucleosome-chromatin"
+   ],
+   "tier": "core",
+   "homepage": "https://bioconductor.org/packages/bacon",
+   "repo_url": "https://github.com/mvaniterson/bacon",
+   "repo_origin": "recorded",
+   "repo_stars": 0,
+   "repo_pushed": "2024-04-24",
+   "repo_archived": false,
+   "repo_language": "R",
+   "repo_license": "",
+   "tool_type": [
+    "Library",
+    "Command-line tool"
+   ],
+   "topics": [
+    "Epigenomics",
+    "GWAS study",
+    "Transcriptomics"
+   ],
+   "languages": [
+    "R"
+   ],
+   "license": "GPL-2.0-or-later",
+   "maturity": "",
+   "cost": "",
+   "citations": null,
+   "citation_note": "no publication recorded",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "",
+   "publication_is_preprint": false,
+   "biotools_id": "bacon",
+   "biotools_url": "https://bio.tools/bacon",
+   "last_update": "2026-09-01",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Standardisation and normalisation"
+   ],
+   "_select_reason": "text:\\bepigenom(e|ic)s?\\b",
+   "_identifiers": [],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/bacon"
+   },
+   "featured": "",
+   "primary_category": "nucleosome-chromatin",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "",
+   "pmid": "",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "declared",
+   "registries": "bioconductor"
+  },
+  {
    "id": "bart-cancer",
    "name": "BART Cancer",
    "description": "Displays putative transcriptional regulators responsible for differential gene expression in 15 cancer types from TCGA, using BART predictions",
@@ -182041,6 +184731,76 @@
    "registries": "docker"
   },
   {
+   "id": "gdcrnatools",
+   "name": "GDCRNATools",
+   "description": "This is an easy-to-use package for downloading, organizing, and integrative analyzing RNA expression data in GDC with an emphasis on deciphering the lncRNA-mRNA related ceRNA regulatory network in cancer",
+   "categories": [],
+   "tier": "core",
+   "homepage": "https://bioconductor.org/packages/GDCRNATools",
+   "repo_url": "https://git.bioconductor.org/packages/GDCRNATools",
+   "repo_origin": "recorded",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Library"
+   ],
+   "topics": [
+    "Data management",
+    "Functional, regulatory and non-coding RNA",
+    "Gene expression",
+    "Gene regulation",
+    "RNA",
+    "RNA-Seq"
+   ],
+   "languages": [
+    "R"
+   ],
+   "license": "Artistic-2.0",
+   "maturity": "",
+   "cost": "",
+   "citations": null,
+   "citation_note": "publication not indexed by OpenAlex",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.18129/B9.bioc.GDCRNATools",
+   "publication_is_preprint": false,
+   "biotools_id": "gdcrnatools",
+   "biotools_url": "https://bio.tools/gdcrnatools",
+   "last_update": "2026-09-01",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Enrichment analysis",
+    "Gene-set enrichment analysis",
+    "RNA-Seq analysis",
+    "microRNA detection"
+   ],
+   "_select_reason": "text:\\bgene regulatory network|\\bregulato",
+   "_identifiers": [
+    "doi:10.18129/B9.bioc.GDCRNATools"
+   ],
+   "_registries": {
+    "bioconductor": "https://bioconductor.org/packages/GDCRNATools"
+   },
+   "featured": "",
+   "primary_category": "uncategorised",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://doi.org/10.18129/B9.bioc.GDCRNATools",
+   "pmid": "",
+   "doi": "10.18129/B9.bioc.GDCRNATools",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "declared",
+   "registries": "bioconductor"
+  },
+  {
    "id": "geneattribution",
    "name": "geneAttribution",
    "description": "Identification of the most likely gene or genes through which variation at a given genomic locus in the human genome acts",
@@ -185708,6 +188468,73 @@
    "citations_recent_year": "",
    "license_source": "declared",
    "registries": "bioconductor"
+  },
+  {
+   "id": "longgenedb",
+   "name": "LongGeneDB",
+   "description": "A data hub for long genes",
+   "categories": [
+    "chip-resources",
+    "nucleosome-chromatin"
+   ],
+   "tier": "core",
+   "homepage": "https://longgenedb.com",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Database portal"
+   ],
+   "topics": [
+    "Epigenomics",
+    "Pathology",
+    "Gene expression",
+    "Gene transcripts",
+    "Evolutionary biology"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "",
+   "citations": 0,
+   "citation_note": "",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "doi:10.1101/2020.09.08.281220",
+   "publication_is_preprint": true,
+   "biotools_id": "longgenedb",
+   "biotools_url": "https://bio.tools/longgenedb",
+   "last_update": "2021-02-19",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Database search",
+    "Expression analysis",
+    "Visualisation"
+   ],
+   "_select_reason": "text:\\bepigenom(e|ic)s?\\b",
+   "_identifiers": [
+    "doi:10.1101/2020.09.08.281220"
+   ],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "chip-resources",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "https://doi.org/10.1101/2020.09.08.281220",
+   "pmid": "",
+   "doi": "10.1101/2020.09.08.281220",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "",
+   "registries": ""
   },
   {
    "id": "LORSEN",
@@ -192313,6 +195140,61 @@
    "registries": "bioconductor"
   },
   {
+   "id": "pluto_bio",
+   "name": "Pluto Bio",
+   "description": "Pluto empowers scientific teams to manage and analyze all of their data from sequencing/omics experiments (e.g. RNA-seq, CUT&RUN) plus low-throughput (e.g. ELISA, imaging, cell counts, etc) quantitative assays",
+   "categories": [],
+   "tier": "core",
+   "homepage": "https://pluto.bio",
+   "repo_url": "",
+   "repo_origin": "",
+   "repo_stars": null,
+   "repo_pushed": "",
+   "repo_archived": null,
+   "repo_language": "",
+   "repo_license": "",
+   "tool_type": [
+    "Bioinformatics portal",
+    "Web service"
+   ],
+   "topics": [
+    "Bioinformatics"
+   ],
+   "languages": [],
+   "license": "",
+   "maturity": "",
+   "cost": "Commercial",
+   "citations": null,
+   "citation_note": "no publication recorded",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "",
+   "publication_is_preprint": false,
+   "biotools_id": "pluto_bio",
+   "biotools_url": "https://bio.tools/pluto_bio",
+   "last_update": "2022-10-26",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [],
+   "_select_reason": "text:\\bChIP[- ]?(seq|chip|exo|nexus)\\b|\\b",
+   "_identifiers": [],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "uncategorised",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "",
+   "pmid": "",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "",
+   "registries": ""
+  },
+  {
    "id": "poweredbiseq",
    "name": "POWEREDBiSeq",
    "description": "This tool is for maximizing power and sensitivity to identify between-group differences in DNA methylation",
@@ -194147,6 +197029,62 @@
    "registries": ""
   },
   {
+   "id": "ricepilaf",
+   "name": "RicePilaf",
+   "description": "RicePilaf is a web app for post-GWAS/QTL analysis that performs a slew of novel bioinformatics analyses to cross GWAS results and QTL mappings with a host of publicly available rice databases",
+   "categories": [],
+   "tier": "core",
+   "homepage": "https://github.com/bioinfodlsu/rice-pilaf",
+   "repo_url": "https://github.com/bioinfodlsu/rice-pilaf",
+   "repo_origin": "recorded",
+   "repo_stars": 5,
+   "repo_pushed": "2026-02-14",
+   "repo_archived": false,
+   "repo_language": "Python",
+   "repo_license": "MIT",
+   "tool_type": [
+    "Web application"
+   ],
+   "topics": [
+    "GWAS study"
+   ],
+   "languages": [
+    "Python"
+   ],
+   "license": "MIT",
+   "maturity": "Emerging",
+   "cost": "Free of charge",
+   "citations": null,
+   "citation_note": "no publication recorded",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "",
+   "publication_is_preprint": false,
+   "biotools_id": "ricepilaf",
+   "biotools_url": "https://bio.tools/ricepilaf",
+   "last_update": "2026-08-26",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [],
+   "_select_reason": "text:\\btranscription[- ]factor",
+   "_identifiers": [],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "uncategorised",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "",
+   "pmid": "",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "declared",
+   "registries": ""
+  },
+  {
    "id": "rispice",
    "name": "RiSPICE",
    "description": "Prioritizes non-coding rice variants by integrating predicted chromatin effects from a fine-tuned DNA language model",
@@ -194589,6 +197527,72 @@
    "citations_recent_year": "",
    "license_source": "declared",
    "registries": "bioconductor"
+  },
+  {
+   "id": "Scan",
+   "name": "Scan",
+   "description": "Scanning sample-specific miRNA regulation from bulk and single-cell RNA-sequencing data",
+   "categories": [
+    "grn-inference",
+    "single-cell"
+   ],
+   "tier": "core",
+   "homepage": "https://github.com/zhangjunpeng411/Scan",
+   "repo_url": "https://github.com/zhangjunpeng411/Scan",
+   "repo_origin": "recorded",
+   "repo_stars": 7,
+   "repo_pushed": "2024-10-05",
+   "repo_archived": false,
+   "repo_language": "HTML",
+   "repo_license": "AGPL-3.0",
+   "tool_type": [
+    "Script"
+   ],
+   "topics": [
+    "Bioinformatics",
+    "Gene regulation",
+    "Molecular interactions, pathways and networks",
+    "Transcriptomics"
+   ],
+   "languages": [
+    "R",
+    "MATLAB"
+   ],
+   "license": "AGPL-3.0",
+   "maturity": "",
+   "cost": "",
+   "citations": null,
+   "citation_note": "no publication recorded",
+   "citations_total": null,
+   "citations_papers": null,
+   "year": "",
+   "publication": "",
+   "publication_is_preprint": false,
+   "biotools_id": "Scan",
+   "biotools_url": "https://bio.tools/Scan",
+   "last_update": "2023-11-17",
+   "source": "bio.tools",
+   "tags": [],
+   "_operations": [
+    "Gene regulatory network prediction",
+    "miRNA expression analysis"
+   ],
+   "_select_reason": "operation:Gene regulatory network prediction",
+   "_identifiers": [],
+   "_registries": {},
+   "featured": "",
+   "primary_category": "grn-inference",
+   "homepage_status": "",
+   "repo_status": "",
+   "publication_title": "",
+   "publication_venue": "",
+   "publication_url": "",
+   "pmid": "",
+   "doi": "",
+   "citations_recent": null,
+   "citations_recent_year": "",
+   "license_source": "declared",
+   "registries": ""
   },
   {
    "id": "scCNMF",
