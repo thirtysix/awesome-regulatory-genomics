@@ -647,6 +647,28 @@ SEED_BIOTOOLS_IDS = [
     "rtnduals",             # Co-regulatory loops between regulons
     "systempiper",          # ChIP-seq workflow templates including peak calling
     "bprmeth",              # Quantifies DNA methylation profiles
+
+    # Seeded 2026-09-07.
+    # Dropped by llm_out_of_scope, restored after a real second opinion. 40 of the 76
+    # records that vote was still dropping cited agreement between V4-Flash and
+    # V3.1-Terminus - and DeepInfra served V3.1-Terminus from V4-Flash, so that was one
+    # model agreeing with itself. Re-audited with GLM-5, a genuinely different family:
+    # 25 of 76 came back in scope from both, 22 split, 29 confirmed out.
+    # These 9 are the subset the categoriser could also place in a catalog category.
+    # instaGRAAL met the same bar and is deliberately NOT here: it is a Hi-C genome
+    # scaffolder, and assembly is out of scope in writing. SALSA is the same kind of
+    # tool and stays out too; the pair only diverged because the categoriser gave one
+    # of them chromatin-3d, which is the detector being noisy rather than a real
+    # difference between them.
+    "SCOM",                  # grn-inference
+    "bioword",               # motif-discovery
+    "derfinder",             # peak-calling
+    "epivisr",               # dna-methylation
+    "genepalette",           # motif-scanning
+    "minepath",              # grn-inference
+    "ewas_open_platform",    # dna-methylation
+    "numbat-multiome",       # single-cell
+    "transcrispr",           # motif-scanning
 ]
 
 # Free-text queries, for tools whose EDAM annotation is wrong or absent.
