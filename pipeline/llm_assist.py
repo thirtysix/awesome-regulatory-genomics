@@ -375,6 +375,9 @@ def main() -> None:
                     help="retry model for invalid or low-confidence bulk output")
     ap.add_argument("--no-escalate", action="store_true")
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--samples", type=int, default=3,
+                    help="independent verdicts per model before a drop counts; "
+                         "1 disables the stability requirement")
     ap.add_argument("--only-uncategorised", action="store_true",
                     help="categorise: only rows the rules left with no category")
     ap.add_argument("--workers", type=int, default=8,
@@ -387,6 +390,34 @@ def main() -> None:
     if not api_key:
         sys.exit("DEEPINFRA_API_KEY is not set. This stage is optional; the rest of "
                  "the pipeline runs without it.")
+
+    def store(block: str, produced: dict, partial: bool | None = None) -> int:
+        """Write a proposal block, merging when the run only saw a subset.
+
+        A full run REPLACES: an entry whose rule-derived value has caught up
+        drops out of `produced`, and replacing is what retires it. A filtered
+        run has no opinion about the records it never looked at, so replacing
+        there deletes them. Both halves of that have bitten: an
+        --only-uncategorised run cut `categories` from 741 to 58, and three
+        weeks later a --limit 3 run cut `admitted_out_of_scope` from 250 to 0.
+        The second happened AFTER the first was fixed, because the fix was
+        applied at one call site instead of to the pattern. Hence this.
+        """
+        if partial is None:
+            partial = bool(args.limit or args.only_uncategorised)
+        if partial:
+            merged = dict(proposals.get(block) or {})
+            merged.update(produced)
+            proposals[block] = merged
+            print(f"  {block}: {len(produced)} from this run, merged into "
+                  f"{len(merged)} (filtered run)")
+        else:
+            proposals[block] = produced
+        return len(proposals[block])
+
+    def _family(model_id: str) -> str:
+        """Vendor prefix, for checking that a confirmation is a real second opinion."""
+        return model_id.split("/")[0].split("-")[0].lower()
 
     jobs = {j.strip() for j in args.jobs.split(",") if j.strip()}
     unknown = jobs - {"categorise", "describe", "adjudicate", "audit-scope", "verify-scope"}
@@ -505,16 +536,8 @@ def main() -> None:
         # tools it never looked at, so it must merge - replacing there silently
         # discards every proposal outside the filter. Found the hard way: one
         # `--only-uncategorised` run cut the block from 741 entries to 58.
-        partial = bool(args.limit or args.only_uncategorised)
-        if partial:
-            merged = dict(proposals.get("categories") or {})
-            merged.update(out)
-            proposals["categories"] = merged
-            print(f"  {len(out)} differ from the rule-derived categories "
-                  f"(merged into {len(merged)}; filtered run)")
-        else:
-            proposals["categories"] = out
-            print(f"  {len(out)} differ from the rule-derived categories")
+        store("categories", out)
+        print(f"  {len(out)} differ from the rule-derived categories")
 
     # --- describe -----------------------------------------------------------
     if "describe" in jobs:
@@ -565,8 +588,8 @@ def main() -> None:
                               "was": source}}
 
         out = run_batch(tools, do_describe, "describe")
-        proposals["descriptions"] = out
-        proposals["paper_mismatch"] = mismatches
+        store("descriptions", out)
+        store("paper_mismatch", mismatches)
         print(f"  {len(out)} rewritten; {n_paper} had a paper to draw on, "
               f"{len(tools) - len(out)} left as harvested")
         if mismatches:
@@ -595,7 +618,7 @@ def main() -> None:
                                       "filter_said": t.get("reason", "")}}
 
         out = run_batch(rejects, do_adjudicate, "adjudicate")
-        proposals["false_negatives"] = out
+        store("false_negatives", out)
         print(f"  {len(out)} flagged as wrongly excluded")
 
     # --- audit-scope --------------------------------------------------------
@@ -610,6 +633,15 @@ def main() -> None:
                 if str(t.get("_select_reason") or "").startswith(("operation:", "weak-"))]
         thin = thin[: args.limit] if args.limit else thin
         second = args.escalate_model
+        if _family(second) == _family(args.model):
+            # The confirmation has to come from a different vendor to mean
+            # anything. DeepInfra served deepseek-ai/DeepSeek-V3.1-Terminus from
+            # DeepSeek-V4-Flash, silently, and 40 catalog drops were recorded as
+            # "agreed by two models" when one model had agreed with itself. The
+            # ids differed; the model did not.
+            sys.exit(f"  {args.model} and {second} are the same family. A drop "
+                     f"needs a second opinion from a different vendor; pass "
+                     f"--escalate-model with one.")
 
         def scope_prompt(t):
             paper = paper_context(t)
@@ -625,50 +657,91 @@ def main() -> None:
                 lines.append(f"Paper abstract: {paper['abstract'][:1500]}")
             return "\n".join(lines)
 
-        def ask(model, t):
-            key = f"audit-scope:{model}:{digest(t['name'], t.get('description') or '')}"
+        def ask(model, t, samples=1):
+            """`samples` independent verdicts from one model.
+
+            The cache key carries the sample count, and the whole VOTE is what
+            gets stored. Caching a single answer per (model, record) - which is
+            what this did until 2026-09-09 - makes the pass look perfectly
+            stable on any re-run while hiding that the underlying model does not
+            agree with itself: measured on 26 fixtures it scored 21/20/18 across
+            three identical runs, and called MACS out of scope on one of them.
+            The cache was not wrong about what it stored; it was answering a
+            question ("what did this model say once?") that nobody wanted.
+            """
+            key = (f"audit-scope:{model}:x{samples}:"
+                   f"{digest(t['name'], t.get('description') or '')}")
             with lock:
                 if key in cache and not args.refresh:
                     return cache[key]
-            try:
-                text, cost, _ = call(model, SCOPE_AUDIT_SYSTEM, scope_prompt(t), api_key)
-            except Exception:                               # noqa: BLE001
-                return None
+            votes = []
+            for _ in range(samples):
+                try:
+                    text, cost, _ = call(model, SCOPE_AUDIT_SYSTEM, scope_prompt(t), api_key)
+                except Exception:                           # noqa: BLE001
+                    return None
+                with lock:
+                    stats["spend"] += cost
+                res = parse_json(text)
+                if not (res and isinstance(res.get("in_scope"), bool)):
+                    return None
+                votes.append(res)
+            out = {"in_scope": votes[0]["in_scope"],
+                   "unanimous": len({v["in_scope"] for v in votes}) == 1,
+                   "runs": samples,
+                   "n_out": sum(1 for v in votes if v["in_scope"] is False),
+                   "reason": votes[0].get("reason", ""),
+                   "confidence": votes[0].get("confidence", "medium")}
             with lock:
-                stats["spend"] += cost
-            res = parse_json(text)
-            if not (res and isinstance(res.get("in_scope"), bool)):
-                return None
-            with lock:
-                cache[key] = res
-            return res
+                cache[key] = out
+            return out
 
         # A sweep whose control case fails measures nothing. Two records that
         # must come back in scope and two that must come back out; if any of the
         # four is wrong the prompt or the model is not fit and the run aborts
         # rather than reporting a rate.
+        # Controls come from the ENRICHED records, not the built catalog. A
+        # negative control is a record that should be judged out of scope - so
+        # once the pipeline works, it has been dropped and is no longer in the
+        # catalog to look up. sitehound-web vanished exactly that way, and the
+        # sweep aborted on a missing control while behaving correctly.
         by_id = {t["id"]: t for t in catalog}
+        for rec in read_json(ENRICHED).get("list", []):
+            by_id.setdefault(rec["biotoolsID"], {
+                "id": rec["biotoolsID"], "name": rec.get("name", ""),
+                "description": rec.get("description") or "",
+                "_operations": [o.get("term", "") for f in (rec.get("function") or [])
+                                for o in (f.get("operation") or [])],
+                "topics": [t.get("term", "") for t in (rec.get("topic") or [])],
+                "_select_reason": rec.get("_select_reason", "")})
         controls = [("macs", True), ("jaspar", True),
                     ("sitehound-web", False), ("m6ampred", False)]
         print("audit-scope: checking controls")
         for cid, want in controls:
             if cid not in by_id:
                 sys.exit(f"  control {cid} is not in the catalog; cannot validate the sweep")
-            got = ask(args.model, by_id[cid])
+            got = ask(args.model, by_id[cid], samples=args.samples)
             if not got or got["in_scope"] is not want:
                 sys.exit(f"  control {cid} expected in_scope={want}, got "
                          f"{got and got['in_scope']}. Aborting rather than reporting a rate.")
-            print(f"  ok {cid}: in_scope={want}")
+            if not got["unanimous"]:
+                # A control that flickers has already failed. It says the
+                # instrument cannot hold an answer it is certain about, which
+                # is exactly the property the sweep depends on.
+                sys.exit(f"  control {cid} was not unanimous over {args.samples} "
+                         f"samples ({got['n_out']} out of {got['runs']} said out of "
+                         f"scope). Aborting: the pass is not stable enough to act on.")
+            print(f"  ok {cid}: in_scope={want} unanimous over {args.samples}")
 
         print(f"audit-scope: {len(thin)} thinly-admitted records via {args.model}, "
               f"confirmed with {second} ({args.workers} workers)")
 
         def do_audit(t):
-            first = ask(args.model, t)
-            if not first or first["in_scope"]:
-                return None
-            confirm = ask(second, t)
-            if not confirm or confirm["in_scope"]:
+            first = ask(args.model, t, samples=args.samples)
+            if not first or first["in_scope"] or not first["unanimous"]:
+                return None                    # unstable counts as keep
+            confirm = ask(second, t, samples=args.samples)
+            if not confirm or confirm["in_scope"] or not confirm["unanimous"]:
                 return None                    # disagreement: keep it, the safe direction
             return {t["id"]: {"name": t["name"],
                               "description": t.get("description", ""),
@@ -676,10 +749,12 @@ def main() -> None:
                               "citations": t.get("citations") or 0,
                               "reason": first.get("reason", ""),
                               "confidence": first.get("confidence", "medium"),
+                              "runs": first["runs"] + confirm["runs"],
+                              "unanimous": True,
                               "agreed_by": [args.model, second]}}
 
         out = run_batch(thin, do_audit, "audit-scope")
-        proposals["admitted_out_of_scope"] = out
+        store("admitted_out_of_scope", out)
         print(f"  {len(out)}/{len(thin)} flagged out of scope by BOTH models")
 
         # A reviewable file, in the shape overlay.yaml: exclude expects, so a
@@ -727,6 +802,15 @@ def main() -> None:
         by_id = {t["id"]: t for t in catalog}
         items = [by_id[k] for k in flagged if k in by_id]
         second = args.escalate_model
+        if _family(second) == _family(args.model):
+            # The confirmation has to come from a different vendor to mean
+            # anything. DeepInfra served deepseek-ai/DeepSeek-V3.1-Terminus from
+            # DeepSeek-V4-Flash, silently, and 40 catalog drops were recorded as
+            # "agreed by two models" when one model had agreed with itself. The
+            # ids differed; the model did not.
+            sys.exit(f"  {args.model} and {second} are the same family. A drop "
+                     f"needs a second opinion from a different vendor; pass "
+                     f"--escalate-model with one.")
         print(f"verify-scope: re-checking {len(items)} out-of-scope flags "
               f"with {second} ({args.workers} workers)")
 
@@ -753,7 +837,7 @@ def main() -> None:
                               "agreed_by": [args.model, second]}}
 
         confirmed = run_batch(items, do_verify, "verify-scope")
-        proposals["out_of_scope_confirmed"] = confirmed
+        store("out_of_scope_confirmed", confirmed)
         print(f"  {len(confirmed)}/{len(items)} confirmed out of scope by both models "
               f"({len(items) - len(confirmed)} disagreements kept in the catalog)")
 

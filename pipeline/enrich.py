@@ -135,7 +135,12 @@ def load_bioc_views(session: requests.Session, max_age_days: int = 7) -> dict[st
         if cur.get("Package"):
             pkgs[cur["Package"]] = " ".join(
                 filter(None, [cur.get("URL"), cur.get("BugReports")]))
-        BIOC_VIEWS.write_text(json.dumps({"fetched_at": time.time(), "packages": pkgs}))
+        # write_json, not a bare json.dumps: BugReports fields carry maintainer
+        # addresses (mailto: and bare), and only write_json redacts. A bare dump
+        # here put two of them into a public commit; the same slip put ten into
+        # repo_map.json and cost a history rewrite. Every cache write goes
+        # through the redacting boundary, without exception.
+        write_json(BIOC_VIEWS, {"fetched_at": time.time(), "packages": pkgs})
         return pkgs
     except (requests.RequestException, RegistryUnavailable):
         # Serve a stale index rather than nothing: a week-old repo mapping is far
