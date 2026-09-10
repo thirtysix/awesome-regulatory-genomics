@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-09-07",
+  "generated": "2026-09-10",
   "count": 3069,
   "from_biotools": 2353,
   "curated_seeds": 716,
@@ -12,7 +12,7 @@
    "inferred": 49,
    "curated": 257
   },
-  "llm_assisted": 1672,
+  "llm_assisted": 1665,
   "llm_scope_dropped": 21
  },
  "tools": [
@@ -5685,7 +5685,7 @@
   {
    "id": "rnbeads",
    "name": "RnBeads",
-   "description": "Analyzes DNA methylation data at single-CpG resolution from any experimental protocol",
+   "description": "RnBeads facilitates comprehensive analysis of various types of DNA methylation data at the genome scale.",
    "categories": [
     "nucleosome-chromatin",
     "dna-methylation"
@@ -5735,9 +5735,6 @@
    "_registries": {
     "bioconductor": "https://bioconductor.org/packages/RnBeads"
    },
-   "_llm_applied": [
-    "description"
-   ],
    "featured": "",
    "primary_category": "nucleosome-chromatin",
    "homepage_status": "",
@@ -25903,7 +25900,7 @@
   {
    "id": "linnorm",
    "name": "Linnorm",
-   "description": "Transforms large-scale count data from RNA-seq, scRNA-seq, or ChIP-seq for parametric tests and implements cell subpopulation, differential expression, and network analyses",
+   "description": "Linnorm is an algorithm for normalizing and transforming RNA-seq, single cell RNA-seq, ChIP-seq count data or any large scale count data",
    "categories": [
     "peak-calling",
     "single-cell"
@@ -25954,9 +25951,6 @@
    "_registries": {
     "bioconductor": "https://bioconductor.org/packages/Linnorm/"
    },
-   "_llm_applied": [
-    "description"
-   ],
    "featured": "",
    "primary_category": "peak-calling",
    "homepage_status": "",
@@ -28957,7 +28951,7 @@
   {
    "id": "memes",
    "name": "memes",
-   "description": "Provides an R interface to the MEME Suite for motif analysis on DNA, RNA, and protein sequences",
+   "description": "A seamless interface to the MEME Suite family of tools for motif analysis",
    "categories": [
     "motif-discovery",
     "motif-scanning",
@@ -29015,9 +29009,6 @@
    "_registries": {
     "bioconductor": "https://bioconductor.org/packages/memes/"
    },
-   "_llm_applied": [
-    "description"
-   ],
    "featured": "",
    "primary_category": "motif-discovery",
    "homepage_status": "",
@@ -29870,7 +29861,7 @@
   {
    "id": "mspc",
    "name": "MSPC",
-   "description": "Combines p-values of overlapping peaks from ChIP-seq replicates to evaluate significance with user-defined thresholds",
+   "description": "The rmspc package runs MSPC (Multiple Sample Peak Calling) software using R",
    "categories": [
     "peak-calling"
    ],
@@ -29919,9 +29910,6 @@
    "_registries": {
     "bioconductor": "https://bioconductor.org/packages/rmspc"
    },
-   "_llm_applied": [
-    "description"
-   ],
    "featured": "",
    "primary_category": "peak-calling",
    "homepage_status": "",
@@ -33984,7 +33972,7 @@
   {
    "id": "tfbsfinder",
    "name": "TFBSfinder",
-   "description": "Identifies transcription factor binding sites from ChIP and microarray data using conservation and clustering methods",
+   "description": "It is an identification method that utilizes several data sources",
    "categories": [
     "motif-discovery",
     "tfbs-prediction"
@@ -34037,8 +34025,7 @@
    ],
    "_registries": {},
    "_llm_applied": [
-    "categories",
-    "description"
+    "categories"
    ],
    "featured": "",
    "primary_category": "motif-discovery",
@@ -71516,7 +71503,7 @@
   {
    "id": "bobro",
    "name": "BoBro",
-   "description": "Predicts cis-regulatory motifs from promoter sequences using a bottleneck-breaking algorithm",
+   "description": "BOTTLENECK BROKEN TOOL is a software \u00a0for prediction of cis-regulatory motifs in a given set of promoter sequences.",
    "categories": [
     "motif-discovery",
     "regulatory-elements"
@@ -71564,8 +71551,7 @@
    ],
    "_registries": {},
    "_llm_applied": [
-    "categories",
-    "description"
+    "categories"
    ],
    "featured": "",
    "primary_category": "motif-discovery",
@@ -101497,7 +101483,7 @@
   {
    "id": "alggen",
    "name": "ALGGEN",
-   "description": "Provides tools for multiple sequence alignment, EST assembly, and detection of transcription factor binding sites, repeats, and transposons",
+   "description": "Provides various tools for multiple sequence alignments, clustering, and assembly of ESTs",
    "categories": [
     "tfbs-prediction",
     "regulatory-elements"
@@ -101553,9 +101539,6 @@
     "pmid:15681873"
    ],
    "_registries": {},
-   "_llm_applied": [
-    "description"
-   ],
    "featured": "",
    "primary_category": "tfbs-prediction",
    "homepage_status": "unreachable",
@@ -122753,7 +122736,7 @@
   {
    "id": "moonlightr",
    "name": "MoonlightR",
-   "description": "Identifies candidate cancer driver genes from TCGA expression data by inferring gene regulatory networks and scoring biological processes",
+   "description": "The understanding of cancer mechanism requires the identification of genes playing a role in the development of the pathology and the characterization of their role",
    "categories": [
     "grn-inference"
    ],
@@ -122804,9 +122787,6 @@
    "_registries": {
     "bioconductor": "https://bioconductor.org/packages/MoonlightR/"
    },
-   "_llm_applied": [
-    "description"
-   ],
    "featured": "",
    "primary_category": "grn-inference",
    "homepage_status": "",
@@ -184653,7 +184633,7 @@
   {
    "id": "gcmodeller",
    "name": "GCModeller",
-   "description": "Models and analyzes genomic data for systems biology and metabolic pathway prediction",
+   "description": "GCModeller: genomics CAD(Computer Assistant Design) Modeller System",
    "categories": [
     "grn-inference"
    ],
@@ -184713,9 +184693,6 @@
    "_registries": {
     "docker": "https://hub.docker.com/r/xieguigang/gcmodeller-env"
    },
-   "_llm_applied": [
-    "description"
-   ],
    "featured": "",
    "primary_category": "grn-inference",
    "homepage_status": "",
@@ -189763,7 +189740,7 @@
   {
    "id": "methodical",
    "name": "methodical",
-   "description": "Identifies genomic regions where DNA methylation is correlated with transcription by combining RNA-seq and WGBS data",
+   "description": "DNA methylation is generally considered to be associated with transcriptional silencing",
    "categories": [
     "regulatory-elements"
    ],
@@ -189817,8 +189794,7 @@
     "bioconductor": "https://bioconductor.org/packages/methodical/"
    },
    "_llm_applied": [
-    "categories",
-    "description"
+    "categories"
    ],
    "featured": "",
    "primary_category": "regulatory-elements",

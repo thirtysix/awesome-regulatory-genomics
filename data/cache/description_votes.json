@@ -1,0 +1,10302 @@
+{
+ "3div|3|888443460": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "9aaTAD|3|1626945015": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "APEC|3|681579682": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ApicoTFdb|3|418467314": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "BSGatlas|3|3353948529": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "BayesPI-BAR2|3|1342961556": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "BindSpace|3|836208028": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "CGIDLA|3|3995659095": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "CSI_NGS_Portal|3|98979357": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ChAsE_Chromatin_Analysis_and_Exploration|3|3602490431": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ChEA3|3|255306094": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ChIPSummitDB|3|2783257221": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ChIPdig|3|3811021188": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "CiiiDER|3|3332262707": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ComHub|3|867093538": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "D3GRN|3|3531394962": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "DAMEfinder|3|521126191": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "DRV|3|618663866": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "EPEE|3|865246737": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "EPIP|3|4227311162": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "EpiAlignment|3|2454336728": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "EpiCompare|3|3628336064": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "EpiSAFARI|3|618422435": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "Epigenomics_Workflow_on_Galaxy_and_Jupyter|3|3239120538": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "GOPHER|3|3067869231": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "GkmExplain|3|4033631524": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "Graph_Peak_Caller|3|1768185624": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "HOT|3|4124417498": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    false,
+    false
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 2,
+  "phrases": [
+   "Identifies high-occupancy target regions from ChIP-seq data"
+  ]
+ },
+ "ImmuneRegulation|3|3677481134": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "MASSIF|3|1737277975": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "MCOT|3|577999626": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "MPRAnator|3|2948220140": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "MethBase|3|136128275": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "MutSpot|3|1063340246": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "MutaNET|3|1831293086": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "OnTAD|3|3122818807": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "PCHi-C|3|610176644": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "PIRCh-seq|3|3133281923": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "PRP|3|2446266615": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "PlantRegMap|3|2754061620": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "Plant_Regulomics|3|1891784000": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "PromoterPredict|3|3896690606": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "RAEdb|3|1978329479": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "REPIC|3|2346647616": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "RSAT-position-analysis|3|2136706523": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "TFmiR2|3|2804571020": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "TGS-Lite|3|27875873": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "TMB|3|1626123242": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "TOBIAS|3|886849963": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "YAPP|3|4040032309": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "abasy-atlas|3|2304021483": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "abc4pwm|3|2399800967": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "adaliftover|3|1747723006": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "adastra|3|1864207662": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "adsn|3|4197922437": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "agingreg|3|2652223766": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "aiap|3|2938119782": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "aimodules|3|2150918430": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "alggen|3|3300633204": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    false,
+    false,
+    false
+   ]
+  },
+  "family_unanimous": true,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 3,
+  "phrases": [
+   "multiple sequence alignment",
+   "EST assembly",
+   "detection of transcription factor binding sites"
+  ]
+ },
+ "animal-ernadb|3|437473530": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "annotatepeaks|3|4276593118": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "aqua-hichip|3|130228088": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "archr|3|1586390422": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "asp-g|3|1188795480": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "asseq|3|512183083": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "atsnp|3|996110352": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "bacpp|3|2635855761": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "bamm|3|2183748510": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "bardic|3|4240518647": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "bayespeak|3|1618702442": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "bayespi|3|354780156": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "bcrank|3|2734004673": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "beaconlab_pscan|3|3457871113": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "bifet|3|3724113359": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "biologicalnetworks|3|441519559": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "bioswitch-grn|3|1881903553": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "biq_analyzer|3|532222507": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "bismark|3|521122048": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "bobro|3|2202134130": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    false,
+    false,
+    false
+   ]
+  },
+  "family_unanimous": true,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 3,
+  "phrases": [
+   "bottleneck-breaking algorithm"
+  ]
+ },
+ "bpac|3|2923888241": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "branenet|3|3027309315": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "brio|3|711485497": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "brockman|3|3970035249": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "bs_seeker|3|1772621236": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "bscm2tdb|3|2394144684": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "bwtool|3|3482492823": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "cager|3|982667234": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "camregbase|3|3843676964": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "capC-MAP|3|1364809028": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "carmen-variant|3|20708239": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "cassys|3|1225376394": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "castnet|3|1876628847": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "cat_e|3|1166643074": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "cata|3|239112772": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "catch|3|1063409243": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "causaldag|3|1348669822": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "causalr|3|2960987059": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ccip|3|1205265331": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ccnetviz|3|2948335849": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "cdbprom|3|40935242": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "centdist|3|464568577": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "cfdnapipe|3|835787812": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "charid|3|2185184739": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "chas|3|2851999971": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "cheap|3|2358821332": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "chip-ap|3|3677613681": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "chip-gsm|3|827993057": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "chipbase|3|2729867450": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "chipcomp|3|1938569593": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "chipenrich|3|3204874512": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "chipin|3|91253068": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "chippeakanno|3|1422378258": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "chipqc|3|3511411269": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "chipseeker_R|3|2697181777": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "chipseeker|3|1097768599": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "chipseqspike|3|3961265178": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    false,
+    false,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 2,
+  "phrases": [
+   "using spike-in controls",
+   "Normalizes ChIP-seq data using spike-in controls to correct for protocol biases"
+  ]
+ },
+ "chipseq|3|4233103580": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "chipsim|3|705574829": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "chipuana|3|3087541732": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "chipxpress|3|376450545": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "chromegcn|3|3457918804": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "chromhmm|3|3652516086": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "cipher|3|364343282": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "cisformer|3|4278654253": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "cismols|3|2882729460": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "cistrome|3|3858115120": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "clipseq|3|923229207": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "cloops2|3|2417418434": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "cloudasm|3|411140357": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "cncdatabase|3|2283114792": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "cner|3|1341257484": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    false,
+    true,
+    false
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    false
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 3,
+  "phrases": [
+   "across multiple genomes"
+  ]
+ },
+ "cobra|3|2347007271": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "cogito|3|3761367614": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    false,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 1,
+  "phrases": [
+   "workflow",
+   "unbiased",
+   "systematic analysis"
+  ]
+ },
+ "comethyl|3|2332010082": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "compepitools|3|3186580453": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "confac|3|1264920332": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "conquer|3|1515594706": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "consensuspathdb|3|4256643250": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "convert-matrix|3|1438751820": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "coolbox|3|4067385932": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "cooltools|3|3590791596": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "cpgmotifs|3|3233833452": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "cpmodule|3|2293423102": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "crcdb|3|1944711698": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "createcontrolsubset|3|2459823618": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "crisprepi|3|2045134436": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "croconet|3|934715283": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "crosshub|3|4083238032": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "crunch|3|2890778683": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "csa-chip|3|487828935": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "csar|3|996892569": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "cuda-meme|3|2719880861": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "danio-code|3|2759247134": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "dataremix|3|3857726120": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "datf|3|1942000449": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "dbtss|3|2577623921": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "decorate|3|3438948715": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "deepblue|3|3819369284": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "deepgengrep|3|3833666688": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "deepropre|3|2775670967": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "deerect-tss|3|780524216": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "delila-py|3|820478660": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "diffbrainnet|3|2271983560": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "dimelo-seq|3|2965645357": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "dminda|3|3982270640": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "dmrichr|3|627840910": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "dnacycp|3|508783252": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "dnalongbench|3|352498223": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "dnaser|3|1466785648": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "dragon|3|4270297835": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "drosophila_dnase_i_footprint_database|3|2415485038": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "dynugene|3|3771167570": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "eagle-enhancer|3|883517982": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "easeq|3|3167025435": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "eat-uptf|3|967816846": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "echolocator|3|3958102407": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ecocyc|3|3496696996": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "enhancer_mdlf|3|454358388": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "enhanceratlas|3|589000921": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "epicoloc|3|620788228": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "epicompare_r|3|4269407573": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "epigenomix|3|174078401": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "epimolas|3|2578174207": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "epiromics|3|1000302349": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "epoch|3|4085299410": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "eqtlsingle|3|3921946618": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "erna-ido|3|140415374": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "es-arcnn|3|3067496219": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "esatac|3|3386587072": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "exomepeak|3|626801033": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "expansion-network|3|2971543793": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "factorbook|3|3725847426": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "fantom|3|1343211180": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "fastsk|3|189233626": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "fcscan|3|2250237305": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "fgviewer|3|488021660": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "figeno|3|1231543878": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "filer|3|2635607369": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "fitom|3|759292895": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "flowtime|3|4058436255": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "flyterminalia|3|966904608": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "funchip|3|698965902": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "fxr|3|2621416250": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "gadem|3|1914226956": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "gcapc|3|1651729559": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "gcmodeller|3|4037437903": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    false,
+    false,
+    false
+   ]
+  },
+  "family_unanimous": true,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 3,
+  "phrases": [
+   "Models and analyzes genomic data for systems biology and metabolic pathway prediction"
+  ]
+ },
+ "genenetworkbuilder|3|226432584": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    false,
+    true,
+    false
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 2,
+  "phrases": [
+   "microarray or RNA-seq expression data",
+   "RNA-seq"
+  ]
+ },
+ "geneprof|3|3297085502": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "genomepaint|3|3685616684": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "genomesidekick|3|3610497358": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "genomictools|3|471959056": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "gibbs-motif-sampler|3|1290575483": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "gibbs_motif_sampler|3|579387278": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "gimmemotifs|3|3516686063": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ginsim|3|2221191474": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "gopeaks|3|1877843744": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "gpsmatch|3|3768969136": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "gpumotif|3|1916916374": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "gpuzoo|3|517056776": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "grand-database|3|3886436524": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "graphtgi|3|1597544514": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "greg|3|2996857595": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "grema|3|212887877": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "grenits|3|3058451964": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "greylistchip|3|1801915618": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "grnbenchmark|3|4271694276": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "grndb|3|3836627412": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "grnular|3|442076771": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "hTFtarget|3|38434577": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "hba-deals|3|780787987": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "heat_seq|3|3093149999": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "heatmaps|3|3631869982": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "hgetgi|3|2038350729": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "hocomoco|3|382801129": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "homer|3|1527715282": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "hthmotif|3|2283728212": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "human-scatac-corpus|3|2477396182": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "iMARGI|3|1327550010": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ianimal|3|1085234768": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "iaseq|3|3003775306": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "icgec|3|3788663108": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ichip|3|511528392": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    false
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 1,
+  "phrases": [
+   "Metropolis within Gibbs sampling"
+  ]
+ },
+ "icis_i-cardio|3|3087272650": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "icm_web|3|2144867630": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "icn|3|797347159": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "iddn|3|3233504475": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "idhs-deep|3|901313879": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ienhancer-dcla|3|3711344238": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ienhancer-kl|3|785859949": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ienhancer-rd|3|599299597": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "iform|3|3657041925": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "impulsede2|3|3107256099": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "insect|3|2059532543": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "intad|3|1442760428": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "iprom-sigma54|3|2766823203": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "iprom-zea|3|355194489": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "iregnet|3|1902313081": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "irena|3|3269300300": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ischip|3|1659840025": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "jamm|3|1081563584": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "janggu|3|2316681012": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "jaspar_api|3|1333321484": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "jaspar_ws|3|3507293677": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "jaspardb|3|3507293677": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "jaspscan|3|2316264094": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "jpredictor|3|1225661391": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "les|3|408873557": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "linnorm|3|4135715312": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    false,
+    false,
+    false
+   ]
+  },
+  "family_unanimous": true,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 3,
+  "phrases": [
+   "implements cell subpopulation, differential expression, and network analyses",
+   "for parametric tests"
+  ]
+ },
+ "lncrnadb|3|1959077016": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "lncrna|3|2431800601": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "lncsea|3|102248913": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "lpnet|3|904101209": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "lstrap-cloud|3|682649590": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "m6ampred|3|314806670": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "m7ghub|3|2024101352": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "macs|3|3541084915": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "makestatschipseq|3|505047278": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "maketssdist|3|3557660103": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "malboost|3|1325647874": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "manorm|3|2632004282": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "mbamethyl|3|4257029774": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "mcl|3|2397790087": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "melinaii|3|3967391650": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "meme_suite|3|3406184634": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "memes|3|435449497": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    false,
+    false,
+    false
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": true,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 3,
+  "phrases": [
+   "on DNA, RNA, and protein sequences"
+  ]
+ },
+ "mepp|3|1502951235": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "meta-base|3|2491048492": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "methget|3|3521967534": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "methhaplo|3|1233357578": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "methodical|3|1132298650": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    false,
+    false,
+    false
+   ]
+  },
+  "family_unanimous": true,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 3,
+  "phrases": [
+   "RNA-seq",
+   "WGBS",
+   "combining ... data"
+  ]
+ },
+ "methreg|3|3354501559": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "methylationtoactivity|3|655352686": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "methyldackel|3|2741523620": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "methylomedb|3|3991612688": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "methylpipe|3|685647269": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "methylseekr|3|104365727": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    false
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 1,
+  "phrases": [
+   "by detecting transcription factor binding footprints"
+  ]
+ },
+ "met|3|591079569": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "miprip|3|4024209150": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "mira_single-cell|3|3923091332": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "mirage|3|982101216": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "mireya|3|2660046477": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "miringo|3|3843478862": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "mirsynergy|3|4102529814": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "mirvestigator|3|605118459": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "mitsu|3|1812051030": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "mocca|3|1115061361": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "modent|3|555629987": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "moder2|3|1891903870": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "moduledigger|3|1954564637": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "monet_R|3|1918426277": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "moonlight2r|3|804157797": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "moonlightr|3|2599613285": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    false,
+    false,
+    false
+   ]
+  },
+  "family_unanimous": true,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 3,
+  "phrases": [
+   "from TCGA expression data",
+   " "
+  ]
+ },
+ "mosaics|3|2661977573": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "most-motif|3|899902982": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "motifcatcher|3|3882503182": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "motiflab|3|389563540": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "motifsearch|3|3249072150": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "motifsim|3|985697148": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "motifsuite|3|1692802843": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "motifviz|3|141055803": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "motiv|3|3088850387": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "mpra|3|4256006665": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "mpromdb|3|3207885343": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "mscdpb|3|2696931288": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "mspc|3|541667563": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    false,
+    false,
+    false
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": true,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 3,
+  "phrases": [
+   "Combines p-values of overlapping peaks",
+   "p-values"
+  ]
+ },
+ "mugvre|3|4185620565": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "multioviz|3|2418648873": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "mutalisk|3|4167061319": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "mybs|3|3380083676": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "nallo|3|1243015589": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "nasap|3|1937418736": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "nbbc|3|671006890": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ncrna|3|385234846": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "nebula|3|143960921": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "nemo_archive|3|4113584524": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    false,
+    false,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 2,
+  "phrases": [
+   "Deposits"
+  ]
+ },
+ "netprophet|3|4201798612": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "netview|3|3620647945": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ngs-integrator|3|198943380": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ngsmethdb|3|3450831360": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "niacs|3|1187272536": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "nimbus|3|2992915637": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "nimefi|3|1346338336": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "nt-seq|3|4067046669": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ntw|3|3712474876": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "nucleoatac|3|1772257050": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "nucleosim|3|2406157192": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "nucome|3|3576283544": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "occupeak|3|348932460": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ocean-c|3|209001701": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "oipcq|3|3500169257": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "oligo-analysis|3|4196697576": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "orio|3|3464035839": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "panda|3|2403477196": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "pathwayvote|3|2149392808": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "patternchrome|3|1136084039": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "pegr|3|2563821566": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "pepatac|3|3486070598": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "pepr|3|357513728": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "peril|3|1658220731": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "pfbnet|3|1557791789": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "phyloconverge|3|2547538744": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "phylonet|3|4026827756": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "physbinder|3|3124714447": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "plant_snp_tata_z-tester|3|182081991": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "plantfunco|3|2534870740": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "planttfdb|3|2861802011": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "pmsearch|3|3046529936": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "polya-dg|3|2687392668": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "possum-cis|3|427525426": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "poxo|3|1518975598": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "pparg|3|2470816201": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "predector|3|930282680": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "predictf|3|3461625190": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "prodface|3|3675256450": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "profilescoredist|3|3505840119": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "promotech|3|434557512": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "prompredict|3|112371721": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "promzea|3|3394999862": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "pscan-chip|3|2366288728": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "pwmenrich|3|3823538690": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "pyPINTS|3|3896228831": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    false,
+    false
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 2,
+  "phrases": [
+   "using peak calling",
+   "from sequencing data using peak calling"
+  ]
+ },
+ "pymegabase|3|2977461165": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "pyscnet|3|2226116393": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "pyviper|3|1918600627": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "qdrip|3|3471874755": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "qseq|3|1555997457": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "quaqc|3|1136442514": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "quest|3|1033954186": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "quma|3|878468553": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "r-loopbase|3|414866439": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "r-loop|3|3541233144": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "racipe|3|4154483499": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "rcade|3|306602270": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "refTSS|3|882069667": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "regenomics|3|229989671": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "regprecise|3|909459888": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "regulomepa|3|590060203": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "regulondb|3|2125937793": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "regutools|3|3950250986": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "remm_score|3|3749580098": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "remodiscovery|3|3677665625": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "renato|3|695671401": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "responsenet|3|1849098300": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "revup|3|2611592133": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "rgadem|3|266680595": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "rgpdb|3|717004837": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ringo|3|1543698281": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "rm2target|3|1142900044": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "rmat|3|3341269632": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "rnabindr|3|3714661919": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "rnbeads|3|153801430": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    false,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    false,
+    false,
+    false
+   ]
+  },
+  "family_unanimous": true,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 4,
+  "phrases": [
+   "from any experimental protocol",
+   "single-CpG resolution",
+   "at single-CpG resolution"
+  ]
+ },
+ "rsat|3|2625196175": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "rseg_chipseq|3|4272567219": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "rsnet|3|4251333167": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "rsnp_guide|3|3034373523": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "rtnduals|3|127503484": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "rtnsurvival|3|619973304": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "rtrmui|3|762749819": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "rtrm|3|1811820500": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "s3v2-ideas|3|121433962": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "samscope|3|2353226855": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "samselect|3|4023931026": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "sapphire|3|1721314062": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "sbsa|3|2653660904": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "scATAC-pro|3|2456266938": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "scamace|3|3526542872": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "scapatrap|3|2956095403": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "scatacpipe|3|4147837790": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "scbasset|3|1365539638": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "scblood|3|2412619073": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "scenic|3|1295467814": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    false
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 1,
+  "phrases": [
+   "identifies cell states"
+  ]
+ },
+ "scertf|3|1613033723": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "scgrnom|3|4260241032": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "scimet-cap|3|2620789560": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "scmega|3|468380859": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "scnucmap|3|4001218326": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "scpower|3|1667497965": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "scregclust|3|196304407": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "sedb_2.0|3|116442853": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "segcond|3|2987536326": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "segtools|3|2223554279": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "seme|3|2290996104": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "seqbox|3|3303270037": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "seqcode|3|830782124": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "seqpattern|3|132631026": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "seqsetvis|3|3509371414": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "sequence_searcher|3|3073673467": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "shinyarchr_uio|3|3551917641": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "sicer|3|2639999453": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "sigma70pred|3|2082981714": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "simatac|3|340420402": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "sirw|3|3466297102": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "sitar|3|1920977707": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "siteseer|3|387158683": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "slncky|3|2288251159": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "snoglobe|3|2158983268": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "snp2tfbs|3|882720355": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "specvar|3|3997646528": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "spp|3|890756335": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "sratailor|3|1015118680": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ssa|3|2806855979": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ssvqc|3|847033049": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "starrpeaker|3|49629253": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "steinernet|3|432121492": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "suldex|3|1883006421": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "swan|3|808247074": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "swembl|3|4195208446": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "systempiper|3|3182328534": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "t-weon|3|1226900854": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tREMAP|3|3650547823": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tadeus2|3|3458834593": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tadpole|3|910494412": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "targetgenereg|3|3903555551": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "targetgene|3|3461168184": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tarpid|3|4117481228": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tcof-db|3|1368931736": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tcseq|3|662576965": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "te-tss|3|3117679386": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "teiser|3|4156338773": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tejaas|3|761867950": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ternarynet|3|3675593163": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tf-prioritizer|3|3319264364": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tf_prioritizer|3|1901467635": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tfbminer|3|2853663485": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tfbscluster|3|1777162038": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tfbsfinder|3|3617779562": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    false,
+    false,
+    false
+   ]
+  },
+  "family_unanimous": true,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 3,
+  "phrases": [
+   "Identifies transcription factor binding sites",
+   "using conservation and clustering methods"
+  ]
+ },
+ "tfea.chip|3|3458141835": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tfebexplorer|3|1068566605": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tfextract|3|1770614416": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tfhaz|3|2181380006": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tflink|3|1627972542": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tfm-explorer|3|3488695428": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tfmotifview|3|3970429791": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tfpred|3|4065707757": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tfsyntax|3|3224895527": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tftenricher|3|3136193449": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tftg|3|2232941752": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tfutils|3|2847234999": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "timenexus|3|269430465": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "timirgen|3|2836521010": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tipr|3|2905089360": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tissuenexus|3|811828456": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "topicnet|3|1556557150": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "toppcluster|3|772226621": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    false,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    false,
+    true,
+    false
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 3,
+  "phrases": [
+   "mammalian genomes"
+  ]
+ },
+ "toucan_2|3|2910303489": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "transcriptr|3|526479398": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "transfac|3|2626991221": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "transmir|3|887719628": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "transtermhp|3|2046302922": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "treegibbssampler|3|1484642393": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "treegl|3|725495821": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    false,
+    false
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 2,
+  "phrases": [
+   "logistic regression"
+  ]
+ },
+ "tripbase|3|1755166316": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tritan|3|2220507447": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tsptfbs|3|1105353690": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tsspredator|3|3714171710": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "turf|3|2021936017": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tuxnet|3|1648852867": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "tvar|3|1445817556": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "umi-atac-seq|3|2513218549": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "unibind|3|2557672160": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "unipath|3|3754600823": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "uniprobe|3|4054641868": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "universal_TTSs|3|3137652465": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "uropa|3|2756454499": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "useq|3|1607205291": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "velorama|3|3987907045": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "vgo|3|2236269808": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "viennngs|3|3320749089": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "w-chipeaks|3|3934456725": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "w-chipmotifs|3|407900497": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "washu_epigenome_browser|3|4112552435": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "weblogo|3|630365182": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "weederh|3|1523283456": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "wgrn|3|3866692129": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "wikigene|3|509753653": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "x2k|3|3319203002": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "yeastract|3|2186236902": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "yodel|3|2708722450": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ },
+ "ypa|3|2095496981": {
+  "by_model": {
+   "deepseek-ai/DeepSeek-V4-Flash": [
+    true,
+    true,
+    true
+   ],
+   "zai-org/GLM-5": [
+    true,
+    true,
+    true
+   ]
+  },
+  "family_unanimous": false,
+  "flagged": false,
+  "n": 6,
+  "n_bad": 0,
+  "phrases": []
+ }
+}

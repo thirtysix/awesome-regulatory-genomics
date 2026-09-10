@@ -82,6 +82,13 @@ audit:
 check-queries:
 	$(PIPELINE)/check_query_coverage.py --strict
 
+## OPTIONAL: check LLM-written descriptions against the sources they were built
+## from. Calibrates itself first - corrupts known-good lines in known ways and
+## refuses to run unless it catches them - so the result does not rest on an
+## instrument nobody measured. Votes are cached; re-deciding is free.
+audit-descriptions:
+	$(PIPELINE)/audit_descriptions.py --min-novel 1 --apply
+
 ## find in-domain tools bio.tools does not index, from registries that carry
 ## their own domain taxonomy. Writes docs/registry-discovery.md for review;
 ## nothing is added to the catalog automatically. Cached, so re-runs are
