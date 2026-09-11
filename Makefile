@@ -89,6 +89,13 @@ check-queries:
 audit-descriptions:
 	$(PIPELINE)/audit_descriptions.py --min-novel 1 --apply
 
+## OPTIONAL: test the paper_mismatch flags the describe stage records. Calibrates
+## against overlay.yaml: verified_publications (human-checked pairs) and
+## cross-pairings of them, and refuses to run unless it clears its bar. A
+## confirmed mismatch retracts the link AND its citation count.
+audit-publications:
+	$(PIPELINE)/audit_publications.py --apply
+
 ## find in-domain tools bio.tools does not index, from registries that carry
 ## their own domain taxonomy. Writes docs/registry-discovery.md for review;
 ## nothing is added to the catalog automatically. Cached, so re-runs are

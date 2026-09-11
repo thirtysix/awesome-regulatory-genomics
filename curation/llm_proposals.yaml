@@ -20160,11 +20160,6 @@ paper_mismatch:
     publication: pmid:25633503
     reason: The paper title 'Orchestrating high-throughput genomic analysis with Bioconductor' is a general
       overview of Bioconductor, not a paper specifically about ChIPsim
-  chipuana:
-    name: ChIPuana
-    paper: 'ChIPflow: from raw data to epigenomic dynamics'
-    publication: doi:10.1101/2021.02.02.429342
-    reason: Paper describes ChIPflow, not ChIPuana
   cobindr:
     name: cobindR
     paper: Orchestrating high-throughput genomic analysis with Bioconductor
@@ -20204,12 +20199,6 @@ paper_mismatch:
     publication: pmid:27209209
     reason: The paper compares transcription factor binding site models but does not describe the ePOSSUM
       tool's functionality or its Bayes classifier for variant effect analysis
-  ep3:
-    name: EP3
-    paper: Toward a gold standard for promoter prediction evaluation
-    publication: pmid:19478005
-    reason: The paper is a benchmarking study of promoter prediction programs, not a description of the
-      EP3 tool itself
   extractcentralregions:
     name: extractcentralregions
     paper: 'The Galaxy platform for accessible, reproducible and collaborative biomedical analyses: 2016
@@ -20257,12 +20246,6 @@ paper_mismatch:
     publication: pmid:19580524
     reason: Paper describes a gene set enrichment method, not the tiling microarray region detection tool
       LES
-  linnorm:
-    name: Linnorm
-    paper: Orchestrating high-throughput genomic analysis with Bioconductor
-    publication: pmid:25633503
-    reason: Paper title 'Orchestrating high-throughput genomic analysis with Bioconductor' is a general
-      review of the Bioconductor project, not a paper describing the Linnorm tool specifically
   lrmotifs:
     name: LRMotifs
     paper: The Limits of De Novo DNA Motif Discovery
@@ -20386,12 +20369,6 @@ paper_mismatch:
       update'
     publication: pmid:27137889
     reason: The paper describes the Galaxy platform, not the setuppromoter tool specifically
-  signac:
-    name: Signac
-    paper: Single-cell chromatin state analysis with Signac
-    publication: pmid:34725479
-    reason: Paper title describes a different tool for finding marker genes in single-cell transcriptomic
-      data, not the chromatin analysis tool Signac
   simbindprofiles:
     name: SimBindProfiles
     paper: Orchestrating high-throughput genomic analysis with Bioconductor
@@ -20402,13 +20379,6 @@ paper_mismatch:
     paper: Orchestrating high-throughput genomic analysis with Bioconductor
     publication: pmid:25633503
     reason: Paper is a general overview of Bioconductor, not a specific paper for soGGi
-  ssvqc:
-    name: ssvQC
-    paper: An Integrated CUT&amp;amp;RUN Quality Control Workflow for Histone Modifications and Transcription
-      Factors
-    publication: doi:10.21203/RS.3.RS-646006/V1
-    reason: Paper title focuses on CUT&RUN quality control for histone modifications and transcription
-      factors, which is a subset of the tool's broader scope described in the registry
   svm2crm:
     name: SVM2CRM
     paper: Orchestrating high-throughput genomic analysis with Bioconductor

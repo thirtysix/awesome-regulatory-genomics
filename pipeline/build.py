@@ -786,7 +786,17 @@ def main() -> None:
             row.update(fix)
         if key in corrections and "repo_url" in corrections[key]:
             row["repo_origin"] = "curated"
-        if key in pub_overrides:
+        if key in pub_overrides and not pub_overrides[key]:
+            # An empty override means "the recorded paper is not this tool's and
+            # there is no replacement". Needed because the alternative was to
+            # leave a wrong link in place: no_article only supplies a note for a
+            # row that ALREADY has no citations, so it cannot retract one. The
+            # count goes with the link, for the same reason it does below, and
+            # the row then picks up its note from no_article.
+            row["publication"] = ""
+            row["publication_is_preprint"] = False
+            row["citations"] = None
+        elif key in pub_overrides:
             row["publication"] = pub_overrides[key]
             row["publication_is_preprint"] = is_preprint(pub_overrides[key])
             # The count has to follow the link. Overriding only the link left the
