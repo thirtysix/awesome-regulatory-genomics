@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-09-11",
+  "generated": "2026-09-15",
   "count": 3069,
   "from_biotools": 2353,
   "curated_seeds": 716,
@@ -1151,8 +1151,7 @@
    "name": "DeepTools",
    "description": "Normalizes and visualizes deep-sequencing data with tools for coverage files, heatmaps, and summary plots",
    "categories": [
-    "peak-annotation",
-    "nucleosome-chromatin"
+    "peak-calling"
    ],
    "tier": "core",
    "homepage": "https://deeptools.readthedocs.io/en/latest/",
@@ -1205,7 +1204,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "peak-annotation",
+   "primary_category": "peak-calling",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "deepTools: a flexible platform for exploring deep-sequencing data",
@@ -2415,8 +2414,8 @@
    "name": "ArchR",
    "description": "Processes and analyzes single-cell ATAC-seq data with doublet removal, clustering, peak calling, trajectory identification, and multi-omic integration",
    "categories": [
+    "regulatory-elements",
     "peak-calling",
-    "peak-annotation",
     "single-cell"
    ],
    "tier": "core",
@@ -2474,7 +2473,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "peak-calling",
+   "primary_category": "regulatory-elements",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "ArchR is a scalable software package for integrative single-cell chromatin accessibility analysis",
@@ -3161,9 +3160,7 @@
    "id": "progeny",
    "name": "progeny",
    "description": "Infers pathway activity from gene expression using a linear model of perturbation-response genes",
-   "categories": [
-    "grn-inference"
-   ],
+   "categories": [],
    "tier": "core",
    "homepage": "http://bioconductor.org/packages/release/bioc/html/progeny.html",
    "repo_url": "https://github.com/saezlab/progeny",
@@ -3215,7 +3212,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "grn-inference",
+   "primary_category": "uncategorised",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Perturbation-response genes reveal signaling footprints in cancer gene expression",
@@ -3423,7 +3420,6 @@
    "name": "ENCODE DCC",
    "description": "Central repository for ENCODE functional genomics data, including sequences, alignments, signals, and peak calls",
    "categories": [
-    "peak-calling",
     "chip-resources"
    ],
    "tier": "core",
@@ -3477,7 +3473,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "peak-calling",
+   "primary_category": "chip-resources",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "New developments on the Encyclopedia of DNA Elements (ENCODE) data portal",
@@ -4456,7 +4452,8 @@
    "name": "BioProspector",
    "description": "Scans upstream regions of co-expressed genes for regulatory motifs using Gibbs sampling with a Markov background model",
    "categories": [
-    "motif-discovery"
+    "motif-discovery",
+    "motif-scanning"
    ],
    "tier": "core",
    "homepage": "http://robotics.stanford.edu/~xsliu/BioProspector/",
@@ -4603,10 +4600,7 @@
    "name": "PlantTFDB",
    "description": "Identifies and catalogs transcription factor genes across sequenced plant genomes, with BLAST search and cross-species orthology",
    "categories": [
-    "motif-databases",
-    "tfbs-prediction",
-    "regulatory-elements",
-    "grn-inference"
+    "motif-databases"
    ],
    "tier": "core",
    "homepage": "http://plntfdb.bio.uni-potsdam.de/v1.0/",
@@ -4678,8 +4672,7 @@
    "name": "PlnTFDB",
    "description": "Integrates putatively complete sets of transcription factors and transcriptional regulators from sequenced plant genomes with domain architectures and cross-links",
    "categories": [
-    "motif-databases",
-    "grn-inference"
+    "motif-databases"
    ],
    "tier": "core",
    "homepage": "http://plntfdb.bio.uni-potsdam.de/",
@@ -5828,9 +5821,7 @@
    "id": "visionet",
    "name": "VISIONET",
    "description": "Streamlined visualization to transform large and dense overlapping transcription factor networks into sparse human-readable graphs via numerically filtering.",
-   "categories": [
-    "grn-inference"
-   ],
+   "categories": [],
    "tier": "core",
    "homepage": "http://visionet.erc.monash.edu.au/index.html",
    "repo_url": "",
@@ -5879,7 +5870,7 @@
     "categories"
    ],
    "featured": "",
-   "primary_category": "grn-inference",
+   "primary_category": "uncategorised",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "",
@@ -8018,7 +8009,6 @@
    "name": "CEAS",
    "description": "Annotates ChIP-chip and ChIP-Seq data with summary statistics on enrichment in genomic regions and identifies nearby genes and TFBS motifs",
    "categories": [
-    "motif-discovery",
     "motif-scanning",
     "peak-annotation"
    ],
@@ -8073,7 +8063,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-discovery",
+   "primary_category": "motif-scanning",
    "homepage_status": "unreachable",
    "repo_status": "",
    "publication_title": "CEAS: cis-regulatory element annotation system",
@@ -8168,8 +8158,7 @@
    "name": "SnapATAC",
    "description": "Analyzes single cell ATAC-seq datasets to dissect cellular heterogeneity and map trajectories of cellular states",
    "categories": [
-    "footprinting",
-    "peak-calling",
+    "nucleosome-chromatin",
     "single-cell"
    ],
    "tier": "core",
@@ -8225,7 +8214,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "footprinting",
+   "primary_category": "nucleosome-chromatin",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Comprehensive analysis of single cell ATAC-seq data with SnapATAC",
@@ -9921,6 +9910,7 @@
    "name": "rVista",
    "description": "Combines TFBS predictions, sequence comparisons and cluster analysis to identify evolutionarily conserved noncoding DNA regions in genomic sequences",
    "categories": [
+    "tfbs-prediction",
     "regulatory-elements",
     "comparative"
    ],
@@ -9971,7 +9961,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "rVISTA 2.0: evolutionary analysis of transcription factor binding sites",
@@ -10478,6 +10468,7 @@
    "name": "TFBIND",
    "description": "Searches transcription factor binding sites including TATA boxes, GC boxes, CCAAT boxes, and transcription start sites in DNA sequences",
    "categories": [
+    "motif-scanning",
     "tfbs-prediction"
    ],
    "tier": "core",
@@ -10528,7 +10519,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "tfbs-prediction",
+   "primary_category": "motif-scanning",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Estimating transcription factor bindability on DNA.",
@@ -12512,9 +12503,7 @@
    "id": "booleannet",
    "name": "BooleanNet",
    "description": "Intuitive and accessible tools for simulating biological regulatory networks in a boolean formalism",
-   "categories": [
-    "grn-inference"
-   ],
+   "categories": [],
    "tier": "core",
    "homepage": "https://github.com/ialbert/booleannet",
    "repo_url": "https://github.com/ialbert/booleannet",
@@ -12558,7 +12547,7 @@
     "categories"
    ],
    "featured": "",
-   "primary_category": "grn-inference",
+   "primary_category": "uncategorised",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "",
@@ -12576,7 +12565,9 @@
    "name": "Gibbs Motif Sampler",
    "description": "Identifies conserved motifs in DNA or protein sequences, including transcription factor binding sites, using a Gibbs sampling approach",
    "categories": [
-    "motif-discovery"
+    "motif-discovery",
+    "tfbs-prediction",
+    "regulatory-elements"
    ],
    "tier": "core",
    "homepage": "http://ccmbweb.ccv.brown.edu/gibbs/gibbs.html",
@@ -12724,8 +12715,7 @@
    "name": "Animal Transcription Factor Database",
    "description": "Comprehensive database of transcription factors, co-factors and chromatin remodeling factors from 50 sequenced animal genomes",
    "categories": [
-    "motif-databases",
-    "tfbs-prediction"
+    "motif-databases"
    ],
    "tier": "core",
    "homepage": "http://bioinfo.life.hust.edu.cn/AnimalTFDB/",
@@ -14027,9 +14017,7 @@
    "id": "convert-matrix",
    "name": "convert-matrix",
    "description": "Inter-converts between formats of position-specific scoring matrices and computes position-specific scores, statistics, and consensus sequences",
-   "categories": [
-    "motif-comparison"
-   ],
+   "categories": [],
    "tier": "core",
    "homepage": "http://rsat.eu/",
    "repo_url": "",
@@ -14078,7 +14066,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-comparison",
+   "primary_category": "uncategorised",
    "homepage_status": "unreachable",
    "repo_status": "",
    "publication_title": "RSAT: regulatory sequence analysis tools",
@@ -16077,7 +16065,8 @@
    "name": "deepC",
    "description": "Predicts Hi-C chromatin interactions from megabase-scale DNA sequences using a neural network framework with transfer learning",
    "categories": [
-    "regulatory-elements"
+    "regulatory-elements",
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://github.com/rschwess/deepC",
@@ -16483,7 +16472,8 @@
    "description": "Builds and runs automated end-to-end analysis workflows for NGS applications including RNA-Seq, ChIP-Seq, VAR-Seq and Ribo-Seq with uniform interface and report generation",
    "categories": [
     "peak-calling",
-    "peak-annotation"
+    "peak-annotation",
+    "chip-resources"
    ],
    "tier": "core",
    "homepage": "https://bioconductor.org/packages/systemPipeR",
@@ -17068,7 +17058,6 @@
    "name": "sc-MAESTRO",
    "description": "Integrates single-cell RNA-seq and ATAC-seq data with pre-processing, clustering, differential analysis, and cell-type annotation",
    "categories": [
-    "regulatory-elements",
     "peak-calling",
     "single-cell"
    ],
@@ -17130,7 +17119,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "peak-calling",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Integrative analyses of single-cell transcriptome and regulome using MAESTRO",
@@ -17385,6 +17374,7 @@
    "name": "TEISER",
    "description": "Discovers post-transcriptional regulatory elements from sequence data",
    "categories": [
+    "motif-discovery",
     "regulatory-elements"
    ],
    "tier": "core",
@@ -17435,7 +17425,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "motif-discovery",
    "homepage_status": "unreachable",
    "repo_status": "",
    "publication_title": "Systematic discovery of structural elements governing stability of mammalian messenger RNAs",
@@ -18117,7 +18107,8 @@
    "name": "GimmeMotifs",
    "description": "Predicts de novo motifs from ChIP-seq data using an ensemble of algorithms and clusters them by WIC similarity",
    "categories": [
-    "motif-discovery"
+    "motif-discovery",
+    "motif-comparison"
    ],
    "tier": "core",
    "homepage": "https://github.com/simonvh/gimmemotifs",
@@ -19289,6 +19280,7 @@
    "name": "TFBS",
    "description": "Detects and analyzes transcription factor binding sites using specificity profile matrices and pattern generators",
    "categories": [
+    "motif-scanning",
     "tfbs-prediction"
    ],
    "tier": "core",
@@ -19340,7 +19332,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "tfbs-prediction",
+   "primary_category": "motif-scanning",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "TFBS: Computational framework for transcription factor binding site analysis",
@@ -19619,6 +19611,7 @@
    "name": "RegPrecise",
    "description": "Captures, visualizes and analyzes predicted transcription factor regulons in prokaryotes reconstructed via comparative genomics",
    "categories": [
+    "motif-databases",
     "regulatory-elements",
     "grn-inference",
     "comparative"
@@ -19675,7 +19668,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "motif-databases",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "RegPrecise: a database of curated genomic inferences of transcriptional regulatory interactions in prokaryotes",
@@ -19765,7 +19758,6 @@
    "categories": [
     "motif-discovery",
     "motif-scanning",
-    "motif-comparison",
     "tfbs-prediction",
     "regulatory-elements",
     "footprinting"
@@ -20176,10 +20168,7 @@
    "id": "seqplots",
    "name": "seqplots",
    "description": "Plots NGS signal tracks and sequence motif density profiles over user-specified genomic features",
-   "categories": [
-    "motif-scanning",
-    "peak-annotation"
-   ],
+   "categories": [],
    "tier": "core",
    "homepage": "http://bioconductor.org/packages/release/bioc/html/seqplots.html",
    "repo_url": "https://github.com/przemol/seqplots",
@@ -20230,7 +20219,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-scanning",
+   "primary_category": "uncategorised",
    "homepage_status": "dead",
    "repo_status": "",
    "publication_title": "SeqPlots - Interactive software for exploratory data analyses, pattern discovery and visualization in genomics",
@@ -20314,6 +20303,7 @@
    "name": "Peakachu",
    "description": "Predicts chromatin loops from genome-wide contact maps using a Random Forest classifier",
    "categories": [
+    "regulatory-elements",
     "peak-calling"
    ],
    "tier": "core",
@@ -20368,7 +20358,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "peak-calling",
+   "primary_category": "regulatory-elements",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "A supervised learning framework for chromatin loop detection in genome-wide contact maps",
@@ -20855,7 +20845,7 @@
    "name": "CARNIVAL",
    "description": "Infers causal signaling networks from transcriptomics data using integer linear programming",
    "categories": [
-    "grn-inference"
+    "tfbs-prediction"
    ],
    "tier": "core",
    "homepage": "https://github.com/saezlab/CARNIVAL",
@@ -20909,7 +20899,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "grn-inference",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "From expression footprints to causal pathways: contextualizing large signaling networks with CARNIVAL",
@@ -20994,7 +20984,8 @@
    "name": "SwissRegulon",
    "description": "Database of genome-wide annotations of regulatory motifs, promoters and transcription factor binding sites across model organisms",
    "categories": [
-    "motif-databases"
+    "motif-databases",
+    "tfbs-prediction"
    ],
    "tier": "core",
    "homepage": "http://swissregulon.unibas.ch/sr/",
@@ -21254,9 +21245,7 @@
    "name": "WashU Epigenome Browser",
    "description": "Visualizes, integrates, and analyzes epigenomic datasets in a web-based browser with support for 1D, 2D, 3D, and 4D data",
    "categories": [
-    "regulatory-elements",
-    "peak-annotation",
-    "chip-resources"
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://github.com/lidaof/eg-react",
@@ -21308,7 +21297,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "nucleosome-chromatin",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "WashU Epigenome Browser update 2022",
@@ -21462,7 +21451,8 @@
    "name": "GENOVA",
    "description": "Analyses and visualises Hi-C data for genome organisation, including compartment and insulation score analysis",
    "categories": [
-    "nucleosome-chromatin"
+    "tfbs-prediction",
+    "peak-calling"
    ],
    "tier": "extended",
    "homepage": "http://github.com/dewitlab/GENOVA",
@@ -21516,7 +21506,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "nucleosome-chromatin",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Hi-C analyses with GENOVA: a case study with cohesin variants",
@@ -22655,7 +22645,8 @@
    "name": "phantompeakqualtools",
    "description": "Computes enrichment and quality measures for ChIP-seq, DNase-seq, FAIRE-seq, and MNase-seq data and estimates fragment length or tag shift values",
    "categories": [
-    "peak-calling"
+    "peak-calling",
+    "chip-resources"
    ],
    "tier": "core",
    "homepage": "https://code.google.com/archive/p/phantompeakqualtools/",
@@ -22843,7 +22834,6 @@
    "name": "ChromaSig",
    "description": "Finds commonly occurring chromatin signatures from tiling microarray and sequencing data using unsupervised learning",
    "categories": [
-    "motif-discovery",
     "nucleosome-chromatin"
    ],
    "tier": "extended",
@@ -22894,7 +22884,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-discovery",
+   "primary_category": "nucleosome-chromatin",
    "homepage_status": "unreachable",
    "repo_status": "",
    "publication_title": "ChromaSig: A Probabilistic Approach to Finding Common Chromatin Signatures in the Human Genome",
@@ -23119,6 +23109,7 @@
    "description": "Models single-cell ATAC-seq data using convolutional neural networks to learn sequence features",
    "categories": [
     "tfbs-prediction",
+    "nucleosome-chromatin",
     "single-cell"
    ],
    "tier": "core",
@@ -23450,8 +23441,7 @@
    "name": "LncSEA",
    "description": "Provides curated lncRNA reference sets and enrichment analysis for human lncRNA lists",
    "categories": [
-    "regulatory-elements",
-    "chip-resources"
+    "regulatory-elements"
    ],
    "tier": "core",
    "homepage": "http://bio.liclab.net/LncSEA/index.php",
@@ -23526,6 +23516,7 @@
    "description": "Searches multiple alignments of non-coding DNA for conserved transcription-factor binding sites using a binding site-specific evolutionary model",
    "categories": [
     "motif-scanning",
+    "tfbs-prediction",
     "comparative"
    ],
    "tier": "core",
@@ -24003,8 +23994,7 @@
    "name": "PlantTFcat",
    "description": "Identifies and categorizes plant transcription factors, transcriptional regulators, and chromatin regulators from genome-scale protein and nucleic acid sequences using InterProScan domain patterns",
    "categories": [
-    "motif-databases",
-    "tfbs-prediction"
+    "motif-databases"
    ],
    "tier": "core",
    "homepage": "http://plantgrn.noble.org/PlantTFcat/",
@@ -24339,6 +24329,7 @@
    "name": "epiScanpy",
    "description": "Analyses single-cell epigenomic data, including DNA methylation and ATAC-seq, with clustering, dimension reduction, and differential feature calling",
    "categories": [
+    "nucleosome-chromatin",
     "single-cell"
    ],
    "tier": "core",
@@ -24392,7 +24383,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "single-cell",
+   "primary_category": "nucleosome-chromatin",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "EpiScanpy: integrated single-cell epigenomic analysis",
@@ -24687,8 +24678,6 @@
    "name": "ReMap",
    "description": "Provides catalogs of regulatory regions from integrative analysis of human and Arabidopsis DNA-binding experiments",
    "categories": [
-    "peak-calling",
-    "peak-annotation",
     "chip-resources"
    ],
    "tier": "core",
@@ -24742,7 +24731,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "peak-calling",
+   "primary_category": "chip-resources",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "ReMap 2020: a database of regulatory regions from an integrative analysis of Human and Arabidopsis DNA-binding sequencing experiments",
@@ -25126,8 +25115,7 @@
    "name": "MAPS",
    "description": "Analyzes PLAC-seq and HiChIP data to identify long-range chromatin interactions using a zero-truncated Poisson regression framework to remove systematic biases",
    "categories": [
-    "peak-calling",
-    "peak-annotation"
+    "peak-calling"
    ],
    "tier": "core",
    "homepage": "https://github.com/ijuric/MAPS",
@@ -25547,8 +25535,7 @@
    "name": "MochiView",
    "description": "Integrates browsing of genomic sequences, features, and data with DNA motif visualization and analysis in a desktop application",
    "categories": [
-    "motif-comparison",
-    "chip-resources"
+    "motif-comparison"
    ],
    "tier": "core",
    "homepage": "http://johnsonlab.ucsf.edu/sj/mochiview-start/",
@@ -26026,7 +26013,6 @@
    "name": "iModulonDB",
    "description": "A knowledgebase of microbial transcriptional regulation derived from machine learning on bacterial transcriptomes",
    "categories": [
-    "chip-resources",
     "grn-inference"
    ],
    "tier": "core",
@@ -26079,7 +26065,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "chip-resources",
+   "primary_category": "grn-inference",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "iModulonDB: a knowledgebase of microbial transcriptional regulation derived from machine learning",
@@ -26433,7 +26419,6 @@
    "name": "GRNdb",
    "description": "Explores and visualizes predicted transcription factor-target gene regulatory networks from single-cell and bulk RNA-seq data across human and mouse conditions",
    "categories": [
-    "chip-resources",
     "grn-inference"
    ],
    "tier": "core",
@@ -26486,7 +26471,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "chip-resources",
+   "primary_category": "grn-inference",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "GRNdb: decoding the gene regulatory networks in diverse human and mouse conditions",
@@ -26505,7 +26490,8 @@
    "description": "Integrates public transcriptomic and cistromic datasets to predict transcriptional regulatory relationships in mammalian signaling pathways",
    "categories": [
     "regulatory-elements",
-    "chip-resources"
+    "chip-resources",
+    "grn-inference"
    ],
    "tier": "core",
    "homepage": "https://www.signalingpathways.org",
@@ -26703,7 +26689,8 @@
    "name": "LASAGNA-Search",
    "description": "Searches for transcription factor binding sites using the LASAGNA algorithm, with automatic promoter retrieval, UCSC visualization, and gene regulatory network inference",
    "categories": [
-    "motif-scanning"
+    "motif-scanning",
+    "tfbs-prediction"
    ],
    "tier": "core",
    "homepage": "http://biogrid-lasagna.engr.uconn.edu/lasagna_search/",
@@ -27509,7 +27496,7 @@
    "name": "ReadOut",
    "description": "Calculates direct and indirect readout energy Z-scores to estimate sequence specificity of protein-DNA complexes from 3D structures",
    "categories": [
-    "motif-scanning"
+    "tfbs-prediction"
    ],
    "tier": "core",
    "homepage": "http://gibk26.bio.kyutech.ac.jp/jouhou/readout/",
@@ -27560,7 +27547,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-scanning",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "unreachable",
    "repo_status": "",
    "publication_title": "Intermolecular and Intramolecular Readout Mechanisms in Protein\u2013DNA Recognition",
@@ -28218,6 +28205,7 @@
    "description": "Learns base-resolution chromatin accessibility profiles from DNA sequence while deconvolving assay-specific enzyme biases to discover TF motifs, footprints, and regulatory variants",
    "categories": [
     "motif-discovery",
+    "tfbs-prediction",
     "regulatory-variants",
     "nucleosome-chromatin"
    ],
@@ -28551,7 +28539,6 @@
    "name": "Predector",
    "description": "Searches for cis-regulatory elements in bacterial genomes based on orientation and distance from gene starts",
    "categories": [
-    "motif-discovery",
     "motif-scanning"
    ],
    "tier": "core",
@@ -28600,7 +28587,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-discovery",
+   "primary_category": "motif-scanning",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "PREDetector: A new tool to identify regulatory elements in bacterial genomes",
@@ -29238,9 +29225,7 @@
    "id": "cocas",
    "name": "COCAS",
    "description": "CoCAS is a standalone Chromatin immunoprecipitation microarray (ChIP-on-chip) analysis application",
-   "categories": [
-    "peak-calling"
-   ],
+   "categories": [],
    "tier": "core",
    "homepage": "http://www.ciml.univ-mrs.fr/software/cocas/index.html",
    "repo_url": "",
@@ -29290,7 +29275,7 @@
     "categories"
    ],
    "featured": "",
-   "primary_category": "peak-calling",
+   "primary_category": "uncategorised",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "",
@@ -30831,6 +30816,7 @@
    "description": "Identifies potential regulatory motifs de novo in sets of coordinately regulated genes using a parameter-free ensemble method",
    "categories": [
     "motif-discovery",
+    "tfbs-prediction",
     "regulatory-elements"
    ],
    "tier": "core",
@@ -31250,7 +31236,6 @@
    "name": "Plant Regulomics",
    "description": "Retrieves upstream regulators from plant multi-omics data by integrating transcriptomic and epigenomic datasets",
    "categories": [
-    "chip-resources",
     "grn-inference"
    ],
    "tier": "core",
@@ -31299,7 +31284,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "chip-resources",
+   "primary_category": "grn-inference",
    "homepage_status": "unreachable",
    "repo_status": "",
    "publication_title": "Plant Regulomics: a data\u2010driven interface for retrieving upstream regulators from plant multi\u2010omics data",
@@ -31457,7 +31442,8 @@
    "name": "PHIRE",
    "description": "Discovers conserved regulatory elements in bacteriophage genomes using a deterministic string-based search",
    "categories": [
-    "motif-discovery"
+    "motif-discovery",
+    "regulatory-elements"
    ],
    "tier": "core",
    "homepage": "http://www.biw.kuleuven.be/logt/PHIRE.htm",
@@ -31654,7 +31640,9 @@
    "name": "GOTHiC",
    "description": "Detects significant distal genomic interactions from Hi-C data using a cumulative binomial test",
    "categories": [
-    "regulatory-elements"
+    "tfbs-prediction",
+    "regulatory-elements",
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://bioconductor.org/packages/GOTHiC",
@@ -31709,7 +31697,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "GOTHiC, a probabilistic model to resolve complex biases and to identify real interactions in Hi-C data",
@@ -32001,9 +31989,7 @@
    "id": "non-b_db",
    "name": "Non-B DB",
    "description": "Integrates genome-wide annotations and predictions of non-B DNA-forming sequence motifs, including Z-DNA, quadruplexes, and repeats",
-   "categories": [
-    "motif-databases"
-   ],
+   "categories": [],
    "tier": "core",
    "homepage": "https://nonb-abcc.ncifcrf.gov/apps/nBMST/default/",
    "repo_url": "",
@@ -32056,7 +32042,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-databases",
+   "primary_category": "uncategorised",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Non-B DB: a database of predicted non-B DNA-forming motifs in mammalian genomes",
@@ -32951,7 +32937,9 @@
    "name": "SnapHiC",
    "description": "Identifies chromatin loops from single-cell Hi-C data using a computational pipeline",
    "categories": [
-    "nucleosome-chromatin"
+    "peak-calling",
+    "nucleosome-chromatin",
+    "single-cell"
    ],
    "tier": "core",
    "homepage": "https://github.com/HuMingLab/SnapHiC",
@@ -33006,7 +32994,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "nucleosome-chromatin",
+   "primary_category": "peak-calling",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "SnapHiC: a computational pipeline to identify chromatin loops from single-cell Hi-C data",
@@ -33424,8 +33412,7 @@
    "name": "MARGE",
    "description": "Predicts key regulated genes and cis-regulatory regions from H3K27ac ChIP-seq profiles using a compendium of genome-wide data",
    "categories": [
-    "regulatory-elements",
-    "peak-calling"
+    "regulatory-elements"
    ],
    "tier": "core",
    "homepage": "http://cistrome.org/MARGE/",
@@ -33491,7 +33478,6 @@
    "name": "mutalisk",
    "description": "Analyzes somatic DNA mutations by correlating them with genomic, transcriptional and epigenomic features to identify mutational signatures and localized hypermutations",
    "categories": [
-    "regulatory-elements",
     "regulatory-variants"
    ],
    "tier": "core",
@@ -33541,7 +33527,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "regulatory-variants",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Mutalisk: a web-based somatic MUTation AnaLyIS toolKit for genomic, transcriptional and epigenomic signatures",
@@ -33695,8 +33681,7 @@
    "name": "Pyicoteo",
    "description": "Suite of tools for the analysis of high-throughput sequencing data",
    "categories": [
-    "peak-calling",
-    "peak-annotation"
+    "peak-calling"
    ],
    "tier": "core",
    "homepage": "https://bitbucket.org/regulatorygenomicsupf/pyicoteo",
@@ -34318,7 +34303,8 @@
    "description": "Identifies regulatory regions by combining conserved sequence analysis with transcription factor binding site density in orthologous genomic alignments",
    "categories": [
     "tfbs-prediction",
-    "regulatory-elements"
+    "regulatory-elements",
+    "comparative"
    ],
    "tier": "core",
    "homepage": "http://trafac.cchmc.org/trafac/index.jsp",
@@ -36041,7 +36027,6 @@
    "name": "MIRA",
    "description": "Analyzes dynamic gene regulation from single-cell multiomics data using multimodal models",
    "categories": [
-    "regulatory-elements",
     "grn-inference",
     "single-cell"
    ],
@@ -36099,7 +36084,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "grn-inference",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "MIRA: joint regulatory modeling of multimodal expression and chromatin accessibility in single cells",
@@ -36421,7 +36406,6 @@
    "name": "Target Explorer",
    "description": "Creates custom transcription factor binding site matrices, searches for binding site clusters, and identifies target genes from genomic sequences",
    "categories": [
-    "motif-discovery",
     "motif-scanning",
     "tfbs-prediction",
     "regulatory-elements"
@@ -36476,7 +36460,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-discovery",
+   "primary_category": "motif-scanning",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Target Explorer: an automated tool for the identification of new target genes for a specified set of transcription factors",
@@ -36735,7 +36719,6 @@
    "description": "Explores plant regulome by bundling and reanalyzing >10,000 publicly available ChIP-seq datasets from >40 plant species for visualization and meta-analysis",
    "categories": [
     "regulatory-elements",
-    "peak-calling",
     "peak-annotation",
     "chip-resources"
    ],
@@ -40713,8 +40696,7 @@
    "name": "SilencerDB",
    "description": "A comprehensive database of experimentally validated and predicted silencers with annotations and a tree-structured classification",
    "categories": [
-    "regulatory-elements",
-    "regulatory-variants"
+    "regulatory-elements"
    ],
    "tier": "core",
    "homepage": "http://health.tsinghua.edu.cn/silencerdb/",
@@ -41064,9 +41046,7 @@
    "id": "racipe",
    "name": "RACIPE",
    "description": "Models gene regulatory circuits by generating randomized parameter ensembles from network topology alone",
-   "categories": [
-    "grn-inference"
-   ],
+   "categories": [],
    "tier": "core",
    "homepage": "https://github.com/simonhb1990/RACIPE-1.0",
    "repo_url": "https://github.com/simonhb1990/RACIPE-1.0",
@@ -41117,7 +41097,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "grn-inference",
+   "primary_category": "uncategorised",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "RACIPE: a computational tool for modeling gene regulatory circuits using randomization",
@@ -41795,8 +41775,7 @@
    "name": "TcoF-DB",
    "description": "Explores human transcription factors and co-factors that regulate transcription via DNA binding or protein-protein interactions",
    "categories": [
-    "motif-databases",
-    "chip-resources"
+    "motif-databases"
    ],
    "tier": "core",
    "homepage": "http://cbrc.kaust.edu.sa/tcof/",
@@ -42322,6 +42301,7 @@
    "name": "scATAC-pro",
    "description": "Processes raw FASTQ files into peak-by-cell count matrices and performs downstream analysis for single-cell ATAC-seq data",
    "categories": [
+    "regulatory-elements",
     "peak-calling",
     "single-cell"
    ],
@@ -42374,7 +42354,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "peak-calling",
+   "primary_category": "regulatory-elements",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "scATAC-pro: a comprehensive workbench for single-cell chromatin accessibility sequencing data",
@@ -42860,7 +42840,7 @@
    "name": "iMARGI",
    "description": "Maps RNA-chromatin interactions from sequencing data",
    "categories": [
-    "regulatory-elements"
+    "tfbs-prediction"
    ],
    "tier": "core",
    "homepage": "https://sysbio.ucsd.edu/imargi_pipeline",
@@ -42915,7 +42895,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "unreachable",
    "repo_status": "",
    "publication_title": "Mapping RNA\u2013chromatin interactions by sequencing with iMARGI",
@@ -43067,9 +43047,7 @@
    "id": "biotapestry",
    "name": "BioTapestry",
    "description": "Interactive tool for building, visualizing, and simulating genetic regulatory networks",
-   "categories": [
-    "grn-inference"
-   ],
+   "categories": [],
    "tier": "core",
    "homepage": "http://www.biotapestry.org/",
    "repo_url": "",
@@ -43118,7 +43096,7 @@
     "categories"
    ],
    "featured": "",
-   "primary_category": "grn-inference",
+   "primary_category": "uncategorised",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "",
@@ -43136,6 +43114,7 @@
    "name": "CAGEfightR",
    "description": "Performs a wide range of CAGE data analysis tasks including TSS identification, enhancer prediction, and quantification from BigWig files",
    "categories": [
+    "regulatory-elements",
     "peak-calling",
     "peak-annotation"
    ],
@@ -43194,7 +43173,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "peak-calling",
+   "primary_category": "regulatory-elements",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "CAGEfightR: analysis of 5\u2032-end data using R/Bioconductor",
@@ -43888,7 +43867,8 @@
    "name": "NCBI Epigenomics",
    "description": "Provides whole-genome epigenetic data sets as processed tracks for browsing and download",
    "categories": [
-    "chip-resources"
+    "chip-resources",
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "http://www.ncbi.nlm.nih.gov/epigenomics",
@@ -44669,9 +44649,7 @@
    "id": "flexflux",
    "name": "FlexFlux",
    "description": "Combines metabolic flux and regulatory network analyses by using regulatory steady-states as constraints for flux balance analysis",
-   "categories": [
-    "grn-inference"
-   ],
+   "categories": [],
    "tier": "core",
    "homepage": "http://lipm-bioinfo.toulouse.inra.fr/flexflux/",
    "repo_url": "https://github.com/lmarmiesse/FlexFlux",
@@ -44720,7 +44698,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "grn-inference",
+   "primary_category": "uncategorised",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "FlexFlux: combining metabolic flux and regulatory network analyses",
@@ -45039,6 +45017,7 @@
    "name": "CONFAC",
    "description": "Compares human and mouse promoter sequences to identify conserved transcription factor binding sites enriched in gene clusters from microarray data",
    "categories": [
+    "tfbs-prediction",
     "footprinting",
     "comparative"
    ],
@@ -45093,7 +45072,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "footprinting",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "unreachable",
    "repo_status": "",
    "publication_title": "CONFAC: automated application of comparative genomic promoter analysis to DNA microarray datasets",
@@ -45949,6 +45928,7 @@
    "name": "SDDA",
    "description": "Searches for transcription factor binding sites in DNA sequences using a stochastic dictionary model that detects multiple motif types, gapped motifs, and optimal motif width",
    "categories": [
+    "motif-discovery",
     "tfbs-prediction"
    ],
    "tier": "core",
@@ -46000,7 +45980,7 @@
    ],
    "note": "url reviewed 2026-09-03: http://www.stats.gla.ac.uk/~mgupta/publications.htm resolves but serves different software, and no replacement was found; pointing at the paper instead",
    "featured": "",
-   "primary_category": "tfbs-prediction",
+   "primary_category": "motif-discovery",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Discovery of Conserved Sequence Patterns Using a Stochastic Dictionary Model",
@@ -46018,7 +45998,8 @@
    "name": "BROCKMAN",
    "description": "Converts single-cell epigenomic data into k-mer word frequencies and decomposes them to identify variation in transcription factor activity",
    "categories": [
-    "regulatory-elements"
+    "regulatory-elements",
+    "single-cell"
    ],
    "tier": "core",
    "homepage": "https://carldeboer.github.io/brockman.html",
@@ -48656,8 +48637,7 @@
    "name": "Deep-loop",
    "description": "Predicts CTCF-mediated chromatin loops from DNA sequence using a convolutional neural network",
    "categories": [
-    "tfbs-prediction",
-    "regulatory-elements"
+    "tfbs-prediction"
    ],
    "tier": "core",
    "homepage": "https://github.com/linDing-group/Deep-loop",
@@ -48979,7 +48959,6 @@
    "name": "CENTDIST",
    "description": "Ranks co-transcription factors by their distribution around ChIP-seq peaks without requiring user parameters",
    "categories": [
-    "motif-scanning",
     "tfbs-prediction"
    ],
    "tier": "core",
@@ -49029,7 +49008,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-scanning",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "unreachable",
    "repo_status": "",
    "publication_title": "CENTDIST: discovery of co-associated factors by motif distribution",
@@ -49184,6 +49163,7 @@
    "name": "FORGE2",
    "description": "Identifies tissue- and cell type-specific regulatory signals from GWAS SNPs using an expanded atlas of regulatory element annotations including DNase I hotspots, histone marks, and chromatin states",
    "categories": [
+    "regulatory-elements",
     "regulatory-variants"
    ],
    "tier": "core",
@@ -49240,7 +49220,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-variants",
+   "primary_category": "regulatory-elements",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Integrative analysis of 3604 GWAS reveals multiple novel cell type-specific regulatory associations",
@@ -49595,8 +49575,7 @@
    "description": "A web-atlas integrating gene expression and transcription factor binding data to determine gene responses to p53, \u0394Np63, and cell cycle signaling",
    "categories": [
     "chip-resources",
-    "grn-inference",
-    "regulatory-variants"
+    "grn-inference"
    ],
    "tier": "core",
    "homepage": "http://www.TargetGeneReg.org",
@@ -52517,7 +52496,7 @@
    "description": "Predicts cell-type disease genes and regulatory networks from multi-omics data using a computational pipeline",
    "categories": [
     "grn-inference",
-    "regulatory-variants"
+    "single-cell"
    ],
    "tier": "core",
    "homepage": "https://github.com/daifengwanglab/scGRNom",
@@ -53464,7 +53443,8 @@
    "name": "ASAP",
    "description": "Searches for over-represented transcription factor binding sites in promoter sequences using enhanced suffix arrays and multiple statistical methods",
    "categories": [
-    "tfbs-prediction"
+    "tfbs-prediction",
+    "regulatory-elements"
    ],
    "tier": "core",
    "homepage": "http://asap.binf.ku.dk/Asap/Home.html",
@@ -53530,9 +53510,7 @@
    "name": "ChIA-PET",
    "description": "Processes short-read and long-read ChIA-PET data with multithreading to detect chromatin interactions associated with a specific protein",
    "categories": [
-    "regulatory-elements",
-    "peak-calling",
-    "peak-annotation"
+    "peak-calling"
    ],
    "tier": "core",
    "homepage": "https://github.com/GuoliangLi-HZAU/ChIA-PET_Tool_V3/",
@@ -53585,7 +53563,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "peak-calling",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Chromatin Interaction Analysis with Updated ChIA-PET Tool (V3)",
@@ -54574,8 +54552,7 @@
    "name": "TFmotifView",
    "description": "Visualizes known transcription factor motif occurrences and enrichment in user-provided genomic regions using JASPAR motifs",
    "categories": [
-    "motif-scanning",
-    "motif-comparison"
+    "motif-scanning"
    ],
    "tier": "core",
    "homepage": "http://bardet.u-strasbg.fr/tfmotifview/",
@@ -54713,8 +54690,8 @@
    "name": "3DIV",
    "description": "Visualizes chromatin interactions from Hi-C data with options for epigenetic annotation and cancer genome rearrangement analysis",
    "categories": [
-    "regulatory-elements",
-    "chip-resources"
+    "chip-resources",
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "http://3div.kr",
@@ -54766,7 +54743,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "chip-resources",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "3DIV update for 2021: a comprehensive resource of 3D genome and 3D cancer genome",
@@ -56265,9 +56242,7 @@
    "id": "ggb",
    "name": "GGB",
    "description": "The GGB (Gaggle Genome Browser) is an open source software tool for visualizing high-density data plotted against coordinates on the genome",
-   "categories": [
-    "peak-annotation"
-   ],
+   "categories": [],
    "tier": "core",
    "homepage": "http://gaggle.systemsbiology.net/docs/geese/genomebrowser/",
    "repo_url": "",
@@ -56319,7 +56294,7 @@
     "categories"
    ],
    "featured": "",
-   "primary_category": "peak-annotation",
+   "primary_category": "uncategorised",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "",
@@ -56338,6 +56313,7 @@
    "description": "Predicts cis-regulatory elements by searching for clusters of short motifs and weighting them with positive and negative training sets",
    "categories": [
     "motif-scanning",
+    "tfbs-prediction",
     "regulatory-elements"
    ],
    "tier": "core",
@@ -57422,7 +57398,6 @@
    "name": "BindSpace",
    "description": "Embeds DNA sequences and transcription factor labels into a shared space to predict binding signals from large-scale sequence data",
    "categories": [
-    "motif-scanning",
     "tfbs-prediction"
    ],
    "tier": "core",
@@ -57471,7 +57446,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-scanning",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "BindSpace decodes transcription factor binding signals by large-scale sequence embedding",
@@ -58308,9 +58283,7 @@
    "name": "DAStk - Differential ATAC-seq toolkit",
    "description": "Detects significant changes in transcription factor activity from differential ATAC-seq data using accessible chromatin changes",
    "categories": [
-    "footprinting",
-    "peak-annotation",
-    "regulatory-variants"
+    "footprinting"
    ],
    "tier": "core",
    "homepage": "https://github.com/Dowell-Lab/DAStk",
@@ -59082,9 +59055,7 @@
    "id": "cplexa",
    "name": "CplexA",
    "description": "CplexA is a Mathematica package that uses functional programming to efficiently compute probabilities and average properties over such exponentially large number of states from the energetics of the interactions",
-   "categories": [
-    "regulatory-elements"
-   ],
+   "categories": [],
    "tier": "core",
    "homepage": "http://cplexa.sourceforge.net/",
    "repo_url": "",
@@ -59141,7 +59112,7 @@
     "categories"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "uncategorised",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "",
@@ -59159,8 +59130,7 @@
    "name": "DeconPeaker",
    "description": "Estimates cell type proportions from chromatin accessibility (ATAC-Seq) and gene expression (RNA-Seq, microarray) data using deconvolution",
    "categories": [
-    "peak-annotation",
-    "single-cell"
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://github.com/lihuamei/DeconPeaker",
@@ -59214,7 +59184,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "peak-annotation",
+   "primary_category": "nucleosome-chromatin",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "DeconPeaker, a Deconvolution Model to Identify Cell Types Based on Chromatin Accessibility in ATAC-Seq Data of Mixture Samples",
@@ -59448,7 +59418,8 @@
    "name": "META-BASE",
    "description": "Integrates genomic metadata from multiple public repositories using a structured transformation pipeline",
    "categories": [
-    "chip-resources"
+    "chip-resources",
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://doi.org/10.1109/tcbb.2020.2998954",
@@ -59831,8 +59802,7 @@
    "name": "CPModule",
    "description": "Detects cis-regulatory modules from ChIP-seq data using a query-based approach to recover combinatorial transcription factor regulation",
    "categories": [
-    "regulatory-elements",
-    "peak-annotation"
+    "regulatory-elements"
    ],
    "tier": "core",
    "homepage": "http://bioinformatics.intec.ugent.be/kmarchal/Supplementary_Information_Sun_2011/Index.html",
@@ -60807,7 +60777,6 @@
    "name": "IAnimal",
    "description": "Integrates and provides cross-species genome, transcriptome, epigenome and annotation data with query, mining and visualization modules",
    "categories": [
-    "chip-resources",
     "comparative"
    ],
    "tier": "core",
@@ -60860,7 +60829,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "chip-resources",
+   "primary_category": "comparative",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "IAnimal: a cross-species omics knowledgebase for animals",
@@ -61457,8 +61426,7 @@
    "name": "CompareProspector",
    "description": "Identifies regulatory motifs from co-regulated genes in higher eukaryotes by biasing Gibbs sampling towards conserved sequences across multiple species",
    "categories": [
-    "motif-discovery",
-    "motif-comparison"
+    "motif-discovery"
    ],
    "tier": "core",
    "homepage": "http://compareprospector.stanford.edu/",
@@ -62136,7 +62104,7 @@
    "name": "LOLAweb",
    "description": "Tests a query set of genomic ranges for enrichment against a database of region sets with interactive visualization",
    "categories": [
-    "peak-annotation"
+    "tfbs-prediction"
    ],
    "tier": "core",
    "homepage": "http://lolaweb.databio.org",
@@ -62187,7 +62155,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "peak-annotation",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "dead",
    "repo_status": "",
    "publication_title": "LOLAweb: a containerized web server for interactive genomic locus overlap enrichment analysis",
@@ -63323,9 +63291,7 @@
    "name": "CREAM",
    "description": "Identifies clusters of cis-regulatory elements from chromatin accessibility profiles using an unsupervised machine learning approach",
    "categories": [
-    "regulatory-elements",
-    "peak-annotation",
-    "grn-inference"
+    "regulatory-elements"
    ],
    "tier": "core",
    "homepage": "https://cran.r-project.org/web/packages/CREAM/index.html",
@@ -65381,8 +65347,7 @@
    "description": "Analyzes ChIP-seq data through a Galaxy-based web service with peak calling, motif discovery, and genomic annotation",
    "categories": [
     "peak-calling",
-    "peak-annotation",
-    "chip-resources"
+    "peak-annotation"
    ],
    "tier": "core",
    "homepage": "https://nebula.curie.fr/",
@@ -66605,9 +66570,7 @@
    "name": "RCADE",
    "description": "Combines predictions from a DNA recognition code of C2H2-ZFs with ChIP-seq data to identify genuine DNA binding preferences of C2H2-ZF proteins",
    "categories": [
-    "motif-discovery",
-    "tfbs-prediction",
-    "chip-resources"
+    "tfbs-prediction"
    ],
    "tier": "core",
    "homepage": "http://rcade.ccbr.utoronto.ca/",
@@ -66656,7 +66619,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-discovery",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Identification of C2H2-ZF binding preferences from ChIP-seq data using RCADE",
@@ -67761,7 +67724,9 @@
    "name": "GeneCodis",
    "description": "GeneCodis is a web-based tool for the ontological analysis of lists of genes, proteins, and regulatory elements like miRNAs, transcription factors, and CpGs.",
    "categories": [
-    "regulatory-elements"
+    "tfbs-prediction",
+    "regulatory-elements",
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://genecodis.genyo.es",
@@ -67812,7 +67777,7 @@
     "categories"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "",
@@ -68231,9 +68196,7 @@
    "name": "SSA",
    "description": "Discovers and characterizes sequence motifs positionally correlated with functional sites like transcription start sites",
    "categories": [
-    "motif-discovery",
-    "motif-scanning",
-    "motif-comparison"
+    "motif-discovery"
    ],
    "tier": "core",
    "homepage": "https://epd.expasy.org/ssa/",
@@ -68714,7 +68677,7 @@
    "name": "GRiNCH",
    "description": "Simultaneously smooths and detects topological domains from sparse Hi-C contact count matrices using constrained matrix factorization",
    "categories": [
-    "grn-inference"
+    "peak-calling"
    ],
    "tier": "core",
    "homepage": "http://roy-lab.github.io/grinch",
@@ -68769,7 +68732,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "grn-inference",
+   "primary_category": "peak-calling",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "GRiNCH: simultaneous smoothing and detection of topological units of genome organization from sparse chromatin contact count matrices with matrix factorization",
@@ -70674,6 +70637,7 @@
    "name": "ANANASTRA",
    "description": "Identifies and annotates regulatory SNPs with allele-specific transcription factor binding events from a list of dbSNP IDs or a VCF file",
    "categories": [
+    "tfbs-prediction",
     "regulatory-variants"
    ],
    "tier": "extended",
@@ -70726,7 +70690,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-variants",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "ANANASTRA: annotation and enrichment analysis of allele-specific transcription factor binding at SNPs",
@@ -70865,8 +70829,9 @@
    "name": "ChiCMaxima",
    "description": "Detects chromatin looping interactions from Capture Hi-C data using local maxima with biological replicate integration",
    "categories": [
-    "regulatory-elements",
-    "peak-calling"
+    "tfbs-prediction",
+    "peak-calling",
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://github.com/yousra291987/ChiCMaxima",
@@ -70917,7 +70882,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "ChiCMaxima: a robust and simple pipeline for detection and visualization of chromatin looping in Capture Hi-C",
@@ -70935,7 +70900,7 @@
    "name": "ClinTAD",
    "description": "Evaluates the clinical relevance of copy number variants within topologically associated domains",
    "categories": [
-    "regulatory-variants"
+    "tfbs-prediction"
    ],
    "tier": "core",
    "homepage": "https://www.clintad.com/",
@@ -70985,7 +70950,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-variants",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "ClinTAD: a tool for copy number variant interpretation in the context of topologically associated domains",
@@ -71427,6 +71392,7 @@
    "description": "Identifies conserved motifs in regulatory regions of prokaryotic genomes using phylogenetic footprinting",
    "categories": [
     "motif-discovery",
+    "regulatory-elements",
     "footprinting"
    ],
    "tier": "core",
@@ -72044,9 +72010,7 @@
    "id": "tfpredict",
    "name": "TFpredict",
    "description": "Transcription Factor predict",
-   "categories": [
-    "tfbs-prediction"
-   ],
+   "categories": [],
    "tier": "core",
    "homepage": "http://www.ra.cs.uni-tuebingen.de/software/TFpredict/welcome_e.html",
    "repo_url": "",
@@ -72096,7 +72060,7 @@
     "categories"
    ],
    "featured": "",
-   "primary_category": "tfbs-prediction",
+   "primary_category": "uncategorised",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "",
@@ -72941,7 +72905,7 @@
    "description": "Classifies non-coding RNAs associated with distinct histone modifications from PIRCh-seq data",
    "categories": [
     "peak-calling",
-    "peak-annotation"
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://github.com/QuKunLab/PIRCh",
@@ -73644,8 +73608,7 @@
    "name": "GroovDB",
    "description": "Provides a curated database of ligand-inducible transcription factors with sequence, ligand, and operator data",
    "categories": [
-    "motif-databases",
-    "tfbs-prediction"
+    "motif-databases"
    ],
    "tier": "core",
    "homepage": "https://groov.bio",
@@ -74841,7 +74804,7 @@
    "name": "BSGatlas",
    "description": "Integrates multiple annotation resources to create a unified genome and transcriptome annotation atlas for Bacillus subtilis with enhanced ncRNA and operon coverage",
    "categories": [
-    "regulatory-elements"
+    "tfbs-prediction"
    ],
    "tier": "core",
    "homepage": "http://rth.dk/resources/bsgatlas",
@@ -74891,7 +74854,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "BSGatlas: a unified Bacillus subtilis genome and transcriptome annotation atlas with enhanced information access",
@@ -75038,6 +75001,7 @@
    "name": "Footer",
    "description": "Analyses homologous mammalian promoter sequences for transcription factor binding sites using position-specific scoring matrices from TRANSFAC",
    "categories": [
+    "motif-scanning",
     "tfbs-prediction",
     "footprinting"
    ],
@@ -75088,7 +75052,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "tfbs-prediction",
+   "primary_category": "motif-scanning",
    "homepage_status": "unreachable",
    "repo_status": "",
    "publication_title": "FOOTER: a web tool for finding mammalian DNA regulatory regions using phylogenetic footprinting",
@@ -76494,7 +76458,7 @@
    "categories": [
     "motif-scanning",
     "tfbs-prediction",
-    "peak-annotation"
+    "regulatory-elements"
    ],
    "tier": "core",
    "homepage": "http://bits.iis.sinica.edu.tw/~mybs/",
@@ -76619,9 +76583,7 @@
    "id": "q-nexus",
    "name": "Q-nexus",
    "description": "Q-nexus is a comprehensive software package for ChIP-nexus data that exploits the random barcodes for selective removal of PCR duplicates and for quality control.",
-   "categories": [
-    "peak-calling"
-   ],
+   "categories": [],
    "tier": "core",
    "homepage": "http://charite.github.io/Q/",
    "repo_url": "https://github.com/charite/Q",
@@ -76669,7 +76631,7 @@
     "categories"
    ],
    "featured": "",
-   "primary_category": "peak-calling",
+   "primary_category": "uncategorised",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "",
@@ -76687,7 +76649,6 @@
    "name": "R-loop",
    "description": "Performs quality control and meta-analysis of R-loop mapping datasets to define consensus R-loop regions",
    "categories": [
-    "regulatory-elements",
     "peak-calling"
    ],
    "tier": "core",
@@ -76744,7 +76705,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "peak-calling",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Quality-controlled R-loop meta-analysis reveals the characteristics of R-loop consensus regions",
@@ -77298,8 +77259,8 @@
    "name": "CRISPRepi",
    "description": "Consolidates multi-omic sequencing data from CRISPR-based epigenome editing experiments for analyzing editing outcomes and off-target effects",
    "categories": [
-    "regulatory-elements",
-    "peak-calling"
+    "peak-calling",
+    "chip-resources"
    ],
    "tier": "core",
    "homepage": "http://crisprepi.maolab.org/",
@@ -77350,7 +77311,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "peak-calling",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "CRISPRepi: a multi-omic atlas for CRISPR-based epigenome editing",
@@ -78270,7 +78231,8 @@
    "name": "TDTHub",
    "description": "Analyses transcription factor binding sites in plants using pre-computed data from 40 species and two mapping algorithms",
    "categories": [
-    "tfbs-prediction"
+    "tfbs-prediction",
+    "regulatory-elements"
    ],
    "tier": "core",
    "homepage": "http://acrab.cnb.csic.es/TDTHub/",
@@ -79755,7 +79717,7 @@
    "name": "R3CPET",
    "description": "Infers protein complexes maintaining chromatin interactions from ChIA-PET data using a hierarchical Dirichlet process",
    "categories": [
-    "grn-inference"
+    "peak-calling"
    ],
    "tier": "core",
    "homepage": "http://bioconductor.org/packages/release/bioc/html/R3CPET.html",
@@ -79814,7 +79776,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "grn-inference",
+   "primary_category": "peak-calling",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "3CPET: finding co-factor complexes from ChIA-PET data using a hierarchical Dirichlet process",
@@ -80024,7 +79986,6 @@
    "name": "Segtools",
    "description": "Explores and summarizes genomic segmentations through a pipeline of interacting tools",
    "categories": [
-    "peak-annotation",
     "nucleosome-chromatin"
    ],
    "tier": "extended",
@@ -80078,7 +80039,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "peak-annotation",
+   "primary_category": "nucleosome-chromatin",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Exploratory analysis of genomic segmentations with Segtools",
@@ -80693,7 +80654,8 @@
    "description": "Identifies protein binding sites from ChIP-seq and nucleosome positioning experiments using a flexible model",
    "categories": [
     "tfbs-prediction",
-    "peak-calling"
+    "peak-calling",
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://bioconductor.org/packages/ChIPseqR",
@@ -82480,7 +82442,7 @@
    "name": "CHIPIN",
    "description": "Normalizes ChIP-seq signals across conditions using gene expression data to identify transcriptionally constant genes",
    "categories": [
-    "peak-calling"
+    "chip-resources"
    ],
    "tier": "core",
    "homepage": "https://github.com/BoevaLab/CHIPIN",
@@ -82534,7 +82496,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "peak-calling",
+   "primary_category": "chip-resources",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "CHIPIN: ChIP-seq inter-sample normalization based on signal invariance across transcriptionally constant genes",
@@ -83576,6 +83538,7 @@
    "description": "Searches vertebrate genomes for evolutionarily conserved modules of transcription factor binding sites to identify synonymous regulatory elements",
    "categories": [
     "motif-scanning",
+    "tfbs-prediction",
     "regulatory-elements"
    ],
    "tier": "core",
@@ -84510,8 +84473,6 @@
    "name": "Haystack",
    "description": "Identifies hotspots of epigenetic variability, cell-type specific cis-regulatory elements, and associated transcription factors from epigenomic data",
    "categories": [
-    "motif-discovery",
-    "motif-scanning",
     "regulatory-elements"
    ],
    "tier": "core",
@@ -84568,7 +84529,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-discovery",
+   "primary_category": "regulatory-elements",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Haystack: systematic analysis of the variation of epigenetic states and cell-type specific regulatory elements",
@@ -87781,7 +87742,8 @@
    "description": "Identifies compositionally similar cis-element clusters in ortholog-conserved regulatory regions of co-expressed genes",
    "categories": [
     "motif-discovery",
-    "regulatory-elements"
+    "regulatory-elements",
+    "comparative"
    ],
    "tier": "core",
    "homepage": "http://cismols.cchmc.org/",
@@ -87993,8 +87955,7 @@
    "name": "DeepVISP",
    "description": "Predicts oncogenic virus integration sites in the human genome using a deep convolutional neural network with attention architecture",
    "categories": [
-    "motif-discovery",
-    "tfbs-prediction"
+    "motif-discovery"
    ],
    "tier": "core",
    "homepage": "https://bioinfo.uth.edu/DeepVISP",
@@ -89578,6 +89539,7 @@
    "name": "APEC",
    "description": "Clusters single cells by groups of accessible regions with synergistic signal patterns from epigenomic data",
    "categories": [
+    "nucleosome-chromatin",
     "single-cell"
    ],
    "tier": "core",
@@ -89632,7 +89594,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "single-cell",
+   "primary_category": "nucleosome-chromatin",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "APEC: an accesson-based method for single-cell chromatin accessibility analysis",
@@ -89972,8 +89934,7 @@
    "name": "capC-MAP",
    "description": "Analyzes Capture-C data to probe genome-wide chromatin interactions from target genomic locations",
    "categories": [
-    "peak-calling",
-    "peak-annotation"
+    "peak-calling"
    ],
    "tier": "core",
    "homepage": "https://github.com/cbrackley/capC-MAP",
@@ -90383,7 +90344,8 @@
    "name": "decorate",
    "description": "Tests for differential correlation of epigenetic features between groups and finds differentially correlated clusters",
    "categories": [
-    "regulatory-elements"
+    "peak-calling",
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://github.com/GabrielHoffman/decorate",
@@ -90435,7 +90397,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "peak-calling",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "decorate: differential epigenetic correlation test",
@@ -90641,7 +90603,6 @@
    "name": "GPro",
    "description": "Designs promoters using generative AI with a standardized pipeline for training, optimization, and evaluation",
    "categories": [
-    "motif-discovery",
     "regulatory-elements"
    ],
    "tier": "core",
@@ -90697,7 +90658,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-discovery",
+   "primary_category": "regulatory-elements",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "GPro: generative AI-empowered toolkit for promoter design",
@@ -91334,6 +91295,7 @@
    "name": "plot2DO",
    "description": "Creates 2D occupancy plots from MNase-seq, ChIP-seq, ATAC-seq, and chemical cleavage mapping data to evaluate nucleosome organization and fragment size distribution",
    "categories": [
+    "footprinting",
     "peak-annotation"
    ],
    "tier": "core",
@@ -91387,7 +91349,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "peak-annotation",
+   "primary_category": "footprinting",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Creating 2D Occupancy Plots Using plot2DO",
@@ -92203,8 +92165,7 @@
    "name": "CamRegBase",
    "description": "Provides Camelina gene expression, co-expression, transcription factors, lipid-associated genes, and orthologs relative to Arabidopsis",
    "categories": [
-    "regulatory-elements",
-    "chip-resources"
+    "tfbs-prediction"
    ],
    "tier": "core",
    "homepage": "https://camregbase.org/",
@@ -92254,7 +92215,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "CamRegBase: a gene regulation database for the biofuel crop, Camelina sativa",
@@ -92399,7 +92360,8 @@
    "description": "Predicts genome-wide chromatin accessibility by integrating sequence information and transcription factor binding statuses using a deep convolutional neural network",
    "categories": [
     "tfbs-prediction",
-    "regulatory-elements"
+    "regulatory-elements",
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://github.com/kimmo1019/DeepCAGE",
@@ -93442,6 +93404,8 @@
    "name": "RegAnalyst",
    "description": "Integrates MoPP, MyPatternFinder, and MycoRegDB for regulatory motif prediction and analysis in mycobacterial sequences",
    "categories": [
+    "motif-discovery",
+    "motif-databases",
     "regulatory-elements"
    ],
    "tier": "core",
@@ -93492,7 +93456,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "motif-discovery",
    "homepage_status": "dead",
    "repo_status": "",
    "publication_title": "RegAnalyst: a web interface for the analysis of regulatory motifs, networks and pathways",
@@ -93585,7 +93549,11 @@
    "name": "Regeneration Roadmap",
    "description": "Compiles and explores multi-omics regeneration data across species and tissues with visualization and download tools",
    "categories": [
-    "chip-resources"
+    "motif-databases",
+    "tfbs-prediction",
+    "chip-resources",
+    "nucleosome-chromatin",
+    "single-cell"
    ],
    "tier": "core",
    "homepage": "https://ngdc.cncb.ac.cn/regeneration/index",
@@ -93638,7 +93606,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "chip-resources",
+   "primary_category": "motif-databases",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "OUP accepted manuscript",
@@ -93924,7 +93892,6 @@
    "name": "scEpiTools",
    "description": "Interrogates analytic tools for single-cell epigenomic data",
    "categories": [
-    "chip-resources",
     "single-cell"
    ],
    "tier": "core",
@@ -93979,7 +93946,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "chip-resources",
+   "primary_category": "single-cell",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "scEpiTools: a database to comprehensively interrogate analytic tools for single-cell epigenomic data",
@@ -94659,7 +94626,8 @@
    "description": "Profiles genome-wide chromatin accessibility from ATAC-seq data, identifying nucleosome-free and nucleosome-occupied regions and differential accessibility between two datasets",
    "categories": [
     "peak-calling",
-    "peak-annotation"
+    "peak-annotation",
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://github.com/RitataLU/ATACgraph",
@@ -96833,8 +96801,8 @@
    "name": "PhaeoEpiView",
    "description": "Visualizes epigenome data and transcripts on an updated reference genome of the diatom Phaeodactylum tricornutum",
    "categories": [
-    "peak-calling",
-    "chip-resources"
+    "regulatory-elements",
+    "peak-calling"
    ],
    "tier": "core",
    "homepage": "https://PhaeoEpiView.univ-nantes.fr",
@@ -96888,7 +96856,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "peak-calling",
+   "primary_category": "regulatory-elements",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "PhaeoEpiView: an epigenome browser of the newly assembled genome of the model diatom Phaeodactylum tricornutum",
@@ -98130,8 +98098,7 @@
    "name": "DLoopCaller",
    "description": "Predicts genome-wide chromatin loops by integrating accessible chromatin landscapes with raw Hi-C contact maps using deep learning",
    "categories": [
-    "regulatory-elements",
-    "peak-calling"
+    "regulatory-elements"
    ],
    "tier": "core",
    "homepage": "https://github.com/wangguoguoa/DLoopCaller",
@@ -98575,8 +98542,8 @@
    "name": "figeno",
    "description": "Generates publication-quality multi-region genomic figures from long reads and epigenomic data via CLI or GUI",
    "categories": [
-    "regulatory-elements",
-    "peak-annotation"
+    "peak-calling",
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://figeno.readthedocs.io/",
@@ -98625,7 +98592,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "peak-calling",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Figeno: multi-region genomic figures with long-read support",
@@ -99375,6 +99342,7 @@
    "name": "NetProphet",
    "description": "Maps transcription factor networks from gene expression data by combining multiple approaches, exploiting TF similarity, and iteratively refining binding specificities",
    "categories": [
+    "tfbs-prediction",
     "grn-inference"
    ],
    "tier": "core",
@@ -99426,7 +99394,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "grn-inference",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "NetProphet 2.0: mapping transcription factor networks by exploiting scalable data resources",
@@ -100052,6 +100020,7 @@
    "name": "SraTailor",
    "description": "Converts SRA ChIP-seq data into BigWig files and visualizes read coverage via a graphical interface",
    "categories": [
+    "peak-annotation",
     "chip-resources"
    ],
    "tier": "core",
@@ -100101,7 +100070,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "chip-resources",
+   "primary_category": "peak-annotation",
    "homepage_status": "unreachable",
    "repo_status": "",
    "publication_title": "SraTailor: Graphical user interface software for processing and visualizing Ch IP \u2010seq data",
@@ -100252,7 +100221,6 @@
    "name": "UniPath",
    "description": "Represents single cells using pathway and gene-set enrichment scores from scRNA-seq and scATAC-seq data for heterogeneity analysis",
    "categories": [
-    "regulatory-elements",
     "single-cell"
    ],
    "tier": "core",
@@ -100305,7 +100273,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "single-cell",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "UniPath: a uniform approach for pathway and gene-set based analysis of heterogeneity in single-cell epigenome and transcriptome profiles",
@@ -102065,8 +102033,6 @@
    "name": "PPGR",
    "description": "Integrates genomic, gene regulation and functional data from 60 perennial plant species with multi-omics search and analysis tools",
    "categories": [
-    "regulatory-elements",
-    "chip-resources",
     "grn-inference"
    ],
    "tier": "core",
@@ -102121,7 +102087,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "grn-inference",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "PPGR: a comprehensive perennial plant genomes and regulation database",
@@ -102215,8 +102181,7 @@
    "name": "Snapshot",
    "description": "Clusters and visualizes candidate cis-regulatory elements based on epigenetic signals during cell differentiation",
    "categories": [
-    "nucleosome-chromatin",
-    "single-cell"
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://github.com/guanjue/Snapshot",
@@ -103133,6 +103098,7 @@
    "name": "DeepLUCIA",
    "description": "Predicts tissue-specific chromatin loops from genomic and epigenomic profiles without CTCF signal using deep learning",
    "categories": [
+    "regulatory-elements",
     "grn-inference"
    ],
    "tier": "core",
@@ -103188,7 +103154,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "grn-inference",
+   "primary_category": "regulatory-elements",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "DeepLUCIA: predicting tissue-specific chromatin loops using Deep Learning-based Universal Chromatin Interaction Annotator",
@@ -103206,8 +103172,6 @@
    "name": "DeepMR",
    "description": "Estimates causal relationships between genomic marks learned by deep learning models using Mendelian randomization and in silico mutagenesis",
    "categories": [
-    "motif-discovery",
-    "tfbs-prediction",
     "regulatory-variants"
    ],
    "tier": "extended",
@@ -103262,7 +103226,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-discovery",
+   "primary_category": "regulatory-variants",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Deep mendelian randomization: Investigating the causal knowledge of genomic deep learning models",
@@ -104712,7 +104676,6 @@
    "name": "SeqCode",
    "description": "Analyzes and visualizes high-throughput sequencing data through quality control, read mapping, peak calling, and counting",
    "categories": [
-    "regulatory-elements",
     "footprinting",
     "peak-calling"
    ],
@@ -104770,7 +104733,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "footprinting",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Productive visualization of high-throughput sequencing data using the SeqCode open portable platform",
@@ -105118,9 +105081,7 @@
    "name": "Asymmetron",
    "description": "Identifies strand asymmetry patterns in consecutive or paired genomic elements, and measures asymmetries relative to transcriptional and replicative orientations",
    "categories": [
-    "motif-discovery",
-    "tfbs-prediction",
-    "regulatory-elements"
+    "motif-discovery"
    ],
    "tier": "core",
    "homepage": "https://github.com/Ahituv-lab/Asymmetron",
@@ -105332,10 +105293,7 @@
    "id": "bisa",
    "name": "BiSA",
    "description": "Archives transcription factor binding regions and identifies overlaps or proximity with other genomic regions",
-   "categories": [
-    "motif-scanning",
-    "tfbs-prediction"
-   ],
+   "categories": [],
    "tier": "core",
    "homepage": "http://bisa.sourceforge.net/",
    "repo_url": "",
@@ -105384,7 +105342,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-scanning",
+   "primary_category": "uncategorised",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Binding Sites Analyser (BiSA): Software for Genomic Binding Sites Archiving and Overlap Analysis",
@@ -105589,8 +105547,7 @@
    "name": "EpiAlign",
    "description": "Aligns chromatin state sequences to identify locally similar regions across epigenomes",
    "categories": [
-    "nucleosome-chromatin",
-    "comparative"
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://github.com/zzz3639/EpiAlign",
@@ -105661,9 +105618,7 @@
    "name": "epiRomics",
    "description": "Integrates and visualizes multi-omics epigenomic data to identify enhancer regions and perform regulatory network analysis",
    "categories": [
-    "regulatory-elements",
-    "peak-calling",
-    "peak-annotation"
+    "regulatory-elements"
    ],
    "tier": "core",
    "homepage": "https://bioconductor.org/packages/epiRomics",
@@ -106088,7 +106043,8 @@
    "name": "ImmuneRegulation",
    "description": "Identifies human immune regulatory elements by exploring eQTLs, transcription factor binding regions, and GWAS associations across blood cell types",
    "categories": [
-    "regulatory-elements"
+    "regulatory-elements",
+    "regulatory-variants"
    ],
    "tier": "core",
    "homepage": "https://immuneregulation.mssm.edu",
@@ -106158,8 +106114,6 @@
    "name": "iRegNet",
    "description": "Analyzes upstream regulatory networks for queried genes or genomic regions in Arabidopsis using ChIP-seq and DAP-seq data",
    "categories": [
-    "regulatory-elements",
-    "peak-calling",
     "grn-inference"
    ],
    "tier": "core",
@@ -106214,7 +106168,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "grn-inference",
    "homepage_status": "unreachable",
    "repo_status": "",
    "publication_title": "iRegNet: an integrative Regulatory Network analysis tool for Arabidopsis thaliana",
@@ -107322,7 +107276,8 @@
    "name": "RELICS",
    "description": "Discovers functional sequences from tiling CRISPR screens using a Bayesian hierarchical model",
    "categories": [
-    "motif-discovery"
+    "tfbs-prediction",
+    "regulatory-elements"
    ],
    "tier": "core",
    "homepage": "https://github.com/patfiaux/RELICS",
@@ -107374,7 +107329,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-discovery",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Discovering functional sequences with RELICS, an analysis method for CRISPR screens",
@@ -107536,7 +107491,7 @@
    "name": "RSAT retrieve-ensembl-seq",
    "description": "Retrieves upstream, downstream, intronic, exonic, UTR, transcript, mRNA, CDS or gene sequences from Ensembl for single or multiple genomes with ortholog support",
    "categories": [
-    "regulatory-elements"
+    "tfbs-prediction"
    ],
    "tier": "core",
    "homepage": "http://rsat.sb-roscoff.fr/retrieve-ensembl-seq_form.cgi",
@@ -107588,7 +107543,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "unreachable",
    "repo_status": "",
    "publication_title": "Retrieve-ensembl-seq: user-friendly and large-scale retrieval of single or multi-genome sequences from Ensembl",
@@ -107606,6 +107561,7 @@
    "name": "RSAT Var-tools",
    "description": "Predicts the impact of regulatory variants on transcription factor binding using motif scanning and supports haplotypes",
    "categories": [
+    "motif-scanning",
     "tfbs-prediction",
     "regulatory-variants"
    ],
@@ -107658,7 +107614,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "tfbs-prediction",
+   "primary_category": "motif-scanning",
    "homepage_status": "unreachable",
    "repo_status": "",
    "publication_title": "RSAT variation-tools: An accessible and flexible framework to predict the impact of regulatory variants on transcription factor binding",
@@ -108051,7 +108007,6 @@
    "name": "ThreaDNA",
    "description": "Predicts DNA mechanics' contribution to sequence selectivity of proteins along whole genomes using high-resolution structures",
    "categories": [
-    "motif-scanning",
     "tfbs-prediction"
    ],
    "tier": "extended",
@@ -108103,7 +108058,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-scanning",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "ThreaDNA: predicting DNA mechanics\u2019 contribution to sequence selectivity of proteins along whole genomes",
@@ -108121,8 +108076,7 @@
    "name": "VISION",
    "description": "Integrates epigenomic data from hematopoietic cells to paint regulatory landscapes using IDEAS segmentation",
    "categories": [
-    "regulatory-elements",
-    "grn-inference"
+    "regulatory-elements"
    ],
    "tier": "core",
    "homepage": "http://usevision.org",
@@ -108350,8 +108304,7 @@
    "name": "CCIP",
    "description": "Predicts CTCF-mediated chromatin loops using a two-stage random-forest machine learning method that leverages transitivity information",
    "categories": [
-    "tfbs-prediction",
-    "regulatory-elements"
+    "tfbs-prediction"
    ],
    "tier": "core",
    "homepage": "https://github.com/GaoLabXDU/CCIP",
@@ -108630,7 +108583,8 @@
    "name": "COCOA",
    "description": "Quantifies inter-sample epigenetic variation using region sets to annotate heterogeneity in DNA methylation and chromatin accessibility data",
    "categories": [
-    "regulatory-elements"
+    "regulatory-elements",
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://bioconductor.org/packages/COCOA",
@@ -108704,7 +108658,6 @@
    "name": "CoRec",
    "description": "Profiles cell-specific transcription factor-cofactor complexes from DNA-bound interactions using the CoRec method",
    "categories": [
-    "peak-annotation",
     "grn-inference"
    ],
    "tier": "core",
@@ -108755,7 +108708,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "peak-annotation",
+   "primary_category": "grn-inference",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Rapid profiling of transcription factor\u2013cofactor interaction networks reveals principles of epigenetic regulation",
@@ -109107,7 +109060,8 @@
    "name": "DeepGMAP",
    "description": "Trains and compares deep learning models to predict gene regulatory regions from double-strand genome sequences using FRSS convolution layers",
    "categories": [
-    "grn-inference"
+    "grn-inference",
+    "regulatory-variants"
    ],
    "tier": "core",
    "homepage": "https://github.com/koonimaru/DeepGMAP",
@@ -109901,6 +109855,7 @@
    "description": "A database of hormone receptor binding regions from ChIP-based experiments and computationally predicted binding motifs",
    "categories": [
     "motif-databases",
+    "regulatory-elements",
     "chip-resources"
    ],
    "tier": "core",
@@ -112584,9 +112539,7 @@
    "name": "CATCH",
    "description": "Explores spatial and combinatorial patterns in ChIP profiling data by aligning and clustering enrichment regions",
    "categories": [
-    "peak-calling",
-    "peak-annotation",
-    "chip-resources"
+    "peak-calling"
    ],
    "tier": "core",
    "homepage": "http://catch.cmbi.ru.nl",
@@ -113590,7 +113543,6 @@
    "name": "Genome Surveyor",
    "description": "Discovers and analyzes cis-regulatory elements and transcription factor binding targets in Drosophila using motif-based predictions",
    "categories": [
-    "motif-discovery",
     "tfbs-prediction",
     "regulatory-elements"
    ],
@@ -113643,7 +113595,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-discovery",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "dead",
    "repo_status": "",
    "publication_title": "Genome surveyor 2.0: cis-regulatory analysis in Drosophila",
@@ -115284,7 +115236,6 @@
    "name": "SCOIT",
    "description": "Extracts cell, gene, and omic embeddings from single-cell multiomic tensors using probabilistic decomposition with Gaussian, Poisson, and negative binomial distributions",
    "categories": [
-    "grn-inference",
     "single-cell"
    ],
    "tier": "core",
@@ -115341,7 +115292,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "grn-inference",
+   "primary_category": "single-cell",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Probabilistic tensor decomposition extracts better latent embeddings from single-cell multiomic data",
@@ -115924,7 +115875,9 @@
    "name": "3DGene",
    "description": "Database and visualization tool for predicted 3D conformations of active genes in GM12878 cells using the e-HiP-HoP framework",
    "categories": [
-    "regulatory-elements"
+    "tfbs-prediction",
+    "peak-calling",
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://3dgene.igc.ed.ac.uk",
@@ -115976,7 +115929,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Genome-wide chromosome architecture prediction reveals biophysical principles underlying gene structure",
@@ -116328,8 +116281,7 @@
    "name": "CharID",
    "description": "Predicts chromatin loops mediated by open chromatin regions using a two-step model combining neural network and ensemble learning",
    "categories": [
-    "tfbs-prediction",
-    "grn-inference"
+    "tfbs-prediction"
    ],
    "tier": "core",
    "homepage": "https://github.com/Yin-Shen/CharID",
@@ -116403,8 +116355,6 @@
    "name": "CisCross",
    "description": "Predicts upstream transcription factor regulators for Arabidopsis thaliana gene lists using DAP-seq binding profiles",
    "categories": [
-    "motif-discovery",
-    "motif-scanning",
     "tfbs-prediction",
     "regulatory-elements",
     "grn-inference"
@@ -116460,7 +116410,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-discovery",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "CisCross: A gene list enrichment analysis to predict upstream regulators in Arabidopsis thaliana",
@@ -116536,7 +116486,8 @@
    "description": "Models the impact of somatic alterations on transcription factors and downstream transcriptional programs using chromatin and self-attention",
    "categories": [
     "grn-inference",
-    "regulatory-variants"
+    "regulatory-variants",
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://github.com/osmanbeyoglulab/CITRUS",
@@ -116731,6 +116682,7 @@
    "description": "A database of enhancer-associated insertion and deletion variants identified from H3K27ac ChIP-Seq data in human and murine cancer samples",
    "categories": [
     "regulatory-elements",
+    "chip-resources",
     "regulatory-variants"
    ],
    "tier": "core",
@@ -117667,8 +117619,8 @@
    "name": "MET",
    "description": "Identifies overrepresented transcription factor motifs in user-defined gene sets across multiple species",
    "categories": [
-    "motif-discovery",
-    "motif-scanning"
+    "motif-scanning",
+    "tfbs-prediction"
    ],
    "tier": "core",
    "homepage": "http://veda.cs.uiuc.edu/MET/",
@@ -117720,7 +117672,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-discovery",
+   "primary_category": "motif-scanning",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Motif Enrichment Tool",
@@ -118194,7 +118146,6 @@
    "description": "Annotates altered binding motifs and sequences for genomic variants including somatic mutations, SNPs, and RNA editing",
    "categories": [
     "tfbs-prediction",
-    "peak-annotation",
     "regulatory-variants"
    ],
    "tier": "core",
@@ -120124,8 +120075,7 @@
    "name": "EhecRegNet",
    "description": "Database and analysis platform for predicted gene regulatory interactions in pathogenic E. coli strains based on E. coli K-12 networks",
    "categories": [
-    "grn-inference",
-    "regulatory-variants"
+    "grn-inference"
    ],
    "tier": "core",
    "homepage": "https://ehecregnet.compbio.sdu.dk/v2/index.html",
@@ -122199,6 +122149,7 @@
    "name": "RHPCG",
    "description": "Provides multi-omics analyses and visualization of Hippo pathway genes and regulatory motifs in cancer",
    "categories": [
+    "regulatory-elements",
     "grn-inference"
    ],
    "tier": "extended",
@@ -122250,7 +122201,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "grn-inference",
+   "primary_category": "regulatory-elements",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "RHPCG: a database of the Regulation of the Hippo Pathway in Cancer Genome",
@@ -123163,7 +123114,6 @@
    "name": "APPLES",
    "description": "Analyses promoter sequences genome-wide to identify conserved non-coding elements",
    "categories": [
-    "motif-discovery",
     "motif-scanning",
     "regulatory-elements"
    ],
@@ -123216,7 +123166,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-discovery",
+   "primary_category": "motif-scanning",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Analysis of 5\u2019 gene regions reveals extraordinary conservation of novel non-coding sequences in a wide range of animals",
@@ -123437,7 +123387,6 @@
    "description": "A database and analysis platform documenting core transcriptional regulatory circuits identified from cancer ATAC-seq and H3K27ac ChIP-seq data",
    "categories": [
     "regulatory-elements",
-    "peak-calling",
     "chip-resources"
    ],
    "tier": "core",
@@ -124726,7 +124675,6 @@
    "name": "EpiAlignment",
    "description": "Aligns genomic regions from two species using both DNA sequence and ChIP-seq epigenomic profiles via dynamic programming",
    "categories": [
-    "peak-annotation",
     "comparative"
    ],
    "tier": "core",
@@ -124775,7 +124723,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "peak-annotation",
+   "primary_category": "comparative",
    "homepage_status": "unreachable",
    "repo_status": "",
    "publication_title": "EpiAlignment: alignment with both DNA sequence and epigenomic data",
@@ -125183,7 +125131,6 @@
    "name": "GREAP",
    "description": "Provides annotation and enrichment analysis of human genomic regions using hypergeometric tests and locus overlap analysis",
    "categories": [
-    "regulatory-elements",
     "peak-annotation"
    ],
    "tier": "core",
@@ -125238,7 +125185,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "peak-annotation",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "GREAP: a comprehensive enrichment analysis software for human genomic regions",
@@ -127981,8 +127928,7 @@
    "name": "X-CNN",
    "description": "Fine-maps chromatin interactions from Hi-C data by integrating ChIP-seq and DNase-seq with a convolutional neural network",
    "categories": [
-    "regulatory-elements",
-    "peak-calling"
+    "regulatory-elements"
    ],
    "tier": "core",
    "homepage": "https://github.com/ernstlab/X-CNN",
@@ -128535,6 +128481,7 @@
    "name": "BayesPI-BAR2",
    "description": "Predicts functional non-coding mutations in cancer patient cohorts by integrating gene expression, mutation spatial distribution, and biophysical binding affinity models",
    "categories": [
+    "tfbs-prediction",
     "regulatory-variants"
    ],
    "tier": "core",
@@ -128586,7 +128533,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-variants",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "dead",
    "repo_status": "",
    "publication_title": "BayesPI-BAR2: A New Python Package for Predicting Functional Non-coding Mutations in Cancer Patient Cohorts",
@@ -129308,8 +129255,7 @@
    "name": "DGW",
    "description": "Simultaneously aligns and clusters multiple epigenomic marks using Dynamic Time Warping",
    "categories": [
-    "peak-calling",
-    "comparative"
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "http://lukauskas.co.uk/dgw/",
@@ -129360,7 +129306,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "peak-calling",
+   "primary_category": "nucleosome-chromatin",
    "homepage_status": "unreachable",
    "repo_status": "",
    "publication_title": "DGW: an exploratory data analysis tool for clustering and visualisation of epigenomic marks",
@@ -129588,7 +129534,6 @@
    "name": "ElemeNT 2023",
    "description": "Detects and curates core promoter elements and motifs in nucleotide sequences",
    "categories": [
-    "motif-discovery",
     "motif-scanning",
     "regulatory-elements"
    ],
@@ -129649,7 +129594,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-discovery",
+   "primary_category": "motif-scanning",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "ElemeNT 2023: an enhanced tool for detection and curation of core promoter elements",
@@ -129943,6 +129888,7 @@
    "name": "gReLU",
    "description": "Enables DNA sequence modeling and design pipelines including preprocessing, modeling, evaluation, interpretation, variant effect prediction, and regulatory element design",
    "categories": [
+    "tfbs-prediction",
     "regulatory-elements",
     "regulatory-variants"
    ],
@@ -129996,7 +129942,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "gReLU: a comprehensive framework for DNA sequence modeling and design",
@@ -130279,7 +130225,7 @@
    "description": "Extracts features from circulating cell-free DNA data to infer transcription factor activity for biomarker discovery",
    "categories": [
     "tfbs-prediction",
-    "regulatory-variants"
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://lbf.readthedocs.io/",
@@ -130476,6 +130422,7 @@
    "name": "MAnorm_2",
    "description": "Normalizes and compares ChIP-seq signals between groups of replicate samples using an empirical Bayes framework",
    "categories": [
+    "peak-calling",
     "peak-annotation"
    ],
    "tier": "core",
@@ -130534,7 +130481,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "peak-annotation",
+   "primary_category": "peak-calling",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "MAnorm2 for quantitatively comparing groups of ChIP-seq samples",
@@ -130824,7 +130771,6 @@
    "name": "MicroSalmon",
    "description": "Provides a searchable resource of predicted miRNA targets and 3'UTR cis-regulatory elements in the Atlantic salmon full-length transcriptome",
    "categories": [
-    "tfbs-prediction",
     "regulatory-elements"
    ],
    "tier": "core",
@@ -130881,7 +130827,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "tfbs-prediction",
+   "primary_category": "regulatory-elements",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "MicroSalmon: A Comprehensive, Searchable Resource of Predicted MicroRNA Targets and 3\u2032UTR Cis-Regulatory Elements in the Full-Length Sequenced Atlantic Salmon Transcriptome",
@@ -132623,7 +132569,8 @@
    "description": "Maps direct TF-DNA interactions from uniformly processed ChIP-seq data across nine species, accessible via a RESTful API",
    "categories": [
     "motif-databases",
-    "tfbs-prediction"
+    "tfbs-prediction",
+    "chip-resources"
    ],
    "tier": "core",
    "homepage": "https://unibind.uio.no/",
@@ -134379,7 +134326,8 @@
    "description": "Compares, quality controls and benchmarks epigenomic peak files, producing an interactive HTML report",
    "categories": [
     "peak-calling",
-    "peak-annotation"
+    "peak-annotation",
+    "chip-resources"
    ],
    "tier": "core",
    "homepage": "https://neurogenomics.github.io/EpiCompare",
@@ -134855,7 +134803,8 @@
    "name": "graphsim",
    "description": "Simulates gene expression data from graph structures of biological pathways using igraph networks",
    "categories": [
-    "grn-inference"
+    "grn-inference",
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://github.com/TomKellyGenetics/graphsim",
@@ -135126,7 +135075,8 @@
    "name": "ICN",
    "description": "Extracts interconnected communities from gene co-expression networks, where a subset of genes in one community correlates with a subset in another",
    "categories": [
-    "grn-inference"
+    "grn-inference",
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://figshare.com/articles/software/ICN-package/13229093",
@@ -135726,6 +135676,7 @@
    "description": "Discovers conserved regulatory motifs from multiple-species genomic alignments using efficient clustering",
    "categories": [
     "motif-discovery",
+    "tfbs-prediction",
     "regulatory-elements"
    ],
    "tier": "core",
@@ -135995,6 +135946,7 @@
    "name": "Motto",
    "description": "Converts position weight matrices into wildcard-style consensus sequences with minimum information loss",
    "categories": [
+    "motif-discovery",
     "motif-comparison"
    ],
    "tier": "extended",
@@ -136047,7 +135999,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-comparison",
+   "primary_category": "motif-discovery",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Motto: Representing Motifs in Consensus Sequences with Minimum Information Loss",
@@ -136312,7 +136264,6 @@
    "name": "PCHi-C",
    "description": "Analyses topological structure of PCHi-C chromatin interaction networks by identifying connected components with significance scores",
    "categories": [
-    "regulatory-elements",
     "nucleosome-chromatin"
    ],
    "tier": "core",
@@ -136367,7 +136318,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "nucleosome-chromatin",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Topological structure analysis of chromatin interaction networks",
@@ -137474,7 +137425,8 @@
    "name": "SimSearch",
    "description": "Searches and compares (epi)genomic feature patterns across multiple genome browser tracks using an optimized pattern-search algorithm",
    "categories": [
-    "comparative"
+    "tfbs-prediction",
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://deib-geco.github.io/simsearch-app/",
@@ -137527,7 +137479,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "comparative",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Search and comparison of (epi)genomic feature patterns in multiple genome browser tracks",
@@ -138217,8 +138169,6 @@
    "name": "universal TTSs",
    "description": "Identifies universal Triplex Target Sites (TTSs) in DNA regions from RNA-chromatin interaction data",
    "categories": [
-    "motif-discovery",
-    "motif-scanning",
     "peak-calling"
    ],
    "tier": "core",
@@ -138272,7 +138222,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-discovery",
+   "primary_category": "peak-calling",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Triplex target sites of MEG3 RNA-chromatin interactions",
@@ -139563,7 +139513,7 @@
    "name": "ChIPWig",
    "description": "Random access-enabling lossless and lossy compression method for ChIP-seq data.",
    "categories": [
-    "chip-resources"
+    "peak-calling"
    ],
    "tier": "core",
    "homepage": "https://github.com/vidarmehr/ChIPWig-v2",
@@ -139612,7 +139562,7 @@
     "categories"
    ],
    "featured": "",
-   "primary_category": "chip-resources",
+   "primary_category": "peak-calling",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "",
@@ -139825,6 +139775,7 @@
    "name": "DeepRegFinder",
    "description": "Identifies DNA regulatory elements from ChIP-seq data using deep learning with convolutional and recurrent neural networks",
    "categories": [
+    "tfbs-prediction",
     "regulatory-elements",
     "peak-calling"
    ],
@@ -139881,7 +139832,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "DeepRegFinder: deep learning-based regulatory elements finder",
@@ -140521,7 +140472,8 @@
    "name": "FunChIP",
    "description": "Preprocesses and smooths ChIP-seq peaks, then classifies them by shape using a k-mean alignment algorithm",
    "categories": [
-    "peak-calling"
+    "peak-calling",
+    "peak-annotation"
    ],
    "tier": "core",
    "homepage": "http://bioconductor.org/packages/release/bioc/html/FunChIP.html",
@@ -142017,8 +141969,7 @@
    "description": "Searches transcription factor binding motifs in shared regions from multiple ChIP-Seq experiments",
    "categories": [
     "motif-scanning",
-    "tfbs-prediction",
-    "peak-annotation"
+    "tfbs-prediction"
    ],
    "tier": "core",
    "homepage": "https://github.com/ceragoguztuzun/MotifGenie",
@@ -142091,8 +142042,7 @@
    "name": "Multiomix",
    "description": "A cloud-based platform that identifies genetic and epigenetic events associated with transcriptional modulation of cancer-related genes from multi-omics data",
    "categories": [
-    "grn-inference",
-    "regulatory-variants"
+    "grn-inference"
    ],
    "tier": "core",
    "homepage": "https://www.multiomix.org",
@@ -142166,7 +142116,8 @@
    "name": "OWAS",
    "description": "Aggregates predictions of chromosome accessibility in personal genomes to prioritize GWAS signals",
    "categories": [
-    "regulatory-variants"
+    "regulatory-variants",
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://github.com/shuangsong0110/OWAS",
@@ -142430,7 +142381,6 @@
    "name": "PhyloCTCFLooping",
    "description": "Compares distances between convergent and divergent CTCF motifs in genomic sequences to study 3D genome evolution",
    "categories": [
-    "motif-scanning",
     "comparative"
    ],
    "tier": "core",
@@ -142485,7 +142435,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-scanning",
+   "primary_category": "comparative",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Studying 3D genome evolution using genomic sequence",
@@ -142615,6 +142565,7 @@
    "categories": [
     "motif-discovery",
     "motif-scanning",
+    "motif-databases",
     "regulatory-elements"
    ],
    "tier": "core",
@@ -143079,6 +143030,7 @@
    "description": "Infers cooperativity between regulatory elements in genomic sequences using a self-attention deep learning model",
    "categories": [
     "tfbs-prediction",
+    "regulatory-elements",
     "grn-inference"
    ],
    "tier": "core",
@@ -143395,8 +143347,7 @@
    "name": "SEgene",
    "description": "Identifies links between super enhancers and gene expression across cell types using a peak-to-gene links approach",
    "categories": [
-    "regulatory-elements",
-    "grn-inference"
+    "regulatory-elements"
    ],
    "tier": "core",
    "homepage": "https://github.com/hamamoto-lab/SEgene",
@@ -143591,7 +143542,7 @@
    "name": "SexAnnoDB",
    "description": "Provides curated sex-specific regulatory networks and therapeutic targets from multi-omics analyses of human cancers",
    "categories": [
-    "chip-resources",
+    "grn-inference",
     "regulatory-variants"
    ],
    "tier": "core",
@@ -143643,7 +143594,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "chip-resources",
+   "primary_category": "grn-inference",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "SexAnnoDB, a knowledgebase of sex-specific regulations from multi-omics data of human cancers",
@@ -143660,9 +143611,7 @@
    "id": "sismonr",
    "name": "sismonr",
    "description": "simulation of in silico multi-omic networks with adjustable ploidy and post-transcriptional regulation in R",
-   "categories": [
-    "grn-inference"
-   ],
+   "categories": [],
    "tier": "core",
    "homepage": "https://oliviaab.github.io/sismonr/",
    "repo_url": "",
@@ -143716,7 +143665,7 @@
     "categories"
    ],
    "featured": "",
-   "primary_category": "grn-inference",
+   "primary_category": "uncategorised",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "",
@@ -146916,7 +146865,9 @@
    "name": "HHCDB",
    "description": "Archives human heterochromatin regions defined by specific histone modifications with genomic annotations and visualization",
    "categories": [
-    "regulatory-elements"
+    "regulatory-elements",
+    "chip-resources",
+    "nucleosome-chromatin"
    ],
    "tier": "extended",
    "homepage": "http://hhcdb.edbc.org/",
@@ -147240,6 +147191,8 @@
    "name": "Human-scATAC-Corpus",
    "description": "Aggregates over 5.4 million human scATAC-seq cells from 35 datasets into aligned formats for epigenomic research and method benchmarking",
    "categories": [
+    "chip-resources",
+    "nucleosome-chromatin",
     "single-cell"
    ],
    "tier": "core",
@@ -147289,7 +147242,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "single-cell",
+   "primary_category": "chip-resources",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Human-scATAC-Corpus: a comprehensive database of scATAC-seq data",
@@ -147308,8 +147261,7 @@
    "description": "Analyzes cardiovascular-related cis-regulatory elements in human and mouse using curated epigenetic datasets and six analysis tools",
    "categories": [
     "regulatory-elements",
-    "chip-resources",
-    "regulatory-variants"
+    "chip-resources"
    ],
    "tier": "core",
    "homepage": "https://doi.org/10.1016/j.omtn.2023.07.030",
@@ -147907,8 +147859,7 @@
    "name": "MACPET",
    "description": "Identifies binding sites from ChIA-PET data using 2D mixture models with skewed generalized students-t distributions and a local Poisson model",
    "categories": [
-    "peak-calling",
-    "peak-annotation"
+    "peak-calling"
    ],
    "tier": "core",
    "homepage": "http://bioconductor.org/packages/release/bioc/html/MACPET.html",
@@ -151277,7 +151228,7 @@
    "name": "BIT",
    "description": "Identifies transcriptional regulators from user-provided epigenomic profiling data using a Bayesian hierarchical model and a ChIP-seq TR binding library",
    "categories": [
-    "peak-calling",
+    "tfbs-prediction",
     "grn-inference"
    ],
    "tier": "core",
@@ -151328,7 +151279,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "peak-calling",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "BIT: Bayesian Identification of Transcriptional regulators from epigenomics-based query region sets",
@@ -151553,7 +151504,7 @@
    "name": "CanASM",
    "description": "Database cataloging allele-specific DNA methylation sites from bisulfite sequencing data across 31 cancer types with regulatory annotations",
    "categories": [
-    "regulatory-variants"
+    "regulatory-elements"
    ],
    "tier": "core",
    "homepage": "https://bioinfor.nefu.edu.cn/CanASM/",
@@ -151603,7 +151554,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-variants",
+   "primary_category": "regulatory-elements",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "CanASM: a comprehensive database for genome-wide allele-specific DNA methylation identification and annotation in cancer",
@@ -151768,8 +151719,7 @@
    "name": "CFSP",
    "description": "Discovers frequent sub-sequence pairs with large gaps from nucleic acid sequences for classification",
    "categories": [
-    "motif-discovery",
-    "regulatory-elements"
+    "motif-discovery"
    ],
    "tier": "core",
    "homepage": "https://github.com/HePeng2016/CFSP",
@@ -152305,8 +152255,7 @@
    "description": "Automated pipeline for ChIP-seq data analysis from raw reads through peak calling and regulatory motif modeling",
    "categories": [
     "motif-discovery",
-    "peak-calling",
-    "peak-annotation"
+    "peak-calling"
    ],
    "tier": "core",
    "homepage": "https://crunch.unibas.ch",
@@ -152374,8 +152323,7 @@
    "description": "Provides a web service for the complete ChIP-seq analysis pipeline, from mapping and quality control to peak calling and downstream analysis",
    "categories": [
     "peak-calling",
-    "peak-annotation",
-    "chip-resources"
+    "peak-annotation"
    ],
    "tier": "core",
    "homepage": "http://compubio.csu.edu.cn",
@@ -156269,6 +156217,7 @@
    "name": "scEpiSearch",
    "description": "Matches queried single-cell open-chromatin profiles against large reference pools of single-cell transcriptomes and epigenomes for annotation and classification",
    "categories": [
+    "nucleosome-chromatin",
     "single-cell"
    ],
    "tier": "core",
@@ -156324,7 +156273,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "single-cell",
+   "primary_category": "nucleosome-chromatin",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Matching queried single-cell open-chromatin profiles to large pools of single-cell transcriptomes and epigenomes for reference supported analysis",
@@ -156407,8 +156356,7 @@
    "name": "SEGCOND",
    "description": "Predicts putative transcriptional condensate-associated genomic regions by integrating multi-omics data including Hi-C",
    "categories": [
-    "regulatory-elements",
-    "peak-calling"
+    "regulatory-elements"
    ],
    "tier": "core",
    "homepage": "https://github.com/AntonisK95/SEGCOND",
@@ -157524,8 +157472,8 @@
    "name": "AgingReG",
    "description": "Curated database of aging regulatory relationships in humans, including upregulation, downregulation, activation, and inhibition pairs",
    "categories": [
-    "grn-inference",
-    "regulatory-variants"
+    "chip-resources",
+    "grn-inference"
    ],
    "tier": "core",
    "homepage": "https://bio.liclab.net/Aging-ReG/",
@@ -157577,7 +157525,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "grn-inference",
+   "primary_category": "chip-resources",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "AgingReG: a curated database of aging regulatory relationships in humans",
@@ -158748,9 +158696,9 @@
    "name": "CombSAFE",
    "description": "Identifies combinations of static and dynamic functional elements genome-wide from ChIP-seq data using hidden Markov models and semantic annotations",
    "categories": [
+    "regulatory-elements",
     "peak-calling",
-    "peak-annotation",
-    "chip-resources"
+    "peak-annotation"
    ],
    "tier": "core",
    "homepage": "https://github.com/DEIB-GECO/CombSAFE",
@@ -158806,7 +158754,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "peak-calling",
+   "primary_category": "regulatory-elements",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Identification, semantic annotation and comparison of combinations of functional elements in multiple biological conditions",
@@ -160359,7 +160307,6 @@
    "description": "Analyzes and visualizes RNA-seq, ATAC-seq, and ChIP-seq data through a graphical user interface without requiring command-line skills",
    "categories": [
     "regulatory-elements",
-    "peak-annotation",
     "nucleosome-chromatin"
    ],
    "tier": "core",
@@ -161462,7 +161409,8 @@
    "name": "MCLand",
    "description": "Models and visualizes Waddington's epigenetic landscape from gene regulatory networks using Monte Carlo simulations",
    "categories": [
-    "grn-inference"
+    "grn-inference",
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://mcland-ntu.github.io/MCLand/index.html",
@@ -162014,8 +161962,7 @@
     "regulatory-elements",
     "peak-calling",
     "grn-inference",
-    "nucleosome-chromatin",
-    "comparative"
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://www.multiscalegenomics.eu/",
@@ -162773,7 +162720,6 @@
    "name": "PRP",
    "description": "Integrates curated plant genomic, epigenomic, transcriptomic and pathway data with search, analysis and visualisation tools",
    "categories": [
-    "regulatory-elements",
     "grn-inference"
    ],
    "tier": "core",
@@ -162825,7 +162771,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "grn-inference",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Plant Regulomics Portal (PRP): a comprehensive integrated regulatory information and analysis portal for plant genomes",
@@ -163824,8 +163770,7 @@
    "name": "SULDEX",
    "description": "Estimates dissociation constants for protein-DNA interactions from high-throughput sequencing data using a Bayesian Markov chain Monte Carlo approach",
    "categories": [
-    "motif-discovery",
-    "motif-scanning"
+    "tfbs-prediction"
    ],
    "tier": "core",
    "homepage": "http://www.evolutionarygenomics.com/ProgramsData/SULDEX/SULDEX.html",
@@ -163873,7 +163818,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-discovery",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Bayesian Analysis of High-Throughput Quantitative Measurement of Protein-DNA Interactions",
@@ -166232,7 +166177,7 @@
    "name": "cobind",
    "description": "Quantifies the collocation strength between two sets of genomic intervals using six statistical measures",
    "categories": [
-    "peak-annotation"
+    "peak-calling"
    ],
    "tier": "core",
    "homepage": "https://cobind.readthedocs.io/en/latest/",
@@ -166287,7 +166232,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "peak-annotation",
+   "primary_category": "peak-calling",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "Cobind: quantitative analysis of the genomic overlaps",
@@ -167728,8 +167673,7 @@
    "name": "Eucalyptus Multi-omics Database (EucaMOD)",
    "description": "Integrates genomics, transcriptomics, epigenetics, and variomics data for Eucalyptus trees with analysis tools for breeding research",
    "categories": [
-    "regulatory-elements",
-    "chip-resources",
+    "tfbs-prediction",
     "regulatory-variants"
    ],
    "tier": "core",
@@ -167781,7 +167725,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "EucaMOD : a comprehensive multi\u2010omics database for functional genomics research and molecular breeding of fast\u2010growing eucalyptus trees",
@@ -168045,10 +167989,7 @@
    "id": "funsip",
    "name": "FunSiP",
    "description": "Predicts functional sites such as splice sites, translation start sites, and stop codons in DNA sequences using a modular classification approach",
-   "categories": [
-    "tfbs-prediction",
-    "regulatory-elements"
-   ],
+   "categories": [],
    "tier": "core",
    "homepage": "http://bioinformatics.psb.ugent.be/supplementary_data/mibel/FunSiP/",
    "repo_url": "",
@@ -168096,7 +168037,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "tfbs-prediction",
+   "primary_category": "uncategorised",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "FunSiP: a modular and extensible classifier for the prediction of functional sites in DNA",
@@ -168452,7 +168393,8 @@
    "name": "GRAFIMO",
    "description": "Scans pangenome variation graphs for transcription factor motif occurrences using a Position Weight Matrix, accounting for SNPs, indels, and structural variants",
    "categories": [
-    "motif-scanning"
+    "motif-scanning",
+    "tfbs-prediction"
    ],
    "tier": "core",
    "homepage": "https://github.com/pinellolab/GRAFIMO",
@@ -168586,7 +168528,6 @@
    "description": "Integrates multi-omics hematopoiesis data from humans, mice, zebrafish, and in vitro cultures for interactive exploration and cross-species analysis",
    "categories": [
     "regulatory-elements",
-    "single-cell",
     "comparative"
    ],
    "tier": "core",
@@ -170657,7 +170598,7 @@
    "name": "OneSC",
    "description": "Recapitulates cell state transitions by simulating stochastic differential equations from a regulatory network of core transcription factors using scRNA-seq data",
    "categories": [
-    "grn-inference"
+    "tfbs-prediction"
    ],
    "tier": "core",
    "homepage": "https://github.com/CahanLab/oneSC",
@@ -170709,7 +170650,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "grn-inference",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "OneSC: a computational platform for recapitulating cell state transitions",
@@ -170914,7 +170855,8 @@
    "description": "Boosts regulatory function predictions by aggregating orthologous region predictions from existing TFBS or RNA-RBP binding predictors",
    "categories": [
     "tfbs-prediction",
-    "grn-inference"
+    "grn-inference",
+    "comparative"
    ],
    "tier": "core",
    "homepage": "https://github.com/BlanchetteLab/PhyloPGM",
@@ -174306,6 +174248,7 @@
    "description": "Integrates gene expression and chromatin accessibility to infer regulatory mechanisms and predict gene expression from cross-modal data",
    "categories": [
     "grn-inference",
+    "nucleosome-chromatin",
     "single-cell"
    ],
    "tier": "core",
@@ -174690,6 +174633,7 @@
    "name": "BCRANK",
    "description": "Predicts transcription factor binding consensus from DNA sequences by heuristic search",
    "categories": [
+    "motif-discovery",
     "tfbs-prediction"
    ],
    "tier": "core",
@@ -174741,7 +174685,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "tfbs-prediction",
+   "primary_category": "motif-discovery",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "",
@@ -176529,8 +176473,8 @@
    "name": "CCSeq",
    "description": "Identifies clusters of transcription factor binding sequences along a chromosome from genome annotation files and a cut-off distance",
    "categories": [
-    "peak-calling",
-    "peak-annotation"
+    "tfbs-prediction",
+    "peak-calling"
    ],
    "tier": "core",
    "homepage": "https://cran.r-project.org/web/packages/colocalized/index.html",
@@ -176584,7 +176528,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "peak-calling",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "CCSeq: Clusters of Colocalized Sequences",
@@ -176722,7 +176666,6 @@
    "description": "Integrates single-cell and bulk epigenetic data with a network-based random walk model to label cell types and resolve regulatory elements",
    "categories": [
     "regulatory-elements",
-    "grn-inference",
     "single-cell"
    ],
    "tier": "core",
@@ -177113,7 +177056,6 @@
    "name": "ChIP-AP",
    "description": "Integrates four peak callers to analyse ChIP-seq data from raw fastq files to consensus and union peak sets",
    "categories": [
-    "motif-discovery",
     "peak-calling"
    ],
    "tier": "core",
@@ -177170,7 +177112,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-discovery",
+   "primary_category": "peak-calling",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "ChIP-AP \u2013 An Integrated ChIP-Seq Analysis Pipeline",
@@ -177187,9 +177129,7 @@
    "id": "chipchipnorm",
    "name": "chipchipnorm",
    "description": "R package that can be incorporated into the normalization workflow for chip-chip data, chromatin immunoprecipitation (ChIP) with microarray technology (chip).",
-   "categories": [
-    "peak-calling"
-   ],
+   "categories": [],
    "tier": "core",
    "homepage": "http://compbio.med.harvard.edu/software.html",
    "repo_url": "",
@@ -177236,7 +177176,7 @@
     "categories"
    ],
    "featured": "",
-   "primary_category": "peak-calling",
+   "primary_category": "uncategorised",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "",
@@ -177527,7 +177467,7 @@
    "name": "ChIPSeqSpike",
    "description": "Normalizes ChIP-seq data using spike-in controls to correct for protocol biases",
    "categories": [
-    "peak-annotation"
+    "peak-calling"
    ],
    "tier": "core",
    "homepage": "http://bioconductor.org/packages/release/bioc/html/ChIPSeqSpike.html",
@@ -177579,7 +177519,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "peak-annotation",
+   "primary_category": "peak-calling",
    "homepage_status": "dead",
    "repo_status": "",
    "publication_title": "",
@@ -177667,8 +177607,7 @@
    "name": "ChIPuana",
    "description": "Snakemake-based workflow processing ChIP-seq data from raw FASTQ files through differential analysis of transcription factor binding or histone modifications",
    "categories": [
-    "peak-calling",
-    "peak-annotation"
+    "peak-calling"
    ],
    "tier": "core",
    "homepage": "https://gitlab.pasteur.fr/hub/chipuana",
@@ -177743,7 +177682,7 @@
    "name": "ChIPXpress",
    "description": "Ranks transcription factor bound genes from ChIPx data by integrating publicly available gene expression profiles to identify functional targets",
    "categories": [
-    "tfbs-prediction",
+    "peak-annotation",
     "chip-resources"
    ],
    "tier": "core",
@@ -177797,7 +177736,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "tfbs-prediction",
+   "primary_category": "peak-annotation",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "",
@@ -179073,9 +179012,7 @@
    "name": "COUGER",
    "description": "Identifies protein co-factors that distinguish genomic regions bound by paralogous transcription factors",
    "categories": [
-    "motif-discovery",
-    "motif-scanning",
-    "peak-annotation"
+    "tfbs-prediction"
    ],
    "tier": "core",
    "homepage": "http://couger.oit.duke.edu",
@@ -179126,7 +179063,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "motif-discovery",
+   "primary_category": "tfbs-prediction",
    "homepage_status": "unreachable",
    "repo_status": "",
    "publication_title": "COUGER\u2014co-factors associated with uniquely-bound genomic regions",
@@ -179414,6 +179351,7 @@
    "description": "Infers regulatory networks from chromatin accessibility or enhancer mark data by processing raw FASTQ files, identifying cis-regulatory elements, and predicting key transcription factors and their regulatory roles",
    "categories": [
     "regulatory-elements",
+    "peak-calling",
     "grn-inference"
    ],
    "tier": "core",
@@ -179484,8 +179422,7 @@
    "name": "CREPE",
    "description": "Catalogues and annotates transcription factors from genomic data using a Shiny app",
    "categories": [
-    "motif-databases",
-    "regulatory-elements"
+    "motif-databases"
    ],
    "tier": "core",
    "homepage": "http://github.com/dirostri/CREPE",
@@ -180159,6 +180096,7 @@
    "categories": [
     "regulatory-elements",
     "peak-annotation",
+    "chip-resources",
     "single-cell"
    ],
    "tier": "core",
@@ -181561,7 +181499,6 @@
    "name": "EAT-UpTF",
    "description": "Conducts enrichment analysis of upstream transcription factors for a gene set using DAP-seq or ChIP-seq derived TF-target gene lists",
    "categories": [
-    "tfbs-prediction",
     "grn-inference"
    ],
    "tier": "core",
@@ -181616,7 +181553,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "tfbs-prediction",
+   "primary_category": "grn-inference",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "EAT-UpTF: Enrichment Analysis Tool for Upstream Transcription Fctors of a gene group",
@@ -183120,9 +183057,7 @@
    "name": "ezGeno",
    "description": "Automatically searches network structures and parameters for deep learning models on 1D genomic data such as sequences and histone modifications",
    "categories": [
-    "tfbs-prediction",
-    "peak-calling",
-    "grn-inference"
+    "tfbs-prediction"
    ],
    "tier": "core",
    "homepage": "https://github.com/ailabstw/ezGeno",
@@ -183193,7 +183128,8 @@
    "name": "fcScan",
    "description": "Clusters genomic features based on a defined window size and combination of sites from GRanges, data frame, or VCF/BED input",
    "categories": [
-    "tfbs-prediction"
+    "tfbs-prediction",
+    "regulatory-variants"
    ],
    "tier": "core",
    "homepage": "https://bioconductor.org/packages/fcScan",
@@ -183405,7 +183341,8 @@
    "name": "findpromoter",
    "description": "Searches for a promoter motif and optionally an adapter sequence from a source species on a target species",
    "categories": [
-    "motif-scanning"
+    "motif-scanning",
+    "regulatory-elements"
    ],
    "tier": "core",
    "homepage": "https://galaxy.pasteur.fr/tool_runner?tool_id=toolshed.pasteur.fr/repos/fmareuil/promoteur_tools/findpromoter/1.0",
@@ -188001,7 +187938,8 @@
    "description": "Identifies DNA sequence motifs mediating transcription factor binding and function by associating motif mutations with epigenomic features across diverse genotypes",
    "categories": [
     "motif-discovery",
-    "tfbs-prediction"
+    "tfbs-prediction",
+    "regulatory-variants"
    ],
    "tier": "core",
    "homepage": "https://github.com/zeyang-shen/maggie",
@@ -191877,7 +191815,8 @@
    "name": "NarrowPeaks",
    "description": "Applies functional principal component analysis to ChIP-seq peak regions to analyse differential variation between multiple samples with replicates",
    "categories": [
-    "peak-calling"
+    "peak-calling",
+    "peak-annotation"
    ],
    "tier": "core",
    "homepage": "http://bioconductor.org/packages/release/bioc/html/NarrowPeaks.html",
@@ -192833,8 +192772,6 @@
    "name": "NRL",
    "description": "Calculates nucleosome repeat length from multiple phasograms computed with NucTools",
    "categories": [
-    "regulatory-elements",
-    "peak-calling",
     "nucleosome-chromatin"
    ],
    "tier": "core",
@@ -192890,7 +192827,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "nucleosome-chromatin",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "",
@@ -196148,9 +196085,7 @@
    "id": "recoup",
    "name": "recoup",
    "description": "recoup calculates and plots signal profiles created from short sequence reads derived from Next Generation Sequencing technologies",
-   "categories": [
-    "peak-annotation"
-   ],
+   "categories": [],
    "tier": "core",
    "homepage": "https://bioconductor.org/packages/recoup",
    "repo_url": "https://github.com/pmoulos/recoup",
@@ -196199,7 +196134,7 @@
     "categories"
    ],
    "featured": "",
-   "primary_category": "peak-annotation",
+   "primary_category": "uncategorised",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "",
@@ -198472,7 +198407,8 @@
    "name": "seqsetvis",
    "description": "Visualizes and analyzes multiple genomic coordinate and signal files, with a focus on comparing ChIP-seq datasets",
    "categories": [
-    "peak-annotation"
+    "peak-annotation",
+    "chip-resources"
    ],
    "tier": "core",
    "homepage": "http://bioconductor.org/packages/release/bioc/html/seqsetvis.html",
@@ -198833,8 +198769,7 @@
    "name": "SimBindProfiles",
    "description": "Identifies common and unique binding regions from genome tiling array data by directly comparing binding profiles",
    "categories": [
-    "peak-calling",
-    "peak-annotation"
+    "peak-calling"
    ],
    "tier": "core",
    "homepage": "http://bioconductor.org/packages/release/bioc/html/SimBindProfiles.html",
@@ -199920,8 +199855,7 @@
    "description": "Aligns, analyzes, visualizes, and manages NGS data with workflows for RNA-Seq, DNA-Seq, small RNA-Seq, ChIP-seq, and Methyl-Seq",
    "categories": [
     "peak-calling",
-    "peak-annotation",
-    "chip-resources"
+    "peak-annotation"
    ],
    "tier": "core",
    "homepage": "http://www.strand-ngs.com/",
@@ -200050,8 +199984,7 @@
    "name": "SVM2CRM",
    "description": "Detects cis-regulatory elements using SVM implemented in LiblineaR",
    "categories": [
-    "regulatory-elements",
-    "peak-annotation"
+    "regulatory-elements"
    ],
    "tier": "core",
    "homepage": "http://bioconductor.org/packages/release/bioc/html/SVM2CRM.html",
@@ -200391,10 +200324,7 @@
    "id": "t2",
    "name": "T2",
    "description": "Tiling Microarray Analysis Tools 2 analyzes low and high level tiling microarray data using the Affymetrix, NimbleGen, and Agilent platforms",
-   "categories": [
-    "peak-calling",
-    "peak-annotation"
-   ],
+   "categories": [],
    "tier": "core",
    "homepage": "http://timat2.sourceforge.net/",
    "repo_url": "",
@@ -200442,7 +200372,7 @@
     "categories"
    ],
    "featured": "",
-   "primary_category": "peak-calling",
+   "primary_category": "uncategorised",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "",
@@ -200760,8 +200690,8 @@
    "name": "TCseq",
    "description": "Performs quantitative and differential analysis of epigenomic and transcriptomic time course sequencing data with clustering and visualization of temporal patterns",
    "categories": [
-    "regulatory-elements",
-    "peak-annotation"
+    "peak-calling",
+    "nucleosome-chromatin"
    ],
    "tier": "core",
    "homepage": "https://bioconductor.org/packages/TCseq",
@@ -200816,7 +200746,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "regulatory-elements",
+   "primary_category": "peak-calling",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "",
@@ -201136,7 +201066,6 @@
    "name": "TF-Prioritizer",
    "description": "Analyses chromatin accessibility and RNA-seq data to prioritize transcription factors using DESeq2, TEPIC, and DYNAMITE",
    "categories": [
-    "peak-calling",
     "peak-annotation",
     "grn-inference"
    ],
@@ -201182,7 +201111,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "peak-calling",
+   "primary_category": "peak-annotation",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "",
@@ -201401,7 +201330,6 @@
    "name": "TFEA.ChIP",
    "description": "Estimates transcription factor enrichment in gene lists using ChIP-seq datasets",
    "categories": [
-    "chip-resources",
     "grn-inference"
    ],
    "tier": "core",
@@ -201458,7 +201386,7 @@
     "description"
    ],
    "featured": "",
-   "primary_category": "chip-resources",
+   "primary_category": "grn-inference",
    "homepage_status": "",
    "repo_status": "",
    "publication_title": "",
@@ -201680,8 +201608,7 @@
    "name": "TFutils",
    "description": "Provides utilities for working with transcription factor data",
    "categories": [
-    "tfbs-prediction",
-    "chip-resources"
+    "tfbs-prediction"
    ],
    "tier": "core",
    "homepage": "https://bioconductor.org/packages/TFutils",
@@ -202110,8 +202037,7 @@
    "name": "TransView",
    "description": "Generates, accesses and displays read densities from RNA-Seq and ChIP-Seq data",
    "categories": [
-    "peak-calling",
-    "peak-annotation"
+    "peak-calling"
    ],
    "tier": "core",
    "homepage": "http://bioconductor.org/packages/release/bioc/html/TransView.html",

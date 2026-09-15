@@ -2812,22 +2812,26 @@ categories:
     - motif-scanning
   3dgene:
     categories:
-    - regulatory-elements
+    - tfbs-prediction
+    - peak-calling
+    - nucleosome-chromatin
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
     - peak-calling
     - nucleosome-chromatin
+    audited: true
   3div:
     categories:
-    - regulatory-elements
     - chip-resources
+    - nucleosome-chromatin
     confidence: medium
     in_scope: true
     was:
     - chip-resources
     - nucleosome-chromatin
+    audited: true
   3dsnp:
     categories:
     - regulatory-variants
@@ -2870,6 +2874,7 @@ categories:
     - nucleosome-chromatin
   APEC:
     categories:
+    - nucleosome-chromatin
     - single-cell
     confidence: high
     in_scope: true
@@ -2877,6 +2882,7 @@ categories:
     - tfbs-prediction
     - nucleosome-chromatin
     - single-cell
+    audited: true
   ApicoTFdb:
     categories:
     - motif-databases
@@ -2887,27 +2893,30 @@ categories:
     - tfbs-prediction
   BSGatlas:
     categories:
-    - regulatory-elements
+    - tfbs-prediction
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
+    audited: true
   BayesPI-BAR2:
     categories:
+    - tfbs-prediction
     - regulatory-variants
     confidence: high
     in_scope: true
     was:
     - tfbs-prediction
+    audited: true
   BindSpace:
     categories:
-    - motif-scanning
     - tfbs-prediction
     confidence: high
     in_scope: true
     was:
     - tfbs-prediction
     - peak-calling
+    audited: true
   BioSwitch:
     categories: []
     confidence: high
@@ -2916,20 +2925,22 @@ categories:
     - grn-inference
   CARNIVAL:
     categories:
-    - grn-inference
+    - tfbs-prediction
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
+    audited: true
   CCSeq:
     categories:
+    - tfbs-prediction
     - peak-calling
-    - peak-annotation
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
     - peak-calling
+    audited: true
   COAC:
     categories:
     - grn-inference
@@ -2941,13 +2952,12 @@ categories:
   CREAM:
     categories:
     - regulatory-elements
-    - peak-annotation
-    - grn-inference
     confidence: high
     in_scope: true
     was:
     - regulatory-elements
     - peak-annotation
+    audited: true
   CancerLSP:
     categories: []
     confidence: high
@@ -2963,32 +2973,34 @@ categories:
     - tfbs-prediction
   ChIA-PET:
     categories:
-    - regulatory-elements
     - peak-calling
-    - peak-annotation
     confidence: high
     in_scope: true
     was:
     - peak-calling
     - peak-annotation
     - grn-inference
+    audited: true
   ChiCMaxima:
     categories:
-    - regulatory-elements
+    - tfbs-prediction
     - peak-calling
+    - nucleosome-chromatin
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
     - peak-calling
     - nucleosome-chromatin
+    audited: true
   ClinTAD:
     categories:
-    - regulatory-variants
+    - tfbs-prediction
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
+    audited: true
   Cropper:
     categories: []
     confidence: high
@@ -2998,13 +3010,12 @@ categories:
   DAStk_-_Differential_ATAC-seq_toolkit:
     categories:
     - footprinting
-    - peak-annotation
-    - regulatory-variants
     confidence: medium
     in_scope: true
     was:
     - peak-annotation
     - regulatory-variants
+    audited: true
   DLO_Hi-C:
     categories: []
     confidence: high
@@ -3052,21 +3063,21 @@ categories:
   EpiAlign:
     categories:
     - nucleosome-chromatin
-    - comparative
     confidence: medium
     in_scope: true
     was:
     - peak-calling
     - nucleosome-chromatin
+    audited: true
   EpiAlignment:
     categories:
-    - peak-annotation
     - comparative
     confidence: medium
     in_scope: true
     was:
     - peak-calling
     - nucleosome-chromatin
+    audited: true
   EpiMethylTag:
     categories:
     - regulatory-elements
@@ -3138,11 +3149,13 @@ categories:
   ImmuneRegulation:
     categories:
     - regulatory-elements
+    - regulatory-variants
     confidence: high
     in_scope: true
     was:
     - regulatory-elements
     - regulatory-variants
+    audited: true
   KnockTF:
     categories:
     - grn-inference
@@ -3159,11 +3172,11 @@ categories:
   MAPS:
     categories:
     - peak-calling
-    - peak-annotation
     confidence: high
     in_scope: true
     was:
     - peak-calling
+    audited: true
   MPRAnator:
     categories:
     - regulatory-elements
@@ -3209,14 +3222,13 @@ categories:
     - nucleosome-chromatin
   NRL:
     categories:
-    - regulatory-elements
-    - peak-calling
     - nucleosome-chromatin
     confidence: high
     in_scope: true
     was:
     - peak-calling
     - nucleosome-chromatin
+    audited: true
   OnTAD:
     categories:
     - nucleosome-chromatin
@@ -3226,24 +3238,24 @@ categories:
     - peak-calling
   PCHi-C:
     categories:
-    - regulatory-elements
     - nucleosome-chromatin
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
+    audited: true
   PIRCh-seq:
     categories:
     - peak-calling
-    - peak-annotation
+    - nucleosome-chromatin
     confidence: medium
     in_scope: true
     was:
     - peak-calling
     - nucleosome-chromatin
+    audited: true
   PRP:
     categories:
-    - regulatory-elements
     - grn-inference
     confidence: medium
     in_scope: true
@@ -3251,6 +3263,7 @@ categories:
     - regulatory-elements
     - chip-resources
     - grn-inference
+    audited: true
   PathwayCommons_SPARQL_endpoint:
     categories: []
     confidence: high
@@ -3271,12 +3284,12 @@ categories:
     - grn-inference
   Plant_Regulomics:
     categories:
-    - chip-resources
     - grn-inference
     confidence: high
     in_scope: true
     was:
     - nucleosome-chromatin
+    audited: true
   PyFeat:
     categories: []
     confidence: high
@@ -3309,12 +3322,14 @@ categories:
     - nucleosome-chromatin
   RHPCG:
     categories:
+    - regulatory-elements
     - grn-inference
     confidence: medium
     in_scope: true
     was:
     - regulatory-elements
     - grn-inference
+    audited: true
   RSAT_-_Retrieve_Sequence:
     categories:
     - regulatory-elements
@@ -3323,6 +3338,7 @@ categories:
     was: []
   RSAT_Var-tools:
     categories:
+    - motif-scanning
     - tfbs-prediction
     - regulatory-variants
     confidence: high
@@ -3331,6 +3347,7 @@ categories:
     - motif-scanning
     - tfbs-prediction
     - regulatory-variants
+    audited: true
   RT_networks:
     categories:
     - grn-inference
@@ -3342,13 +3359,12 @@ categories:
     - nucleosome-chromatin
   ReMap2020:
     categories:
-    - peak-calling
-    - peak-annotation
     - chip-resources
     confidence: high
     in_scope: true
     was:
     - chip-resources
+    audited: true
   SALSA:
     categories: []
     confidence: low
@@ -3396,11 +3412,13 @@ categories:
     categories:
     - regulatory-elements
     - chip-resources
+    - grn-inference
     confidence: medium
     in_scope: true
     was:
     - regulatory-elements
     - grn-inference
+    audited: true
   SilkDB_3.0:
     categories: []
     confidence: high
@@ -3441,11 +3459,11 @@ categories:
   VISION:
     categories:
     - regulatory-elements
-    - grn-inference
     confidence: medium
     in_scope: true
     was:
     - regulatory-elements
+    audited: true
   aaakb:
     categories: []
     confidence: high
@@ -3480,13 +3498,14 @@ categories:
     - single-cell
   agingreg:
     categories:
+    - chip-resources
     - grn-inference
-    - regulatory-variants
     confidence: medium
     in_scope: true
     was:
     - chip-resources
     - grn-inference
+    audited: true
   agreg-snpdb:
     categories:
     - regulatory-variants
@@ -3529,12 +3548,14 @@ categories:
     - nucleosome-chromatin
   ananastra:
     categories:
+    - tfbs-prediction
     - regulatory-variants
     confidence: high
     in_scope: true
     was:
     - tfbs-prediction
     - peak-calling
+    audited: true
   animal-ernadb:
     categories:
     - regulatory-elements
@@ -3547,11 +3568,11 @@ categories:
   animal_tfdb:
     categories:
     - motif-databases
-    - tfbs-prediction
     confidence: high
     in_scope: true
     was:
     - motif-databases
+    audited: true
   annominer:
     categories:
     - regulatory-elements
@@ -3574,13 +3595,13 @@ categories:
     - peak-annotation
   apples:
     categories:
-    - motif-discovery
     - motif-scanning
     - regulatory-elements
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
+    audited: true
   aracne:
     categories:
     - grn-inference
@@ -3589,8 +3610,8 @@ categories:
     was: []
   archr:
     categories:
+    - regulatory-elements
     - peak-calling
-    - peak-annotation
     - single-cell
     confidence: high
     in_scope: true
@@ -3598,6 +3619,7 @@ categories:
     - regulatory-elements
     - peak-calling
     - single-cell
+    audited: true
   artdeco:
     categories: []
     confidence: high
@@ -3608,11 +3630,13 @@ categories:
   asap:
     categories:
     - tfbs-prediction
+    - regulatory-elements
     confidence: high
     in_scope: true
     was:
     - tfbs-prediction
     - regulatory-elements
+    audited: true
   ashic:
     categories: []
     confidence: high
@@ -3630,8 +3654,6 @@ categories:
   asymmetron:
     categories:
     - motif-discovery
-    - tfbs-prediction
-    - regulatory-elements
     confidence: medium
     in_scope: true
     was:
@@ -3639,16 +3661,19 @@ categories:
     - motif-scanning
     - tfbs-prediction
     - regulatory-elements
+    audited: true
   atacgraph:
     categories:
     - peak-calling
     - peak-annotation
+    - nucleosome-chromatin
     confidence: high
     in_scope: true
     was:
     - peak-calling
     - peak-annotation
     - nucleosome-chromatin
+    audited: true
   athamap:
     categories:
     - motif-scanning
@@ -3674,11 +3699,13 @@ categories:
   attune:
     categories:
     - grn-inference
+    - nucleosome-chromatin
     - single-cell
     confidence: medium
     in_scope: true
     was:
     - nucleosome-chromatin
+    audited: true
   aurea:
     categories: []
     confidence: high
@@ -3749,12 +3776,14 @@ categories:
     - peak-calling
   bcrank:
     categories:
+    - motif-discovery
     - tfbs-prediction
     confidence: high
     in_scope: true
     was:
     - motif-discovery
     - tfbs-prediction
+    audited: true
   bhi-cect:
     categories: []
     confidence: high
@@ -3831,17 +3860,19 @@ categories:
   bioprospector:
     categories:
     - motif-discovery
+    - motif-scanning
     confidence: high
     in_scope: true
     was:
     - motif-discovery
     - motif-scanning
+    audited: true
   biotapestry:
-    categories:
-    - grn-inference
+    categories: []
     confidence: high
     in_scope: true
     was: []
+    audited: true
   bioword:
     categories: []
     confidence: high
@@ -3855,15 +3886,14 @@ categories:
     in_scope: true
     was: []
   bisa:
-    categories:
-    - motif-scanning
-    - tfbs-prediction
+    categories: []
     confidence: medium
     in_scope: true
     was: []
+    audited: true
   bit:
     categories:
-    - peak-calling
+    - tfbs-prediction
     - grn-inference
     confidence: medium
     in_scope: true
@@ -3871,6 +3901,7 @@ categories:
     - motif-discovery
     - tfbs-prediction
     - peak-calling
+    audited: true
   bmf:
     categories:
     - motif-discovery
@@ -3896,11 +3927,11 @@ categories:
     was:
     - motif-discovery
   booleannet:
-    categories:
-    - grn-inference
+    categories: []
     confidence: medium
     in_scope: true
     was: []
+    audited: true
   bowtie2:
     categories: []
     confidence: high
@@ -3916,11 +3947,13 @@ categories:
   brockman:
     categories:
     - regulatory-elements
+    - single-cell
     confidence: medium
     in_scope: true
     was:
     - nucleosome-chromatin
     - single-cell
+    audited: true
   cLoops:
     categories:
     - peak-calling
@@ -3939,6 +3972,7 @@ categories:
     - tfbs-prediction
   cagefightr:
     categories:
+    - regulatory-elements
     - peak-calling
     - peak-annotation
     confidence: high
@@ -3947,32 +3981,34 @@ categories:
     - regulatory-elements
     - peak-calling
     - peak-annotation
+    audited: true
   camregbase:
     categories:
-    - regulatory-elements
-    - chip-resources
+    - tfbs-prediction
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
+    audited: true
   canasm:
     categories:
-    - regulatory-variants
+    - regulatory-elements
     confidence: medium
     in_scope: true
     was:
     - regulatory-elements
     - regulatory-variants
+    audited: true
   cancer_crc:
     categories:
     - regulatory-elements
-    - peak-calling
     - chip-resources
     confidence: medium
     in_scope: true
     was:
     - regulatory-elements
     - chip-resources
+    audited: true
   cancerend:
     categories:
     - regulatory-elements
@@ -3982,11 +4018,11 @@ categories:
   capC-MAP:
     categories:
     - peak-calling
-    - peak-annotation
     confidence: medium
     in_scope: true
     was:
     - peak-calling
+    audited: true
   carmen-variant:
     categories:
     - regulatory-variants
@@ -4022,23 +4058,21 @@ categories:
   catch:
     categories:
     - peak-calling
-    - peak-annotation
-    - chip-resources
     confidence: medium
     in_scope: true
     was:
     - peak-calling
+    audited: true
   ccip:
     categories:
     - tfbs-prediction
-    - regulatory-elements
     confidence: medium
     in_scope: true
     was:
     - peak-calling
+    audited: true
   ceas:
     categories:
-    - motif-discovery
     - motif-scanning
     - peak-annotation
     confidence: high
@@ -4046,6 +4080,7 @@ categories:
     was:
     - motif-scanning
     - peak-annotation
+    audited: true
   cellcano:
     categories:
     - single-cell
@@ -4072,21 +4107,21 @@ categories:
   cellwalkr:
     categories:
     - regulatory-elements
-    - grn-inference
     - single-cell
     confidence: medium
     in_scope: true
     was:
     - regulatory-elements
     - single-cell
+    audited: true
   centdist:
     categories:
-    - motif-scanning
     - tfbs-prediction
     confidence: high
     in_scope: true
     was:
     - motif-scanning
+    audited: true
   centre:
     categories:
     - regulatory-elements
@@ -4105,12 +4140,12 @@ categories:
   cfsp:
     categories:
     - motif-discovery
-    - regulatory-elements
     confidence: medium
     in_scope: true
     was:
     - motif-discovery
     - motif-scanning
+    audited: true
   cgnaweb:
     categories: []
     confidence: high
@@ -4128,12 +4163,12 @@ categories:
   charid:
     categories:
     - tfbs-prediction
-    - grn-inference
     confidence: medium
     in_scope: true
     was:
     - grn-inference
     - regulatory-variants
+    audited: true
   chia-pipe:
     categories:
     - peak-calling
@@ -4153,7 +4188,6 @@ categories:
     - regulatory-elements
   chip-ap:
     categories:
-    - motif-discovery
     - peak-calling
     confidence: high
     in_scope: true
@@ -4161,6 +4195,7 @@ categories:
     - motif-discovery
     - peak-calling
     - peak-annotation
+    audited: true
   chip-atlas:
     categories:
     - regulatory-elements
@@ -4184,7 +4219,6 @@ categories:
   chip-hub:
     categories:
     - regulatory-elements
-    - peak-calling
     - peak-annotation
     - chip-resources
     confidence: high
@@ -4193,6 +4227,7 @@ categories:
     - regulatory-elements
     - peak-calling
     - chip-resources
+    audited: true
   chip-seq:
     categories:
     - peak-calling
@@ -4209,18 +4244,19 @@ categories:
     - tfbs-prediction
     - peak-calling
   chipchipnorm:
-    categories:
-    - peak-calling
+    categories: []
     confidence: medium
     in_scope: true
     was: []
+    audited: true
   chipin:
     categories:
-    - peak-calling
+    - chip-resources
     confidence: medium
     in_scope: true
     was:
     - chip-resources
+    audited: true
   chipmeta:
     categories:
     - peak-calling
@@ -4241,45 +4277,50 @@ categories:
     categories:
     - tfbs-prediction
     - peak-calling
+    - nucleosome-chromatin
     confidence: high
     in_scope: true
     was:
     - tfbs-prediction
     - peak-calling
     - nucleosome-chromatin
+    audited: true
   chipseqspike:
     categories:
-    - peak-annotation
+    - peak-calling
     confidence: medium
     in_scope: true
     was:
     - peak-calling
+    audited: true
   chipuana:
     categories:
     - peak-calling
-    - peak-annotation
     confidence: high
     in_scope: true
     was:
     - peak-calling
     - peak-annotation
     - chip-resources
+    audited: true
   chipwig:
     categories:
-    - chip-resources
+    - peak-calling
     confidence: high
     in_scope: true
     was:
     - peak-calling
+    audited: true
   chipxpress:
     categories:
-    - tfbs-prediction
+    - peak-annotation
     - chip-resources
     confidence: medium
     in_scope: true
     was:
     - peak-annotation
     - chip-resources
+    audited: true
   chrokit:
     categories:
     - regulatory-elements
@@ -4290,15 +4331,16 @@ categories:
     - tfbs-prediction
   chromasig:
     categories:
-    - motif-discovery
     - nucleosome-chromatin
     confidence: medium
     in_scope: true
     was:
     - nucleosome-chromatin
+    audited: true
   chrombpnet:
     categories:
     - motif-discovery
+    - tfbs-prediction
     - regulatory-variants
     - nucleosome-chromatin
     confidence: high
@@ -4307,6 +4349,7 @@ categories:
     - motif-discovery
     - tfbs-prediction
     - regulatory-variants
+    audited: true
   chromegcn:
     categories:
     - regulatory-elements
@@ -4357,8 +4400,6 @@ categories:
     - regulatory-variants
   ciscross:
     categories:
-    - motif-discovery
-    - motif-scanning
     - tfbs-prediction
     - regulatory-elements
     - grn-inference
@@ -4369,15 +4410,18 @@ categories:
     - motif-scanning
     - tfbs-prediction
     - grn-inference
+    audited: true
   cismols:
     categories:
     - motif-discovery
     - regulatory-elements
+    - comparative
     confidence: medium
     in_scope: true
     was:
     - regulatory-elements
     - comparative
+    audited: true
   cisred:
     categories:
     - motif-discovery
@@ -4401,10 +4445,12 @@ categories:
     categories:
     - grn-inference
     - regulatory-variants
+    - nucleosome-chromatin
     confidence: medium
     in_scope: true
     was:
     - nucleosome-chromatin
+    audited: true
   clnn-loop:
     categories:
     - tfbs-prediction
@@ -4429,11 +4475,12 @@ categories:
     - tfbs-prediction
   cobind:
     categories:
-    - peak-annotation
+    - peak-calling
     confidence: medium
     in_scope: true
     was:
     - peak-calling
+    audited: true
   cobra:
     categories:
     - peak-calling
@@ -4444,19 +4491,21 @@ categories:
     - peak-annotation
     - chip-resources
   cocas:
-    categories:
-    - peak-calling
+    categories: []
     confidence: medium
     in_scope: true
     was: []
+    audited: true
   cocoa:
     categories:
     - regulatory-elements
+    - nucleosome-chromatin
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
     - nucleosome-chromatin
+    audited: true
   cogrim:
     categories:
     - grn-inference
@@ -4473,15 +4522,16 @@ categories:
     - nucleosome-chromatin
   combsafe:
     categories:
+    - regulatory-elements
     - peak-calling
     - peak-annotation
-    - chip-resources
     confidence: medium
     in_scope: true
     was:
     - regulatory-elements
     - peak-calling
     - peak-annotation
+    audited: true
   comeback:
     categories: []
     confidence: high
@@ -4497,11 +4547,11 @@ categories:
   compareprospector:
     categories:
     - motif-discovery
-    - motif-comparison
     confidence: medium
     in_scope: true
     was:
     - motif-comparison
+    audited: true
   compepitools:
     categories:
     - regulatory-elements
@@ -4513,6 +4563,7 @@ categories:
     - nucleosome-chromatin
   confac:
     categories:
+    - tfbs-prediction
     - footprinting
     - comparative
     confidence: high
@@ -4520,6 +4571,7 @@ categories:
     was:
     - tfbs-prediction
     - comparative
+    audited: true
   conquer:
     categories:
     - regulatory-variants
@@ -4548,11 +4600,11 @@ categories:
     - tfbs-prediction
     - nucleosome-chromatin
   convert-matrix:
-    categories:
-    - motif-comparison
+    categories: []
     confidence: high
     in_scope: true
     was: []
+    audited: true
   coolpuppy:
     categories: []
     confidence: high
@@ -4562,7 +4614,6 @@ categories:
     - peak-calling
   corec:
     categories:
-    - peak-annotation
     - grn-inference
     confidence: medium
     in_scope: true
@@ -4570,6 +4621,7 @@ categories:
     - motif-discovery
     - tfbs-prediction
     - grn-inference
+    audited: true
   coryneregnet:
     categories:
     - chip-resources
@@ -4580,13 +4632,12 @@ categories:
     - grn-inference
   couger:
     categories:
-    - motif-discovery
-    - motif-scanning
-    - peak-annotation
+    - tfbs-prediction
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
+    audited: true
   coverageview:
     categories: []
     confidence: high
@@ -4619,23 +4670,24 @@ categories:
     - nucleosome-chromatin
     - single-cell
   cplexa:
-    categories:
-    - regulatory-elements
+    categories: []
     confidence: medium
     in_scope: true
     was: []
+    audited: true
   cpmodule:
     categories:
     - regulatory-elements
-    - peak-annotation
     confidence: high
     in_scope: true
     was:
     - motif-discovery
     - regulatory-elements
+    audited: true
   crema:
     categories:
     - regulatory-elements
+    - peak-calling
     - grn-inference
     confidence: high
     in_scope: true
@@ -4643,15 +4695,16 @@ categories:
     - regulatory-elements
     - peak-calling
     - grn-inference
+    audited: true
   crepe:
     categories:
     - motif-databases
-    - regulatory-elements
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
     - nucleosome-chromatin
+    audited: true
   crinet:
     categories: []
     confidence: high
@@ -4660,13 +4713,14 @@ categories:
     - grn-inference
   crisprepi:
     categories:
-    - regulatory-elements
     - peak-calling
+    - chip-resources
     confidence: medium
     in_scope: true
     was:
     - peak-calling
     - chip-resources
+    audited: true
   crisprware:
     categories: []
     confidence: high
@@ -4677,7 +4731,6 @@ categories:
     categories:
     - motif-discovery
     - peak-calling
-    - peak-annotation
     confidence: high
     in_scope: true
     was:
@@ -4685,16 +4738,17 @@ categories:
     - motif-scanning
     - peak-calling
     - peak-annotation
+    audited: true
   csa-chip:
     categories:
     - peak-calling
     - peak-annotation
-    - chip-resources
     confidence: high
     in_scope: true
     was:
     - peak-calling
     - peak-annotation
+    audited: true
   csdeconv:
     categories:
     - tfbs-prediction
@@ -4760,12 +4814,14 @@ categories:
   dbInDel:
     categories:
     - regulatory-elements
+    - chip-resources
     - regulatory-variants
     confidence: high
     in_scope: true
     was:
     - chip-resources
     - regulatory-variants
+    audited: true
   dbd:
     categories:
     - motif-databases
@@ -4791,6 +4847,7 @@ categories:
     categories:
     - regulatory-elements
     - peak-annotation
+    - chip-resources
     - single-cell
     confidence: high
     in_scope: true
@@ -4798,6 +4855,7 @@ categories:
     - regulatory-elements
     - chip-resources
     - single-cell
+    audited: true
   dchic:
     categories: []
     confidence: high
@@ -4815,20 +4873,22 @@ categories:
     - regulatory-elements
   deconpeaker:
     categories:
-    - peak-annotation
-    - single-cell
+    - nucleosome-chromatin
     confidence: medium
     in_scope: true
     was:
     - nucleosome-chromatin
+    audited: true
   decorate:
     categories:
-    - regulatory-elements
+    - peak-calling
+    - nucleosome-chromatin
     confidence: medium
     in_scope: true
     was:
     - peak-calling
     - nucleosome-chromatin
+    audited: true
   decoupler:
     categories:
     - grn-inference
@@ -4848,11 +4908,11 @@ categories:
   deep-loop:
     categories:
     - tfbs-prediction
-    - regulatory-elements
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
+    audited: true
   deepark:
     categories:
     - tfbs-prediction
@@ -4874,20 +4934,24 @@ categories:
   deepc:
     categories:
     - regulatory-elements
+    - nucleosome-chromatin
     confidence: high
     in_scope: true
     was:
     - regulatory-elements
     - nucleosome-chromatin
+    audited: true
   deepcage:
     categories:
     - tfbs-prediction
     - regulatory-elements
+    - nucleosome-chromatin
     confidence: high
     in_scope: true
     was:
     - regulatory-elements
     - nucleosome-chromatin
+    audited: true
   deepfun:
     categories:
     - regulatory-variants
@@ -4899,29 +4963,32 @@ categories:
   deepgmap:
     categories:
     - grn-inference
+    - regulatory-variants
     confidence: high
     in_scope: true
     was:
     - grn-inference
     - regulatory-variants
+    audited: true
   deeplucia:
     categories:
+    - regulatory-elements
     - grn-inference
     confidence: high
     in_scope: true
     was:
     - regulatory-elements
     - grn-inference
+    audited: true
   deepmr:
     categories:
-    - motif-discovery
-    - tfbs-prediction
     - regulatory-variants
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
     - regulatory-variants
+    audited: true
   deepnd:
     categories: []
     confidence: high
@@ -4930,6 +4997,7 @@ categories:
     - grn-inference
   deepregfinder:
     categories:
+    - tfbs-prediction
     - regulatory-elements
     - peak-calling
     confidence: high
@@ -4937,6 +5005,7 @@ categories:
     was:
     - tfbs-prediction
     - regulatory-elements
+    audited: true
   deepse:
     categories:
     - regulatory-elements
@@ -4947,20 +5016,20 @@ categories:
     - peak-calling
   deeptools:
     categories:
-    - peak-annotation
-    - nucleosome-chromatin
+    - peak-calling
     confidence: medium
     in_scope: true
     was:
     - peak-calling
+    audited: true
   deepvisp:
     categories:
     - motif-discovery
-    - tfbs-prediction
     confidence: medium
     in_scope: true
     was:
     - motif-discovery
+    audited: true
   deepyy1:
     categories:
     - tfbs-prediction
@@ -4986,13 +5055,13 @@ categories:
     - comparative
   dgw:
     categories:
-    - peak-calling
-    - comparative
+    - nucleosome-chromatin
     confidence: medium
     in_scope: true
     was:
     - peak-calling
     - nucleosome-chromatin
+    audited: true
   diana-mirextra:
     categories:
     - grn-inference
@@ -5027,12 +5096,12 @@ categories:
   dloopcaller:
     categories:
     - regulatory-elements
-    - peak-calling
     confidence: medium
     in_scope: true
     was:
     - regulatory-elements
     - grn-inference
+    audited: true
   dorina:
     categories: []
     confidence: high
@@ -5058,13 +5127,13 @@ categories:
     - nucleosome-chromatin
   eat-uptf:
     categories:
-    - tfbs-prediction
     - grn-inference
     confidence: high
     in_scope: true
     was:
     - motif-scanning
     - grn-inference
+    audited: true
   echolocator:
     categories:
     - regulatory-variants
@@ -5075,29 +5144,29 @@ categories:
   ehecregnet:
     categories:
     - grn-inference
-    - regulatory-variants
     confidence: medium
     in_scope: true
     was:
     - grn-inference
     - comparative
+    audited: true
   element_2023:
     categories:
-    - motif-discovery
     - motif-scanning
     - regulatory-elements
     confidence: high
     in_scope: true
     was:
     - regulatory-elements
+    audited: true
   encode_dcc:
     categories:
-    - peak-calling
     - chip-resources
     confidence: high
     in_scope: true
     was:
     - chip-resources
+    audited: true
   enhancer-if:
     categories:
     - regulatory-elements
@@ -5164,12 +5233,14 @@ categories:
     - nucleosome-chromatin
   epiScanpy:
     categories:
+    - nucleosome-chromatin
     - single-cell
     confidence: medium
     in_scope: true
     was:
     - nucleosome-chromatin
     - single-cell
+    audited: true
   epianno:
     categories:
     - peak-annotation
@@ -5200,12 +5271,14 @@ categories:
     categories:
     - peak-calling
     - peak-annotation
+    - chip-resources
     confidence: high
     in_scope: true
     was:
     - peak-calling
     - peak-annotation
     - chip-resources
+    audited: true
   epigraph:
     categories:
     - regulatory-elements
@@ -5227,8 +5300,6 @@ categories:
   epiromics:
     categories:
     - regulatory-elements
-    - peak-calling
-    - peak-annotation
     confidence: high
     in_scope: true
     was:
@@ -5236,6 +5307,7 @@ categories:
     - peak-calling
     - peak-annotation
     - nucleosome-chromatin
+    audited: true
   episegmix:
     categories:
     - nucleosome-chromatin
@@ -5305,14 +5377,14 @@ categories:
     was: []
   eucamod:
     categories:
-    - regulatory-elements
-    - chip-resources
+    - tfbs-prediction
     - regulatory-variants
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
     - regulatory-variants
+    audited: true
   evoaug_tf:
     categories:
     - tfbs-prediction
@@ -5351,13 +5423,12 @@ categories:
   ezgeno:
     categories:
     - tfbs-prediction
-    - peak-calling
-    - grn-inference
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
     - peak-calling
+    audited: true
   f-seq:
     categories:
     - tfbs-prediction
@@ -5398,11 +5469,13 @@ categories:
   fcscan:
     categories:
     - tfbs-prediction
+    - regulatory-variants
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
     - regulatory-variants
+    audited: true
   fgviewer:
     categories: []
     confidence: high
@@ -5412,13 +5485,14 @@ categories:
     - tfbs-prediction
   figeno:
     categories:
-    - regulatory-elements
-    - peak-annotation
+    - peak-calling
+    - nucleosome-chromatin
     confidence: medium
     in_scope: true
     was:
     - peak-calling
     - nucleosome-chromatin
+    audited: true
   filer:
     categories:
     - chip-resources
@@ -5438,11 +5512,13 @@ categories:
   findpromoter:
     categories:
     - motif-scanning
+    - regulatory-elements
     confidence: high
     in_scope: true
     was:
     - motif-scanning
     - regulatory-elements
+    audited: true
   firecaller:
     categories: []
     confidence: high
@@ -5467,11 +5543,11 @@ categories:
     - nucleosome-chromatin
     - single-cell
   flexflux:
-    categories:
-    - grn-inference
+    categories: []
     confidence: medium
     in_scope: true
     was: []
+    audited: true
   flyterminalia:
     categories: []
     confidence: high
@@ -5481,6 +5557,7 @@ categories:
     - tfbs-prediction
   footer:
     categories:
+    - motif-scanning
     - tfbs-prediction
     - footprinting
     confidence: high
@@ -5489,22 +5566,27 @@ categories:
     - motif-scanning
     - tfbs-prediction
     - comparative
+    audited: true
   forge2:
     categories:
+    - regulatory-elements
     - regulatory-variants
     confidence: high
     in_scope: true
     was:
     - regulatory-elements
     - regulatory-variants
+    audited: true
   funchip:
     categories:
     - peak-calling
+    - peak-annotation
     confidence: high
     in_scope: true
     was:
     - peak-calling
     - peak-annotation
+    audited: true
   funcisnp:
     categories:
     - regulatory-variants
@@ -5513,12 +5595,11 @@ categories:
     was:
     - peak-calling
   funsip:
-    categories:
-    - tfbs-prediction
-    - regulatory-elements
+    categories: []
     confidence: medium
     in_scope: true
     was: []
+    audited: true
   g4snvhunter:
     categories:
     - regulatory-variants
@@ -5551,13 +5632,16 @@ categories:
     - single-cell
   genecodis:
     categories:
+    - tfbs-prediction
     - regulatory-elements
+    - nucleosome-chromatin
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
     - regulatory-elements
     - nucleosome-chromatin
+    audited: true
   genelink_scRNAseq:
     categories:
     - grn-inference
@@ -5589,7 +5673,6 @@ categories:
     - regulatory-elements
   genome_surveyor:
     categories:
-    - motif-discovery
     - tfbs-prediction
     - regulatory-elements
     confidence: high
@@ -5597,6 +5680,7 @@ categories:
     was:
     - tfbs-prediction
     - regulatory-elements
+    audited: true
   genomedata:
     categories: []
     confidence: high
@@ -5613,36 +5697,41 @@ categories:
   genomesidekick:
     categories:
     - regulatory-elements
-    - peak-annotation
     - nucleosome-chromatin
     confidence: medium
     in_scope: true
     was:
     - peak-calling
     - nucleosome-chromatin
+    audited: true
   genova:
     categories:
-    - nucleosome-chromatin
+    - tfbs-prediction
+    - peak-calling
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
     - peak-calling
+    audited: true
   ggb:
-    categories:
-    - peak-annotation
+    categories: []
     confidence: medium
     in_scope: true
     was: []
+    audited: true
   gibbs_motif_sampler:
     categories:
     - motif-discovery
+    - tfbs-prediction
+    - regulatory-elements
     confidence: high
     in_scope: true
     was:
     - motif-discovery
     - tfbs-prediction
     - regulatory-elements
+    audited: true
   gidetector:
     categories: []
     confidence: high
@@ -5658,11 +5747,13 @@ categories:
   gimmemotifs:
     categories:
     - motif-discovery
+    - motif-comparison
     confidence: high
     in_scope: true
     was:
     - motif-discovery
     - motif-comparison
+    audited: true
   gleaner:
     categories:
     - regulatory-elements
@@ -5679,13 +5770,16 @@ categories:
     - grn-inference
   gothic:
     categories:
+    - tfbs-prediction
     - regulatory-elements
+    - nucleosome-chromatin
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
     - regulatory-elements
     - nucleosome-chromatin
+    audited: true
   gpcr-sas:
     categories: []
     confidence: high
@@ -5693,12 +5787,12 @@ categories:
     was: []
   gpro:
     categories:
-    - motif-discovery
     - regulatory-elements
     confidence: high
     in_scope: true
     was:
     - regulatory-elements
+    audited: true
   gpumotif:
     categories:
     - motif-discovery
@@ -5710,19 +5804,23 @@ categories:
   grafimo:
     categories:
     - motif-scanning
+    - tfbs-prediction
     confidence: high
     in_scope: true
     was:
     - motif-scanning
     - tfbs-prediction
+    audited: true
   graphsim:
     categories:
     - grn-inference
+    - nucleosome-chromatin
     confidence: medium
     in_scope: true
     was:
     - grn-inference
     - nucleosome-chromatin
+    audited: true
   graphtgi:
     categories:
     - grn-inference
@@ -5733,7 +5831,6 @@ categories:
     - grn-inference
   greap:
     categories:
-    - regulatory-elements
     - peak-annotation
     confidence: medium
     in_scope: true
@@ -5742,6 +5839,7 @@ categories:
     - tfbs-prediction
     - chip-resources
     - nucleosome-chromatin
+    audited: true
   greg:
     categories:
     - grn-inference
@@ -5760,6 +5858,7 @@ categories:
     - nucleosome-chromatin
   grelu:
     categories:
+    - tfbs-prediction
     - regulatory-elements
     - regulatory-variants
     confidence: high
@@ -5768,6 +5867,7 @@ categories:
     - tfbs-prediction
     - regulatory-elements
     - regulatory-variants
+    audited: true
   grenits:
     categories:
     - grn-inference
@@ -5782,19 +5882,20 @@ categories:
     - regulatory-elements
   grinch:
     categories:
-    - grn-inference
+    - peak-calling
     confidence: medium
     in_scope: true
     was:
     - peak-calling
+    audited: true
   grndb:
     categories:
-    - chip-resources
     - grn-inference
     confidence: medium
     in_scope: true
     was:
     - grn-inference
+    audited: true
   grnular:
     categories:
     - grn-inference
@@ -5812,12 +5913,12 @@ categories:
   groovdb:
     categories:
     - motif-databases
-    - tfbs-prediction
     confidence: medium
     in_scope: true
     was:
     - motif-databases
     - chip-resources
+    audited: true
   gse:
     categories:
     - chip-resources
@@ -5858,8 +5959,6 @@ categories:
     was: []
   haystack:
     categories:
-    - motif-discovery
-    - motif-scanning
     - regulatory-elements
     confidence: medium
     in_scope: true
@@ -5867,16 +5966,17 @@ categories:
     - motif-discovery
     - motif-scanning
     - regulatory-variants
+    audited: true
   hematlas:
     categories:
     - regulatory-elements
-    - single-cell
     - comparative
     confidence: medium
     in_scope: true
     was:
     - regulatory-elements
     - single-cell
+    audited: true
   hgetgi:
     categories:
     - tfbs-prediction
@@ -5888,6 +5988,8 @@ categories:
   hhcdb:
     categories:
     - regulatory-elements
+    - chip-resources
+    - nucleosome-chromatin
     confidence: medium
     in_scope: true
     was:
@@ -5895,6 +5997,7 @@ categories:
     - tfbs-prediction
     - chip-resources
     - nucleosome-chromatin
+    audited: true
   hi-c_aggregate:
     categories: []
     confidence: high
@@ -5993,6 +6096,7 @@ categories:
   hrtbldb:
     categories:
     - motif-databases
+    - regulatory-elements
     - chip-resources
     confidence: high
     in_scope: true
@@ -6000,8 +6104,11 @@ categories:
     - motif-databases
     - regulatory-elements
     - chip-resources
+    audited: true
   human-scatac-corpus:
     categories:
+    - chip-resources
+    - nucleosome-chromatin
     - single-cell
     confidence: high
     in_scope: true
@@ -6009,13 +6116,15 @@ categories:
     - chip-resources
     - nucleosome-chromatin
     - single-cell
+    audited: true
   iMARGI:
     categories:
-    - regulatory-elements
+    - tfbs-prediction
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
+    audited: true
   iProDNA-CapsNet:
     categories: []
     confidence: high
@@ -6025,13 +6134,13 @@ categories:
     - peak-calling
   ianimal:
     categories:
-    - chip-resources
     - comparative
     confidence: medium
     in_scope: true
     was:
     - chip-resources
     - grn-inference
+    audited: true
   iaseq:
     categories:
     - regulatory-variants
@@ -6051,20 +6160,22 @@ categories:
     categories:
     - regulatory-elements
     - chip-resources
-    - regulatory-variants
     confidence: high
     in_scope: true
     was:
     - regulatory-elements
     - chip-resources
+    audited: true
   icn:
     categories:
     - grn-inference
+    - nucleosome-chromatin
     confidence: medium
     in_scope: true
     was:
     - grn-inference
     - nucleosome-chromatin
+    audited: true
   idbp-dep:
     categories: []
     confidence: high
@@ -6108,12 +6219,12 @@ categories:
     - nucleosome-chromatin
   imodulondb:
     categories:
-    - chip-resources
     - grn-inference
     confidence: medium
     in_scope: true
     was:
     - grn-inference
+    audited: true
   infima:
     categories:
     - regulatory-variants
@@ -6163,14 +6274,13 @@ categories:
     - regulatory-elements
   iregnet:
     categories:
-    - regulatory-elements
-    - peak-calling
     - grn-inference
     confidence: high
     in_scope: true
     was:
     - peak-calling
     - grn-inference
+    audited: true
   iscdnase-seq:
     categories:
     - footprinting
@@ -6207,12 +6317,14 @@ categories:
   jpredictor:
     categories:
     - motif-scanning
+    - tfbs-prediction
     - regulatory-elements
     confidence: high
     in_scope: true
     was:
     - tfbs-prediction
     - regulatory-elements
+    audited: true
   kapac:
     categories:
     - motif-discovery
@@ -6222,20 +6334,23 @@ categories:
   lasagna-search:
     categories:
     - motif-scanning
+    - tfbs-prediction
     confidence: high
     in_scope: true
     was:
     - motif-scanning
     - tfbs-prediction
+    audited: true
   lbfextract:
     categories:
     - tfbs-prediction
-    - regulatory-variants
+    - nucleosome-chromatin
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
     - nucleosome-chromatin
+    audited: true
   les:
     categories: []
     confidence: high
@@ -6297,18 +6412,19 @@ categories:
   lncsea:
     categories:
     - regulatory-elements
-    - chip-resources
     confidence: medium
     in_scope: true
     was:
     - regulatory-elements
+    audited: true
   lolaweb:
     categories:
-    - peak-annotation
+    - tfbs-prediction
     confidence: high
     in_scope: true
     was:
     - tfbs-prediction
+    audited: true
   longgenedb:
     categories: []
     confidence: high
@@ -6325,21 +6441,23 @@ categories:
   macpet:
     categories:
     - peak-calling
-    - peak-annotation
     confidence: medium
     in_scope: true
     was:
     - peak-calling
+    audited: true
   maggie:
     categories:
     - motif-discovery
     - tfbs-prediction
+    - regulatory-variants
     confidence: high
     in_scope: true
     was:
     - motif-discovery
     - tfbs-prediction
     - regulatory-variants
+    audited: true
   magia2:
     categories: []
     confidence: high
@@ -6358,12 +6476,14 @@ categories:
   magma_motif:
     categories:
     - motif-discovery
+    - tfbs-prediction
     - regulatory-elements
     confidence: high
     in_scope: true
     was:
     - motif-discovery
     - tfbs-prediction
+    audited: true
   malacoda:
     categories: []
     confidence: low
@@ -6372,12 +6492,14 @@ categories:
     - tfbs-prediction
   manorm_2:
     categories:
+    - peak-calling
     - peak-annotation
     confidence: high
     in_scope: true
     was:
     - peak-calling
     - peak-annotation
+    audited: true
   mapperdb:
     categories:
     - motif-scanning
@@ -6397,12 +6519,12 @@ categories:
   marge:
     categories:
     - regulatory-elements
-    - peak-calling
     confidence: high
     in_scope: true
     was:
     - regulatory-elements
     - peak-annotation
+    audited: true
   matcha:
     categories:
     - nucleosome-chromatin
@@ -6423,11 +6545,13 @@ categories:
   mcland:
     categories:
     - grn-inference
+    - nucleosome-chromatin
     confidence: medium
     in_scope: true
     was:
     - grn-inference
     - nucleosome-chromatin
+    audited: true
   mdag:
     categories:
     - grn-inference
@@ -6469,14 +6593,15 @@ categories:
     - regulatory-variants
   met:
     categories:
-    - motif-discovery
     - motif-scanning
+    - tfbs-prediction
     confidence: high
     in_scope: true
     was:
     - motif-discovery
     - motif-scanning
     - tfbs-prediction
+    audited: true
   meta:
     categories:
     - motif-comparison
@@ -6486,11 +6611,13 @@ categories:
   meta-base:
     categories:
     - chip-resources
+    - nucleosome-chromatin
     confidence: high
     in_scope: true
     was:
     - chip-resources
     - nucleosome-chromatin
+    audited: true
   metachrom:
     categories:
     - regulatory-variants
@@ -6530,6 +6657,7 @@ categories:
   microfootprinter:
     categories:
     - motif-discovery
+    - regulatory-elements
     - footprinting
     confidence: high
     in_scope: true
@@ -6537,9 +6665,9 @@ categories:
     - motif-discovery
     - regulatory-elements
     - footprinting
+    audited: true
   microsalmon:
     categories:
-    - tfbs-prediction
     - regulatory-elements
     confidence: medium
     in_scope: true
@@ -6547,6 +6675,7 @@ categories:
     - motif-scanning
     - tfbs-prediction
     - regulatory-elements
+    audited: true
   minepath:
     categories: []
     confidence: high
@@ -6563,7 +6692,6 @@ categories:
     - grn-inference
   mira_single-cell:
     categories:
-    - regulatory-elements
     - grn-inference
     - single-cell
     confidence: medium
@@ -6572,6 +6700,7 @@ categories:
     - tfbs-prediction
     - nucleosome-chromatin
     - single-cell
+    audited: true
   mirage:
     categories: []
     confidence: high
@@ -6624,7 +6753,6 @@ categories:
   mochiview:
     categories:
     - motif-comparison
-    - chip-resources
     confidence: medium
     in_scope: true
     was:
@@ -6632,6 +6760,7 @@ categories:
     - motif-scanning
     - motif-comparison
     - peak-annotation
+    audited: true
   mod_tools:
     categories:
     - motif-discovery
@@ -6675,22 +6804,24 @@ categories:
   monkey:
     categories:
     - motif-scanning
+    - tfbs-prediction
     - comparative
     confidence: high
     in_scope: true
     was:
     - motif-scanning
     - tfbs-prediction
+    audited: true
   motifgenie:
     categories:
     - motif-scanning
     - tfbs-prediction
-    - peak-annotation
     confidence: high
     in_scope: true
     was:
     - motif-scanning
     - tfbs-prediction
+    audited: true
   motifpeeker:
     categories:
     - motif-discovery
@@ -6703,12 +6834,14 @@ categories:
     - peak-calling
   motto:
     categories:
+    - motif-discovery
     - motif-comparison
     confidence: medium
     in_scope: true
     was:
     - motif-discovery
     - motif-comparison
+    audited: true
   mouse_genome_informatics:
     categories: []
     confidence: high
@@ -6755,13 +6888,13 @@ categories:
     - peak-calling
     - grn-inference
     - nucleosome-chromatin
-    - comparative
     confidence: medium
     in_scope: true
     was:
     - peak-calling
     - grn-inference
     - nucleosome-chromatin
+    audited: true
   multibind:
     categories: []
     confidence: high
@@ -6779,11 +6912,11 @@ categories:
   multiomix:
     categories:
     - grn-inference
-    - regulatory-variants
     confidence: medium
     in_scope: true
     was:
     - nucleosome-chromatin
+    audited: true
   mustard:
     categories: []
     confidence: high
@@ -6793,31 +6926,34 @@ categories:
     - peak-calling
   mutalisk:
     categories:
-    - regulatory-elements
     - regulatory-variants
     confidence: high
     in_scope: true
     was:
     - regulatory-variants
+    audited: true
   mybs:
     categories:
     - motif-scanning
     - tfbs-prediction
-    - peak-annotation
+    - regulatory-elements
     confidence: medium
     in_scope: true
     was:
     - motif-scanning
     - tfbs-prediction
     - regulatory-elements
+    audited: true
   narrowpeaks:
     categories:
     - peak-calling
+    - peak-annotation
     confidence: medium
     in_scope: true
     was:
     - peak-calling
     - peak-annotation
+    audited: true
   navise:
     categories:
     - regulatory-elements
@@ -6830,11 +6966,13 @@ categories:
   ncbi_epigenomics:
     categories:
     - chip-resources
+    - nucleosome-chromatin
     confidence: high
     in_scope: true
     was:
     - chip-resources
     - nucleosome-chromatin
+    audited: true
   ncfans-v2:
     categories: []
     confidence: high
@@ -6845,12 +6983,12 @@ categories:
     categories:
     - peak-calling
     - peak-annotation
-    - chip-resources
     confidence: medium
     in_scope: true
     was:
     - peak-calling
     - peak-annotation
+    audited: true
   nemo_archive:
     categories:
     - single-cell
@@ -6873,11 +7011,13 @@ categories:
     - grn-inference
   netprophet:
     categories:
+    - tfbs-prediction
     - grn-inference
     confidence: high
     in_scope: true
     was:
     - tfbs-prediction
+    audited: true
   network_of_cancer_genes:
     categories: []
     confidence: high
@@ -6929,11 +7069,11 @@ categories:
     was:
     - motif-scanning
   non-b_db:
-    categories:
-    - motif-databases
+    categories: []
     confidence: high
     in_scope: true
     was: []
+    audited: true
   ntw:
     categories:
     - grn-inference
@@ -6982,11 +7122,12 @@ categories:
     - grn-inference
   onesc:
     categories:
-    - grn-inference
+    - tfbs-prediction
     confidence: high
     in_scope: true
     was:
     - tfbs-prediction
+    audited: true
   onto-tools:
     categories: []
     confidence: high
@@ -7010,10 +7151,12 @@ categories:
   owas:
     categories:
     - regulatory-variants
+    - nucleosome-chromatin
     confidence: high
     in_scope: true
     was:
     - nucleosome-chromatin
+    audited: true
   p-match:
     categories:
     - motif-scanning
@@ -7076,12 +7219,14 @@ categories:
     - peak-annotation
   peakachu:
     categories:
+    - regulatory-elements
     - peak-calling
     confidence: high
     in_scope: true
     was:
     - regulatory-elements
     - peak-calling
+    audited: true
   peakhood:
     categories: []
     confidence: high
@@ -7103,21 +7248,24 @@ categories:
     - regulatory-elements
   phaeoepiview:
     categories:
+    - regulatory-elements
     - peak-calling
-    - chip-resources
     confidence: medium
     in_scope: true
     was:
     - regulatory-elements
     - peak-calling
+    audited: true
   phantompeakqualtools:
     categories:
     - peak-calling
+    - chip-resources
     confidence: medium
     in_scope: true
     was:
     - peak-calling
     - chip-resources
+    audited: true
   phasetank:
     categories: []
     confidence: high
@@ -7127,11 +7275,13 @@ categories:
   phire:
     categories:
     - motif-discovery
+    - regulatory-elements
     confidence: high
     in_scope: true
     was:
     - motif-discovery
     - regulatory-elements
+    audited: true
   phisite:
     categories:
     - motif-databases
@@ -7144,22 +7294,24 @@ categories:
     - chip-resources
   phyloctcflooping:
     categories:
-    - motif-scanning
     - comparative
     confidence: medium
     in_scope: true
     was:
     - peak-calling
+    audited: true
   phylopgm:
     categories:
     - tfbs-prediction
     - grn-inference
+    - comparative
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
     - grn-inference
     - comparative
+    audited: true
   phyloscan:
     categories:
     - motif-scanning
@@ -7199,23 +7351,21 @@ categories:
   planttfcat:
     categories:
     - motif-databases
-    - tfbs-prediction
     confidence: medium
     in_scope: true
     was:
     - motif-databases
+    audited: true
   planttfdb:
     categories:
     - motif-databases
-    - tfbs-prediction
-    - regulatory-elements
-    - grn-inference
     confidence: high
     in_scope: true
     was:
     - motif-databases
     - tfbs-prediction
     - regulatory-elements
+    audited: true
   planttfdb_2.0:
     categories:
     - motif-databases
@@ -7227,19 +7377,21 @@ categories:
   plntfdb:
     categories:
     - motif-databases
-    - grn-inference
     confidence: high
     in_scope: true
     was:
     - motif-databases
+    audited: true
   plot2do:
     categories:
+    - footprinting
     - peak-annotation
     confidence: medium
     in_scope: true
     was:
     - footprinting
     - peak-annotation
+    audited: true
   pluto_bio:
     categories: []
     confidence: high
@@ -7292,14 +7444,13 @@ categories:
     - single-cell
   ppgr:
     categories:
-    - regulatory-elements
-    - chip-resources
     - grn-inference
     confidence: medium
     in_scope: true
     was:
     - regulatory-elements
     - grn-inference
+    audited: true
   ppml:
     categories: []
     confidence: high
@@ -7322,21 +7473,23 @@ categories:
     - regulatory-elements
   predector:
     categories:
-    - motif-discovery
     - motif-scanning
     confidence: high
     in_scope: true
     was:
     - tfbs-prediction
+    audited: true
   predrem:
     categories:
     - motif-discovery
     - motif-scanning
+    - motif-databases
     - regulatory-elements
     confidence: high
     in_scope: true
     was:
     - motif-databases
+    audited: true
   primirtss:
     categories:
     - regulatory-elements
@@ -7370,11 +7523,11 @@ categories:
     - tfbs-prediction
     - grn-inference
   progeny:
-    categories:
-    - grn-inference
+    categories: []
     confidence: high
     in_scope: true
     was: []
+    audited: true
   prom:
     categories:
     - grn-inference
@@ -7410,19 +7563,18 @@ categories:
   pyicoteo:
     categories:
     - peak-calling
-    - peak-annotation
     confidence: medium
     in_scope: true
     was: []
+    audited: true
   q-nexus:
-    categories:
-    - peak-calling
+    categories: []
     confidence: high
     in_scope: true
     was: []
+    audited: true
   r-loop:
     categories:
-    - regulatory-elements
     - peak-calling
     confidence: medium
     in_scope: true
@@ -7430,6 +7582,7 @@ categories:
     - tfbs-prediction
     - regulatory-elements
     - peak-calling
+    audited: true
   r-loopbase:
     categories: []
     confidence: high
@@ -7439,11 +7592,12 @@ categories:
     - chip-resources
   r3cpet:
     categories:
-    - grn-inference
+    - peak-calling
     confidence: high
     in_scope: true
     was:
     - peak-calling
+    audited: true
   r_spider:
     categories: []
     confidence: high
@@ -7451,11 +7605,11 @@ categories:
     was:
     - grn-inference
   racipe:
-    categories:
-    - grn-inference
+    categories: []
     confidence: high
     in_scope: true
     was: []
+    audited: true
   rbioapi:
     categories: []
     confidence: high
@@ -7472,14 +7626,13 @@ categories:
     - peak-calling
   rcade-recognition:
     categories:
-    - motif-discovery
     - tfbs-prediction
-    - chip-resources
     confidence: high
     in_scope: true
     was:
     - motif-discovery
     - tfbs-prediction
+    audited: true
   reactr:
     categories: []
     confidence: high
@@ -7488,17 +7641,18 @@ categories:
     - motif-discovery
   readout:
     categories:
-    - motif-scanning
+    - tfbs-prediction
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
+    audited: true
   recoup:
-    categories:
-    - peak-annotation
+    categories: []
     confidence: medium
     in_scope: true
     was: []
+    audited: true
   redfly:
     categories:
     - regulatory-elements
@@ -7511,6 +7665,8 @@ categories:
     - chip-resources
   reganalyst:
     categories:
+    - motif-discovery
+    - motif-databases
     - regulatory-elements
     confidence: high
     in_scope: true
@@ -7518,9 +7674,14 @@ categories:
     - motif-discovery
     - motif-databases
     - regulatory-elements
+    audited: true
   regeneration_roadmap:
     categories:
+    - motif-databases
+    - tfbs-prediction
     - chip-resources
+    - nucleosome-chromatin
+    - single-cell
     confidence: medium
     in_scope: true
     was:
@@ -7529,8 +7690,10 @@ categories:
     - chip-resources
     - nucleosome-chromatin
     - single-cell
+    audited: true
   regprecise:
     categories:
+    - motif-databases
     - regulatory-elements
     - grn-inference
     - comparative
@@ -7539,14 +7702,17 @@ categories:
     was:
     - motif-databases
     - grn-inference
+    audited: true
   relics:
     categories:
-    - motif-discovery
+    - tfbs-prediction
+    - regulatory-elements
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
     - regulatory-elements
+    audited: true
   remm_score:
     categories:
     - regulatory-variants
@@ -7661,7 +7827,6 @@ categories:
     categories:
     - motif-discovery
     - motif-scanning
-    - motif-comparison
     - tfbs-prediction
     - regulatory-elements
     - footprinting
@@ -7673,13 +7838,15 @@ categories:
     - motif-comparison
     - tfbs-prediction
     - regulatory-elements
+    audited: true
   rsat-retrieve-ensembl-seq:
     categories:
-    - regulatory-elements
+    - tfbs-prediction
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
+    audited: true
   rseg_chipseq:
     categories:
     - peak-calling
@@ -7700,6 +7867,7 @@ categories:
     - regulatory-variants
   rvista:
     categories:
+    - tfbs-prediction
     - regulatory-elements
     - comparative
     confidence: high
@@ -7708,6 +7876,7 @@ categories:
     - tfbs-prediction
     - regulatory-elements
     - comparative
+    audited: true
   sadmama:
     categories:
     - motif-scanning
@@ -7747,6 +7916,7 @@ categories:
   satori:
     categories:
     - tfbs-prediction
+    - regulatory-elements
     - grn-inference
     confidence: medium
     in_scope: true
@@ -7754,6 +7924,7 @@ categories:
     - motif-discovery
     - tfbs-prediction
     - regulatory-elements
+    audited: true
   sbgn_bricks:
     categories: []
     confidence: high
@@ -7763,16 +7934,15 @@ categories:
   sbsa:
     categories:
     - tfbs-prediction
-    - peak-annotation
     - regulatory-variants
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
     - regulatory-variants
+    audited: true
   sc-maestro:
     categories:
-    - regulatory-elements
     - peak-calling
     - single-cell
     confidence: high
@@ -7781,8 +7951,10 @@ categories:
     - peak-calling
     - grn-inference
     - single-cell
+    audited: true
   scATAC-pro:
     categories:
+    - regulatory-elements
     - peak-calling
     - single-cell
     confidence: high
@@ -7791,6 +7963,7 @@ categories:
     - regulatory-elements
     - peak-calling
     - single-cell
+    audited: true
   scATAC-seq:
     categories:
     - peak-calling
@@ -7843,6 +8016,7 @@ categories:
   scbasset:
     categories:
     - tfbs-prediction
+    - nucleosome-chromatin
     - single-cell
     confidence: high
     in_scope: true
@@ -7851,6 +8025,7 @@ categories:
     - peak-calling
     - nucleosome-chromatin
     - single-cell
+    audited: true
   scblood:
     categories:
     - chip-resources
@@ -7879,15 +8054,16 @@ categories:
     - single-cell
   scepisearch:
     categories:
+    - nucleosome-chromatin
     - single-cell
     confidence: high
     in_scope: true
     was:
     - nucleosome-chromatin
     - single-cell
+    audited: true
   scepitools:
     categories:
-    - chip-resources
     - single-cell
     confidence: medium
     in_scope: true
@@ -7895,16 +8071,18 @@ categories:
     - chip-resources
     - nucleosome-chromatin
     - single-cell
+    audited: true
   scgrnom:
     categories:
     - grn-inference
-    - regulatory-variants
+    - single-cell
     confidence: medium
     in_scope: true
     was:
     - regulatory-elements
     - grn-inference
     - single-cell
+    audited: true
   sciddo:
     categories:
     - regulatory-elements
@@ -7921,15 +8099,16 @@ categories:
     - regulatory-elements
   scoit:
     categories:
-    - grn-inference
     - single-cell
     confidence: medium
     in_scope: true
     was:
     - single-cell
+    audited: true
   scope:
     categories:
     - motif-discovery
+    - tfbs-prediction
     - regulatory-elements
     confidence: high
     in_scope: true
@@ -7937,6 +8116,7 @@ categories:
     - motif-discovery
     - tfbs-prediction
     - regulatory-elements
+    audited: true
   scrat:
     categories:
     - regulatory-elements
@@ -7949,12 +8129,14 @@ categories:
     - single-cell
   sdda:
     categories:
+    - motif-discovery
     - tfbs-prediction
     confidence: high
     in_scope: true
     was:
     - motif-discovery
     - tfbs-prediction
+    audited: true
   sea-archive:
     categories:
     - regulatory-elements
@@ -7978,33 +8160,32 @@ categories:
   segcond:
     categories:
     - regulatory-elements
-    - peak-calling
     confidence: medium
     in_scope: true
     was:
     - regulatory-elements
+    audited: true
   segene:
     categories:
     - regulatory-elements
-    - grn-inference
     confidence: high
     in_scope: true
     was:
     - regulatory-elements
     - peak-annotation
     - grn-inference
+    audited: true
   segtools:
     categories:
-    - peak-annotation
     - nucleosome-chromatin
     confidence: medium
     in_scope: true
     was:
     - peak-calling
     - nucleosome-chromatin
+    audited: true
   seqcode:
     categories:
-    - regulatory-elements
     - footprinting
     - peak-calling
     confidence: medium
@@ -8012,6 +8193,7 @@ categories:
     was:
     - footprinting
     - peak-calling
+    audited: true
   seqpattern:
     categories:
     - motif-scanning
@@ -8019,20 +8201,21 @@ categories:
     in_scope: true
     was: []
   seqplots:
-    categories:
-    - motif-scanning
-    - peak-annotation
+    categories: []
     confidence: high
     in_scope: true
     was: []
+    audited: true
   seqsetvis:
     categories:
     - peak-annotation
+    - chip-resources
     confidence: medium
     in_scope: true
     was:
     - peak-annotation
     - chip-resources
+    audited: true
   seqsite:
     categories:
     - tfbs-prediction
@@ -8055,13 +8238,14 @@ categories:
     - tfbs-prediction
   sexannodb:
     categories:
-    - chip-resources
+    - grn-inference
     - regulatory-variants
     confidence: medium
     in_scope: true
     was:
     - grn-inference
     - regulatory-variants
+    audited: true
   shark.capture:
     categories: []
     confidence: high
@@ -8087,27 +8271,29 @@ categories:
   silencerdb:
     categories:
     - regulatory-elements
-    - regulatory-variants
     confidence: high
     in_scope: true
     was:
     - regulatory-elements
+    audited: true
   simbindprofiles:
     categories:
     - peak-calling
-    - peak-annotation
     confidence: medium
     in_scope: true
     was:
     - peak-calling
+    audited: true
   simsearch:
     categories:
-    - comparative
+    - tfbs-prediction
+    - nucleosome-chromatin
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
     - nucleosome-chromatin
+    audited: true
   sincei:
     categories:
     - single-cell
@@ -8117,11 +8303,11 @@ categories:
     - nucleosome-chromatin
     - single-cell
   sismonr:
-    categories:
-    - grn-inference
+    categories: []
     confidence: medium
     in_scope: true
     was: []
+    audited: true
   siteseer:
     categories:
     - motif-scanning
@@ -8149,14 +8335,14 @@ categories:
     was: []
   snapatac:
     categories:
-    - footprinting
-    - peak-calling
+    - nucleosome-chromatin
     - single-cell
     confidence: high
     in_scope: true
     was:
     - nucleosome-chromatin
     - single-cell
+    audited: true
   snapfish:
     categories: []
     confidence: high
@@ -8166,13 +8352,16 @@ categories:
     - nucleosome-chromatin
   snaphic:
     categories:
+    - peak-calling
     - nucleosome-chromatin
+    - single-cell
     confidence: high
     in_scope: true
     was:
     - peak-calling
     - nucleosome-chromatin
     - single-cell
+    audited: true
   snapper:
     categories: []
     confidence: high
@@ -8182,11 +8371,11 @@ categories:
   snapshot:
     categories:
     - nucleosome-chromatin
-    - single-cell
     confidence: medium
     in_scope: true
     was:
     - nucleosome-chromatin
+    audited: true
   snowprint:
     categories:
     - motif-discovery
@@ -8234,22 +8423,23 @@ categories:
     was: []
   sratailor:
     categories:
+    - peak-annotation
     - chip-resources
     confidence: high
     in_scope: true
     was:
     - peak-annotation
     - chip-resources
+    audited: true
   ssa:
     categories:
     - motif-discovery
-    - motif-scanning
-    - motif-comparison
     confidence: high
     in_scope: true
     was:
     - motif-discovery
     - motif-scanning
+    audited: true
   stan:
     categories:
     - regulatory-elements
@@ -8276,13 +8466,13 @@ categories:
     categories:
     - peak-calling
     - peak-annotation
-    - chip-resources
     confidence: medium
     in_scope: true
     was:
     - regulatory-elements
     - peak-calling
     - peak-annotation
+    audited: true
   subfeat:
     categories: []
     confidence: low
@@ -8298,12 +8488,12 @@ categories:
     - motif-comparison
   suldex:
     categories:
-    - motif-discovery
-    - motif-scanning
+    - tfbs-prediction
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
+    audited: true
   survivalmeth:
     categories: []
     confidence: high
@@ -8314,11 +8504,11 @@ categories:
   svm2crm:
     categories:
     - regulatory-elements
-    - peak-annotation
     confidence: high
     in_scope: true
     was:
     - regulatory-elements
+    audited: true
   svmil2:
     categories:
     - regulatory-variants
@@ -8338,20 +8528,24 @@ categories:
   swissregulon:
     categories:
     - motif-databases
+    - tfbs-prediction
     confidence: high
     in_scope: true
     was:
     - motif-databases
     - tfbs-prediction
+    audited: true
   synor:
     categories:
     - motif-scanning
+    - tfbs-prediction
     - regulatory-elements
     confidence: high
     in_scope: true
     was:
     - tfbs-prediction
     - regulatory-elements
+    audited: true
   syntren:
     categories:
     - grn-inference
@@ -8362,19 +8556,20 @@ categories:
     categories:
     - peak-calling
     - peak-annotation
+    - chip-resources
     confidence: medium
     in_scope: true
     was:
     - peak-calling
     - peak-annotation
     - chip-resources
+    audited: true
   t2:
-    categories:
-    - peak-calling
-    - peak-annotation
+    categories: []
     confidence: medium
     in_scope: true
     was: []
+    audited: true
   tadbd:
     categories: []
     confidence: low
@@ -8405,7 +8600,6 @@ categories:
     - peak-calling
   target_explorer:
     categories:
-    - motif-discovery
     - motif-scanning
     - tfbs-prediction
     - regulatory-elements
@@ -8415,6 +8609,7 @@ categories:
     - motif-scanning
     - tfbs-prediction
     - regulatory-elements
+    audited: true
   targetgene:
     categories:
     - regulatory-variants
@@ -8427,12 +8622,12 @@ categories:
     categories:
     - chip-resources
     - grn-inference
-    - regulatory-variants
     confidence: medium
     in_scope: true
     was:
     - chip-resources
     - grn-inference
+    audited: true
   tca:
     categories: []
     confidence: high
@@ -8447,28 +8642,31 @@ categories:
   tcof-db:
     categories:
     - motif-databases
-    - chip-resources
     confidence: high
     in_scope: true
     was:
     - motif-databases
+    audited: true
   tcseq:
     categories:
-    - regulatory-elements
-    - peak-annotation
+    - peak-calling
+    - nucleosome-chromatin
     confidence: medium
     in_scope: true
     was:
     - peak-calling
     - nucleosome-chromatin
+    audited: true
   tdthub:
     categories:
     - tfbs-prediction
+    - regulatory-elements
     confidence: high
     in_scope: true
     was:
     - tfbs-prediction
     - regulatory-elements
+    audited: true
   te-tss:
     categories:
     - regulatory-elements
@@ -8482,12 +8680,14 @@ categories:
     - nucleosome-chromatin
   teiser:
     categories:
+    - motif-discovery
     - regulatory-elements
     confidence: medium
     in_scope: true
     was:
     - motif-discovery
     - regulatory-elements
+    audited: true
   telobase:
     categories: []
     confidence: high
@@ -8521,28 +8721,32 @@ categories:
     - tfbs-prediction
   tf-prioritizer:
     categories:
-    - peak-calling
     - peak-annotation
     - grn-inference
     confidence: medium
     in_scope: true
     was: []
+    audited: true
   tfbind:
     categories:
+    - motif-scanning
     - tfbs-prediction
     confidence: high
     in_scope: true
     was:
     - motif-scanning
     - tfbs-prediction
+    audited: true
   tfbs:
     categories:
+    - motif-scanning
     - tfbs-prediction
     confidence: high
     in_scope: true
     was:
     - motif-scanning
     - tfbs-prediction
+    audited: true
   tfbscluster:
     categories:
     - tfbs-prediction
@@ -8578,13 +8782,13 @@ categories:
     - tfbs-prediction
   tfea.chip:
     categories:
-    - chip-resources
     - grn-inference
     confidence: high
     in_scope: true
     was:
     - peak-annotation
     - chip-resources
+    audited: true
   tfebexplorer:
     categories:
     - regulatory-elements
@@ -8612,18 +8816,18 @@ categories:
   tfmotifview:
     categories:
     - motif-scanning
-    - motif-comparison
     confidence: high
     in_scope: true
     was:
     - motif-scanning
     - peak-annotation
+    audited: true
   tfpredict:
-    categories:
-    - tfbs-prediction
+    categories: []
     confidence: medium
     in_scope: true
     was: []
+    audited: true
   tfta:
     categories:
     - grn-inference
@@ -8640,20 +8844,20 @@ categories:
   tfutils:
     categories:
     - tfbs-prediction
-    - chip-resources
     confidence: high
     in_scope: true
     was:
     - tfbs-prediction
+    audited: true
   threadna:
     categories:
-    - motif-scanning
     - tfbs-prediction
     confidence: medium
     in_scope: true
     was:
     - tfbs-prediction
     - regulatory-variants
+    audited: true
   tigre:
     categories:
     - grn-inference
@@ -8702,11 +8906,13 @@ categories:
     categories:
     - tfbs-prediction
     - regulatory-elements
+    - comparative
     confidence: high
     in_scope: true
     was:
     - tfbs-prediction
     - comparative
+    audited: true
   transcrispr:
     categories: []
     confidence: high
@@ -8745,11 +8951,11 @@ categories:
   transview:
     categories:
     - peak-calling
-    - peak-annotation
     confidence: medium
     in_scope: true
     was:
     - peak-calling
+    audited: true
   trdistiller:
     categories: []
     confidence: high
@@ -8841,25 +9047,25 @@ categories:
     categories:
     - motif-databases
     - tfbs-prediction
+    - chip-resources
     confidence: high
     in_scope: true
     was:
     - motif-databases
     - tfbs-prediction
     - chip-resources
+    audited: true
   unipath:
     categories:
-    - regulatory-elements
     - single-cell
     confidence: medium
     in_scope: true
     was:
     - nucleosome-chromatin
     - single-cell
+    audited: true
   universal_TTSs:
     categories:
-    - motif-discovery
-    - motif-scanning
     - peak-calling
     confidence: medium
     in_scope: true
@@ -8867,6 +9073,7 @@ categories:
     - motif-discovery
     - motif-scanning
     - regulatory-elements
+    audited: true
   unpairreg:
     categories:
     - single-cell
@@ -8919,11 +9126,11 @@ categories:
     was:
     - regulatory-elements
   visionet:
-    categories:
-    - grn-inference
+    categories: []
     confidence: medium
     in_scope: true
     was: []
+    audited: true
   vivarium-collective:
     categories: []
     confidence: high
@@ -8940,13 +9147,12 @@ categories:
     - nucleosome-chromatin
   washu_epigenome_browser:
     categories:
-    - regulatory-elements
-    - peak-annotation
-    - chip-resources
+    - nucleosome-chromatin
     confidence: medium
     in_scope: true
     was:
     - nucleosome-chromatin
+    audited: true
   waveseqr:
     categories:
     - peak-calling
@@ -8988,11 +9194,11 @@ categories:
   x-cnn:
     categories:
     - regulatory-elements
-    - peak-calling
     confidence: medium
     in_scope: true
     was:
     - peak-calling
+    audited: true
   x2k_web:
     categories:
     - grn-inference

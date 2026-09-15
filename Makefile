@@ -96,6 +96,13 @@ audit-descriptions:
 audit-publications:
 	$(PIPELINE)/audit_publications.py --apply
 
+## OPTIONAL: test every category the LLM pass assigned, and every rule-derived
+## category it discarded, one (tool, category) pair at a time. Calibrates against
+## the hand-written categories in seeds.yaml, which the pass never touches.
+## Votes are cached and flushed in chunks, so a long run is resumable.
+audit-categories:
+	$(PIPELINE)/audit_categories.py --apply
+
 ## find in-domain tools bio.tools does not index, from registries that carry
 ## their own domain taxonomy. Writes docs/registry-discovery.md for review;
 ## nothing is added to the catalog automatically. Cached, so re-runs are

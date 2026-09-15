@@ -1,6 +1,6 @@
 # Awesome Regulatory Genomics
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Tools](https://img.shields.io/badge/tools-3069-blue)](https://thirtysix.github.io/awesome-regulatory-genomics/) [![License: CC BY 4.0](https://img.shields.io/badge/data-CC--BY--4.0-lightgrey)](LICENSE-DATA) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21755613.svg)](https://doi.org/10.5281/zenodo.21755613) [![Updated](https://img.shields.io/badge/updated-2026--09--11-brightgreen)](#)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Tools](https://img.shields.io/badge/tools-3069-blue)](https://thirtysix.github.io/awesome-regulatory-genomics/) [![License: CC BY 4.0](https://img.shields.io/badge/data-CC--BY--4.0-lightgrey)](LICENSE-DATA) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21755613.svg)](https://doi.org/10.5281/zenodo.21755613) [![Updated](https://img.shields.io/badge/updated-2026--09--15-brightgreen)](#)
 
 A catalog of tools, databases and methods for **transcription-factor binding, sequence motifs, regulatory elements, chromatin and gene-regulatory networks**.
 
@@ -16,26 +16,26 @@ It builds on [bio.tools](https://bio.tools), the ELIXIR registry, which is what 
 
 ## Contents
 
-- [Motif discovery](#motif-discovery), 261 tools
-- [Motif scanning & enrichment](#motif-scanning--enrichment), 224 tools
-- [Motif comparison & visualisation](#motif-comparison--visualisation), 60 tools
-- [Motif & TF databases](#motif--tf-databases), 116 tools
-- [TFBS prediction](#tfbs-prediction), 686 tools
-- [Promoter & enhancer prediction](#promoter--enhancer-prediction), 558 tools
+- [Motif discovery](#motif-discovery), 248 tools
+- [Motif scanning & enrichment](#motif-scanning--enrichment), 216 tools
+- [Motif comparison & visualisation](#motif-comparison--visualisation), 56 tools
+- [Motif & TF databases](#motif--tf-databases), 119 tools
+- [TFBS prediction](#tfbs-prediction), 713 tools
+- [Promoter & enhancer prediction](#promoter--enhancer-prediction), 544 tools
 - [Reporter assays](#reporter-assays), 13 tools
 - [Footprinting](#footprinting), 56 tools
-- [Peak calling](#peak-calling), 585 tools
-- [Peak annotation & differential binding](#peak-annotation--differential-binding), 134 tools
-- [ChIP/ATAC data resources](#chipatac-data-resources), 158 tools
-- [Gene regulatory networks](#gene-regulatory-networks), 545 tools
-- [Regulatory variant effect](#regulatory-variant-effect), 145 tools
+- [Peak calling](#peak-calling), 578 tools
+- [Peak annotation & differential binding](#peak-annotation--differential-binding), 99 tools
+- [ChIP/ATAC data resources](#chipatac-data-resources), 147 tools
+- [Gene regulatory networks](#gene-regulatory-networks), 527 tools
+- [Regulatory variant effect](#regulatory-variant-effect), 138 tools
 - [Molecular QTL](#molecular-qtl), 135 tools
-- [Nucleosome & chromatin state](#nucleosome--chromatin-state), 661 tools
+- [Nucleosome & chromatin state](#nucleosome--chromatin-state), 694 tools
 - [Histone modifications](#histone-modifications), 63 tools
 - [3D genome & chromatin interactions](#3d-genome--chromatin-interactions), 261 tools
 - [DNA methylation](#dna-methylation), 482 tools
-- [Single-cell regulatory genomics](#single-cell-regulatory-genomics), 250 tools
-- [Comparative & evolutionary](#comparative--evolutionary), 51 tools
+- [Single-cell regulatory genomics](#single-cell-regulatory-genomics), 251 tools
+- [Comparative & evolutionary](#comparative--evolutionary), 50 tools
 - [How this list is built](#how-this-list-is-built)
 - [Coverage and known gaps](#coverage-and-known-gaps)
 - [Contributing](#contributing)
@@ -55,7 +55,7 @@ It builds on [bio.tools](https://bio.tools), the ELIXIR registry, which is what 
 - **[RSAT suite](http://rsat.eu)**: Long-running suite covering matrix scanning, comparison and enrichment
   <sub>[bio.tools](https://bio.tools/rsat) · [paper](https://pubmed.ncbi.nlm.nih.gov/10641039/) · `180 cites`</sub>
 
-<sub>[+ 256 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=motif-discovery)</sub>
+<sub>[+ 243 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=motif-discovery)</sub>
 
 ## Motif scanning & enrichment
 
@@ -72,16 +72,13 @@ It builds on [bio.tools](https://bio.tools), the ELIXIR registry, which is what 
 - **[motifmatchr](https://bioconductor.org/packages/motifmatchr/)**: Fast motif matching over large genomic range sets
   <sub>[code](https://github.com/GreenleafLab/motifmatchr) · [paper](https://doi.org/10.18129/B9.bioc.motifmatchr) · `49 stars`</sub>
 
-<sub>[+ 219 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=motif-scanning)</sub>
+<sub>[+ 211 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=motif-scanning)</sub>
 
 ## Motif comparison & visualisation
 
 *Comparing, clustering, aligning and drawing motifs and logos.*
 
-- **[RSAT suite](http://rsat.eu)**: Long-running suite covering matrix scanning, comparison and enrichment
-  <sub>[bio.tools](https://bio.tools/rsat) · [paper](https://pubmed.ncbi.nlm.nih.gov/10641039/) · `180 cites`</sub>
-
-<sub>[+ 59 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=motif-comparison)</sub>
+<sub>[56 tools in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=motif-comparison)</sub>
 
 ## Motif & TF databases
 
@@ -100,7 +97,7 @@ It builds on [bio.tools](https://bio.tools), the ELIXIR registry, which is what 
 - **[UniBind](https://unibind.uio.no/)**: TFBS predictions restricted to ChIP-seq-supported, high-confidence sites
   <sub>[code](https://bitbucket.org/CBGR/unibind_enrichment/) · [bio.tools](https://bio.tools/unibind) · [preprint](https://doi.org/10.1101/2020.11.17.384578) · `7 cites`</sub>
 
-<sub>[+ 110 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=motif-databases)</sub>
+<sub>[+ 113 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=motif-databases)</sub>
 
 ## TFBS prediction
 
@@ -125,7 +122,7 @@ It builds on [bio.tools](https://bio.tools), the ELIXIR registry, which is what 
 - **[UniBind](https://unibind.uio.no/)**: TFBS predictions restricted to ChIP-seq-supported, high-confidence sites
   <sub>[code](https://bitbucket.org/CBGR/unibind_enrichment/) · [bio.tools](https://bio.tools/unibind) · [preprint](https://doi.org/10.1101/2020.11.17.384578) · `7 cites`</sub>
 
-<sub>[+ 677 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=tfbs-prediction)</sub>
+<sub>[+ 704 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=tfbs-prediction)</sub>
 
 ## Promoter & enhancer prediction
 
@@ -140,7 +137,7 @@ It builds on [bio.tools](https://bio.tools), the ELIXIR registry, which is what 
 - **[RSAT suite](http://rsat.eu)**: Long-running suite covering matrix scanning, comparison and enrichment
   <sub>[bio.tools](https://bio.tools/rsat) · [paper](https://pubmed.ncbi.nlm.nih.gov/10641039/) · `180 cites`</sub>
 
-<sub>[+ 554 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=regulatory-elements)</sub>
+<sub>[+ 540 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=regulatory-elements)</sub>
 
 ## Reporter assays
 
@@ -172,13 +169,13 @@ It builds on [bio.tools](https://bio.tools), the ELIXIR registry, which is what 
 - **[Genrich](https://github.com/jsh58/Genrich)**: Peak caller with replicate handling and an ATAC mode
   <sub>[code](https://github.com/jsh58/Genrich) · `203 stars`</sub>
 
-<sub>[+ 581 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=peak-calling)</sub>
+<sub>[+ 574 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=peak-calling)</sub>
 
 ## Peak annotation & differential binding
 
 *Annotating peaks to genes/features and testing differential occupancy.*
 
-<sub>[134 tools in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=peak-annotation)</sub>
+<sub>[99 tools in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=peak-annotation)</sub>
 
 ## ChIP/ATAC data resources
 
@@ -190,8 +187,10 @@ It builds on [bio.tools](https://bio.tools), the ELIXIR registry, which is what 
   <sub>[code](https://github.com/inutano/chip-atlas) · [bio.tools](https://bio.tools/chip-atlas) · [paper](https://pubmed.ncbi.nlm.nih.gov/35325188/) · `84 stars | 403 cites`</sub>
 - **[GTRD](http://gtrd.biouml.org/)**: Uniformly reprocessed ChIP-seq with meta-clusters of TF binding sites
   <sub>[bio.tools](https://bio.tools/gtrd) · [paper](https://pubmed.ncbi.nlm.nih.gov/33231677/) · `307 cites`</sub>
+- **[UniBind](https://unibind.uio.no/)**: TFBS predictions restricted to ChIP-seq-supported, high-confidence sites
+  <sub>[code](https://bitbucket.org/CBGR/unibind_enrichment/) · [bio.tools](https://bio.tools/unibind) · [preprint](https://doi.org/10.1101/2020.11.17.384578) · `7 cites`</sub>
 
-<sub>[+ 155 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=chip-resources)</sub>
+<sub>[+ 143 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=chip-resources)</sub>
 
 ## Gene regulatory networks
 
@@ -202,13 +201,13 @@ It builds on [bio.tools](https://bio.tools), the ELIXIR registry, which is what 
 - **[pySCENIC](https://github.com/aertslab/pySCENIC)**: Fast implementation of SCENIC
   <sub>[code](https://github.com/aertslab/pySCENIC) · [paper](https://doi.org/10.1038/s41596-020-0336-2) · `628 stars | 1,579 cites`</sub>
 
-<sub>[+ 543 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=grn-inference)</sub>
+<sub>[+ 525 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=grn-inference)</sub>
 
 ## Regulatory variant effect
 
 *Assessing the impact of sequence variants on binding and regulatory activity.*
 
-<sub>[145 tools in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=regulatory-variants)</sub>
+<sub>[138 tools in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=regulatory-variants)</sub>
 
 ## Molecular QTL
 
@@ -223,7 +222,7 @@ It builds on [bio.tools](https://bio.tools), the ELIXIR registry, which is what 
 - **[ReMap](https://remap.univ-amu.fr/)**: Large-scale atlas of regulatory regions from public DNA-binding experiments
   <sub>[bio.tools](https://bio.tools/inserm-remap) · [paper](https://pubmed.ncbi.nlm.nih.gov/34751401/) · `505 cites, 1,070 across 4 papers`</sub>
 
-<sub>[+ 660 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=nucleosome-chromatin)</sub>
+<sub>[+ 693 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=nucleosome-chromatin)</sub>
 
 ## Histone modifications
 
@@ -250,13 +249,13 @@ It builds on [bio.tools](https://bio.tools), the ELIXIR registry, which is what 
 - **[pySCENIC](https://github.com/aertslab/pySCENIC)**: Fast implementation of SCENIC
   <sub>[code](https://github.com/aertslab/pySCENIC) · [paper](https://doi.org/10.1038/s41596-020-0336-2) · `628 stars | 1,579 cites`</sub>
 
-<sub>[+ 249 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=single-cell)</sub>
+<sub>[+ 250 more in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=single-cell)</sub>
 
 ## Comparative & evolutionary
 
 *Cross-species conservation and evolution of regulatory sequence.*
 
-<sub>[51 tools in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=comparative)</sub>
+<sub>[50 tools in this category →](https://thirtysix.github.io/awesome-regulatory-genomics/?category=comparative)</sub>
 
 ## Running the pipeline
 
