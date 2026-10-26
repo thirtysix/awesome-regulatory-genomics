@@ -307,6 +307,13 @@ tools:
     tags: [python, single-cell]
     doi: 10.1038/s41596-020-0336-2
 
+  - name: RustScenic
+    url: https://ekin-kahraman.github.io/rustscenic/
+    repo: Ekin-Kahraman/rustscenic
+    description: Rust implementation with a Python API for SCENIC-style regulatory network inference and regulon activity scoring in single-cell RNA and multiome data
+    categories: [grn-inference, single-cell]
+    tags: [rust, python, single-cell, multiome]
+
   - name: SCENIC+
     url: https://github.com/aertslab/scenicplus
     repo: aertslab/scenicplus
